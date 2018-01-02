@@ -460,6 +460,18 @@
     <Compile Include="Controls\Video.Designer.cs">
       <DependentUpon>Video.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.Designer.cs">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.Designer.cs">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigFrameClassType.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -472,11 +484,23 @@
     <Compile Include="GCSViews\ConfigurationView\ConfigGPSInject.Designer.cs">
       <DependentUpon>ConfigGPSInject.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog.Designer.cs">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigLogin.Designer.cs">
       <DependentUpon>ConfigLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\FlightLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\FlightLog.Designer.cs">
+      <DependentUpon>FlightLog.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\UserLogin.cs">
       <SubType>UserControl</SubType>
@@ -514,6 +538,17 @@
       <DependentUpon>LogDownloadscp.cs</DependentUpon>
     </Compile>
     <Compile Include="Log\test\MotorFailure.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Validation.Designer.cs">
+      <DependentUpon>Validation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Strings.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1061,11 +1096,6 @@
     </Compile>
     <Compile Include="Plugin\PluginUI.Designer.cs">
       <DependentUpon>PluginUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Radio\XModem.cs" />
     <Compile Include="ScriptConsole.cs">
@@ -1795,6 +1825,54 @@
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmwareDisabled.zh-Hans.resx">
       <DependentUpon>ConfigFirmwareDisabled.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.ar.resx">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.de-DE.resx">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.id-ID.resx">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.ja-JP.resx">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.ko-KR.resx">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.pt.resx">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.resx">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.zh-Hans.resx">
+      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.ar.resx">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.de-DE.resx">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.id-ID.resx">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.ja-JP.resx">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.ko-KR.resx">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.pt.resx">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.resx">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.zh-Hans.resx">
+      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.ar.resx">
       <DependentUpon>ConfigFlightModes.cs</DependentUpon>
     </EmbeddedResource>
@@ -1989,6 +2067,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.zh-TW.resx">
       <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.ar.resx">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.de-DE.resx">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.id-ID.resx">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.ja-JP.resx">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.ko-KR.resx">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.pt.resx">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.resx">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.zh-Hans.resx">
+      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigLogin.ar.resx">
       <DependentUpon>ConfigLogin.cs</DependentUpon>
@@ -2762,6 +2864,9 @@
     <EmbeddedResource Include="GCSViews\InitialSetup.zh-TW.resx">
       <DependentUpon>InitialSetup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightLog.resx">
+      <DependentUpon>FlightLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -2938,6 +3043,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SerialOutputPass.pt.resx">
       <DependentUpon>SerialOutputPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validation.resx">
+      <DependentUpon>Validation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Strings.de-DE.resx">
       <DependentUpon>Strings.cs</DependentUpon>
@@ -4835,7 +4943,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="mykey.snk" />
-    <None Include="Properties\app.manifest" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\CurrentState.datasource" />
     <None Include="block_plane_0.dae">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4987,6 +5097,10 @@
     <None Include="Resources\sub.png" />
     <None Include="Resources\farmLogo.jpg" />
     <None Include="Resources\userLogin.png" />
+    <None Include="Resources\login.jpg" />
+    <None Include="Resources\LoadingScreen.jpg" />
+    <None Include="Resources\Antenna Tracker-01.png" />
+    <None Include="Resources\LoadingScreen2.jpg" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

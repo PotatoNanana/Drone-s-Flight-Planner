@@ -32,7 +32,12 @@ namespace MissionPlanner
         public static Image Logo = null;
         public static Image IconFile = null;
 
-        public static Splash Splash;
+        public static LoadingScreen Splash;
+
+        /// <summary>
+        /// added validate
+        /// </summary>
+        public static Validation Validation;
 
         internal static Thread Thread;
 
@@ -110,7 +115,7 @@ namespace MissionPlanner
                 SplashBG = new Bitmap(Settings.GetRunningDirectory() + "splashbg.png");
 
 
-            Splash = new MissionPlanner.Splash();
+            Splash = new MissionPlanner.LoadingScreen();
             if (SplashBG != null)
             {
                 Splash.BackgroundImage = SplashBG;
@@ -120,12 +125,17 @@ namespace MissionPlanner
             if (IconFile != null)
                 Splash.Icon = Icon.FromHandle(((Bitmap)IconFile).GetHicon());
 
-            string strVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            Splash.Text = name + " " + Application.ProductVersion + " build " + strVersion;
+            //string strVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            Splash.Text = name + " " + "1.0.0" ;
             Splash.Show();
+            
+            /// Added validated page
+            Validation = new MissionPlanner.Validation();
+            Validation.Show();
 
             Application.DoEvents();
             Application.DoEvents();
+            
 
             // setup theme provider
             CustomMessageBox.ApplyTheme += MissionPlanner.Utilities.ThemeManager.ApplyThemeTo;
@@ -278,31 +288,31 @@ namespace MissionPlanner
             {
                 
             }
-            try
-            {
-                foreach (string newupdater in Directory.GetFiles(Settings.GetRunningDirectory(), "Updater.exe*.new"))
-                {
-                    File.Copy(newupdater, newupdater.Remove(newupdater.Length - 4), true);
-                    File.Delete(newupdater);
-                }
-            }
-            catch (Exception ex)
-            {
-                log.Error("Exception during update", ex);
-            }
+            //try
+            //{
+            //    foreach (string newupdater in Directory.GetFiles(Settings.GetRunningDirectory(), "Updater.exe*.new"))
+            //    {
+            //        File.Copy(newupdater, newupdater.Remove(newupdater.Length - 4), true);
+            //        File.Delete(newupdater);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    log.Error("Exception during update", ex);
+            //}
 
-            try
-            {
-                foreach (string newupdater in Directory.GetFiles(Settings.GetRunningDirectory(), "tlogThumbnailHandler.dll.new"))
-                {
-                    File.Copy(newupdater, newupdater.Remove(newupdater.Length - 4), true);
-                    File.Delete(newupdater);
-                }
-            }
-            catch (Exception ex)
-            {
-                log.Error("Exception during update", ex);
-            }
+            //try
+            //{
+            //    foreach (string newupdater in Directory.GetFiles(Settings.GetRunningDirectory(), "tlogThumbnailHandler.dll.new"))
+            //    {
+            //        File.Copy(newupdater, newupdater.Remove(newupdater.Length - 4), true);
+            //        File.Delete(newupdater);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    log.Error("Exception during update", ex);
+            //}
         }
 
 

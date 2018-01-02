@@ -59,7 +59,7 @@ namespace MissionPlanner.Controls
             // create new instance on gui thread
             if (MainControl.InvokeRequired)
             {
-                MainControl.Invoke((MethodInvoker) delegate
+                MainControl.Invoke((MethodInvoker)delegate
                 {
                     try
                     {
@@ -75,13 +75,13 @@ namespace MissionPlanner.Controls
             {
                 try
                 {
-                    current.Control = (MyUserControl) Activator.CreateInstance(type);
+                    current.Control = (MyUserControl)Activator.CreateInstance(type);
                 }
                 catch
                 {
                     try
                     {
-                        current.Control = (MyUserControl) Activator.CreateInstance(type);
+                        current.Control = (MyUserControl)Activator.CreateInstance(type);
                     }
                     catch (Exception ex)
                     {
@@ -193,7 +193,7 @@ namespace MissionPlanner.Controls
             {
                 get
                 {
-                    if (Control == null) 
+                    if (Control == null)
                         return false;
                     return Control.Visible;
                 }

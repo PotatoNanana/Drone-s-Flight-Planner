@@ -1,6 +1,6 @@
 ﻿namespace MissionPlanner.GCSViews.ConfigurationView
 {
-    partial class ConfigLogin
+    partial class ConfigFlightLog_farm2
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigFlightLog));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -51,12 +51,12 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
-            // ConfigLogin
+            // ConfigFlightLog
             // 
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.groupBox4);
             this.DoubleBuffered = true;
-            this.Name = "ConfigLogin";
+            this.Name = "ConfigFlightLog";
             this.Load += new System.EventHandler(this.ConfigLogin_Load_1);
             this.ResumeLayout(false);
 

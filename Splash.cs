@@ -8,15 +8,15 @@ using System.Windows.Forms;
 
 namespace MissionPlanner
 {
-    public partial class Splash : Form
+    public partial class LoadingScreen : Form
     {
-        public Splash()
+        public LoadingScreen()
         {
             InitializeComponent();
 
             string strVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
-            TXT_version.Text = "Version: " + Application.ProductVersion; // +" Build " + strVersion;
+            //TXT_version.Text = "Version: " + Application.ProductVersion; // +" Build " + strVersion;
 
             if (Program.Logo != null)
             {

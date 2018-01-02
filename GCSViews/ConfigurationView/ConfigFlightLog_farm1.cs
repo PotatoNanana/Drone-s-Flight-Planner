@@ -9,7 +9,7 @@ using MissionPlanner.Controls;
 
 namespace MissionPlanner.GCSViews.ConfigurationView
 {
-    public partial class ConfigLogin : UserControl, IActivate
+    public partial class ConfigFlightLog_farm1 : UserControl, IActivate
     {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -25,7 +25,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {4800, 3}
         };
 
-        public ConfigLogin()
+        public ConfigFlightLog_farm1()
         {
             InitializeComponent();
         }

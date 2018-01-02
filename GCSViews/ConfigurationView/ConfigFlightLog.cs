@@ -9,7 +9,7 @@ using MissionPlanner.Controls;
 
 namespace MissionPlanner.GCSViews.ConfigurationView
 {
-    public partial class ConfigLogin : UserControl, IActivate
+    public partial class ConfigFlightLog : UserControl, IActivate
     {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -25,7 +25,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {4800, 3}
         };
 
-        public ConfigLogin()
+        public ConfigFlightLog()
         {
             InitializeComponent();
         }
@@ -84,6 +84,16 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     }
 
         private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
