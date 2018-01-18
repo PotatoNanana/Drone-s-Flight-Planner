@@ -45,17 +45,17 @@ namespace MissionPlanner.GCSViews
 
                 if (MainV2.comPort.BaseStream.IsOpen)
                 {
-                    start = AddBackstageViewPage(typeof(ConfigFlightModes), Strings.FlightModes);
-                    AddBackstageViewPage(typeof(ConfigFlightLog), "Farm 1");
-                    AddBackstageViewPage(typeof(ConfigFlightLog_farm1), "Farm 2");
-                    AddBackstageViewPage(typeof(ConfigFlightLog_farm1), "Farm 3");
+                    //start = AddBackstageViewPage(typeof(ConfigFlightModes), Strings.FlightModes);
+                    AddBackstageViewPage(typeof(ConfigFarmInfo), "Farm 1");
+                    AddBackstageViewPage(typeof(ConfigFarmInfo), "Farm 2");
+                    AddBackstageViewPage(typeof(ConfigFarmInfo), "Farm 3");
                 }
                 else
                 {
-                    start = AddBackstageViewPage(typeof(ConfigFlightModes), Strings.FlightModes);
-                    AddBackstageViewPage(typeof(ConfigFlightLog), "Farm 1");
-                    AddBackstageViewPage(typeof(ConfigFlightLog_farm1), "Farm 2");
-                    AddBackstageViewPage(typeof(ConfigFlightLog_farm1), "Farm 3");
+                    //start = AddBackstageViewPage(typeof(ConfigFlightModes), Strings.FlightModes);
+                    AddBackstageViewPage(typeof(ConfigFarmInfo), "Farm 1");
+                    AddBackstageViewPage(typeof(ConfigFarmInfo), "Farm 2");
+                    AddBackstageViewPage(typeof(ConfigFarmInfo), "Farm 3");
                 }
 
                 // apply theme before trying to display it
@@ -81,7 +81,8 @@ namespace MissionPlanner.GCSViews
             }
         }
 
-        private void FlightLog_FormClosing(object sender, FormClosingEventArgs e)
+        private void 
+            Log_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (backstageView.SelectedPage != null)
                 lastpagename = backstageView.SelectedPage.LinkText;

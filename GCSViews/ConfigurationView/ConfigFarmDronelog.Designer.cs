@@ -1,6 +1,6 @@
 ﻿namespace MissionPlanner.GCSViews.ConfigurationView
 {
-    partial class ConfigFlightLog
+    partial class ConfigFarmDroneLog
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,23 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigFlightLog));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigFarmDroneLog));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,32 +53,35 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.label12, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 3, 0);
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 6, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 6, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 6, 4);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 6, 5);
-            this.tableLayoutPanel1.Controls.Add(this.button6, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 3, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Name = "label9";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Name = "label5";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
+            this.label7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Name = "label7";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -93,76 +89,33 @@
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
+            this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Name = "label8";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Name = "label9";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
+            this.label10.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Name = "label10";
+            this.label10.Click += new System.EventHandler(this.label8_Click);
             // 
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label11.Name = "label11";
+            this.label11.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Name = "label12";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // ConfigFlightLog
+            // ConfigFarmDroneLog
             // 
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
-            this.Name = "ConfigFlightLog";
+            this.Name = "ConfigFarmDroneLog";
             this.Load += new System.EventHandler(this.ConfigLogin_Load_1);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -192,14 +145,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label10;
     }
 }

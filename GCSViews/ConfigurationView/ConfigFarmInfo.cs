@@ -9,7 +9,7 @@ using MissionPlanner.Controls;
 
 namespace MissionPlanner.GCSViews.ConfigurationView
 {
-    public partial class ConfigFlightLog_farm1 : UserControl, IActivate
+    public partial class ConfigFarmInfo : UserControl, IActivate
     {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -25,7 +25,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {4800, 3}
         };
 
-        public ConfigFlightLog_farm1()
+        public ConfigFarmInfo()
         {
             InitializeComponent();
         }
@@ -84,6 +84,62 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     }
 
         private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Seemore01_Click(object sender, EventArgs e)
+        {
+            var form = new DroneLog();
+            form.Show();
+        }
+
+        private void label10_Click_1(object sender, EventArgs e)
         {
 
         }

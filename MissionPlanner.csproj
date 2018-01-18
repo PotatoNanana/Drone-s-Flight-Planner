@@ -460,17 +460,17 @@
     <Compile Include="Controls\Video.Designer.cs">
       <DependentUpon>Video.cs</DependentUpon>
     </Compile>
-    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.cs">
+    <Compile Include="DroneLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DroneLog.Designer.cs">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFarmDronelog.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.Designer.cs">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.Designer.cs">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFarmDronelog.Designer.cs">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigFrameClassType.cs">
       <SubType>UserControl</SubType>
@@ -484,11 +484,11 @@
     <Compile Include="GCSViews\ConfigurationView\ConfigGPSInject.Designer.cs">
       <DependentUpon>ConfigGPSInject.cs</DependentUpon>
     </Compile>
-    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog.cs">
+    <Compile Include="GCSViews\ConfigurationView\ConfigFarmInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GCSViews\ConfigurationView\ConfigFlightLog.Designer.cs">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <Compile Include="GCSViews\ConfigurationView\ConfigFarmInfo.Designer.cs">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigLogin.cs">
       <SubType>UserControl</SubType>
@@ -1333,6 +1333,45 @@
     <EmbeddedResource Include="Controls\Video.resx">
       <DependentUpon>Video.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.ar.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.de-DE.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.es-ES.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.fr.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.id-ID.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.it-IT.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.ko-KR.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.pl.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.pt.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.zh-Hans.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.zh-Hant.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DroneLog.zh-TW.resx">
+      <DependentUpon>DroneLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FollowMe.ar.resx">
       <DependentUpon>FollowMe.cs</DependentUpon>
     </EmbeddedResource>
@@ -1825,53 +1864,29 @@
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmwareDisabled.zh-Hans.resx">
       <DependentUpon>ConfigFirmwareDisabled.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.ar.resx">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmDronelog.ar.resx">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.de-DE.resx">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmDronelog.de-DE.resx">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.id-ID.resx">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmDronelog.id-ID.resx">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.ja-JP.resx">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmDronelog.ja-JP.resx">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.ko-KR.resx">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmDronelog.ko-KR.resx">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.pt.resx">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmDronelog.pt.resx">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.resx">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmDronelog.resx">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm2.zh-Hans.resx">
-      <DependentUpon>ConfigFlightLog_farm2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.ar.resx">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.de-DE.resx">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.id-ID.resx">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.ja-JP.resx">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.ko-KR.resx">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.pt.resx">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.resx">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog_farm1.zh-Hans.resx">
-      <DependentUpon>ConfigFlightLog_farm1.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmDronelog.zh-Hans.resx">
+      <DependentUpon>ConfigFarmDronelog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightModes.ar.resx">
       <DependentUpon>ConfigFlightModes.cs</DependentUpon>
@@ -2068,29 +2083,29 @@
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWAirspeed.zh-TW.resx">
       <DependentUpon>ConfigHWAirspeed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.ar.resx">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmInfo.ar.resx">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.de-DE.resx">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmInfo.de-DE.resx">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.id-ID.resx">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmInfo.id-ID.resx">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.ja-JP.resx">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmInfo.ja-JP.resx">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.ko-KR.resx">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmInfo.ko-KR.resx">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.pt.resx">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmInfo.pt.resx">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.resx">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmInfo.resx">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFlightLog.zh-Hans.resx">
-      <DependentUpon>ConfigFlightLog.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFarmInfo.zh-Hans.resx">
+      <DependentUpon>ConfigFarmInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigLogin.ar.resx">
       <DependentUpon>ConfigLogin.cs</DependentUpon>

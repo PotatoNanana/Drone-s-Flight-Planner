@@ -112,12 +112,12 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BUT_btsettings.Text" xml:space="preserve">
-    <value>Einstellungen speichern</value>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Lo que esto hace. 1. se las actuales coordenadas GPS de un GPS NMEA. 2. envía un WP modo guiado a la AP cada 2 segundos. Como Usar 1. conectar con la AP. 2. el despegue, el modo de prueba guiada está trabajando. 3. abrir este y escoja su puerto com, y la velocidad de su NMEA GPS. 4. ahora debe estar siguiéndote.</value>
   </data>
 </root>
