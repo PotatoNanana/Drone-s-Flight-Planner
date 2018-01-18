@@ -1137,6 +1137,8 @@ namespace MissionPlanner.GCSViews
             // 
             // createWpCircleToolStripMenuItem
             // 
+            this.createWpCircleToolStripMenuItem.Checked = true;
+            this.createWpCircleToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.createWpCircleToolStripMenuItem.Name = "createWpCircleToolStripMenuItem";
             resources.ApplyResources(this.createWpCircleToolStripMenuItem, "createWpCircleToolStripMenuItem");
             this.createWpCircleToolStripMenuItem.Click += new System.EventHandler(this.createWpCircleToolStripMenuItem_Click);

@@ -25,7 +25,7 @@ namespace MissionPlanner
 
         public override string Author
         {
-            get { return "Michael Oborne"; }
+            get { return ""; }
         }
 
         public override bool Init()

@@ -606,5 +606,15 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 CustomMessageBox.Show("Set BATT_AMP_PERVOLT Failed", Strings.ERROR);
             }
         }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_battcapacity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

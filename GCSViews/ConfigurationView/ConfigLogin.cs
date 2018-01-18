@@ -58,5 +58,34 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfigLogin_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mavlinkComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                    }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

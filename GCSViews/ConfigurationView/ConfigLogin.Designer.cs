@@ -28,84 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigLogin));
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.BUT_btsettings = new MissionPlanner.Controls.MyButton();
-            this.txt_name = new System.Windows.Forms.TextBox();
-            this.txt_pin = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
-            // label6
+            // groupBox4
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // groupBox5
+            // timer1
             // 
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
+            this.timer1.Interval = 1000;
             // 
-            // BUT_btsettings
+            // contextMenuStrip1
             // 
-            resources.ApplyResources(this.BUT_btsettings, "BUT_btsettings");
-            this.BUT_btsettings.Name = "BUT_btsettings";
-            this.BUT_btsettings.UseVisualStyleBackColor = true;
-            this.BUT_btsettings.Click += new System.EventHandler(this.BUT_ConfigLogin_Click);
-            // 
-            // txt_name
-            // 
-            resources.ApplyResources(this.txt_name, "txt_name");
-            this.txt_name.Name = "txt_name";
-            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
-            // 
-            // txt_pin
-            // 
-            resources.ApplyResources(this.txt_pin, "txt_pin");
-            this.txt_pin.Name = "txt_pin";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.BackgroundImage = global::MissionPlanner.Properties.Resources.userLogin;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = global::MissionPlanner.Properties.Resources.userLogin;
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // ConfigLogin
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_pin);
-            this.Controls.Add(this.txt_name);
-            this.Controls.Add(this.BUT_btsettings);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.groupBox5);
-            this.Name = "ConfigLogin";
             resources.ApplyResources(this, "$this");
-            this.Load += new System.EventHandler(this.ConfigLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.Controls.Add(this.groupBox4);
+            this.DoubleBuffered = true;
+            this.Name = "ConfigLogin";
+            this.Load += new System.EventHandler(this.ConfigLogin_Load_1);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -119,5 +72,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
+        private Controls.MyButton myButton1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

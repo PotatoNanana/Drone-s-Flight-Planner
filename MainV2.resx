@@ -536,6 +536,61 @@
   <data name="MenuTerminal.ToolTipText" xml:space="preserve">
     <value>Terminal</value>
   </data>
+  <data name="MenuFlightLog.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 6pt</value>
+  </data>
+  <data name="MenuFlightLog.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB0AAAAtCAYAAABS6WCiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUrSURBVFhH7Vd7bFNVGF+Hz/Xeru3Wbt3a+2r3sEHcQ1i3
+        MTvWrXsoQ0EBRdxEIWqixj/UGdQh+ICpIcsUBHUQyYQ4HgMHypgKCwuIRIZRFBefYHRqTPARjPvj+v3a
+        U+L62Npui4nxl/xyc8/5vu+c757vcW7C//i3kTgtLU3bYpxZ2cF5NnVyVcfeS75O7dPPVvHcqa3q38V5
+        X9iRVF3A5MeFxJycHP7RlKL6rbxn4H3j9ern6QvVn4WGEGK83zBH3Z1U1Rf34u4E90WCIFhW60tb3tVd
+        qw5aFqpDttvGJOR6uLpzXUneJcxUdMCCiqIIK4yuF9+hBc9kLlK/ty6OmpCHXiwLJ8LDhrSrHoTiNxm3
+        qGett8ZM6O0nj6P61DhDRRA8r/KzzpxOX6B+S7uOl6fS5vvOmJmOiCmyLGc3mvPXHTbUq1/RbiPxE/NN
+        FxhuPsBDFOGjegsvHZLkfdpQcnLANE/9wnJzCLHIHl31XysNxaebjDM+bTa6vqb3YYyHk4cdpBNbIhQ4
+        S1kUl2xMdg8NUgoE0/e5eO+f1ZYrVjgE4Q7FJt1vF8VWb4bz4C7eO4z5cHrIY7ZEKJRMJYuMPHKAr1M/
+        o/MMJj758hTXyixBoGMXLA6bze6wybMVQXp+mangJObD6b3N1Z5jS4RCtspX0qJrELXYdTAxTqlkJlGN
+        X8Mf6bIgLFJEcctoekw+FFmimGcXpLW0M/VjOqNg9urq1A2cO5WJ+1BYWHixXRBK8m2OlzEfTm+ftuZX
+        Jh6KgKcv6dy/IAA+Mt04gv30+XZrvauYuA8Oh+NSCj734wbXB5gP1oEd1GomHorAmTYbi79EHYXCP/lh
+        6lx1P197odLAS5zrSmPJGxgPlgdhZxNfPmKjIyCKYroiSQ1lmdl7EExYJJjHU25QUYu7tN6znVzl8e3a
+        qp/wjvFw8rDTnOqKnKcWiyWJPC0ntq7Vl/2IrgJj8fKocY7awXv6yJnL2BJhofGlgSg+sNicd7SXPDhG
+        yvES+m2Gsrtg128+AmhXertNqldE6ZVtusrzR2i38DhWQq+L9w7BHjMdGWhrVH+n0Sd+4mHjjMGDdDM4
+        QsEQK6G3QVfeAnvM9OjwBZQoNiKg3uJqfKkSK/eRXmNqXhYzOTasVuvlsk0uQ6F4Rl/6HXZ9WF8fNSH/
+        GlfRjRxmJqOCJlsQZFr03rlpU/uQg7iERUvIP6crWwA7fnNRwtfMRbGWuPF13nMeuz8UBSG3g6v6AfrM
+        VEyYoliVqdRBmu8zXX2qh5Ic182xCLk23TXLoe83EyPQUdBB8q32zr3aGl8lGotUm/9YaiqwMxOxA4FA
+        qVOMfomAghdoU5GI+S1cxZtOp/MSZiIuaCRJEqlC3VNtcfYiDQ5Q+4pEzK8yuGqg51ePE06Tk8O9iSJ5
+        fTs/67ceikx4FMpaFX8BkGeq40IiFYtctLyl5oIBFAukRDAxvk7nboK8X22cyM3ISKF6PD/P5thK6TCM
+        m0UwqdX9TkXFyFTGDwQG3Sqmk7erceXE2cGzAPG+ma/oiLrORgmNI9NhtQvynTMzcrr3aqtHLIr3JmNR
+        EZOdOAQaPFWoNtyh4F2A23jPCcwz0QmFBncoytmHlpkLTnSTdygYeLbq3Xdj3i82wUCgUIWaZxfEzdsp
+        oPBZd3KV0TXqeIFAoUKRT94+hf8YeNnOl6+f6AAKAW70dK63l2fmtmPRx1KKp7OpyQMaPG70+IF6Nrn0
+        SbyzqUmFBtcZ/A3giXf/8CQDZwgPJ/0s/wNISPgb2g0+kHALnRcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="MenuFlightLog.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="MenuFlightLog.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="MenuFlightLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 60</value>
+  </data>
+  <data name="MenuFlightLog.Text" xml:space="preserve">
+    <value>FLIGHT LOG</value>
+  </data>
+  <data name="MenuFlightLog.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomCenter</value>
+  </data>
+  <data name="MenuFlightLog.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="MenuFlightLog.ToolTipText" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="MenuLogin.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
   <data name="MenuLogin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 6pt</value>
   </data>
@@ -546,10 +601,10 @@
     <value>Magenta</value>
   </data>
   <data name="MenuLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 60</value>
+    <value>66, 60</value>
   </data>
   <data name="MenuLogin.Text" xml:space="preserve">
-    <value>LOG IN</value>
+    <value>USER PROFILE</value>
   </data>
   <data name="MenuLogin.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
@@ -2432,6 +2487,12 @@
   <data name="&gt;&gt;MenuTerminal.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MenuLogin.Name" xml:space="preserve">
+    <value>MenuLogin</value>
+  </data>
+  <data name="&gt;&gt;MenuLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;MenuConnect.Name" xml:space="preserve">
     <value>MenuConnect</value>
   </data>
@@ -2442,12 +2503,12 @@
     <value>toolStripConnectionControl</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6501.22439, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6566.43050, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;MenuLogin.Name" xml:space="preserve">
-    <value>MenuLogin</value>
+  <data name="&gt;&gt;MenuFlightLog.Name" xml:space="preserve">
+    <value>MenuFlightLog</value>
   </data>
-  <data name="&gt;&gt;MenuLogin.Type" xml:space="preserve">
+  <data name="&gt;&gt;MenuFlightLog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

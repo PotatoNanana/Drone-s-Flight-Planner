@@ -86,6 +86,7 @@
             // 
             resources.ApplyResources(this.label29, "label29");
             this.label29.Name = "label29";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
@@ -96,6 +97,7 @@
             // 
             resources.ApplyResources(this.TXT_battcapacity, "TXT_battcapacity");
             this.TXT_battcapacity.Name = "TXT_battcapacity";
+            this.TXT_battcapacity.TextChanged += new System.EventHandler(this.TXT_battcapacity_TextChanged);
             this.TXT_battcapacity.Validated += new System.EventHandler(this.TXT_battcapacity_Validated);
             // 
             // CMB_batmontype
