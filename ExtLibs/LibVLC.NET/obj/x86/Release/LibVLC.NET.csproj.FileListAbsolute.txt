@@ -1,0 +1,17 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\LibVLC.NET.XML
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\LibVLC.NET.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\LibVLC.NET.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\System.Runtime.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\System.Runtime.Extensions.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\System.Runtime.InteropServices.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\LibVLC.NET\obj\x86\Release\LibVLC.NET.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\LibVLC.NET\obj\x86\Release\LibVLC.NET.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\LibVLC.NET.XML
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\LibVLC.NET.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\LibVLC.NET.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\System.Runtime.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\System.Runtime.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\bin\x86\Release\System.Runtime.InteropServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\obj\x86\Release\LibVLC.NET.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\obj\x86\Release\LibVLC.NET.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\obj\x86\Release\LibVLC.NET.pdb

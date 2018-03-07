@@ -1,0 +1,17 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csprojResolveAssemblyReference.cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.FilePick.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.GenerateResource.Cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\plugins\ExtGuided.dll.config
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\plugins\ExtGuided.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\plugins\ExtGuided.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\plugins\ExtGuided.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\plugins\ExtGuided.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\plugins\ExtGuided.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.FilePick.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ExtGuided\obj\Debug\ExtGuided.pdb

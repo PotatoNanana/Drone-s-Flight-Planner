@@ -1,0 +1,9 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Core\bin\Release\Core.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Core\bin\Release\Core.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Core\obj\Release\Core.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Core\obj\Release\Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Core\bin\Release\Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Core\bin\Release\Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Core\obj\Release\Core.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Core\obj\Release\Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Core\obj\Release\Core.pdb

@@ -1,0 +1,35 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Comms\bin\Debug\net462\log4net.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Comms\bin\Debug\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Comms\bin\Debug\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Comms\bin\Debug\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Comms\bin\Debug\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\bin\Debug\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll

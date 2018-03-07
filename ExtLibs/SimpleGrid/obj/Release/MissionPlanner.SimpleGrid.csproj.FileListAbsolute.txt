@@ -1,0 +1,15 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.csprojResolveAssemblyReference.cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.GridUI.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.GridUI.pt.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\MissionPlanner.SimpleGrid.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\MissionPlanner.SimpleGrid.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\MissionPlanner.SimpleGrid.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\pt\MissionPlanner.SimpleGrid.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.GridUI.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.GridUI.pt.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\pt\MissionPlanner.SimpleGrid.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.pdb

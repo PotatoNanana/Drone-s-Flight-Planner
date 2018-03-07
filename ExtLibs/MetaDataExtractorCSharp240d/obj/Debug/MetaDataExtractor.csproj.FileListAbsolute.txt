@@ -1,0 +1,44 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\exif.xslt
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\sampleFile.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractor.dtd
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractorNew.dtd
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\exif.xslt
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\sampleFile.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractor.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractorNew.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\exif.xslt
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\sampleFile.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractor.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractorNew.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\exif.xslt
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\sampleFile.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractor.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractorNew.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\exif.xslt
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\sampleFile.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractor.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractorNew.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb

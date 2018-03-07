@@ -1,0 +1,16 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\Msi\licence.rtf
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\Msi\wix.exe
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\Msi\wix.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\wix\obj\Debug\wix.Properties.Resources.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\wix\obj\Debug\wix.csproj.GenerateResource.Cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\wix\obj\Debug\wix.exe
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\wix\obj\Debug\wix.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\wix\obj\Debug\wix.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Msi\licence.rtf
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Msi\wix.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Msi\wix.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\obj\Debug\wix.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\obj\Debug\wix.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\obj\Debug\wix.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\obj\Debug\wix.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\obj\Debug\wix.pdb

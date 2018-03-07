@@ -1,0 +1,17 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\validcertificates.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\px4uploader.exe
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\px4uploader.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\BouncyCastle.Crypto.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\DotNetZip.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\DotNetZip.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\px4uploader\obj\Release\px4uploader.exe
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\px4uploader\obj\Release\px4uploader.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\validcertificates.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\px4uploader.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\px4uploader.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\DotNetZip.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\bin\Release\DotNetZip.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\obj\Release\px4uploader.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\obj\Release\px4uploader.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\obj\Release\px4uploader.pdb

@@ -1,0 +1,17 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ZedGraph\bin\Release\ZedGraph.XML
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ZedGraph\bin\Release\ZedGraph.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ZedGraph\bin\Release\ZedGraph.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.ZedGraph.ZedGraphControl.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.ZedGraph.ZedGraphLocale.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.csproj.GenerateResource.Cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\bin\Release\ZedGraph.XML
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\bin\Release\ZedGraph.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\bin\Release\ZedGraph.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.ZedGraph.ZedGraphControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.ZedGraph.ZedGraphLocale.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ZedGraph\obj\Release\ZedGraph.pdb
