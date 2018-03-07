@@ -897,6 +897,16 @@ namespace MissionPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap home {
+            get {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap iconWarning32 {
             get {
                 object obj = ResourceManager.GetObject("iconWarning32", resourceCulture);
@@ -1070,6 +1080,36 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap maggps {
             get {
                 object obj = ResourceManager.GetObject("maggps", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap main_plane {
+            get {
+                object obj = ResourceManager.GetObject("main_plane", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap main_setting {
+            get {
+                object obj = ResourceManager.GetObject("main_setting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap main_user {
+            get {
+                object obj = ResourceManager.GetObject("main_user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1605,6 +1645,16 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap Shutter {
             get {
                 object obj = ResourceManager.GetObject("Shutter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap sky_bg {
+            get {
+                object obj = ResourceManager.GetObject("sky_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

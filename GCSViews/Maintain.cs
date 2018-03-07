@@ -17,7 +17,7 @@ using System.Resources;
 
 namespace MissionPlanner.GCSViews
 {
-    public partial class Maintain : UserControl, IActivate
+    public partial class Maintain : MyUserControl, IActivate
     {
         internal static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         private static string lastpagename = "";
@@ -66,16 +66,16 @@ namespace MissionPlanner.GCSViews
             AddBackstageViewPage(typeof(ConfigFirmware), rm.GetString("backstageViewPagefw.Text"), isDisConnected);
             AddBackstageViewPage(typeof(ConfigWizard), rm.GetString("backstageViewPagewizard.Text"));
 
-            var mand = AddBackstageViewPage(typeof(ConfigMandatory), rm.GetString("backstageViewPagemand.Text"), isConnected);
-            AddBackstageViewPage(typeof(ConfigTradHeli), rm.GetString("backstageViewPagetradheli.Text"), isHeli, mand);
-            AddBackstageViewPage(typeof(ConfigFrameType), rm.GetString("backstageViewPageframetype.Text"), isCopter && !isCopter35plus, mand);
-            AddBackstageViewPage(typeof(ConfigFrameClassType), rm.GetString("backstageViewPageframetype.Text"), isCopter && isCopter35plus, mand);
-            AddBackstageViewPage(typeof(ConfigAccelerometerCalibration), rm.GetString("backstageViewPageaccel.Text"), isConnected, mand);
-            AddBackstageViewPage(typeof(ConfigHWCompass), rm.GetString("backstageViewPagecompass.Text"), isConnected, mand);
-            AddBackstageViewPage(typeof(ConfigRadioInput), rm.GetString("backstageViewPageradio.Text"), isConnected, mand);
-            AddBackstageViewPage(typeof(ConfigESCCalibration), "ESC Calibration", isConnected, mand);
-            AddBackstageViewPage(typeof(ConfigFlightModes), rm.GetString("backstageViewPageflmode.Text"), isConnected, mand);
-            AddBackstageViewPage(typeof(ConfigFailSafe), rm.GetString("backstageViewPagefs.Text"), isConnected, mand);
+            //var mand = addbackstageviewpage(typeof(configmandatory), rm.getstring("backstageviewpagemand.text"), isconnected);
+            //addbackstageviewpage(typeof(configtradheli), rm.getstring("backstageviewpagetradheli.text"), isheli, mand);
+            //addbackstageviewpage(typeof(configframetype), rm.getstring("backstageviewpageframetype.text"), iscopter && !iscopter35plus, mand);
+            //addbackstageviewpage(typeof(configframeclasstype), rm.getstring("backstageviewpageframetype.text"), iscopter && iscopter35plus, mand);
+            //addbackstageviewpage(typeof(configaccelerometercalibration), rm.getstring("backstageviewpageaccel.text"), isconnected, mand);
+            //addbackstageviewpage(typeof(confighwcompass), rm.getstring("backstageviewpagecompass.text"), isconnected, mand);
+            //addbackstageviewpage(typeof(configradioinput), rm.getstring("backstageviewpageradio.text"), isconnected, mand);
+            //addbackstageviewpage(typeof(configesccalibration), "esc calibration", isconnected, mand);
+            //addbackstageviewpage(typeof(configflightmodes), rm.getstring("backstageviewpageflmode.text"), isconnected, mand);
+            //addbackstageviewpage(typeof(configfailsafe), rm.getstring("backstageviewpagefs.text"), isconnected, mand);
 
             var opt = AddBackstageViewPage(typeof(ConfigOptional), rm.GetString("backstageViewPageopt.Text"));
             AddBackstageViewPage(typeof(ConfigGPSInject), "RTK/GPS Inject", true, opt);
@@ -90,7 +90,7 @@ namespace MissionPlanner.GCSViews
             AddBackstageViewPage(typeof(ConfigHWOptFlow), rm.GetString("backstageViewPageoptflow.Text"), isConnected, opt);
             AddBackstageViewPage(typeof(ConfigHWOSD), rm.GetString("backstageViewPageosd.Text"), isConnected, opt);
             AddBackstageViewPage(typeof(ConfigMount), rm.GetString("backstageViewPagegimbal.Text"), isConnected, opt);
-            AddBackstageViewPage(typeof(ConfigAntennaTracker), rm.GetString("backstageViewPageAntTrack.Text"), isTracker, opt);
+            //AddBackstageViewPage(typeof(ConfigAntennaTracker), rm.GetString("backstageViewPageAntTrack.Text"), isTracker, opt);
             AddBackstageViewPage(typeof(ConfigMotorTest), rm.GetString("backstageViewPageMotorTest.Text"), isConnected, opt);
             AddBackstageViewPage(typeof(ConfigHWBT), rm.GetString("backstageViewPagehwbt.Text"), true, opt);
             AddBackstageViewPage(typeof(ConfigHWParachute), rm.GetString("backstageViewPageParachute.Text"), isConnected, opt);

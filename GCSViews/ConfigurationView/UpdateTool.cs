@@ -17,6 +17,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             InitializeComponent();
         }
 
-      
+
     }
 }

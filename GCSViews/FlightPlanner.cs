@@ -415,11 +415,11 @@ namespace MissionPlanner.GCSViews
             mouseposdisplay.Lng = lng;
             mouseposdisplay.Alt = alt;
 
-            coords1.Lat = mouseposdisplay.Lat;
-            coords1.Lng = mouseposdisplay.Lng;
-            var altdata = srtm.getAltitude(mouseposdisplay.Lat, mouseposdisplay.Lng, MainMap.Zoom);
-            coords1.Alt = altdata.alt;
-            coords1.AltSource = altdata.altsource;
+            //coords1.Lat = mouseposdisplay.Lat;
+            //coords1.Lng = mouseposdisplay.Lng;
+            //var altdata = srtm.getAltitude(mouseposdisplay.Lat, mouseposdisplay.Lng, MainMap.Zoom);
+            //coords1.Alt = altdata.alt;
+            //coords1.AltSource = altdata.altsource;
 
             try
             {
@@ -2643,7 +2643,7 @@ namespace MissionPlanner.GCSViews
 
                 Settings.Instance["fpminaltwarning"] = TXT_altwarn.Text;
 
-                Settings.Instance["fpcoordmouse"] = coords1.System;
+                //Settings.Instance["fpcoordmouse"] = coords1.System;
             }
             else
             {
@@ -2666,8 +2666,8 @@ namespace MissionPlanner.GCSViews
                         case "fpminaltwarning":
                             TXT_altwarn.Text = "" + Settings.Instance["fpminaltwarning"];
                             break;
-                        case "fpcoordmouse":
-                            coords1.System = "" + Settings.Instance[key];
+                        //case "fpcoordmouse":
+                        //    coords1.System = "" + Settings.Instance[key];
                             break;
                         default:
                             break;
@@ -3836,8 +3836,8 @@ namespace MissionPlanner.GCSViews
             }
             center.Position = point;
 
-            coords1.Lat = point.Lat;
-            coords1.Lng = point.Lng;
+            //coords1.Lat = point.Lat;
+            //coords1.Lng = point.Lng;
 
             // always show on planner view
             //if (MainV2.ShowAirports)
@@ -6938,39 +6938,39 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             TXT_homelng.Text = MouseDownStart.Lng.ToString();
         }
 
-        private void coords1_SystemChanged(object sender, EventArgs e)
-        {
-            if (coords1.System == Coords.CoordsSystems.GEO.ToString())
-            {
-                Lat.Visible = true;
-                Lon.Visible = true;
+        //private void coords1_SystemChanged(object sender, EventArgs e)
+        //{
+        //    if (coords1.System == Coords.CoordsSystems.GEO.ToString())
+        //    {
+        //        Lat.Visible = true;
+        //        Lon.Visible = true;
 
-                coordZone.Visible = false;
-                coordEasting.Visible = false;
-                coordNorthing.Visible = false;
-                MGRS.Visible = false;
-            }
-            else if (coords1.System == Coords.CoordsSystems.MGRS.ToString())
-            {
-                Lat.Visible = false;
-                Lon.Visible = false;
+        //        coordZone.Visible = false;
+        //        coordEasting.Visible = false;
+        //        coordNorthing.Visible = false;
+        //        MGRS.Visible = false;
+        //    }
+        //    else if (coords1.System == Coords.CoordsSystems.MGRS.ToString())
+        //    {
+        //        Lat.Visible = false;
+        //        Lon.Visible = false;
 
-                coordZone.Visible = false;
-                coordEasting.Visible = false;
-                coordNorthing.Visible = false;
-                MGRS.Visible = true;
-            }
-            else if (coords1.System == Coords.CoordsSystems.UTM.ToString())
-            {
-                Lat.Visible = false;
-                Lon.Visible = false;
+        //        coordZone.Visible = false;
+        //        coordEasting.Visible = false;
+        //        coordNorthing.Visible = false;
+        //        MGRS.Visible = true;
+        //    }
+        //    else if (coords1.System == Coords.CoordsSystems.UTM.ToString())
+        //    {
+        //        Lat.Visible = false;
+        //        Lon.Visible = false;
 
-                coordZone.Visible = true;
-                coordEasting.Visible = true;
-                coordNorthing.Visible = true;
-                MGRS.Visible = false;
-            }
-        }
+        //        coordZone.Visible = true;
+        //        coordEasting.Visible = true;
+        //        coordNorthing.Visible = true;
+        //        MGRS.Visible = false;
+        //    }
+        //}
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -7039,6 +7039,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void panelWaypoints_CloseClick(object sender, EventArgs e)
         {
 
         }

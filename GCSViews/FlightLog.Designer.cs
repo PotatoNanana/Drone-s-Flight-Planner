@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlightLog));
             this.backstageView = new MissionPlanner.Controls.BackstageView.BackstageView();
             this.SuspendLayout();
             // 
@@ -39,14 +39,14 @@
             this.backstageView.HighlightColor2 = System.Drawing.SystemColors.MenuHighlight;
             this.backstageView.Name = "backstageView";
             this.backstageView.WidthMenu = 172;
+            this.backstageView.Load += new System.EventHandler(this.backstageView_Load);
             // 
-            // UserLogin
+            // FlightLog
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.backstageView);
-            this.MinimumSize = new System.Drawing.Size(1000, 450);
-            this.Name = "UserLogin";
             resources.ApplyResources(this, "$this");
+            this.Name = "FlightLog";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Log_FormClosing);
             this.Load += new System.EventHandler(this.FlightLog_Load);
             this.ResumeLayout(false);

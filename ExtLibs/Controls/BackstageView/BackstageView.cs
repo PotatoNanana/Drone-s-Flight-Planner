@@ -236,21 +236,21 @@ namespace MissionPlanner.Controls.BackstageView
             }
 
             var lnkButton = new BackstageViewButton
-                                {
-                                    Text = label,
-                                    Tag = page,
-                                    Top = ButtonTopPos,
-                                    // Top = _items.TakeWhile(i => i != page).Sum(i => i.Spacing),
-                                    Width = this.pnlMenu.Width,
-                                    Height = ButtonHeight + heightextra,
-                                    ContentPageColor = this.BackColor,
-                                    PencilBorderColor = _buttonsAreaPencilColor,
-                                    SelectedTextColor = _selectedTextColor,
-                                    UnSelectedTextColor = _unSelectedTextColor,
-                                    HighlightColor1 = _highlightColor1,
-                                    HighlightColor2 = _highlightColor2,
-                                    //Dock = DockStyle.Bottom
-                                };
+            {
+                Text = label,
+                Tag = page,
+                Top = ButtonTopPos,
+                // Top = _items.TakeWhile(i => i != page).Sum(i => i.Spacing),
+                Width = this.pnlMenu.Width,
+                Height = ButtonHeight + heightextra,
+                ContentPageColor = this.BackColor,
+                PencilBorderColor = _buttonsAreaPencilColor,
+                SelectedTextColor = _selectedTextColor,
+                UnSelectedTextColor = _unSelectedTextColor,
+                HighlightColor1 = _highlightColor1,
+                HighlightColor2 = _highlightColor2,
+                //Dock = DockStyle.Bottom
+            };
 
             pnlMenu.Controls.Add(lnkButton);
             lnkButton.Click += this.ButtonClick;
@@ -462,7 +462,7 @@ namespace MissionPlanner.Controls.BackstageView
             {
                 try
                 {
-                    ((IDeactivate) (_activePage.Page)).Deactivate();
+                    ((IDeactivate)(_activePage.Page)).Deactivate();
                 }
                 catch (Exception ex)
                 {
@@ -536,7 +536,7 @@ namespace MissionPlanner.Controls.BackstageView
                 {
                     try
                     {
-                        ((IDeactivate) ((BackstageViewPage) (page)).Page).Deactivate();
+                        ((IDeactivate)((BackstageViewPage)(page)).Page).Deactivate();
                     }
                     catch (Exception ex)
                     {

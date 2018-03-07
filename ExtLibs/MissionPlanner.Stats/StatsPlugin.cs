@@ -60,7 +60,7 @@ namespace MissionPlanner.Stats
                 catch { }
             }
 
-            MainV2.instance.Invoke((Action)
+            MainV3.instance.Invoke((Action)
                 delegate
                 {
 
