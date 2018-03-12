@@ -81,13 +81,17 @@ namespace MissionPlanner.GCSViews
             }
         }
 
-        private void 
-            Log_FormClosing(object sender, FormClosingEventArgs e)
+        private void Log_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (backstageView.SelectedPage != null)
                 lastpagename = backstageView.SelectedPage.LinkText;
 
             backstageView.Close();
+        }
+
+        private void backstageView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

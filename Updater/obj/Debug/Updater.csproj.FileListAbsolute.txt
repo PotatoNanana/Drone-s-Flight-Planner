@@ -1,0 +1,17 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\Updater.exe.config
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\Updater.exe
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\Updater.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\Updater\obj\Debug\Updater.Properties.Resources.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\Updater\obj\Debug\Updater.csproj.GenerateResource.Cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\Updater\obj\Debug\Updater.exe
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\Updater\obj\Debug\Updater.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\Updater\obj\Debug\Updater.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\Updater.exe.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\Updater.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\Updater.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Debug\Updater.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Debug\Updater.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Debug\Updater.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Debug\Updater.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Debug\Updater.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Debug\Updater.pdb

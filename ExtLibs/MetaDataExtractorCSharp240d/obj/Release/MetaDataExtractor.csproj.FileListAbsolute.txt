@@ -1,0 +1,13 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\exif.xslt
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\sampleFile.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\MetadataExtractor.dtd
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\MetadataExtractorNew.dtd
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\MetaDataExtractor.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Release\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\exif.xslt
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\sampleFile.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\MetadataExtractor.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\MetadataExtractorNew.dtd
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\bin\Release\MetaDataExtractor.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Release\MetaDataExtractor.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MetaDataExtractorCSharp240d\obj\Release\MetaDataExtractor.dll

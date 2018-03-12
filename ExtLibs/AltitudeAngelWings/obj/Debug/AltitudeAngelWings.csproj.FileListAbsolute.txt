@@ -1,0 +1,304 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.App.config
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csprojResolveAssemblyReference.cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.Properties.Resources.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.GenerateResource.Cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll.config
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Microsoft.Win32.Primitives.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.TypeExtensions.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Algorithms.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Encoding.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Primitives.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Text.Encoding.CodePages.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Data.SqlServerCe.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.App.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.App.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.App.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.Core.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.Client.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\DotNetOpenAuth.OAuth2.ClientAuthorization.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Flurl.Http.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\GeoJSON.Net.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Core.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Linq.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.App.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.pdb

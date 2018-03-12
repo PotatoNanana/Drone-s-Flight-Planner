@@ -1,0 +1,13 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csprojResolveAssemblyReference.cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\plugins\MissionPlanner.Stats.dll.config
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\plugins\MissionPlanner.Stats.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\bin\Debug\plugins\MissionPlanner.Stats.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\plugins\MissionPlanner.Stats.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\plugins\MissionPlanner.Stats.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Debug\plugins\MissionPlanner.Stats.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.pdb

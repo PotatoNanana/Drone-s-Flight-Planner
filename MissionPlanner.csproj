@@ -466,6 +466,12 @@
     <Compile Include="DroneLog.Designer.cs">
       <DependentUpon>DroneLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\ConfigurationView\maintenance_RegisTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\maintenance_RegisTool.Designer.cs">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigFarmDronelog.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -496,11 +502,65 @@
     <Compile Include="GCSViews\ConfigurationView\ConfigLogin.Designer.cs">
       <DependentUpon>ConfigLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\ConfigurationView\UpdateTool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\UpdateTool.Designer.cs">
+      <DependentUpon>UpdateTool.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\FlightLog.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GCSViews\FlightLog.Designer.cs">
       <DependentUpon>FlightLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_farm_act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_farm_act.Designer.cs">
+      <DependentUpon>Form_Edit_farm_act.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_farm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_farm.Designer.cs">
+      <DependentUpon>Form_Edit_farm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_farm_act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_farm_act.Designer.cs">
+      <DependentUpon>Form_Add_farm_act.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_farm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_farm.Designer.cs">
+      <DependentUpon>Form_Add_farm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_farm_act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_farm_act.Designer.cs">
+      <DependentUpon>Form_farm_act.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Maintain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Maintain.Designer.cs">
+      <DependentUpon>Maintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_farm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_farm.Designer.cs">
+      <DependentUpon>Menu_farm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_main2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_main2.Designer.cs">
+      <DependentUpon>Menu_main2.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\UserLogin.cs">
       <SubType>UserControl</SubType>
@@ -510,9 +570,16 @@
     </Compile>
     <Compile Include="GdalConfiguration.cs" />
     <Compile Include="Grid\Grid.cs" />
+    <Compile Include="Grid\Grid_farmAction.cs" />
     <Compile Include="Grid\GridSelectFarm.cs" />
     <Compile Include="Grid\GridFlightPattern.cs" />
     <Compile Include="Grid\GridPlugin.cs" />
+    <Compile Include="Grid\GridUI_farmAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grid\GridUI_farmAction.Designer.cs">
+      <DependentUpon>GridUI_farmAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grid\GridUIFarm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -531,6 +598,12 @@
     <Compile Include="Grid\GridUI.Designer.cs">
       <DependentUpon>GridUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Log\LogInFlightDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log\LogInFlightDownload.Designer.cs">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log\LogDownloadscp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -538,6 +611,19 @@
       <DependentUpon>LogDownloadscp.cs</DependentUpon>
     </Compile>
     <Compile Include="Log\test\MotorFailure.cs" />
+    <Compile Include="MainV3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainV3.Designer.cs">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_main.Designer.cs">
+      <DependentUpon>Menu_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyView\AddScreen.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1794,6 +1880,30 @@
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.zh-TW.resx">
       <DependentUpon>ConfigFailSafe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.ar.resx">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.de-DE.resx">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.id-ID.resx">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.ja-JP.resx">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.ko-KR.resx">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.pt.resx">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.resx">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.zh-Hans.resx">
+      <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFirmware.ar.resx">
       <DependentUpon>ConfigFirmware.cs</DependentUpon>
     </EmbeddedResource>
@@ -2704,6 +2814,9 @@
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigTradHeli.zh-TW.resx">
       <DependentUpon>ConfigTradHeli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\UpdateTool.resx">
+      <DependentUpon>UpdateTool.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigWizard.resx">
       <DependentUpon>ConfigWizard.cs</DependentUpon>
     </EmbeddedResource>
@@ -2802,6 +2915,21 @@
     <EmbeddedResource Include="GCSViews\FlightPlanner.zh-TW.resx">
       <DependentUpon>FlightPlanner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_farm_act.resx">
+      <DependentUpon>Form_Edit_farm_act.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_farm.resx">
+      <DependentUpon>Form_Edit_farm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_farm_act.resx">
+      <DependentUpon>Form_Add_farm_act.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_farm.resx">
+      <DependentUpon>Form_Add_farm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_farm_act.resx">
+      <DependentUpon>Form_farm_act.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Help.ar.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
@@ -2882,6 +3010,15 @@
     <EmbeddedResource Include="GCSViews\FlightLog.resx">
       <DependentUpon>FlightLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Maintain.resx">
+      <DependentUpon>Maintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_farm.resx">
+      <DependentUpon>Menu_farm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_main2.resx">
+      <DependentUpon>Menu_main2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -2939,6 +3076,9 @@
     <EmbeddedResource Include="GeoRef\Georefimage.pt.resx">
       <DependentUpon>georefimage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Grid\GridUI_farmAction.resx">
+      <DependentUpon>GridUI_farmAction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Grid\GridUIFarm.resx">
       <DependentUpon>GridUIFarm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2972,6 +3112,46 @@
     <EmbeddedResource Include="Log\LogDownload.pt.resx">
       <DependentUpon>LogDownload.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.ar.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.de-DE.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.es-ES.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.fr.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.id-ID.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.it-IT.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.ja-JP.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.ko-KR.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.pl.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.pt.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.zh-Hans.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogInFlightDownload.zh-TW.resx">
+      <DependentUpon>LogInFlightDownload.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Log\LogDownloadMavLink.pt.resx">
       <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
     </EmbeddedResource>
@@ -2999,11 +3179,41 @@
     <EmbeddedResource Include="Log\MavlinkLog.pt.resx">
       <DependentUpon>MavlinkLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.ar.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.id-ID.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.ja-JP.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.ko-KR.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.pt.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.zh-Hans.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.zh-Hant.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3.zh-TW.resx">
+      <DependentUpon>MainV3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainV2.ar.resx">
       <DependentUpon>MainV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainV2.pt.resx">
       <DependentUpon>MainV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_main.resx">
+      <DependentUpon>Menu_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovingBase.ar.resx">
       <DependentUpon>MovingBase.cs</DependentUpon>
@@ -5116,6 +5326,11 @@
     <None Include="Resources\LoadingScreen.jpg" />
     <None Include="Resources\Antenna Tracker-01.png" />
     <None Include="Resources\LoadingScreen2.jpg" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\main_plane.png" />
+    <None Include="Resources\main_setting.png" />
+    <None Include="Resources\main_user.png" />
+    <None Include="Resources\sky_bg.png" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

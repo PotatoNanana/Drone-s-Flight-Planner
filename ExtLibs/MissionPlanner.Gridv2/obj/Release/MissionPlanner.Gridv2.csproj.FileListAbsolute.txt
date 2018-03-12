@@ -1,0 +1,14 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.GridUIv2.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Properties.Resources.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csproj.GenerateResource.Cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\MissionPlanner.Gridv2.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\MissionPlanner.Gridv2.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\MissionPlanner.Gridv2.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.GridUIv2.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.pdb

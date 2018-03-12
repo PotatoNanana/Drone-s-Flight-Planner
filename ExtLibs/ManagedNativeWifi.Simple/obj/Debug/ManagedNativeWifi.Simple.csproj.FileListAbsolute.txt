@@ -1,0 +1,24 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.pdb

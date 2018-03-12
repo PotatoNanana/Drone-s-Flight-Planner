@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitialSetup));
-
             this.backstageView = new MissionPlanner.Controls.BackstageView.BackstageView();
             this.SuspendLayout();
-          
             // 
             // backstageView
             // 
@@ -47,9 +44,8 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.backstageView);
-            this.MinimumSize = new System.Drawing.Size(1000, 450);
-            this.Name = "InitialSetup";
             resources.ApplyResources(this, "$this");
+            this.Name = "InitialSetup";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HardwareConfig_FormClosing);
             this.Load += new System.EventHandler(this.HardwareConfig_Load);
             this.ResumeLayout(false);

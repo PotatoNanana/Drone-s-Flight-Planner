@@ -1,0 +1,449 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csprojResolveAssemblyReference.cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AGauge.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.BackstageView.BackstageView.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Coords.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FileBrowse.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FlashMessage.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.GradientBG.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HSI.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ImageLabel.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.MyProgressBar.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.OptionForm.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressStep.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Properties.Resources.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.QuickView.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RadialGradientBG.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RangeControl.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ValuesControl.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.WindDir.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.zh-Hans.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.zh-Hans.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.zh-Hans.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.GenerateResource.Cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfo.cs
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Controls.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BitMiracle.LibTiff.NET.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\log4net.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.Win32.Primitives.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\Newtonsoft.Json.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\ProjNet.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\ICSharpCode.SharpZipLib.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.AppContext.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Console.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.DiagnosticSource.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.Tracing.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Globalization.Calendars.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.ZipFile.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.Primitives.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Http.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Sockets.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Reflection.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.Extensions.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Algorithms.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Encoding.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Primitives.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.X509Certificates.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MAVLink.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Utilities.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Data.SqlServerCe.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\DirectShowLib-2005.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\GMap.NET.Core.resources.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BitMiracle.LibTiff.NET.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\ProjNet.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\ICSharpCode.SharpZipLib.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.AppContext.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Console.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.Tracing.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Globalization.Calendars.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.ZipFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Sockets.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MAVLink.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Utilities.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\DirectShowLib-2005.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AGauge.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.BackstageView.BackstageView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Coords.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FileBrowse.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FlashMessage.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.GradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HSI.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ImageLabel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.MyProgressBar.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.OptionForm.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressStep.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.QuickView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RadialGradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RangeControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ValuesControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.WindDir.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\BitMiracle.LibTiff.NET.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\ProjNet.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\ICSharpCode.SharpZipLib.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.AppContext.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Console.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.Tracing.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Globalization.Calendars.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.ZipFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Sockets.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\MAVLink.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Utilities.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\DirectShowLib-2005.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AGauge.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.BackstageView.BackstageView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Coords.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FileBrowse.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FlashMessage.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.GradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HSI.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ImageLabel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.MyProgressBar.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.OptionForm.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressStep.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.QuickView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RadialGradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RangeControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ValuesControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.WindDir.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\BitMiracle.LibTiff.NET.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\ProjNet.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\ICSharpCode.SharpZipLib.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.AppContext.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Console.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.Tracing.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Globalization.Calendars.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.ZipFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Sockets.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\MAVLink.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Utilities.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\DirectShowLib-2005.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AGauge.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.BackstageView.BackstageView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Coords.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FileBrowse.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FlashMessage.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.GradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HSI.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ImageLabel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.MyProgressBar.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.OptionForm.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressStep.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.QuickView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RadialGradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RangeControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ValuesControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.WindDir.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V4\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BitMiracle.LibTiff.NET.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\ProjNet.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\ICSharpCode.SharpZipLib.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.AppContext.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Console.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.Tracing.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Globalization.Calendars.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.ZipFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Sockets.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MAVLink.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Utilities.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\DirectShowLib-2005.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AGauge.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.BackstageView.BackstageView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Coords.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FileBrowse.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FlashMessage.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.GradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HSI.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ImageLabel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.MyProgressBar.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.OptionForm.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressStep.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.QuickView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RadialGradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RangeControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ValuesControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.WindDir.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\BitMiracle.LibTiff.NET.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\log4net.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.Win32.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\ProjNet.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\ICSharpCode.SharpZipLib.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.AppContext.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Console.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Diagnostics.Tracing.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Globalization.Calendars.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.Compression.ZipFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.IO.FileSystem.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Http.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Net.Sockets.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Reflection.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.Extensions.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Algorithms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Encoding.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.Primitives.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Security.Cryptography.X509Certificates.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\MAVLink.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Utilities.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\System.Data.SqlServerCe.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\DirectShowLib-2005.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AGauge.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.BackstageView.BackstageView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Coords.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FileBrowse.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.FlashMessage.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.GradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HSI.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ImageLabel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.MyProgressBar.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.OptionForm.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressStep.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.QuickView.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RadialGradientBG.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.RangeControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ValuesControl.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.WindDir.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.HUDT.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterDialogue.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.ProgressReporterSphere.zh-Hans.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfo.cs
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll

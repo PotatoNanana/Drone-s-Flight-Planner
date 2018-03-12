@@ -1,0 +1,24 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AviFile\bin\Debug\AviFile.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AviFile\bin\Debug\AviFile.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AviFile\obj\Debug\AviFile.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AviFile\obj\Debug\AviFile.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AviFile\bin\Debug\AviFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AviFile\bin\Debug\AviFile.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AviFile\obj\Debug\AviFile.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AviFile\obj\Debug\AviFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AviFile\obj\Debug\AviFile.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AviFile\bin\Debug\AviFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AviFile\bin\Debug\AviFile.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AviFile\obj\Debug\AviFile.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AviFile\obj\Debug\AviFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\AviFile\obj\Debug\AviFile.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AviFile\bin\Debug\AviFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AviFile\bin\Debug\AviFile.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AviFile\obj\Debug\AviFile.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AviFile\obj\Debug\AviFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\AviFile\obj\Debug\AviFile.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\bin\Debug\AviFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\bin\Debug\AviFile.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.pdb

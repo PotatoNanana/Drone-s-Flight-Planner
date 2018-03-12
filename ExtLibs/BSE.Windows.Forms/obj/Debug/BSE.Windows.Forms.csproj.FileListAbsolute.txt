@@ -1,0 +1,68 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.XML
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Properties.Resources.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Panel.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanel.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanelList.resources
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.GenerateResource.Cache
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.XML
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Panel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanelList.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.XML
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Panel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanelList.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.XML
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Panel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanelList.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.XML
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Panel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanel.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanelList.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb

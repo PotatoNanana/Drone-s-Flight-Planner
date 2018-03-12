@@ -61,5 +61,10 @@ namespace MissionPlanner.Controls
                 this.LogError(ex);
             }
         }
+
+        internal void RemoveCurrent()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

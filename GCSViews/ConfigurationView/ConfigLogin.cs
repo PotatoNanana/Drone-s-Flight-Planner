@@ -11,19 +11,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 {
     public partial class ConfigLogin : UserControl, IActivate
     {
-        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-
-        private readonly Dictionary<int, int> baudmap = new Dictionary<int, int>
-        {
-            {57600, 7},
-            {38400, 6},
-            {9600, 4},
-            {19200, 5},
-            {115200, 8},
-            {1200, 1},
-            {2400, 2},
-            {4800, 3}
-        };
 
         public ConfigLogin()
         {
@@ -84,6 +71,11 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     }
 
         private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

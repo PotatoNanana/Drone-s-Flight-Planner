@@ -1,0 +1,39 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.xml
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\Mono.Posix.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.pdb
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\Mono.Posix.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\SharpAdbClient\bin\Debug\Mono.Posix.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master_V2\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\SharpAdbClient\bin\Debug\Mono.Posix.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\bin\Debug\Mono.Posix.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.pdb

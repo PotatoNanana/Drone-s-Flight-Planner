@@ -36,7 +36,7 @@ namespace MissionPlanner.GCSViews
 
         public void Activate()
         {
-            MainV2.instance.MenuConnect.Visible = false;
+            //MainV2.instance.MenuConnect.Visible = false;
         }
 
         public void Deactivate()
@@ -54,7 +54,7 @@ namespace MissionPlanner.GCSViews
             {
             }
 
-            MainV2.instance.MenuConnect.Visible = true;
+            //MainV2.instance.MenuConnect.Visible = true;
         }
 
         private void comPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -766,6 +766,11 @@ namespace MissionPlanner.GCSViews
         }
 
         private void CMB_boardtype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_terminal_TextChanged(object sender, EventArgs e)
         {
 
         }

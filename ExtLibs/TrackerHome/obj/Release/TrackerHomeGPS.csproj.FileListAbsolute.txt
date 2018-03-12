@@ -1,0 +1,7 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\TrackerHome\obj\Release\TrackerHomeGPS.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\TrackerHome.dll.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\TrackerHome.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Release\plugins\TrackerHome.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\TrackerHome\obj\Release\TrackerHomeGPS.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\TrackerHome\obj\Release\TrackerHome.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\TrackerHome\obj\Release\TrackerHome.pdb
