@@ -124,30 +124,6 @@
     <value>127, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="autoHideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="autoHideToolStripMenuItem.Text" xml:space="preserve">
-    <value>AutoHide</value>
-  </data>
-  <data name="fullScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="fullScreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Full Screen</value>
-  </data>
-  <data name="readonlyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="readonlyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Readonly</value>
-  </data>
-  <data name="connectionOptionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="connectionOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Connection Options</value>
-  </data>
   <data name="CTX_mainmenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 92</value>
   </data>
@@ -542,29 +518,29 @@
   <data name="MenuFlightLog.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUrSURBVFhH7Vd7bFNVGF+Hz/Xeru3Wbt3a+2r3sEHcQ1i3
-        MTvWrXsoQ0EBRdxEIWqixj/UGdQh+ICpIcsUBHUQyYQ4HgMHypgKCwuIRIZRFBefYHRqTPARjPvj+v3a
-        U+L62Npui4nxl/xyc8/5vu+c757vcW7C//i3kTgtLU3bYpxZ2cF5NnVyVcfeS75O7dPPVvHcqa3q38V5
-        X9iRVF3A5MeFxJycHP7RlKL6rbxn4H3j9ern6QvVn4WGEGK83zBH3Z1U1Rf34u4E90WCIFhW60tb3tVd
-        qw5aFqpDttvGJOR6uLpzXUneJcxUdMCCiqIIK4yuF9+hBc9kLlK/ty6OmpCHXiwLJ8LDhrSrHoTiNxm3
-        qGett8ZM6O0nj6P61DhDRRA8r/KzzpxOX6B+S7uOl6fS5vvOmJmOiCmyLGc3mvPXHTbUq1/RbiPxE/NN
-        FxhuPsBDFOGjegsvHZLkfdpQcnLANE/9wnJzCLHIHl31XysNxaebjDM+bTa6vqb3YYyHk4cdpBNbIhQ4
-        S1kUl2xMdg8NUgoE0/e5eO+f1ZYrVjgE4Q7FJt1vF8VWb4bz4C7eO4z5cHrIY7ZEKJRMJYuMPHKAr1M/
-        o/MMJj758hTXyixBoGMXLA6bze6wybMVQXp+mangJObD6b3N1Z5jS4RCtspX0qJrELXYdTAxTqlkJlGN
-        X8Mf6bIgLFJEcctoekw+FFmimGcXpLW0M/VjOqNg9urq1A2cO5WJ+1BYWHixXRBK8m2OlzEfTm+ftuZX
-        Jh6KgKcv6dy/IAA+Mt04gv30+XZrvauYuA8Oh+NSCj734wbXB5gP1oEd1GomHorAmTYbi79EHYXCP/lh
-        6lx1P197odLAS5zrSmPJGxgPlgdhZxNfPmKjIyCKYroiSQ1lmdl7EExYJJjHU25QUYu7tN6znVzl8e3a
-        qp/wjvFw8rDTnOqKnKcWiyWJPC0ntq7Vl/2IrgJj8fKocY7awXv6yJnL2BJhofGlgSg+sNicd7SXPDhG
-        yvES+m2Gsrtg128+AmhXertNqldE6ZVtusrzR2i38DhWQq+L9w7BHjMdGWhrVH+n0Sd+4mHjjMGDdDM4
-        QsEQK6G3QVfeAnvM9OjwBZQoNiKg3uJqfKkSK/eRXmNqXhYzOTasVuvlsk0uQ6F4Rl/6HXZ9WF8fNSH/
-        GlfRjRxmJqOCJlsQZFr03rlpU/uQg7iERUvIP6crWwA7fnNRwtfMRbGWuPF13nMeuz8UBSG3g6v6AfrM
-        VEyYoliVqdRBmu8zXX2qh5Ic182xCLk23TXLoe83EyPQUdBB8q32zr3aGl8lGotUm/9YaiqwMxOxA4FA
-        qVOMfomAghdoU5GI+S1cxZtOp/MSZiIuaCRJEqlC3VNtcfYiDQ5Q+4pEzK8yuGqg51ePE06Tk8O9iSJ5
-        fTs/67ceikx4FMpaFX8BkGeq40IiFYtctLyl5oIBFAukRDAxvk7nboK8X22cyM3ISKF6PD/P5thK6TCM
-        m0UwqdX9TkXFyFTGDwQG3Sqmk7erceXE2cGzAPG+ma/oiLrORgmNI9NhtQvynTMzcrr3aqtHLIr3JmNR
-        EZOdOAQaPFWoNtyh4F2A23jPCcwz0QmFBncoytmHlpkLTnSTdygYeLbq3Xdj3i82wUCgUIWaZxfEzdsp
-        oPBZd3KV0TXqeIFAoUKRT94+hf8YeNnOl6+f6AAKAW70dK63l2fmtmPRx1KKp7OpyQMaPG70+IF6Nrn0
-        SbyzqUmFBtcZ/A3giXf/8CQDZwgPJ/0s/wNISPgb2g0+kHALnRcAAAAASUVORK5CYII=
+        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
 </value>
   </data>
   <data name="MenuFlightLog.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -698,6 +674,30 @@
   </data>
   <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="autoHideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="autoHideToolStripMenuItem.Text" xml:space="preserve">
+    <value>AutoHide</value>
+  </data>
+  <data name="fullScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="fullScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Full Screen</value>
+  </data>
+  <data name="readonlyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="readonlyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Readonly</value>
+  </data>
+  <data name="connectionOptionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="connectionOptionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Connection Options</value>
   </data>
   <data name="menu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -2487,6 +2487,12 @@
   <data name="&gt;&gt;MenuTerminal.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MenuFlightLog.Name" xml:space="preserve">
+    <value>MenuFlightLog</value>
+  </data>
+  <data name="&gt;&gt;MenuFlightLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;MenuLogin.Name" xml:space="preserve">
     <value>MenuLogin</value>
   </data>
@@ -2503,13 +2509,7 @@
     <value>toolStripConnectionControl</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6566.43050, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;MenuFlightLog.Name" xml:space="preserve">
-    <value>MenuFlightLog</value>
-  </data>
-  <data name="&gt;&gt;MenuFlightLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6642.34650, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainV2</value>

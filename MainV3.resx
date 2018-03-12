@@ -165,7 +165,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 28</value>
+    <value>1350, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menu.TabIndex" type="System.Int32, mscorlib">
@@ -193,7 +193,7 @@
     <value>Flat</value>
   </data>
   <data name="but_setup.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 12pt</value>
+    <value>PJ Standard, 18pt, style=Bold</value>
   </data>
   <data name="but_setup.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -221,7 +221,7 @@
     <value>0</value>
   </data>
   <data name="but_setup.Text" xml:space="preserve">
-    <value> Set Up</value>
+    <value> ตั้งค่า</value>
   </data>
   <data name="but_setup.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
@@ -266,7 +266,7 @@
     <value>Flat</value>
   </data>
   <data name="but_flightPlan.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 12pt</value>
+    <value>PJ Standard, 18pt, style=Bold</value>
   </data>
   <data name="but_flightPlan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -293,7 +293,7 @@
     <value>0</value>
   </data>
   <data name="but_flightPlan.Text" xml:space="preserve">
-    <value> Flight Plan</value>
+    <value> แผนการบิน</value>
   </data>
   <data name="but_flightPlan.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
@@ -317,7 +317,7 @@
     <value>Flat</value>
   </data>
   <data name="but_mainMenu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 12pt</value>
+    <value>Bangna New, 11.999999pt, style=Bold</value>
   </data>
   <data name="but_mainMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -346,7 +346,7 @@
     <value>0</value>
   </data>
   <data name="but_mainMenu.Text" xml:space="preserve">
-    <value> Main Menu</value>
+    <value> หน้าหลัก</value>
   </data>
   <data name="but_mainMenu.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
@@ -363,16 +363,16 @@
   <data name="&gt;&gt;but_mainMenu.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="but_userProfile.AutoSize" type="System.Boolean, mscorlib">
+  <data name="but_farmProfile.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="but_userProfile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="but_farmProfile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="but_userProfile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 12pt</value>
+  <data name="but_farmProfile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PJ Standard, 18pt, style=Bold</value>
   </data>
-  <data name="but_userProfile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="but_farmProfile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABYAAAAcCAYAAABlL09dAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF7SURBVEhLlZVb
@@ -385,37 +385,37 @@
         JEJiVkyOB0jLH+Ip+PUtuTTIAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="but_userProfile.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="but_farmProfile.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="but_userProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="but_farmProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="but_userProfile.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="but_farmProfile.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 8</value>
   </data>
-  <data name="but_userProfile.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="but_farmProfile.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 51</value>
   </data>
-  <data name="but_userProfile.TabIndex" type="System.Int32, mscorlib">
+  <data name="but_farmProfile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="but_userProfile.Text" xml:space="preserve">
-    <value>  Farm Profile</value>
+  <data name="but_farmProfile.Text" xml:space="preserve">
+    <value> ข้อมูลฟาร์ม</value>
   </data>
-  <data name="but_userProfile.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="but_farmProfile.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
   </data>
-  <data name="&gt;&gt;but_userProfile.Name" xml:space="preserve">
-    <value>but_userProfile</value>
+  <data name="&gt;&gt;but_farmProfile.Name" xml:space="preserve">
+    <value>but_farmProfile</value>
   </data>
-  <data name="&gt;&gt;but_userProfile.Type" xml:space="preserve">
+  <data name="&gt;&gt;but_farmProfile.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;but_userProfile.Parent" xml:space="preserve">
+  <data name="&gt;&gt;but_farmProfile.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;but_userProfile.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;but_farmProfile.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -425,7 +425,7 @@
     <value>0, 28</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 59</value>
+    <value>1350, 59</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -449,7 +449,7 @@
     <value>46</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 561</value>
+    <value>1350, 729</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1586,11 +1586,8 @@
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 600</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 600</value>
+    <value>1364, 726</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

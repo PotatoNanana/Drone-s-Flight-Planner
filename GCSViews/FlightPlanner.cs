@@ -7047,5 +7047,30 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
 
         }
+
+        private void toolStripConnectionControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMap_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbl_distance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

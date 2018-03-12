@@ -103,9 +103,9 @@ namespace MissionPlanner.GCSViews
             ///
             ///added
             ///
-            AddBackstageViewPage(typeof(ConfigTest), "Register Tools");
-            AddBackstageViewPage(typeof(ConfigTest), "Update Tools");
-            AddBackstageViewPage(typeof(ConfigTest), "Flight Schedule");
+            AddBackstageViewPage(typeof(maintenance_RegisTool), "Register Tools");
+            AddBackstageViewPage(typeof(maintenance_RegisTool), "Update Tools");
+            AddBackstageViewPage(typeof(maintenance_RegisTool), "Flight Schedule");
 
 
             AddBackstageViewPage(typeof(ConfigFirmwareDisabled), rm.GetString("backstageViewPagefw.Text"), isConnected);

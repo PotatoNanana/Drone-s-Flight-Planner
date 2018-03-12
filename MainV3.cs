@@ -393,7 +393,8 @@ namespace MissionPlanner
         /// <summary>
         /// added
         /// </summary>
-        public Menu_main Menu_main;
+        public Menu_main2 Menu_main2;
+        public Menu_farm Menu_Farm;
 
         Controls.SITL Simulation;
 
@@ -699,7 +700,7 @@ namespace MissionPlanner
                 FlightPlanner = new GCSViews.FlightPlanner();
 
                 ///added
-                Menu_main = new GCSViews.Menu_main();
+                Menu_main2 = new GCSViews.Menu_main2();
 
                 //Configuration = new GCSViews.ConfigurationView.Setup();
                 log.Info("Create SIM");
@@ -714,7 +715,7 @@ namespace MissionPlanner
                 ///added
                 ///
 
-                Menu_main.Width = MyView.Width;
+                Menu_main2.Width = MyView.Width;
 
                 
             }
@@ -2647,9 +2648,8 @@ namespace MissionPlanner
             /// Added
             MyView.AddScreen(new MainSwitcher.Screen("UserLogin", typeof(GCSViews.UserLogin), false));
             MyView.AddScreen(new MainSwitcher.Screen("FlightLog", typeof(GCSViews.FlightLog), false));
-            MyView.AddScreen(new MainSwitcher.Screen("SelectMenu", typeof(GCSViews.SelectMenu), false));
-            MyView.AddScreen(new MainSwitcher.Screen("Menu_main", typeof(GCSViews.Menu_main), true));
-            MyView.AddScreen(new MainSwitcher.Screen("Main_FlightPlan", typeof(GCSViews.Main_FlightPlan), false));
+            MyView.AddScreen(new MainSwitcher.Screen("Menu_main2", typeof(GCSViews.Menu_main2), true));
+            MyView.AddScreen(new MainSwitcher.Screen("Menu_farm", typeof(GCSViews.Menu_farm), true));
 
             try
             {
@@ -3624,7 +3624,7 @@ namespace MissionPlanner
         }
         private void MenuMain_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("Menu_main");
+            MyView.ShowScreen("Menu_main2");
         }
 
         private void toolStripConnectionControl_Click(object sender, EventArgs e)
@@ -3636,7 +3636,14 @@ namespace MissionPlanner
         {
             SidePanel.Width = but_mainMenu.Width;
             SidePanel.Left = but_mainMenu.Left;
-            MyView.ShowScreen("Menu_main");
+            MyView.ShowScreen("Menu_main2");
+        }
+
+        private void but_farmProfile_Click(object sender, EventArgs e)
+        {
+            SidePanel.Width = but_farmProfile.Width;
+            SidePanel.Left = but_farmProfile.Left;
+            MyView.ShowScreen("Menu_farm");
         }
 
         private void but_flightPlan_Click(object sender, EventArgs e)
@@ -3652,13 +3659,7 @@ namespace MissionPlanner
             SidePanel.Left = but_setup.Left;
             MyView.ShowScreen("HWConfig");
         }
-
-        private void but_userProfile_Click(object sender, EventArgs e)
-        {
-            SidePanel.Width = but_userProfile.Width;
-            SidePanel.Left = but_userProfile.Left;
-            MyView.ShowScreen("FlightLog");
-        }
+        
         private void MainV3_Load(object sender, EventArgs e)
         {
 

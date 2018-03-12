@@ -3647,5 +3647,15 @@ namespace MissionPlanner
         {
             MyView.ShowScreen("UserLogin");
         }
+
+        private void toolStripConnectionControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainV2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
