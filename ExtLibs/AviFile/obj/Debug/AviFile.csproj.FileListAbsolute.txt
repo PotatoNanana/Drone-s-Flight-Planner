@@ -22,3 +22,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner2\ExtLibs\AviFile\bin\Debug\AviFile.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner2\ExtLibs\AviFile\bin\Debug\AviFile.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner2\ExtLibs\AviFile\obj\Debug\AviFile.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner2\ExtLibs\AviFile\obj\Debug\AviFile.pdb

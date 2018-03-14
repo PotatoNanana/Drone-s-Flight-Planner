@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETFramework,Version=v4.6.2": {
       "log4net/2.0.8": {
@@ -43,32 +43,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paper\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Comms\\MissionPlanner.Comms.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner2\\ExtLibs\\Comms\\MissionPlanner.Comms.csproj",
       "projectName": "MissionPlanner.Comms",
-      "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Comms\\MissionPlanner.Comms.csproj",
-      "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Comms\\obj\\",
+      "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner2\\ExtLibs\\Comms\\MissionPlanner.Comms.csproj",
+      "outputPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner2\\ExtLibs\\Comms\\obj\\",
       "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
-        "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "net462"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "net462": {
           "projectReferences": {}
