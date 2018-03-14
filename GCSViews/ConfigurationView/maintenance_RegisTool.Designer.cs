@@ -61,6 +61,7 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox_position = new System.Windows.Forms.TextBox();
+            this.lineSeparator1 = new MissionPlanner.Controls.LineSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,6 +167,7 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.pictureBox, "pictureBox");
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.TabStop = false;
@@ -191,6 +193,7 @@
             // 
             resources.ApplyResources(this.textBox_num, "textBox_num");
             this.textBox_num.Name = "textBox_num";
+            this.textBox_num.TextChanged += new System.EventHandler(this.textBox_num_TextChanged);
             // 
             // textBox_price
             // 
@@ -225,6 +228,7 @@
             this.button_search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_search.Name = "button_search";
             this.button_search.UseVisualStyleBackColor = false;
+            this.button_search.Click += new System.EventHandler(this.button_search_Click);
             // 
             // splitter1
             // 
@@ -242,10 +246,16 @@
             resources.ApplyResources(this.textBox_position, "textBox_position");
             this.textBox_position.Name = "textBox_position";
             // 
+            // lineSeparator1
+            // 
+            resources.ApplyResources(this.lineSeparator1, "lineSeparator1");
+            this.lineSeparator1.Name = "lineSeparator1";
+            // 
             // maintenance_RegisTool
             // 
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.lineSeparator1);
             this.Controls.Add(this.textBox_position);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.splitter1);
@@ -334,5 +344,6 @@
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox_position;
+        private Controls.LineSeparator lineSeparator1;
     }
 }

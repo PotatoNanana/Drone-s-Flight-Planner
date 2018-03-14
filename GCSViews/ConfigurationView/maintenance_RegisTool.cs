@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using log4net;
 using MissionPlanner.Controls;
 using System.Data.SqlClient;
+using System.IO;
+
 
 namespace MissionPlanner.GCSViews.ConfigurationView
 {
@@ -39,7 +41,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             Enabled = true;
         }
-        SqlConnection con = new SqlConnection("Data Source=NAPAT;Initial Catalog=MissionPlanner;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        string imgLocation = "";
+        SqlCommand cmd;
 
         private void BUT_ConfigLogin_Click(object sender, EventArgs e)
         {
@@ -163,9 +167,21 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private void button_save_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "INSERT INTO device_list (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,vender_responder,device_img,device_alarm) VALUES('" +textBox_num.Text + "','" + textBox_toolName.Text+ "','" +textBox_position.Text + "','" +dateTimePicker_reg.Text + "','" +dateTimePicker_start .Text + "','" +dateTimePicker_exp .Text + "','" +textBox_venName.Text + "','" +textBox_venAdd .Text + "','" +textBox_venTel .Text + "','" + textBox_respon.Text + "','" +pictureBox .Image + "','" +comboBox_alarm .Text + "')";
+
+            byte[] images = null;
+            FileStream Streem = new FileStream(imgLocation,FileMode.Open,FileAccess.Read);
+            BinaryReader brs = new BinaryReader(Streem);
+            images = brs.ReadBytes((int)Streem.Length);
+
+            String query = "INSERT INTO device_list (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,vender_responder,device_img,device_alarm) " 
+                                       + "VALUES('" +textBox_num.Text + "','" + textBox_toolName.Text+ "','" +textBox_position.Text + "','" +dateTimePicker_start.Text + "','" +dateTimePicker_reg.Text + "','" +dateTimePicker_exp .Text + "','" +textBox_venName.Text + "','" +textBox_venAdd .Text + "','" +textBox_venTel .Text + "','" + textBox_respon.Text + "',@images,'" + comboBox_alarm .Text + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query,con);
             SDA.SelectCommand.ExecuteNonQuery();
+
+            cmd = new SqlCommand(query,con);
+            cmd.Parameters.Add(new SqlParameter("@images",images));
+            int N = cmd.ExecuteNonQuery();
+
             con.Close();
             MessageBox.Show("Save To DB Success!!");
         }
@@ -178,6 +194,22 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private void label8_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox_num_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_search_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png file(*.png)|*.png|.jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                pictureBox.ImageLocation = imgLocation; 
+}
         }
     }
 }

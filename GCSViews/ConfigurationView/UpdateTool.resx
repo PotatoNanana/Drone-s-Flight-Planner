@@ -118,36 +118,744 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PIC_wizard.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="PIC_wizard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="backstageView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PIC_wizard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 93</value>
+  <data name="backstageView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="PIC_wizard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 70</value>
+  <data name="backstageView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="PIC_wizard.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="backstageView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>793, 665</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PIC_wizard.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="backstageView.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;PIC_wizard.Name" xml:space="preserve">
-    <value>PIC_wizard</value>
+  <data name="&gt;&gt;backstageView.Name" xml:space="preserve">
+    <value>backstageView</value>
   </data>
-  <data name="&gt;&gt;PIC_wizard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;backstageView.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.BackstageView.BackstageView, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;PIC_wizard.Parent" xml:space="preserve">
+  <data name="&gt;&gt;backstageView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;PIC_wizard.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;backstageView.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="UpdateTool.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="UpdateTool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="UpdateTool.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="UpdateTool.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 500</value>
+  </data>
+  <data name="UpdateTool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 665</value>
+  </data>
+  <data name="UpdateTool.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;UpdateTool.Name" xml:space="preserve">
+    <value>UpdateTool</value>
+  </data>
+  <data name="&gt;&gt;UpdateTool.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.BackstageView.BackstageView, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;UpdateTool.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;UpdateTool.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="myLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 14.25pt</value>
+  </data>
+  <data name="myLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 8</value>
+  </data>
+  <data name="myLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 24</value>
+  </data>
+  <data name="myLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="myLabel1.Text" xml:space="preserve">
+    <value>Maintain Change</value>
+  </data>
+  <data name="&gt;&gt;myLabel1.Name" xml:space="preserve">
+    <value>myLabel1</value>
+  </data>
+  <data name="&gt;&gt;myLabel1.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel1.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="lineSeparator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 38</value>
+  </data>
+  <data name="lineSeparator1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2000, 2</value>
+  </data>
+  <data name="lineSeparator1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 2</value>
+  </data>
+  <data name="lineSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>698, 2</value>
+  </data>
+  <data name="lineSeparator1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator1.Name" xml:space="preserve">
+    <value>lineSeparator1</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator1.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.LineSeparator, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator1.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="myLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 108</value>
+  </data>
+  <data name="myLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="myLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="myLabel2.Text" xml:space="preserve">
+    <value>Tools Name</value>
+  </data>
+  <data name="&gt;&gt;myLabel2.Name" xml:space="preserve">
+    <value>myLabel2</value>
+  </data>
+  <data name="&gt;&gt;myLabel2.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel2.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="myLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 494</value>
+  </data>
+  <data name="myLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 23</value>
+  </data>
+  <data name="myLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="myLabel3.Text" xml:space="preserve">
+    <value>Responder</value>
+  </data>
+  <data name="&gt;&gt;myLabel3.Name" xml:space="preserve">
+    <value>myLabel3</value>
+  </data>
+  <data name="&gt;&gt;myLabel3.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel3.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="myLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 542</value>
+  </data>
+  <data name="myLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 23</value>
+  </data>
+  <data name="myLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="myLabel4.Text" xml:space="preserve">
+    <value>Date &amp; Time</value>
+  </data>
+  <data name="&gt;&gt;myLabel4.Name" xml:space="preserve">
+    <value>myLabel4</value>
+  </data>
+  <data name="&gt;&gt;myLabel4.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel4.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="myButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 600</value>
+  </data>
+  <data name="myButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 38</value>
+  </data>
+  <data name="myButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="myButton1.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="&gt;&gt;myButton1.Name" xml:space="preserve">
+    <value>myButton1</value>
+  </data>
+  <data name="&gt;&gt;myButton1.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myButton1.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="myButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 600</value>
+  </data>
+  <data name="myButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 38</value>
+  </data>
+  <data name="myButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="myButton2.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;myButton2.Name" xml:space="preserve">
+    <value>myButton2</value>
+  </data>
+  <data name="&gt;&gt;myButton2.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myButton2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myButton2.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 545</value>
+  </data>
+  <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="dateTimePicker1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;dateTimePicker1.Name" xml:space="preserve">
+    <value>dateTimePicker1</value>
+  </data>
+  <data name="&gt;&gt;dateTimePicker1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTimePicker1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="myButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="myButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>591, 600</value>
+  </data>
+  <data name="myButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 38</value>
+  </data>
+  <data name="myButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="myButton3.Text" xml:space="preserve">
+    <value>Maintain Table</value>
+  </data>
+  <data name="&gt;&gt;myButton3.Name" xml:space="preserve">
+    <value>myButton3</value>
+  </data>
+  <data name="&gt;&gt;myButton3.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myButton3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myButton3.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="textBox_resp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 494</value>
+  </data>
+  <data name="textBox_resp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 20</value>
+  </data>
+  <data name="textBox_resp.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;textBox_resp.Name" xml:space="preserve">
+    <value>textBox_resp</value>
+  </data>
+  <data name="&gt;&gt;textBox_resp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_resp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_resp.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="myLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 157</value>
+  </data>
+  <data name="myLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="myLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="myLabel5.Text" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="&gt;&gt;myLabel5.Name" xml:space="preserve">
+    <value>myLabel5</value>
+  </data>
+  <data name="&gt;&gt;myLabel5.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel5.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="comboBox.Items" xml:space="preserve">
+    <value>Change Item</value>
+  </data>
+  <data name="comboBox.Items1" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="comboBox.Items2" xml:space="preserve">
+    <value>Send to Repair</value>
+  </data>
+  <data name="comboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 159</value>
+  </data>
+  <data name="comboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 21</value>
+  </data>
+  <data name="comboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;comboBox.Name" xml:space="preserve">
+    <value>comboBox</value>
+  </data>
+  <data name="&gt;&gt;comboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBox.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="richTextBox1_venAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 361</value>
+  </data>
+  <data name="richTextBox1_venAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 51</value>
+  </data>
+  <data name="richTextBox1_venAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="richTextBox1_venAdd.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;richTextBox1_venAdd.Name" xml:space="preserve">
+    <value>richTextBox1_venAdd</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1_venAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1_venAdd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1_venAdd.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="myLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 361</value>
+  </data>
+  <data name="myLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 18</value>
+  </data>
+  <data name="myLabel11.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="myLabel11.Text" xml:space="preserve">
+    <value>Vender Address</value>
+  </data>
+  <data name="&gt;&gt;myLabel11.Name" xml:space="preserve">
+    <value>myLabel11</value>
+  </data>
+  <data name="&gt;&gt;myLabel11.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel11.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="myLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 310</value>
+  </data>
+  <data name="myLabel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 18</value>
+  </data>
+  <data name="myLabel10.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="myLabel10.Text" xml:space="preserve">
+    <value>Vender Phone Number</value>
+  </data>
+  <data name="&gt;&gt;myLabel10.Name" xml:space="preserve">
+    <value>myLabel10</value>
+  </data>
+  <data name="&gt;&gt;myLabel10.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel10.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="textBox_venName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 258</value>
+  </data>
+  <data name="textBox_venName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 20</value>
+  </data>
+  <data name="textBox_venName.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;textBox_venName.Name" xml:space="preserve">
+    <value>textBox_venName</value>
+  </data>
+  <data name="&gt;&gt;textBox_venName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_venName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_venName.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="maskedTextBox_venNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 308</value>
+  </data>
+  <data name="maskedTextBox_venNum.Mask" xml:space="preserve">
+    <value>000-000-0000</value>
+  </data>
+  <data name="maskedTextBox_venNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 20</value>
+  </data>
+  <data name="maskedTextBox_venNum.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="maskedTextBox_venNum.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;maskedTextBox_venNum.Name" xml:space="preserve">
+    <value>maskedTextBox_venNum</value>
+  </data>
+  <data name="&gt;&gt;maskedTextBox_venNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;maskedTextBox_venNum.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;maskedTextBox_venNum.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="myLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 258</value>
+  </data>
+  <data name="myLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 18</value>
+  </data>
+  <data name="myLabel9.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="myLabel9.Text" xml:space="preserve">
+    <value>Vender</value>
+  </data>
+  <data name="&gt;&gt;myLabel9.Name" xml:space="preserve">
+    <value>myLabel9</value>
+  </data>
+  <data name="&gt;&gt;myLabel9.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel9.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="myLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>630, 207</value>
+  </data>
+  <data name="myLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 23</value>
+  </data>
+  <data name="myLabel8.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="myLabel8.Text" xml:space="preserve">
+    <value>THB</value>
+  </data>
+  <data name="&gt;&gt;myLabel8.Name" xml:space="preserve">
+    <value>myLabel8</value>
+  </data>
+  <data name="&gt;&gt;myLabel8.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel8.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="textBox_price.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 207</value>
+  </data>
+  <data name="textBox_price.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="textBox_price.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;textBox_price.Name" xml:space="preserve">
+    <value>textBox_price</value>
+  </data>
+  <data name="&gt;&gt;textBox_price.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_price.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_price.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="myLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 207</value>
+  </data>
+  <data name="myLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="myLabel7.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="myLabel7.Text" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="&gt;&gt;myLabel7.Name" xml:space="preserve">
+    <value>myLabel7</value>
+  </data>
+  <data name="&gt;&gt;myLabel7.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel7.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="myLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 440</value>
+  </data>
+  <data name="myLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 23</value>
+  </data>
+  <data name="myLabel6.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="myLabel6.Text" xml:space="preserve">
+    <value>Maintain Time Length</value>
+  </data>
+  <data name="&gt;&gt;myLabel6.Name" xml:space="preserve">
+    <value>myLabel6</value>
+  </data>
+  <data name="&gt;&gt;myLabel6.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBox_lenght.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 443</value>
+  </data>
+  <data name="textBox_lenght.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="textBox_lenght.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;textBox_lenght.Name" xml:space="preserve">
+    <value>textBox_lenght</value>
+  </data>
+  <data name="&gt;&gt;textBox_lenght.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_lenght.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_lenght.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="myLabel12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>630, 440</value>
+  </data>
+  <data name="myLabel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 23</value>
+  </data>
+  <data name="myLabel12.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="myLabel12.Text" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="&gt;&gt;myLabel12.Name" xml:space="preserve">
+    <value>myLabel12</value>
+  </data>
+  <data name="&gt;&gt;myLabel12.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel12.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel12.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBox_id.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 68</value>
+  </data>
+  <data name="textBox_id.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 20</value>
+  </data>
+  <data name="textBox_id.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;textBox_id.Name" xml:space="preserve">
+    <value>textBox_id</value>
+  </data>
+  <data name="&gt;&gt;textBox_id.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_id.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_id.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBox_name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 111</value>
+  </data>
+  <data name="textBox_name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 20</value>
+  </data>
+  <data name="textBox_name.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;textBox_name.Name" xml:space="preserve">
+    <value>textBox_name</value>
+  </data>
+  <data name="&gt;&gt;textBox_name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_name.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_name.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="myLabel13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt</value>
+  </data>
+  <data name="myLabel13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 68</value>
+  </data>
+  <data name="myLabel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="myLabel13.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="myLabel13.Text" xml:space="preserve">
+    <value>Tools ID </value>
+  </data>
+  <data name="&gt;&gt;myLabel13.Name" xml:space="preserve">
+    <value>myLabel13</value>
+  </data>
+  <data name="&gt;&gt;myLabel13.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel13.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel13.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -157,10 +865,10 @@
     <value>6, 13</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>486, 256</value>
+    <value>793, 665</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ConfigWizard</value>
+    <value>UserControl1</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
