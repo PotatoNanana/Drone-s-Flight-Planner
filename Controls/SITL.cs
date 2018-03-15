@@ -23,6 +23,7 @@ namespace MissionPlanner.Controls
 {
     public partial class SITL : MyUserControl, IActivate
     {
+        
         //https://regex101.com/r/cH3kV3/2
         //https://regex101.com/r/cH3kV3/3
         Regex default_params_regex = new Regex(@"""([^""]+)""\s*:\s*\{\s*[^\{}]+""default_params_filename""\s*:\s*\[*""([^""]+)""\s*[^\}]*\}");
@@ -410,7 +411,7 @@ namespace MissionPlanner.Controls
 
             System.Threading.Thread.Sleep(2000);
 
-            MainV2.View.ShowScreen(MainV2.View.screens[0].Name);
+            MainV3.View.ShowScreen(MainV3.View.screens[0].Name);
 
             var client = new Comms.TcpSerial();
 

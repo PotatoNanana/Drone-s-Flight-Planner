@@ -192,6 +192,10 @@ namespace MissionPlanner
             }
         }
 
+        internal void gotoMenu_farm(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("Menu_farm");
+        }
         Controls.MainSwitcher MyView;
 
         private static DisplayView _displayConfiguration = new DisplayView().Basic();
@@ -701,9 +705,13 @@ namespace MissionPlanner
 
                 ///added
                 Menu_main2 = new GCSViews.Menu_main2();
+                Menu_main2.Goto_farmProfile_Clicked += but_farmProfile_Click;
 
-                //Configuration = new GCSViews.ConfigurationView.Setup();
-                log.Info("Create SIM");
+                GCSViews.FlightPlanner.OnMenuSimmulationButtonClick += MenuSimulation_Click;
+
+
+                    //Configuration = new GCSViews.ConfigurationView.Setup();
+                    log.Info("Create SIM");
                 Simulation = new SITL();
                 //Firmware = new GCSViews.Firmware();
                 //Terminal = new GCSViews.Terminal();

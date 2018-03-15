@@ -455,6 +455,7 @@ namespace MissionPlanner.GCSViews
             this.MenuSimulation.Name = "MenuSimulation";
             this.toolTip1.SetToolTip(this.MenuSimulation, resources.GetString("MenuSimulation.ToolTip"));
             this.MenuSimulation.UseVisualStyleBackColor = true;
+            this.MenuSimulation.Click += new System.EventHandler(this.MenuSimulation_Click);
             // 
             // panel3
             // 
@@ -568,7 +569,7 @@ namespace MissionPlanner.GCSViews
             this.Commands.Name = "Commands";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("PJ Standard", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("PJ Standard", 12F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.Format = "N0";
             dataGridViewCellStyle6.NullValue = "0";

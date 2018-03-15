@@ -25,19 +25,17 @@ namespace MissionPlanner.GCSViews
                 {
                     n = DG_Farm.Rows.Add();
                     DG_Farm.Rows[n].Cells[0].Value = "25/06/2016";
-                    DG_Farm.Rows[n].Cells[1].Value = "05268";
-                    DG_Farm.Rows[n].Cells[2].Value = "0025";
-                    DG_Farm.Rows[n].Cells[3].Value = "รดน้ำ";
-                    DG_Farm.Rows[n].Cells[4].Value = "1250";
-                    DG_Farm.Rows[n].Cells[5].Value = "30000";
+                    DG_Farm.Rows[n].Cells[1].Value = "0025";
+                    DG_Farm.Rows[n].Cells[2].Value = "รดน้ำ";
+                    DG_Farm.Rows[n].Cells[3].Value = "1250";
+                    DG_Farm.Rows[n].Cells[4].Value = "30000";
 
                     n = DG_Farm.Rows.Add();
                     DG_Farm.Rows[n].Cells[0].Value = "13/09/2016";
-                    DG_Farm.Rows[n].Cells[1].Value = "06953";
-                    DG_Farm.Rows[n].Cells[2].Value = "0074";
-                    DG_Farm.Rows[n].Cells[3].Value = "โรยปุ๋ย";
-                    DG_Farm.Rows[n].Cells[4].Value = "230";
-                    DG_Farm.Rows[n].Cells[5].Value = "25000";
+                    DG_Farm.Rows[n].Cells[1].Value = "0074";
+                    DG_Farm.Rows[n].Cells[2].Value = "โรยปุ๋ย";
+                    DG_Farm.Rows[n].Cells[3].Value = "230";
+                    DG_Farm.Rows[n].Cells[4].Value = "25000";
                 }
             }
         }

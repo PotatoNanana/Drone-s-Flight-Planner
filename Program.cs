@@ -16,6 +16,7 @@ using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using MissionPlanner.Comms;
 using MissionPlanner.Controls;
+using MissionPlanner.GCSViews;
 
 namespace MissionPlanner
 {
@@ -290,31 +291,6 @@ namespace MissionPlanner
             {
                 
             }
-            //try
-            //{
-            //    foreach (string newupdater in Directory.GetFiles(Settings.GetRunningDirectory(), "Updater.exe*.new"))
-            //    {
-            //        File.Copy(newupdater, newupdater.Remove(newupdater.Length - 4), true);
-            //        File.Delete(newupdater);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    log.Error("Exception during update", ex);
-            //}
-
-            //try
-            //{
-            //    foreach (string newupdater in Directory.GetFiles(Settings.GetRunningDirectory(), "tlogThumbnailHandler.dll.new"))
-            //    {
-            //        File.Copy(newupdater, newupdater.Remove(newupdater.Length - 4), true);
-            //        File.Delete(newupdater);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    log.Error("Exception during update", ex);
-            //}
         }
 
 
@@ -430,76 +406,7 @@ namespace MissionPlanner
             DialogResult dr =
                 CustomMessageBox.Show("An error has occurred\n" + ex.ToString() + "\n\nReport this Error???",
                     "Send Error", MessageBoxButtons.YesNo);
-            //if (DialogResult.Yes == dr)
-            //{
-            //    try
-            //    {
-            //        string data = "";
-            //        foreach (System.Collections.DictionaryEntry de in ex.Data)
-            //            data += String.Format("-> {0}: {1}", de.Key, de.Value);
-
-            //        string message = "";
-
-            //        try
-            //        {
-            //            Controls.InputBox.Show("Message", "Please enter a message about this error if you can.",
-            //                ref message);
-            //        }
-            //        catch
-            //        {
-            //        }
-
-            //        // Create a request using a URL that can receive a post. 
-            //        WebRequest request = WebRequest.Create("http://vps.oborne.me/mail.php");
-            //        request.Timeout = 10000; // 10 sec
-            //        // Set the Method property of the request to POST.
-            //        request.Method = "POST";
-            //        // Create POST data and convert it to a byte array.
-            //        string postData = "message=" + Environment.OSVersion.VersionString + " " +
-            //                          System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()
-            //                          + " " + Application.ProductVersion
-            //                          + "\nException " + ex.ToString().Replace('&', ' ').Replace('=', ' ')
-            //                          + "\nStack: " + ex.StackTrace.ToString().Replace('&', ' ').Replace('=', ' ')
-            //                          + "\nTargetSite " + ex.TargetSite + " " + ex.TargetSite.DeclaringType
-            //                          + "\ndata " + data
-            //                          + "\nmessage " + message.Replace('&', ' ').Replace('=', ' ');
-            //        byte[] byteArray = Encoding.ASCII.GetBytes(postData);
-            //        // Set the ContentType property of the WebRequest.
-            //        request.ContentType = "application/x-www-form-urlencoded";
-            //        // Set the ContentLength property of the WebRequest.
-            //        request.ContentLength = byteArray.Length;
-            //        // Get the request stream.
-            //        using (Stream dataStream = request.GetRequestStream())
-            //        {
-            //            // Write the data to the request stream.
-            //            dataStream.Write(byteArray, 0, byteArray.Length);
-            //        }
-            //        // Get the response.
-            //        using (WebResponse response = request.GetResponse())
-            //        {
-            //            // Display the status.
-            //            Console.WriteLine(((HttpWebResponse) response).StatusDescription);
-            //            // Get the stream containing content returned by the server.
-            //            using (Stream dataStream = response.GetResponseStream())
-            //            {
-            //                // Open the stream using a StreamReader for easy access.
-            //                using (StreamReader reader = new StreamReader(dataStream))
-            //                {
-            //                    // Read the content.
-            //                    string responseFromServer = reader.ReadToEnd();
-            //                    // Display the content.
-            //                    Console.WriteLine(responseFromServer);
-            //                }
-            //            }
-            //        }
-            //    }
-            //    catch (Exception exp)
-            //    {
-            //        Console.WriteLine(exp.ToString());
-            //        log.Error(exp);
-            //        CustomMessageBox.Show("Could not send report! Typically due to lack of internet connection.");
-            //    }
-            //}
+            
         }
 
         static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
