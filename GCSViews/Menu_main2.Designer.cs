@@ -79,7 +79,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel_Main_farm);
