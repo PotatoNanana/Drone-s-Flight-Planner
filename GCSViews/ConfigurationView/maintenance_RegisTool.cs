@@ -41,7 +41,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             Enabled = true;
         }
-        SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=CS-RABBIT\\SQLEXPRESS;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         string imgLocation = "";
         SqlCommand cmd;
 
@@ -173,12 +173,15 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             BinaryReader brs = new BinaryReader(Streem);
             images = brs.ReadBytes((int)Streem.Length);
 
-            String query = "INSERT INTO device_list (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,vender_responder,device_img,device_alarm) " 
-                                       + "VALUES('" +textBox_num.Text + "','" + textBox_toolName.Text+ "','" +textBox_position.Text + "','" +dateTimePicker_start.Text + "','" +dateTimePicker_reg.Text + "','" +dateTimePicker_exp .Text + "','" +textBox_venName.Text + "','" +textBox_venAdd .Text + "','" +textBox_venTel .Text + "','" + textBox_respon.Text + "',@images,'" + comboBox_alarm .Text + "')";
+            String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,vender_responder,device_alarm) " 
+                                       + "VALUES('" +textBox_num.Text + "','" + textBox_toolName.Text+ "','" +textBox_position.Text + "','" +dateTimePicker_start.Text + "','" +dateTimePicker_reg.Text + "','" +dateTimePicker_exp .Text + "','" +textBox_venName.Text + "','" +textBox_venAdd .Text + "','" +textBox_venTel .Text + "','" + textBox_respon.Text +  comboBox_alarm .Text + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query,con);
             SDA.SelectCommand.ExecuteNonQuery();
 
-            cmd = new SqlCommand(query,con);
+            String queryImg = "INSERT INTO device_list (device_img,device_alarm) "
+                                       + "VALUES(@images)";
+
+            cmd = new SqlCommand(queryImg,con);
             cmd.Parameters.Add(new SqlParameter("@images",images));
             int N = cmd.ExecuteNonQuery();
 
