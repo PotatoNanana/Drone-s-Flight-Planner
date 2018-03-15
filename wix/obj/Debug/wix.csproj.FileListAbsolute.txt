@@ -14,3 +14,12 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\ob
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\obj\Debug\wix.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\obj\Debug\wix.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\obj\Debug\wix.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Msi\licence.rtf
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Msi\wix.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Msi\wix.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.csprojResolveAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.Properties.Resources.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.csproj.GenerateResource.Cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.csproj.CoreCompileInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.pdb

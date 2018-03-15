@@ -44,6 +44,12 @@ namespace MissionPlanner.GCSViews
 {
     public partial class FlightPlanner : MyUserControl, IDeactivate, IActivate
     {
+        public static event EventHandler OnMenuSimmulationButtonClick;
+        protected virtual void OnMenuSimulationButtonClicked(EventArgs e)
+        {
+            OnMenuSimmulationButtonClick?.Invoke(this, e);
+        }
+
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         int selectedrow;
         public bool quickadd;
@@ -7071,6 +7077,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         private void myButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MenuSimulation_Click(object sender, EventArgs e)
+        {
+            OnMenuSimulationButtonClicked(e);
         }
     }
 }

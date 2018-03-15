@@ -20,7 +20,7 @@ namespace MissionPlanner.GCSViews
         {
             InitializeComponent();
 
-            MyView = new MainSwitcher(this);
+           MyView = new MainSwitcher(this);
             Add_DG();
 
             void Add_DG()
@@ -84,14 +84,21 @@ namespace MissionPlanner.GCSViews
                 }
             }
         }
-
+        
         Controls.MainSwitcher MyView;
-        protected override void OnLoad(EventArgs e)
+        public static event EventHandler Goto_farmProfile_Clicked;
+
+        protected virtual void OnGotoFarmProfileClicked(EventArgs e)
         {
-            MyView.AddScreen(new MainSwitcher.Screen("Menu_farm", typeof(GCSViews.Menu_farm), true));
+            Goto_farmProfile_Clicked?.Invoke(this, e);
         }
 
-            private void label5_Click(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
+        {
+            //MyView.AddScreen(new MainSwitcher.Screen("Menu_farm", typeof(GCSViews.Menu_farm), true));
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
@@ -153,7 +160,8 @@ namespace MissionPlanner.GCSViews
 
         private void Goto_farmProfile_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("Menu_farm");
+            OnGotoFarmProfileClicked(e);
+
         }
 
         public void DG_farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -185,5 +193,6 @@ namespace MissionPlanner.GCSViews
         {
 
         }
+        
     }
 }
