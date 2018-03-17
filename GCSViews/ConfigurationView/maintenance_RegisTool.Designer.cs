@@ -62,6 +62,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.textBox_position = new System.Windows.Forms.TextBox();
             this.lineSeparator1 = new MissionPlanner.Controls.LineSeparator();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -251,10 +253,22 @@
             resources.ApplyResources(this.lineSeparator1, "lineSeparator1");
             this.lineSeparator1.Name = "lineSeparator1";
             // 
+            // textBox3
+            // 
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.Name = "textBox3";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
+            // 
             // maintenance_RegisTool
             // 
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.lineSeparator1);
             this.Controls.Add(this.textBox_position);
             this.Controls.Add(this.label20);
@@ -345,5 +359,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox_position;
         private Controls.LineSeparator lineSeparator1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label21;
     }
 }

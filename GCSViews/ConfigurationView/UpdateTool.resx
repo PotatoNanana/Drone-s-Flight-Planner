@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;backstageView.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>30</value>
   </data>
   <data name="UpdateTool.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -175,22 +175,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UpdateTool.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>29</value>
   </data>
   <data name="myLabel1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 14.25pt</value>
+    <value>PJ Standard, 20.25pt</value>
   </data>
   <data name="myLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>37, 8</value>
+    <value>27, 3</value>
   </data>
   <data name="myLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 24</value>
+    <value>301, 37</value>
   </data>
   <data name="myLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="myLabel1.Text" xml:space="preserve">
-    <value>Maintain Change</value>
+    <value>การบำรุงรักษาชิ้นส่วนของโดรน</value>
   </data>
   <data name="&gt;&gt;myLabel1.Name" xml:space="preserve">
     <value>myLabel1</value>
@@ -202,10 +202,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel1.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>28</value>
   </data>
   <data name="lineSeparator1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 38</value>
+    <value>27, 46</value>
   </data>
   <data name="lineSeparator1.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>2000, 2</value>
@@ -229,22 +229,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lineSeparator1.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>27</value>
   </data>
   <data name="myLabel2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 108</value>
+    <value>209, 136</value>
   </data>
   <data name="myLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 23</value>
+    <value>115, 34</value>
   </data>
   <data name="myLabel2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="myLabel2.Text" xml:space="preserve">
-    <value>Tools Name</value>
+    <value>ชื่อชิ้นส่วนโดรน</value>
   </data>
   <data name="&gt;&gt;myLabel2.Name" xml:space="preserve">
     <value>myLabel2</value>
@@ -256,22 +256,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel2.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="myLabel3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 494</value>
   </data>
   <data name="myLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 23</value>
+    <value>177, 23</value>
   </data>
   <data name="myLabel3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="myLabel3.Text" xml:space="preserve">
-    <value>Responder</value>
+    <value>ผู้ติดต่อกับตัวแทนการขาย</value>
   </data>
   <data name="&gt;&gt;myLabel3.Name" xml:space="preserve">
     <value>myLabel3</value>
@@ -283,22 +283,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel3.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
   </data>
   <data name="myLabel4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 542</value>
   </data>
   <data name="myLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 23</value>
+    <value>152, 23</value>
   </data>
   <data name="myLabel4.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="myLabel4.Text" xml:space="preserve">
-    <value>Date &amp; Time</value>
+    <value>วัน / เวลาที่ส่งซ่อมบำรุง</value>
   </data>
   <data name="&gt;&gt;myLabel4.Name" xml:space="preserve">
     <value>myLabel4</value>
@@ -310,7 +310,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel4.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>24</value>
+  </data>
+  <data name="myButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 600</value>
@@ -322,7 +325,7 @@
     <value>11</value>
   </data>
   <data name="myButton1.Text" xml:space="preserve">
-    <value>Print</value>
+    <value>พิมพ์</value>
   </data>
   <data name="&gt;&gt;myButton1.Name" xml:space="preserve">
     <value>myButton1</value>
@@ -334,7 +337,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myButton1.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
+  </data>
+  <data name="myButton2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myButton2.Location" type="System.Drawing.Point, System.Drawing">
     <value>396, 600</value>
@@ -346,7 +352,7 @@
     <value>12</value>
   </data>
   <data name="myButton2.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>บันทึกข้อมูล</value>
   </data>
   <data name="&gt;&gt;myButton2.Name" xml:space="preserve">
     <value>myButton2</value>
@@ -358,10 +364,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myButton2.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 545</value>
+    <value>404, 545</value>
   </data>
   <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -379,7 +385,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
+  </data>
+  <data name="myButton3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -394,7 +403,7 @@
     <value>16</value>
   </data>
   <data name="myButton3.Text" xml:space="preserve">
-    <value>Maintain Table</value>
+    <value>ตารางซ่อมบำรุงรักษา</value>
   </data>
   <data name="&gt;&gt;myButton3.Name" xml:space="preserve">
     <value>myButton3</value>
@@ -406,10 +415,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myButton3.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="textBox_resp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 494</value>
+    <value>404, 494</value>
   </data>
   <data name="textBox_resp.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 20</value>
@@ -427,13 +436,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox_resp.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="myLabel5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 157</value>
+    <value>209, 178</value>
   </data>
   <data name="myLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 23</value>
@@ -442,7 +451,7 @@
     <value>20</value>
   </data>
   <data name="myLabel5.Text" xml:space="preserve">
-    <value>Action</value>
+    <value>กิจกรรม</value>
   </data>
   <data name="&gt;&gt;myLabel5.Name" xml:space="preserve">
     <value>myLabel5</value>
@@ -454,7 +463,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel5.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="comboBox.Items" xml:space="preserve">
     <value>Change Item</value>
@@ -466,7 +475,7 @@
     <value>Send to Repair</value>
   </data>
   <data name="comboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 159</value>
+    <value>404, 180</value>
   </data>
   <data name="comboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 21</value>
@@ -484,10 +493,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comboBox.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="richTextBox1_venAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 361</value>
+    <value>404, 361</value>
   </data>
   <data name="richTextBox1_venAdd.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 51</value>
@@ -508,22 +517,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;richTextBox1_venAdd.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="myLabel11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel11.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 361</value>
   </data>
   <data name="myLabel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 18</value>
+    <value>152, 29</value>
   </data>
   <data name="myLabel11.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
   <data name="myLabel11.Text" xml:space="preserve">
-    <value>Vender Address</value>
+    <value>ที่อยู่ตัวแทนการขาย</value>
   </data>
   <data name="&gt;&gt;myLabel11.Name" xml:space="preserve">
     <value>myLabel11</value>
@@ -535,10 +544,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel11.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="myLabel10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel10.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 310</value>
@@ -550,7 +559,7 @@
     <value>44</value>
   </data>
   <data name="myLabel10.Text" xml:space="preserve">
-    <value>Vender Phone Number</value>
+    <value>เบอร์โทรศัพท์ตัวแทนการขาย</value>
   </data>
   <data name="&gt;&gt;myLabel10.Name" xml:space="preserve">
     <value>myLabel10</value>
@@ -562,10 +571,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel10.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="textBox_venName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 258</value>
+    <value>404, 258</value>
   </data>
   <data name="textBox_venName.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 20</value>
@@ -583,10 +592,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox_venName.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="maskedTextBox_venNum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 308</value>
+    <value>404, 308</value>
   </data>
   <data name="maskedTextBox_venNum.Mask" xml:space="preserve">
     <value>000-000-0000</value>
@@ -610,10 +619,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;maskedTextBox_venNum.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="myLabel9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 258</value>
@@ -625,7 +634,7 @@
     <value>41</value>
   </data>
   <data name="myLabel9.Text" xml:space="preserve">
-    <value>Vender</value>
+    <value>ตัวแทนการขาย</value>
   </data>
   <data name="&gt;&gt;myLabel9.Name" xml:space="preserve">
     <value>myLabel9</value>
@@ -637,13 +646,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel9.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="myLabel8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 207</value>
+    <value>643, 218</value>
   </data>
   <data name="myLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 23</value>
@@ -652,7 +661,7 @@
     <value>40</value>
   </data>
   <data name="myLabel8.Text" xml:space="preserve">
-    <value>THB</value>
+    <value>บาท</value>
   </data>
   <data name="&gt;&gt;myLabel8.Name" xml:space="preserve">
     <value>myLabel8</value>
@@ -664,10 +673,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel8.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="textBox_price.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 207</value>
+    <value>404, 221</value>
   </data>
   <data name="textBox_price.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -685,13 +694,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox_price.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="myLabel7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 207</value>
+    <value>209, 218</value>
   </data>
   <data name="myLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 23</value>
@@ -700,7 +709,7 @@
     <value>38</value>
   </data>
   <data name="myLabel7.Text" xml:space="preserve">
-    <value>Price</value>
+    <value>ราคา</value>
   </data>
   <data name="&gt;&gt;myLabel7.Name" xml:space="preserve">
     <value>myLabel7</value>
@@ -712,10 +721,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel7.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="myLabel6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 440</value>
@@ -727,7 +736,7 @@
     <value>47</value>
   </data>
   <data name="myLabel6.Text" xml:space="preserve">
-    <value>Maintain Time Length</value>
+    <value>ระยะเวลาในการทำกิจกรรม</value>
   </data>
   <data name="&gt;&gt;myLabel6.Name" xml:space="preserve">
     <value>myLabel6</value>
@@ -739,10 +748,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel6.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="textBox_lenght.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 443</value>
+    <value>404, 443</value>
   </data>
   <data name="textBox_lenght.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -760,13 +769,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox_lenght.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="myLabel12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 440</value>
+    <value>643, 440</value>
   </data>
   <data name="myLabel12.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 23</value>
@@ -775,7 +784,7 @@
     <value>49</value>
   </data>
   <data name="myLabel12.Text" xml:space="preserve">
-    <value>Day</value>
+    <value>วัน</value>
   </data>
   <data name="&gt;&gt;myLabel12.Name" xml:space="preserve">
     <value>myLabel12</value>
@@ -787,10 +796,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel12.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="textBox_id.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 68</value>
+    <value>404, 99</value>
   </data>
   <data name="textBox_id.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 20</value>
@@ -808,10 +817,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox_id.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="textBox_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 111</value>
+    <value>404, 136</value>
   </data>
   <data name="textBox_name.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 20</value>
@@ -829,22 +838,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBox_name.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="myLabel13.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 9.75pt</value>
+    <value>PJ Standard, 15.75pt</value>
   </data>
   <data name="myLabel13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 68</value>
+    <value>209, 90</value>
   </data>
   <data name="myLabel13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 23</value>
+    <value>115, 40</value>
   </data>
   <data name="myLabel13.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
   </data>
   <data name="myLabel13.Text" xml:space="preserve">
-    <value>Tools ID </value>
+    <value>รหัสชิ้นส่วนโดรน </value>
   </data>
   <data name="&gt;&gt;myLabel13.Name" xml:space="preserve">
     <value>myLabel13</value>
@@ -856,6 +865,54 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;myLabel13.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>404, 61</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 20</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="myLabel14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PJ Standard, 15.75pt</value>
+  </data>
+  <data name="myLabel14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 61</value>
+  </data>
+  <data name="myLabel14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="myLabel14.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="myLabel14.Text" xml:space="preserve">
+    <value>รหัสโดรน </value>
+  </data>
+  <data name="&gt;&gt;myLabel14.Name" xml:space="preserve">
+    <value>myLabel14</value>
+  </data>
+  <data name="&gt;&gt;myLabel14.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myLabel14.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myLabel14.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

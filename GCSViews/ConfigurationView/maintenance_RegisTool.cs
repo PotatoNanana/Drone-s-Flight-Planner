@@ -174,9 +174,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             images = brs.ReadBytes((int)Streem.Length);
 
             comboBox_alarm.SelectedItem.ToString();
-
-            String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,vender_responder,device_alarm) " 
-                                       + "VALUES('" +textBox_num.Text + "','" + textBox_toolName.Text+ "','" +textBox_position.Text + "','" +dateTimePicker_start.Text + "','" +dateTimePicker_reg.Text + "','" +dateTimePicker_exp .Text + "','" +textBox_venName.Text + "','" +textBox_venAdd .Text + "','" +textBox_venTel .Text + "','" + textBox_respon.Text + "','"+ comboBox_alarm.SelectedItem.ToString() + "')";
+            string format = "yyyy-MM-dd";
+            String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_alarm) " 
+                                       + "VALUES('" +textBox_num.Text + "','" + textBox_toolName.Text+ "','" +textBox_position.Text + "','" +dateTimePicker_start.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format)  + "','" +dateTimePicker_exp .Value.ToString(format) + "','" +textBox_venName.Text + "','" +textBox_venAdd .Text + "','" +textBox_venTel .Text + "','" + textBox_respon.Text + "','"+ comboBox_alarm.SelectedItem.ToString() + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query,con);
             SDA.SelectCommand.ExecuteNonQuery();
 

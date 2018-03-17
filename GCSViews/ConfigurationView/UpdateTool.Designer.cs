@@ -60,6 +60,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.myLabel13 = new MissionPlanner.Controls.MyLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.myLabel14 = new MissionPlanner.Controls.MyLabel();
             this.SuspendLayout();
             // 
             // backstageView
@@ -265,10 +267,25 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.myLabel13.Name = "myLabel13";
             this.myLabel13.resize = false;
             // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            // 
+            // myLabel14
+            // 
+            this.myLabel14.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            resources.ApplyResources(this.myLabel14, "myLabel14");
+            this.myLabel14.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.myLabel14.Name = "myLabel14";
+            this.myLabel14.resize = false;
+            // 
             // UserControl1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.myLabel14);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.myLabel13);
             this.Controls.Add(this.textBox_name);
             this.Controls.Add(this.textBox_id);
@@ -340,5 +357,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.TextBox textBox_name;
         private Controls.MyLabel myLabel13;
+        private System.Windows.Forms.TextBox textBox1;
+        private Controls.MyLabel myLabel14;
     }
 }
