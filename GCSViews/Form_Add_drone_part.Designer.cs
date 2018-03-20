@@ -45,7 +45,7 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -93,7 +93,7 @@
             this.panel_Main_farm.Controls.Add(this.textBox10);
             this.panel_Main_farm.Controls.Add(this.textBox2);
             this.panel_Main_farm.Controls.Add(this.label15);
-            this.panel_Main_farm.Controls.Add(this.textBox1);
+            this.panel_Main_farm.Controls.Add(this.textBox);
             this.panel_Main_farm.Controls.Add(this.label6);
             this.panel_Main_farm.Controls.Add(this.label14);
             this.panel_Main_farm.Controls.Add(this.label13);
@@ -132,6 +132,7 @@
             this.button1.Text = "อัพโหลด";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -229,12 +230,12 @@
             this.label15.Text = "ชื่อผู้ติดต่อกับตัวแทนจำหน่าย";
             this.label15.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(217, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 31);
-            this.textBox1.TabIndex = 13;
+            this.textBox.Location = new System.Drawing.Point(217, 77);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(200, 31);
+            this.textBox.TabIndex = 13;
             // 
             // label6
             // 
@@ -251,9 +252,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(483, 280);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 24);
+            this.label14.Size = new System.Drawing.Size(84, 24);
             this.label14.TabIndex = 12;
-            this.label14.Text = "รูปประกอบ";
+            this.label14.Text = "รูปชิ้นส่วนโดรน";
             this.label14.Click += new System.EventHandler(this.label4_Click);
             // 
             // label13
@@ -440,7 +441,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox7;

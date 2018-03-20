@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
     ".NETFramework,Version=v4.6.2": {
       "BitMiracle.LibTiff.NET/2.4.571": {
@@ -372,10 +372,6 @@
           "lib/net46/System.Net.Http.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
           "runtimes/win/lib/net46/System.Net.Http.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -562,10 +558,6 @@
           "lib/net461/System.Security.Cryptography.Algorithms.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
           "runtimes/win/lib/net461/System.Security.Cryptography.Algorithms.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -625,10 +617,6 @@
           "lib/net461/System.Security.Cryptography.X509Certificates.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
           "runtimes/win/lib/net461/System.Security.Cryptography.X509Certificates.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -724,42 +712,18 @@
         }
       },
       "BSE.Windows.Forms/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/BSE.Windows.Forms.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BSE.Windows.Forms.dll": {}
-        }
+        "type": "project"
       },
       "GeoUtility/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/GeoUtility.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GeoUtility.dll": {}
-        }
+        "type": "project"
       },
       "GMap.NET.Core/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/GMap.NET.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GMap.NET.Core.dll": {}
-        }
+        "type": "project"
       },
       "GMap.NET.WindowsForms/1.0.0": {
         "type": "project",
         "dependencies": {
           "GMap.NET.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/GMap.NET.WindowsForms.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GMap.NET.WindowsForms.dll": {}
         }
       },
       "MAVLink/1.0.0": {
@@ -767,12 +731,6 @@
         "framework": ".NETFramework,Version=v4.6.2",
         "dependencies": {
           "log4net": "2.0.8"
-        },
-        "compile": {
-          "bin/placeholder/MAVLink.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MAVLink.dll": {}
         }
       },
       "MissionPlanner.Utilities/1.0.0": {
@@ -787,12 +745,6 @@
           "ProjNet": "1.2.0",
           "SharpZipLib": "0.86.0",
           "log4net": "2.0.8"
-        },
-        "compile": {
-          "bin/placeholder/MissionPlanner.Utilities.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MissionPlanner.Utilities.dll": {}
         }
       }
     }
@@ -3623,49 +3575,36 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paper\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Controls\\MissionPlanner.Controls.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Controls\\MissionPlanner.Controls.csproj",
       "projectName": "MissionPlanner.Controls",
-      "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Controls\\MissionPlanner.Controls.csproj",
-      "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Controls\\obj\\",
+      "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Controls\\MissionPlanner.Controls.csproj",
+      "outputPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Controls\\obj\\",
       "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
-        "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
       "originalTargetFrameworks": [
         "net462"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj"
             },
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\BSE.Windows.Forms\\BSE.Windows.Forms.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\BSE.Windows.Forms\\BSE.Windows.Forms.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\BSE.Windows.Forms\\BSE.Windows.Forms.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\BSE.Windows.Forms\\BSE.Windows.Forms.csproj"
             },
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
             },
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj"
             },
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
             }
           }
         }

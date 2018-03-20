@@ -42,3 +42,11 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractor.dtd
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetadataExtractorNew.dtd
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\exif.xslt
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\sampleFile.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb
