@@ -60,6 +60,9 @@ namespace MissionPlanner.GCSViews
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
+            this.MainMenu = new System.Windows.Forms.MenuStrip();
+            this.toolStripConnectionControl1 = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.CHK_verifyheight = new System.Windows.Forms.CheckBox();
             this.TXT_WPRad = new System.Windows.Forms.TextBox();
             this.TXT_DefaultAlt = new System.Windows.Forms.TextBox();
@@ -84,7 +87,7 @@ namespace MissionPlanner.GCSViews
             this.lbl_status = new System.Windows.Forms.Label();
             this.panelWaypoints = new BSE.Windows.Forms.Panel();
             this.splitter1 = new BSE.Windows.Forms.Splitter();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.MenuConnect = new MissionPlanner.Controls.MyButton();
             this.menuTakeoff = new MissionPlanner.Controls.MyButton();
             this.MenuSimulation = new MissionPlanner.Controls.MyButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -209,14 +212,12 @@ namespace MissionPlanner.GCSViews
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
-            this.MainMenu = new System.Windows.Forms.MenuStrip();
-            this.toolStripConnectionControl1 = new MissionPlanner.Controls.ToolStripConnectionControl();
-            this.MenuConnect = new MissionPlanner.Controls.MyButton();
+            this.toolStripContainer2.ContentPanel.SuspendLayout();
+            this.toolStripContainer2.SuspendLayout();
+            this.MainMenu.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Commands)).BeginInit();
@@ -224,10 +225,38 @@ namespace MissionPlanner.GCSViews
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.panelBASE.SuspendLayout();
-            this.toolStripContainer2.ContentPanel.SuspendLayout();
-            this.toolStripContainer2.SuspendLayout();
-            this.MainMenu.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // toolStripContainer2
+            // 
+            // 
+            // toolStripContainer2.ContentPanel
+            // 
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.MainMenu);
+            resources.ApplyResources(this.toolStripContainer2.ContentPanel, "toolStripContainer2.ContentPanel");
+            resources.ApplyResources(this.toolStripContainer2, "toolStripContainer2");
+            this.toolStripContainer2.Name = "toolStripContainer2";
+            // 
+            // MainMenu
+            // 
+            this.MainMenu.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.MainMenu, "MainMenu");
+            this.MainMenu.GripMargin = new System.Windows.Forms.Padding(0);
+            this.MainMenu.ImageScalingSize = new System.Drawing.Size(0, 0);
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripConnectionControl1});
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.ShowItemToolTips = true;
+            this.MainMenu.Stretch = false;
+            // 
+            // toolStripConnectionControl1
+            // 
+            this.toolStripConnectionControl1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripConnectionControl1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.toolStripConnectionControl1, "toolStripConnectionControl1");
+            this.toolStripConnectionControl1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripConnectionControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripConnectionControl1.Name = "toolStripConnectionControl1";
             // 
             // CHK_verifyheight
             // 
@@ -388,7 +417,6 @@ namespace MissionPlanner.GCSViews
             this.panelWaypoints.ColorScheme = BSE.Windows.Forms.ColorScheme.Custom;
             this.panelWaypoints.Controls.Add(this.MenuConnect);
             this.panelWaypoints.Controls.Add(this.toolStripContainer2);
-            this.panelWaypoints.Controls.Add(this.toolStripContainer1);
             this.panelWaypoints.Controls.Add(this.menuTakeoff);
             this.panelWaypoints.Controls.Add(this.MenuSimulation);
             this.panelWaypoints.Controls.Add(this.panel1);
@@ -439,14 +467,16 @@ namespace MissionPlanner.GCSViews
             this.splitter1.Name = "splitter1";
             this.splitter1.TabStop = false;
             // 
-            // toolStripContainer1
+            // MenuConnect
             // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
-            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
-            this.toolStripContainer1.Name = "toolStripContainer1";
+            resources.ApplyResources(this.MenuConnect, "MenuConnect");
+            this.MenuConnect.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.MenuConnect.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.MenuConnect.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
+            this.MenuConnect.Name = "MenuConnect";
+            this.toolTip1.SetToolTip(this.MenuConnect, resources.GetString("MenuConnect.ToolTip"));
+            this.MenuConnect.UseVisualStyleBackColor = true;
+            this.MenuConnect.Click += new System.EventHandler(this.MenuConnect_Click);
             // 
             // menuTakeoff
             // 
@@ -1414,48 +1444,6 @@ namespace MissionPlanner.GCSViews
             resources.ApplyResources(this.toolStripConnectionControl, "toolStripConnectionControl");
             this.toolStripConnectionControl.Name = "toolStripConnectionControl";
             // 
-            // toolStripContainer2
-            // 
-            // 
-            // toolStripContainer2.ContentPanel
-            // 
-            this.toolStripContainer2.ContentPanel.Controls.Add(this.MainMenu);
-            resources.ApplyResources(this.toolStripContainer2.ContentPanel, "toolStripContainer2.ContentPanel");
-            resources.ApplyResources(this.toolStripContainer2, "toolStripContainer2");
-            this.toolStripContainer2.Name = "toolStripContainer2";
-            // 
-            // MainMenu
-            // 
-            this.MainMenu.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.MainMenu, "MainMenu");
-            this.MainMenu.GripMargin = new System.Windows.Forms.Padding(0);
-            this.MainMenu.ImageScalingSize = new System.Drawing.Size(0, 0);
-            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripConnectionControl1});
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.ShowItemToolTips = true;
-            this.MainMenu.Stretch = false;
-            // 
-            // toolStripConnectionControl1
-            // 
-            this.toolStripConnectionControl1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripConnectionControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripConnectionControl1.ForeColor = System.Drawing.Color.Black;
-            this.toolStripConnectionControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripConnectionControl1.Name = "toolStripConnectionControl1";
-            resources.ApplyResources(this.toolStripConnectionControl1, "toolStripConnectionControl1");
-            // 
-            // MenuConnect
-            // 
-            resources.ApplyResources(this.MenuConnect, "MenuConnect");
-            this.MenuConnect.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
-            this.MenuConnect.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
-            this.MenuConnect.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
-            this.MenuConnect.Name = "MenuConnect";
-            this.toolTip1.SetToolTip(this.MenuConnect, resources.GetString("MenuConnect.ToolTip"));
-            this.MenuConnect.UseVisualStyleBackColor = true;
-            this.MenuConnect.Click += new System.EventHandler(this.MenuConnect_Click);
-            // 
             // FlightPlanner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1466,13 +1454,17 @@ namespace MissionPlanner.GCSViews
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FlightPlanner_FormClosing);
             this.Load += new System.EventHandler(this.FlightPlanner_Load);
             this.Resize += new System.EventHandler(this.Planner_Resize);
+            this.toolStripContainer2.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer2.ContentPanel.PerformLayout();
+            this.toolStripContainer2.ResumeLayout(false);
+            this.toolStripContainer2.PerformLayout();
+            this.MainMenu.ResumeLayout(false);
+            this.MainMenu.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelWaypoints.ResumeLayout(false);
             this.panelWaypoints.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1483,12 +1475,6 @@ namespace MissionPlanner.GCSViews
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panelBASE.ResumeLayout(false);
-            this.toolStripContainer2.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer2.ContentPanel.PerformLayout();
-            this.toolStripContainer2.ResumeLayout(false);
-            this.toolStripContainer2.PerformLayout();
-            this.MainMenu.ResumeLayout(false);
-            this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1647,7 +1633,6 @@ namespace MissionPlanner.GCSViews
         /// added connect drone function
         /// </summary>
         public Controls.ToolStripConnectionControl toolStripConnectionControl;
-        public System.Windows.Forms.ToolStripContainer toolStripContainer1;
         public System.Windows.Forms.ToolTip toolTip2;
         public System.Windows.Forms.ToolStripContainer toolStripContainer2;
         public System.Windows.Forms.MenuStrip MainMenu;

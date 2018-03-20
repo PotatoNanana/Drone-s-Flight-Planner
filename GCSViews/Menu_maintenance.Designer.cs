@@ -30,22 +30,19 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activity = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.FlightSchedule = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.DG_Drone = new MissionPlanner.Controls.MyDataGridView();
+            this.Drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Drone_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drone_detail = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.BUT_add_drone = new System.Windows.Forms.Button();
+            this.BUT_drone_add = new System.Windows.Forms.Button();
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,78 +59,52 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.DG_Farm);
-            this.panel_Main_farm.Controls.Add(this.BUT_add_drone);
+            this.panel_Main_farm.Controls.Add(this.DG_Drone);
+            this.panel_Main_farm.Controls.Add(this.BUT_drone_add);
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
             this.panel_Main_farm.Controls.Add(this.panel3);
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14F);
             this.panel_Main_farm.Location = new System.Drawing.Point(60, 40);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(1150, 500);
+            this.panel_Main_farm.Size = new System.Drawing.Size(700, 500);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
             // 
-            // DG_Farm
+            // DG_Drone
             // 
-            this.DG_Farm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_Farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Activity,
-            this.FlightSchedule,
+            this.DG_Drone.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
+            this.DG_Drone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DG_Drone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Drone_id,
+            this.Drone_name,
+            this.drone_detail,
             this.Delete,
             this.Edit});
-            this.DG_Farm.Location = new System.Drawing.Point(25, 70);
-            this.DG_Farm.Name = "DG_Farm";
-            this.DG_Farm.Size = new System.Drawing.Size(1100, 350);
-            this.DG_Farm.TabIndex = 9;
-            this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
+            this.DG_Drone.Location = new System.Drawing.Point(25, 70);
+            this.DG_Drone.Name = "DG_Drone";
+            this.DG_Drone.Size = new System.Drawing.Size(650, 350);
+            this.DG_Drone.TabIndex = 9;
+            this.DG_Drone.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Drone_CellContentClick);
             // 
-            // Column1
+            // Drone_id
             // 
-            this.Column1.HeaderText = "รหัสฟาร์ม";
-            this.Column1.Name = "Column1";
+            this.Drone_id.HeaderText = "รหัสโดรน";
+            this.Drone_id.Name = "Drone_id";
             // 
-            // Column2
+            // Drone_name
             // 
-            this.Column2.HeaderText = "ชื่อฟาร์ม";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
+            this.Drone_name.HeaderText = "ชื่อโดรน";
+            this.Drone_name.Name = "Drone_name";
             // 
-            // Column3
+            // drone_detail
             // 
-            this.Column3.HeaderText = "ที่ตั้งฟาร์ม";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ผู้ดูแล";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // Activity
-            // 
-            this.Activity.HeaderText = "กิจกรรมที่ผ่านมา";
-            this.Activity.Name = "Activity";
-            this.Activity.Text = "ดูกิจกรรม";
-            this.Activity.ToolTipText = "ดูกิจกรรม";
-            this.Activity.UseColumnTextForButtonValue = true;
-            this.Activity.Width = 150;
-            // 
-            // FlightSchedule
-            // 
-            this.FlightSchedule.HeaderText = "กิจกรรมในอนาคต";
-            this.FlightSchedule.Name = "FlightSchedule";
-            this.FlightSchedule.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.FlightSchedule.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.FlightSchedule.Text = "ดูกิจกรรม";
-            this.FlightSchedule.ToolTipText = "ดูกิจกรรม";
-            this.FlightSchedule.UseColumnTextForButtonValue = true;
-            this.FlightSchedule.Width = 150;
+            this.drone_detail.HeaderText = "รายละเอียดส่วนประกอบ";
+            this.drone_detail.Name = "drone_detail";
+            this.drone_detail.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.drone_detail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.drone_detail.Text = "คลิกเพื่อดูรายละเอียด";
+            this.drone_detail.UseColumnTextForButtonValue = true;
+            this.drone_detail.Width = 160;
             // 
             // Delete
             // 
@@ -153,22 +124,22 @@
             this.Edit.ToolTipText = "แก้ไข";
             this.Edit.UseColumnTextForButtonValue = true;
             // 
-            // BUT_add_drone
+            // BUT_drone_add
             // 
-            this.BUT_add_drone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.BUT_add_drone.FlatAppearance.BorderSize = 0;
-            this.BUT_add_drone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BUT_add_drone.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BUT_add_drone.ForeColor = System.Drawing.Color.White;
-            this.BUT_add_drone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_drone.Location = new System.Drawing.Point(510, 440);
-            this.BUT_add_drone.Name = "BUT_add_drone";
-            this.BUT_add_drone.Size = new System.Drawing.Size(130, 40);
-            this.BUT_add_drone.TabIndex = 6;
-            this.BUT_add_drone.Text = "เพิ่มโดรน";
-            this.BUT_add_drone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BUT_add_drone.UseVisualStyleBackColor = false;
-            this.BUT_add_drone.Click += new System.EventHandler(this.BUT_add_farm_Click);
+            this.BUT_drone_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_drone_add.FlatAppearance.BorderSize = 0;
+            this.BUT_drone_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BUT_drone_add.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BUT_drone_add.ForeColor = System.Drawing.Color.White;
+            this.BUT_drone_add.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BUT_drone_add.Location = new System.Drawing.Point(285, 440);
+            this.BUT_drone_add.Name = "BUT_drone_add";
+            this.BUT_drone_add.Size = new System.Drawing.Size(130, 40);
+            this.BUT_drone_add.TabIndex = 6;
+            this.BUT_drone_add.Text = "เพิ่มโดรน";
+            this.BUT_drone_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BUT_drone_add.UseVisualStyleBackColor = false;
+            this.BUT_drone_add.Click += new System.EventHandler(this.BUT_add_drone_Click);
             // 
             // lineSeparator2
             // 
@@ -177,7 +148,7 @@
             this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator2.Name = "lineSeparator2";
             this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator2.Size = new System.Drawing.Size(1130, 2);
+            this.lineSeparator2.Size = new System.Drawing.Size(680, 2);
             this.lineSeparator2.TabIndex = 8;
             // 
             // panel3
@@ -186,7 +157,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1150, 50);
+            this.panel3.Size = new System.Drawing.Size(700, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -201,7 +172,7 @@
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(1150, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(700, 50);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ข้อมูลโดรน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,7 +190,7 @@
             this.Size = new System.Drawing.Size(1366, 768);
             this.panel2.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -228,17 +199,14 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel_Main_farm;
-        private Controls.MyDataGridView DG_Farm;
-        private System.Windows.Forms.Button BUT_add_drone;
+        private Controls.MyDataGridView DG_Drone;
+        private System.Windows.Forms.Button BUT_drone_add;
         private Controls.LineSeparator lineSeparator2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewButtonColumn Activity;
-        private System.Windows.Forms.DataGridViewButtonColumn FlightSchedule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Drone_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Drone_name;
+        private System.Windows.Forms.DataGridViewButtonColumn drone_detail;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
     }
