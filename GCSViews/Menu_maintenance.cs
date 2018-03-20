@@ -21,6 +21,8 @@ namespace MissionPlanner.GCSViews
         {
             InitializeComponent();
 
+            MyView = new MainSwitcher(this);
+
             add_DG();
 
             void add_DG()
@@ -28,19 +30,25 @@ namespace MissionPlanner.GCSViews
                 int n = 0;
                 for(int i=1; i<=8; i++)
                 {
-                    n = DG_Farm.Rows.Add();
-                    DG_Farm.Rows[n].Cells[0].Value = "0001";
-                    DG_Farm.Rows[n].Cells[1].Value = "Organic farm";
-                    DG_Farm.Rows[n].Cells[2].Value = "Bangkok";
-                    DG_Farm.Rows[n].Cells[3].Value = "Napat Jintanakosol";
+                    n = DG_Drone.Rows.Add();
+                    DG_Drone.Rows[n].Cells[0].Value = "DR001";
+                    DG_Drone.Rows[n].Cells[1].Value = "Sky Hunter X8";
+                    DG_Drone.Rows[n].Cells[2].Value = "Bangkok";
+                    DG_Drone.Rows[n].Cells[3].Value = "Napat Jintanakosol";
 
-                    n = DG_Farm.Rows.Add();
-                    DG_Farm.Rows[n].Cells[0].Value = "0002";
-                    DG_Farm.Rows[n].Cells[1].Value = "Black Forest";
-                    DG_Farm.Rows[n].Cells[2].Value = "Samut Prakarn";
-                    DG_Farm.Rows[n].Cells[3].Value = "Mookda";
+                    n = DG_Drone.Rows.Add();
+                    DG_Drone.Rows[n].Cells[0].Value = "D003";
+                    DG_Drone.Rows[n].Cells[1].Value = "DJI Mavic air";
                 }
             }
+        }
+
+        Controls.MainSwitcher MyView;
+        public static event EventHandler Goto_DronePart_Clicked;
+
+        protected virtual void OnGotoDronePartClicked(EventArgs e)
+        {
+            Goto_DronePart_Clicked?.Invoke(this, e);
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -83,30 +91,26 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DG_Drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(DG_Farm.Columns[e.ColumnIndex].Name == "Activity")
+            if(DG_Drone.Columns[e.ColumnIndex].Name == "drone_detail")
             {
-                Form_farm_act form_Farm_Act = new Form_farm_act();
-                form_Farm_Act.ShowDialog();
+                OnGotoDronePartClicked(e);
             }
 
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "FlightSchedule")
-            {
-                Form_main_Schedule form_Farm_Schedule = new Form_main_Schedule();
-                form_Farm_Schedule.ShowDialog();
-            }
-
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "Delete")
+            if (DG_Drone.Columns[e.ColumnIndex].Name == "Delete")
             {
                 if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    DG_Farm.RemoveCurrent();
+                    DG_Drone.RemoveCurrent();
             }
 
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "Edit")
+            if (DG_Drone.Columns[e.ColumnIndex].Name == "Edit")
             {
                 Form_Edit_farm form_Edit_Farm = new Form_Edit_farm();
                 form_Edit_Farm.ShowDialog();
+
+                Form_Edit_drone form_Edit_Drone = new Form_Edit_drone();
+                form_Edit_Drone.ShowDialog();
             }
 
         }
@@ -116,10 +120,10 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void BUT_add_farm_Click(object sender, EventArgs e)
+        private void BUT_add_drone_Click(object sender, EventArgs e)
         {
-            Form_Add_farm form_Add_Farm = new Form_Add_farm();
-            form_Add_Farm.ShowDialog();
+            Form_Add_drone form_Add_Drone = new Form_Add_drone();
+            form_Add_Drone.ShowDialog();
         }
     }
 }

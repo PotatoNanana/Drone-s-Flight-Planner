@@ -202,6 +202,11 @@ namespace MissionPlanner
             MyView.ShowScreen("Menu_maintenance");
         }
 
+        internal void gotoMenu_maintenance_part(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("Menu_maintenance_part");
+        }
+
         Controls.MainSwitcher MyView;
 
         private static DisplayView _displayConfiguration = new DisplayView().Basic();
@@ -406,6 +411,7 @@ namespace MissionPlanner
         public Menu_main2 Menu_main2;
         public Menu_farm Menu_Farm;
         public Menu_maintenance Menu_Maintenance;
+        public Menu_maintenance_part menu_Maintenance_Part;
 
         Controls.SITL Simulation;
 
@@ -714,6 +720,10 @@ namespace MissionPlanner
                 Menu_main2 = new GCSViews.Menu_main2();
                 Menu_main2.Goto_farmProfile_Clicked += but_farmProfile_Click;
                 Menu_main2.Goto_farmMaintenance_Clicked += but_maintenance_Click;
+                Menu_maintenance.Goto_DronePart_Clicked += but_dronePart_Click;
+                Menu_maintenance_part.Goto_Drone_Clicked += but_drone_Click;
+                Menu_maintenance_part.Goto_DronePre_Clicked += but_dronePre_Click;
+                Menu_maintenance_pre.Goto_Drone_Clicked += but_drone_Click;
 
                 GCSViews.FlightPlanner.OnMenuSimmulationButtonClick += MenuSimulation_Click;
 
@@ -2667,6 +2677,8 @@ namespace MissionPlanner
             MyView.AddScreen(new MainSwitcher.Screen("Menu_main2", typeof(GCSViews.Menu_main2), true));
             MyView.AddScreen(new MainSwitcher.Screen("Menu_farm", typeof(GCSViews.Menu_farm), true));
             MyView.AddScreen(new MainSwitcher.Screen("Menu_maintenance", typeof(GCSViews.Menu_maintenance), true));
+            MyView.AddScreen(new MainSwitcher.Screen("Menu_maintenance_part", typeof(GCSViews.Menu_maintenance_part), true));
+            MyView.AddScreen(new MainSwitcher.Screen("Menu_maintenance_pre", typeof(GCSViews.Menu_maintenance_pre), true));
 
             try
             {
@@ -3661,6 +3673,21 @@ namespace MissionPlanner
             SidePanel.Width = but_farmProfile.Width;
             SidePanel.Left = but_farmProfile.Left;
             MyView.ShowScreen("Menu_farm");
+        }
+
+        private void but_dronePart_Click(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("Menu_maintenance_part");
+        }
+
+        private void but_drone_Click(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("Menu_maintenance");
+        }
+
+        private void but_dronePre_Click(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("Menu_maintenance_pre");
         }
 
         private void but_flightPlan_Click(object sender, EventArgs e)

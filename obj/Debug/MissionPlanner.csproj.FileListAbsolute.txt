@@ -8007,3 +8007,11 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_farm_Schedule.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Menu_maintenance.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_main_Schedule.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_Edit_drone_part.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_Add_drone_part.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_Edit_drone.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_Add_drone.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Menu_maintenance_part.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Menu_maintenance_pre.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_Edit_drone_pre.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_Add_drone_pre.resources

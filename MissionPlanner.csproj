@@ -514,6 +514,42 @@
     <Compile Include="GCSViews\FlightLog.Designer.cs">
       <DependentUpon>FlightLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone_pre .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone_pre .Designer.cs">
+      <DependentUpon>Form_Edit_drone_pre .cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone_pre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone_pre.Designer.cs">
+      <DependentUpon>Form_Add_drone_pre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone_part.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone_part.Designer.cs">
+      <DependentUpon>Form_Edit_drone_part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone_part.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone_part.Designer.cs">
+      <DependentUpon>Form_Add_drone_part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone.Designer.cs">
+      <DependentUpon>Form_Edit_drone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone.Designer.cs">
+      <DependentUpon>Form_Add_drone.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\Form_Edit_farm_act.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -561,6 +597,18 @@
     </Compile>
     <Compile Include="GCSViews\Maintain.Designer.cs">
       <DependentUpon>Maintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance_pre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance_pre.Designer.cs">
+      <DependentUpon>Menu_maintenance_pre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance_part.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance_part.Designer.cs">
+      <DependentUpon>Menu_maintenance_part.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\Menu_maintenance.cs">
       <SubType>UserControl</SubType>
@@ -2933,6 +2981,24 @@
     <EmbeddedResource Include="GCSViews\FlightPlanner.zh-TW.resx">
       <DependentUpon>FlightPlanner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_drone_pre .resx">
+      <DependentUpon>Form_Edit_drone_pre .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_drone_pre.resx">
+      <DependentUpon>Form_Add_drone_pre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_drone_part.resx">
+      <DependentUpon>Form_Edit_drone_part.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_drone_part.resx">
+      <DependentUpon>Form_Add_drone_part.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_drone.resx">
+      <DependentUpon>Form_Edit_drone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_drone.resx">
+      <DependentUpon>Form_Add_drone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_Edit_farm_act.resx">
       <DependentUpon>Form_Edit_farm_act.cs</DependentUpon>
     </EmbeddedResource>
@@ -3036,6 +3102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Maintain.resx">
       <DependentUpon>Maintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_maintenance_pre.resx">
+      <DependentUpon>Menu_maintenance_pre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_maintenance_part.resx">
+      <DependentUpon>Menu_maintenance_part.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Menu_maintenance.resx">
       <DependentUpon>Menu_maintenance.cs</DependentUpon>
