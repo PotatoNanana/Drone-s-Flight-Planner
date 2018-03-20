@@ -8004,3 +8004,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ru-RU\MissionPlanner.resources.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_farm_Schedule.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Menu_maintenance.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_main_Schedule.resources

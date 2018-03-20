@@ -20,7 +20,7 @@ namespace MissionPlanner.GCSViews
         {
             InitializeComponent();
 
-           MyView = new MainSwitcher(this);
+            MyView = new MainSwitcher(this);
             Add_DG();
 
             void Add_DG()
@@ -87,10 +87,16 @@ namespace MissionPlanner.GCSViews
         
         Controls.MainSwitcher MyView;
         public static event EventHandler Goto_farmProfile_Clicked;
+        public static event EventHandler Goto_farmMaintenance_Clicked;
 
         protected virtual void OnGotoFarmProfileClicked(EventArgs e)
         {
             Goto_farmProfile_Clicked?.Invoke(this, e);
+        }
+
+        protected virtual void OnGotoFarmMaintenanceClicked(EventArgs e)
+        {
+            Goto_farmMaintenance_Clicked?.Invoke(this, e);
         }
 
         protected override void OnLoad(EventArgs e)
@@ -164,6 +170,12 @@ namespace MissionPlanner.GCSViews
 
         }
 
+        private void Goto_farmMaintenance_Click(object sender, EventArgs e)
+        {
+            OnGotoFarmMaintenanceClicked(e);
+
+        }
+
         public void DG_farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -193,6 +205,11 @@ namespace MissionPlanner.GCSViews
         {
 
         }
-        
+
+        private void but_schedule_Click(object sender, EventArgs e)
+        {
+            Form_main_Schedule form_Schedule = new Form_main_Schedule();
+            form_Schedule.ShowDialog();
+        }
     }
 }

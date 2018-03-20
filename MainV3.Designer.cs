@@ -39,13 +39,14 @@ namespace MissionPlanner
             this.fullScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readonlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu = new MissionPlanner.Controls.MyButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.but_maintenance = new System.Windows.Forms.Button();
             this.but_setup = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.but_flightPlan = new System.Windows.Forms.Button();
             this.but_mainMenu = new System.Windows.Forms.Button();
             this.but_farmProfile = new System.Windows.Forms.Button();
+            this.menu = new MissionPlanner.Controls.MyButton();
             this.CTX_mainmenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -87,16 +88,10 @@ namespace MissionPlanner
             resources.ApplyResources(this.connectionOptionsToolStripMenuItem, "connectionOptionsToolStripMenuItem");
             this.connectionOptionsToolStripMenuItem.Click += new System.EventHandler(this.connectionOptionsToolStripMenuItem_Click);
             // 
-            // menu
-            // 
-            resources.ApplyResources(this.menu, "menu");
-            this.menu.Name = "menu";
-            this.menu.UseVisualStyleBackColor = true;
-            this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.panel1.Controls.Add(this.but_maintenance);
             this.panel1.Controls.Add(this.but_setup);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.but_flightPlan);
@@ -105,6 +100,17 @@ namespace MissionPlanner
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // but_maintenance
+            // 
+            resources.ApplyResources(this.but_maintenance, "but_maintenance");
+            this.but_maintenance.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.but_maintenance.FlatAppearance.BorderSize = 0;
+            this.but_maintenance.ForeColor = System.Drawing.Color.White;
+            this.but_maintenance.Name = "but_maintenance";
+            this.but_maintenance.UseCompatibleTextRendering = true;
+            this.but_maintenance.UseVisualStyleBackColor = true;
+            this.but_maintenance.Click += new System.EventHandler(this.but_maintenance_Click);
             // 
             // but_setup
             // 
@@ -156,6 +162,14 @@ namespace MissionPlanner
             this.but_farmProfile.UseVisualStyleBackColor = true;
             this.but_farmProfile.Click += new System.EventHandler(this.but_farmProfile_Click);
             // 
+            // menu
+            // 
+            resources.ApplyResources(this.menu, "menu");
+            this.menu.Name = "menu";
+            this.menu.UseVisualStyleBackColor = true;
+            this.menu.Click += new System.EventHandler(this.menu_Click);
+            this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
+            // 
             // MainV3
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -185,5 +199,6 @@ namespace MissionPlanner
         private System.Windows.Forms.Button but_setup;
         private System.Windows.Forms.Button but_flightPlan;
         private System.Windows.Forms.Panel SidePanel;
+        private System.Windows.Forms.Button but_maintenance;
     }
 }

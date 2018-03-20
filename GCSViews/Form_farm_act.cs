@@ -27,15 +27,17 @@ namespace MissionPlanner.GCSViews
                     DG_Farm.Rows[n].Cells[0].Value = "25/06/2016";
                     DG_Farm.Rows[n].Cells[1].Value = "0025";
                     DG_Farm.Rows[n].Cells[2].Value = "รดน้ำ";
-                    DG_Farm.Rows[n].Cells[3].Value = "1250";
-                    DG_Farm.Rows[n].Cells[4].Value = "30000";
+                    DG_Farm.Rows[n].Cells[3].Value = "DR01";
+                    DG_Farm.Rows[n].Cells[4].Value = "1250";
+                    DG_Farm.Rows[n].Cells[5].Value = "30000";
 
                     n = DG_Farm.Rows.Add();
                     DG_Farm.Rows[n].Cells[0].Value = "13/09/2016";
                     DG_Farm.Rows[n].Cells[1].Value = "0074";
                     DG_Farm.Rows[n].Cells[2].Value = "โรยปุ๋ย";
-                    DG_Farm.Rows[n].Cells[3].Value = "230";
-                    DG_Farm.Rows[n].Cells[4].Value = "25000";
+                    DG_Farm.Rows[n].Cells[3].Value = "DR03";
+                    DG_Farm.Rows[n].Cells[4].Value = "230";
+                    DG_Farm.Rows[n].Cells[5].Value = "25000";
                 }
             }
         }
@@ -48,12 +50,6 @@ namespace MissionPlanner.GCSViews
         private void But_exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void But_add_act_Click(object sender, EventArgs e)
-        {
-            Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act();
-            form_Add_Farm_Act.ShowDialog();
         }
         
         private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
@@ -69,6 +65,17 @@ namespace MissionPlanner.GCSViews
                 Form_Edit_farm form_Edit_Farm = new Form_Edit_farm();
                 form_Edit_Farm.ShowDialog();
             }
+        }
+
+        private void But_add_act_Click(object sender, EventArgs e)
+        {
+            Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act();
+            form_Add_Farm_Act.ShowDialog();
+        }
+
+        private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

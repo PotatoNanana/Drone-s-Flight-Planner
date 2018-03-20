@@ -91,6 +91,12 @@ namespace MissionPlanner.GCSViews
                 form_Farm_Act.ShowDialog();
             }
 
+            if (DG_Farm.Columns[e.ColumnIndex].Name == "FlightSchedule")
+            {
+                Form_farm_Schedule form_Farm_Schedule = new Form_farm_Schedule();
+                form_Farm_Schedule.ShowDialog();
+            }
+
             if (DG_Farm.Columns[e.ColumnIndex].Name == "Delete")
             {
                 if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

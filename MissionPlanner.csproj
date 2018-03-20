@@ -544,11 +544,29 @@
     <Compile Include="GCSViews\Form_farm_act.Designer.cs">
       <DependentUpon>Form_farm_act.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\Form_farm_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_farm_Schedule.Designer.cs">
+      <DependentUpon>Form_farm_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_main_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_main_Schedule.Designer.cs">
+      <DependentUpon>Form_main_Schedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\Maintain.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GCSViews\Maintain.Designer.cs">
       <DependentUpon>Maintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance.Designer.cs">
+      <DependentUpon>Menu_maintenance.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\Menu_farm.cs">
       <SubType>UserControl</SubType>
@@ -2930,6 +2948,12 @@
     <EmbeddedResource Include="GCSViews\Form_farm_act.resx">
       <DependentUpon>Form_farm_act.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_farm_Schedule.resx">
+      <DependentUpon>Form_farm_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_main_Schedule.resx">
+      <DependentUpon>Form_main_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Help.ar.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
@@ -3012,6 +3036,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Maintain.resx">
       <DependentUpon>Maintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_maintenance.resx">
+      <DependentUpon>Menu_maintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Menu_farm.resx">
       <DependentUpon>Menu_farm.cs</DependentUpon>

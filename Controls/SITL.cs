@@ -504,5 +504,10 @@ namespace MissionPlanner.Controls
             mousedown = true;
             MouseDownStart = myGMAP1.FromLocalToLatLng(e.X, e.Y);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
