@@ -30,15 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.but_schedule = new System.Windows.Forms.Button();
             this.lineSeparator3 = new MissionPlanner.Controls.LineSeparator();
             this.DG_schedule = new MissionPlanner.Controls.MyDataGridView();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,7 +45,7 @@
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Goto_farmMaintenance = new System.Windows.Forms.Button();
             this.lineSeparator1 = new MissionPlanner.Controls.LineSeparator();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -65,6 +59,12 @@
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_schedule)).BeginInit();
@@ -93,31 +93,32 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.but_schedule);
             this.panel5.Controls.Add(this.lineSeparator3);
             this.panel5.Controls.Add(this.DG_schedule);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Font = new System.Drawing.Font("PJ Standard", 14.25F);
-            this.panel5.Location = new System.Drawing.Point(653, 40);
+            this.panel5.Location = new System.Drawing.Point(590, 40);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(653, 280);
+            this.panel5.Size = new System.Drawing.Size(716, 280);
             this.panel5.TabIndex = 10;
             // 
-            // button4
+            // but_schedule
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(261, 220);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 40);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "ดูเพิ่มเติม";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.but_schedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.but_schedule.FlatAppearance.BorderSize = 0;
+            this.but_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_schedule.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.but_schedule.ForeColor = System.Drawing.Color.White;
+            this.but_schedule.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.but_schedule.Location = new System.Drawing.Point(261, 220);
+            this.but_schedule.Name = "but_schedule";
+            this.but_schedule.Size = new System.Drawing.Size(130, 40);
+            this.but_schedule.TabIndex = 6;
+            this.but_schedule.Text = "ดูเพิ่มเติม";
+            this.but_schedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.but_schedule.UseVisualStyleBackColor = false;
+            this.but_schedule.Click += new System.EventHandler(this.but_schedule_Click);
             // 
             // lineSeparator3
             // 
@@ -126,7 +127,7 @@
             this.lineSeparator3.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator3.Name = "lineSeparator3";
             this.lineSeparator3.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator3.Size = new System.Drawing.Size(633, 2);
+            this.lineSeparator3.Size = new System.Drawing.Size(696, 2);
             this.lineSeparator3.TabIndex = 8;
             // 
             // DG_schedule
@@ -135,47 +136,16 @@
             this.DG_schedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_schedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column18,
-            this.Column5,
             this.Column6,
+            this.Column5,
             this.Column7,
             this.Column8,
             this.Column9});
             this.DG_schedule.Location = new System.Drawing.Point(28, 70);
             this.DG_schedule.Name = "DG_schedule";
-            this.DG_schedule.Size = new System.Drawing.Size(603, 140);
+            this.DG_schedule.Size = new System.Drawing.Size(666, 140);
             this.DG_schedule.TabIndex = 10;
             this.DG_schedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.myDataGridView2_CellContentClick);
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "วันที่";
-            this.Column18.Name = "Column18";
-            this.Column18.Width = 80;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "เลขที่ตารางการบิน";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "รหัสฟาร์ม";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "ชื่อกิจกรรม";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "รูปแบบเส้นทางการบิน";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "รหัสโดรน";
-            this.Column9.Name = "Column9";
             // 
             // panel6
             // 
@@ -183,7 +153,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(653, 50);
+            this.panel6.Size = new System.Drawing.Size(716, 50);
             this.panel6.TabIndex = 0;
             // 
             // button5
@@ -198,7 +168,7 @@
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.Location = new System.Drawing.Point(0, 0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(653, 50);
+            this.button5.Size = new System.Drawing.Size(716, 50);
             this.button5.TabIndex = 6;
             this.button5.Text = "ตารางปฏิทินการบิน";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,7 +180,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.DG_maintenance);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.Goto_farmMaintenance);
             this.panel2.Controls.Add(this.lineSeparator1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Font = new System.Drawing.Font("PJ Standard", 14.25F);
@@ -282,21 +252,22 @@
             this.Column17.Name = "Column17";
             this.Column17.Width = 250;
             // 
-            // button2
+            // Goto_farmMaintenance
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(558, 220);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 40);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "ดูเพิ่มเติม";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.Goto_farmMaintenance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Goto_farmMaintenance.FlatAppearance.BorderSize = 0;
+            this.Goto_farmMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Goto_farmMaintenance.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Goto_farmMaintenance.ForeColor = System.Drawing.Color.White;
+            this.Goto_farmMaintenance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Goto_farmMaintenance.Location = new System.Drawing.Point(558, 220);
+            this.Goto_farmMaintenance.Name = "Goto_farmMaintenance";
+            this.Goto_farmMaintenance.Size = new System.Drawing.Size(130, 40);
+            this.Goto_farmMaintenance.TabIndex = 10;
+            this.Goto_farmMaintenance.Text = "ดูเพิ่มเติม";
+            this.Goto_farmMaintenance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Goto_farmMaintenance.UseVisualStyleBackColor = false;
+            this.Goto_farmMaintenance.Click += new System.EventHandler(this.Goto_farmMaintenance_Click);
             // 
             // lineSeparator1
             // 
@@ -348,7 +319,7 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_Main_farm.Location = new System.Drawing.Point(60, 40);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(563, 280);
+            this.panel_Main_farm.Size = new System.Drawing.Size(500, 280);
             this.panel_Main_farm.TabIndex = 7;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -364,7 +335,7 @@
             this.FarmHost});
             this.DG_farm.Location = new System.Drawing.Point(25, 70);
             this.DG_farm.Name = "DG_farm";
-            this.DG_farm.Size = new System.Drawing.Size(513, 140);
+            this.DG_farm.Size = new System.Drawing.Size(450, 140);
             this.DG_farm.TabIndex = 9;
             this.DG_farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_farm_CellContentClick);
             // 
@@ -412,7 +383,7 @@
             this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator2.Name = "lineSeparator2";
             this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator2.Size = new System.Drawing.Size(563, 2);
+            this.lineSeparator2.Size = new System.Drawing.Size(480, 2);
             this.lineSeparator2.TabIndex = 8;
             // 
             // panel3
@@ -421,7 +392,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(563, 50);
+            this.panel3.Size = new System.Drawing.Size(500, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -436,13 +407,46 @@
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(563, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(500, 50);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ข้อมูลฟาร์ม";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Main_but_farm.UseVisualStyleBackColor = false;
             this.Main_but_farm.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "วันที่";
+            this.Column18.Name = "Column18";
+            this.Column18.Width = 80;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "รหัสฟาร์ม";
+            this.Column6.Name = "Column6";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "รหัสกิจกรรม";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 120;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "ชื่อกิจกรรม";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "รูปแบบการบิน";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 120;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "รหัสโดรน";
+            this.Column9.Name = "Column9";
             // 
             // Menu_main2
             // 
@@ -482,17 +486,11 @@
         private Controls.MyDataGridView DG_schedule;
         private System.Windows.Forms.Panel panel5;
         private Controls.MyDataGridView DG_maintenance;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button but_schedule;
         private Controls.LineSeparator lineSeparator3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Button Goto_farmMaintenance;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
@@ -505,5 +503,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FarmName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FarmLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn FarmHost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }

@@ -30,22 +30,23 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.BUT_add_farm = new System.Windows.Forms.Button();
-            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Main_but_farm = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activity = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.FlightSchedule = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.BUT_add_farm = new System.Windows.Forms.Button();
+            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -68,65 +69,9 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14F);
             this.panel_Main_farm.Location = new System.Drawing.Point(60, 40);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(950, 500);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1150, 530);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
-            // 
-            // BUT_add_farm
-            // 
-            this.BUT_add_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.BUT_add_farm.FlatAppearance.BorderSize = 0;
-            this.BUT_add_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BUT_add_farm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BUT_add_farm.ForeColor = System.Drawing.Color.White;
-            this.BUT_add_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_farm.Location = new System.Drawing.Point(410, 440);
-            this.BUT_add_farm.Name = "BUT_add_farm";
-            this.BUT_add_farm.Size = new System.Drawing.Size(130, 40);
-            this.BUT_add_farm.TabIndex = 6;
-            this.BUT_add_farm.Text = "เพิ่มฟาร์ม";
-            this.BUT_add_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BUT_add_farm.UseVisualStyleBackColor = false;
-            this.BUT_add_farm.Click += new System.EventHandler(this.BUT_add_farm_Click);
-            // 
-            // lineSeparator2
-            // 
-            this.lineSeparator2.Location = new System.Drawing.Point(10, 50);
-            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator2.Size = new System.Drawing.Size(930, 2);
-            this.lineSeparator2.TabIndex = 8;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.Main_but_farm);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(950, 50);
-            this.panel3.TabIndex = 0;
-            // 
-            // Main_but_farm
-            // 
-            this.Main_but_farm.BackColor = System.Drawing.Color.White;
-            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main_but_farm.Enabled = false;
-            this.Main_but_farm.FlatAppearance.BorderSize = 0;
-            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
-            this.Main_but_farm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
-            this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(950, 50);
-            this.Main_but_farm.TabIndex = 6;
-            this.Main_but_farm.Text = "ข้อมูลฟาร์ม";
-            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Main_but_farm.UseVisualStyleBackColor = false;
-            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
             // DG_Farm
             // 
@@ -138,11 +83,12 @@
             this.Column3,
             this.Column4,
             this.Activity,
+            this.FlightSchedule,
             this.Delete,
             this.Edit});
             this.DG_Farm.Location = new System.Drawing.Point(25, 70);
             this.DG_Farm.Name = "DG_Farm";
-            this.DG_Farm.Size = new System.Drawing.Size(900, 350);
+            this.DG_Farm.Size = new System.Drawing.Size(1100, 380);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             // 
@@ -171,11 +117,23 @@
             // 
             // Activity
             // 
-            this.Activity.HeaderText = "ดูกิจกรรม";
+            this.Activity.HeaderText = "กิจกรรมที่ผ่านมา";
             this.Activity.Name = "Activity";
             this.Activity.Text = "ดูกิจกรรม";
             this.Activity.ToolTipText = "ดูกิจกรรม";
             this.Activity.UseColumnTextForButtonValue = true;
+            this.Activity.Width = 150;
+            // 
+            // FlightSchedule
+            // 
+            this.FlightSchedule.HeaderText = "กิจกรรมในอนาคต";
+            this.FlightSchedule.Name = "FlightSchedule";
+            this.FlightSchedule.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.FlightSchedule.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.FlightSchedule.Text = "ดูกิจกรรม";
+            this.FlightSchedule.ToolTipText = "ดูกิจกรรม";
+            this.FlightSchedule.UseColumnTextForButtonValue = true;
+            this.FlightSchedule.Width = 150;
             // 
             // Delete
             // 
@@ -195,6 +153,62 @@
             this.Edit.ToolTipText = "แก้ไข";
             this.Edit.UseColumnTextForButtonValue = true;
             // 
+            // BUT_add_farm
+            // 
+            this.BUT_add_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_add_farm.FlatAppearance.BorderSize = 0;
+            this.BUT_add_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BUT_add_farm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BUT_add_farm.ForeColor = System.Drawing.Color.White;
+            this.BUT_add_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BUT_add_farm.Location = new System.Drawing.Point(510, 470);
+            this.BUT_add_farm.Name = "BUT_add_farm";
+            this.BUT_add_farm.Size = new System.Drawing.Size(130, 40);
+            this.BUT_add_farm.TabIndex = 6;
+            this.BUT_add_farm.Text = "เพิ่มฟาร์ม";
+            this.BUT_add_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BUT_add_farm.UseVisualStyleBackColor = false;
+            this.BUT_add_farm.Click += new System.EventHandler(this.BUT_add_farm_Click);
+            // 
+            // lineSeparator2
+            // 
+            this.lineSeparator2.Location = new System.Drawing.Point(10, 50);
+            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator2.Name = "lineSeparator2";
+            this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
+            this.lineSeparator2.Size = new System.Drawing.Size(1130, 2);
+            this.lineSeparator2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Main_but_farm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1150, 50);
+            this.panel3.TabIndex = 0;
+            // 
+            // Main_but_farm
+            // 
+            this.Main_but_farm.BackColor = System.Drawing.Color.White;
+            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Main_but_farm.Enabled = false;
+            this.Main_but_farm.FlatAppearance.BorderSize = 0;
+            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
+            this.Main_but_farm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Name = "Main_but_farm";
+            this.Main_but_farm.Size = new System.Drawing.Size(1150, 50);
+            this.Main_but_farm.TabIndex = 6;
+            this.Main_but_farm.Text = "ข้อมูลฟาร์ม";
+            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Main_but_farm.UseVisualStyleBackColor = false;
+            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
+            // 
             // Menu_farm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,8 +219,8 @@
             this.Size = new System.Drawing.Size(1366, 768);
             this.panel2.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -224,8 +238,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Activity;
+        private System.Windows.Forms.DataGridViewButtonColumn FlightSchedule;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        
     }
 }

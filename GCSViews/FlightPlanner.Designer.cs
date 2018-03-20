@@ -84,8 +84,8 @@ namespace MissionPlanner.GCSViews
             this.lbl_status = new System.Windows.Forms.Label();
             this.panelWaypoints = new BSE.Windows.Forms.Panel();
             this.splitter1 = new BSE.Windows.Forms.Splitter();
-            this.toolStripConnectionControl = new System.Windows.Forms.Panel();
-            this.myButton1 = new MissionPlanner.Controls.MyButton();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.menuTakeoff = new MissionPlanner.Controls.MyButton();
             this.MenuSimulation = new MissionPlanner.Controls.MyButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chk_grid = new System.Windows.Forms.CheckBox();
@@ -207,9 +207,16 @@ namespace MissionPlanner.GCSViews
             this.panelBASE = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
+            this.MainMenu = new System.Windows.Forms.MenuStrip();
+            this.toolStripConnectionControl1 = new MissionPlanner.Controls.ToolStripConnectionControl();
+            this.MenuConnect = new MissionPlanner.Controls.MyButton();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Commands)).BeginInit();
@@ -217,6 +224,9 @@ namespace MissionPlanner.GCSViews
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.panelBASE.SuspendLayout();
+            this.toolStripContainer2.ContentPanel.SuspendLayout();
+            this.toolStripContainer2.SuspendLayout();
+            this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // CHK_verifyheight
@@ -376,8 +386,10 @@ namespace MissionPlanner.GCSViews
             this.panelWaypoints.CaptionFont = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelWaypoints.CaptionHeight = 21;
             this.panelWaypoints.ColorScheme = BSE.Windows.Forms.ColorScheme.Custom;
-            this.panelWaypoints.Controls.Add(this.toolStripConnectionControl);
-            this.panelWaypoints.Controls.Add(this.myButton1);
+            this.panelWaypoints.Controls.Add(this.MenuConnect);
+            this.panelWaypoints.Controls.Add(this.toolStripContainer2);
+            this.panelWaypoints.Controls.Add(this.toolStripContainer1);
+            this.panelWaypoints.Controls.Add(this.menuTakeoff);
             this.panelWaypoints.Controls.Add(this.MenuSimulation);
             this.panelWaypoints.Controls.Add(this.panel1);
             this.panelWaypoints.Controls.Add(this.panel5);
@@ -427,24 +439,25 @@ namespace MissionPlanner.GCSViews
             this.splitter1.Name = "splitter1";
             this.splitter1.TabStop = false;
             // 
-            // toolStripConnectionControl
+            // toolStripContainer1
             // 
-            this.toolStripConnectionControl.BackgroundImage = global::MissionPlanner.Properties.Resources.bgdark;
-            this.toolStripConnectionControl.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.toolStripConnectionControl, "toolStripConnectionControl");
-            this.toolStripConnectionControl.Name = "toolStripConnectionControl";
-            this.toolStripConnectionControl.Click += new System.EventHandler(this.toolStripConnectionControl_Click);
             // 
-            // myButton1
+            // toolStripContainer1.ContentPanel
             // 
-            resources.ApplyResources(this.myButton1, "myButton1");
-            this.myButton1.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
-            this.myButton1.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
-            this.myButton1.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
-            this.myButton1.Name = "myButton1";
-            this.toolTip1.SetToolTip(this.myButton1, resources.GetString("myButton1.ToolTip"));
-            this.myButton1.UseVisualStyleBackColor = true;
-            this.myButton1.Click += new System.EventHandler(this.myButton1_Click);
+            resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
+            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            // 
+            // menuTakeoff
+            // 
+            resources.ApplyResources(this.menuTakeoff, "menuTakeoff");
+            this.menuTakeoff.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.menuTakeoff.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.menuTakeoff.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
+            this.menuTakeoff.Name = "menuTakeoff";
+            this.toolTip1.SetToolTip(this.menuTakeoff, resources.GetString("menuTakeoff.ToolTip"));
+            this.menuTakeoff.UseVisualStyleBackColor = true;
+            this.menuTakeoff.Click += new System.EventHandler(this.menuTakeoff_Click);
             // 
             // MenuSimulation
             // 
@@ -569,7 +582,7 @@ namespace MissionPlanner.GCSViews
             this.Commands.Name = "Commands";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("PJ Standard", 12F);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.Format = "N0";
             dataGridViewCellStyle6.NullValue = "0";
@@ -1396,6 +1409,53 @@ namespace MissionPlanner.GCSViews
             this.timer1.Interval = 1200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // toolStripConnectionControl
+            // 
+            resources.ApplyResources(this.toolStripConnectionControl, "toolStripConnectionControl");
+            this.toolStripConnectionControl.Name = "toolStripConnectionControl";
+            // 
+            // toolStripContainer2
+            // 
+            // 
+            // toolStripContainer2.ContentPanel
+            // 
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.MainMenu);
+            resources.ApplyResources(this.toolStripContainer2.ContentPanel, "toolStripContainer2.ContentPanel");
+            resources.ApplyResources(this.toolStripContainer2, "toolStripContainer2");
+            this.toolStripContainer2.Name = "toolStripContainer2";
+            // 
+            // MainMenu
+            // 
+            this.MainMenu.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.MainMenu, "MainMenu");
+            this.MainMenu.GripMargin = new System.Windows.Forms.Padding(0);
+            this.MainMenu.ImageScalingSize = new System.Drawing.Size(0, 0);
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripConnectionControl1});
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.ShowItemToolTips = true;
+            this.MainMenu.Stretch = false;
+            // 
+            // toolStripConnectionControl1
+            // 
+            this.toolStripConnectionControl1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripConnectionControl1.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStripConnectionControl1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripConnectionControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripConnectionControl1.Name = "toolStripConnectionControl1";
+            resources.ApplyResources(this.toolStripConnectionControl1, "toolStripConnectionControl1");
+            // 
+            // MenuConnect
+            // 
+            resources.ApplyResources(this.MenuConnect, "MenuConnect");
+            this.MenuConnect.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.MenuConnect.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.MenuConnect.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
+            this.MenuConnect.Name = "MenuConnect";
+            this.toolTip1.SetToolTip(this.MenuConnect, resources.GetString("MenuConnect.ToolTip"));
+            this.MenuConnect.UseVisualStyleBackColor = true;
+            this.MenuConnect.Click += new System.EventHandler(this.MenuConnect_Click);
+            // 
             // FlightPlanner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1411,6 +1471,8 @@ namespace MissionPlanner.GCSViews
             this.panel1.PerformLayout();
             this.panelWaypoints.ResumeLayout(false);
             this.panelWaypoints.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1421,6 +1483,12 @@ namespace MissionPlanner.GCSViews
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panelBASE.ResumeLayout(false);
+            this.toolStripContainer2.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer2.ContentPanel.PerformLayout();
+            this.toolStripContainer2.ResumeLayout(false);
+            this.toolStripContainer2.PerformLayout();
+            this.MainMenu.ResumeLayout(false);
+            this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1546,6 +1614,14 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.ToolStripMenuItem areaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setHomeHereToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem areaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createCircleSurveyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem currentPositionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem surveyGridToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem flightPattern;
+        private MyButton MenuSimulation;
+        private MyButton menuTakeoff;
         private System.Windows.Forms.DataGridViewComboBoxColumn Command;
         private System.Windows.Forms.DataGridViewTextBoxColumn Param1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Param2;
@@ -1566,14 +1642,16 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.DataGridViewTextBoxColumn Dist;
         private System.Windows.Forms.DataGridViewTextBoxColumn AZ;
         private System.Windows.Forms.DataGridViewTextBoxColumn TagData;
-        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createCircleSurveyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem currentPositionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem surveyGridToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem flightPattern;
-        private MyButton MenuSimulation;
-        private MyButton myButton1;
-        private System.Windows.Forms.Panel toolStripConnectionControl;
+        
+        /// <summary>
+        /// added connect drone function
+        /// </summary>
+        public Controls.ToolStripConnectionControl toolStripConnectionControl;
+        public System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        public System.Windows.Forms.ToolTip toolTip2;
+        public System.Windows.Forms.ToolStripContainer toolStripContainer2;
+        public System.Windows.Forms.MenuStrip MainMenu;
+        public ToolStripConnectionControl toolStripConnectionControl1;
+        public MyButton MenuConnect;
     }
 }

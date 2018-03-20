@@ -117,13 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="CTX_mainmenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="autoHideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="autoHideToolStripMenuItem.Text" xml:space="preserve">
+    <value>AutoHide</value>
+  </data>
+  <data name="fullScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="fullScreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Full Screen</value>
+  </data>
+  <data name="readonlyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="readonlyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Readonly</value>
+  </data>
+  <data name="connectionOptionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="connectionOptionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Connection Options</value>
+  </data>
   <data name="CTX_mainmenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 92</value>
   </data>
@@ -134,6 +155,40 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="menu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 28</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menu.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="menu.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;menu.Name" xml:space="preserve">
+    <value>menu</value>
+  </data>
+  <data name="&gt;&gt;menu.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;menu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="MainMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -518,29 +573,29 @@
   <data name="MenuFlightLog.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="MenuFlightLog.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -656,7 +711,6 @@
   <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>953, 60</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -674,60 +728,6 @@
   </data>
   <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="autoHideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="autoHideToolStripMenuItem.Text" xml:space="preserve">
-    <value>AutoHide</value>
-  </data>
-  <data name="fullScreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="fullScreenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Full Screen</value>
-  </data>
-  <data name="readonlyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="readonlyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Readonly</value>
-  </data>
-  <data name="connectionOptionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="connectionOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Connection Options</value>
-  </data>
-  <data name="menu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="menu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1008, 28</value>
-  </data>
-  <data name="menu.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="menu.Text" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;menu.Name" xml:space="preserve">
-    <value>menu</value>
-  </data>
-  <data name="&gt;&gt;menu.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;menu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menu.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 57</value>
@@ -2451,6 +2451,24 @@
   <data name="&gt;&gt;connectionOptionsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MenuLogin.Name" xml:space="preserve">
+    <value>MenuLogin</value>
+  </data>
+  <data name="&gt;&gt;MenuLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuConnect.Name" xml:space="preserve">
+    <value>MenuConnect</value>
+  </data>
+  <data name="&gt;&gt;MenuConnect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripConnectionControl.Name" xml:space="preserve">
+    <value>toolStripConnectionControl</value>
+  </data>
+  <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6652.37275, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;MenuFlightData.Name" xml:space="preserve">
     <value>MenuFlightData</value>
   </data>
@@ -2492,24 +2510,6 @@
   </data>
   <data name="&gt;&gt;MenuFlightLog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuLogin.Name" xml:space="preserve">
-    <value>MenuLogin</value>
-  </data>
-  <data name="&gt;&gt;MenuLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuConnect.Name" xml:space="preserve">
-    <value>MenuConnect</value>
-  </data>
-  <data name="&gt;&gt;MenuConnect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripConnectionControl.Name" xml:space="preserve">
-    <value>toolStripConnectionControl</value>
-  </data>
-  <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6642.34650, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainV2</value>

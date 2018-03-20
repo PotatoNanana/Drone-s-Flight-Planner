@@ -24,6 +24,8 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using Ionic.Zip;
 using log4net;
+using MissionPlanner;
+using MissionPlanner.Plugin;
 using MissionPlanner.Controls;
 using MissionPlanner.Controls.Waypoints;
 using MissionPlanner.Maps;
@@ -38,18 +40,18 @@ using ILog = log4net.ILog;
 using Placemark = SharpKml.Dom.Placemark;
 using Point = System.Drawing.Point;
 using System.Text.RegularExpressions;
-using MissionPlanner.Plugin;
 
 namespace MissionPlanner.GCSViews
 {
     public partial class FlightPlanner : MyUserControl, IDeactivate, IActivate
     {
         public static event EventHandler OnMenuSimmulationButtonClick;
+
         protected virtual void OnMenuSimulationButtonClicked(EventArgs e)
         {
             OnMenuSimmulationButtonClick?.Invoke(this, e);
         }
-
+        
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         int selectedrow;
         public bool quickadd;
@@ -7054,11 +7056,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         }
 
-        private void toolStripConnectionControl_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MainMap_Load(object sender, EventArgs e)
         {
 
@@ -7074,14 +7071,80 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         }
 
-        private void myButton1_Click(object sender, EventArgs e)
+        private void menuTakeoff_Click(object sender, EventArgs e)
         {
+            // altitude
+            string alt = "10";
 
+            if (DialogResult.Cancel == InputBox.Show("Altitude", "Please enter your takeoff altitude", ref alt))
+                return;
+
+            int alti = -1;
+
+            if (!int.TryParse(alt, out alti))
+            {
+                MessageBox.Show("Bad Alt");
+                return;
+            }
+
+            // take off pitch
+            int topi = 0;
+
+            if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduPlane ||
+                MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.Ateryx)
+            {
+                string top = "15";
+
+                if (DialogResult.Cancel == InputBox.Show("Takeoff Pitch", "Please enter your takeoff pitch", ref top))
+                    return;
+
+                if (!int.TryParse(top, out topi))
+                {
+                    MessageBox.Show("Bad Takeoff pitch");
+                    return;
+                }
+            }
+
+            selectedrow = Commands.Rows.Add();
+
+            Commands.Rows[selectedrow].Cells[Command.Index].Value = MAVLink.MAV_CMD.TAKEOFF.ToString();
+
+            Commands.Rows[selectedrow].Cells[Param1.Index].Value = topi;
+
+            Commands.Rows[selectedrow].Cells[Alt.Index].Value = alti;
+
+            ChangeColumnHeader(MAVLink.MAV_CMD.TAKEOFF.ToString());
+
+            writeKML();
         }
 
         private void MenuSimulation_Click(object sender, EventArgs e)
         {
             OnMenuSimulationButtonClicked(e);
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+                    }
+     
+        private void toolStripContainer1_ContentPanel_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer2_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuConnect_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -196,6 +196,12 @@ namespace MissionPlanner
         {
             MyView.ShowScreen("Menu_farm");
         }
+
+        internal void gotoMenu_maintenance(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("Menu_maintenance");
+        }
+
         Controls.MainSwitcher MyView;
 
         private static DisplayView _displayConfiguration = new DisplayView().Basic();
@@ -399,6 +405,7 @@ namespace MissionPlanner
         /// </summary>
         public Menu_main2 Menu_main2;
         public Menu_farm Menu_Farm;
+        public Menu_maintenance Menu_Maintenance;
 
         Controls.SITL Simulation;
 
@@ -706,6 +713,7 @@ namespace MissionPlanner
                 ///added
                 Menu_main2 = new GCSViews.Menu_main2();
                 Menu_main2.Goto_farmProfile_Clicked += but_farmProfile_Click;
+                Menu_main2.Goto_farmMaintenance_Clicked += but_maintenance_Click;
 
                 GCSViews.FlightPlanner.OnMenuSimmulationButtonClick += MenuSimulation_Click;
 
@@ -2658,6 +2666,7 @@ namespace MissionPlanner
             MyView.AddScreen(new MainSwitcher.Screen("FlightLog", typeof(GCSViews.FlightLog), false));
             MyView.AddScreen(new MainSwitcher.Screen("Menu_main2", typeof(GCSViews.Menu_main2), true));
             MyView.AddScreen(new MainSwitcher.Screen("Menu_farm", typeof(GCSViews.Menu_farm), true));
+            MyView.AddScreen(new MainSwitcher.Screen("Menu_maintenance", typeof(GCSViews.Menu_maintenance), true));
 
             try
             {
@@ -3661,6 +3670,13 @@ namespace MissionPlanner
             MyView.ShowScreen("FlightPlanner");
         }
 
+        private void but_maintenance_Click(object sender, EventArgs e)
+        {
+            SidePanel.Width = but_maintenance.Width;
+            SidePanel.Left = but_maintenance.Left;
+            MyView.ShowScreen("Menu_maintenance");
+        }
+
         private void but_setup_Click(object sender, EventArgs e)
         {
             SidePanel.Width = but_setup.Width;
@@ -3674,6 +3690,13 @@ namespace MissionPlanner
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+
+        private void menu_Click(object sender, EventArgs e)
         {
 
         }
