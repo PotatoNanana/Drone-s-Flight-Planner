@@ -3548,8 +3548,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\57050241\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\paper\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -3557,18 +3556,15 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
       "projectName": "MissionPlanner.Utilities",
-      "projectPath": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
-      "packagesPath": "C:\\Users\\57050241\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\Utilities\\obj\\",
+      "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
+      "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\.nuget\\NuGet.Config",
-        "C:\\Users\\57050241\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
+        "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3581,22 +3577,17 @@
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
-              "projectPath": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
+            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
+              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
             },
-            "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\Mavlink\\MAVLink.csproj": {
-              "projectPath": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\Mavlink\\MAVLink.csproj"
+            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj": {
+              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj"
             },
-            "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
-              "projectPath": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
+            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
+              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
             }
           }
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
