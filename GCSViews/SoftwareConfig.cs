@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Reflection;
 using System.Windows.Forms;
 using log4net;
@@ -130,6 +129,11 @@ namespace MissionPlanner.GCSViews
                 lastpagename = backstageView.SelectedPage.LinkText;
 
             backstageView.Close();
+        }
+
+        private void backstageView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

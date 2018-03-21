@@ -3708,7 +3708,7 @@ namespace MissionPlanner
         {
             SidePanel.Width = but_setup.Width;
             SidePanel.Left = but_setup.Left;
-            MyView.ShowScreen("HWConfig");
+            MyView.ShowScreen("SWConfig");
         }
         
         private void MainV3_Load(object sender, EventArgs e)
