@@ -100,14 +100,6 @@ namespace MissionPlanner.GCSViews
         {
             ResourceManager rm = new ResourceManager(this.GetType());
 
-            ///
-            ///added
-            ///
-            AddBackstageViewPage(typeof(maintenance_RegisTool), "Register Tools");
-            AddBackstageViewPage(typeof(maintenance_RegisTool), "Update Tools");
-            AddBackstageViewPage(typeof(maintenance_RegisTool), "Flight Schedule");
-
-
             AddBackstageViewPage(typeof(ConfigFirmwareDisabled), rm.GetString("backstageViewPagefw.Text"), isConnected);
             AddBackstageViewPage(typeof(ConfigFirmware), rm.GetString("backstageViewPagefw.Text"), isDisConnected);
             AddBackstageViewPage(typeof(ConfigWizard), rm.GetString("backstageViewPagewizard.Text"));
@@ -128,7 +120,7 @@ namespace MissionPlanner.GCSViews
             AddBackstageViewPage(typeof(Sikradio), rm.GetString("backstageViewPageSikradio.Text"), true, opt);
             AddBackstageViewPage(typeof(ConfigBatteryMonitoring), rm.GetString("backstageViewPagebatmon.Text"), isConnected, opt);
             AddBackstageViewPage(typeof(ConfigBatteryMonitoring2), rm.GetString("backstageViewPageBatt2.Text"), isConnected, opt);
-            AddBackstageViewPage(typeof(ConfigHWUAVCAN), "UAVCAN", isConnected, opt);
+            AddBackstageViewPage(typeof(ConfigHWUAVCAN), "UAVCAN", isConnected, opt);            
             AddBackstageViewPage(typeof(ConfigCompassMot), rm.GetString("backstageViewPagecompassmot.Text"), isConnected, opt);
             AddBackstageViewPage(typeof(ConfigHWRangeFinder), rm.GetString("backstageViewPagesonar.Text"), isConnected, opt);
             AddBackstageViewPage(typeof(ConfigHWAirspeed), rm.GetString("backstageViewPageairspeed.Text"), isConnected, opt);
@@ -142,7 +134,7 @@ namespace MissionPlanner.GCSViews
             AddBackstageViewPage(typeof(ConfigHWParachute), rm.GetString("backstageViewPageParachute.Text"), isConnected, opt);
             AddBackstageViewPage(typeof(ConfigHWESP8266), rm.GetString("backstageViewPageESP.Text"), isConnected, opt);
             AddBackstageViewPage(typeof(Antenna.Tracker), "Antenna Tracker", true, opt);
-
+            
 
             // remeber last page accessed
             foreach (BackstageViewPage page in backstageView.Pages)
@@ -163,11 +155,6 @@ namespace MissionPlanner.GCSViews
                 lastpagename = backstageView.SelectedPage.LinkText;
 
             backstageView.Close();
-        }
-
-        private void backstageView_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
