@@ -7346,7 +7346,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             log.Info("MenuConnect Start");
 
             // sanity check
-            if (comPort.BaseStream.IsOpen && MainV2.comPort.MAV.cs.groundspeed > 4)
+            if (comPort.BaseStream.IsOpen && FlightPlanner.comPort.MAV.cs.groundspeed > 4)
             {
                 if (DialogResult.No ==
                     CustomMessageBox.Show(Strings.Stillmoving, Strings.Disconnect, MessageBoxButtons.YesNo))
@@ -7383,7 +7383,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 doConnect(comPort, _connectionControl.CMB_serialport.Text, _connectionControl.CMB_baudrate.Text);
             }
 
-            MainV2._connectionControl.UpdateSysIDS();
+            FlightPlanner._connectionControl.UpdateSysIDS();
 
             loadph_serial();
         }
@@ -7663,8 +7663,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // get any rallypoints
-                if (MainV2.comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
-                    int.Parse(MainV2.comPort.MAV.param["RALLY_TOTAL"].ToString()) > 0)
+                if (FlightPlanner.comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
+                    int.Parse(FlightPlanner.comPort.MAV.param["RALLY_TOTAL"].ToString()) > 0)
                 {
                     getRallyPointsToolStripMenuItem_Click(null, null);
 
@@ -7693,9 +7693,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // get any fences
-                if (MainV2.comPort.MAV.param.ContainsKey("FENCE_TOTAL") &&
-                    int.Parse(MainV2.comPort.MAV.param["FENCE_TOTAL"].ToString()) > 1 &&
-                    MainV2.comPort.MAV.param.ContainsKey("FENCE_ACTION"))
+                if (FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_TOTAL") &&
+                    int.Parse(FlightPlanner.comPort.MAV.param["FENCE_TOTAL"].ToString()) > 1 &&
+                    FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_ACTION"))
                 {
                     GeoFencedownloadToolStripMenuItem_Click(null, null);
                 }
