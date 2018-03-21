@@ -151,7 +151,7 @@ namespace MissionPlanner.GCSViews
 
             if (pointno == "Tracker Home")
             {
-                FlightPlanner.comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(lat, lng, alt, "");
+                comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(lat, lng, alt, "");
                 return;
             }
 
@@ -285,7 +285,7 @@ namespace MissionPlanner.GCSViews
                         cell.Value = alt.ToString();
                     if (ans == 0) // default
                         cell.Value = 50;
-                    if (ans == 0 && (FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.ArduCopter2)))
+                    if (ans == 0 && (comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2)))
                         cell.Value = 15;
 
                     // not online and verify alt via srtm
@@ -310,8 +310,8 @@ namespace MissionPlanner.GCSViews
                                 ((int)(srtm.getAltitude(lat, lng).alt) * CurrentState.multiplierdist +
                                  int.Parse(TXT_DefaultAlt.Text) -
                                  (int)
-                                     srtm.getAltitude(FlightPlanner.comPort.MAV.cs.HomeLocation.Lat,
-                                         FlightPlanner.comPort.MAV.cs.HomeLocation.Lng).alt * CurrentState.multiplierdist)
+                                     srtm.getAltitude(comPort.MAV.cs.HomeLocation.Lat,
+                                         comPort.MAV.cs.HomeLocation.Lng).alt * CurrentState.multiplierdist)
                                     .ToString();
                         }
                     }
@@ -735,7 +735,7 @@ namespace MissionPlanner.GCSViews
         }
         void cmb_sysid_Click(object sender, EventArgs e)
         {
-            FlightPlanner._connectionControl.UpdateSysIDS();
+            _connectionControl.UpdateSysIDS();
         }
 
         private void CMB_serialport_Click(object sender, EventArgs e)
@@ -825,13 +825,13 @@ namespace MissionPlanner.GCSViews
         Controls.MainSwitcher MyView;
         void comPort_MavChanged(object sender, EventArgs e)
         {
-            log.Info("Mav Changed " + FlightPlanner.comPort.MAV.sysid);
+            log.Info("Mav Changed " + comPort.MAV.sysid);
 
-            HUD.Custom.src = FlightPlanner.comPort.MAV.cs;
+            HUD.Custom.src = comPort.MAV.cs;
 
-            CustomWarning.defaultsrc = FlightPlanner.comPort.MAV.cs;
+            CustomWarning.defaultsrc = comPort.MAV.cs;
 
-            MissionPlanner.Controls.PreFlight.CheckListItem.defaultsrc = FlightPlanner.comPort.MAV.cs;
+            MissionPlanner.Controls.PreFlight.CheckListItem.defaultsrc = comPort.MAV.cs;
 
             // when uploading a firmware we dont want to reload this screen.
             if (instance.MyView.current.Control != null && instance.MyView.current.Control.GetType() == typeof(GCSViews.InitialSetup))
@@ -948,18 +948,18 @@ namespace MissionPlanner.GCSViews
                 return cmd;
             }
 
-            log.Info("Reading MAV_CMD for " + FlightPlanner.comPort.MAV.cs.firmware);
+            log.Info("Reading MAV_CMD for " + comPort.MAV.cs.firmware);
 
             using (XmlReader reader = XmlReader.Create(file))
             {
                 reader.Read();
                 reader.ReadStartElement("CMD");
-                if (FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.ArduPlane) ||
-                    FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.Ateryx))
+                if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
+                    comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
                 {
                     reader.ReadToFollowing("APM");
                 }
-                else if (FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.ArduRover))
+                else if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduRover))
                 {
                     reader.ReadToFollowing("APRover");
                 }
@@ -1934,7 +1934,7 @@ namespace MissionPlanner.GCSViews
         void setgradanddistandaz()
         {
             int a = 0;
-            PointLatLngAlt last = FlightPlanner.comPort.MAV.cs.HomeLocation;
+            PointLatLngAlt last = comPort.MAV.cs.HomeLocation;
             foreach (var lla in pointlist)
             {
                 if (lla == null)
@@ -2130,14 +2130,14 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                MAVLinkInterface port = FlightPlanner.comPort;
+                MAVLinkInterface port = comPort;
 
                 if (!port.BaseStream.IsOpen)
                 {
                     throw new Exception("Please Connect First!");
                 }
 
-                FlightPlanner.comPort.giveComport = true;
+                comPort.giveComport = true;
 
                 log.Info("Getting Home");
 
@@ -2205,15 +2205,15 @@ namespace MissionPlanner.GCSViews
 
                    try
                    {
-                       if (withrally && FlightPlanner.comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
-                           int.Parse(FlightPlanner.comPort.MAV.param["RALLY_TOTAL"].ToString()) >= 1)
+                       if (withrally && comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
+                           int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString()) >= 1)
                            getRallyPointsToolStripMenuItem_Click(null, null);
                    }
                    catch
                    {
                    }
 
-                   FlightPlanner.comPort.giveComport = false;
+                   comPort.giveComport = false;
 
                    BUT_read.Enabled = true;
 
@@ -2373,14 +2373,14 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                MAVLinkInterface port = FlightPlanner.comPort;
+                MAVLinkInterface port = comPort;
 
                 if (!port.BaseStream.IsOpen)
                 {
                     throw new Exception("Please connect first!");
                 }
 
-                FlightPlanner.comPort.giveComport = true;
+                comPort.giveComport = true;
                 int a = 0;
 
                 // define the home point
@@ -2398,16 +2398,16 @@ namespace MissionPlanner.GCSViews
                 }
 
                 // log
-                log.Info("wps values " + FlightPlanner.comPort.MAV.wps.Values.Count);
+                log.Info("wps values " + comPort.MAV.wps.Values.Count);
                 log.Info("cmd rows " + (Commands.Rows.Count + 1)); // + home
 
                 // check for changes / future mod to send just changed wp's
-                if (FlightPlanner.comPort.MAV.wps.Values.Count == (Commands.Rows.Count + 1))
+                if (comPort.MAV.wps.Values.Count == (Commands.Rows.Count + 1))
                 {
                     Hashtable wpstoupload = new Hashtable();
 
                     a = -1;
-                    foreach (var item in FlightPlanner.comPort.MAV.wps.Values)
+                    foreach (var item in comPort.MAV.wps.Values)
                     {
                         // skip home
                         if (a == -1)
@@ -2603,11 +2603,11 @@ namespace MissionPlanner.GCSViews
             catch (Exception ex)
             {
                 log.Error(ex);
-                FlightPlanner.comPort.giveComport = false;
+                comPort.giveComport = false;
                 throw;
             }
 
-            FlightPlanner.comPort.giveComport = false;
+            comPort.giveComport = false;
         }
 
         /// <summary>
@@ -2771,7 +2771,7 @@ namespace MissionPlanner.GCSViews
             {
                 log.Info("Loading wp params");
 
-                Dictionary<string, double> param = new Dictionary<string, double>((Dictionary<string, double>)FlightPlanner.comPort.MAV.param);
+                Dictionary<string, double> param = new Dictionary<string, double>((Dictionary<string, double>)comPort.MAV.param);
 
                 if (param.ContainsKey("WP_RADIUS"))
                 {
@@ -2983,7 +2983,7 @@ namespace MissionPlanner.GCSViews
             sethome = false;
             try
             {
-                FlightPlanner.comPort.MAV.cs.HomeLocation.Lat = double.Parse(TXT_homelat.Text);
+                comPort.MAV.cs.HomeLocation.Lat = double.Parse(TXT_homelat.Text);
             }
             catch (Exception ex)
             {
@@ -2997,7 +2997,7 @@ namespace MissionPlanner.GCSViews
             sethome = false;
             try
             {
-                FlightPlanner.comPort.MAV.cs.HomeLocation.Lng = double.Parse(TXT_homelng.Text);
+                comPort.MAV.cs.HomeLocation.Lng = double.Parse(TXT_homelng.Text);
             }
             catch (Exception ex)
             {
@@ -3011,7 +3011,7 @@ namespace MissionPlanner.GCSViews
             sethome = false;
             try
             {
-                FlightPlanner.comPort.MAV.cs.HomeLocation.Alt = double.Parse(TXT_homealt.Text);
+                comPort.MAV.cs.HomeLocation.Alt = double.Parse(TXT_homealt.Text);
             }
             catch (Exception ex)
             {
@@ -4330,11 +4330,11 @@ namespace MissionPlanner.GCSViews
 
         private void label4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (FlightPlanner.comPort.MAV.cs.lat != 0)
+            if (comPort.MAV.cs.lat != 0)
             {
-                TXT_homealt.Text = (FlightPlanner.comPort.MAV.cs.altasl).ToString("0");
-                TXT_homelat.Text = FlightPlanner.comPort.MAV.cs.lat.ToString();
-                TXT_homelng.Text = FlightPlanner.comPort.MAV.cs.lng.ToString();
+                TXT_homealt.Text = (comPort.MAV.cs.altasl).ToString("0");
+                TXT_homelat.Text = comPort.MAV.cs.lat.ToString();
+                TXT_homelng.Text = comPort.MAV.cs.lng.ToString();
             }
             else
             {
@@ -4693,25 +4693,25 @@ namespace MissionPlanner.GCSViews
 
                 routesoverlay.Markers.Clear();
 
-                if (FlightPlanner.comPort.MAV.cs.TrackerLocation != FlightPlanner.comPort.MAV.cs.HomeLocation &&
-                    FlightPlanner.comPort.MAV.cs.TrackerLocation.Lng != 0)
+                if (comPort.MAV.cs.TrackerLocation != comPort.MAV.cs.HomeLocation &&
+                    comPort.MAV.cs.TrackerLocation.Lng != 0)
                 {
-                    addpolygonmarker("Tracker Home", FlightPlanner.comPort.MAV.cs.TrackerLocation.Lng,
-                        FlightPlanner.comPort.MAV.cs.TrackerLocation.Lat, (int)FlightPlanner.comPort.MAV.cs.TrackerLocation.Alt,
+                    addpolygonmarker("Tracker Home", comPort.MAV.cs.TrackerLocation.Lng,
+                        comPort.MAV.cs.TrackerLocation.Lat, (int)comPort.MAV.cs.TrackerLocation.Alt,
                         Color.Blue, routesoverlay);
                 }
 
-                if (FlightPlanner.comPort.MAV.cs.lat == 0 || FlightPlanner.comPort.MAV.cs.lng == 0)
+                if (comPort.MAV.cs.lat == 0 || comPort.MAV.cs.lng == 0)
                     return;
 
-                var marker = Common.getMAVMarker(FlightPlanner.comPort.MAV);
+                var marker = Common.getMAVMarker(comPort.MAV);
 
                 routesoverlay.Markers.Add(marker);
 
-                if (FlightPlanner.comPort.MAV.cs.mode.ToLower() == "guided" && FlightPlanner.comPort.MAV.GuidedMode.x != 0)
+                if (comPort.MAV.cs.mode.ToLower() == "guided" && comPort.MAV.GuidedMode.x != 0)
                 {
-                    addpolygonmarker("Guided Mode", FlightPlanner.comPort.MAV.GuidedMode.y, FlightPlanner.comPort.MAV.GuidedMode.x,
-                        (int)FlightPlanner.comPort.MAV.GuidedMode.z, Color.Blue, routesoverlay);
+                    addpolygonmarker("Guided Mode", comPort.MAV.GuidedMode.y, comPort.MAV.GuidedMode.x,
+                        (int)comPort.MAV.GuidedMode.z, Color.Blue, routesoverlay);
                 }
 
                 //autopan
@@ -4719,7 +4719,7 @@ namespace MissionPlanner.GCSViews
                 {
                     if (route.Points[route.Points.Count - 1].Lat != 0 && (mapupdate.AddSeconds(3) < DateTime.Now))
                     {
-                        PointLatLng currentloc = new PointLatLng(FlightPlanner.comPort.MAV.cs.lat, FlightPlanner.comPort.MAV.cs.lng);
+                        PointLatLng currentloc = new PointLatLng(comPort.MAV.cs.lat, comPort.MAV.cs.lng);
                         updateMapPosition(currentloc);
                         mapupdate = DateTime.Now;
                     }
@@ -4796,7 +4796,7 @@ namespace MissionPlanner.GCSViews
             polygongridmode = false;
             //FENCE_ENABLE ON COPTER
             //FENCE_ACTION ON PLANE
-            if (!FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_ENABLE") && !FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_ACTION"))
+            if (!comPort.MAV.param.ContainsKey("FENCE_ENABLE") && !comPort.MAV.param.ContainsKey("FENCE_ACTION"))
             {
                 CustomMessageBox.Show("Not Supported");
                 return;
@@ -4835,10 +4835,10 @@ namespace MissionPlanner.GCSViews
             int minalt = 0;
             int maxalt = 0;
 
-            if (FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_MINALT"))
+            if (comPort.MAV.param.ContainsKey("FENCE_MINALT"))
             {
                 string minalts =
-                    (int.Parse(FlightPlanner.comPort.MAV.param["FENCE_MINALT"].ToString()) * CurrentState.multiplierdist)
+                    (int.Parse(comPort.MAV.param["FENCE_MINALT"].ToString()) * CurrentState.multiplierdist)
                         .ToString(
                             "0");
                 if (DialogResult.Cancel == InputBox.Show("Min Alt", "Box Minimum Altitude?", ref minalts))
@@ -4851,10 +4851,10 @@ namespace MissionPlanner.GCSViews
                 }
             }
 
-            if (FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_MAXALT"))
+            if (comPort.MAV.param.ContainsKey("FENCE_MAXALT"))
             {
                 string maxalts =
-                    (int.Parse(FlightPlanner.comPort.MAV.param["FENCE_MAXALT"].ToString()) * CurrentState.multiplierdist)
+                    (int.Parse(comPort.MAV.param["FENCE_MAXALT"].ToString()) * CurrentState.multiplierdist)
                         .ToString(
                             "0");
                 if (DialogResult.Cancel == InputBox.Show("Max Alt", "Box Maximum Altitude?", ref maxalts))
@@ -4869,10 +4869,10 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                if (FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_MINALT"))
-                    FlightPlanner.comPort.setParam("FENCE_MINALT", minalt);
-                if (FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_MAXALT"))
-                    FlightPlanner.comPort.setParam("FENCE_MAXALT", maxalt);
+                if (comPort.MAV.param.ContainsKey("FENCE_MINALT"))
+                    comPort.setParam("FENCE_MINALT", minalt);
+                if (comPort.MAV.param.ContainsKey("FENCE_MAXALT"))
+                    comPort.setParam("FENCE_MAXALT", maxalt);
             }
             catch (Exception ex)
             {
@@ -4881,11 +4881,11 @@ namespace MissionPlanner.GCSViews
                 return;
             }
 
-            float oldaction = (float)FlightPlanner.comPort.MAV.param["FENCE_ACTION"];
+            float oldaction = (float)comPort.MAV.param["FENCE_ACTION"];
 
             try
             {
-                FlightPlanner.comPort.setParam("FENCE_ACTION", 0);
+                comPort.setParam("FENCE_ACTION", 0);
             }
             catch
             {
@@ -4899,7 +4899,7 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                FlightPlanner.comPort.setParam("FENCE_TOTAL", pointcount);
+                comPort.setParam("FENCE_TOTAL", pointcount);
             }
             catch
             {
@@ -4911,21 +4911,21 @@ namespace MissionPlanner.GCSViews
             {
                 byte a = 0;
                 // add return loc
-                FlightPlanner.comPort.setFencePoint(a, new PointLatLngAlt(geofenceoverlay.Markers[0].Position), pointcount);
+                comPort.setFencePoint(a, new PointLatLngAlt(geofenceoverlay.Markers[0].Position), pointcount);
                 a++;
                 // add points
                 foreach (var pll in drawnpolygon.Points)
                 {
-                    FlightPlanner.comPort.setFencePoint(a, new PointLatLngAlt(pll), pointcount);
+                    comPort.setFencePoint(a, new PointLatLngAlt(pll), pointcount);
                     a++;
                 }
 
                 // add polygon close
-                FlightPlanner.comPort.setFencePoint(a, new PointLatLngAlt(drawnpolygon.Points[0]), pointcount);
+                comPort.setFencePoint(a, new PointLatLngAlt(drawnpolygon.Points[0]), pointcount);
 
                 try
                 {
-                    FlightPlanner.comPort.setParam("FENCE_ACTION", oldaction);
+                    comPort.setParam("FENCE_ACTION", oldaction);
                 }
                 catch
                 {
@@ -4977,13 +4977,13 @@ namespace MissionPlanner.GCSViews
             polygongridmode = false;
             int count = 1;
 
-            if (FlightPlanner.comPort.MAV.param["FENCE_ACTION"] == null || FlightPlanner.comPort.MAV.param["FENCE_TOTAL"] == null)
+            if (comPort.MAV.param["FENCE_ACTION"] == null || comPort.MAV.param["FENCE_TOTAL"] == null)
             {
                 CustomMessageBox.Show("Not Supported");
                 return;
             }
 
-            if (int.Parse(FlightPlanner.comPort.MAV.param["FENCE_TOTAL"].ToString()) <= 1)
+            if (int.Parse(comPort.MAV.param["FENCE_TOTAL"].ToString()) <= 1)
             {
                 CustomMessageBox.Show("Nothing to download");
                 return;
@@ -4998,7 +4998,7 @@ namespace MissionPlanner.GCSViews
             {
                 try
                 {
-                    PointLatLngAlt plla = FlightPlanner.comPort.getFencePoint(a, ref count);
+                    PointLatLngAlt plla = comPort.getFencePoint(a, ref count);
                     geofencepolygon.Points.Add(new PointLatLng(plla.Lat, plla.Lng));
                 }
                 catch
@@ -5296,8 +5296,8 @@ namespace MissionPlanner.GCSViews
         {
             timer1.Start();
 
-            if (FlightPlanner.comPort.BaseStream.IsOpen && FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.ArduCopter2) &&
-                FlightPlanner.comPort.MAV.cs.version < new Version(3, 3))
+            if (comPort.BaseStream.IsOpen && comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2) &&
+                comPort.MAV.cs.version < new Version(3, 3))
             {
                 CMB_altmode.Visible = false;
             }
@@ -5342,13 +5342,13 @@ namespace MissionPlanner.GCSViews
         private void updateHomeText()
         {
             // set home location
-            if (FlightPlanner.comPort.MAV.cs.HomeLocation.Lat != 0 && FlightPlanner.comPort.MAV.cs.HomeLocation.Lng != 0)
+            if (comPort.MAV.cs.HomeLocation.Lat != 0 && comPort.MAV.cs.HomeLocation.Lng != 0)
             {
-                TXT_homelat.Text = FlightPlanner.comPort.MAV.cs.HomeLocation.Lat.ToString();
+                TXT_homelat.Text = comPort.MAV.cs.HomeLocation.Lat.ToString();
 
-                TXT_homelng.Text = FlightPlanner.comPort.MAV.cs.HomeLocation.Lng.ToString();
+                TXT_homelng.Text = comPort.MAV.cs.HomeLocation.Lng.ToString();
 
-                TXT_homealt.Text = FlightPlanner.comPort.MAV.cs.HomeLocation.Alt.ToString();
+                TXT_homealt.Text = comPort.MAV.cs.HomeLocation.Alt.ToString();
 
                 writeKML();
             }
@@ -5828,7 +5828,7 @@ namespace MissionPlanner.GCSViews
         private void elevationGraphToolStripMenuItem_Click(object sender, EventArgs e)
         {
             writeKML();
-            double homealt = FlightPlanner.comPort.MAV.cs.HomeAlt;
+            double homealt = comPort.MAV.cs.HomeAlt;
             Form temp = new ElevationProfile(pointlist, homealt, (altmode)CMB_altmode.SelectedValue);
             ThemeManager.ApplyThemeTo(temp);
             temp.ShowDialog();
@@ -5961,8 +5961,8 @@ namespace MissionPlanner.GCSViews
             // take off pitch
             int topi = 0;
 
-            if (FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.ArduPlane) ||
-                FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.Ateryx))
+            if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
+                comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
             {
                 string top = "15";
 
@@ -6003,9 +6003,9 @@ namespace MissionPlanner.GCSViews
 
         private void trackerHomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FlightPlanner.comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(MouseDownEnd)
+            comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(MouseDownEnd)
             {
-                Alt = FlightPlanner.comPort.MAV.cs.HomeAlt
+                Alt = comPort.MAV.cs.HomeAlt
             };
         }
 
@@ -6290,13 +6290,13 @@ namespace MissionPlanner.GCSViews
 
         public void getRallyPointsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (FlightPlanner.comPort.MAV.param["RALLY_TOTAL"] == null)
+            if (comPort.MAV.param["RALLY_TOTAL"] == null)
             {
                 CustomMessageBox.Show("Not Supported");
                 return;
             }
 
-            if (int.Parse(FlightPlanner.comPort.MAV.param["RALLY_TOTAL"].ToString()) < 1)
+            if (int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString()) < 1)
             {
                 CustomMessageBox.Show("Rally points - Nothing to download");
                 return;
@@ -6304,13 +6304,13 @@ namespace MissionPlanner.GCSViews
 
             rallypointoverlay.Markers.Clear();
 
-            int count = int.Parse(FlightPlanner.comPort.MAV.param["RALLY_TOTAL"].ToString());
+            int count = int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString());
 
             for (int a = 0; a < (count); a++)
             {
                 try
                 {
-                    PointLatLngAlt plla = FlightPlanner.comPort.getRallyPoint(a, ref count);
+                    PointLatLngAlt plla = comPort.getRallyPoint(a, ref count);
                     rallypointoverlay.Markers.Add(new GMapMarkerRallyPt(new PointLatLng(plla.Lat, plla.Lng))
                     {
                         Alt = (int)plla.Alt,
@@ -6334,14 +6334,14 @@ namespace MissionPlanner.GCSViews
         {
             byte count = 0;
 
-            FlightPlanner.comPort.setParam("RALLY_TOTAL", rallypointoverlay.Markers.Count);
+            comPort.setParam("RALLY_TOTAL", rallypointoverlay.Markers.Count);
 
             foreach (GMapMarkerRallyPt pnt in rallypointoverlay.Markers)
             {
                 try
                 {
-                    FlightPlanner.comPort.setRallyPoint(count, new PointLatLngAlt(pnt.Position) { Alt = pnt.Alt }, 0, 0, 0,
-                        (byte)(float)FlightPlanner.comPort.MAV.param["RALLY_TOTAL"]);
+                    comPort.setRallyPoint(count, new PointLatLngAlt(pnt.Position) { Alt = pnt.Alt }, 0, 0, 0,
+                        (byte)(float)comPort.MAV.param["RALLY_TOTAL"]);
                     count++;
                 }
                 catch
@@ -6385,14 +6385,14 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                FlightPlanner.comPort.setParam("RALLY_TOTAL", 0);
+                comPort.setParam("RALLY_TOTAL", 0);
             }
             catch (Exception ex)
             {
                 log.Error(ex);
             }
             rallypointoverlay.Markers.Clear();
-            FlightPlanner.comPort.MAV.rallypoints.Clear();
+            comPort.MAV.rallypoints.Clear();
         }
 
         private void loadKMLFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -7184,7 +7184,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             try
             {
-                FlightPlanner.comPort.setParam("FENCE_ENABLE", 0);
+                comPort.setParam("FENCE_ENABLE", 0);
             }
             catch
             {
@@ -7194,7 +7194,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             try
             {
-                FlightPlanner.comPort.setParam("FENCE_ACTION", 0);
+                comPort.setParam("FENCE_ACTION", 0);
             }
             catch
             {
@@ -7204,7 +7204,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             try
             {
-                FlightPlanner.comPort.setParam("FENCE_TOTAL", 0);
+                comPort.setParam("FENCE_TOTAL", 0);
             }
             catch
             {
@@ -7226,7 +7226,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void currentPositionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddWPToMap(FlightPlanner.comPort.MAV.cs.lat, FlightPlanner.comPort.MAV.cs.lng, (int)FlightPlanner.comPort.MAV.cs.alt);
+            AddWPToMap(comPort.MAV.cs.lat, comPort.MAV.cs.lng, (int)comPort.MAV.cs.alt);
         }
 
         private void surveyGridToolStripMenuItem_Click(object sender, EventArgs e)
@@ -7287,8 +7287,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             // take off pitch
             int topi = 0;
 
-            if (FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.ArduPlane) ||
-                FlightPlanner.comPort.MAV.cs.firmware.Equals(FlightPlanner.Firmwares.Ateryx))
+            if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
+                comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
             {
                 string top = "15";
 
@@ -7346,7 +7346,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             log.Info("MenuConnect Start");
 
             // sanity check
-            if (comPort.BaseStream.IsOpen && FlightPlanner.comPort.MAV.cs.groundspeed > 4)
+            if (comPort.BaseStream.IsOpen && comPort.MAV.cs.groundspeed > 4)
             {
                 if (DialogResult.No ==
                     CustomMessageBox.Show(Strings.Stillmoving, Strings.Disconnect, MessageBoxButtons.YesNo))
@@ -7383,7 +7383,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 doConnect(comPort, _connectionControl.CMB_serialport.Text, _connectionControl.CMB_baudrate.Text);
             }
 
-            FlightPlanner._connectionControl.UpdateSysIDS();
+            _connectionControl.UpdateSysIDS();
 
             loadph_serial();
         }
@@ -7663,8 +7663,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // get any rallypoints
-                if (FlightPlanner.comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
-                    int.Parse(FlightPlanner.comPort.MAV.param["RALLY_TOTAL"].ToString()) > 0)
+                if (comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
+                    int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString()) > 0)
                 {
                     getRallyPointsToolStripMenuItem_Click(null, null);
 
@@ -7693,9 +7693,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // get any fences
-                if (FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_TOTAL") &&
-                    int.Parse(FlightPlanner.comPort.MAV.param["FENCE_TOTAL"].ToString()) > 1 &&
-                    FlightPlanner.comPort.MAV.param.ContainsKey("FENCE_ACTION"))
+                if (comPort.MAV.param.ContainsKey("FENCE_TOTAL") &&
+                    int.Parse(comPort.MAV.param["FENCE_TOTAL"].ToString()) > 1 &&
+                    comPort.MAV.param.ContainsKey("FENCE_ACTION"))
                 {
                     GeoFencedownloadToolStripMenuItem_Click(null, null);
                 }
