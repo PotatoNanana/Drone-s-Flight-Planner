@@ -7330,7 +7330,52 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void MenuConnect_Click(object sender, EventArgs e)
         {
+            comPort.giveComport = false;
 
+            log.Info("MenuConnect Start");
+
+            // sanity check
+            if (comPort.BaseStream.IsOpen && MainV2.comPort.MAV.cs.groundspeed > 4)
+            {
+                if (DialogResult.No ==
+                    CustomMessageBox.Show(Strings.Stillmoving, Strings.Disconnect, MessageBoxButtons.YesNo))
+                {
+                    return;
+                }
+            }
+
+            try
+            {
+                log.Info("Cleanup last logfiles");
+                // cleanup from any previous sessions
+                if (comPort.logfile != null)
+                    comPort.logfile.Close();
+
+                if (comPort.rawlogfile != null)
+                    comPort.rawlogfile.Close();
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show(Strings.ErrorClosingLogFile + ex.Message, Strings.ERROR);
+            }
+
+            comPort.logfile = null;
+            comPort.rawlogfile = null;
+
+            // decide if this is a connect or disconnect
+            if (comPort.BaseStream.IsOpen)
+            {
+                doDisconnect(comPort);
+            }
+            else
+            {
+                doConnect(comPort, _connectionControl.CMB_serialport.Text, _connectionControl.CMB_baudrate.Text);
+            }
+
+            MainV2._connectionControl.UpdateSysIDS();
+
+            loadph_serial();
         }
+
     }
 }
