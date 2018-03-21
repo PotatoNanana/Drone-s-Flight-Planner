@@ -7585,7 +7585,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     _connectionControl.TOOL_APMFirmware.SelectedIndex =
                         _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduSub);
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane))
+                else if (comPort.MAV.cs.firmware.Equals( Firmwares.ArduPlane))
                 {
                     _connectionControl.TOOL_APMFirmware.SelectedIndex =
                         _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduPlane);

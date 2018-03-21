@@ -43,8 +43,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\57050241\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\paper\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -52,18 +51,15 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\Mavlink\\MAVLink.csproj",
+      "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj",
       "projectName": "MAVLink",
-      "projectPath": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\Mavlink\\MAVLink.csproj",
-      "packagesPath": "C:\\Users\\57050241\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\ExtLibs\\Mavlink\\obj\\",
+      "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj",
+      "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\57050241\\Source\\Repos\\Drone-s-Flight-Planner\\.nuget\\NuGet.Config",
-        "C:\\Users\\57050241\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
+        "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -77,11 +73,6 @@
         "net462": {
           "projectReferences": {}
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {

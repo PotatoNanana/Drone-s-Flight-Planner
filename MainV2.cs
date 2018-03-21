@@ -68,6 +68,7 @@ namespace MissionPlanner
             public abstract Image sim { get; }
             public abstract Image terminal { get; }
             public abstract Image help { get; }
+            public abstract Image donate { get; }
             public abstract Image connect { get; }
             public abstract Image disconnect { get; }
             public abstract Image bg { get; }
@@ -111,6 +112,10 @@ namespace MissionPlanner
                 get { return global::MissionPlanner.Properties.Resources.light_help_icon; }
             }
 
+            public override Image donate
+            {
+                get { return global::MissionPlanner.Properties.Resources.donate; }
+            }
 
             public override Image connect
             {
@@ -169,6 +174,10 @@ namespace MissionPlanner
                 get { return global::MissionPlanner.Properties.Resources.dark_help_icon; }
             }
 
+            public override Image donate
+            {
+                get { return global::MissionPlanner.Properties.Resources.donate; }
+            }
 
             public override Image connect
             {
@@ -454,7 +463,6 @@ namespace MissionPlanner
                 }
             }
         }
-
 
 
         public MainV2()
@@ -880,7 +888,28 @@ namespace MissionPlanner
                 this.Icon = Icon.FromHandle(((Bitmap)Program.IconFile).GetHicon());
             }
 
+            if (Program.Logo != null && Program.name == "VVVVZ")
+            {
+                //MenuDonate.Click -= this.toolStripMenuItem1_Click;
+                //MenuDonate.Text = "";
+                // MenuDonate.Image = Program.Logo;
 
+                //MenuDonate.Click += MenuCustom_Click;
+
+                MenuFlightData.Visible = false;
+                MenuFlightPlanner.Visible = true;
+                MenuConfigTune.Visible = false;
+                //MenuHelp.Visible = false;
+                MenuInitConfig.Visible = false;
+                MenuSimulation.Visible = false;
+                MenuTerminal.Visible = false;
+            }
+            else if (Program.Logo != null && Program.names.Contains(Program.name))
+            {
+                //MenuDonate.Click -= this.toolStripMenuItem1_Click;
+                //MenuDonate.Text = "";
+                //MenuDonate.Image = Program.Logo;
+            }
 
             Application.DoEvents();
 
@@ -978,6 +1007,7 @@ namespace MissionPlanner
             MenuTerminal.Image = displayicons.terminal;
             MenuConnect.Image = displayicons.connect;
             //MenuHelp.Image = displayicons.help;
+            //MenuDonate.Image = displayicons.donate;
 
 
             MenuFlightData.ForeColor = ThemeManager.TextColor;
@@ -988,6 +1018,7 @@ namespace MissionPlanner
             MenuTerminal.ForeColor = ThemeManager.TextColor;
             MenuConnect.ForeColor = ThemeManager.TextColor;
             //MenuHelp.ForeColor = ThemeManager.TextColor;
+            //MenuDonate.ForeColor = ThemeManager.TextColor;
         }
 
         void MenuCustom_Click(object sender, EventArgs e)
@@ -1155,11 +1186,6 @@ namespace MissionPlanner
         private void MenuTerminal_Click(object sender, EventArgs e)
         {
             MyView.ShowScreen("Terminal");
-        }
-
-        private void MenuFlightLog_Click(object sender, EventArgs e)
-        {
-            MyView.ShowScreen("FlightLog");
         }
 
         public void doDisconnect(MAVLinkInterface comPort)
@@ -2644,10 +2670,6 @@ namespace MissionPlanner
             MyView.AddScreen(new MainSwitcher.Screen("Terminal", typeof(GCSViews.Terminal), false));
             MyView.AddScreen(new MainSwitcher.Screen("Help", typeof(GCSViews.Help), false));
 
-            /// Added
-            MyView.AddScreen(new MainSwitcher.Screen("UserLogin", typeof(GCSViews.UserLogin), false));
-            MyView.AddScreen(new MainSwitcher.Screen("FlightLog", typeof(GCSViews.FlightLog), false));
-
             try
             {
                 if (Control.ModifierKeys == Keys.Shift)
@@ -3422,7 +3444,18 @@ namespace MissionPlanner
             Console.WriteLine("MainV2_KeyDown " + e.ToString());
         }
 
-
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(
+                    "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mich146%40hotmail%2ecom&lc=AU&item_name=Michael%20Oborne&no_note=0&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest");
+            }
+            catch
+            {
+                CustomMessageBox.Show("Link open failed. check your default webpage association");
+            }
+        }
 
         [StructLayout(LayoutKind.Sequential)]
         internal class DEV_BROADCAST_HDR
@@ -3642,11 +3675,6 @@ namespace MissionPlanner
         private void connectionOptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new ConnectionOptions().Show(this);
-        }
-
-        private void MenuLogin_Click(object sender, EventArgs e)
-        {
-            MyView.ShowScreen("UserLogin");
         }
 
         private void toolStripConnectionControl_Click(object sender, EventArgs e)

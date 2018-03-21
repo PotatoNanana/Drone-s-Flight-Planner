@@ -194,7 +194,7 @@ namespace MissionPlanner
             this.MenuFlightLog.Margin = new System.Windows.Forms.Padding(0);
             this.MenuFlightLog.Name = "MenuFlightLog";
             this.MenuFlightLog.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.MenuFlightLog.Click += new System.EventHandler(this.MenuFlightLog_Click);
+            //this.MenuFlightLog.Click += new System.EventHandler(this.MenuFlightLog_Click);
             // 
             // MenuLogin
             // 
@@ -205,7 +205,7 @@ namespace MissionPlanner
             this.MenuLogin.Margin = new System.Windows.Forms.Padding(0);
             this.MenuLogin.Name = "MenuLogin";
             this.MenuLogin.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.MenuLogin.Click += new System.EventHandler(this.MenuLogin_Click);
+            //this.MenuLogin.Click += new System.EventHandler(this.MenuLogin_Click);
             // 
             // MenuConnect
             // 

@@ -137,7 +137,7 @@ namespace MissionPlanner.GCSViews
         {
             base.Dispose(disposing);
 
-            MainV2.comPort.logreadmode = false;
+            FlightPlanner.comPort.logreadmode = false;
             try
             {
                 if (hud1 != null)
@@ -240,7 +240,7 @@ namespace MissionPlanner.GCSViews
 
                     HUD.Custom cust = new HUD.Custom();
                     cust.Header = Settings.Instance[item];
-                    HUD.Custom.src = MainV2.comPort.MAV.cs;
+                    HUD.Custom.src = FlightPlanner.comPort.MAV.cs;
 
                     addHudUserItem(ref cust, chk);
                 }
@@ -263,7 +263,7 @@ namespace MissionPlanner.GCSViews
 
             CMB_action.DataSource = list;
 
-            CMB_modes.DataSource = Common.getModesList(MainV2.comPort.MAV.cs);
+            CMB_modes.DataSource = Common.getModesList(FlightPlanner.comPort.MAV.cs);
             CMB_modes.ValueMember = "Key";
             CMB_modes.DisplayMember = "Value";
 
@@ -322,7 +322,7 @@ namespace MissionPlanner.GCSViews
                 Gspeed.MaxValue = gspeedMax;
             }
 
-            MainV2.comPort.ParamListChanged += FlightData_ParentChanged;
+            FlightPlanner.comPort.ParamListChanged += FlightData_ParentChanged;
 
         }
 
@@ -377,7 +377,7 @@ namespace MissionPlanner.GCSViews
             int x = 10;
             int y = 10;
 
-            var list = MainV2.comPort.MAV.cs.GetItemList();
+            var list = FlightPlanner.comPort.MAV.cs.GetItemList();
 
             tabStatus.SuspendLayout();
 
@@ -461,7 +461,7 @@ namespace MissionPlanner.GCSViews
             if (CB_tuning.Checked)
                 ZedGraphTimer.Start();
 
-            if (MainV2.MONO)
+            if (FlightPlanner.MONO)
             {
                 if (!hud1.Visible)
                     hud1.Visible = true;
@@ -489,7 +489,7 @@ namespace MissionPlanner.GCSViews
                         // set description and unit
                         string desc = Settings.Instance["quickView" + f];
                         QV.Tag = QV.desc;
-                        QV.desc = MainV2.comPort.MAV.cs.GetNameandUnit(desc);
+                        QV.desc = FlightPlanner.comPort.MAV.cs.GetNameandUnit(desc);
 
                         // set databinding for value
                         QV.DataBindings.Clear();
@@ -515,7 +515,7 @@ namespace MissionPlanner.GCSViews
                             QuickView QV = (QuickView) ctls[0];
                             string desc = QV.desc;
                             QV.Tag = desc;
-                            QV.desc = MainV2.comPort.MAV.cs.GetNameandUnit(desc);
+                            QV.desc = FlightPlanner.comPort.MAV.cs.GetNameandUnit(desc);
                         }
                     }
                     catch (Exception ex)
@@ -528,9 +528,9 @@ namespace MissionPlanner.GCSViews
             CheckBatteryShow();
 
             // make sure the hud user items/warnings/checklist are using the current state
-            HUD.Custom.src = MainV2.comPort.MAV.cs;
-            CustomWarning.defaultsrc = MainV2.comPort.MAV.cs;
-            MissionPlanner.Controls.PreFlight.CheckListItem.defaultsrc = MainV2.comPort.MAV.cs;
+            HUD.Custom.src = FlightPlanner.comPort.MAV.cs;
+            CustomWarning.defaultsrc = FlightPlanner.comPort.MAV.cs;
+            MissionPlanner.Controls.PreFlight.CheckListItem.defaultsrc = FlightPlanner.comPort.MAV.cs;
 
             if (Settings.Instance["maplast_lat"] != "")
             {
@@ -564,8 +564,8 @@ namespace MissionPlanner.GCSViews
         public void CheckBatteryShow()
         {
             // ensure battery display is on - also set in hud if current is updated
-            if (MainV2.comPort.MAV.param.ContainsKey("BATT_MONITOR") &&
-                (float) MainV2.comPort.MAV.param["BATT_MONITOR"] != 0)
+            if (FlightPlanner.comPort.MAV.param.ContainsKey("BATT_MONITOR") &&
+                (float) FlightPlanner.comPort.MAV.param["BATT_MONITOR"] != 0)
             {
                 hud1.batteryon = true;
             }
@@ -577,7 +577,7 @@ namespace MissionPlanner.GCSViews
 
         public void Deactivate()
         {
-            if (MainV2.MONO)
+            if (FlightPlanner.MONO)
             {
                 hud1.Dock = DockStyle.None;
                 hud1.Size = new Size(5, 5);
@@ -650,9 +650,9 @@ namespace MissionPlanner.GCSViews
             Zoomlevel.Value = Convert.ToDecimal(gMapControl1.Zoom);
 
             var item1 = ParameterMetaDataRepository.GetParameterOptionsInt("MNT_MODE",
-                MainV2.comPort.MAV.cs.firmware.ToString());
+                FlightPlanner.comPort.MAV.cs.firmware.ToString());
             var item2 = ParameterMetaDataRepository.GetParameterOptionsInt("MNT_DEFLT_MODE",
-                MainV2.comPort.MAV.cs.firmware.ToString());
+                FlightPlanner.comPort.MAV.cs.firmware.ToString());
             if (item1.Count > 0)
                 CMB_mountmode.DataSource = item1;
 
@@ -700,7 +700,7 @@ namespace MissionPlanner.GCSViews
                         tfrpolygons.Polygons.Add(poly);
                     }
                 }
-                tfrpolygons.IsVisibile = MainV2.ShowTFR;
+                tfrpolygons.IsVisibile = FlightPlanner.ShowTFR;
             });
         }
 
@@ -764,7 +764,7 @@ namespace MissionPlanner.GCSViews
 
             if (keyData == (Keys.Space))
             {
-                if (MainV2.comPort.logplaybackfile != null)
+                if (FlightPlanner.comPort.logplaybackfile != null)
                 {
                     BUT_playlog_Click(null, null);
                     return true;
@@ -818,14 +818,14 @@ namespace MissionPlanner.GCSViews
 
             while (threadrun)
             {
-                if (MainV2.comPort.giveComport)
+                if (FlightPlanner.comPort.giveComport)
                 {
                     Thread.Sleep(50);
                     updateBindingSource();
                     continue;
                 }
 
-                if (!MainV2.comPort.logreadmode)
+                if (!FlightPlanner.comPort.logreadmode)
                     Thread.Sleep(50); // max is only ever 10 hz but we go a little faster to empty the serial queue
 
                 if (this.IsDisposed)
@@ -855,20 +855,20 @@ namespace MissionPlanner.GCSViews
                 }
 
                 // log playback
-                if (MainV2.comPort.logreadmode && MainV2.comPort.logplaybackfile != null)
+                if (FlightPlanner.comPort.logreadmode && FlightPlanner.comPort.logplaybackfile != null)
                 {
-                    if (MainV2.comPort.BaseStream.IsOpen)
+                    if (FlightPlanner.comPort.BaseStream.IsOpen)
                     {
-                        MainV2.comPort.logreadmode = false;
+                        FlightPlanner.comPort.logreadmode = false;
                         try
                         {
-                            MainV2.comPort.logplaybackfile.Close();
+                            FlightPlanner.comPort.logplaybackfile.Close();
                         }
                         catch
                         {
                             log.Error("Failed to close logfile");
                         }
-                        MainV2.comPort.logplaybackfile = null;
+                        FlightPlanner.comPort.logplaybackfile = null;
                     }
 
 
@@ -890,18 +890,18 @@ namespace MissionPlanner.GCSViews
 
                     //Console.WriteLine(DateTime.Now.Millisecond + " done ");
 
-                    DateTime logplayback = MainV2.comPort.lastlogread;
+                    DateTime logplayback = FlightPlanner.comPort.lastlogread;
                     try
                     {
-                        if (!MainV2.comPort.giveComport)
-                            MainV2.comPort.readPacket();
+                        if (!FlightPlanner.comPort.giveComport)
+                            FlightPlanner.comPort.readPacket();
 
                         // update currentstate of sysids on the port
-                        foreach (var MAV in MainV2.comPort.MAVlist)
+                        foreach (var MAV in FlightPlanner.comPort.MAVlist)
                         {
                             try
                             {
-                                MAV.cs.UpdateCurrentSettings(null, false, MainV2.comPort, MAV);
+                                MAV.cs.UpdateCurrentSettings(null, false, FlightPlanner.comPort, MAV);
                             }
                             catch (Exception ex)
                             {
@@ -914,7 +914,7 @@ namespace MissionPlanner.GCSViews
                         log.Error("Failed to read log packet");
                     }
 
-                    double act = (MainV2.comPort.lastlogread - logplayback).TotalMilliseconds;
+                    double act = (FlightPlanner.comPort.lastlogread - logplayback).TotalMilliseconds;
 
                     if (act > 9999 || act < 0)
                         act = 0;
@@ -930,14 +930,14 @@ namespace MissionPlanner.GCSViews
                     {
                     }
 
-                    if (LogPlayBackSpeed >= 4 && MainV2.speechEnable)
-                        MainV2.speechEngine.SpeakAsyncCancelAll();
+                    if (LogPlayBackSpeed >= 4 && FlightPlanner.speechEnable)
+                        FlightPlanner.speechEngine.SpeakAsyncCancelAll();
 
                     double timetook = (DateTime.Now - tsreal).TotalMilliseconds;
                     if (timetook != 0)
                     {
                         //Console.WriteLine("took: " + timetook + "=" + taketime + " " + (taketime - timetook) + " " + ts);
-                        //Console.WriteLine(MainV2.comPort.lastlogread.Second + " " + DateTime.Now.Second + " " + (MainV2.comPort.lastlogread.Second - DateTime.Now.Second));
+                        //Console.WriteLine(FlightPlanner.comPort.lastlogread.Second + " " + DateTime.Now.Second + " " + (FlightPlanner.comPort.lastlogread.Second - DateTime.Now.Second));
                         //if ((taketime - timetook) < 0)
                         {
                             timeerror += (taketime - timetook);
@@ -968,26 +968,26 @@ namespace MissionPlanner.GCSViews
 
                     try
                     {
-                        if (MainV2.comPort.logplaybackfile != null &&
-                            MainV2.comPort.logplaybackfile.BaseStream.Position ==
-                            MainV2.comPort.logplaybackfile.BaseStream.Length)
+                        if (FlightPlanner.comPort.logplaybackfile != null &&
+                            FlightPlanner.comPort.logplaybackfile.BaseStream.Position ==
+                            FlightPlanner.comPort.logplaybackfile.BaseStream.Length)
                         {
-                            MainV2.comPort.logreadmode = false;
+                            FlightPlanner.comPort.logreadmode = false;
                         }
                     }
                     catch
                     {
-                        MainV2.comPort.logreadmode = false;
+                        FlightPlanner.comPort.logreadmode = false;
                     }
                 }
                 else
                 {
                     // ensure we know to stop
-                    if (MainV2.comPort.logreadmode)
-                        MainV2.comPort.logreadmode = false;
+                    if (FlightPlanner.comPort.logreadmode)
+                        FlightPlanner.comPort.logreadmode = false;
                     updatePlayPauseButton(false);
 
-                    if (!playingLog && MainV2.comPort.logplaybackfile != null)
+                    if (!playingLog && FlightPlanner.comPort.logplaybackfile != null)
                     {
                         continue;
                     }
@@ -1005,11 +1005,11 @@ namespace MissionPlanner.GCSViews
                     float warnvolt = Settings.Instance.GetFloat("speechbatteryvolt");
                     float warnpercent = Settings.Instance.GetFloat("speechbatterypercent");
 
-                    if (MainV2.comPort.MAV.cs.battery_voltage <= warnvolt)
+                    if (FlightPlanner.comPort.MAV.cs.battery_voltage <= warnvolt)
                     {
                         hud1.lowvoltagealert = true;
                     }
-                    else if ((MainV2.comPort.MAV.cs.battery_remaining) < warnpercent)
+                    else if ((FlightPlanner.comPort.MAV.cs.battery_remaining) < warnpercent)
                     {
                         hud1.lowvoltagealert = true;
                     }
@@ -1021,55 +1021,55 @@ namespace MissionPlanner.GCSViews
                     // update opengltest
                     if (OpenGLtest.instance != null)
                     {
-                        OpenGLtest.instance.rpy = new Vector3(MainV2.comPort.MAV.cs.roll, MainV2.comPort.MAV.cs.pitch,
-                            MainV2.comPort.MAV.cs.yaw);
-                        OpenGLtest.instance.LocationCenter = new PointLatLngAlt(MainV2.comPort.MAV.cs.lat,
-                            MainV2.comPort.MAV.cs.lng, MainV2.comPort.MAV.cs.altasl, "here");
+                        OpenGLtest.instance.rpy = new Vector3(FlightPlanner.comPort.MAV.cs.roll, FlightPlanner.comPort.MAV.cs.pitch,
+                            FlightPlanner.comPort.MAV.cs.yaw);
+                        OpenGLtest.instance.LocationCenter = new PointLatLngAlt(FlightPlanner.comPort.MAV.cs.lat,
+                            FlightPlanner.comPort.MAV.cs.lng, FlightPlanner.comPort.MAV.cs.altasl, "here");
                     }
 
                     // update opengltest2
                     if (OpenGLtest2.instance != null)
                     {
-                        OpenGLtest2.instance.rpy = new Vector3(MainV2.comPort.MAV.cs.roll, MainV2.comPort.MAV.cs.pitch,
-                            MainV2.comPort.MAV.cs.yaw);
-                        OpenGLtest2.instance.LocationCenter = new PointLatLngAlt(MainV2.comPort.MAV.cs.lat,
-                            MainV2.comPort.MAV.cs.lng, MainV2.comPort.MAV.cs.altasl, "here");
+                        OpenGLtest2.instance.rpy = new Vector3(FlightPlanner.comPort.MAV.cs.roll, FlightPlanner.comPort.MAV.cs.pitch,
+                            FlightPlanner.comPort.MAV.cs.yaw);
+                        OpenGLtest2.instance.LocationCenter = new PointLatLngAlt(FlightPlanner.comPort.MAV.cs.lat,
+                            FlightPlanner.comPort.MAV.cs.lng, FlightPlanner.comPort.MAV.cs.altasl, "here");
                     }
 
                     // update vario info
-                    Vario.SetValue(MainV2.comPort.MAV.cs.climbrate);
+                    Vario.SetValue(FlightPlanner.comPort.MAV.cs.climbrate);
 
                     // udpate tunning tab
                     if (tunning.AddMilliseconds(50) < DateTime.Now && CB_tuning.Checked)
                     {
                         double time = (Environment.TickCount - tickStart)/1000.0;
                         if (list1item != null)
-                            list1.Add(time, ConvertToDouble(list1item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list1.Add(time, ConvertToDouble(list1item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list2item != null)
-                            list2.Add(time, ConvertToDouble(list2item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list2.Add(time, ConvertToDouble(list2item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list3item != null)
-                            list3.Add(time, ConvertToDouble(list3item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list3.Add(time, ConvertToDouble(list3item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list4item != null)
-                            list4.Add(time, ConvertToDouble(list4item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list4.Add(time, ConvertToDouble(list4item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list5item != null)
-                            list5.Add(time, ConvertToDouble(list5item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list5.Add(time, ConvertToDouble(list5item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list6item != null)
-                            list6.Add(time, ConvertToDouble(list6item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list6.Add(time, ConvertToDouble(list6item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list7item != null)
-                            list7.Add(time, ConvertToDouble(list7item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list7.Add(time, ConvertToDouble(list7item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list8item != null)
-                            list8.Add(time, ConvertToDouble(list8item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list8.Add(time, ConvertToDouble(list8item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list9item != null)
-                            list9.Add(time, ConvertToDouble(list9item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list9.Add(time, ConvertToDouble(list9item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                         if (list10item != null)
-                            list10.Add(time, ConvertToDouble(list10item.GetValue(MainV2.comPort.MAV.cs, null)));
+                            list10.Add(time, ConvertToDouble(list10item.GetValue(FlightPlanner.comPort.MAV.cs, null)));
                     }
 
                     // update map
                     if (tracklast.AddSeconds(1.2) < DateTime.Now)
                     {
                         // show disable joystick button
-                        if (MainV2.joystick != null && MainV2.joystick.enabled)
+                        if (FlightPlanner.joystick != null && FlightPlanner.joystick.enabled)
                         {
                             this.Invoke((MethodInvoker) delegate {
                                 but_disablejoystick.Visible = true;
@@ -1088,7 +1088,7 @@ namespace MissionPlanner.GCSViews
                             routes.Routes.Add(route);
                         }
 
-                        PointLatLng currentloc = new PointLatLng(MainV2.comPort.MAV.cs.lat, MainV2.comPort.MAV.cs.lng);
+                        PointLatLng currentloc = new PointLatLng(FlightPlanner.comPort.MAV.cs.lat, FlightPlanner.comPort.MAV.cs.lng);
 
                         gMapControl1.HoldInvalidation = true;
 
@@ -1100,7 +1100,7 @@ namespace MissionPlanner.GCSViews
                                 route.Points.Count - numTrackLength);
                         }
                         // add new route point
-                        if (MainV2.comPort.MAV.cs.lat != 0 && MainV2.comPort.MAV.cs.lng != 0)
+                        if (FlightPlanner.comPort.MAV.cs.lat != 0 && FlightPlanner.comPort.MAV.cs.lng != 0)
                         {
                             route.Points.Add(currentloc);
                         }
@@ -1122,7 +1122,7 @@ namespace MissionPlanner.GCSViews
                             MAVLink.mavlink_mission_item_t lastplla = new MAVLink.mavlink_mission_item_t();
                             MAVLink.mavlink_mission_item_t home = new MAVLink.mavlink_mission_item_t();
 
-                            foreach (MAVLink.mavlink_mission_item_t plla in MainV2.comPort.MAV.wps.Values)
+                            foreach (MAVLink.mavlink_mission_item_t plla in FlightPlanner.comPort.MAV.wps.Values)
                             {
                                 if (plla.x == 0 || plla.y == 0)
                                     continue;
@@ -1157,7 +1157,7 @@ namespace MissionPlanner.GCSViews
 
                                     distanceBar1.AddWPDist(dist);
 
-                                    if (plla.seq <= MainV2.comPort.MAV.cs.wpno)
+                                    if (plla.seq <= FlightPlanner.comPort.MAV.cs.wpno)
                                     {
                                         travdist += dist;
                                     }
@@ -1180,9 +1180,9 @@ namespace MissionPlanner.GCSViews
                             {
                             }
 
-                            travdist -= MainV2.comPort.MAV.cs.wp_dist;
+                            travdist -= FlightPlanner.comPort.MAV.cs.wp_dist;
 
-                            if (MainV2.comPort.MAV.cs.mode.ToUpper() == "AUTO")
+                            if (FlightPlanner.comPort.MAV.cs.mode.ToUpper() == "AUTO")
                                 distanceBar1.traveleddist = travdist;
 
                             RegeneratePolygon();
@@ -1191,13 +1191,13 @@ namespace MissionPlanner.GCSViews
 
                             rallypointoverlay.Markers.Clear();
 
-                            foreach (var mark in MainV2.comPort.MAV.rallypoints.Values)
+                            foreach (var mark in FlightPlanner.comPort.MAV.rallypoints.Values)
                             {
                                 rallypointoverlay.Markers.Add(new GMapMarkerRallyPt(mark));
                             }
 
                             // optional on Flight data
-                            if (MainV2.ShowAirports)
+                            if (FlightPlanner.ShowAirports)
                             {
                                 // airports
                                 foreach (var item in Airports.getAirports(gMapControl1.Position).ToArray())
@@ -1222,11 +1222,11 @@ namespace MissionPlanner.GCSViews
                         updateClearRoutesMarkers();
 
                         // add this after the mav icons are drawn
-                        if (MainV2.comPort.MAV.cs.MovingBase != null)
+                        if (FlightPlanner.comPort.MAV.cs.MovingBase != null)
                         {
                             addMissionRouteMarker(new GMarkerGoogle(currentloc, GMarkerGoogleType.blue_dot)
                             {
-                                Position = MainV2.comPort.MAV.cs.MovingBase,
+                                Position = FlightPlanner.comPort.MAV.cs.MovingBase,
                                 ToolTipText = "Moving Base",
                                 ToolTipMode = MarkerTooltipMode.OnMouseOver
                             });
@@ -1235,26 +1235,26 @@ namespace MissionPlanner.GCSViews
                         // add gimbal point center
                         try
                         {
-                            if (MainV2.comPort.MAV.param.ContainsKey("MNT_STAB_TILT") 
-                                && MainV2.comPort.MAV.param.ContainsKey("MNT_STAB_ROLL")
-                                && MainV2.comPort.MAV.param.ContainsKey("MNT_TYPE"))
+                            if (FlightPlanner.comPort.MAV.param.ContainsKey("MNT_STAB_TILT") 
+                                && FlightPlanner.comPort.MAV.param.ContainsKey("MNT_STAB_ROLL")
+                                && FlightPlanner.comPort.MAV.param.ContainsKey("MNT_TYPE"))
                             {
-                                float temp1 = (float)MainV2.comPort.MAV.param["MNT_STAB_TILT"];
-                                float temp2 = (float)MainV2.comPort.MAV.param["MNT_STAB_ROLL"];
+                                float temp1 = (float)FlightPlanner.comPort.MAV.param["MNT_STAB_TILT"];
+                                float temp2 = (float)FlightPlanner.comPort.MAV.param["MNT_STAB_ROLL"];
 
-                                float temp3 = (float)MainV2.comPort.MAV.param["MNT_TYPE"];
+                                float temp3 = (float)FlightPlanner.comPort.MAV.param["MNT_TYPE"];
 
-                                if (MainV2.comPort.MAV.param.ContainsKey("MNT_STAB_PAN") &&
-                                    // (float)MainV2.comPort.MAV.param["MNT_STAB_PAN"] == 1 &&
-                                    ((float)MainV2.comPort.MAV.param["MNT_STAB_TILT"] == 1 &&
-                                      (float)MainV2.comPort.MAV.param["MNT_STAB_ROLL"] == 0) ||
-                                     (float)MainV2.comPort.MAV.param["MNT_TYPE"] == 4) // storm driver
+                                if (FlightPlanner.comPort.MAV.param.ContainsKey("MNT_STAB_PAN") &&
+                                    // (float)FlightPlanner.comPort.MAV.param["MNT_STAB_PAN"] == 1 &&
+                                    ((float)FlightPlanner.comPort.MAV.param["MNT_STAB_TILT"] == 1 &&
+                                      (float)FlightPlanner.comPort.MAV.param["MNT_STAB_ROLL"] == 0) ||
+                                     (float)FlightPlanner.comPort.MAV.param["MNT_TYPE"] == 4) // storm driver
                                 {
                                     var marker = GimbalPoint.ProjectPoint();
 
                                     if (marker != PointLatLngAlt.Zero)
                                     {
-                                        MainV2.comPort.MAV.cs.GimbalPoint = marker;
+                                        FlightPlanner.comPort.MAV.cs.GimbalPoint = marker;
 
                                         addMissionRouteMarker(new GMarkerGoogle(marker, GMarkerGoogleType.blue_dot)
                                         {
@@ -1267,12 +1267,12 @@ namespace MissionPlanner.GCSViews
 
                             
                             // cleanup old - no markers where added, so remove all old 
-                            if (MainV2.comPort.MAV.camerapoints.Count == 0)
+                            if (FlightPlanner.comPort.MAV.camerapoints.Count == 0)
                                 photosoverlay.Markers.Clear();
 
                             var min_interval = 0.0;
-                            if (MainV2.comPort.MAV.param.ContainsKey("CAM_MIN_INTERVAL"))
-                                min_interval = MainV2.comPort.MAV.param["CAM_MIN_INTERVAL"].Value/1000.0;
+                            if (FlightPlanner.comPort.MAV.param.ContainsKey("CAM_MIN_INTERVAL"))
+                                min_interval = FlightPlanner.comPort.MAV.param["CAM_MIN_INTERVAL"].Value/1000.0;
 
                             // set fov's based on last grid calc
                             if (Settings.Instance["camera_fovh"] != null)
@@ -1283,10 +1283,10 @@ namespace MissionPlanner.GCSViews
 
                             // add new - populate camera_feedback to map
                             double oldtime = double.MinValue;
-                            foreach (var mark in MainV2.comPort.MAV.camerapoints.ToArray())
+                            foreach (var mark in FlightPlanner.comPort.MAV.camerapoints.ToArray())
                             {
                                 var timesincelastshot = (mark.time_usec/1000.0)/1000.0 - oldtime;
-                                MainV2.comPort.MAV.cs.timesincelastshot = timesincelastshot;
+                                FlightPlanner.comPort.MAV.cs.timesincelastshot = timesincelastshot;
                                 bool contains = photosoverlay.Markers.Any(p => p.Tag.Equals(mark.time_usec));
                                 if (!contains)
                                 {
@@ -1299,7 +1299,7 @@ namespace MissionPlanner.GCSViews
                             }
                             
                             // age current
-                            int camcount = MainV2.comPort.MAV.camerapoints.Count;
+                            int camcount = FlightPlanner.comPort.MAV.camerapoints.Count;
                             int a = 0;
                             foreach (var mark in photosoverlay.Markers)
                             {
@@ -1311,7 +1311,7 @@ namespace MissionPlanner.GCSViews
                                         // abandon roll higher than 25 degrees
                                         if (Math.Abs(marker.Roll) < 25)
                                         {
-                                            MainV2.comPort.MAV.GMapMarkerOverlapCount.Add(
+                                            FlightPlanner.comPort.MAV.GMapMarkerOverlapCount.Add(
                                                 ((GMapMarkerPhoto) mark).footprintpoly);
                                         }
                                     }
@@ -1323,14 +1323,14 @@ namespace MissionPlanner.GCSViews
 
                             if (CameraOverlap)
                             {
-                                if (!kmlpolygons.Markers.Contains(MainV2.comPort.MAV.GMapMarkerOverlapCount) &&
+                                if (!kmlpolygons.Markers.Contains(FlightPlanner.comPort.MAV.GMapMarkerOverlapCount) &&
                                     camcount > 0)
                                 {
                                     kmlpolygons.Markers.Clear();
-                                    kmlpolygons.Markers.Add(MainV2.comPort.MAV.GMapMarkerOverlapCount);
+                                    kmlpolygons.Markers.Add(FlightPlanner.comPort.MAV.GMapMarkerOverlapCount);
                                 }
                             }
-                            else if (kmlpolygons.Markers.Contains(MainV2.comPort.MAV.GMapMarkerOverlapCount))
+                            else if (kmlpolygons.Markers.Contains(FlightPlanner.comPort.MAV.GMapMarkerOverlapCount))
                             {
                                 kmlpolygons.Markers.Clear();
                             }
@@ -1339,9 +1339,9 @@ namespace MissionPlanner.GCSViews
                         {
                         }
 
-                        lock (MainV2.instance.adsblock)
+                        lock (FlightPlanner.instance.adsblock)
                         {
-                            foreach (adsb.PointLatLngAltHdg plla in MainV2.instance.adsbPlanes.Values)
+                            foreach (adsb.PointLatLngAltHdg plla in FlightPlanner.instance.adsbPlanes.Values)
                             {
                                 // 30 seconds history
                                 if (((DateTime) plla.Time) > DateTime.Now.AddSeconds(-30))
@@ -1380,15 +1380,15 @@ namespace MissionPlanner.GCSViews
                             // add primary route icon
 
                             // draw guide mode point for only main mav
-                            if (MainV2.comPort.MAV.cs.mode.ToLower() == "guided" && MainV2.comPort.MAV.GuidedMode.x != 0)
+                            if (FlightPlanner.comPort.MAV.cs.mode.ToLower() == "guided" && FlightPlanner.comPort.MAV.GuidedMode.x != 0)
                             {
-                                addpolygonmarker("Guided Mode", MainV2.comPort.MAV.GuidedMode.y,
-                                    MainV2.comPort.MAV.GuidedMode.x, (int)MainV2.comPort.MAV.GuidedMode.z, Color.Blue,
+                                addpolygonmarker("Guided Mode", FlightPlanner.comPort.MAV.GuidedMode.y,
+                                    FlightPlanner.comPort.MAV.GuidedMode.x, (int)FlightPlanner.comPort.MAV.GuidedMode.z, Color.Blue,
                                     routes);
                             }
 
                             // draw all icons for all connected mavs
-                            foreach (var port in MainV2.Comports.ToArray())
+                            foreach (var port in FlightPlanner.Comports.ToArray())
                             {
                                 // draw the mavs seen on this port
                                 foreach (var MAV in port.MAVlist)
@@ -1503,7 +1503,7 @@ namespace MissionPlanner.GCSViews
 
         private void setMapBearing()
         {
-            Invoke((MethodInvoker) delegate { gMapControl1.Bearing = (int)((MainV2.comPort.MAV.cs.yaw + 360) % 360); });
+            Invoke((MethodInvoker) delegate { gMapControl1.Bearing = (int)((FlightPlanner.comPort.MAV.cs.yaw + 360) % 360); });
         }
 
         // to prevent cross thread calls while in a draw and exception
@@ -1637,32 +1637,32 @@ namespace MissionPlanner.GCSViews
                 if (this.Visible)
                 {
                     //Console.Write("bindingSource1 ");
-                    MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSource1);
+                    FlightPlanner.comPort.MAV.cs.UpdateCurrentSettings(bindingSource1);
                     //Console.Write("bindingSourceHud ");
-                    MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceHud);
+                    FlightPlanner.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceHud);
                     //Console.WriteLine("DONE ");
 
                     if (tabControlactions.SelectedTab == tabStatus)
                     {
-                        MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceStatusTab);
+                        FlightPlanner.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceStatusTab);
                     }
                     else if (tabControlactions.SelectedTab == tabQuick)
                     {
-                        MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceQuickTab);
+                        FlightPlanner.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceQuickTab);
                     }
                     else if (tabControlactions.SelectedTab == tabGauges)
                     {
-                        MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceGaugesTab);
+                        FlightPlanner.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceGaugesTab);
                     }
                     else if (tabControlactions.SelectedTab == tabPagePreFlight)
                     {
-                        MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceGaugesTab);
+                        FlightPlanner.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceGaugesTab);
                     }
                 }
                 else
                 {
                     //Console.WriteLine("Null Binding");
-                    MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceHud);
+                    FlightPlanner.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceHud);
                 }
                 lastscreenupdate = DateTime.Now;
             }
@@ -1723,12 +1723,12 @@ namespace MissionPlanner.GCSViews
                     if (tracklog.Visible)
                         tracklog.Value =
                             (int)
-                                (MainV2.comPort.logplaybackfile.BaseStream.Position/
-                                 (double) MainV2.comPort.logplaybackfile.BaseStream.Length*100);
+                                (FlightPlanner.comPort.logplaybackfile.BaseStream.Position/
+                                 (double) FlightPlanner.comPort.logplaybackfile.BaseStream.Length*100);
                     if (lbl_logpercent.Visible)
                         lbl_logpercent.Text =
-                            (MainV2.comPort.logplaybackfile.BaseStream.Position/
-                             (double) MainV2.comPort.logplaybackfile.BaseStream.Length).ToString("0.00%");
+                            (FlightPlanner.comPort.logplaybackfile.BaseStream.Position/
+                             (double) FlightPlanner.comPort.logplaybackfile.BaseStream.Length).ToString("0.00%");
 
                     if (lbl_playbackspeed.Visible)
                         lbl_playbackspeed.Text = "x " + LogPlayBackSpeed;
@@ -1948,8 +1948,8 @@ namespace MissionPlanner.GCSViews
             if (route != null)
                 route.Points.Clear();
 
-            if (MainV2.comPort.MAV.camerapoints != null)
-                MainV2.comPort.MAV.camerapoints.Clear();
+            if (FlightPlanner.comPort.MAV.camerapoints != null)
+                FlightPlanner.comPort.MAV.camerapoints.Clear();
         }
 
         private void BUTactiondo_Click(object sender, EventArgs e)
@@ -1958,7 +1958,7 @@ namespace MissionPlanner.GCSViews
             {
                 if (CMB_action.Text == "Trigger Camera NOW")
                 {
-                    MainV2.comPort.setDigicamControl(true);
+                    FlightPlanner.comPort.setDigicamControl(true);
                     return;
                 }
             }
@@ -1982,7 +1982,7 @@ namespace MissionPlanner.GCSViews
                     // request gyro
                     if (CMB_action.Text == "PREFLIGHT_CALIBRATION")
                     {
-                        if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                        if (FlightPlanner.comPort.MAV.cs.firmware == FlightPlanner.Firmwares.ArduCopter2)
                             param1 = 1; // gyro
                         param3 = 1; // baro / airspeed
                     }
@@ -1991,7 +1991,7 @@ namespace MissionPlanner.GCSViews
                         param1 = 1; // reboot
                     }
 
-                    MainV2.comPort.doCommand((MAVLink.MAV_CMD) Enum.Parse(typeof (MAVLink.MAV_CMD), CMB_action.Text),
+                    FlightPlanner.comPort.doCommand((MAVLink.MAV_CMD) Enum.Parse(typeof (MAVLink.MAV_CMD), CMB_action.Text),
                         param1, 0, param3, 0, 0, 0, 0);
                 }
                 catch
@@ -2008,7 +2008,7 @@ namespace MissionPlanner.GCSViews
             {
                 ((Button) sender).Enabled = false;
 
-                MainV2.comPort.setWPCurrent(0); // set nav to
+                FlightPlanner.comPort.setWPCurrent(0); // set nav to
             }
             catch
             {
@@ -2082,17 +2082,17 @@ namespace MissionPlanner.GCSViews
 
         private void goHereToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!MainV2.comPort.BaseStream.IsOpen)
+            if (!FlightPlanner.comPort.BaseStream.IsOpen)
             {
                 CustomMessageBox.Show(Strings.PleaseConnect, Strings.ERROR);
                 return;
             }
 
-            if (MainV2.comPort.MAV.GuidedMode.z == 0)
+            if (FlightPlanner.comPort.MAV.GuidedMode.z == 0)
             {
                 flyToHereAltToolStripMenuItem_Click(null, null);
 
-                if (MainV2.comPort.MAV.GuidedMode.z == 0)
+                if (FlightPlanner.comPort.MAV.GuidedMode.z == 0)
                     return;
             }
 
@@ -2105,17 +2105,17 @@ namespace MissionPlanner.GCSViews
             Locationwp gotohere = new Locationwp();
 
             gotohere.id = (ushort) MAVLink.MAV_CMD.WAYPOINT;
-            gotohere.alt = MainV2.comPort.MAV.GuidedMode.z; // back to m
+            gotohere.alt = FlightPlanner.comPort.MAV.GuidedMode.z; // back to m
             gotohere.lat = (MouseDownStart.Lat);
             gotohere.lng = (MouseDownStart.Lng);
 
             try
             {
-                MainV2.comPort.setGuidedModeWP(gotohere);
+                FlightPlanner.comPort.setGuidedModeWP(gotohere);
             }
             catch (Exception ex)
             {
-                MainV2.comPort.giveComport = false;
+                FlightPlanner.comPort.giveComport = false;
                 CustomMessageBox.Show(Strings.CommandFailed + ex.Message, Strings.ERROR);
             }
         }
@@ -2168,7 +2168,7 @@ namespace MissionPlanner.GCSViews
                     marker.ToolTipMode = MarkerTooltipMode.Always;
                     marker.ToolTipText = "Dist to Home: " +
                                          ((gMapControl1.MapProvider.Projection.GetDistance(point,
-                                             MainV2.comPort.MAV.cs.HomeLocation.Point())*1000)*
+                                             FlightPlanner.comPort.MAV.cs.HomeLocation.Point())*1000)*
                                           CurrentState.multiplierdist).ToString("0");
 
                     routes.Markers.Add(marker);
@@ -2178,45 +2178,45 @@ namespace MissionPlanner.GCSViews
 
         private void FlightData_ParentChanged(object sender, EventArgs e)
         {
-            if (MainV2.cam != null)
+            if (FlightPlanner.cam != null)
             {
-                MainV2.cam.camimage += cam_camimage;
+                FlightPlanner.cam.camimage += cam_camimage;
             }
 
             // QUAD
-            if (MainV2.comPort.MAV.param.ContainsKey("WP_SPEED_MAX"))
+            if (FlightPlanner.comPort.MAV.param.ContainsKey("WP_SPEED_MAX"))
             {
                 try
                 {
-                    modifyandSetSpeed.Value = (decimal) ((float) MainV2.comPort.MAV.param["WP_SPEED_MAX"]/100.0);
+                    modifyandSetSpeed.Value = (decimal) ((float) FlightPlanner.comPort.MAV.param["WP_SPEED_MAX"]/100.0);
                 }
                 catch
                 {
                     modifyandSetSpeed.Enabled = false;
                 }
             } // plane with airspeed
-            else if (MainV2.comPort.MAV.param.ContainsKey("TRIM_ARSPD_CM") &&
-                     MainV2.comPort.MAV.param.ContainsKey("ARSPD_ENABLE")
-                     && MainV2.comPort.MAV.param.ContainsKey("ARSPD_USE") &&
-                     (float) MainV2.comPort.MAV.param["ARSPD_ENABLE"] == 1
-                     && (float) MainV2.comPort.MAV.param["ARSPD_USE"] == 1)
+            else if (FlightPlanner.comPort.MAV.param.ContainsKey("TRIM_ARSPD_CM") &&
+                     FlightPlanner.comPort.MAV.param.ContainsKey("ARSPD_ENABLE")
+                     && FlightPlanner.comPort.MAV.param.ContainsKey("ARSPD_USE") &&
+                     (float) FlightPlanner.comPort.MAV.param["ARSPD_ENABLE"] == 1
+                     && (float) FlightPlanner.comPort.MAV.param["ARSPD_USE"] == 1)
             {
                 try
                 {
-                    modifyandSetSpeed.Value = (decimal) ((float) MainV2.comPort.MAV.param["TRIM_ARSPD_CM"]/100.0);
+                    modifyandSetSpeed.Value = (decimal) ((float) FlightPlanner.comPort.MAV.param["TRIM_ARSPD_CM"]/100.0);
                 }
                 catch
                 {
                     modifyandSetSpeed.Enabled = false;
                 }
             } // plane without airspeed
-            else if (MainV2.comPort.MAV.param.ContainsKey("TRIM_THROTTLE") &&
-                     MainV2.comPort.MAV.param.ContainsKey("ARSPD_USE")
-                     && (float) MainV2.comPort.MAV.param["ARSPD_USE"] == 0)
+            else if (FlightPlanner.comPort.MAV.param.ContainsKey("TRIM_THROTTLE") &&
+                     FlightPlanner.comPort.MAV.param.ContainsKey("ARSPD_USE")
+                     && (float) FlightPlanner.comPort.MAV.param["ARSPD_USE"] == 0)
             {
                 try
                 {
-                    modifyandSetSpeed.Value = (decimal) (float) MainV2.comPort.MAV.param["TRIM_THROTTLE"];
+                    modifyandSetSpeed.Value = (decimal) (float) FlightPlanner.comPort.MAV.param["TRIM_THROTTLE"];
                 }
                 catch
                 {
@@ -2228,9 +2228,9 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                if (MainV2.comPort.MAV.param.ContainsKey("LOITER_RAD"))
+                if (FlightPlanner.comPort.MAV.param.ContainsKey("LOITER_RAD"))
                     modifyandSetLoiterRad.Value =
-                        (decimal) ((float) MainV2.comPort.MAV.param["LOITER_RAD"]*CurrentState.multiplierdist);
+                        (decimal) ((float) FlightPlanner.comPort.MAV.param["LOITER_RAD"]*CurrentState.multiplierdist);
             }
             catch
             {
@@ -2238,10 +2238,10 @@ namespace MissionPlanner.GCSViews
             }
             try
             {
-                if (MainV2.comPort.MAV.param.ContainsKey("WP_LOITER_RAD"))
+                if (FlightPlanner.comPort.MAV.param.ContainsKey("WP_LOITER_RAD"))
                 {
                     modifyandSetLoiterRad.Value =
-                        (decimal) ((float) MainV2.comPort.MAV.param["WP_LOITER_RAD"]*CurrentState.multiplierdist);
+                        (decimal) ((float) FlightPlanner.comPort.MAV.param["WP_LOITER_RAD"]*CurrentState.multiplierdist);
                 }
             }
             catch
@@ -2258,13 +2258,13 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_Homealt_Click(object sender, EventArgs e)
         {
-            if (MainV2.comPort.MAV.cs.altoffsethome != 0)
+            if (FlightPlanner.comPort.MAV.cs.altoffsethome != 0)
             {
-                MainV2.comPort.MAV.cs.altoffsethome = 0;
+                FlightPlanner.comPort.MAV.cs.altoffsethome = 0;
             }
             else
             {
-                MainV2.comPort.MAV.cs.altoffsethome = (float)(-MainV2.comPort.MAV.cs.HomeAlt/CurrentState.multiplierdist);
+                FlightPlanner.comPort.MAV.cs.altoffsethome = (float)(-FlightPlanner.comPort.MAV.cs.HomeAlt/CurrentState.multiplierdist);
             }
         }
 
@@ -2277,12 +2277,12 @@ namespace MissionPlanner.GCSViews
         {
             LBL_logfn.Text = "";
 
-            if (MainV2.comPort.logplaybackfile != null)
+            if (FlightPlanner.comPort.logplaybackfile != null)
             {
                 try
                 {
-                    MainV2.comPort.logplaybackfile.Close();
-                    MainV2.comPort.logplaybackfile = null;
+                    FlightPlanner.comPort.logplaybackfile.Close();
+                    FlightPlanner.comPort.logplaybackfile = null;
                 }
                 catch
                 {
@@ -2309,15 +2309,15 @@ namespace MissionPlanner.GCSViews
                 {
                     BUT_clear_track_Click(null, null);
 
-                    MainV2.comPort.logreadmode = true;
-                    MainV2.comPort.logplaybackfile = new BinaryReader(File.OpenRead(file));
-                    MainV2.comPort.lastlogread = DateTime.MinValue;
+                    FlightPlanner.comPort.logreadmode = true;
+                    FlightPlanner.comPort.logplaybackfile = new BinaryReader(File.OpenRead(file));
+                    FlightPlanner.comPort.lastlogread = DateTime.MinValue;
 
                     LBL_logfn.Text = Path.GetFileName(file);
 
                     log.Info("Open logfile " + file);
 
-                    MainV2.comPort.getHeartBeat();
+                    FlightPlanner.comPort.getHeartBeat();
 
                     tracklog.Value = 0;
                     tracklog.Minimum = 0;
@@ -2332,16 +2332,16 @@ namespace MissionPlanner.GCSViews
 
         public void BUT_playlog_Click(object sender, EventArgs e)
         {
-            if (MainV2.comPort.logreadmode)
+            if (FlightPlanner.comPort.logreadmode)
             {
-                MainV2.comPort.logreadmode = false;
+                FlightPlanner.comPort.logreadmode = false;
                 ZedGraphTimer.Stop();
                 playingLog = false;
             }
             else
             {
                 // BUT_clear_track_Click(sender, e);
-                MainV2.comPort.logreadmode = true;
+                FlightPlanner.comPort.logreadmode = true;
                 list1.Clear();
                 list2.Clear();
                 list3.Clear();
@@ -2367,12 +2367,12 @@ namespace MissionPlanner.GCSViews
             {
                 BUT_clear_track_Click(sender, e);
 
-                MainV2.comPort.lastlogread = DateTime.MinValue;
-                MainV2.comPort.MAV.cs.ResetInternals();
+                FlightPlanner.comPort.lastlogread = DateTime.MinValue;
+                FlightPlanner.comPort.MAV.cs.ResetInternals();
 
-                if (MainV2.comPort.logplaybackfile != null)
-                    MainV2.comPort.logplaybackfile.BaseStream.Position =
-                        (long) (MainV2.comPort.logplaybackfile.BaseStream.Length*(tracklog.Value/100.0));
+                if (FlightPlanner.comPort.logplaybackfile != null)
+                    FlightPlanner.comPort.logplaybackfile.BaseStream.Position =
+                        (long) (FlightPlanner.comPort.logplaybackfile.BaseStream.Length*(tracklog.Value/100.0));
 
                 updateLogPlayPosition();
             }
@@ -2446,14 +2446,14 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_setmode_Click(object sender, EventArgs e)
         {
-            if (MainV2.comPort.MAV.cs.failsafe)
+            if (FlightPlanner.comPort.MAV.cs.failsafe)
             {
                 if (CustomMessageBox.Show("You are in failsafe, are you sure?", "Failsafe",MessageBoxButtons.YesNo) != DialogResult.Yes)
                 {
                     return;
                 }
             }
-            MainV2.comPort.setMode(CMB_modes.Text);
+            FlightPlanner.comPort.setMode(CMB_modes.Text);
         }
 
         private void BUT_setwp_Click(object sender, EventArgs e)
@@ -2461,7 +2461,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 ((Button) sender).Enabled = false;
-                MainV2.comPort.setWPCurrent((ushort) CMB_setwp.SelectedIndex); // set nav to
+                FlightPlanner.comPort.setWPCurrent((ushort) CMB_setwp.SelectedIndex); // set nav to
             }
             catch
             {
@@ -2476,9 +2476,9 @@ namespace MissionPlanner.GCSViews
 
             CMB_setwp.Items.Add("0 (Home)");
 
-            if (MainV2.comPort.MAV.param["CMD_TOTAL"] != null)
+            if (FlightPlanner.comPort.MAV.param["CMD_TOTAL"] != null)
             {
-                int wps = int.Parse(MainV2.comPort.MAV.param["CMD_TOTAL"].ToString());
+                int wps = int.Parse(FlightPlanner.comPort.MAV.param["CMD_TOTAL"].ToString());
                 for (int z = 1; z <= wps; z++)
                 {
                     CMB_setwp.Items.Add(z.ToString());
@@ -2486,9 +2486,9 @@ namespace MissionPlanner.GCSViews
                 return;
             }
 
-            if (MainV2.comPort.MAV.param["WP_TOTAL"] != null)
+            if (FlightPlanner.comPort.MAV.param["WP_TOTAL"] != null)
             {
-                int wps = int.Parse(MainV2.comPort.MAV.param["WP_TOTAL"].ToString());
+                int wps = int.Parse(FlightPlanner.comPort.MAV.param["WP_TOTAL"].ToString());
                 for (int z = 1; z <= wps; z++)
                 {
                     CMB_setwp.Items.Add(z.ToString());
@@ -2496,9 +2496,9 @@ namespace MissionPlanner.GCSViews
                 return;
             }
 
-            if (MainV2.comPort.MAV.param["MIS_TOTAL"] != null)
+            if (FlightPlanner.comPort.MAV.param["MIS_TOTAL"] != null)
             {
-                int wps = int.Parse(MainV2.comPort.MAV.param["MIS_TOTAL"].ToString());
+                int wps = int.Parse(FlightPlanner.comPort.MAV.param["MIS_TOTAL"].ToString());
                 for (int z = 1; z <= wps; z++)
                 {
                     CMB_setwp.Items.Add(z.ToString());
@@ -2506,9 +2506,9 @@ namespace MissionPlanner.GCSViews
                 return;
             }
 
-            if (MainV2.comPort.MAV.wps.Count > 0)
+            if (FlightPlanner.comPort.MAV.wps.Count > 0)
             {
-                int wps = MainV2.comPort.MAV.wps.Count;
+                int wps = FlightPlanner.comPort.MAV.wps.Count;
                 for (int z = 1; z <= wps; z++)
                 {
                     CMB_setwp.Items.Add(z.ToString());
@@ -2522,7 +2522,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 ((Button) sender).Enabled = false;
-                MainV2.comPort.setMode("Auto");
+                FlightPlanner.comPort.setMode("Auto");
             }
             catch
             {
@@ -2536,7 +2536,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 ((Button) sender).Enabled = false;
-                MainV2.comPort.setMode("RTL");
+                FlightPlanner.comPort.setMode("RTL");
             }
             catch
             {
@@ -2550,12 +2550,12 @@ namespace MissionPlanner.GCSViews
             try
             {
                 ((Button) sender).Enabled = false;
-                if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduPlane ||
-                    MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.Ateryx ||
-                    MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduRover)
-                    MainV2.comPort.setMode("Loiter");
-                if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
-                    MainV2.comPort.setMode("Loiter");
+                if (FlightPlanner.comPort.MAV.cs.firmware == FlightPlanner.Firmwares.ArduPlane ||
+                    FlightPlanner.comPort.MAV.cs.firmware == FlightPlanner.Firmwares.Ateryx ||
+                    FlightPlanner.comPort.MAV.cs.firmware == FlightPlanner.Firmwares.ArduRover)
+                    FlightPlanner.comPort.setMode("Loiter");
+                if (FlightPlanner.comPort.MAV.cs.firmware == FlightPlanner.Firmwares.ArduCopter2)
+                    FlightPlanner.comPort.setMode("Loiter");
             }
             catch
             {
@@ -2580,7 +2580,7 @@ namespace MissionPlanner.GCSViews
 
         private void CMB_modes_Click(object sender, EventArgs e)
         {
-            CMB_modes.DataSource = Common.getModesList(MainV2.comPort.MAV.cs);
+            CMB_modes.DataSource = Common.getModesList(FlightPlanner.comPort.MAV.cs);
             CMB_modes.ValueMember = "Key";
             CMB_modes.DisplayMember = "Value";
         }
@@ -2765,7 +2765,7 @@ namespace MissionPlanner.GCSViews
 
             y += 20;
 
-            object thisBoxed = MainV2.comPort.MAV.cs;
+            object thisBoxed = FlightPlanner.comPort.MAV.cs;
             Type test = thisBoxed.GetType();
 
             int max_length = 0;
@@ -2899,7 +2899,7 @@ namespace MissionPlanner.GCSViews
             };
             ThemeManager.ApplyThemeTo(selectform);
 
-            object thisBoxed = MainV2.comPort.MAV.cs;
+            object thisBoxed = FlightPlanner.comPort.MAV.cs;
             Type test = thisBoxed.GetType();
 
             int max_length = 0;
@@ -2954,7 +2954,7 @@ namespace MissionPlanner.GCSViews
 
         void addHudUserItem(ref HUD.Custom cust, CheckBox sender)
         {
-            setupPropertyInfo(ref cust.Item, (sender).Name, MainV2.comPort.MAV.cs);
+            setupPropertyInfo(ref cust.Item, (sender).Name, FlightPlanner.comPort.MAV.cs);
 
             hud1.CustomItems[(sender).Name] = cust;
 
@@ -2970,7 +2970,7 @@ namespace MissionPlanner.GCSViews
                 checkbox.BackColor = Color.Green;
 
                 HUD.Custom cust = new HUD.Custom();
-                HUD.Custom.src = MainV2.comPort.MAV.cs;
+                HUD.Custom.src = FlightPlanner.comPort.MAV.cs;
 
                 string prefix = checkbox.Name + ": ";
                 if (Settings.Instance["hud1_useritem_" + checkbox.Name] != null)
@@ -3020,7 +3020,7 @@ namespace MissionPlanner.GCSViews
 
                 if (list1item == null)
                 {
-                    if (setupPropertyInfo(ref list1item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list1item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list1.Clear();
                         list1curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list1, Color.Red, SymbolType.None);
@@ -3028,7 +3028,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list2item == null)
                 {
-                    if (setupPropertyInfo(ref list2item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list2item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list2.Clear();
                         list2curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list2, Color.Blue, SymbolType.None);
@@ -3036,7 +3036,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list3item == null)
                 {
-                    if (setupPropertyInfo(ref list3item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list3item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list3.Clear();
                         list3curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list3, Color.Green,
@@ -3045,7 +3045,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list4item == null)
                 {
-                    if (setupPropertyInfo(ref list4item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list4item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list4.Clear();
                         list4curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list4, Color.Orange,
@@ -3054,7 +3054,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list5item == null)
                 {
-                    if (setupPropertyInfo(ref list5item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list5item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list5.Clear();
                         list5curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list5, Color.Yellow,
@@ -3063,7 +3063,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list6item == null)
                 {
-                    if (setupPropertyInfo(ref list6item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list6item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list6.Clear();
                         list6curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list6, Color.Magenta,
@@ -3072,7 +3072,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list7item == null)
                 {
-                    if (setupPropertyInfo(ref list7item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list7item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list7.Clear();
                         list7curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list7, Color.Purple,
@@ -3081,7 +3081,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list8item == null)
                 {
-                    if (setupPropertyInfo(ref list8item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list8item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list8.Clear();
                         list8curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list8, Color.LimeGreen,
@@ -3090,7 +3090,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list9item == null)
                 {
-                    if (setupPropertyInfo(ref list9item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list9item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list9.Clear();
                         list9curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list9, Color.Cyan, SymbolType.None);
@@ -3098,7 +3098,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (list10item == null)
                 {
-                    if (setupPropertyInfo(ref list10item, ((CheckBox) sender).Name, MainV2.comPort.MAV.cs))
+                    if (setupPropertyInfo(ref list10item, ((CheckBox) sender).Name, FlightPlanner.comPort.MAV.cs))
                     {
                         list10.Clear();
                         list10curve = zg1.GraphPane.AddCurve(((CheckBox) sender).Name, list10, Color.Violet,
@@ -3185,7 +3185,7 @@ namespace MissionPlanner.GCSViews
 
         private void pointCameraHereToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!MainV2.comPort.BaseStream.IsOpen)
+            if (!FlightPlanner.comPort.BaseStream.IsOpen)
             {
                 CustomMessageBox.Show("Please Connect First");
                 return;
@@ -3212,7 +3212,7 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                MainV2.comPort.doCommand(MAVLink.MAV_CMD.DO_SET_ROI, 0, 0, 0, 0, (float) MouseDownStart.Lat,
+                FlightPlanner.comPort.doCommand(MAVLink.MAV_CMD.DO_SET_ROI, 0, 0, 0, 0, (float) MouseDownStart.Lat,
                     (float) MouseDownStart.Lng, intalt/CurrentState.multiplierdist);
             }
             catch
@@ -3281,7 +3281,7 @@ namespace MissionPlanner.GCSViews
             };
             ThemeManager.ApplyThemeTo(selectform);
 
-            object thisBoxed = MainV2.comPort.MAV.cs;
+            object thisBoxed = FlightPlanner.comPort.MAV.cs;
             Type test = thisBoxed.GetType();
 
             int max_length = 0;
@@ -3348,7 +3348,7 @@ namespace MissionPlanner.GCSViews
                 string desc = checkbox.Name;
                 ((QuickView) checkbox.Tag).Tag = desc;
 
-                desc = MainV2.comPort.MAV.cs.GetNameandUnit(desc);
+                desc = FlightPlanner.comPort.MAV.cs.GetNameandUnit(desc);
 
                 ((QuickView) checkbox.Tag).desc = desc;
 
@@ -3366,7 +3366,7 @@ namespace MissionPlanner.GCSViews
         {
             string alt = "100";
 
-            if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+            if (FlightPlanner.comPort.MAV.cs.firmware == FlightPlanner.Firmwares.ArduCopter2)
             {
                 alt = (10*CurrentState.multiplierdist).ToString("0");
             }
@@ -3390,15 +3390,15 @@ namespace MissionPlanner.GCSViews
                 return;
             }
 
-            MainV2.comPort.MAV.GuidedMode.z = intalt/CurrentState.multiplierdist;
+            FlightPlanner.comPort.MAV.GuidedMode.z = intalt/CurrentState.multiplierdist;
 
-            if (MainV2.comPort.MAV.cs.mode == "Guided")
+            if (FlightPlanner.comPort.MAV.cs.mode == "Guided")
             {
-                MainV2.comPort.setGuidedModeWP(new Locationwp
+                FlightPlanner.comPort.setGuidedModeWP(new Locationwp
                 {
-                    alt = MainV2.comPort.MAV.GuidedMode.z,
-                    lat = MainV2.comPort.MAV.GuidedMode.x,
-                    lng = MainV2.comPort.MAV.GuidedMode.y
+                    alt = FlightPlanner.comPort.MAV.GuidedMode.z,
+                    lat = FlightPlanner.comPort.MAV.GuidedMode.x,
+                    lng = FlightPlanner.comPort.MAV.GuidedMode.y
                 });
             }
         }
@@ -3410,7 +3410,7 @@ namespace MissionPlanner.GCSViews
                 ctl.Visible = false;
             }
 
-            foreach (MainSwitcher.Screen sc in MainV2.View.screens)
+            foreach (MainSwitcher.Screen sc in FlightPlanner.View.screens)
             {
                 if (sc.Name == "FlightPlanner")
                 {
@@ -3442,7 +3442,7 @@ namespace MissionPlanner.GCSViews
 
         void but_Click(object sender, EventArgs e)
         {
-            foreach (MainSwitcher.Screen sc in MainV2.View.screens)
+            foreach (MainSwitcher.Screen sc in FlightPlanner.View.screens)
             {
                 if (sc.Name == "FlightPlanner")
                 {
@@ -3486,18 +3486,18 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_ARM_Click(object sender, EventArgs e)
         {
-            if (!MainV2.comPort.BaseStream.IsOpen)
+            if (!FlightPlanner.comPort.BaseStream.IsOpen)
                 return;
 
             // arm the MAV
             try
             {
-                if (MainV2.comPort.MAV.cs.armed)
+                if (FlightPlanner.comPort.MAV.cs.armed)
                     if (CustomMessageBox.Show("Are you sure you want to Disarm?", "Disarm?", MessageBoxButtons.YesNo) !=
                         DialogResult.Yes)
                         return;
 
-                bool ans = MainV2.comPort.doARM(!MainV2.comPort.MAV.cs.armed);
+                bool ans = FlightPlanner.comPort.doARM(!FlightPlanner.comPort.MAV.cs.armed);
                 if (ans == false)
                     CustomMessageBox.Show(Strings.ErrorRejectedByMAV, Strings.ERROR);
             }
@@ -3512,13 +3512,13 @@ namespace MissionPlanner.GCSViews
             int newalt = (int) modifyandSetAlt.Value;
             try
             {
-                MainV2.comPort.setNewWPAlt(new Locationwp {alt = newalt/CurrentState.multiplierdist});
+                FlightPlanner.comPort.setNewWPAlt(new Locationwp {alt = newalt/CurrentState.multiplierdist});
             }
             catch
             {
                 CustomMessageBox.Show(Strings.ErrorCommunicating, Strings.ERROR);
             }
-            //MainV2.comPort.setNextWPTargetAlt((ushort)MainV2.comPort.MAV.cs.wpno, newalt);
+            //FlightPlanner.comPort.setNextWPTargetAlt((ushort)FlightPlanner.comPort.MAV.cs.wpno, newalt);
         }
 
         private void gMapControl1_MouseLeave(object sender, EventArgs e)
@@ -3539,39 +3539,39 @@ namespace MissionPlanner.GCSViews
         private void modifyandSetSpeed_Click(object sender, EventArgs e)
         {
             // QUAD
-            if (MainV2.comPort.MAV.param.ContainsKey("WP_SPEED_MAX"))
+            if (FlightPlanner.comPort.MAV.param.ContainsKey("WP_SPEED_MAX"))
             {
                 try
                 {
-                    MainV2.comPort.setParam("WP_SPEED_MAX", ((float) modifyandSetSpeed.Value*100.0f));
+                    FlightPlanner.comPort.setParam("WP_SPEED_MAX", ((float) modifyandSetSpeed.Value*100.0f));
                 }
                 catch
                 {
                     CustomMessageBox.Show(String.Format(Strings.ErrorSetValueFailed, "WP_SPEED_MAX"), Strings.ERROR);
                 }
             } // plane with airspeed
-            else if (MainV2.comPort.MAV.param.ContainsKey("TRIM_ARSPD_CM") &&
-                     MainV2.comPort.MAV.param.ContainsKey("ARSPD_ENABLE")
-                     && MainV2.comPort.MAV.param.ContainsKey("ARSPD_USE") &&
-                     (float) MainV2.comPort.MAV.param["ARSPD_ENABLE"] == 1
-                     && (float) MainV2.comPort.MAV.param["ARSPD_USE"] == 1)
+            else if (FlightPlanner.comPort.MAV.param.ContainsKey("TRIM_ARSPD_CM") &&
+                     FlightPlanner.comPort.MAV.param.ContainsKey("ARSPD_ENABLE")
+                     && FlightPlanner.comPort.MAV.param.ContainsKey("ARSPD_USE") &&
+                     (float) FlightPlanner.comPort.MAV.param["ARSPD_ENABLE"] == 1
+                     && (float) FlightPlanner.comPort.MAV.param["ARSPD_USE"] == 1)
             {
                 try
                 {
-                    MainV2.comPort.setParam("TRIM_ARSPD_CM", ((float) modifyandSetSpeed.Value*100.0f));
+                    FlightPlanner.comPort.setParam("TRIM_ARSPD_CM", ((float) modifyandSetSpeed.Value*100.0f));
                 }
                 catch
                 {
                     CustomMessageBox.Show(String.Format(Strings.ErrorSetValueFailed, "TRIM_ARSPD_CM"), Strings.ERROR);
                 }
             } // plane without airspeed
-            else if (MainV2.comPort.MAV.param.ContainsKey("TRIM_THROTTLE") &&
-                     MainV2.comPort.MAV.param.ContainsKey("ARSPD_USE")
-                     && (float) MainV2.comPort.MAV.param["ARSPD_USE"] == 0)
+            else if (FlightPlanner.comPort.MAV.param.ContainsKey("TRIM_THROTTLE") &&
+                     FlightPlanner.comPort.MAV.param.ContainsKey("ARSPD_USE")
+                     && (float) FlightPlanner.comPort.MAV.param["ARSPD_USE"] == 0)
             {
                 try
                 {
-                    MainV2.comPort.setParam("TRIM_THROTTLE", (float) modifyandSetSpeed.Value);
+                    FlightPlanner.comPort.setParam("TRIM_THROTTLE", (float) modifyandSetSpeed.Value);
                 }
                 catch
                 {
@@ -3589,7 +3589,7 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                MainV2.comPort.setDigicamControl(true);
+                FlightPlanner.comPort.setDigicamControl(true);
             }
             catch
             {
@@ -3743,11 +3743,11 @@ namespace MissionPlanner.GCSViews
 
         private void setHomeHereToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MainV2.comPort.BaseStream.IsOpen)
+            if (FlightPlanner.comPort.BaseStream.IsOpen)
             {
                 try
                 {
-                    MainV2.comPort.doCommand(MAVLink.MAV_CMD.DO_SET_HOME, 0, 0, 0, 0, (float) MouseDownStart.Lat,
+                    FlightPlanner.comPort.doCommand(MAVLink.MAV_CMD.DO_SET_HOME, 0, 0, 0, 0, (float) MouseDownStart.Lat,
                         (float) MouseDownStart.Lng, (float) srtm.getAltitude(MouseDownStart.Lat, MouseDownStart.Lng).alt);
                 }
                 catch
@@ -3766,14 +3766,14 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                if (MainV2.comPort.MAV.param.ContainsKey("MNT_MODE"))
+                if (FlightPlanner.comPort.MAV.param.ContainsKey("MNT_MODE"))
                 {
-                    MainV2.comPort.setParam("MNT_MODE",(int) CMB_mountmode.SelectedValue);
+                    FlightPlanner.comPort.setParam("MNT_MODE",(int) CMB_mountmode.SelectedValue);
                 }
                 else
                 {
                     // copter 3.3 acks with an error, but is ok
-                    MainV2.comPort.doCommand(MAVLink.MAV_CMD.DO_MOUNT_CONTROL, 0, 0, 0, 0, 0, 0,
+                    FlightPlanner.comPort.doCommand(MAVLink.MAV_CMD.DO_MOUNT_CONTROL, 0, 0, 0, 0, 0, 0,
                         (int) CMB_mountmode.SelectedValue);
                 }
             }
@@ -3883,13 +3883,13 @@ namespace MissionPlanner.GCSViews
 
         private void Messagetabtimer_Tick(object sender, EventArgs e)
         {
-            var newmsgcount = MainV2.comPort.MAV.cs.messages.Count;
+            var newmsgcount = FlightPlanner.comPort.MAV.cs.messages.Count;
             if (messagecount != newmsgcount)
             {
                 try
                 {
                     StringBuilder message = new StringBuilder();
-                    MainV2.comPort.MAV.cs.messages.ForEach(x => { message.Insert(0, x + "\r\n"); });
+                    FlightPlanner.comPort.MAV.cs.messages.ForEach(x => { message.Insert(0, x + "\r\n"); });
                     txt_messagebox.Text = message.ToString();
 
                     messagecount = newmsgcount;
@@ -3980,15 +3980,15 @@ namespace MissionPlanner.GCSViews
 
         private void takeOffToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MainV2.comPort.BaseStream.IsOpen)
+            if (FlightPlanner.comPort.BaseStream.IsOpen)
             {
                 flyToHereAltToolStripMenuItem_Click(null, null);
 
-                MainV2.comPort.setMode("GUIDED");
+                FlightPlanner.comPort.setMode("GUIDED");
 
                 try
                 {
-                    MainV2.comPort.doCommand(MAVLink.MAV_CMD.TAKEOFF, 0, 0, 0, 0, 0, 0, MainV2.comPort.MAV.GuidedMode.z);
+                    FlightPlanner.comPort.doCommand(MAVLink.MAV_CMD.TAKEOFF, 0, 0, 0, 0, 0, 0, FlightPlanner.comPort.MAV.GuidedMode.z);
                 }
                 catch
                 {
@@ -4013,9 +4013,9 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                if (MainV2.comPort.BaseStream.IsOpen)
+                if (FlightPlanner.comPort.BaseStream.IsOpen)
                 {
-                    string lastwp = MainV2.comPort.MAV.cs.lastautowp.ToString();
+                    string lastwp = FlightPlanner.comPort.MAV.cs.lastautowp.ToString();
                     if (lastwp == "-1")
                         lastwp = "1";
 
@@ -4026,16 +4026,16 @@ namespace MissionPlanner.GCSViews
 
                         // scan and check wp's we are skipping
                         // get our target wp
-                        var lastwpdata = MainV2.comPort.getWP((ushort) lastwpno);
+                        var lastwpdata = FlightPlanner.comPort.getWP((ushort) lastwpno);
 
                         // get all
                         List<Locationwp> cmds = new List<Locationwp>();
 
-                        var wpcount = MainV2.comPort.getWPCount();
+                        var wpcount = FlightPlanner.comPort.getWPCount();
 
                         for (ushort a = 0; a < wpcount; a++)
                         {
-                            var wpdata = MainV2.comPort.getWP(a);
+                            var wpdata = FlightPlanner.comPort.getWP(a);
 
                             if (a < lastwpno && a != 0) // allow home
                             {
@@ -4052,12 +4052,12 @@ namespace MissionPlanner.GCSViews
 
                         ushort wpno = 0;
                         // upload from wp 0 to end
-                        MainV2.comPort.setWPTotal((ushort) (cmds.Count));
+                        FlightPlanner.comPort.setWPTotal((ushort) (cmds.Count));
 
                         // add our do commands
                         foreach (var loc in cmds)
                         {
-                            MAVLink.MAV_MISSION_RESULT ans = MainV2.comPort.setWP(loc, wpno,
+                            MAVLink.MAV_MISSION_RESULT ans = FlightPlanner.comPort.setWP(loc, wpno,
                                 (MAVLink.MAV_FRAME) (loc.options));
                             if (ans != MAVLink.MAV_MISSION_RESULT.MAV_MISSION_ACCEPTED)
                             {
@@ -4069,18 +4069,18 @@ namespace MissionPlanner.GCSViews
                             wpno++;
                         }
 
-                        MainV2.comPort.setWPACK();
+                        FlightPlanner.comPort.setWPACK();
 
                         FlightPlanner.instance.BUT_read_Click(this, null);
 
                         // set index back to 1
-                        MainV2.comPort.setWPCurrent(1);
+                        FlightPlanner.comPort.setWPCurrent(1);
 
-                        if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                        if (FlightPlanner.comPort.MAV.cs.firmware == FlightPlanner.Firmwares.ArduCopter2)
                         {
-                            while (MainV2.comPort.MAV.cs.mode.ToLower() != "Guided".ToLower())
+                            while (FlightPlanner.comPort.MAV.cs.mode.ToLower() != "Guided".ToLower())
                             {
-                                MainV2.comPort.setMode("GUIDED");
+                                FlightPlanner.comPort.setMode("GUIDED");
                                 Thread.Sleep(1000);
                                 Application.DoEvents();
                                 timeout++;
@@ -4093,9 +4093,9 @@ namespace MissionPlanner.GCSViews
                             }
 
                             timeout = 0;
-                            while (!MainV2.comPort.MAV.cs.armed)
+                            while (!FlightPlanner.comPort.MAV.cs.armed)
                             {
-                                MainV2.comPort.doARM(true);
+                                FlightPlanner.comPort.doARM(true);
                                 Thread.Sleep(1000);
                                 Application.DoEvents();
                                 timeout++;
@@ -4108,9 +4108,9 @@ namespace MissionPlanner.GCSViews
                             }
 
                             timeout = 0;
-                            while (MainV2.comPort.MAV.cs.alt < (lastwpdata.alt - 2))
+                            while (FlightPlanner.comPort.MAV.cs.alt < (lastwpdata.alt - 2))
                             {
-                                MainV2.comPort.doCommand(MAVLink.MAV_CMD.TAKEOFF, 0, 0, 0, 0, 0, 0, lastwpdata.alt);
+                                FlightPlanner.comPort.doCommand(MAVLink.MAV_CMD.TAKEOFF, 0, 0, 0, 0, 0, 0, lastwpdata.alt);
                                 Thread.Sleep(1000);
                                 Application.DoEvents();
                                 timeout++;
@@ -4124,9 +4124,9 @@ namespace MissionPlanner.GCSViews
                         }
 
                         timeout = 0;
-                        while (MainV2.comPort.MAV.cs.mode.ToLower() != "AUTO".ToLower())
+                        while (FlightPlanner.comPort.MAV.cs.mode.ToLower() != "AUTO".ToLower())
                         {
-                            MainV2.comPort.setMode("AUTO");
+                            FlightPlanner.comPort.setMode("AUTO");
                             Thread.Sleep(1000);
                             Application.DoEvents();
                             timeout++;
@@ -4188,9 +4188,9 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_abortland_Click(object sender, EventArgs e)
         {
-            if (!MainV2.comPort.BaseStream.IsOpen)
+            if (!FlightPlanner.comPort.BaseStream.IsOpen)
                 return;
-            MainV2.comPort.doAbortLand();
+            FlightPlanner.comPort.doAbortLand();
         }
 
         GMapMarker center = new GMarkerGoogle(new PointLatLng(0.0, 0.0), GMarkerGoogleType.none);
@@ -4222,11 +4222,11 @@ namespace MissionPlanner.GCSViews
 
         private void but_disablejoystick_Click(object sender, EventArgs e)
         {
-            if (MainV2.joystick != null && MainV2.joystick.enabled)
+            if (FlightPlanner.joystick != null && FlightPlanner.joystick.enabled)
             {
-                MainV2.joystick.enabled = false;
+                FlightPlanner.joystick.enabled = false;
 
-                MainV2.joystick.clearRCOverride();
+                FlightPlanner.joystick.clearRCOverride();
 
                 but_disablejoystick.Visible = false;
             }
@@ -4234,16 +4234,16 @@ namespace MissionPlanner.GCSViews
 
         private void startCameraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MainV2.MONO)
+            if (FlightPlanner.MONO)
                 return;
 
             try
             {
-                MainV2.cam = new Capture(Settings.Instance.GetInt32("video_device"), new AMMediaType());
+                FlightPlanner.cam = new Capture(Settings.Instance.GetInt32("video_device"), new AMMediaType());
 
-                MainV2.cam.Start();
+                FlightPlanner.cam.Start();
 
-                MainV2.cam.camimage += new CamImage(cam_camimage);
+                FlightPlanner.cam.camimage += new CamImage(cam_camimage);
             }
             catch (Exception ex)
             {
@@ -4357,7 +4357,7 @@ namespace MissionPlanner.GCSViews
                 var lng = float.Parse(split[1], CultureInfo.InvariantCulture);
                 var alt = float.Parse(split[2], CultureInfo.InvariantCulture);
 
-                MainV2.comPort.doCommand(MAVLink.MAV_CMD.DO_SET_ROI, 0, 0, 0, 0, lat, lng,
+                FlightPlanner.comPort.doCommand(MAVLink.MAV_CMD.DO_SET_ROI, 0, 0, 0, 0, lat, lng,
                     alt/CurrentState.multiplierdist);
             } 
             else if (split.Length == 2)
@@ -4366,7 +4366,7 @@ namespace MissionPlanner.GCSViews
                 var lng = float.Parse(split[1], CultureInfo.InvariantCulture);
                 var alt = srtm.getAltitude(MouseDownStart.Lat, MouseDownStart.Lng).alt;
 
-                MainV2.comPort.doCommand(MAVLink.MAV_CMD.DO_SET_ROI, 0, 0, 0, 0, lat, lng, (float) alt);
+                FlightPlanner.comPort.doCommand(MAVLink.MAV_CMD.DO_SET_ROI, 0, 0, 0, 0, lat, lng, (float) alt);
             }
             else
             {
@@ -4380,7 +4380,7 @@ namespace MissionPlanner.GCSViews
             
             try
             {
-                MainV2.comPort.setParam(new[] { "LOITER_RAD", "WP_LOITER_RAD" },newrad / CurrentState.multiplierdist);
+                FlightPlanner.comPort.setParam(new[] { "LOITER_RAD", "WP_LOITER_RAD" },newrad / CurrentState.multiplierdist);
             }
             catch
             {
