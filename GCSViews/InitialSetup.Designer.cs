@@ -33,7 +33,7 @@
 
             this.backstageView = new MissionPlanner.Controls.BackstageView.BackstageView();
             this.SuspendLayout();
-          
+
             // 
             // backstageView
             // 
