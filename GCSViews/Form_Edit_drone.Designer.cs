@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Edit_drone));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_droneName = new System.Windows.Forms.TextBox();
+            this.textBox_droneID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.but_exit = new System.Windows.Forms.Button();
+            this.but_cancel = new System.Windows.Forms.Button();
             this.BUT_save = new System.Windows.Forms.Button();
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -57,11 +57,11 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.textBox2);
-            this.panel_Main_farm.Controls.Add(this.textBox1);
+            this.panel_Main_farm.Controls.Add(this.textBox_droneName);
+            this.panel_Main_farm.Controls.Add(this.textBox_droneID);
             this.panel_Main_farm.Controls.Add(this.label2);
             this.panel_Main_farm.Controls.Add(this.label1);
-            this.panel_Main_farm.Controls.Add(this.but_exit);
+            this.panel_Main_farm.Controls.Add(this.but_cancel);
             this.panel_Main_farm.Controls.Add(this.BUT_save);
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
             this.panel_Main_farm.Controls.Add(this.panel3);
@@ -73,22 +73,22 @@
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
             // 
-            // textBox2
+            // textBox_droneName
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 30);
-            this.textBox2.TabIndex = 14;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox_droneName.Location = new System.Drawing.Point(176, 137);
+            this.textBox_droneName.Name = "textBox_droneName";
+            this.textBox_droneName.Size = new System.Drawing.Size(200, 30);
+            this.textBox_droneName.TabIndex = 14;
+            this.textBox_droneName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // textBox_droneID
             // 
-            this.textBox1.HideSelection = false;
-            this.textBox1.Location = new System.Drawing.Point(176, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 30);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_droneID.HideSelection = false;
+            this.textBox_droneID.Location = new System.Drawing.Point(176, 97);
+            this.textBox_droneID.Name = "textBox_droneID";
+            this.textBox_droneID.Size = new System.Drawing.Size(200, 30);
+            this.textBox_droneID.TabIndex = 14;
+            this.textBox_droneID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -110,22 +110,22 @@
             this.label1.Text = "รหัสโดรน";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // but_exit
+            // but_cancel
             // 
-            this.but_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.but_exit.FlatAppearance.BorderSize = 0;
-            this.but_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_exit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_exit.ForeColor = System.Drawing.Color.White;
-            this.but_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_exit.Location = new System.Drawing.Point(255, 200);
-            this.but_exit.Name = "but_exit";
-            this.but_exit.Size = new System.Drawing.Size(130, 40);
-            this.but_exit.TabIndex = 6;
-            this.but_exit.Text = "ยกเลิก";
-            this.but_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.but_exit.UseVisualStyleBackColor = false;
-            this.but_exit.Click += new System.EventHandler(this.but_exit_Click);
+            this.but_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.but_cancel.FlatAppearance.BorderSize = 0;
+            this.but_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.but_cancel.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_cancel.ForeColor = System.Drawing.Color.White;
+            this.but_cancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.but_cancel.Location = new System.Drawing.Point(255, 200);
+            this.but_cancel.Name = "but_cancel";
+            this.but_cancel.Size = new System.Drawing.Size(130, 40);
+            this.but_cancel.TabIndex = 6;
+            this.but_cancel.Text = "ยกเลิก";
+            this.but_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.but_cancel.UseVisualStyleBackColor = false;
+            this.but_cancel.Click += new System.EventHandler(this.but_exit_Click);
             // 
             // BUT_save
             // 
@@ -204,11 +204,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_Main_farm;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_droneName;
+        private System.Windows.Forms.TextBox textBox_droneID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button but_exit;
+        private System.Windows.Forms.Button but_cancel;
         private System.Windows.Forms.Button BUT_save;
         private Controls.LineSeparator lineSeparator2;
         private System.Windows.Forms.Panel panel3;
