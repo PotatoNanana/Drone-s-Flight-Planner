@@ -1189,13 +1189,15 @@ namespace MissionPlanner
         {
             if (Settings.Instance.GetBoolean("password_protect") == false)
             {
-                MyView.ShowScreen("SWConfig");
+                //MyView.ShowScreen("SWConfig");
+                MyView.ShowScreen("Menu_setup");
             }
             else
             {
                 if (Password.VerifyPassword())
                 {
-                    MyView.ShowScreen("SWConfig");
+                    //MyView.ShowScreen("SWConfig");
+                    MyView.ShowScreen("Menu_setup");
                 }
             }
         }
@@ -1249,8 +1251,10 @@ namespace MissionPlanner
             {
                 if (MyView.current.Name == "HWConfig")
                     MyView.ShowScreen("HWConfig");
-                if (MyView.current.Name == "SWConfig")
-                    MyView.ShowScreen("SWConfig");
+                //if (MyView.current.Name == "SWConfig")
+                //    MyView.ShowScreen("SWConfig");
+                if (MyView.current.Name == "Menu_setup")
+                    MyView.ShowScreen("Menu_setup");
             }
 
             try
@@ -1507,8 +1511,10 @@ namespace MissionPlanner
                 {
                     if (MyView.current.Name == "HWConfig")
                         MyView.ShowScreen("HWConfig");
-                    if (MyView.current.Name == "SWConfig")
-                        MyView.ShowScreen("SWConfig");
+                    //if (MyView.current.Name == "SWConfig")
+                    //    MyView.ShowScreen("SWConfig");
+                    if (MyView.current.Name == "Menu_setup")
+                        MyView.ShowScreen("Menu_setup");
                 }
 
                 // load wps on connect option.
@@ -2555,8 +2561,10 @@ namespace MissionPlanner
                                             {
                                                 if (MyView.current.Name == "HWConfig")
                                                     MyView.ShowScreen("HWConfig");
-                                                if (MyView.current.Name == "SWConfig")
-                                                    MyView.ShowScreen("SWConfig");
+                                                //if (MyView.current.Name == "SWConfig")
+                                                //    MyView.ShowScreen("SWConfig");
+                                                if (MyView.current.Name == "Menu_setup")
+                                                    MyView.ShowScreen("Menu_setup");
                                             });
                                         }
                                     }
@@ -2669,7 +2677,7 @@ namespace MissionPlanner
             MyView.AddScreen(new MainSwitcher.Screen("SWConfig", typeof(GCSViews.SoftwareConfig), false));
             MyView.AddScreen(new MainSwitcher.Screen("Simulation", Simulation, true));
             MyView.AddScreen(new MainSwitcher.Screen("Terminal", typeof(GCSViews.Terminal), false));
-            MyView.AddScreen(new MainSwitcher.Screen("Help", typeof(GCSViews.Help), false));
+            MyView.AddScreen(new MainSwitcher.Screen("Menu_setup", typeof(GCSViews.Menu_setup), false));
 
             /// Added
             MyView.AddScreen(new MainSwitcher.Screen("UserLogin", typeof(GCSViews.UserLogin), false));
@@ -3603,20 +3611,7 @@ namespace MissionPlanner
           
         private void MainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            //foreach (ToolStripItem item in MainMenu.Items)
-            //{
-            //    if (e.ClickedItem == item)
-            //    {
-            //        item.BackColor = ThemeManager.ControlBGColor;
-            //    }
-            //    else
-            //    {
-            //        item.BackColor = Color.Transparent;
-            //        item.BackgroundImage = displayicons.bg; //.BackColor = Color.Black;
-            //    }
-            //}
-            //MainMenu.BackColor = Color.Black;
-            //MainMenu.BackgroundImage = MissionPlanner.Properties.Resources.bgdark;
+
         }
 
         private void fullScreenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3708,7 +3703,7 @@ namespace MissionPlanner
         {
             SidePanel.Width = but_setup.Width;
             SidePanel.Left = but_setup.Left;
-            MyView.ShowScreen("SWConfig");
+            MyView.ShowScreen("Menu_setup");
         }
         
         private void MainV3_Load(object sender, EventArgs e)

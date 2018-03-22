@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 35</value>
+    <value>17, 38</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 75</value>
@@ -148,7 +148,7 @@
     <value>4</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Century Gothic, 14.25pt</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -175,34 +175,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 23</value>
-  </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>644, 5</value>
-  </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="imagebox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 35</value>
+    <value>98, 38</value>
   </data>
   <data name="imagebox.Size" type="System.Drawing.Size, System.Drawing">
     <value>542, 337</value>
@@ -223,13 +199,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;imagebox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="but_focusmode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9.75pt, style=Bold</value>
   </data>
   <data name="but_focusmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 378</value>
+    <value>312, 381</value>
   </data>
   <data name="but_focusmode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>94, 34</value>
   </data>
   <data name="but_focusmode.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -247,14 +226,38 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;but_focusmode.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lineSeparator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 30</value>
+  </data>
+  <data name="lineSeparator1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2000, 2</value>
+  </data>
+  <data name="lineSeparator1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 2</value>
+  </data>
+  <data name="lineSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 2</value>
+  </data>
+  <data name="lineSeparator1.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator1.Name" xml:space="preserve">
+    <value>lineSeparator1</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator1.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.LineSeparator, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>650, 435</value>
   </data>

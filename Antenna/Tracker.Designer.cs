@@ -221,8 +221,12 @@
             // 
             // BUT_connect
             // 
+            this.BUT_connect.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_connect.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_connect, "BUT_connect");
             this.BUT_connect.Name = "BUT_connect";
+            this.BUT_connect.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_connect.TextColor = System.Drawing.Color.White;
             this.BUT_connect.UseVisualStyleBackColor = true;
             this.BUT_connect.Click += new System.EventHandler(this.BUT_connect_Click);
             // 
@@ -238,8 +242,12 @@
             // 
             // BUT_find
             // 
+            this.BUT_find.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_find.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_find, "BUT_find");
             this.BUT_find.Name = "BUT_find";
+            this.BUT_find.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_find.TextColor = System.Drawing.Color.White;
             this.BUT_find.UseVisualStyleBackColor = true;
             this.BUT_find.Click += new System.EventHandler(this.BUT_find_Click);
             // 
@@ -311,7 +319,6 @@
             // 
             // Tracker
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
@@ -352,6 +359,7 @@
             this.Controls.Add(this.CMB_serialport);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CMB_interface);
+            resources.ApplyResources(this, "$this");
             this.Name = "Tracker";
             ((System.ComponentModel.ISupportInitialize)(this.TRK_pantrim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TRK_tilttrim)).EndInit();
