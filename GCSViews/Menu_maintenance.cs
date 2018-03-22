@@ -12,20 +12,26 @@ using MissionPlanner.Controls;
 using MissionPlanner.Log;
 using MissionPlanner.Utilities;
 using MissionPlanner.Plugin;
+using System.Data.SqlClient;
 
 namespace MissionPlanner.GCSViews
 {
     public partial class Menu_maintenance : MyUserControl
     {
+        SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+
         public Menu_maintenance()
         {
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
 
-            add_DG();
+            get_data();
+            update();
 
-            void add_DG()
+            //add_DG();
+
+            /*void add_DG()
             {
                 int n = 0;
                 for(int i=1; i<=8; i++)
@@ -40,7 +46,56 @@ namespace MissionPlanner.GCSViews
                     DG_Drone.Rows[n].Cells[0].Value = "D003";
                     DG_Drone.Rows[n].Cells[1].Value = "DJI Mavic air";
                 }
-            }
+            }*/
+        }
+
+        public void get_data()
+        {
+            con.Open();
+            String query = "SELECT * FROM DRONE";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Drone.DataSource = dt;
+            con.Close();
+            
+
+        }
+
+        //update data grid view
+        public void update()
+        {
+            // add colum
+            DG_Drone.ColumnCount = 2;
+            DG_Drone.Columns[0].Name = "รหัสโดรน";
+            DG_Drone.Columns[1].Name = "ชื่อโดรน";
+
+           // add button view part
+            DataGridViewButtonColumn btn1 = new DataGridViewButtonColumn();
+            btn1.HeaderText = "รายละเอียดส่วนประกอบ";
+            btn1.Name = "but_part";
+            btn1.Text = "คลิกเพื่อดูรายละเอียด";
+            btn1.UseColumnTextForButtonValue = true;
+            DG_Drone.Columns.Add(btn1);
+
+            // add button delete drone
+            DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
+            btn2.HeaderText = "ลบ";
+            btn2.Name = "but_delete";
+            btn2.Text = "ลบ";
+            btn2.UseColumnTextForButtonValue = true;
+            DG_Drone.Columns.Add(btn2);
+
+            // add button update drone
+            DataGridViewButtonColumn btn3 = new DataGridViewButtonColumn();
+            btn3.HeaderText = "แก้ไข";
+            btn3.Name = "but_delete";
+            btn3.Text = "แก้ไข";
+            btn3.UseColumnTextForButtonValue = true;
+            DG_Drone.Columns.Add(btn3);
+
+            //DG_Drone.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                      
         }
 
         Controls.MainSwitcher MyView;
@@ -93,33 +148,14 @@ namespace MissionPlanner.GCSViews
 
         private void DG_Drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(DG_Drone.Columns[e.ColumnIndex].Name == "drone_detail")
-            {
-                OnGotoDronePartClicked(e);
-            }
-
-            if (DG_Drone.Columns[e.ColumnIndex].Name == "Delete")
-            {
-                if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    DG_Drone.RemoveCurrent();
-            }
-
-            if (DG_Drone.Columns[e.ColumnIndex].Name == "Edit")
-            {
-                Form_Edit_farm form_Edit_Farm = new Form_Edit_farm();
-                form_Edit_Farm.ShowDialog();
-
-                Form_Edit_drone form_Edit_Drone = new Form_Edit_drone();
-                form_Edit_Drone.ShowDialog();
-            }
 
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
         {
-
+            
         }
-
+               
         private void BUT_add_drone_Click(object sender, EventArgs e)
         {
             Form_Add_drone form_Add_Drone = new Form_Add_drone();

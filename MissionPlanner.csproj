@@ -460,6 +460,11 @@
     <Compile Include="Controls\Video.Designer.cs">
       <DependentUpon>Video.cs</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlannerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -694,6 +699,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs">
       <SubType>Form</SubType>
@@ -3879,6 +3889,17 @@
     <None Include="Drivers\vrugimbal.cat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="DroneFlightPlannerDataSet.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet.xss">
+      <DependentUpon>DroneFlightPlannerDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Lib.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -4406,6 +4427,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="PRIVACY.md" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Utilities\ImageOverFilter.cs" />
     <EmbeddedResource Include="Antenna\Tracker.id-ID.resx">
       <DependentUpon>Tracker.cs</DependentUpon>
