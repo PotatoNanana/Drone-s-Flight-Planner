@@ -36,9 +36,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // gps
             // 
             this.gps.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gps.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gps.Location = new System.Drawing.Point(0, 0);
             this.gps.Name = "gps";
-            this.gps.Size = new System.Drawing.Size(505, 158);
+            this.gps.Size = new System.Drawing.Size(800, 158);
             this.gps.TabIndex = 0;
             // 
             // ConfigGPSInject
@@ -47,7 +48,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gps);
             this.Name = "ConfigGPSInject";
-            this.Size = new System.Drawing.Size(505, 158);
+            this.Size = new System.Drawing.Size(800, 158);
             this.ResumeLayout(false);
 
         }

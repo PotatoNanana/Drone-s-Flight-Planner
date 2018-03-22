@@ -149,14 +149,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             if (temp.url2560.ToLower().Contains("AR2".ToLower()) ||
                 temp.url2560.ToLower().Contains("apm1/APMRover".ToLower()))
             {
-                pictureBoxRover.Text = temp.name;
-                pictureBoxRover.Tag = temp;
             }
             else if (temp.url2560.ToLower().Contains("AP-".ToLower()) ||
                      temp.url2560.ToLower().Contains("apm1/ArduPlane".ToLower()))
             {
-                pictureBoxAPM.Text = temp.name;
-                pictureBoxAPM.Tag = temp;
             }
             else if (temp.url2560.ToLower().Contains("ac2-quad-".ToLower()) ||
                      temp.url2560.ToLower().Contains("1-quad/ArduCopter".ToLower()) ||
@@ -196,8 +192,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                      temp.name.ToLower().Contains("arducopter heli") ||
                      temp.desc.ToLower().Contains("arducopter heli"))
             {
-                pictureBoxHeli.Text = temp.name += " heli";
-                pictureBoxHeli.Tag = temp;
             }
             else if (temp.url2560.ToLower().Contains("ac2-octaquad-".ToLower()) ||
                      temp.url2560.ToLower().Contains("-octa-quad/ArduCopter".ToLower()) ||
@@ -217,8 +211,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             else if (temp.url2560_2.ToLower().Contains("antennatracker"))
             {
-                pictureAntennaTracker.Text = temp.name;
-                pictureAntennaTracker.Tag = temp;
             }
             else
             {

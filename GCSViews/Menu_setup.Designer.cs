@@ -34,9 +34,11 @@
             // 
             // backstageView
             // 
+            this.backstageView.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backstageView.ButtonsAreaPencilColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             resources.ApplyResources(this.backstageView, "backstageView");
-            this.backstageView.HighlightColor1 = System.Drawing.SystemColors.Highlight;
-            this.backstageView.HighlightColor2 = System.Drawing.SystemColors.MenuHighlight;
+            this.backstageView.HighlightColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
+            this.backstageView.HighlightColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.backstageView.Name = "backstageView";
             this.backstageView.WidthMenu = 172;
             this.backstageView.Load += new System.EventHandler(this.backstageView_Load);

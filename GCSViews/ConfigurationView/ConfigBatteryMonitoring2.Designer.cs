@@ -71,7 +71,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             resources.ApplyResources(this.label29, "label29");
             this.label29.Name = "label29";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
@@ -245,8 +244,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.Controls.Add(this.label30);
             this.Controls.Add(this.TXT_battcapacity);
             this.Controls.Add(this.pictureBox5);
-            this.Name = "ConfigBatteryMonitoring2";
             resources.ApplyResources(this, "$this");
+            this.Name = "ConfigBatteryMonitoring2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
