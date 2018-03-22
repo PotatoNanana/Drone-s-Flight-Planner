@@ -12,11 +12,16 @@ using MissionPlanner.Controls;
 using MissionPlanner.Log;
 using MissionPlanner.Utilities;
 using MissionPlanner.Plugin;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace MissionPlanner.GCSViews
 {
     public partial class Menu_maintenance_part : MyUserControl
     {
+        SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlCommand cmd;
+
         public Menu_maintenance_part()
         {
             InitializeComponent();
@@ -122,18 +127,6 @@ namespace MissionPlanner.GCSViews
                 OnGotoDronePreClicked(e);
             }
 
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "Delete")
-            {
-                if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    DG_Farm.RemoveCurrent();
-            }
-
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "Edit")
-            {
-                Form_Edit_drone_part form_Edit_Drone_Part = new Form_Edit_drone_part();
-                form_Edit_Drone_Part.ShowDialog();
-            }
-
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -156,6 +149,20 @@ namespace MissionPlanner.GCSViews
         {
             Form_Add_drone_part form_add_drone_part = new Form_Add_drone_part();
             form_add_drone_part.ShowDialog();
+        }
+
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+            Form_Edit_drone_part form_Edit_Drone_Part = new Form_Edit_drone_part();
+            form_Edit_Drone_Part.ShowDialog();
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DG_Farm.RemoveCurrent();
+            }
         }
     }
 }

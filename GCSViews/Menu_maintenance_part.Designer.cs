@@ -339,6 +339,7 @@
             this.button_delete.Text = "ลบ";
             this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // button_edit
             // 
@@ -356,6 +357,7 @@
             this.button_edit.Text = "แก้ไข";
             this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_edit.UseVisualStyleBackColor = false;
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
             // button_show
             // 

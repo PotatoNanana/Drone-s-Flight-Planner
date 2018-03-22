@@ -265,6 +265,7 @@
             this.button_show.Text = "แสดงตาราง";
             this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_show.UseVisualStyleBackColor = false;
+            this.button_show.Click += new System.EventHandler(this.button_show_Click);
             // 
             // button_delete
             // 
@@ -282,6 +283,7 @@
             this.button_delete.Text = "ลบ";
             this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // button_edit
             // 

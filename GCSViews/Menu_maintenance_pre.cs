@@ -12,40 +12,22 @@ using MissionPlanner.Controls;
 using MissionPlanner.Log;
 using MissionPlanner.Utilities;
 using MissionPlanner.Plugin;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace MissionPlanner.GCSViews
 {
     public partial class Menu_maintenance_pre : MyUserControl
     {
+        SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlCommand cmd;
+
         public Menu_maintenance_pre()
         {
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
-
-            add_DG();
-
-            void add_DG()
-            {
-                int n = 0;
-                n = DG_Farm.Rows.Add();
-                DG_Farm.Rows[n].Cells[0].Value = "12/06/2017";
-                DG_Farm.Rows[n].Cells[1].Value = "Change Battery";
-                DG_Farm.Rows[n].Cells[4].Value = "AG Co.,ltd";
-                DG_Farm.Rows[n].Cells[5].Value = "0942416587";
-                DG_Farm.Rows[n].Cells[6].Value = "44 BanBung, Samut Prakarn";
-                DG_Farm.Rows[n].Cells[7].Value = "5";
-                DG_Farm.Rows[n].Cells[8].Value = "ณภัทร";
-
-                n = DG_Farm.Rows.Add();
-                DG_Farm.Rows[n].Cells[0].Value = "P002";
-                DG_Farm.Rows[n].Cells[1].Value = "Check battery";
-                DG_Farm.Rows[n].Cells[4].Value = "BJKK PLC.";
-                DG_Farm.Rows[n].Cells[5].Value = "0841256987";
-                DG_Farm.Rows[n].Cells[6].Value = "1544 Orn Nuch, Bangkok";
-                DG_Farm.Rows[n].Cells[7].Value = "3";
-                DG_Farm.Rows[n].Cells[8].Value = "จุฬารัตน์";
-            }
+            
         }
 
         Controls.MainSwitcher MyView;
@@ -100,8 +82,7 @@ namespace MissionPlanner.GCSViews
         {
             if (DG_Farm.Columns[e.ColumnIndex].Name == "Delete")
             {
-                if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    DG_Farm.RemoveCurrent();
+               
             }
 
             
@@ -128,6 +109,25 @@ namespace MissionPlanner.GCSViews
         {
             Form_Edit_drone_pre form_Edit_Drone_Pre = new Form_Edit_drone_pre();
             form_Edit_Drone_Pre.ShowDialog();
+        }
+
+        private void button_show_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            String query = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_vendorPhone,maintain_venderAdd,maintain_length,maintain_responder,maintain_date FROM Maintainance";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DG_Farm.RemoveCurrent();
+            }
         }
     }
 }
