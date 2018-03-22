@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigOptional));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigDrone));
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -37,12 +37,12 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // ConfigOptional
+            // ConfigDrone
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.label1);
-            this.Name = "ConfigOptional";
+            this.Name = "ConfigDrone";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
 
         }

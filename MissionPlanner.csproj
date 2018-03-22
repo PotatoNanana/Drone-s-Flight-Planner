@@ -466,11 +466,11 @@
     <Compile Include="DroneLog.Designer.cs">
       <DependentUpon>DroneLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="GCSViews\ConfigurationView\ConfigNull.cs">
+    <Compile Include="GCSViews\ConfigurationView\ConfigApp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GCSViews\ConfigurationView\ConfigNull.Designer.cs">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <Compile Include="GCSViews\ConfigurationView\ConfigApp.Designer.cs">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigDrone.cs">
       <SubType>UserControl</SubType>
@@ -1901,29 +1901,29 @@
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigCompassMot.resx">
       <DependentUpon>ConfigCompassMot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigNull.ar.resx">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ar.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigNull.de-DE.resx">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.de-DE.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigNull.id-ID.resx">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.id-ID.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigNull.ja-JP.resx">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ja-JP.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigNull.ko-KR.resx">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ko-KR.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigNull.pt.resx">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.pt.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigNull.resx">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigNull.zh-Hans.resx">
-      <DependentUpon>ConfigNull.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.zh-Hans.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigESCCalibration.ar.resx">
       <DependentUpon>ConfigESCCalibration.cs</DependentUpon>

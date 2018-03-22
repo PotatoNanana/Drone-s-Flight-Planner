@@ -95,7 +95,7 @@ namespace MissionPlanner.GCSViews
 
             return null;
         }
-        
+
         private void backstageView_Load(object sender, EventArgs e)
         {
 
@@ -155,17 +155,15 @@ namespace MissionPlanner.GCSViews
                         break;
                     }
                 }
-
-                AddBackstageViewPage(typeof(ConfigNull), "");
-
+                
                 ThemeManager.ApplyThemeTo(this);
                 if (MainV2.comPort.BaseStream.IsOpen)
                 {
                     start = AddBackstageViewPage(typeof(ConfigFlightModes), Strings.FlightModes);
 
-                    var app = AddBackstageViewPage(typeof(ConfigNull), "Application Setting");
+                    AddBackstageViewPage(typeof(ConfigApp), "Application Setting");
                     
-                    AddBackstageViewPage(typeof(ConfigPlanner), " - Setting", isConnected, app);
+                    AddBackstageViewPage(typeof(ConfigPlanner), " - Setting", isConnected);
 
                     if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
                         AddBackstageViewPage(typeof( ConfigAC_Fence), Strings.GeoFence);
@@ -216,7 +214,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
-                    start = AddBackstageViewPage(typeof(ConfigPlanner), "Application Setting");
+                    start = AddBackstageViewPage(typeof(ConfigApp), "Application Setting");
                     start = AddBackstageViewPage(typeof( ConfigPlanner), " - Setting");
                 }
 
