@@ -126,11 +126,6 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -158,8 +153,40 @@ namespace MissionPlanner.GCSViews
                
         private void BUT_add_drone_Click(object sender, EventArgs e)
         {
+            //add drone
+
             Form_Add_drone form_Add_Drone = new Form_Add_drone();
             form_Add_Drone.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //detail part of drone
+            Menu_maintenance_part menu_maintain_part = new Menu_maintenance_part();
+            menu_maintain_part.ShowUserControl();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //delete drone
+        }
+
+        private void button_serch_Click(object sender, EventArgs e)
+        {
+            //search drone
+        }
+
+        private void button_modify_Click(object sender, EventArgs e)
+        {
+            //edit drone
+            Form_Edit_drone form_edit_drone = new Form_Edit_drone();
+            form_edit_drone.ShowDialog();
+        }
+
+        private void button_show_Click(object sender, EventArgs e)
+        {
+            //show data to DataGridView
         }
     }
 }

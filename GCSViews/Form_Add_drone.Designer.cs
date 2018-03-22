@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Add_drone));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_droneName = new System.Windows.Forms.TextBox();
+            this.textBox_droneID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.but_exit = new System.Windows.Forms.Button();
@@ -57,8 +57,8 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.textBox2);
-            this.panel_Main_farm.Controls.Add(this.textBox1);
+            this.panel_Main_farm.Controls.Add(this.textBox_droneName);
+            this.panel_Main_farm.Controls.Add(this.textBox_droneID);
             this.panel_Main_farm.Controls.Add(this.label2);
             this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.but_exit);
@@ -73,21 +73,21 @@
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
             // 
-            // textBox2
+            // textBox_droneName
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 30);
-            this.textBox2.TabIndex = 14;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox_droneName.Location = new System.Drawing.Point(176, 137);
+            this.textBox_droneName.Name = "textBox_droneName";
+            this.textBox_droneName.Size = new System.Drawing.Size(200, 30);
+            this.textBox_droneName.TabIndex = 14;
+            this.textBox_droneName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // textBox_droneID
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 30);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_droneID.Location = new System.Drawing.Point(176, 97);
+            this.textBox_droneID.Name = "textBox_droneID";
+            this.textBox_droneID.Size = new System.Drawing.Size(200, 30);
+            this.textBox_droneID.TabIndex = 14;
+            this.textBox_droneID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -203,8 +203,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_Main_farm;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_droneName;
+        private System.Windows.Forms.TextBox textBox_droneID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button but_exit;

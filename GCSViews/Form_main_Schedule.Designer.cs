@@ -43,7 +43,15 @@
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.button_serch = new System.Windows.Forms.Button();
+            this.button_show = new System.Windows.Forms.Button();
             this.But_add_act = new System.Windows.Forms.Button();
+            this.button_edit = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_actID = new System.Windows.Forms.TextBox();
+            this.textBox_actName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
@@ -56,12 +64,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(864, 461);
+            this.panel1.Size = new System.Drawing.Size(1076, 391);
             this.panel1.TabIndex = 0;
             // 
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.textBox_actName);
+            this.panel_Main_farm.Controls.Add(this.textBox_actID);
+            this.panel_Main_farm.Controls.Add(this.label2);
+            this.panel_Main_farm.Controls.Add(this.label1);
+            this.panel_Main_farm.Controls.Add(this.button_show);
+            this.panel_Main_farm.Controls.Add(this.button_serch);
+            this.panel_Main_farm.Controls.Add(this.button_edit);
+            this.panel_Main_farm.Controls.Add(this.button_delete);
             this.panel_Main_farm.Controls.Add(this.But_exit);
             this.panel_Main_farm.Controls.Add(this.DG_Farm);
             this.panel_Main_farm.Controls.Add(this.But_add_act);
@@ -70,20 +86,20 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(864, 461);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1076, 391);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
             // But_exit
             // 
-            this.But_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.But_exit.BackColor = System.Drawing.Color.Tomato;
             this.But_exit.FlatAppearance.BorderSize = 0;
             this.But_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.But_exit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
             this.But_exit.ForeColor = System.Drawing.Color.White;
             this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_exit.Location = new System.Drawing.Point(442, 390);
+            this.But_exit.Location = new System.Drawing.Point(913, 335);
             this.But_exit.Name = "But_exit";
             this.But_exit.Size = new System.Drawing.Size(130, 40);
             this.But_exit.TabIndex = 10;
@@ -107,7 +123,7 @@
             this.Edit});
             this.DG_Farm.Location = new System.Drawing.Point(25, 75);
             this.DG_Farm.Name = "DG_Farm";
-            this.DG_Farm.Size = new System.Drawing.Size(814, 300);
+            this.DG_Farm.Size = new System.Drawing.Size(663, 300);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             // 
@@ -168,7 +184,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(864, 50);
+            this.panel3.Size = new System.Drawing.Size(1076, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -183,7 +199,7 @@
             this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(864, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(1076, 50);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ตารางปฏิทินการบิน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,16 +208,49 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
+            // button_serch
+            // 
+            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_serch.FlatAppearance.BorderSize = 0;
+            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_serch.ForeColor = System.Drawing.Color.White;
+            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_serch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_serch.Location = new System.Drawing.Point(730, 271);
+            this.button_serch.Name = "button_serch";
+            this.button_serch.Size = new System.Drawing.Size(130, 40);
+            this.button_serch.TabIndex = 27;
+            this.button_serch.Text = "ค้นหา";
+            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_serch.UseVisualStyleBackColor = false;
+            // 
+            // button_show
+            // 
+            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_show.FlatAppearance.BorderSize = 0;
+            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_show.ForeColor = System.Drawing.Color.White;
+            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_show.Location = new System.Drawing.Point(730, 335);
+            this.button_show.Name = "button_show";
+            this.button_show.Size = new System.Drawing.Size(130, 40);
+            this.button_show.TabIndex = 28;
+            this.button_show.Text = "แสดงตาราง";
+            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_show.UseVisualStyleBackColor = false;
+            // 
             // But_add_act
             // 
-            this.But_add_act.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.But_add_act.BackColor = System.Drawing.Color.LimeGreen;
             this.But_add_act.FlatAppearance.BorderSize = 0;
             this.But_add_act.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.But_add_act.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
             this.But_add_act.ForeColor = System.Drawing.Color.White;
             this.But_add_act.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_add_act.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_add_act.Location = new System.Drawing.Point(292, 390);
+            this.But_add_act.Location = new System.Drawing.Point(913, 271);
             this.But_add_act.Name = "But_add_act";
             this.But_add_act.Size = new System.Drawing.Size(130, 40);
             this.But_add_act.TabIndex = 6;
@@ -210,17 +259,84 @@
             this.But_add_act.UseVisualStyleBackColor = false;
             this.But_add_act.Click += new System.EventHandler(this.But_add_act_Click);
             // 
-            // Form_farm_Schedule
+            // button_edit
+            // 
+            this.button_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_edit.FlatAppearance.BorderSize = 0;
+            this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_edit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_edit.ForeColor = System.Drawing.Color.White;
+            this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_edit.Location = new System.Drawing.Point(913, 207);
+            this.button_edit.Name = "button_edit";
+            this.button_edit.Size = new System.Drawing.Size(130, 40);
+            this.button_edit.TabIndex = 26;
+            this.button_edit.Text = "แก้ไข";
+            this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_edit.UseVisualStyleBackColor = false;
+            // 
+            // button_delete
+            // 
+            this.button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_delete.FlatAppearance.BorderSize = 0;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_delete.ForeColor = System.Drawing.Color.White;
+            this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_delete.Location = new System.Drawing.Point(730, 207);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(130, 40);
+            this.button_delete.TabIndex = 25;
+            this.button_delete.Text = "ลบ";
+            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_delete.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(726, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 24);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "รหัสกิจกรรม";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(726, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "ชื่อกิจกรรม";
+            // 
+            // textBox_actID
+            // 
+            this.textBox_actID.Location = new System.Drawing.Point(845, 86);
+            this.textBox_actID.Name = "textBox_actID";
+            this.textBox_actID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actID.TabIndex = 31;
+            // 
+            // textBox_actName
+            // 
+            this.textBox_actName.Location = new System.Drawing.Point(845, 141);
+            this.textBox_actName.Name = "textBox_actName";
+            this.textBox_actName.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actName.TabIndex = 32;
+            // 
+            // Form_main_Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 461);
+            this.ClientSize = new System.Drawing.Size(1076, 391);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form_farm_Schedule";
+            this.Name = "Form_main_Schedule";
             this.Text = "Flight Schedule";
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
+            this.panel_Main_farm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -243,6 +359,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.Button button_serch;
+        private System.Windows.Forms.Button button_show;
+        private System.Windows.Forms.Button button_edit;
+        private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button But_add_act;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_actID;
+        private System.Windows.Forms.TextBox textBox_actName;
     }
 }

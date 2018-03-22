@@ -72,5 +72,10 @@ namespace MissionPlanner.GCSViews
             Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act();
             form_Add_Farm_Act.ShowDialog();
         }
+
+        private void button_show_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

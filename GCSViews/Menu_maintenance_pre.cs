@@ -104,11 +104,7 @@ namespace MissionPlanner.GCSViews
                     DG_Farm.RemoveCurrent();
             }
 
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "Edit")
-            {
-                Form_Edit_drone_pre form_Edit_Drone_Pre = new Form_Edit_drone_pre();
-                form_Edit_Drone_Pre.ShowDialog();
-            }
+            
 
         }
 
@@ -126,6 +122,12 @@ namespace MissionPlanner.GCSViews
         private void but_backto_pre_Click(object sender, EventArgs e)
         {
             OnGotoDroneClicked(e);
+        }
+
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+            Form_Edit_drone_pre form_Edit_Drone_Pre = new Form_Edit_drone_pre();
+            form_Edit_Drone_Pre.ShowDialog();
         }
     }
 }

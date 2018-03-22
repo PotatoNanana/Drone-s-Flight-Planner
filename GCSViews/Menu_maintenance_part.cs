@@ -151,5 +151,11 @@ namespace MissionPlanner.GCSViews
         {
             OnGotoDroneClicked(e);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_Add_drone_part form_add_drone_part = new Form_Add_drone_part();
+            form_add_drone_part.ShowDialog();
+        }
     }
 }

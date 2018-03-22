@@ -31,12 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Add_farm_act));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_cost = new System.Windows.Forms.TextBox();
+            this.textBox_cap = new System.Windows.Forms.TextBox();
+            this.textBox_actName = new System.Windows.Forms.TextBox();
+            this.textBox_actID = new System.Windows.Forms.TextBox();
+            this.textBox_farmID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.But_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,12 +64,12 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.textBox6);
-            this.panel_Main_farm.Controls.Add(this.textBox5);
-            this.panel_Main_farm.Controls.Add(this.textBox4);
-            this.panel_Main_farm.Controls.Add(this.textBox3);
-            this.panel_Main_farm.Controls.Add(this.textBox2);
-            this.panel_Main_farm.Controls.Add(this.textBox1);
+            this.panel_Main_farm.Controls.Add(this.dateTimePicker);
+            this.panel_Main_farm.Controls.Add(this.textBox_cost);
+            this.panel_Main_farm.Controls.Add(this.textBox_cap);
+            this.panel_Main_farm.Controls.Add(this.textBox_actName);
+            this.panel_Main_farm.Controls.Add(this.textBox_actID);
+            this.panel_Main_farm.Controls.Add(this.textBox_farmID);
             this.panel_Main_farm.Controls.Add(this.label6);
             this.panel_Main_farm.Controls.Add(this.label5);
             this.panel_Main_farm.Controls.Add(this.label4);
@@ -87,47 +87,40 @@
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
-            // textBox6
+            // textBox_cost
             // 
-            this.textBox6.Location = new System.Drawing.Point(144, 277);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 31);
-            this.textBox6.TabIndex = 13;
+            this.textBox_cost.Location = new System.Drawing.Point(144, 277);
+            this.textBox_cost.Name = "textBox_cost";
+            this.textBox_cost.Size = new System.Drawing.Size(200, 31);
+            this.textBox_cost.TabIndex = 13;
             // 
-            // textBox5
+            // textBox_cap
             // 
-            this.textBox5.Location = new System.Drawing.Point(144, 237);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 31);
-            this.textBox5.TabIndex = 13;
+            this.textBox_cap.Location = new System.Drawing.Point(144, 237);
+            this.textBox_cap.Name = "textBox_cap";
+            this.textBox_cap.Size = new System.Drawing.Size(200, 31);
+            this.textBox_cap.TabIndex = 13;
             // 
-            // textBox4
+            // textBox_actName
             // 
-            this.textBox4.Location = new System.Drawing.Point(144, 197);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 31);
-            this.textBox4.TabIndex = 13;
+            this.textBox_actName.Location = new System.Drawing.Point(144, 197);
+            this.textBox_actName.Name = "textBox_actName";
+            this.textBox_actName.Size = new System.Drawing.Size(200, 31);
+            this.textBox_actName.TabIndex = 13;
             // 
-            // textBox3
+            // textBox_actID
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 157);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 31);
-            this.textBox3.TabIndex = 13;
+            this.textBox_actID.Location = new System.Drawing.Point(144, 157);
+            this.textBox_actID.Name = "textBox_actID";
+            this.textBox_actID.Size = new System.Drawing.Size(200, 31);
+            this.textBox_actID.TabIndex = 13;
             // 
-            // textBox2
+            // textBox_farmID
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 31);
-            this.textBox2.TabIndex = 13;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(144, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 31);
-            this.textBox1.TabIndex = 13;
+            this.textBox_farmID.Location = new System.Drawing.Point(144, 117);
+            this.textBox_farmID.Name = "textBox_farmID";
+            this.textBox_farmID.Size = new System.Drawing.Size(200, 31);
+            this.textBox_farmID.TabIndex = 13;
             // 
             // label6
             // 
@@ -253,6 +246,13 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(144, 75);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker.TabIndex = 14;
+            // 
             // Form_Add_farm_act
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,11 +284,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_cost;
+        private System.Windows.Forms.TextBox textBox_cap;
+        private System.Windows.Forms.TextBox textBox_actName;
+        private System.Windows.Forms.TextBox textBox_actID;
+        private System.Windows.Forms.TextBox textBox_farmID;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }

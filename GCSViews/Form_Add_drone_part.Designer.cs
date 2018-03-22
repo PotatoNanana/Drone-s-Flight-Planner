@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Add_drone_part));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button_serch = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker_ExpDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_startDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_reg = new System.Windows.Forms.DateTimePicker();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_price = new System.Windows.Forms.TextBox();
+            this.textBox_respond = new System.Windows.Forms.TextBox();
+            this.textBox_venAdd = new System.Windows.Forms.TextBox();
+            this.textBox_venPhone = new System.Windows.Forms.TextBox();
+            this.textBox_VenName = new System.Windows.Forms.TextBox();
+            this.textBox_partName = new System.Windows.Forms.TextBox();
+            this.textBox_partPosition = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox = new System.Windows.Forms.TextBox();
+            this.textBox_partID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -61,9 +61,11 @@
             this.But_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox_alarm = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,21 +81,23 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button1);
-            this.panel_Main_farm.Controls.Add(this.pictureBox1);
-            this.panel_Main_farm.Controls.Add(this.dateTimePicker3);
-            this.panel_Main_farm.Controls.Add(this.dateTimePicker2);
-            this.panel_Main_farm.Controls.Add(this.dateTimePicker1);
+            this.panel_Main_farm.Controls.Add(this.comboBox_alarm);
+            this.panel_Main_farm.Controls.Add(this.label7);
+            this.panel_Main_farm.Controls.Add(this.button_serch);
+            this.panel_Main_farm.Controls.Add(this.pictureBox);
+            this.panel_Main_farm.Controls.Add(this.dateTimePicker_ExpDate);
+            this.panel_Main_farm.Controls.Add(this.dateTimePicker_startDate);
+            this.panel_Main_farm.Controls.Add(this.dateTimePicker_reg);
             this.panel_Main_farm.Controls.Add(this.textBox7);
-            this.panel_Main_farm.Controls.Add(this.textBox6);
-            this.panel_Main_farm.Controls.Add(this.textBox14);
-            this.panel_Main_farm.Controls.Add(this.textBox13);
-            this.panel_Main_farm.Controls.Add(this.textBox12);
-            this.panel_Main_farm.Controls.Add(this.textBox11);
-            this.panel_Main_farm.Controls.Add(this.textBox10);
-            this.panel_Main_farm.Controls.Add(this.textBox2);
+            this.panel_Main_farm.Controls.Add(this.textBox_price);
+            this.panel_Main_farm.Controls.Add(this.textBox_respond);
+            this.panel_Main_farm.Controls.Add(this.textBox_venAdd);
+            this.panel_Main_farm.Controls.Add(this.textBox_venPhone);
+            this.panel_Main_farm.Controls.Add(this.textBox_VenName);
+            this.panel_Main_farm.Controls.Add(this.textBox_partName);
+            this.panel_Main_farm.Controls.Add(this.textBox_partPosition);
             this.panel_Main_farm.Controls.Add(this.label15);
-            this.panel_Main_farm.Controls.Add(this.textBox);
+            this.panel_Main_farm.Controls.Add(this.textBox_partID);
             this.panel_Main_farm.Controls.Add(this.label6);
             this.panel_Main_farm.Controls.Add(this.label14);
             this.panel_Main_farm.Controls.Add(this.label13);
@@ -116,53 +120,53 @@
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
-            // button1
+            // button_serch
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(760, 308);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 40);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "อัพโหลด";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_serch.FlatAppearance.BorderSize = 0;
+            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_serch.ForeColor = System.Drawing.Color.White;
+            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_serch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_serch.Location = new System.Drawing.Point(760, 308);
+            this.button_serch.Name = "button_serch";
+            this.button_serch.Size = new System.Drawing.Size(80, 40);
+            this.button_serch.TabIndex = 16;
+            this.button_serch.Text = "อัพโหลด";
+            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_serch.UseVisualStyleBackColor = false;
+            this.button_serch.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(640, 280);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.InitialImage")));
+            this.pictureBox.Location = new System.Drawing.Point(640, 280);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox.TabIndex = 15;
+            this.pictureBox.TabStop = false;
             // 
-            // dateTimePicker3
+            // dateTimePicker_ExpDate
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(217, 235);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 31);
-            this.dateTimePicker3.TabIndex = 14;
+            this.dateTimePicker_ExpDate.Location = new System.Drawing.Point(217, 235);
+            this.dateTimePicker_ExpDate.Name = "dateTimePicker_ExpDate";
+            this.dateTimePicker_ExpDate.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker_ExpDate.TabIndex = 14;
             // 
-            // dateTimePicker2
+            // dateTimePicker_startDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(217, 195);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 31);
-            this.dateTimePicker2.TabIndex = 14;
+            this.dateTimePicker_startDate.Location = new System.Drawing.Point(217, 195);
+            this.dateTimePicker_startDate.Name = "dateTimePicker_startDate";
+            this.dateTimePicker_startDate.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker_startDate.TabIndex = 14;
             // 
-            // dateTimePicker1
+            // dateTimePicker_reg
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(217, 155);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 31);
-            this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePicker_reg.Location = new System.Drawing.Point(217, 155);
+            this.dateTimePicker_reg.Name = "dateTimePicker_reg";
+            this.dateTimePicker_reg.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker_reg.TabIndex = 14;
             // 
             // textBox7
             // 
@@ -171,54 +175,54 @@
             this.textBox7.Size = new System.Drawing.Size(0, 31);
             this.textBox7.TabIndex = 13;
             // 
-            // textBox6
+            // textBox_price
             // 
-            this.textBox6.Location = new System.Drawing.Point(217, 277);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 31);
-            this.textBox6.TabIndex = 13;
+            this.textBox_price.Location = new System.Drawing.Point(217, 277);
+            this.textBox_price.Name = "textBox_price";
+            this.textBox_price.Size = new System.Drawing.Size(200, 31);
+            this.textBox_price.TabIndex = 13;
             // 
-            // textBox14
+            // textBox_respond
             // 
-            this.textBox14.Location = new System.Drawing.Point(640, 237);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(200, 31);
-            this.textBox14.TabIndex = 13;
+            this.textBox_respond.Location = new System.Drawing.Point(640, 237);
+            this.textBox_respond.Name = "textBox_respond";
+            this.textBox_respond.Size = new System.Drawing.Size(200, 31);
+            this.textBox_respond.TabIndex = 13;
             // 
-            // textBox13
+            // textBox_venAdd
             // 
-            this.textBox13.Location = new System.Drawing.Point(640, 197);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(200, 31);
-            this.textBox13.TabIndex = 13;
+            this.textBox_venAdd.Location = new System.Drawing.Point(640, 197);
+            this.textBox_venAdd.Name = "textBox_venAdd";
+            this.textBox_venAdd.Size = new System.Drawing.Size(200, 31);
+            this.textBox_venAdd.TabIndex = 13;
             // 
-            // textBox12
+            // textBox_venPhone
             // 
-            this.textBox12.Location = new System.Drawing.Point(640, 157);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(200, 31);
-            this.textBox12.TabIndex = 13;
+            this.textBox_venPhone.Location = new System.Drawing.Point(640, 157);
+            this.textBox_venPhone.Name = "textBox_venPhone";
+            this.textBox_venPhone.Size = new System.Drawing.Size(200, 31);
+            this.textBox_venPhone.TabIndex = 13;
             // 
-            // textBox11
+            // textBox_VenName
             // 
-            this.textBox11.Location = new System.Drawing.Point(640, 117);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(200, 31);
-            this.textBox11.TabIndex = 13;
+            this.textBox_VenName.Location = new System.Drawing.Point(640, 117);
+            this.textBox_VenName.Name = "textBox_VenName";
+            this.textBox_VenName.Size = new System.Drawing.Size(200, 31);
+            this.textBox_VenName.TabIndex = 13;
             // 
-            // textBox10
+            // textBox_partName
             // 
-            this.textBox10.Location = new System.Drawing.Point(640, 77);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(200, 31);
-            this.textBox10.TabIndex = 13;
+            this.textBox_partName.Location = new System.Drawing.Point(640, 77);
+            this.textBox_partName.Name = "textBox_partName";
+            this.textBox_partName.Size = new System.Drawing.Size(200, 31);
+            this.textBox_partName.TabIndex = 13;
             // 
-            // textBox2
+            // textBox_partPosition
             // 
-            this.textBox2.Location = new System.Drawing.Point(217, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 31);
-            this.textBox2.TabIndex = 13;
+            this.textBox_partPosition.Location = new System.Drawing.Point(217, 117);
+            this.textBox_partPosition.Name = "textBox_partPosition";
+            this.textBox_partPosition.Size = new System.Drawing.Size(200, 31);
+            this.textBox_partPosition.TabIndex = 13;
             // 
             // label15
             // 
@@ -230,12 +234,12 @@
             this.label15.Text = "ชื่อผู้ติดต่อกับตัวแทนจำหน่าย";
             this.label15.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox
+            // textBox_partID
             // 
-            this.textBox.Location = new System.Drawing.Point(217, 77);
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(200, 31);
-            this.textBox.TabIndex = 13;
+            this.textBox_partID.Location = new System.Drawing.Point(217, 77);
+            this.textBox_partID.Name = "textBox_partID";
+            this.textBox_partID.Size = new System.Drawing.Size(200, 31);
+            this.textBox_partID.TabIndex = 13;
             // 
             // label6
             // 
@@ -409,6 +413,28 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(60, 324);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 24);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "แจ้งเตือนการบำรุงรักษา";
+            // 
+            // comboBox_alarm
+            // 
+            this.comboBox_alarm.FormattingEnabled = true;
+            this.comboBox_alarm.Items.AddRange(new object[] {
+            "ทุกวัน",
+            "ทุกอาทิตย์",
+            "ทุกเดือน",
+            "ทุก1ปี"});
+            this.comboBox_alarm.Location = new System.Drawing.Point(217, 321);
+            this.comboBox_alarm.Name = "comboBox_alarm";
+            this.comboBox_alarm.Size = new System.Drawing.Size(200, 32);
+            this.comboBox_alarm.TabIndex = 18;
+            // 
             // Form_Add_drone_part
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,7 +447,7 @@
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -441,25 +467,27 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_partID;
+        private System.Windows.Forms.TextBox textBox_price;
+        private System.Windows.Forms.TextBox textBox_partPosition;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox_respond;
+        private System.Windows.Forms.TextBox textBox_venAdd;
+        private System.Windows.Forms.TextBox textBox_venPhone;
+        private System.Windows.Forms.TextBox textBox_VenName;
+        private System.Windows.Forms.TextBox textBox_partName;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button_serch;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_ExpDate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_startDate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_reg;
+        private System.Windows.Forms.ComboBox comboBox_alarm;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace MissionPlanner.GCSViews
 {
     public partial class Form_Add_drone : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlCommand cmd;
+
         public Form_Add_drone()
         {
             InitializeComponent();
@@ -50,6 +55,16 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_save_Click(object sender, EventArgs e)
         {
+            con.Open();
+
+            String query = "INSERT INTO Drone (drone_id,drone_name) " + "VALUES('" + textBox_droneID.Text + "','" +textBox_droneName.Text + "')";
+
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+
+            con.Close();
+            MessageBox.Show("Save To DB Success!!");
+
             this.Close();
         }
 

@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace MissionPlanner.GCSViews
 {
     public partial class Form_Add_farm : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlCommand cmd;
+
         public Form_Add_farm()
         {
             InitializeComponent();
@@ -50,6 +55,13 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_save_Click(object sender, EventArgs e)
         {
+            con.Open();
+            String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "')";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Save To DB Success!!");  
+
             this.Close();
         }
 
