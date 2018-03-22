@@ -84,6 +84,7 @@ namespace MissionPlanner.GCSViews
             this.lbl_status = new System.Windows.Forms.Label();
             this.panelWaypoints = new BSE.Windows.Forms.Panel();
             this.splitter1 = new BSE.Windows.Forms.Splitter();
+            this.connectionControl1 = new MissionPlanner.Controls.ConnectionControl();
             this.MenuConnect = new MissionPlanner.Controls.MyButton();
             this.menuTakeoff = new MissionPlanner.Controls.MyButton();
             this.MenuSimulation = new MissionPlanner.Controls.MyButton();
@@ -124,7 +125,6 @@ namespace MissionPlanner.GCSViews
             this.panelAction = new BSE.Windows.Forms.Panel();
             this.splitter2 = new BSE.Windows.Forms.Splitter();
             this.panelMap = new System.Windows.Forms.Panel();
-            this.connectionControl1 = new MissionPlanner.Controls.ConnectionControl();
             this.lbl_distance = new System.Windows.Forms.Label();
             this.lbl_homedist = new System.Windows.Forms.Label();
             this.lbl_prevdist = new System.Windows.Forms.Label();
@@ -430,6 +430,12 @@ namespace MissionPlanner.GCSViews
             resources.ApplyResources(this.splitter1, "splitter1");
             this.splitter1.Name = "splitter1";
             this.splitter1.TabStop = false;
+            // 
+            // connectionControl1
+            // 
+            resources.ApplyResources(this.connectionControl1, "connectionControl1");
+            this.connectionControl1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.connectionControl1.Name = "connectionControl1";
             // 
             // MenuConnect
             // 
@@ -801,12 +807,6 @@ namespace MissionPlanner.GCSViews
             this.panelMap.Name = "panelMap";
             this.panelMap.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMap_Paint);
             this.panelMap.Resize += new System.EventHandler(this.panelMap_Resize);
-            // 
-            // connectionControl1
-            // 
-            this.connectionControl1.ForeColor = System.Drawing.SystemColors.ControlText;
-            resources.ApplyResources(this.connectionControl1, "connectionControl1");
-            this.connectionControl1.Name = "connectionControl1";
             // 
             // lbl_distance
             // 

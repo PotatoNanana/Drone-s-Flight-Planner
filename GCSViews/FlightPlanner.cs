@@ -7455,6 +7455,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 comPort.logplaybackfile.Close();
             comPort.logplaybackfile = null;
 
+
             try
             {
                 log.Info("Set Portname");
@@ -7565,27 +7566,27 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 _connectionControl.UpdateSysIDS();
 
                 // detect firmware we are conected to.
-                if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2))
+                if (comPort.MAV.cs.firmware == Firmwares.ArduCopter2)
                 {
                     _connectionControl.TOOL_APMFirmware.SelectedIndex =
                         _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduCopter2);
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+                else if (comPort.MAV.cs.firmware == Firmwares.Ateryx)
                 {
                     _connectionControl.TOOL_APMFirmware.SelectedIndex =
                         _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.Ateryx);
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduRover))
+                else if (comPort.MAV.cs.firmware == Firmwares.ArduRover)
                 {
                     _connectionControl.TOOL_APMFirmware.SelectedIndex =
                         _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduRover);
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduSub))
+                else if (comPort.MAV.cs.firmware == Firmwares.ArduSub)
                 {
                     _connectionControl.TOOL_APMFirmware.SelectedIndex =
                         _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduSub);
                 }
-                else if (comPort.MAV.cs.firmware.Equals( Firmwares.ArduPlane))
+                else if (comPort.MAV.cs.firmware == Firmwares.ArduPlane)
                 {
                     _connectionControl.TOOL_APMFirmware.SelectedIndex =
                         _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduPlane);
@@ -7658,15 +7659,15 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     if (comPort.BaseStream.IsOpen)
                     {
                         MenuFlightPlanner_Click(null, null);
-                        BUT_read_Click(null, null);
+                        FlightPlanner.BUT_read_Click(null, null);
                     }
                 }
 
                 // get any rallypoints
-                if (comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
-                    int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString()) > 0)
+                if (MainV2.comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
+                    int.Parse(MainV2.comPort.MAV.param["RALLY_TOTAL"].ToString()) > 0)
                 {
-                    getRallyPointsToolStripMenuItem_Click(null, null);
+                    FlightPlanner.getRallyPointsToolStripMenuItem_Click(null, null);
 
                     double maxdist = 0;
 
@@ -7693,11 +7694,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // get any fences
-                if (comPort.MAV.param.ContainsKey("FENCE_TOTAL") &&
-                    int.Parse(comPort.MAV.param["FENCE_TOTAL"].ToString()) > 1 &&
-                    comPort.MAV.param.ContainsKey("FENCE_ACTION"))
+                if (MainV2.comPort.MAV.param.ContainsKey("FENCE_TOTAL") &&
+                    int.Parse(MainV2.comPort.MAV.param["FENCE_TOTAL"].ToString()) > 1 &&
+                    MainV2.comPort.MAV.param.ContainsKey("FENCE_ACTION"))
                 {
-                    GeoFencedownloadToolStripMenuItem_Click(null, null);
+                    FlightPlanner.GeoFencedownloadToolStripMenuItem_Click(null, null);
                 }
 
                 // set connected icon
