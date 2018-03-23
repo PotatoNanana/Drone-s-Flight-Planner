@@ -108,42 +108,42 @@ namespace MissionPlanner.GCSViews
                 BackstageViewPage start = null;
                 
                 ResourceManager rm = new ResourceManager(this.GetType());
-                var drone = AddBackstageViewPage(typeof(ConfigDrone), "Drone Setting");
+                //var drone = AddBackstageViewPage(typeof(ConfigDrone), "การทำงานของโดรน");
 
-                AddBackstageViewPage(typeof(ConfigFirmwareDisabled), " - FirmwareDisabled", isConnected );
-                AddBackstageViewPage(typeof(ConfigFirmware), " - Firmware", isDisConnected);
-                AddBackstageViewPage(typeof(ConfigWizard), " - Wizard");
+                //AddBackstageViewPage(typeof(ConfigFirmwareDisabled), " - FirmwareDisabled", isConnected );
+                //AddBackstageViewPage(typeof(ConfigFirmware), " - Firmware", isDisConnected);
+                AddBackstageViewPage(typeof(ConfigWizard), "ตั้งค่าเริ่มต่นของโดรน");
 
-                var mand = AddBackstageViewPage(typeof(ConfigMandatory), "Mandatory", isConnected);
-                AddBackstageViewPage(typeof(ConfigTradHeli), " - TradHeli", isHeli, mand);
-                AddBackstageViewPage(typeof(ConfigFrameType), " - Frame Type", isCopter && !isCopter35plus, mand);
-                AddBackstageViewPage(typeof(ConfigFrameClassType), " - FrameClassType", isCopter && isCopter35plus, mand);
-                AddBackstageViewPage(typeof(ConfigAccelerometerCalibration), " - Accelerometer Calibration", isConnected, mand);
-                AddBackstageViewPage(typeof(ConfigHWCompass), " - Compass", isConnected, mand);
-                AddBackstageViewPage(typeof(ConfigRadioInput), " - Radio Input", isConnected, mand);
-                AddBackstageViewPage(typeof(ConfigESCCalibration), " - ESC Calibration", isConnected, mand);
-                AddBackstageViewPage(typeof(ConfigFlightModes), " - Flight Modes", isConnected, mand);
-                AddBackstageViewPage(typeof(ConfigFailSafe), " - Fail Safe", isConnected, mand);
+                //var mand = AddBackstageViewPage(typeof(ConfigMandatory), "Mandatory", isConnected);
+                //AddBackstageViewPage(typeof(ConfigTradHeli), " - TradHeli", isHeli, mand);
+                //AddBackstageViewPage(typeof(ConfigFrameType), " - Frame Type", isCopter && !isCopter35plus, mand);
+                //AddBackstageViewPage(typeof(ConfigFrameClassType), " - FrameClassType", isCopter && isCopter35plus, mand);
+                //AddBackstageViewPage(typeof(ConfigAccelerometerCalibration), " - Accelerometer Calibration", isConnected, mand);
+                //AddBackstageViewPage(typeof(ConfigHWCompass), " - Compass", isConnected, mand);
+                //AddBackstageViewPage(typeof(ConfigRadioInput), " - Radio Input", isConnected, mand);
+                //AddBackstageViewPage(typeof(ConfigESCCalibration), " - ESC Calibration", isConnected, mand);
+                //AddBackstageViewPage(typeof(ConfigFlightModes), " - Flight Modes", isConnected, mand);
+                //AddBackstageViewPage(typeof(ConfigFailSafe), " - Fail Safe", isConnected, mand);
 
-                var opt = AddBackstageViewPage(typeof(ConfigOptional), " Optional", isConnected);
-                AddBackstageViewPage(typeof(ConfigGPSInject), " - RTK/GPS Inject", true, opt);
-                AddBackstageViewPage(typeof(Sikradio), " - Sikradio", true, opt);
-                AddBackstageViewPage(typeof(ConfigBatteryMonitoring), " - Battery Monitoring", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigBatteryMonitoring2), " - Battery Monitoring2", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigHWUAVCAN), " - UAVCAN", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigCompassMot), " - Compass Motor", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigHWRangeFinder), " - Range Finder", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigHWAirspeed), " - Airspeed", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigHWPX4Flow), " - PX4 Flow", true, opt);
-                AddBackstageViewPage(typeof(ConfigHWOptFlow), " - Opt Flow", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigHWOSD), " - OSD", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigMount), " - Mount", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigAntennaTracker), " - AntennaTracker", isTracker, opt);
-                AddBackstageViewPage(typeof(ConfigMotorTest), " - Motor Test", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigHWBT), " - BT", true, opt);
-                AddBackstageViewPage(typeof(ConfigHWParachute), " - Parachute", isConnected, opt);
-                AddBackstageViewPage(typeof(ConfigHWESP8266), " - ESP8266", isConnected, opt);
-                AddBackstageViewPage(typeof(Antenna.Tracker), " - Antenna Tracker", true, opt);
+                //var opt = AddBackstageViewPage(typeof(ConfigOptional), " Optional", isConnected);
+                //AddBackstageViewPage(typeof(ConfigGPSInject), " - RTK/GPS Inject", true, opt);
+                //AddBackstageViewPage(typeof(Sikradio), " - Sikradio", true, opt);
+                AddBackstageViewPage(typeof(ConfigBatteryMonitoring), "แบตเตอรี่ของโดรน", isConnected);
+                //AddBackstageViewPage(typeof(ConfigBatteryMonitoring2), " - Battery Monitoring2", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigHWUAVCAN), " - UAVCAN", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigCompassMot), " - Compass Motor", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigHWRangeFinder), " - Range Finder", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigHWAirspeed), " - Airspeed", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigHWPX4Flow), " - PX4 Flow", true, opt);
+                //AddBackstageViewPage(typeof(ConfigHWOptFlow), " - Opt Flow", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigHWOSD), " - OSD", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigMount), " - Mount", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigAntennaTracker), " - AntennaTracker", isTracker, opt);
+                //AddBackstageViewPage(typeof(ConfigMotorTest), " - Motor Test", isConnected, opt);
+                AddBackstageViewPage(typeof(ConfigHWBT), "บลูทูธ", true);
+                //AddBackstageViewPage(typeof(ConfigHWParachute), " - Parachute", isConnected, opt);
+                //AddBackstageViewPage(typeof(ConfigHWESP8266), " - ESP8266", isConnected, opt);
+                //AddBackstageViewPage(typeof(Antenna.Tracker), " - Antenna Tracker", true, opt);
 
 
                 // remeber last page accessed
@@ -159,57 +159,57 @@ namespace MissionPlanner.GCSViews
                 ThemeManager.ApplyThemeTo(this);
                 if (MainV2.comPort.BaseStream.IsOpen)
                 {
-                    start = AddBackstageViewPage(typeof(ConfigFlightModes), Strings.FlightModes);
+                    //start = AddBackstageViewPage(typeof(ConfigFlightModes), Strings.FlightModes);
 
-                    AddBackstageViewPage(typeof(ConfigApp), "Application Setting");
+                    AddBackstageViewPage(typeof(ConfigPlanner), "ตั้งค่าการทำงานโปรแกรม");
                     
-                    AddBackstageViewPage(typeof(ConfigPlanner), " - Setting", isConnected);
+                    //AddBackstageViewPage(typeof(ConfigPlanner), " - คลิกเพิื่อตั้งค่า", isConnected);
 
-                    if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
-                        AddBackstageViewPage(typeof( ConfigAC_Fence), Strings.GeoFence);
+                    //if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                    //    AddBackstageViewPage(typeof( ConfigAC_Fence), Strings.GeoFence);
 
-                    if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
-                    {
-                        start = AddBackstageViewPage(typeof( ConfigSimplePids), Strings.BasicTuning);
+                    //if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                    //{
+                    //    start = AddBackstageViewPage(typeof( ConfigSimplePids), Strings.BasicTuning);
 
-                        AddBackstageViewPage(typeof( ConfigArducopter), Strings.ExtendedTuning);
-                    }
+                    //    AddBackstageViewPage(typeof( ConfigArducopter), Strings.ExtendedTuning);
+                    //}
 
-                    if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduPlane)
-                    {
-                        start = AddBackstageViewPage(typeof( ConfigArduplane), Strings.BasicTuning);
-                    }
+                    //if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduPlane)
+                    //{
+                    //    start = AddBackstageViewPage(typeof( ConfigArduplane), Strings.BasicTuning);
+                    //}
 
-                    if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduRover)
-                    {
-                        start = AddBackstageViewPage(typeof( ConfigArdurover), Strings.BasicTuning);
-                    }
+                    //if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduRover)
+                    //{
+                    //    start = AddBackstageViewPage(typeof( ConfigArdurover), Strings.BasicTuning);
+                    //}
 
-                    if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduTracker)
-                    {
-                        start = AddBackstageViewPage(typeof( ConfigAntennaTracker), Strings.ExtendedTuning);
-                    }
-                    AddBackstageViewPage(typeof (ConfigFriendlyParams), Strings.StandardParams);
+                    //if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduTracker)
+                    //{
+                    //    start = AddBackstageViewPage(typeof( ConfigAntennaTracker), Strings.ExtendedTuning);
+                    //}
+                    //AddBackstageViewPage(typeof (ConfigFriendlyParams), Strings.StandardParams);
 
-                    if (MainV2.DisplayConfiguration.displayAdvancedParams)
-                    {
-                        AddBackstageViewPage(typeof (ConfigFriendlyParamsAdv), Strings.AdvancedParams, null, true);
-                    }
-                    if (MainV2.DisplayConfiguration.displayFullParamList)
-                    {
-                        AddBackstageViewPage(typeof (ConfigRawParams), Strings.FullParameterList, null, true);
-                    }
-                    if (MainV2.DisplayConfiguration.displayFullParamTree && !Program.MONO)
-                    {
-                        AddBackstageViewPage(typeof (ConfigRawParamsTree), Strings.FullParameterTree, null, true);
-                    }                    
+                    //if (MainV2.DisplayConfiguration.displayAdvancedParams)
+                    //{
+                    //    AddBackstageViewPage(typeof (ConfigFriendlyParamsAdv), Strings.AdvancedParams, null, true);
+                    //}
+                    //if (MainV2.DisplayConfiguration.displayFullParamList)
+                    //{
+                    //    AddBackstageViewPage(typeof (ConfigRawParams), Strings.FullParameterList, null, true);
+                    //}
+                    //if (MainV2.DisplayConfiguration.displayFullParamTree && !Program.MONO)
+                    //{
+                    //    AddBackstageViewPage(typeof (ConfigRawParamsTree), Strings.FullParameterTree, null, true);
+                    //}                    
 
-                    if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.Ateryx)
-                    {
-                        start = AddBackstageViewPage(typeof( ConfigFlightModes), Strings.FlightModes);
-                        AddBackstageViewPage(typeof( ConfigAteryxSensors), " - Ateryx Zero Sensors");
-                        AddBackstageViewPage(typeof( ConfigAteryx), " - Ateryx Pids");
-                    }
+                    //if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.Ateryx)
+                    //{
+                    //    start = AddBackstageViewPage(typeof( ConfigFlightModes), Strings.FlightModes);
+                    //    AddBackstageViewPage(typeof( ConfigAteryxSensors), " - Ateryx Zero Sensors");
+                    //    AddBackstageViewPage(typeof( ConfigAteryx), " - Ateryx Pids");
+                    //}
 
                 }
                 else

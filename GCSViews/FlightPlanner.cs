@@ -90,18 +90,6 @@ namespace MissionPlanner.GCSViews
             Absolute = MAVLink.MAV_FRAME.GLOBAL,
             Terrain = MAVLink.MAV_FRAME.GLOBAL_TERRAIN_ALT
         }
-        
-        public enum Firmwares
-        {
-            ArduPlane,
-            ArduCopter2,
-            ArduRover,
-            ArduSub,
-            Ateryx,
-            ArduTracker,
-            Gymbal,
-            PX4
-        }
 
         private void poieditToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -285,7 +273,7 @@ namespace MissionPlanner.GCSViews
                         cell.Value = alt.ToString();
                     if (ans == 0) // default
                         cell.Value = 50;
-                    if (ans == 0 && (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2)))
+                    if (ans == 0 && (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduCopter2)))
                         cell.Value = 15;
 
                     // not online and verify alt via srtm
@@ -938,12 +926,12 @@ namespace MissionPlanner.GCSViews
             {
                 reader.Read();
                 reader.ReadStartElement("CMD");
-                if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
-                    MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+                if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduPlane) ||
+                    MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.Ateryx))
                 {
                     reader.ReadToFollowing("APM");
                 }
-                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduRover))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduRover))
                 {
                     reader.ReadToFollowing("APRover");
                 }
@@ -5280,7 +5268,7 @@ namespace MissionPlanner.GCSViews
         {
             timer1.Start();
 
-            if (MainV2.comPort.BaseStream.IsOpen && MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2) &&
+            if (MainV2.comPort.BaseStream.IsOpen && MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduCopter2) &&
                 MainV2.comPort.MAV.cs.version < new Version(3, 3))
             {
                 CMB_altmode.Visible = false;
@@ -5945,8 +5933,8 @@ namespace MissionPlanner.GCSViews
             // take off pitch
             int topi = 0;
 
-            if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
-                MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+            if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduPlane) ||
+                MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.Ateryx))
             {
                 string top = "15";
 
@@ -6638,7 +6626,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         // TODO Config
         static string zone = "50s";
-        public static Speech speechEngine { get; set; }
         public static menuicons displayicons = new burntkermitmenuicons();
         DateTime connectButtonUpdate = DateTime.Now;
         DateTime connecttime = DateTime.Now;
@@ -7268,8 +7255,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             // take off pitch
             int topi = 0;
 
-            if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
-                MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+            if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduPlane) ||
+                MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.Ateryx))
             {
                 string top = "15";
 
@@ -7546,30 +7533,30 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 MainV2._connectionControl.UpdateSysIDS();
 
                 // detect firmware we are conected to.
-                if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2))
+                if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduCopter2))
                 {
                     MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduCopter2);
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(MainV2.Firmwares.ArduCopter2);
                 }
-                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.Ateryx))
                 {
                     MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.Ateryx);
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(MainV2.Firmwares.Ateryx);
                 }
-                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduRover))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduRover))
                 {
                     MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduRover);
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(MainV2.Firmwares.ArduRover);
                 }
-                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduSub))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduSub))
                 {
                     MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduSub);
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(MainV2.Firmwares.ArduSub);
                 }
-                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(MainV2.Firmwares.ArduPlane))
                 {
                     MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduPlane);
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(MainV2.Firmwares.ArduPlane);
                 }
 
                 // check for newer firmware
@@ -7770,8 +7757,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             log.Info("We are disconnecting");
             try
             {
-                if (speechEngine != null) // cancel all pending speech
-                    speechEngine.SpeakAsyncCancelAll();
+                if (MainV2.speechEngine != null) // cancel all pending speech
+                    MainV2.speechEngine.SpeakAsyncCancelAll();
 
                 MainV2.comPort.BaseStream.DtrEnable = false;
                 MainV2.comPort.Close();

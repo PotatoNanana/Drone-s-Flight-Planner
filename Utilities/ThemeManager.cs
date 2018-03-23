@@ -19,7 +19,7 @@ namespace MissionPlanner.Utilities
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        private static Themes _currentTheme = Themes.BurntKermit;
+        private static Themes _currentTheme = Themes.None;
 
         public static Themes CurrentTheme
         {
@@ -36,10 +36,10 @@ namespace MissionPlanner.Utilities
             /// <summary>
             /// Standard Planner Charcoal & Green colours
             /// </summary>
-            BurntKermit,
-            HighContrast,
-            Test,
-            Custom,
+            //BurntKermit,
+            //HighContrast,
+            //Test,
+            //Custom,
         }
 
         // Initialize to the default theme (BurntKermit)
@@ -101,23 +101,23 @@ namespace MissionPlanner.Utilities
 
             switch (_currentTheme)
             {
-                case Themes.BurntKermit:
-                    SetBurntKermitColors();
-                    ApplyTheme(control, 0);
-                    break;
+                //case Themes.BurntKermit:
+                //    SetBurntKermitColors();
+                //    ApplyTheme(control, 0);
+                //    break;
 
-                case Themes.HighContrast:
-                    SetHighContrastColours();
-                    ApplyTheme(control, 0);
-                    break;
+                //case Themes.HighContrast:
+                //    SetHighContrastColours();
+                //    ApplyTheme(control, 0);
+                //    break;
 
-                case Themes.Test:
-                    ApplyTestTheme(control, 0);
-                    break;
+                //case Themes.Test:
+                //    ApplyTestTheme(control, 0);
+                //    break;
 
-                case Themes.Custom:
-                    ApplyCustomTheme(control, 0);
-                    break;
+                //case Themes.Custom:
+                //    ApplyCustomTheme(control, 0);
+                //    break;
 
                 default:
                     break;
