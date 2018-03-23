@@ -29,7 +29,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPla
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\bin\Debug\net462\log4net.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.AssemblyInfo.cs
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.dll
