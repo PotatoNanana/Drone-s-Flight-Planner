@@ -25,8 +25,7 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
-                       
-           
+              
         }
 
         Controls.MainSwitcher MyView;
@@ -96,11 +95,27 @@ namespace MissionPlanner.GCSViews
         private void button2_Click(object sender, EventArgs e)
         {
             //delete drone
+            if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                con.Open();
+                String query = "DELETE FROM Drone where drone_id = '"+textBox_droneID.Text+"' ";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Delete Record  in DB Success!!");
+            }
+
         }
 
         private void button_serch_Click(object sender, EventArgs e)
         {
             //search drone
+            con.Open();
+            String query = "SELECT * FROM Drone where drone_id = '" + textBox_droneID.Text + "', drone_name = '"+textBox_droneName.Text+"' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Delete Record  in DB Success!!");
         }
 
         private void button_modify_Click(object sender, EventArgs e)
@@ -124,7 +139,8 @@ namespace MissionPlanner.GCSViews
 
         private void DG_Drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
+            textBox_droneName.Text = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace MissionPlanner.GCSViews
         SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlCommand cmd;
 
+
         public Menu_maintenance_pre()
         {
             InitializeComponent();

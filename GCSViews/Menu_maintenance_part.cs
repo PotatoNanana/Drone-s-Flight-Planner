@@ -27,43 +27,7 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
-
-            add_DG();
-
-            void add_DG()
-            {
-                int n = 0;
-                for(int i=1; i<=8; i++)
-                {
-                    n = DG_Farm.Rows.Add();
-                    DG_Farm.Rows[n].Cells[0].Value = "P001";
-                    DG_Farm.Rows[n].Cells[1].Value = "Battery";
-                    DG_Farm.Rows[n].Cells[2].Value = "-";
-                    DG_Farm.Rows[n].Cells[3].Value = "12/08/2016";
-                    DG_Farm.Rows[n].Cells[4].Value = "14/08/2016";
-                    DG_Farm.Rows[n].Cells[5].Value = "30/12/2017";
-                    DG_Farm.Rows[n].Cells[6].Value = "-";
-                    DG_Farm.Rows[n].Cells[8].Value = "2500";
-                    DG_Farm.Rows[n].Cells[9].Value = "AG Co.,ltd";
-                    DG_Farm.Rows[n].Cells[10].Value = "0942416587";
-                    DG_Farm.Rows[n].Cells[11].Value = "44 BanBung, Samut Prakarn";
-                    DG_Farm.Rows[n].Cells[12].Value = "ณภัทร";
-
-                    n = DG_Farm.Rows.Add();
-                    DG_Farm.Rows[n].Cells[0].Value = "P002";
-                    DG_Farm.Rows[n].Cells[1].Value = "propeller";
-                    DG_Farm.Rows[n].Cells[2].Value = "-";
-                    DG_Farm.Rows[n].Cells[3].Value = "12/08/2016";
-                    DG_Farm.Rows[n].Cells[4].Value = "14/08/2016";
-                    DG_Farm.Rows[n].Cells[5].Value = "30/12/2017";
-                    DG_Farm.Rows[n].Cells[6].Value = "-";
-                    DG_Farm.Rows[n].Cells[8].Value = "7600";
-                    DG_Farm.Rows[n].Cells[9].Value = "BJKK PLC.";
-                    DG_Farm.Rows[n].Cells[10].Value = "0841256987";
-                    DG_Farm.Rows[n].Cells[11].Value = "1544 Orn Nuch, Bangkok";
-                    DG_Farm.Rows[n].Cells[12].Value = "จุฬารัตน์";
-                }
-            }
+                        
         }
 
         Controls.MainSwitcher MyView;
@@ -147,8 +111,8 @@ namespace MissionPlanner.GCSViews
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form_Add_drone_part form_add_drone_part = new Form_Add_drone_part();
-            form_add_drone_part.ShowDialog();
+            Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre();
+            menu_maintenance_pre.ShowUserControl();
         }
 
         private void button_edit_Click(object sender, EventArgs e)

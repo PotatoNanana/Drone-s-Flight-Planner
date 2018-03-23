@@ -31,30 +31,30 @@
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_show = new System.Windows.Forms.Button();
+            this.button_serch = new System.Windows.Forms.Button();
+            this.textBox_droneName = new System.Windows.Forms.TextBox();
+            this.textBox_droneID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_edit = new System.Windows.Forms.Button();
+            this.button_detail = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
             this.DG_Drone = new MissionPlanner.Controls.MyDataGridView();
+            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drone_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneFlightPlannerDataSet = new MissionPlanner.DroneFlightPlannerDataSet();
             this.BUT_drone_add = new System.Windows.Forms.Button();
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.droneFlightPlannerDataSet = new MissionPlanner.DroneFlightPlannerDataSet();
             this.droneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.droneTableAdapter = new MissionPlanner.DroneFlightPlannerDataSetTableAdapters.DroneTableAdapter();
-            this.button_detail = new System.Windows.Forms.Button();
-            this.button_delete = new System.Windows.Forms.Button();
-            this.button_edit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_droneID = new System.Windows.Forms.TextBox();
-            this.textBox_droneName = new System.Windows.Forms.TextBox();
-            this.button_serch = new System.Windows.Forms.Button();
-            this.button_show = new System.Windows.Forms.Button();
-            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drone_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +91,123 @@
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
             // 
+            // button_show
+            // 
+            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_show.FlatAppearance.BorderSize = 0;
+            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_show.ForeColor = System.Drawing.Color.White;
+            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_show.Location = new System.Drawing.Point(531, 372);
+            this.button_show.Name = "button_show";
+            this.button_show.Size = new System.Drawing.Size(137, 48);
+            this.button_show.TabIndex = 18;
+            this.button_show.Text = "แสดงตาราง";
+            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_show.UseVisualStyleBackColor = false;
+            this.button_show.Click += new System.EventHandler(this.button_show_Click);
+            // 
+            // button_serch
+            // 
+            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_serch.FlatAppearance.BorderSize = 0;
+            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_serch.ForeColor = System.Drawing.Color.White;
+            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_serch.Location = new System.Drawing.Point(531, 223);
+            this.button_serch.Name = "button_serch";
+            this.button_serch.Size = new System.Drawing.Size(133, 48);
+            this.button_serch.TabIndex = 17;
+            this.button_serch.Text = "ค้นหาโดรน";
+            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_serch.UseVisualStyleBackColor = false;
+            this.button_serch.Click += new System.EventHandler(this.button_serch_Click);
+            // 
+            // textBox_droneName
+            // 
+            this.textBox_droneName.Location = new System.Drawing.Point(454, 153);
+            this.textBox_droneName.Name = "textBox_droneName";
+            this.textBox_droneName.Size = new System.Drawing.Size(200, 30);
+            this.textBox_droneName.TabIndex = 16;
+            // 
+            // textBox_droneID
+            // 
+            this.textBox_droneID.Location = new System.Drawing.Point(454, 96);
+            this.textBox_droneID.Name = "textBox_droneID";
+            this.textBox_droneID.Size = new System.Drawing.Size(200, 30);
+            this.textBox_droneID.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(354, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 24);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "ชื่อโดรน";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(354, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 24);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "รหัสโดรน";
+            // 
+            // button_edit
+            // 
+            this.button_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_edit.FlatAppearance.BorderSize = 0;
+            this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_edit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_edit.ForeColor = System.Drawing.Color.White;
+            this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_edit.Location = new System.Drawing.Point(531, 298);
+            this.button_edit.Name = "button_edit";
+            this.button_edit.Size = new System.Drawing.Size(134, 48);
+            this.button_edit.TabIndex = 12;
+            this.button_edit.Text = "แก้ไขโดรน";
+            this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_edit.UseVisualStyleBackColor = false;
+            this.button_edit.Click += new System.EventHandler(this.button_modify_Click);
+            // 
+            // button_detail
+            // 
+            this.button_detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_detail.FlatAppearance.BorderSize = 0;
+            this.button_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_detail.Font = new System.Drawing.Font("PJ Standard", 12F, System.Drawing.FontStyle.Bold);
+            this.button_detail.ForeColor = System.Drawing.Color.White;
+            this.button_detail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_detail.Location = new System.Drawing.Point(348, 224);
+            this.button_detail.Name = "button_detail";
+            this.button_detail.Size = new System.Drawing.Size(134, 48);
+            this.button_detail.TabIndex = 10;
+            this.button_detail.Text = "รายละเอียดส่วนประกอบ";
+            this.button_detail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_detail.UseVisualStyleBackColor = false;
+            this.button_detail.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button_delete
+            // 
+            this.button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_delete.FlatAppearance.BorderSize = 0;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_delete.ForeColor = System.Drawing.Color.White;
+            this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_delete.Location = new System.Drawing.Point(349, 298);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(133, 48);
+            this.button_delete.TabIndex = 11;
+            this.button_delete.Text = "ลบโดรน";
+            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button2_Click);
+            // 
             // DG_Drone
             // 
             this.DG_Drone.AutoGenerateColumns = false;
@@ -103,9 +220,27 @@
             this.DG_Drone.Location = new System.Drawing.Point(25, 70);
             this.DG_Drone.Name = "DG_Drone";
             this.DG_Drone.ReadOnly = true;
+            this.DG_Drone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Drone.Size = new System.Drawing.Size(298, 350);
             this.DG_Drone.TabIndex = 9;
             this.DG_Drone.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Drone_CellContentClick);
+            // 
+            // drone_id
+            // 
+            this.drone_id.HeaderText = "รหัสโดรน";
+            this.drone_id.Name = "drone_id";
+            this.drone_id.ReadOnly = true;
+            // 
+            // drone_name
+            // 
+            this.drone_name.HeaderText = "ชื่อโดรน";
+            this.drone_name.Name = "drone_name";
+            this.drone_name.ReadOnly = true;
+            // 
+            // droneFlightPlannerDataSet
+            // 
+            this.droneFlightPlannerDataSet.DataSetName = "DroneFlightPlannerDataSet";
+            this.droneFlightPlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // BUT_drone_add
             // 
@@ -163,11 +298,6 @@
             this.Main_but_farm.UseVisualStyleBackColor = false;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
-            // droneFlightPlannerDataSet
-            // 
-            this.droneFlightPlannerDataSet.DataSetName = "DroneFlightPlannerDataSet";
-            this.droneFlightPlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // droneBindingSource
             // 
             this.droneBindingSource.DataMember = "Drone";
@@ -176,135 +306,6 @@
             // droneTableAdapter
             // 
             this.droneTableAdapter.ClearBeforeFill = true;
-            // 
-            // button_detail
-            // 
-            this.button_detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_detail.FlatAppearance.BorderSize = 0;
-            this.button_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_detail.Font = new System.Drawing.Font("PJ Standard", 12F, System.Drawing.FontStyle.Bold);
-            this.button_detail.ForeColor = System.Drawing.Color.White;
-            this.button_detail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_detail.Location = new System.Drawing.Point(348, 224);
-            this.button_detail.Name = "button_detail";
-            this.button_detail.Size = new System.Drawing.Size(134, 48);
-            this.button_detail.TabIndex = 10;
-            this.button_detail.Text = "รายละเอียดส่วนประกอบ";
-            this.button_detail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_detail.UseVisualStyleBackColor = false;
-            this.button_detail.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button_delete
-            // 
-            this.button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_delete.FlatAppearance.BorderSize = 0;
-            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_delete.ForeColor = System.Drawing.Color.White;
-            this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_delete.Location = new System.Drawing.Point(349, 298);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(133, 48);
-            this.button_delete.TabIndex = 11;
-            this.button_delete.Text = "ลบโดรน";
-            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_delete.UseVisualStyleBackColor = false;
-            this.button_delete.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button_edit
-            // 
-            this.button_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_edit.FlatAppearance.BorderSize = 0;
-            this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_edit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_edit.ForeColor = System.Drawing.Color.White;
-            this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_edit.Location = new System.Drawing.Point(531, 298);
-            this.button_edit.Name = "button_edit";
-            this.button_edit.Size = new System.Drawing.Size(134, 48);
-            this.button_edit.TabIndex = 12;
-            this.button_edit.Text = "แก้ไขโดรน";
-            this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_edit.UseVisualStyleBackColor = false;
-            this.button_edit.Click += new System.EventHandler(this.button_modify_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(354, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 24);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "รหัสโดรน";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(354, 159);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 24);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "ชื่อโดรน";
-            // 
-            // textBox_droneID
-            // 
-            this.textBox_droneID.Location = new System.Drawing.Point(454, 96);
-            this.textBox_droneID.Name = "textBox_droneID";
-            this.textBox_droneID.Size = new System.Drawing.Size(200, 30);
-            this.textBox_droneID.TabIndex = 15;
-            // 
-            // textBox_droneName
-            // 
-            this.textBox_droneName.Location = new System.Drawing.Point(454, 153);
-            this.textBox_droneName.Name = "textBox_droneName";
-            this.textBox_droneName.Size = new System.Drawing.Size(200, 30);
-            this.textBox_droneName.TabIndex = 16;
-            // 
-            // button_serch
-            // 
-            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_serch.FlatAppearance.BorderSize = 0;
-            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_serch.ForeColor = System.Drawing.Color.White;
-            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_serch.Location = new System.Drawing.Point(531, 223);
-            this.button_serch.Name = "button_serch";
-            this.button_serch.Size = new System.Drawing.Size(133, 48);
-            this.button_serch.TabIndex = 17;
-            this.button_serch.Text = "ค้นหาโดรน";
-            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_serch.UseVisualStyleBackColor = false;
-            this.button_serch.Click += new System.EventHandler(this.button_serch_Click);
-            // 
-            // button_show
-            // 
-            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button_show.FlatAppearance.BorderSize = 0;
-            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_show.ForeColor = System.Drawing.Color.White;
-            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(531, 372);
-            this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(137, 48);
-            this.button_show.TabIndex = 18;
-            this.button_show.Text = "แสดงตาราง";
-            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_show.UseVisualStyleBackColor = false;
-            this.button_show.Click += new System.EventHandler(this.button_show_Click);
-            // 
-            // drone_id
-            // 
-            this.drone_id.HeaderText = "รหัสโดรน";
-            this.drone_id.Name = "drone_id";
-            this.drone_id.ReadOnly = true;
-            // 
-            // drone_name
-            // 
-            this.drone_name.HeaderText = "ชื่อโดรน";
-            this.drone_name.Name = "drone_name";
-            this.drone_name.ReadOnly = true;
             // 
             // Menu_maintenance
             // 
@@ -318,8 +319,8 @@
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).EndInit();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet)).EndInit();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).EndInit();
             this.ResumeLayout(false);
 

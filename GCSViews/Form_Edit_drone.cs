@@ -55,11 +55,11 @@ namespace MissionPlanner.GCSViews
         private void BUT_save_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "INSERT INTO Drone (drone_id,drone_name) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "')";
+            String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("Save To DB Success!!");
+            MessageBox.Show("Update To DB Success!!");
 
         }
 
