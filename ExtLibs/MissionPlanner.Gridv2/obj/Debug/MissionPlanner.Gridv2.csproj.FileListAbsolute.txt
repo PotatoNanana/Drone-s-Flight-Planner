@@ -27,5 +27,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.pdb
-C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.dll
-C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.pdb

@@ -36,7 +36,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GeoUtility\obj\Debug\GeoUtility.pdb
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\GeoUtility\bin\Debug\GeoUtility.dll
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\GeoUtility\bin\Debug\GeoUtility.pdb
-C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\GeoUtility\obj\Debug\GeoUtility.csprojResolveAssemblyReference.cache
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\GeoUtility\obj\Debug\GeoUtility.Properties.Resources.resources
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\GeoUtility\obj\Debug\GeoUtility.csproj.GenerateResource.Cache
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\GeoUtility\obj\Debug\GeoUtility.csproj.CoreCompileInputs.cache

@@ -151,7 +151,7 @@ namespace MissionPlanner.GCSViews
 
             if (pointno == "Tracker Home")
             {
-                comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(lat, lng, alt, "");
+                MainV2.comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(lat, lng, alt, "");
                 return;
             }
 
@@ -285,7 +285,7 @@ namespace MissionPlanner.GCSViews
                         cell.Value = alt.ToString();
                     if (ans == 0) // default
                         cell.Value = 50;
-                    if (ans == 0 && (comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2)))
+                    if (ans == 0 && (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2)))
                         cell.Value = 15;
 
                     // not online and verify alt via srtm
@@ -310,8 +310,8 @@ namespace MissionPlanner.GCSViews
                                 ((int)(srtm.getAltitude(lat, lng).alt) * CurrentState.multiplierdist +
                                  int.Parse(TXT_DefaultAlt.Text) -
                                  (int)
-                                     srtm.getAltitude(comPort.MAV.cs.HomeLocation.Lat,
-                                         comPort.MAV.cs.HomeLocation.Lng).alt * CurrentState.multiplierdist)
+                                     srtm.getAltitude(MainV2.comPort.MAV.cs.HomeLocation.Lat,
+                                         MainV2.comPort.MAV.cs.HomeLocation.Lng).alt * CurrentState.multiplierdist)
                                     .ToString();
                         }
                     }
@@ -696,13 +696,13 @@ namespace MissionPlanner.GCSViews
             MyView = new MainSwitcher(this);
             titlebar = splash.Text;
 
-            _connectionControl = connectionControl1;
-            _connectionControl.CMB_baudrate.TextChanged += this.CMB_baudrate_TextChanged;
-            _connectionControl.CMB_serialport.SelectedIndexChanged += this.CMB_serialport_SelectedIndexChanged;
-            _connectionControl.CMB_serialport.Click += this.CMB_serialport_Click;
-            _connectionControl.cmb_sysid.Click += cmb_sysid_Click;
+            MainV2._connectionControl = connectionControl1;
+            MainV2._connectionControl.CMB_baudrate.TextChanged += this.CMB_baudrate_TextChanged;
+            MainV2._connectionControl.CMB_serialport.SelectedIndexChanged += this.CMB_serialport_SelectedIndexChanged;
+            MainV2._connectionControl.CMB_serialport.Click += this.CMB_serialport_Click;
+            MainV2._connectionControl.cmb_sysid.Click += cmb_sysid_Click;
 
-            _connectionControl.ShowLinkStats += (sender, e) => ShowConnectionStatsForm();
+            MainV2._connectionControl.ShowLinkStats += (sender, e) => ShowConnectionStatsForm();
         }
 
         private Form connectionStatsForm;
@@ -725,7 +725,7 @@ namespace MissionPlanner.GCSViews
                 // Change the connection stats control, so that when/if the connection stats form is showing,
                 // there will be something to see
                 this.connectionStatsForm.Controls.Clear();
-                _connectionStats = new ConnectionStats(comPort);
+                _connectionStats = new ConnectionStats(MainV2.comPort);
                 this.connectionStatsForm.Controls.Add(_connectionStats);
                 this.connectionStatsForm.Width = _connectionStats.Width;
             }
@@ -735,45 +735,45 @@ namespace MissionPlanner.GCSViews
         }
         void cmb_sysid_Click(object sender, EventArgs e)
         {
-            _connectionControl.UpdateSysIDS();
+            MainV2._connectionControl.UpdateSysIDS();
         }
 
         private void CMB_serialport_Click(object sender, EventArgs e)
         {
-            string oldport = _connectionControl.CMB_serialport.Text;
+            string oldport = MainV2._connectionControl.CMB_serialport.Text;
             PopulateSerialportList();
-            if (_connectionControl.CMB_serialport.Items.Contains(oldport))
-                _connectionControl.CMB_serialport.Text = oldport;
+            if (MainV2._connectionControl.CMB_serialport.Items.Contains(oldport))
+                MainV2._connectionControl.CMB_serialport.Text = oldport;
         }
         private void PopulateSerialportList()
         {
-            _connectionControl.CMB_serialport.Items.Clear();
-            _connectionControl.CMB_serialport.Items.Add("AUTO");
-            _connectionControl.CMB_serialport.Items.AddRange(SerialPort.GetPortNames());
-            _connectionControl.CMB_serialport.Items.Add("TCP");
-            _connectionControl.CMB_serialport.Items.Add("UDP");
-            _connectionControl.CMB_serialport.Items.Add("UDPCl");
+            MainV2._connectionControl.CMB_serialport.Items.Clear();
+            MainV2._connectionControl.CMB_serialport.Items.Add("AUTO");
+            MainV2._connectionControl.CMB_serialport.Items.AddRange(SerialPort.GetPortNames());
+            MainV2._connectionControl.CMB_serialport.Items.Add("TCP");
+            MainV2._connectionControl.CMB_serialport.Items.Add("UDP");
+            MainV2._connectionControl.CMB_serialport.Items.Add("UDPCl");
         }
 
         private void CMB_serialport_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comPortName = _connectionControl.CMB_serialport.Text;
-            if (comPortName == "UDP" || comPortName == "UDPCl" || comPortName == "TCP" || comPortName == "AUTO")
+            MainV2.comPortName = MainV2._connectionControl.CMB_serialport.Text;
+            if (MainV2.comPortName == "UDP" || MainV2.comPortName == "UDPCl" || MainV2.comPortName == "TCP" || MainV2.comPortName == "AUTO")
             {
-                _connectionControl.CMB_baudrate.Enabled = false;
+                MainV2._connectionControl.CMB_baudrate.Enabled = false;
             }
             else
             {
-                _connectionControl.CMB_baudrate.Enabled = true;
+                MainV2._connectionControl.CMB_baudrate.Enabled = true;
             }
 
             try
             {
                 // check for saved baud rate and restore
-                if (Settings.Instance[_connectionControl.CMB_serialport.Text + "_BAUD"] != null)
+                if (Settings.Instance[MainV2._connectionControl.CMB_serialport.Text + "_BAUD"] != null)
                 {
-                    _connectionControl.CMB_baudrate.Text =
-                        Settings.Instance[_connectionControl.CMB_serialport.Text + "_BAUD"];
+                    MainV2._connectionControl.CMB_baudrate.Text =
+                        Settings.Instance[MainV2._connectionControl.CMB_serialport.Text + "_BAUD"];
                 }
             }
             catch
@@ -783,55 +783,39 @@ namespace MissionPlanner.GCSViews
 
         private void CMB_baudrate_TextChanged(object sender, EventArgs e)
         {
-            comPortBaud = int.Parse(_connectionControl.CMB_baudrate.Text);
+            MainV2.comPortBaud = int.Parse(MainV2._connectionControl.CMB_baudrate.Text);
             var sb = new StringBuilder();
             int baud = 0;
-            for (int i = 0; i < _connectionControl.CMB_baudrate.Text.Length; i++)
-                if (char.IsDigit(_connectionControl.CMB_baudrate.Text[i]))
+            for (int i = 0; i < MainV2._connectionControl.CMB_baudrate.Text.Length; i++)
+                if (char.IsDigit(MainV2._connectionControl.CMB_baudrate.Text[i]))
                 {
-                    sb.Append(_connectionControl.CMB_baudrate.Text[i]);
-                    baud = baud * 10 + _connectionControl.CMB_baudrate.Text[i] - '0';
+                    sb.Append(MainV2._connectionControl.CMB_baudrate.Text[i]);
+                    baud = baud * 10 + MainV2._connectionControl.CMB_baudrate.Text[i] - '0';
                 }
-            if (_connectionControl.CMB_baudrate.Text != sb.ToString())
+            if (MainV2._connectionControl.CMB_baudrate.Text != sb.ToString())
             {
-                _connectionControl.CMB_baudrate.Text = sb.ToString();
+                MainV2._connectionControl.CMB_baudrate.Text = sb.ToString();
             }
             try
             {
-                if (baud > 0 && comPort.BaseStream.BaudRate != baud)
-                    comPort.BaseStream.BaudRate = baud;
+                if (baud > 0 && MainV2.comPort.BaseStream.BaudRate != baud)
+                    MainV2.comPort.BaseStream.BaudRate = baud;
             }
             catch (Exception)
             {
             }
         }
-        public static MAVLinkInterface comPort
-        {
-            get
-            {
-                return _comPort;
-            }
-            set
-            {
-                if (_comPort == value)
-                    return;
-                _comPort = value;
-                _comPort.MavChanged -= instance.comPort_MavChanged;
-                _comPort.MavChanged += instance.comPort_MavChanged;
-                instance.comPort_MavChanged(null, null);
-            }
-        }
-        static MAVLinkInterface _comPort = new MAVLinkInterface();
+        
         Controls.MainSwitcher MyView;
         void comPort_MavChanged(object sender, EventArgs e)
         {
-            log.Info("Mav Changed " + comPort.MAV.sysid);
+            log.Info("Mav Changed " + MainV2.comPort.MAV.sysid);
 
-            HUD.Custom.src = comPort.MAV.cs;
+            HUD.Custom.src = MainV2.comPort.MAV.cs;
 
-            CustomWarning.defaultsrc = comPort.MAV.cs;
+            CustomWarning.defaultsrc = MainV2.comPort.MAV.cs;
 
-            MissionPlanner.Controls.PreFlight.CheckListItem.defaultsrc = comPort.MAV.cs;
+            MissionPlanner.Controls.PreFlight.CheckListItem.defaultsrc = MainV2.comPort.MAV.cs;
 
             // when uploading a firmware we dont want to reload this screen.
             if (instance.MyView.current.Control != null && instance.MyView.current.Control.GetType() == typeof(GCSViews.InitialSetup))
@@ -948,18 +932,18 @@ namespace MissionPlanner.GCSViews
                 return cmd;
             }
 
-            log.Info("Reading MAV_CMD for " + comPort.MAV.cs.firmware);
+            log.Info("Reading MAV_CMD for " + MainV2.comPort.MAV.cs.firmware);
 
             using (XmlReader reader = XmlReader.Create(file))
             {
                 reader.Read();
                 reader.ReadStartElement("CMD");
-                if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
-                    comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+                if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
+                    MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
                 {
                     reader.ReadToFollowing("APM");
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduRover))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduRover))
                 {
                     reader.ReadToFollowing("APRover");
                 }
@@ -1934,7 +1918,7 @@ namespace MissionPlanner.GCSViews
         void setgradanddistandaz()
         {
             int a = 0;
-            PointLatLngAlt last = comPort.MAV.cs.HomeLocation;
+            PointLatLngAlt last = MainV2.comPort.MAV.cs.HomeLocation;
             foreach (var lla in pointlist)
             {
                 if (lla == null)
@@ -2130,14 +2114,14 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                MAVLinkInterface port = comPort;
+                MAVLinkInterface port = MainV2.comPort;
 
                 if (!port.BaseStream.IsOpen)
                 {
                     throw new Exception("Please Connect First!");
                 }
 
-                comPort.giveComport = true;
+                MainV2.comPort.giveComport = true;
 
                 log.Info("Getting Home");
 
@@ -2205,15 +2189,15 @@ namespace MissionPlanner.GCSViews
 
                    try
                    {
-                       if (withrally && comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
-                           int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString()) >= 1)
+                       if (withrally && MainV2.comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
+                           int.Parse(MainV2.comPort.MAV.param["RALLY_TOTAL"].ToString()) >= 1)
                            getRallyPointsToolStripMenuItem_Click(null, null);
                    }
                    catch
                    {
                    }
 
-                   comPort.giveComport = false;
+                   MainV2.comPort.giveComport = false;
 
                    BUT_read.Enabled = true;
 
@@ -2373,14 +2357,14 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                MAVLinkInterface port = comPort;
+                MAVLinkInterface port = MainV2.comPort;
 
                 if (!port.BaseStream.IsOpen)
                 {
                     throw new Exception("Please connect first!");
                 }
 
-                comPort.giveComport = true;
+                MainV2.comPort.giveComport = true;
                 int a = 0;
 
                 // define the home point
@@ -2398,16 +2382,16 @@ namespace MissionPlanner.GCSViews
                 }
 
                 // log
-                log.Info("wps values " + comPort.MAV.wps.Values.Count);
+                log.Info("wps values " + MainV2.comPort.MAV.wps.Values.Count);
                 log.Info("cmd rows " + (Commands.Rows.Count + 1)); // + home
 
                 // check for changes / future mod to send just changed wp's
-                if (comPort.MAV.wps.Values.Count == (Commands.Rows.Count + 1))
+                if (MainV2.comPort.MAV.wps.Values.Count == (Commands.Rows.Count + 1))
                 {
                     Hashtable wpstoupload = new Hashtable();
 
                     a = -1;
-                    foreach (var item in comPort.MAV.wps.Values)
+                    foreach (var item in MainV2.comPort.MAV.wps.Values)
                     {
                         // skip home
                         if (a == -1)
@@ -2603,11 +2587,11 @@ namespace MissionPlanner.GCSViews
             catch (Exception ex)
             {
                 log.Error(ex);
-                comPort.giveComport = false;
+                MainV2.comPort.giveComport = false;
                 throw;
             }
 
-            comPort.giveComport = false;
+            MainV2.comPort.giveComport = false;
         }
 
         /// <summary>
@@ -2771,7 +2755,7 @@ namespace MissionPlanner.GCSViews
             {
                 log.Info("Loading wp params");
 
-                Dictionary<string, double> param = new Dictionary<string, double>((Dictionary<string, double>)comPort.MAV.param);
+                Dictionary<string, double> param = new Dictionary<string, double>((Dictionary<string, double>)MainV2.comPort.MAV.param);
 
                 if (param.ContainsKey("WP_RADIUS"))
                 {
@@ -2983,7 +2967,7 @@ namespace MissionPlanner.GCSViews
             sethome = false;
             try
             {
-                comPort.MAV.cs.HomeLocation.Lat = double.Parse(TXT_homelat.Text);
+                MainV2.comPort.MAV.cs.HomeLocation.Lat = double.Parse(TXT_homelat.Text);
             }
             catch (Exception ex)
             {
@@ -2997,7 +2981,7 @@ namespace MissionPlanner.GCSViews
             sethome = false;
             try
             {
-                comPort.MAV.cs.HomeLocation.Lng = double.Parse(TXT_homelng.Text);
+                MainV2.comPort.MAV.cs.HomeLocation.Lng = double.Parse(TXT_homelng.Text);
             }
             catch (Exception ex)
             {
@@ -3011,7 +2995,7 @@ namespace MissionPlanner.GCSViews
             sethome = false;
             try
             {
-                comPort.MAV.cs.HomeLocation.Alt = double.Parse(TXT_homealt.Text);
+                MainV2.comPort.MAV.cs.HomeLocation.Alt = double.Parse(TXT_homealt.Text);
             }
             catch (Exception ex)
             {
@@ -4330,11 +4314,11 @@ namespace MissionPlanner.GCSViews
 
         private void label4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (comPort.MAV.cs.lat != 0)
+            if (MainV2.comPort.MAV.cs.lat != 0)
             {
-                TXT_homealt.Text = (comPort.MAV.cs.altasl).ToString("0");
-                TXT_homelat.Text = comPort.MAV.cs.lat.ToString();
-                TXT_homelng.Text = comPort.MAV.cs.lng.ToString();
+                TXT_homealt.Text = (MainV2.comPort.MAV.cs.altasl).ToString("0");
+                TXT_homelat.Text = MainV2.comPort.MAV.cs.lat.ToString();
+                TXT_homelng.Text = MainV2.comPort.MAV.cs.lng.ToString();
             }
             else
             {
@@ -4693,25 +4677,25 @@ namespace MissionPlanner.GCSViews
 
                 routesoverlay.Markers.Clear();
 
-                if (comPort.MAV.cs.TrackerLocation != comPort.MAV.cs.HomeLocation &&
-                    comPort.MAV.cs.TrackerLocation.Lng != 0)
+                if (MainV2.comPort.MAV.cs.TrackerLocation != MainV2.comPort.MAV.cs.HomeLocation &&
+                    MainV2.comPort.MAV.cs.TrackerLocation.Lng != 0)
                 {
-                    addpolygonmarker("Tracker Home", comPort.MAV.cs.TrackerLocation.Lng,
-                        comPort.MAV.cs.TrackerLocation.Lat, (int)comPort.MAV.cs.TrackerLocation.Alt,
+                    addpolygonmarker("Tracker Home", MainV2.comPort.MAV.cs.TrackerLocation.Lng,
+                        MainV2.comPort.MAV.cs.TrackerLocation.Lat, (int)MainV2.comPort.MAV.cs.TrackerLocation.Alt,
                         Color.Blue, routesoverlay);
                 }
 
-                if (comPort.MAV.cs.lat == 0 || comPort.MAV.cs.lng == 0)
+                if (MainV2.comPort.MAV.cs.lat == 0 || MainV2.comPort.MAV.cs.lng == 0)
                     return;
 
-                var marker = Common.getMAVMarker(comPort.MAV);
+                var marker = Common.getMAVMarker(MainV2.comPort.MAV);
 
                 routesoverlay.Markers.Add(marker);
 
-                if (comPort.MAV.cs.mode.ToLower() == "guided" && comPort.MAV.GuidedMode.x != 0)
+                if (MainV2.comPort.MAV.cs.mode.ToLower() == "guided" && MainV2.comPort.MAV.GuidedMode.x != 0)
                 {
-                    addpolygonmarker("Guided Mode", comPort.MAV.GuidedMode.y, comPort.MAV.GuidedMode.x,
-                        (int)comPort.MAV.GuidedMode.z, Color.Blue, routesoverlay);
+                    addpolygonmarker("Guided Mode", MainV2.comPort.MAV.GuidedMode.y, MainV2.comPort.MAV.GuidedMode.x,
+                        (int)MainV2.comPort.MAV.GuidedMode.z, Color.Blue, routesoverlay);
                 }
 
                 //autopan
@@ -4719,7 +4703,7 @@ namespace MissionPlanner.GCSViews
                 {
                     if (route.Points[route.Points.Count - 1].Lat != 0 && (mapupdate.AddSeconds(3) < DateTime.Now))
                     {
-                        PointLatLng currentloc = new PointLatLng(comPort.MAV.cs.lat, comPort.MAV.cs.lng);
+                        PointLatLng currentloc = new PointLatLng(MainV2.comPort.MAV.cs.lat, MainV2.comPort.MAV.cs.lng);
                         updateMapPosition(currentloc);
                         mapupdate = DateTime.Now;
                     }
@@ -4796,7 +4780,7 @@ namespace MissionPlanner.GCSViews
             polygongridmode = false;
             //FENCE_ENABLE ON COPTER
             //FENCE_ACTION ON PLANE
-            if (!comPort.MAV.param.ContainsKey("FENCE_ENABLE") && !comPort.MAV.param.ContainsKey("FENCE_ACTION"))
+            if (!MainV2.comPort.MAV.param.ContainsKey("FENCE_ENABLE") && !MainV2.comPort.MAV.param.ContainsKey("FENCE_ACTION"))
             {
                 CustomMessageBox.Show("Not Supported");
                 return;
@@ -4835,10 +4819,10 @@ namespace MissionPlanner.GCSViews
             int minalt = 0;
             int maxalt = 0;
 
-            if (comPort.MAV.param.ContainsKey("FENCE_MINALT"))
+            if (MainV2.comPort.MAV.param.ContainsKey("FENCE_MINALT"))
             {
                 string minalts =
-                    (int.Parse(comPort.MAV.param["FENCE_MINALT"].ToString()) * CurrentState.multiplierdist)
+                    (int.Parse(MainV2.comPort.MAV.param["FENCE_MINALT"].ToString()) * CurrentState.multiplierdist)
                         .ToString(
                             "0");
                 if (DialogResult.Cancel == InputBox.Show("Min Alt", "Box Minimum Altitude?", ref minalts))
@@ -4851,10 +4835,10 @@ namespace MissionPlanner.GCSViews
                 }
             }
 
-            if (comPort.MAV.param.ContainsKey("FENCE_MAXALT"))
+            if (MainV2.comPort.MAV.param.ContainsKey("FENCE_MAXALT"))
             {
                 string maxalts =
-                    (int.Parse(comPort.MAV.param["FENCE_MAXALT"].ToString()) * CurrentState.multiplierdist)
+                    (int.Parse(MainV2.comPort.MAV.param["FENCE_MAXALT"].ToString()) * CurrentState.multiplierdist)
                         .ToString(
                             "0");
                 if (DialogResult.Cancel == InputBox.Show("Max Alt", "Box Maximum Altitude?", ref maxalts))
@@ -4869,10 +4853,10 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                if (comPort.MAV.param.ContainsKey("FENCE_MINALT"))
-                    comPort.setParam("FENCE_MINALT", minalt);
-                if (comPort.MAV.param.ContainsKey("FENCE_MAXALT"))
-                    comPort.setParam("FENCE_MAXALT", maxalt);
+                if (MainV2.comPort.MAV.param.ContainsKey("FENCE_MINALT"))
+                    MainV2.comPort.setParam("FENCE_MINALT", minalt);
+                if (MainV2.comPort.MAV.param.ContainsKey("FENCE_MAXALT"))
+                    MainV2.comPort.setParam("FENCE_MAXALT", maxalt);
             }
             catch (Exception ex)
             {
@@ -4881,11 +4865,11 @@ namespace MissionPlanner.GCSViews
                 return;
             }
 
-            float oldaction = (float)comPort.MAV.param["FENCE_ACTION"];
+            float oldaction = (float)MainV2.comPort.MAV.param["FENCE_ACTION"];
 
             try
             {
-                comPort.setParam("FENCE_ACTION", 0);
+                MainV2.comPort.setParam("FENCE_ACTION", 0);
             }
             catch
             {
@@ -4899,7 +4883,7 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                comPort.setParam("FENCE_TOTAL", pointcount);
+                MainV2.comPort.setParam("FENCE_TOTAL", pointcount);
             }
             catch
             {
@@ -4911,21 +4895,21 @@ namespace MissionPlanner.GCSViews
             {
                 byte a = 0;
                 // add return loc
-                comPort.setFencePoint(a, new PointLatLngAlt(geofenceoverlay.Markers[0].Position), pointcount);
+                MainV2.comPort.setFencePoint(a, new PointLatLngAlt(geofenceoverlay.Markers[0].Position), pointcount);
                 a++;
                 // add points
                 foreach (var pll in drawnpolygon.Points)
                 {
-                    comPort.setFencePoint(a, new PointLatLngAlt(pll), pointcount);
+                    MainV2.comPort.setFencePoint(a, new PointLatLngAlt(pll), pointcount);
                     a++;
                 }
 
                 // add polygon close
-                comPort.setFencePoint(a, new PointLatLngAlt(drawnpolygon.Points[0]), pointcount);
+                MainV2.comPort.setFencePoint(a, new PointLatLngAlt(drawnpolygon.Points[0]), pointcount);
 
                 try
                 {
-                    comPort.setParam("FENCE_ACTION", oldaction);
+                    MainV2.comPort.setParam("FENCE_ACTION", oldaction);
                 }
                 catch
                 {
@@ -4977,13 +4961,13 @@ namespace MissionPlanner.GCSViews
             polygongridmode = false;
             int count = 1;
 
-            if (comPort.MAV.param["FENCE_ACTION"] == null || comPort.MAV.param["FENCE_TOTAL"] == null)
+            if (MainV2.comPort.MAV.param["FENCE_ACTION"] == null || MainV2.comPort.MAV.param["FENCE_TOTAL"] == null)
             {
                 CustomMessageBox.Show("Not Supported");
                 return;
             }
 
-            if (int.Parse(comPort.MAV.param["FENCE_TOTAL"].ToString()) <= 1)
+            if (int.Parse(MainV2.comPort.MAV.param["FENCE_TOTAL"].ToString()) <= 1)
             {
                 CustomMessageBox.Show("Nothing to download");
                 return;
@@ -4998,7 +4982,7 @@ namespace MissionPlanner.GCSViews
             {
                 try
                 {
-                    PointLatLngAlt plla = comPort.getFencePoint(a, ref count);
+                    PointLatLngAlt plla = MainV2.comPort.getFencePoint(a, ref count);
                     geofencepolygon.Points.Add(new PointLatLng(plla.Lat, plla.Lng));
                 }
                 catch
@@ -5296,8 +5280,8 @@ namespace MissionPlanner.GCSViews
         {
             timer1.Start();
 
-            if (comPort.BaseStream.IsOpen && comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2) &&
-                comPort.MAV.cs.version < new Version(3, 3))
+            if (MainV2.comPort.BaseStream.IsOpen && MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2) &&
+                MainV2.comPort.MAV.cs.version < new Version(3, 3))
             {
                 CMB_altmode.Visible = false;
             }
@@ -5342,13 +5326,13 @@ namespace MissionPlanner.GCSViews
         private void updateHomeText()
         {
             // set home location
-            if (comPort.MAV.cs.HomeLocation.Lat != 0 && comPort.MAV.cs.HomeLocation.Lng != 0)
+            if (MainV2.comPort.MAV.cs.HomeLocation.Lat != 0 && MainV2.comPort.MAV.cs.HomeLocation.Lng != 0)
             {
-                TXT_homelat.Text = comPort.MAV.cs.HomeLocation.Lat.ToString();
+                TXT_homelat.Text = MainV2.comPort.MAV.cs.HomeLocation.Lat.ToString();
 
-                TXT_homelng.Text = comPort.MAV.cs.HomeLocation.Lng.ToString();
+                TXT_homelng.Text = MainV2.comPort.MAV.cs.HomeLocation.Lng.ToString();
 
-                TXT_homealt.Text = comPort.MAV.cs.HomeLocation.Alt.ToString();
+                TXT_homealt.Text = MainV2.comPort.MAV.cs.HomeLocation.Alt.ToString();
 
                 writeKML();
             }
@@ -5828,7 +5812,7 @@ namespace MissionPlanner.GCSViews
         private void elevationGraphToolStripMenuItem_Click(object sender, EventArgs e)
         {
             writeKML();
-            double homealt = comPort.MAV.cs.HomeAlt;
+            double homealt = MainV2.comPort.MAV.cs.HomeAlt;
             Form temp = new ElevationProfile(pointlist, homealt, (altmode)CMB_altmode.SelectedValue);
             ThemeManager.ApplyThemeTo(temp);
             temp.ShowDialog();
@@ -5961,8 +5945,8 @@ namespace MissionPlanner.GCSViews
             // take off pitch
             int topi = 0;
 
-            if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
-                comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+            if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
+                MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
             {
                 string top = "15";
 
@@ -6003,9 +5987,9 @@ namespace MissionPlanner.GCSViews
 
         private void trackerHomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(MouseDownEnd)
+            MainV2.comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(MouseDownEnd)
             {
-                Alt = comPort.MAV.cs.HomeAlt
+                Alt = MainV2.comPort.MAV.cs.HomeAlt
             };
         }
 
@@ -6290,13 +6274,13 @@ namespace MissionPlanner.GCSViews
 
         public void getRallyPointsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (comPort.MAV.param["RALLY_TOTAL"] == null)
+            if (MainV2.comPort.MAV.param["RALLY_TOTAL"] == null)
             {
                 CustomMessageBox.Show("Not Supported");
                 return;
             }
 
-            if (int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString()) < 1)
+            if (int.Parse(MainV2.comPort.MAV.param["RALLY_TOTAL"].ToString()) < 1)
             {
                 CustomMessageBox.Show("Rally points - Nothing to download");
                 return;
@@ -6304,13 +6288,13 @@ namespace MissionPlanner.GCSViews
 
             rallypointoverlay.Markers.Clear();
 
-            int count = int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString());
+            int count = int.Parse(MainV2.comPort.MAV.param["RALLY_TOTAL"].ToString());
 
             for (int a = 0; a < (count); a++)
             {
                 try
                 {
-                    PointLatLngAlt plla = comPort.getRallyPoint(a, ref count);
+                    PointLatLngAlt plla = MainV2.comPort.getRallyPoint(a, ref count);
                     rallypointoverlay.Markers.Add(new GMapMarkerRallyPt(new PointLatLng(plla.Lat, plla.Lng))
                     {
                         Alt = (int)plla.Alt,
@@ -6334,14 +6318,14 @@ namespace MissionPlanner.GCSViews
         {
             byte count = 0;
 
-            comPort.setParam("RALLY_TOTAL", rallypointoverlay.Markers.Count);
+            MainV2.comPort.setParam("RALLY_TOTAL", rallypointoverlay.Markers.Count);
 
             foreach (GMapMarkerRallyPt pnt in rallypointoverlay.Markers)
             {
                 try
                 {
-                    comPort.setRallyPoint(count, new PointLatLngAlt(pnt.Position) { Alt = pnt.Alt }, 0, 0, 0,
-                        (byte)(float)comPort.MAV.param["RALLY_TOTAL"]);
+                    MainV2.comPort.setRallyPoint(count, new PointLatLngAlt(pnt.Position) { Alt = pnt.Alt }, 0, 0, 0,
+                        (byte)(float)MainV2.comPort.MAV.param["RALLY_TOTAL"]);
                     count++;
                 }
                 catch
@@ -6385,14 +6369,14 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                comPort.setParam("RALLY_TOTAL", 0);
+                MainV2.comPort.setParam("RALLY_TOTAL", 0);
             }
             catch (Exception ex)
             {
                 log.Error(ex);
             }
             rallypointoverlay.Markers.Clear();
-            comPort.MAV.rallypoints.Clear();
+            MainV2.comPort.MAV.rallypoints.Clear();
         }
 
         private void loadKMLFileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -6654,9 +6638,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         // TODO Config
         static string zone = "50s";
-        static internal ConnectionControl _connectionControl;
-        private string comPortName;
-        private int comPortBaud;
         public static Speech speechEngine { get; set; }
         public static menuicons displayicons = new burntkermitmenuicons();
         DateTime connectButtonUpdate = DateTime.Now;
@@ -7184,7 +7165,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             try
             {
-                comPort.setParam("FENCE_ENABLE", 0);
+                MainV2.comPort.setParam("FENCE_ENABLE", 0);
             }
             catch
             {
@@ -7194,7 +7175,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             try
             {
-                comPort.setParam("FENCE_ACTION", 0);
+                MainV2.comPort.setParam("FENCE_ACTION", 0);
             }
             catch
             {
@@ -7204,7 +7185,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             try
             {
-                comPort.setParam("FENCE_TOTAL", 0);
+                MainV2.comPort.setParam("FENCE_TOTAL", 0);
             }
             catch
             {
@@ -7226,7 +7207,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void currentPositionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddWPToMap(comPort.MAV.cs.lat, comPort.MAV.cs.lng, (int)comPort.MAV.cs.alt);
+            AddWPToMap(MainV2.comPort.MAV.cs.lat, MainV2.comPort.MAV.cs.lng, (int)MainV2.comPort.MAV.cs.alt);
         }
 
         private void surveyGridToolStripMenuItem_Click(object sender, EventArgs e)
@@ -7287,8 +7268,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             // take off pitch
             int topi = 0;
 
-            if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
-                comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+            if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
+                MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
             {
                 string top = "15";
 
@@ -7341,12 +7322,12 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void MenuConnect_Click(object sender, EventArgs e)
         {
-            comPort.giveComport = false;
+            MainV2.comPort.giveComport = false;
 
             log.Info("MenuConnect Start");
 
             // sanity check
-            if (comPort.BaseStream.IsOpen && comPort.MAV.cs.groundspeed > 4)
+            if (MainV2.comPort.BaseStream.IsOpen && MainV2.comPort.MAV.cs.groundspeed > 4)
             {
                 if (DialogResult.No ==
                     CustomMessageBox.Show(Strings.Stillmoving, Strings.Disconnect, MessageBoxButtons.YesNo))
@@ -7359,31 +7340,31 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             {
                 log.Info("Cleanup last logfiles");
                 // cleanup from any previous sessions
-                if (comPort.logfile != null)
-                    comPort.logfile.Close();
+                if (MainV2.comPort.logfile != null)
+                    MainV2.comPort.logfile.Close();
 
-                if (comPort.rawlogfile != null)
-                    comPort.rawlogfile.Close();
+                if (MainV2.comPort.rawlogfile != null)
+                    MainV2.comPort.rawlogfile.Close();
             }
             catch (Exception ex)
             {
                 CustomMessageBox.Show(Strings.ErrorClosingLogFile + ex.Message, Strings.ERROR);
             }
 
-            comPort.logfile = null;
-            comPort.rawlogfile = null;
+            MainV2.comPort.logfile = null;
+            MainV2.comPort.rawlogfile = null;
 
             // decide if this is a connect or disconnect
-            if (comPort.BaseStream.IsOpen)
+            if (MainV2.comPort.BaseStream.IsOpen)
             {
-                doDisconnect(comPort);
+                doDisconnect(MainV2.comPort);
             }
             else
             {
-                doConnect(comPort, _connectionControl.CMB_serialport.Text, _connectionControl.CMB_baudrate.Text);
+                doConnect(MainV2.comPort, MainV2._connectionControl.CMB_serialport.Text, MainV2._connectionControl.CMB_baudrate.Text);
             }
 
-            _connectionControl.UpdateSysIDS();
+            MainV2._connectionControl.UpdateSysIDS();
 
             loadph_serial();
         }
@@ -7396,29 +7377,29 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             {
                 case "preset":
                     skipconnectcheck = true;
-                    if (comPort.BaseStream is TcpSerial)
-                        _connectionControl.CMB_serialport.Text = "TCP";
-                    if (comPort.BaseStream is UdpSerial)
-                        _connectionControl.CMB_serialport.Text = "UDP";
-                    if (comPort.BaseStream is UdpSerialConnect)
-                        _connectionControl.CMB_serialport.Text = "UDPCl";
-                    if (comPort.BaseStream is Comms.SerialPort)
+                    if (MainV2.comPort.BaseStream is TcpSerial)
+                        MainV2._connectionControl.CMB_serialport.Text = "TCP";
+                    if (MainV2.comPort.BaseStream is UdpSerial)
+                        MainV2._connectionControl.CMB_serialport.Text = "UDP";
+                    if (MainV2.comPort.BaseStream is UdpSerialConnect)
+                        MainV2._connectionControl.CMB_serialport.Text = "UDPCl";
+                    if (MainV2.comPort.BaseStream is Comms.SerialPort)
                     {
-                        _connectionControl.CMB_serialport.Text = comPort.BaseStream.PortName;
-                        _connectionControl.CMB_baudrate.Text = comPort.BaseStream.BaudRate.ToString();
+                        MainV2._connectionControl.CMB_serialport.Text = MainV2.comPort.BaseStream.PortName;
+                        MainV2._connectionControl.CMB_baudrate.Text = MainV2.comPort.BaseStream.BaudRate.ToString();
                     }
                     break;
                 case "TCP":
-                    comPort.BaseStream = new TcpSerial();
-                    _connectionControl.CMB_serialport.Text = "TCP";
+                    MainV2.comPort.BaseStream = new TcpSerial();
+                    MainV2._connectionControl.CMB_serialport.Text = "TCP";
                     break;
                 case "UDP":
-                    comPort.BaseStream = new UdpSerial();
-                    _connectionControl.CMB_serialport.Text = "UDP";
+                    MainV2.comPort.BaseStream = new UdpSerial();
+                    MainV2._connectionControl.CMB_serialport.Text = "UDP";
                     break;
                 case "UDPCl":
-                    comPort.BaseStream = new UdpSerialConnect();
-                    _connectionControl.CMB_serialport.Text = "UDPCl";
+                    MainV2.comPort.BaseStream = new UdpSerialConnect();
+                    MainV2._connectionControl.CMB_serialport.Text = "UDPCl";
                     break;
                 case "AUTO":
                     // do autoscan
@@ -7431,42 +7412,42 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                         if (DateTime.Now > deadline || Comms.CommsSerialScan.run == 0)
                         {
                             CustomMessageBox.Show(Strings.Timeout);
-                            _connectionControl.IsConnected(false);
+                            MainV2._connectionControl.IsConnected(false);
                             return;
                         }
                     }
                     return;
                 default:
-                    comPort.BaseStream = new SerialPort();
+                    MainV2.comPort.BaseStream = new SerialPort();
                     break;
             }
 
             // Tell the connection UI that we are now connected.
-            _connectionControl.IsConnected(true);
+            MainV2._connectionControl.IsConnected(true);
 
             // Here we want to reset the connection stats counter etc.
             this.ResetConnectionStats();
 
-            comPort.MAV.cs.ResetInternals();
+            MainV2.comPort.MAV.cs.ResetInternals();
 
             //cleanup any log being played
-            comPort.logreadmode = false;
-            if (comPort.logplaybackfile != null)
-                comPort.logplaybackfile.Close();
-            comPort.logplaybackfile = null;
+            MainV2.comPort.logreadmode = false;
+            if (MainV2.comPort.logplaybackfile != null)
+                MainV2.comPort.logplaybackfile.Close();
+            MainV2.comPort.logplaybackfile = null;
 
             try
             {
                 log.Info("Set Portname");
                 // set port, then options
                 if (portname.ToLower() != "preset")
-                    comPort.BaseStream.PortName = portname;
+                    MainV2.comPort.BaseStream.PortName = portname;
 
                 log.Info("Set Baudrate");
                 try
                 {
                     if (baud != "" && baud != "0")
-                        comPort.BaseStream.BaudRate = int.Parse(baud);
+                        MainV2.comPort.BaseStream.BaudRate = int.Parse(baud);
                 }
                 catch (Exception exp)
                 {
@@ -7474,20 +7455,20 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // prevent serialreader from doing anything
-                comPort.giveComport = true;
+                MainV2.comPort.giveComport = true;
 
                 log.Info("About to do dtr if needed");
                 // reset on connect logic.
                 if (Settings.Instance.GetBoolean("CHK_resetapmonconnect") == true)
                 {
                     log.Info("set dtr rts to false");
-                    comPort.BaseStream.DtrEnable = false;
-                    comPort.BaseStream.RtsEnable = false;
+                    MainV2.comPort.BaseStream.DtrEnable = false;
+                    MainV2.comPort.BaseStream.RtsEnable = false;
 
-                    comPort.BaseStream.toggleDTR();
+                    MainV2.comPort.BaseStream.toggleDTR();
                 }
 
-                comPort.giveComport = false;
+                MainV2.comPort.giveComport = false;
 
                 // setup to record new logs
                 try
@@ -7516,9 +7497,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                         }
 
                         //open the logs for writing
-                        comPort.logfile =
+                        MainV2.comPort.logfile =
                             new BufferedStream(File.Open(tlog, FileMode.CreateNew, FileAccess.ReadWrite, FileShare.None));
-                        comPort.rawlogfile =
+                        MainV2.comPort.rawlogfile =
                             new BufferedStream(File.Open(rlog, FileMode.CreateNew, FileAccess.ReadWrite, FileShare.None));
                         log.Info("creating logfile " + dt + ".tlog");
                     }
@@ -7533,16 +7514,16 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 connecttime = DateTime.Now;
 
                 // do the connect
-                comPort.Open(false, skipconnectcheck);
+                MainV2.comPort.Open(false, skipconnectcheck);
 
-                if (!comPort.BaseStream.IsOpen)
+                if (!MainV2.comPort.BaseStream.IsOpen)
                 {
-                    log.Info("comport is closed. existing connect");
+                    log.Info("MainV2.comPort is closed. existing connect");
                     try
                     {
-                        _connectionControl.IsConnected(false);
+                        MainV2._connectionControl.IsConnected(false);
                         UpdateConnectIcon();
-                        comPort.Close();
+                        MainV2.comPort.Close();
                     }
                     catch
                     {
@@ -7551,44 +7532,44 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // get all the params
-                foreach (var mavstate in comPort.MAVlist)
+                foreach (var mavstate in MainV2.comPort.MAVlist)
                 {
-                    comPort.sysidcurrent = mavstate.sysid;
-                    comPort.compidcurrent = mavstate.compid;
-                    comPort.getParamList();
+                    MainV2.comPort.sysidcurrent = mavstate.sysid;
+                    MainV2.comPort.compidcurrent = mavstate.compid;
+                    MainV2.comPort.getParamList();
                 }
 
                 // set to first seen
-                comPort.sysidcurrent = comPort.MAVlist.First().sysid;
-                comPort.compidcurrent = comPort.MAVlist.First().compid;
+                MainV2.comPort.sysidcurrent = MainV2.comPort.MAVlist.First().sysid;
+                MainV2.comPort.compidcurrent = MainV2.comPort.MAVlist.First().compid;
 
-                _connectionControl.UpdateSysIDS();
+                MainV2._connectionControl.UpdateSysIDS();
 
                 // detect firmware we are conected to.
-                if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2))
+                if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduCopter2))
                 {
-                    _connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduCopter2);
+                    MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduCopter2);
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
                 {
-                    _connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.Ateryx);
+                    MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.Ateryx);
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduRover))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduRover))
                 {
-                    _connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduRover);
+                    MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduRover);
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduSub))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduSub))
                 {
-                    _connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduSub);
+                    MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduSub);
                 }
-                else if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane))
+                else if (MainV2.comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane))
                 {
-                    _connectionControl.TOOL_APMFirmware.SelectedIndex =
-                        _connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduPlane);
+                    MainV2._connectionControl.TOOL_APMFirmware.SelectedIndex =
+                        MainV2._connectionControl.TOOL_APMFirmware.Items.IndexOf(Firmwares.ArduPlane);
                 }
 
                 // check for newer firmware
@@ -7598,7 +7579,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 {
                     try
                     {
-                        string[] fields1 = comPort.MAV.VersionString.Split(' ');
+                        string[] fields1 = MainV2.comPort.MAV.VersionString.Split(' ');
 
                         foreach (Firmware.software item in softwares)
                         {
@@ -7607,7 +7588,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                             // check primare firmware type. ie arudplane, arducopter
                             if (fields1[0] == fields2[0])
                             {
-                                Version ver1 = VersionDetection.GetVersion(comPort.MAV.VersionString);
+                                Version ver1 = VersionDetection.GetVersion(MainV2.comPort.MAV.VersionString);
                                 Version ver2 = VersionDetection.GetVersion(item.name);
 
                                 if (ver2 > ver1)
@@ -7630,17 +7611,17 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
                 FlightData.CheckBatteryShow();
 
-                MissionPlanner.Utilities.Tracking.AddEvent("Connect", "Connect", comPort.MAV.cs.firmware.ToString(),
-                    comPort.MAV.param.Count.ToString());
+                MissionPlanner.Utilities.Tracking.AddEvent("Connect", "Connect", MainV2.comPort.MAV.cs.firmware.ToString(),
+                    MainV2.comPort.MAV.param.Count.ToString());
                 MissionPlanner.Utilities.Tracking.AddTiming("Connect", "Connect Time",
                     (DateTime.Now - connecttime).TotalMilliseconds, "");
 
-                MissionPlanner.Utilities.Tracking.AddEvent("Connect", "Baud", comPort.BaseStream.BaudRate.ToString(), "");
+                MissionPlanner.Utilities.Tracking.AddEvent("Connect", "Baud", MainV2.comPort.BaseStream.BaudRate.ToString(), "");
 
                 // save the baudrate for this port
-                Settings.Instance[_connectionControl.CMB_serialport.Text + "_BAUD"] = _connectionControl.CMB_baudrate.Text;
+                Settings.Instance[MainV2._connectionControl.CMB_serialport.Text + "_BAUD"] = MainV2._connectionControl.CMB_baudrate.Text;
 
-                this.Text = titlebar + " " + comPort.MAV.VersionString;
+                this.Text = titlebar + " " + MainV2.comPort.MAV.VersionString;
 
                 // refresh config window if needed
                 if (MyView.current != null)
@@ -7655,7 +7636,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 if (Settings.Instance.GetBoolean("loadwpsonconnect") == true)
                 {
                     // only do it if we are connected.
-                    if (comPort.BaseStream.IsOpen)
+                    if (MainV2.comPort.BaseStream.IsOpen)
                     {
                         MenuFlightPlanner_Click(null, null);
                         BUT_read_Click(null, null);
@@ -7663,16 +7644,16 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // get any rallypoints
-                if (comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
-                    int.Parse(comPort.MAV.param["RALLY_TOTAL"].ToString()) > 0)
+                if (MainV2.comPort.MAV.param.ContainsKey("RALLY_TOTAL") &&
+                    int.Parse(MainV2.comPort.MAV.param["RALLY_TOTAL"].ToString()) > 0)
                 {
                     getRallyPointsToolStripMenuItem_Click(null, null);
 
                     double maxdist = 0;
 
-                    foreach (var rally in comPort.MAV.rallypoints)
+                    foreach (var rally in MainV2.comPort.MAV.rallypoints)
                     {
-                        foreach (var rally1 in comPort.MAV.rallypoints)
+                        foreach (var rally1 in MainV2.comPort.MAV.rallypoints)
                         {
                             var pnt1 = new PointLatLngAlt(rally.Value.lat / 10000000.0f, rally.Value.lng / 10000000.0f);
                             var pnt2 = new PointLatLngAlt(rally1.Value.lat / 10000000.0f, rally1.Value.lng / 10000000.0f);
@@ -7683,19 +7664,19 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                         }
                     }
 
-                    if (comPort.MAV.param.ContainsKey("RALLY_LIMIT_KM") &&
-                        (maxdist / 1000.0) > (float)comPort.MAV.param["RALLY_LIMIT_KM"])
+                    if (MainV2.comPort.MAV.param.ContainsKey("RALLY_LIMIT_KM") &&
+                        (maxdist / 1000.0) > (float)MainV2.comPort.MAV.param["RALLY_LIMIT_KM"])
                     {
                         CustomMessageBox.Show(Strings.Warningrallypointdistance + " " +
                                               (maxdist / 1000.0).ToString("0.00") + " > " +
-                                              (float)comPort.MAV.param["RALLY_LIMIT_KM"]);
+                                              (float)MainV2.comPort.MAV.param["RALLY_LIMIT_KM"]);
                     }
                 }
 
                 // get any fences
-                if (comPort.MAV.param.ContainsKey("FENCE_TOTAL") &&
-                    int.Parse(comPort.MAV.param["FENCE_TOTAL"].ToString()) > 1 &&
-                    comPort.MAV.param.ContainsKey("FENCE_ACTION"))
+                if (MainV2.comPort.MAV.param.ContainsKey("FENCE_TOTAL") &&
+                    int.Parse(MainV2.comPort.MAV.param["FENCE_TOTAL"].ToString()) > 1 &&
+                    MainV2.comPort.MAV.param.ContainsKey("FENCE_ACTION"))
                 {
                     GeoFencedownloadToolStripMenuItem_Click(null, null);
                 }
@@ -7708,9 +7689,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 log.Warn(ex);
                 try
                 {
-                    _connectionControl.IsConnected(false);
+                    MainV2._connectionControl.IsConnected(false);
                     UpdateConnectIcon();
-                    comPort.Close();
+                    MainV2.comPort.Close();
                 }
                 catch (Exception ex2)
                 {
@@ -7730,7 +7711,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             {
                 // else the form is already showing.  reset the stats
                 this.connectionStatsForm.Controls.Clear();
-                _connectionStats = new ConnectionStats(comPort);
+                _connectionStats = new ConnectionStats(MainV2.comPort);
                 this.connectionStatsForm.Controls.Add(_connectionStats);
                 ThemeManager.ApplyThemeTo(this.connectionStatsForm);
             }
@@ -7745,7 +7726,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             if ((DateTime.Now - connectButtonUpdate).Milliseconds > 500)
             {
                 //                        Console.WriteLine(DateTime.Now.Millisecond);
-                if (comPort.BaseStream.IsOpen)
+                if (MainV2.comPort.BaseStream.IsOpen)
                 {
                     if ((string)this.MenuConnect.Image.Tag != "Disconnect")
                     {
@@ -7754,7 +7735,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                             this.MenuConnect.Image = displayicons.disconnect;
                             this.MenuConnect.Image.Tag = "Disconnect";
                             this.MenuConnect.Text = Strings.DISCONNECTc;
-                            _connectionControl.IsConnected(true);
+                            MainV2._connectionControl.IsConnected(true);
                         });
                     }
                 }
@@ -7767,7 +7748,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                             this.MenuConnect.Image = displayicons.connect;
                             this.MenuConnect.Image.Tag = "Connect";
                             this.MenuConnect.Text = Strings.CONNECTc;
-                            _connectionControl.IsConnected(false);
+                            MainV2._connectionControl.IsConnected(false);
                             if (_connectionStats != null)
                             {
                                 _connectionStats.StopUpdates();
@@ -7775,9 +7756,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                         });
                     }
 
-                    if (comPort.logreadmode)
+                    if (MainV2.comPort.logreadmode)
                     {
-                        this.BeginInvoke((MethodInvoker)delegate { _connectionControl.IsConnected(true); });
+                        this.BeginInvoke((MethodInvoker)delegate { MainV2._connectionControl.IsConnected(true); });
                     }
                 }
                 connectButtonUpdate = DateTime.Now;
@@ -7792,8 +7773,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 if (speechEngine != null) // cancel all pending speech
                     speechEngine.SpeakAsyncCancelAll();
 
-                comPort.BaseStream.DtrEnable = false;
-                comPort.Close();
+                MainV2.comPort.BaseStream.DtrEnable = false;
+                MainV2.comPort.Close();
             }
             catch (Exception ex)
             {
@@ -7847,21 +7828,21 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
             try
             {
-                if (comPort.MAV.SerialString == "")
+                if (MainV2.comPort.MAV.SerialString == "")
                     return;
 
                 var serials = File.ReadAllLines("ph2_serial.csv");
 
                 foreach (var serial in serials)
                 {
-                    if (serial.Contains(comPort.MAV.SerialString.Substring(comPort.MAV.SerialString.Length - 26, 26)) &&
-                        !Settings.Instance.ContainsKey(comPort.MAV.SerialString.Replace(" ", "")))
+                    if (serial.Contains(MainV2.comPort.MAV.SerialString.Substring(MainV2.comPort.MAV.SerialString.Length - 26, 26)) &&
+                        !Settings.Instance.ContainsKey(MainV2.comPort.MAV.SerialString.Replace(" ", "")))
                     {
                         CustomMessageBox.Show(
                             "Your board has a Critical service bulletin please see [link;http://discuss.ardupilot.org/t/sb-0000001-critical-service-bulletin-for-beta-cube-2-1/14711;Click here]",
                             Strings.ERROR);
 
-                        Settings.Instance[comPort.MAV.SerialString.Replace(" ", "")] = true.ToString();
+                        Settings.Instance[MainV2.comPort.MAV.SerialString.Replace(" ", "")] = true.ToString();
                     }
                 }
             }
