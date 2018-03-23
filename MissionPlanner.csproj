@@ -485,6 +485,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlannerDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -500,6 +505,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FlightSchedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="flightSchedule1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>flightSchedule1.xsd</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\maintenance_RegisTool.cs">
       <SubType>UserControl</SubType>
@@ -751,6 +761,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Schedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schedule1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>schedule1.xsd</DependentUpon>
     </Compile>
     <Compile Include="ScheduleAct.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -4006,6 +4021,17 @@
     <None Include="DroneFlightPlannerDataSet2.xss">
       <DependentUpon>DroneFlightPlannerDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="DroneFlightPlannerDataSet3.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet3.xss">
+      <DependentUpon>DroneFlightPlannerDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="FArm.xsc">
       <DependentUpon>FArm.xsd</DependentUpon>
     </None>
@@ -4027,6 +4053,17 @@
     </None>
     <None Include="FlightSchedule.xss">
       <DependentUpon>FlightSchedule.xsd</DependentUpon>
+    </None>
+    <None Include="flightSchedule1.xsc">
+      <DependentUpon>flightSchedule1.xsd</DependentUpon>
+    </None>
+    <None Include="flightSchedule1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>flightSchedule1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="flightSchedule1.xss">
+      <DependentUpon>flightSchedule1.xsd</DependentUpon>
     </None>
     <None Include="Lib.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -4591,6 +4628,17 @@
     </None>
     <None Include="Schedule.xss">
       <DependentUpon>Schedule.xsd</DependentUpon>
+    </None>
+    <None Include="schedule1.xsc">
+      <DependentUpon>schedule1.xsd</DependentUpon>
+    </None>
+    <None Include="schedule1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>schedule1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schedule1.xss">
+      <DependentUpon>schedule1.xsd</DependentUpon>
     </None>
     <None Include="ScheduleAct.xsc">
       <DependentUpon>ScheduleAct.xsd</DependentUpon>

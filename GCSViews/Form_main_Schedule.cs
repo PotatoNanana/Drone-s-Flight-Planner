@@ -80,5 +80,10 @@ namespace MissionPlanner.GCSViews
         {
 
         }
+
+        private void button_show_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

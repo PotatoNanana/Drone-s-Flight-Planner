@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(434, 400);
+            this.panel1.Size = new System.Drawing.Size(434, 389);
             this.panel1.TabIndex = 0;
             // 
             // panel_Main_farm
@@ -83,13 +83,13 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(434, 400);
+            this.panel_Main_farm.Size = new System.Drawing.Size(434, 389);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
             // textBox_droneID
             // 
-            this.textBox_droneID.Location = new System.Drawing.Point(144, 121);
+            this.textBox_droneID.Location = new System.Drawing.Point(172, 122);
             this.textBox_droneID.Name = "textBox_droneID";
             this.textBox_droneID.Size = new System.Drawing.Size(200, 31);
             this.textBox_droneID.TabIndex = 17;
@@ -105,35 +105,35 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(144, 75);
+            this.dateTimePicker.Location = new System.Drawing.Point(172, 76);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(200, 31);
             this.dateTimePicker.TabIndex = 14;
             // 
             // textBox_cost
             // 
-            this.textBox_cost.Location = new System.Drawing.Point(144, 288);
+            this.textBox_cost.Location = new System.Drawing.Point(172, 289);
             this.textBox_cost.Name = "textBox_cost";
             this.textBox_cost.Size = new System.Drawing.Size(200, 31);
             this.textBox_cost.TabIndex = 13;
             // 
             // textBox_cap
             // 
-            this.textBox_cap.Location = new System.Drawing.Point(144, 248);
+            this.textBox_cap.Location = new System.Drawing.Point(172, 249);
             this.textBox_cap.Name = "textBox_cap";
             this.textBox_cap.Size = new System.Drawing.Size(200, 31);
             this.textBox_cap.TabIndex = 13;
             // 
             // textBox_actName
             // 
-            this.textBox_actName.Location = new System.Drawing.Point(144, 208);
+            this.textBox_actName.Location = new System.Drawing.Point(172, 209);
             this.textBox_actName.Name = "textBox_actName";
             this.textBox_actName.Size = new System.Drawing.Size(200, 31);
             this.textBox_actName.TabIndex = 13;
             // 
             // textBox_actID
             // 
-            this.textBox_actID.Location = new System.Drawing.Point(144, 168);
+            this.textBox_actID.Location = new System.Drawing.Point(172, 169);
             this.textBox_actID.Name = "textBox_actID";
             this.textBox_actID.Size = new System.Drawing.Size(200, 31);
             this.textBox_actID.TabIndex = 13;
@@ -141,7 +141,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 251);
+            this.label6.Location = new System.Drawing.Point(60, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 24);
             this.label6.TabIndex = 12;
@@ -171,7 +171,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 171);
+            this.label3.Location = new System.Drawing.Point(60, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 24);
             this.label3.TabIndex = 12;
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 400);
+            this.ClientSize = new System.Drawing.Size(434, 389);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Add_farm_act";

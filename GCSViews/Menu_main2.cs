@@ -175,7 +175,7 @@ namespace MissionPlanner.GCSViews
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
-            DG_farm.DataSource = dt;
+            DG_maintenance.DataSource = dt;
             con.Close();
         }
     }

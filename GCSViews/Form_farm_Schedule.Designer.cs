@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_Schedule));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
@@ -45,11 +46,21 @@
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.schedule_act = new MissionPlanner.schedule_act();
             this.schedule_actionTableAdapter = new MissionPlanner.schedule_actTableAdapters.schedule_actionTableAdapter();
+            this.droneFlightPlannerDataSet3 = new MissionPlanner.DroneFlightPlannerDataSet3();
+            this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flightScheduleTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet3TableAdapters.FlightScheduleTableAdapter();
+            this.schedulenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scheduledatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.schedule_act)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -191,8 +202,16 @@
             // 
             // DG_Farm
             // 
+            this.DG_Farm.AutoGenerateColumns = false;
             this.DG_Farm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DG_Farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.schedulenoDataGridViewTextBoxColumn,
+            this.scheduledatetimeDataGridViewTextBoxColumn,
+            this.farmidDataGridViewTextBoxColumn,
+            this.droneidDataGridViewTextBoxColumn,
+            this.actionnoDataGridViewTextBoxColumn});
+            this.DG_Farm.DataSource = this.flightScheduleBindingSource;
             this.DG_Farm.Location = new System.Drawing.Point(25, 75);
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -257,6 +276,50 @@
             // 
             this.schedule_actionTableAdapter.ClearBeforeFill = true;
             // 
+            // droneFlightPlannerDataSet3
+            // 
+            this.droneFlightPlannerDataSet3.DataSetName = "DroneFlightPlannerDataSet3";
+            this.droneFlightPlannerDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flightScheduleBindingSource
+            // 
+            this.flightScheduleBindingSource.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource.DataSource = this.droneFlightPlannerDataSet3;
+            // 
+            // flightScheduleTableAdapter
+            // 
+            this.flightScheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // schedulenoDataGridViewTextBoxColumn
+            // 
+            this.schedulenoDataGridViewTextBoxColumn.DataPropertyName = "schedule_no";
+            this.schedulenoDataGridViewTextBoxColumn.HeaderText = "เลขที่ปฎิทินการบิน";
+            this.schedulenoDataGridViewTextBoxColumn.Name = "schedulenoDataGridViewTextBoxColumn";
+            // 
+            // scheduledatetimeDataGridViewTextBoxColumn
+            // 
+            this.scheduledatetimeDataGridViewTextBoxColumn.DataPropertyName = "schedule_datetime";
+            this.scheduledatetimeDataGridViewTextBoxColumn.HeaderText = "วันที่";
+            this.scheduledatetimeDataGridViewTextBoxColumn.Name = "scheduledatetimeDataGridViewTextBoxColumn";
+            // 
+            // farmidDataGridViewTextBoxColumn
+            // 
+            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.HeaderText = "รหัสฟาร์ม";
+            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
+            // actionnoDataGridViewTextBoxColumn
+            // 
+            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.HeaderText = "รหัสกิจกรรม";
+            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
+            // 
             // Form_farm_Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,6 +336,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.schedule_act)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,5 +360,13 @@
         private System.Windows.Forms.Button button_delete;
         private schedule_act schedule_act;
         private schedule_actTableAdapters.schedule_actionTableAdapter schedule_actionTableAdapter;
+        private DroneFlightPlannerDataSet3 droneFlightPlannerDataSet3;
+        private System.Windows.Forms.BindingSource flightScheduleBindingSource;
+        private DroneFlightPlannerDataSet3TableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schedulenoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scheduledatetimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actionnoDataGridViewTextBoxColumn;
     }
 }

@@ -207,7 +207,7 @@
             this.button_futureAct.Name = "button_futureAct";
             this.button_futureAct.Size = new System.Drawing.Size(130, 40);
             this.button_futureAct.TabIndex = 10;
-            this.button_futureAct.Text = "กิจกiรมที่จะเกิด";
+            this.button_futureAct.Text = "กิจกรรมที่จะเกิด";
             this.button_futureAct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_futureAct.UseVisualStyleBackColor = false;
             this.button_futureAct.Click += new System.EventHandler(this.button_futureAct_Click);

@@ -67,7 +67,7 @@ namespace MissionPlanner.GCSViews
 
             String query2 = "INSERT INTO schedule_action (action_no,action_name,action_capacity,action_cost) " + "VALUES('" + textBox_actID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "')";
 
-            String query = "INSERT INTO FlightSchedule (farm_id,drone_id,action_no,schedule_date) " + "VALUES('" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actID.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
+            String query = "INSERT INTO FlightSchedule (farm_id,schedule_no,drone_id,action_no,schedule_datetime) " + "VALUES('" + id_farm + "','" + textBox_scheduleNo.Text + "','" + textBox_droneID.Text + "','" + textBox_actID.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
 
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             SDA2.SelectCommand.ExecuteNonQuery();

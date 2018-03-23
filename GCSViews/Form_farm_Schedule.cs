@@ -58,7 +58,8 @@ namespace MissionPlanner.GCSViews
             //string a = "yyyy-MM-dd";
             string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
-            String query = "SELECT * FROM schedule_action WHERE farm_id = '" + id_farm + "' AND action_date >= '" + dateNow + "' ";
+            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_date >= '" + dateNow + "' ";
+            //String query2 = "SELECT f.schedule_no, f.schedule_datetime, f.farm_id, f.drone_id, f.action_no,s.action_name,s.action_capacity,s.action_cost  FROM FlightSchedule AS f,schedule_action AS s WHERE f.action_no = s.action_no AND farm_id = '" + id_farm + "' ";// AND action_date >= '" + dateNow + "' "; 
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -94,8 +95,10 @@ namespace MissionPlanner.GCSViews
 
         private void Form_farm_Schedule_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet3.FlightSchedule' table. You can move, or remove it, as needed.
+            //this.flightScheduleTableAdapter.Fill(this.droneFlightPlannerDataSet3.FlightSchedule);
             // TODO: This line of code loads data into the 'schedule_act.schedule_action' table. You can move, or remove it, as needed.
-            this.schedule_actionTableAdapter.Fill(this.schedule_act.schedule_action);
+            //this.schedule_actionTableAdapter.Fill(this.schedule_act.schedule_action);
 
         }
 
