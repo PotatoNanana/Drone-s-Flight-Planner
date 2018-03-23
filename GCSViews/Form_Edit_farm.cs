@@ -21,6 +21,7 @@ namespace MissionPlanner.GCSViews
         public Form_Edit_farm(string id_farm)
         {
             this.id_farm = id_farm;
+            InitializeComponent();
         }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();

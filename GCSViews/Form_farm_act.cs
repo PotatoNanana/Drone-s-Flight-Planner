@@ -65,7 +65,7 @@ namespace MissionPlanner.GCSViews
             //string a = "yyyy-MM-dd";
             string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
-            String query = "SELECT * FROM schedule_action WHERE farm_id = '" + id_farm + "' AND action_date < dateNow";
+            String query = "SELECT * FROM schedule_action WHERE farm_id = '" + id_farm + "' AND action_date < '"+ dateNow+"' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -76,18 +76,21 @@ namespace MissionPlanner.GCSViews
         private void Form_farm_act_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'droneFlightPlannerDataSet1.schedule_action' table. You can move, or remove it, as needed.
-            this.schedule_actionTableAdapter.Fill(this.droneFlightPlannerDataSet1.schedule_action);
+            //this.schedule_actionTableAdapter.Fill(this.droneFlightPlannerDataSet1.schedule_action);
 
         }
 
         private void button_delete_Click(object sender, EventArgs e)
-        { 
+        {
             // delete
-            con.Open();
-            String query = "DELETE FROM schedule_action where action_id = '" + textBox_actID.Text + "' ";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            SDA.SelectCommand.ExecuteNonQuery();
-            con.Close();
+            if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                con.Open();
+                string query = "DELETE FROM schedule_action where action_id = '" + textBox_actID.Text + "' ";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+            }
             MessageBox.Show("DELETE Record From DB Success!!");
         }
 

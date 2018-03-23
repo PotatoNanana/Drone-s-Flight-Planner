@@ -11,78 +11,21 @@ using MissionPlanner.Comms;
 using MissionPlanner.Controls;
 using MissionPlanner.Log;
 using MissionPlanner.Utilities;
+using System.Data.SqlClient;
+
 
 namespace MissionPlanner.GCSViews
 {
     public partial class Menu_main2 : MyUserControl
     {
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+
         public Menu_main2()
         {
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
-            Add_DG();
-
-            void Add_DG()
-            {
-                int n = 0;
-                for (int i = 1; i <= 2; i++)
-                {
-                    n = DG_farm.Rows.Add();
-                    DG_farm.Rows[n].Cells[0].Value = "0001";
-                    DG_farm.Rows[n].Cells[1].Value = "Organic farm";
-                    DG_farm.Rows[n].Cells[2].Value = "Bangkok";
-                    DG_farm.Rows[n].Cells[3].Value = "Napat Jintanakosol";
-
-                    n = DG_farm.Rows.Add();
-                    DG_farm.Rows[n].Cells[0].Value = "0002";
-                    DG_farm.Rows[n].Cells[1].Value = "Black Forest";
-                    DG_farm.Rows[n].Cells[2].Value = "Samut Prakarn";
-                    DG_farm.Rows[n].Cells[3].Value = "Mookda";
-                }
-
-                for (int i = 1; i <= 3; i++)
-                {
-                    n = DG_schedule.Rows.Add();
-                    DG_schedule.Rows[n].Cells[0].Value = "24/08/2017";
-                    DG_schedule.Rows[n].Cells[1].Value = "0584";
-                    DG_schedule.Rows[n].Cells[2].Value = "0001";
-                    DG_schedule.Rows[n].Cells[3].Value = "สำรวจฟาร์ม";
-                    DG_schedule.Rows[n].Cells[4].Value = "0056";
-                    DG_schedule.Rows[n].Cells[5].Value = "DR01";
-
-                    n = DG_schedule.Rows.Add();
-                    DG_schedule.Rows[n].Cells[0].Value = "08/09/2016";
-                    DG_schedule.Rows[n].Cells[1].Value = "0778";
-                    DG_schedule.Rows[n].Cells[2].Value = "0002";
-                    DG_schedule.Rows[n].Cells[3].Value = "โรยปุ๋ย";
-                    DG_schedule.Rows[n].Cells[4].Value = "0078";
-                    DG_schedule.Rows[n].Cells[5].Value = "DR02";
-                }
-
-                for (int i = 1; i <= 3; i++)
-                {   
-                    n = DG_maintenance.Rows.Add();
-                    DG_maintenance.Rows[n].Cells[0].Value = "06/07/2017";
-                    DG_maintenance.Rows[n].Cells[1].Value = "0058";
-                    DG_maintenance.Rows[n].Cells[2].Value = "เปลี่ยนแบตเตอรี่";
-                    DG_maintenance.Rows[n].Cells[3].Value = "2000";
-                    DG_maintenance.Rows[n].Cells[4].Value = "ณภัทร";
-                    DG_maintenance.Rows[n].Cells[5].Value = "Aura";
-                    DG_maintenance.Rows[n].Cells[6].Value = "02-111-2589";
-                    DG_maintenance.Rows[n].Cells[7].Value = "Bangkok";
-
-                    n = DG_maintenance.Rows.Add();
-                    DG_maintenance.Rows[n].Cells[0].Value = "05/06/2017";
-                    DG_maintenance.Rows[n].Cells[1].Value = "0568";
-                    DG_maintenance.Rows[n].Cells[2].Value = "ตรวจสอบใบพัด";
-                    DG_maintenance.Rows[n].Cells[3].Value = "1500";
-                    DG_maintenance.Rows[n].Cells[4].Value = "จุฬารัตน์";
-                    DG_maintenance.Rows[n].Cells[5].Value = "Bang Chak";
-                    DG_maintenance.Rows[n].Cells[6].Value = "061-289-2658";
-                    DG_maintenance.Rows[n].Cells[7].Value = "Samut Sakorn";
-                }
-            }
+            
         }
         
         Controls.MainSwitcher MyView;
@@ -210,6 +153,30 @@ namespace MissionPlanner.GCSViews
         {
             Form_main_Schedule form_Schedule = new Form_main_Schedule();
             form_Schedule.ShowDialog();
+        }
+
+        private void button_showDGFarm_Click(object sender, EventArgs e)
+        {
+            //show data to DataGridView
+            con.Open();
+            String query = "SELECT * FROM Farm";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_farm.DataSource = dt;
+            con.Close();
+        }
+
+        private void button_showDGMaintain_Click(object sender, EventArgs e)
+        {
+            //show data to DataGridView
+            con.Open();
+            String query = "SELECT * FROM Maintainance";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_farm.DataSource = dt;
+            con.Close();
         }
     }
 }

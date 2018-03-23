@@ -124,6 +124,7 @@
             this.textBox_actName.Name = "textBox_actName";
             this.textBox_actName.Size = new System.Drawing.Size(187, 31);
             this.textBox_actName.TabIndex = 23;
+            this.textBox_actName.TextChanged += new System.EventHandler(this.textBox_actName_TextChanged);
             // 
             // textBox_actID
             // 
@@ -131,6 +132,7 @@
             this.textBox_actID.Name = "textBox_actID";
             this.textBox_actID.Size = new System.Drawing.Size(187, 31);
             this.textBox_actID.TabIndex = 22;
+            this.textBox_actID.TextChanged += new System.EventHandler(this.textBox_actID_TextChanged);
             // 
             // label2
             // 
@@ -140,6 +142,7 @@
             this.label2.Size = new System.Drawing.Size(68, 24);
             this.label2.TabIndex = 21;
             this.label2.Text = "ชื่อกิจกรรม";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -149,6 +152,7 @@
             this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 20;
             this.label1.Text = "รหัสกิจกรรม";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button_show
             // 

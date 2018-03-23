@@ -480,11 +480,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlannerDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DroneLog.Designer.cs">
       <DependentUpon>DroneLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FArm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FArm.xsd</DependentUpon>
     </Compile>
     <Compile Include="FlightSchedule.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -704,6 +714,11 @@
       <DependentUpon>LogDownloadscp.cs</DependentUpon>
     </Compile>
     <Compile Include="Log\test\MotorFailure.cs" />
+    <Compile Include="MAintain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MAintain.xsd</DependentUpon>
+    </Compile>
     <Compile Include="maintainace.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -741,6 +756,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ScheduleAct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="scheduleAct1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scheduleAct1.xsd</DependentUpon>
     </Compile>
     <Compile Include="schedule_act.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -3975,6 +3995,28 @@
     <None Include="DroneFlightPlannerDataSet1.xss">
       <DependentUpon>DroneFlightPlannerDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="DroneFlightPlannerDataSet2.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet2.xss">
+      <DependentUpon>DroneFlightPlannerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FArm.xsc">
+      <DependentUpon>FArm.xsd</DependentUpon>
+    </None>
+    <None Include="FArm.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FArm.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FArm.xss">
+      <DependentUpon>FArm.xsd</DependentUpon>
+    </None>
     <None Include="FlightSchedule.xsc">
       <DependentUpon>FlightSchedule.xsd</DependentUpon>
     </None>
@@ -4504,6 +4546,17 @@
     <None Include="Lib\__phello__.foo.py" />
     <None Include="LogAnalyzer\py2exe\createexe.bat" />
     <None Include="LogAnalyzer\upload.bat" />
+    <None Include="MAintain.xsc">
+      <DependentUpon>MAintain.xsd</DependentUpon>
+    </None>
+    <None Include="MAintain.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MAintain.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MAintain.xss">
+      <DependentUpon>MAintain.xsd</DependentUpon>
+    </None>
     <None Include="maintainace.xsc">
       <DependentUpon>maintainace.xsd</DependentUpon>
     </None>
@@ -4549,6 +4602,17 @@
     </None>
     <None Include="ScheduleAct.xss">
       <DependentUpon>ScheduleAct.xsd</DependentUpon>
+    </None>
+    <None Include="scheduleAct1.xsc">
+      <DependentUpon>scheduleAct1.xsd</DependentUpon>
+    </None>
+    <None Include="scheduleAct1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scheduleAct1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scheduleAct1.xss">
+      <DependentUpon>scheduleAct1.xsd</DependentUpon>
     </None>
     <None Include="schedule_act.xsc">
       <DependentUpon>schedule_act.xsd</DependentUpon>

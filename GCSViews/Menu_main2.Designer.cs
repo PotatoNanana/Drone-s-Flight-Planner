@@ -28,43 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.but_schedule = new System.Windows.Forms.Button();
             this.lineSeparator3 = new MissionPlanner.Controls.LineSeparator();
             this.DG_schedule = new MissionPlanner.Controls.MyDataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.DG_maintenance = new MissionPlanner.Controls.MyDataGridView();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Goto_farmMaintenance = new System.Windows.Forms.Button();
-            this.lineSeparator1 = new MissionPlanner.Controls.LineSeparator();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.DG_farm = new MissionPlanner.Controls.MyDataGridView();
-            this.FarmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FarmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FarmLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FarmHost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Goto_farmProfile = new System.Windows.Forms.Button();
-            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Main_but_farm = new System.Windows.Forms.Button();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.DG_maintenance = new MissionPlanner.Controls.MyDataGridView();
+            this.Goto_farmMaintenance = new System.Windows.Forms.Button();
+            this.lineSeparator1 = new MissionPlanner.Controls.LineSeparator();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.DG_farm = new MissionPlanner.Controls.MyDataGridView();
+            this.Goto_farmProfile = new System.Windows.Forms.Button();
+            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
+            this.button_showDGFarm = new System.Windows.Forms.Button();
+            this.button_showDGMaintain = new System.Windows.Forms.Button();
+            this.button_showDGSchedule = new System.Windows.Forms.Button();
+            this.fArm = new MissionPlanner.FArm();
+            this.farmBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.farmTableAdapter = new MissionPlanner.FArmTableAdapters.FarmTableAdapter();
+            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmhostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmlocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mAintain = new MissionPlanner.MAintain();
+            this.maintainanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maintainanceTableAdapter = new MissionPlanner.MAintainTableAdapters.MaintainanceTableAdapter();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintaindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainlengthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainresponderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainvenderNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainvenderAddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainvenderPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_schedule)).BeginInit();
@@ -75,6 +87,10 @@
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_farm)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fArm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mAintain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maintainanceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,6 +109,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.button_showDGSchedule);
             this.panel5.Controls.Add(this.but_schedule);
             this.panel5.Controls.Add(this.lineSeparator3);
             this.panel5.Controls.Add(this.DG_schedule);
@@ -111,7 +128,7 @@
             this.but_schedule.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
             this.but_schedule.ForeColor = System.Drawing.Color.White;
             this.but_schedule.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_schedule.Location = new System.Drawing.Point(261, 220);
+            this.but_schedule.Location = new System.Drawing.Point(404, 220);
             this.but_schedule.Name = "but_schedule";
             this.but_schedule.Size = new System.Drawing.Size(130, 40);
             this.but_schedule.TabIndex = 6;
@@ -147,6 +164,39 @@
             this.DG_schedule.TabIndex = 10;
             this.DG_schedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.myDataGridView2_CellContentClick);
             // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "วันที่";
+            this.Column18.Name = "Column18";
+            this.Column18.Width = 80;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "รหัสฟาร์ม";
+            this.Column6.Name = "Column6";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "รหัสกิจกรรม";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 120;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "ชื่อกิจกรรม";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "รูปแบบการบิน";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 120;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "รหัสโดรน";
+            this.Column9.Name = "Column9";
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.button5);
@@ -179,6 +229,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.button_showDGMaintain);
             this.panel2.Controls.Add(this.DG_maintenance);
             this.panel2.Controls.Add(this.Goto_farmMaintenance);
             this.panel2.Controls.Add(this.lineSeparator1);
@@ -192,65 +243,25 @@
             // 
             // DG_maintenance
             // 
+            this.DG_maintenance.AutoGenerateColumns = false;
             this.DG_maintenance.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_maintenance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_maintenance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column12,
-            this.Column10,
-            this.Column11,
-            this.Column13,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17});
+            this.droneidDataGridViewTextBoxColumn,
+            this.maintainidDataGridViewTextBoxColumn,
+            this.maintainactivityDataGridViewTextBoxColumn,
+            this.maintaindateDataGridViewTextBoxColumn,
+            this.maintainpriceDataGridViewTextBoxColumn,
+            this.maintainlengthDataGridViewTextBoxColumn,
+            this.maintainresponderDataGridViewTextBoxColumn,
+            this.maintainvenderNameDataGridViewTextBoxColumn,
+            this.maintainvenderAddDataGridViewTextBoxColumn,
+            this.maintainvenderPhoneDataGridViewTextBoxColumn});
+            this.DG_maintenance.DataSource = this.maintainanceBindingSource;
             this.DG_maintenance.Location = new System.Drawing.Point(25, 70);
             this.DG_maintenance.Name = "DG_maintenance";
             this.DG_maintenance.Size = new System.Drawing.Size(1156, 140);
             this.DG_maintenance.TabIndex = 9;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "วันที่";
-            this.Column12.Name = "Column12";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "รหัสการบำรุงรักษา";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 140;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "กิจกรรม";
-            this.Column11.Name = "Column11";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "ค่าใช้จ่าย";
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "ผู้รับผิดชอบ";
-            this.Column14.Name = "Column14";
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "ชื่อตัวแทนจำหน่าย";
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 150;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "เบอร์ติดต่อตัวแทนจำหน่าย";
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 120;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "ที่อยู่ตัวแทนจำหน่าย";
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 250;
             // 
             // Goto_farmMaintenance
             // 
@@ -312,6 +323,7 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.button_showDGFarm);
             this.panel_Main_farm.Controls.Add(this.DG_farm);
             this.panel_Main_farm.Controls.Add(this.Goto_farmProfile);
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
@@ -326,38 +338,20 @@
             // DG_farm
             // 
             this.DG_farm.AllowUserToOrderColumns = true;
+            this.DG_farm.AutoGenerateColumns = false;
             this.DG_farm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FarmID,
-            this.FarmName,
-            this.FarmLocation,
-            this.FarmHost});
+            this.farmidDataGridViewTextBoxColumn,
+            this.farmnameDataGridViewTextBoxColumn,
+            this.farmhostDataGridViewTextBoxColumn,
+            this.farmlocationDataGridViewTextBoxColumn});
+            this.DG_farm.DataSource = this.farmBindingSource;
             this.DG_farm.Location = new System.Drawing.Point(25, 70);
             this.DG_farm.Name = "DG_farm";
             this.DG_farm.Size = new System.Drawing.Size(450, 140);
             this.DG_farm.TabIndex = 9;
             this.DG_farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_farm_CellContentClick);
-            // 
-            // FarmID
-            // 
-            this.FarmID.HeaderText = "รหัสฟาร์ม";
-            this.FarmID.Name = "FarmID";
-            // 
-            // FarmName
-            // 
-            this.FarmName.HeaderText = "ชื่อฟาร์ม";
-            this.FarmName.Name = "FarmName";
-            // 
-            // FarmLocation
-            // 
-            this.FarmLocation.HeaderText = "ที่ตั้งฟาร์ม";
-            this.FarmLocation.Name = "FarmLocation";
-            // 
-            // FarmHost
-            // 
-            this.FarmHost.HeaderText = "ผู้ดูแล";
-            this.FarmHost.Name = "FarmHost";
             // 
             // Goto_farmProfile
             // 
@@ -367,7 +361,7 @@
             this.Goto_farmProfile.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Goto_farmProfile.ForeColor = System.Drawing.Color.White;
             this.Goto_farmProfile.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Goto_farmProfile.Location = new System.Drawing.Point(216, 220);
+            this.Goto_farmProfile.Location = new System.Drawing.Point(279, 220);
             this.Goto_farmProfile.Name = "Goto_farmProfile";
             this.Goto_farmProfile.Size = new System.Drawing.Size(130, 40);
             this.Goto_farmProfile.TabIndex = 6;
@@ -415,38 +409,167 @@
             this.Main_but_farm.UseVisualStyleBackColor = false;
             this.Main_but_farm.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Column18
+            // button_showDGFarm
             // 
-            this.Column18.HeaderText = "วันที่";
-            this.Column18.Name = "Column18";
-            this.Column18.Width = 80;
+            this.button_showDGFarm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_showDGFarm.FlatAppearance.BorderSize = 0;
+            this.button_showDGFarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_showDGFarm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_showDGFarm.ForeColor = System.Drawing.Color.White;
+            this.button_showDGFarm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_showDGFarm.Location = new System.Drawing.Point(103, 220);
+            this.button_showDGFarm.Name = "button_showDGFarm";
+            this.button_showDGFarm.Size = new System.Drawing.Size(130, 40);
+            this.button_showDGFarm.TabIndex = 10;
+            this.button_showDGFarm.Text = "แสดงตาราง";
+            this.button_showDGFarm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_showDGFarm.UseVisualStyleBackColor = false;
+            this.button_showDGFarm.Click += new System.EventHandler(this.button_showDGFarm_Click);
             // 
-            // Column6
+            // button_showDGMaintain
             // 
-            this.Column6.HeaderText = "รหัสฟาร์ม";
-            this.Column6.Name = "Column6";
+            this.button_showDGMaintain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_showDGMaintain.FlatAppearance.BorderSize = 0;
+            this.button_showDGMaintain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_showDGMaintain.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_showDGMaintain.ForeColor = System.Drawing.Color.White;
+            this.button_showDGMaintain.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_showDGMaintain.Location = new System.Drawing.Point(402, 220);
+            this.button_showDGMaintain.Name = "button_showDGMaintain";
+            this.button_showDGMaintain.Size = new System.Drawing.Size(130, 40);
+            this.button_showDGMaintain.TabIndex = 11;
+            this.button_showDGMaintain.Text = "แสดงตาราง";
+            this.button_showDGMaintain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_showDGMaintain.UseVisualStyleBackColor = false;
+            this.button_showDGMaintain.Click += new System.EventHandler(this.button_showDGMaintain_Click);
             // 
-            // Column5
+            // button_showDGSchedule
             // 
-            this.Column5.HeaderText = "รหัสกิจกรรม";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 120;
+            this.button_showDGSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_showDGSchedule.FlatAppearance.BorderSize = 0;
+            this.button_showDGSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_showDGSchedule.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_showDGSchedule.ForeColor = System.Drawing.Color.White;
+            this.button_showDGSchedule.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_showDGSchedule.Location = new System.Drawing.Point(226, 220);
+            this.button_showDGSchedule.Name = "button_showDGSchedule";
+            this.button_showDGSchedule.Size = new System.Drawing.Size(130, 40);
+            this.button_showDGSchedule.TabIndex = 12;
+            this.button_showDGSchedule.Text = "แสดงตาราง";
+            this.button_showDGSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_showDGSchedule.UseVisualStyleBackColor = false;
             // 
-            // Column7
+            // fArm
             // 
-            this.Column7.HeaderText = "ชื่อกิจกรรม";
-            this.Column7.Name = "Column7";
+            this.fArm.DataSetName = "FArm";
+            this.fArm.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Column8
+            // farmBindingSource
             // 
-            this.Column8.HeaderText = "รูปแบบการบิน";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 120;
+            this.farmBindingSource.DataMember = "Farm";
+            this.farmBindingSource.DataSource = this.fArm;
             // 
-            // Column9
+            // farmTableAdapter
             // 
-            this.Column9.HeaderText = "รหัสโดรน";
-            this.Column9.Name = "Column9";
+            this.farmTableAdapter.ClearBeforeFill = true;
+            // 
+            // farmidDataGridViewTextBoxColumn
+            // 
+            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.HeaderText = "รหัสฟาร์ม";
+            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
+            // 
+            // farmnameDataGridViewTextBoxColumn
+            // 
+            this.farmnameDataGridViewTextBoxColumn.DataPropertyName = "farm_name";
+            this.farmnameDataGridViewTextBoxColumn.HeaderText = "ชื่อฟาร์ม";
+            this.farmnameDataGridViewTextBoxColumn.Name = "farmnameDataGridViewTextBoxColumn";
+            // 
+            // farmhostDataGridViewTextBoxColumn
+            // 
+            this.farmhostDataGridViewTextBoxColumn.DataPropertyName = "farm_host";
+            this.farmhostDataGridViewTextBoxColumn.HeaderText = "ผู้ดูแล";
+            this.farmhostDataGridViewTextBoxColumn.Name = "farmhostDataGridViewTextBoxColumn";
+            // 
+            // farmlocationDataGridViewTextBoxColumn
+            // 
+            this.farmlocationDataGridViewTextBoxColumn.DataPropertyName = "farm_location";
+            this.farmlocationDataGridViewTextBoxColumn.HeaderText = "ที่ตั้งฟาร์ม";
+            this.farmlocationDataGridViewTextBoxColumn.Name = "farmlocationDataGridViewTextBoxColumn";
+            // 
+            // mAintain
+            // 
+            this.mAintain.DataSetName = "MAintain";
+            this.mAintain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // maintainanceBindingSource
+            // 
+            this.maintainanceBindingSource.DataMember = "Maintainance";
+            this.maintainanceBindingSource.DataSource = this.mAintain;
+            // 
+            // maintainanceTableAdapter
+            // 
+            this.maintainanceTableAdapter.ClearBeforeFill = true;
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
+            // maintainidDataGridViewTextBoxColumn
+            // 
+            this.maintainidDataGridViewTextBoxColumn.DataPropertyName = "maintain_id";
+            this.maintainidDataGridViewTextBoxColumn.HeaderText = "รหัสกิจกรรมซ่อมบำรุง";
+            this.maintainidDataGridViewTextBoxColumn.Name = "maintainidDataGridViewTextBoxColumn";
+            // 
+            // maintainactivityDataGridViewTextBoxColumn
+            // 
+            this.maintainactivityDataGridViewTextBoxColumn.DataPropertyName = "maintain_activity";
+            this.maintainactivityDataGridViewTextBoxColumn.HeaderText = "ชื่อกิจกรรมซ่อมบำรุง";
+            this.maintainactivityDataGridViewTextBoxColumn.Name = "maintainactivityDataGridViewTextBoxColumn";
+            // 
+            // maintaindateDataGridViewTextBoxColumn
+            // 
+            this.maintaindateDataGridViewTextBoxColumn.DataPropertyName = "maintain_date";
+            this.maintaindateDataGridViewTextBoxColumn.HeaderText = "วันที่ส่งซ่อมบำรุง";
+            this.maintaindateDataGridViewTextBoxColumn.Name = "maintaindateDataGridViewTextBoxColumn";
+            // 
+            // maintainpriceDataGridViewTextBoxColumn
+            // 
+            this.maintainpriceDataGridViewTextBoxColumn.DataPropertyName = "maintain_price";
+            this.maintainpriceDataGridViewTextBoxColumn.HeaderText = "ค่าใช้จ่าย";
+            this.maintainpriceDataGridViewTextBoxColumn.Name = "maintainpriceDataGridViewTextBoxColumn";
+            // 
+            // maintainlengthDataGridViewTextBoxColumn
+            // 
+            this.maintainlengthDataGridViewTextBoxColumn.DataPropertyName = "maintain_length";
+            this.maintainlengthDataGridViewTextBoxColumn.HeaderText = "ระยะเวลาการซ่อมบำรุง";
+            this.maintainlengthDataGridViewTextBoxColumn.Name = "maintainlengthDataGridViewTextBoxColumn";
+            // 
+            // maintainresponderDataGridViewTextBoxColumn
+            // 
+            this.maintainresponderDataGridViewTextBoxColumn.DataPropertyName = "maintain_responder";
+            this.maintainresponderDataGridViewTextBoxColumn.HeaderText = "ชื่อผู้ติดต่อตัวแทนการซ่อมบำรุง";
+            this.maintainresponderDataGridViewTextBoxColumn.Name = "maintainresponderDataGridViewTextBoxColumn";
+            // 
+            // maintainvenderNameDataGridViewTextBoxColumn
+            // 
+            this.maintainvenderNameDataGridViewTextBoxColumn.DataPropertyName = "maintain_venderName";
+            this.maintainvenderNameDataGridViewTextBoxColumn.HeaderText = "ชื่อบริษัทซ่อมบำรุง";
+            this.maintainvenderNameDataGridViewTextBoxColumn.Name = "maintainvenderNameDataGridViewTextBoxColumn";
+            // 
+            // maintainvenderAddDataGridViewTextBoxColumn
+            // 
+            this.maintainvenderAddDataGridViewTextBoxColumn.DataPropertyName = "maintain_venderAdd";
+            this.maintainvenderAddDataGridViewTextBoxColumn.HeaderText = "ที่อยู่บริษัทซ่อมบำรุง";
+            this.maintainvenderAddDataGridViewTextBoxColumn.Name = "maintainvenderAddDataGridViewTextBoxColumn";
+            // 
+            // maintainvenderPhoneDataGridViewTextBoxColumn
+            // 
+            this.maintainvenderPhoneDataGridViewTextBoxColumn.DataPropertyName = "maintain_venderPhone";
+            this.maintainvenderPhoneDataGridViewTextBoxColumn.HeaderText = "เบอร์โทรศัพท์บริษัทซ่อมบำรุง";
+            this.maintainvenderPhoneDataGridViewTextBoxColumn.Name = "maintainvenderPhoneDataGridViewTextBoxColumn";
             // 
             // Menu_main2
             // 
@@ -466,6 +589,10 @@
             this.panel_Main_farm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_farm)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fArm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mAintain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maintainanceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,23 +618,34 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button Goto_farmMaintenance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FarmID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FarmName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FarmLocation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FarmHost;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Button button_showDGSchedule;
+        private System.Windows.Forms.Button button_showDGMaintain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainactivityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintaindateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainpriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainlengthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainresponderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainvenderNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainvenderAddDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainvenderPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource maintainanceBindingSource;
+        private MAintain mAintain;
+        private System.Windows.Forms.Button button_showDGFarm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmhostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmlocationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource farmBindingSource;
+        private FArm fArm;
+        private FArmTableAdapters.FarmTableAdapter farmTableAdapter;
+        private MAintainTableAdapters.MaintainanceTableAdapter maintainanceTableAdapter;
     }
 }
