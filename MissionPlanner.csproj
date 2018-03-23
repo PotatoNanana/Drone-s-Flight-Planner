@@ -523,6 +523,8 @@
     <Compile Include="GCSViews\ConfigurationView\UpdateTool.Designer.cs">
       <DependentUpon>UpdateTool.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\DBSQLServerUtils.cs" />
+    <Compile Include="GCSViews\DBUtils.cs" />
     <Compile Include="GCSViews\FlightLog.cs">
       <SubType>UserControl</SubType>
     </Compile>

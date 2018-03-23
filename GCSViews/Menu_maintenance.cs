@@ -18,8 +18,8 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Menu_maintenance : MyUserControl
     {
-        SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
-
+        // SqlConnection con = new SqlConnection(@"Data Source=CS-RABBIT\SQLEXPRESS;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         public Menu_maintenance()
         {
             InitializeComponent();
@@ -116,7 +116,7 @@ namespace MissionPlanner.GCSViews
             SDA.SelectCommand.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SDA.Fill(dt);
-            DG_Farm.DataSource = dt;
+            DG_Drone.DataSource = dt;
             con.Close();
             
         }
@@ -132,7 +132,7 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView
             con.Open();
-            String query = "SELECT Drone_id,Dronr_name FROM Drone";
+            String query = "SELECT Drone_id,Drone_name FROM Drone";
             SqlDataAdapter SDA = new SqlDataAdapter(query,con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);

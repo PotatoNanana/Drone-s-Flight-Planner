@@ -88,7 +88,7 @@
             this.Edit});
             this.DG_Farm.Location = new System.Drawing.Point(25, 70);
             this.DG_Farm.Name = "DG_Farm";
-            this.DG_Farm.Size = new System.Drawing.Size(1100, 380);
+            this.DG_Farm.Size = new System.Drawing.Size(593, 380);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             // 
@@ -161,7 +161,7 @@
             this.BUT_add_farm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_add_farm.ForeColor = System.Drawing.Color.White;
             this.BUT_add_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_farm.Location = new System.Drawing.Point(510, 470);
+            this.BUT_add_farm.Location = new System.Drawing.Point(795, 410);
             this.BUT_add_farm.Name = "BUT_add_farm";
             this.BUT_add_farm.Size = new System.Drawing.Size(130, 40);
             this.BUT_add_farm.TabIndex = 6;
