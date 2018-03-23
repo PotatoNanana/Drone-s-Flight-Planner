@@ -1054,15 +1054,23 @@
             // 
             // BUT_savesettings
             // 
+            this.BUT_savesettings.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_savesettings.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_savesettings, "BUT_savesettings");
             this.BUT_savesettings.Name = "BUT_savesettings";
+            this.BUT_savesettings.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_savesettings.TextColor = System.Drawing.Color.White;
             this.BUT_savesettings.UseVisualStyleBackColor = true;
             this.BUT_savesettings.Click += new System.EventHandler(this.BUT_savesettings_Click);
             // 
             // BUT_getcurrent
             // 
+            this.BUT_getcurrent.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_getcurrent.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_getcurrent, "BUT_getcurrent");
             this.BUT_getcurrent.Name = "BUT_getcurrent";
+            this.BUT_getcurrent.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_getcurrent.TextColor = System.Drawing.Color.White;
             this.BUT_getcurrent.UseVisualStyleBackColor = true;
             this.BUT_getcurrent.Click += new System.EventHandler(this.BUT_getcurrent_Click);
             // 
@@ -1074,15 +1082,23 @@
             // 
             // BUT_upload
             // 
+            this.BUT_upload.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_upload.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_upload, "BUT_upload");
             this.BUT_upload.Name = "BUT_upload";
+            this.BUT_upload.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_upload.TextColor = System.Drawing.Color.White;
             this.BUT_upload.UseVisualStyleBackColor = true;
             this.BUT_upload.Click += new System.EventHandler(this.BUT_upload_Click);
             // 
             // BUT_Syncoptions
             // 
+            this.BUT_Syncoptions.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Syncoptions.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_Syncoptions, "BUT_Syncoptions");
             this.BUT_Syncoptions.Name = "BUT_Syncoptions";
+            this.BUT_Syncoptions.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Syncoptions.TextColor = System.Drawing.Color.White;
             this.BUT_Syncoptions.UseVisualStyleBackColor = true;
             this.BUT_Syncoptions.Click += new System.EventHandler(this.BUT_Syncoptions_Click);
             // 
@@ -1139,15 +1155,23 @@
             // 
             // BUT_resettodefault
             // 
+            this.BUT_resettodefault.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_resettodefault.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_resettodefault, "BUT_resettodefault");
             this.BUT_resettodefault.Name = "BUT_resettodefault";
+            this.BUT_resettodefault.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_resettodefault.TextColor = System.Drawing.Color.White;
             this.BUT_resettodefault.UseVisualStyleBackColor = true;
             this.BUT_resettodefault.Click += new System.EventHandler(this.BUT_resettodefault_Click);
             // 
             // BUT_loadcustom
             // 
+            this.BUT_loadcustom.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_loadcustom.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_loadcustom, "BUT_loadcustom");
             this.BUT_loadcustom.Name = "BUT_loadcustom";
+            this.BUT_loadcustom.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_loadcustom.TextColor = System.Drawing.Color.White;
             this.BUT_loadcustom.UseVisualStyleBackColor = true;
             this.BUT_loadcustom.Click += new System.EventHandler(this.BUT_loadcustom_Click);
             // 
@@ -1166,9 +1190,8 @@
             this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.Progressbar);
             this.Controls.Add(this.BUT_upload);
-            this.MinimumSize = new System.Drawing.Size(781, 433);
-            this.Name = "Sikradio";
             resources.ApplyResources(this, "$this");
+            this.Name = "Sikradio";
             this.SPLIT_local.Panel1.ResumeLayout(false);
             this.SPLIT_local.Panel1.PerformLayout();
             this.SPLIT_local.Panel2.ResumeLayout(false);

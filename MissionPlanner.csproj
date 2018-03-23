@@ -466,6 +466,18 @@
     <Compile Include="DroneLog.Designer.cs">
       <DependentUpon>DroneLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigApp.Designer.cs">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigDrone.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigDrone.Designer.cs">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\ConfigurationView\maintenance_RegisTool.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -513,6 +525,42 @@
     </Compile>
     <Compile Include="GCSViews\FlightLog.Designer.cs">
       <DependentUpon>FlightLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone_pre .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone_pre .Designer.cs">
+      <DependentUpon>Form_Edit_drone_pre .cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone_pre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone_pre.Designer.cs">
+      <DependentUpon>Form_Add_drone_pre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone_part.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone_part.Designer.cs">
+      <DependentUpon>Form_Edit_drone_part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone_part.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone_part.Designer.cs">
+      <DependentUpon>Form_Add_drone_part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_drone.Designer.cs">
+      <DependentUpon>Form_Edit_drone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_drone.Designer.cs">
+      <DependentUpon>Form_Add_drone.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\Form_Edit_farm_act.cs">
       <SubType>Form</SubType>
@@ -562,6 +610,18 @@
     <Compile Include="GCSViews\Maintain.Designer.cs">
       <DependentUpon>Maintain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\Menu_maintenance_pre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance_pre.Designer.cs">
+      <DependentUpon>Menu_maintenance_pre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance_part.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_maintenance_part.Designer.cs">
+      <DependentUpon>Menu_maintenance_part.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\Menu_maintenance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -579,6 +639,12 @@
     </Compile>
     <Compile Include="GCSViews\Menu_main2.Designer.cs">
       <DependentUpon>Menu_main2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_setup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_setup.Designer.cs">
+      <DependentUpon>Menu_setup.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\UserLogin.cs">
       <SubType>UserControl</SubType>
@@ -1835,6 +1901,30 @@
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigCompassMot.resx">
       <DependentUpon>ConfigCompassMot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ar.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.de-DE.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.id-ID.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ja-JP.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ko-KR.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.pt.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.zh-Hans.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigESCCalibration.ar.resx">
       <DependentUpon>ConfigESCCalibration.cs</DependentUpon>
     </EmbeddedResource>
@@ -1897,6 +1987,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.zh-TW.resx">
       <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.ar.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.de-DE.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.id-ID.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.ja-JP.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.ko-KR.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.pt.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.zh-Hans.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.ar.resx">
       <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
@@ -2933,6 +3047,24 @@
     <EmbeddedResource Include="GCSViews\FlightPlanner.zh-TW.resx">
       <DependentUpon>FlightPlanner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_drone_pre .resx">
+      <DependentUpon>Form_Edit_drone_pre .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_drone_pre.resx">
+      <DependentUpon>Form_Add_drone_pre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_drone_part.resx">
+      <DependentUpon>Form_Edit_drone_part.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_drone_part.resx">
+      <DependentUpon>Form_Add_drone_part.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_drone.resx">
+      <DependentUpon>Form_Edit_drone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_drone.resx">
+      <DependentUpon>Form_Add_drone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_Edit_farm_act.resx">
       <DependentUpon>Form_Edit_farm_act.cs</DependentUpon>
     </EmbeddedResource>
@@ -3037,6 +3169,12 @@
     <EmbeddedResource Include="GCSViews\Maintain.resx">
       <DependentUpon>Maintain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_maintenance_pre.resx">
+      <DependentUpon>Menu_maintenance_pre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_maintenance_part.resx">
+      <DependentUpon>Menu_maintenance_part.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Menu_maintenance.resx">
       <DependentUpon>Menu_maintenance.cs</DependentUpon>
     </EmbeddedResource>
@@ -3045,6 +3183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Menu_main2.resx">
       <DependentUpon>Menu_main2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_setup.resx">
+      <DependentUpon>Menu_setup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>

@@ -39,14 +39,14 @@
             this.backstageView.HighlightColor2 = System.Drawing.SystemColors.MenuHighlight;
             this.backstageView.Name = "backstageView";
             this.backstageView.WidthMenu = 172;
+            this.backstageView.Load += new System.EventHandler(this.backstageView_Load);
             // 
             // SoftwareConfig
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.backstageView);
-            this.MinimumSize = new System.Drawing.Size(1000, 450);
-            this.Name = "SoftwareConfig";
             resources.ApplyResources(this, "$this");
+            this.Name = "SoftwareConfig";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SoftwareConfig_FormClosing);
             this.Load += new System.EventHandler(this.SoftwareConfig_Load);
             this.ResumeLayout(false);

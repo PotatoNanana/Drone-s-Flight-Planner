@@ -100,14 +100,6 @@ namespace MissionPlanner.GCSViews
         {
             ResourceManager rm = new ResourceManager(this.GetType());
 
-            ///
-            ///added
-            ///
-            AddBackstageViewPage(typeof(maintenance_RegisTool), "Register Tools");
-            AddBackstageViewPage(typeof(maintenance_RegisTool), "Update Tools");
-            AddBackstageViewPage(typeof(maintenance_RegisTool), "Flight Schedule");
-
-
             AddBackstageViewPage(typeof(ConfigFirmwareDisabled), rm.GetString("backstageViewPagefw.Text"), isConnected);
             AddBackstageViewPage(typeof(ConfigFirmware), rm.GetString("backstageViewPagefw.Text"), isDisConnected);
             AddBackstageViewPage(typeof(ConfigWizard), rm.GetString("backstageViewPagewizard.Text"));
@@ -163,11 +155,6 @@ namespace MissionPlanner.GCSViews
                 lastpagename = backstageView.SelectedPage.LinkText;
 
             backstageView.Close();
-        }
-
-        private void backstageView_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

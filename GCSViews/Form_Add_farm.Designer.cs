@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Add_farm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Farm_host = new System.Windows.Forms.TextBox();
+            this.Farm_location = new System.Windows.Forms.TextBox();
+            this.Farm_name = new System.Windows.Forms.TextBox();
+            this.Farm_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,10 +61,10 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.textBox4);
-            this.panel_Main_farm.Controls.Add(this.textBox3);
-            this.panel_Main_farm.Controls.Add(this.textBox2);
-            this.panel_Main_farm.Controls.Add(this.textBox1);
+            this.panel_Main_farm.Controls.Add(this.Farm_host);
+            this.panel_Main_farm.Controls.Add(this.Farm_location);
+            this.panel_Main_farm.Controls.Add(this.Farm_name);
+            this.panel_Main_farm.Controls.Add(this.Farm_id);
             this.panel_Main_farm.Controls.Add(this.label4);
             this.panel_Main_farm.Controls.Add(this.label3);
             this.panel_Main_farm.Controls.Add(this.label2);
@@ -81,37 +81,37 @@
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
             // 
-            // textBox4
+            // Farm_host
             // 
-            this.textBox4.Location = new System.Drawing.Point(176, 217);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 30);
-            this.textBox4.TabIndex = 14;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.Farm_host.Location = new System.Drawing.Point(176, 217);
+            this.Farm_host.Name = "Farm_host";
+            this.Farm_host.Size = new System.Drawing.Size(200, 30);
+            this.Farm_host.TabIndex = 14;
+            this.Farm_host.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // Farm_location
             // 
-            this.textBox3.Location = new System.Drawing.Point(176, 177);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 30);
-            this.textBox3.TabIndex = 14;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.Farm_location.Location = new System.Drawing.Point(176, 177);
+            this.Farm_location.Name = "Farm_location";
+            this.Farm_location.Size = new System.Drawing.Size(200, 30);
+            this.Farm_location.TabIndex = 14;
+            this.Farm_location.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox2
+            // Farm_name
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 30);
-            this.textBox2.TabIndex = 14;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Farm_name.Location = new System.Drawing.Point(176, 137);
+            this.Farm_name.Name = "Farm_name";
+            this.Farm_name.Size = new System.Drawing.Size(200, 30);
+            this.Farm_name.TabIndex = 14;
+            this.Farm_name.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // Farm_id
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 30);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Farm_id.Location = new System.Drawing.Point(176, 97);
+            this.Farm_id.Name = "Farm_id";
+            this.Farm_id.Size = new System.Drawing.Size(200, 30);
+            this.Farm_id.TabIndex = 14;
+            this.Farm_id.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -247,10 +247,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_Main_farm;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Farm_host;
+        private System.Windows.Forms.TextBox Farm_location;
+        private System.Windows.Forms.TextBox Farm_name;
+        private System.Windows.Forms.TextBox Farm_id;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

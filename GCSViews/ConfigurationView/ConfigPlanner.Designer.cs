@@ -482,23 +482,40 @@
             // 
             // BUT_Joystick
             // 
+            this.BUT_Joystick.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Joystick.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Joystick.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_Joystick, "BUT_Joystick");
             this.BUT_Joystick.Name = "BUT_Joystick";
+            this.BUT_Joystick.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Joystick.TextColor = System.Drawing.Color.White;
             this.BUT_Joystick.UseVisualStyleBackColor = true;
             this.BUT_Joystick.Click += new System.EventHandler(this.BUT_Joystick_Click);
             // 
             // BUT_videostop
             // 
+            this.BUT_videostop.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_videostop.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_videostop.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_videostop, "BUT_videostop");
             this.BUT_videostop.Name = "BUT_videostop";
+            this.BUT_videostop.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_videostop.TextColor = System.Drawing.Color.White;
             this.BUT_videostop.UseVisualStyleBackColor = true;
             this.BUT_videostop.Click += new System.EventHandler(this.BUT_videostop_Click);
             // 
             // BUT_videostart
             // 
+            this.BUT_videostart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_videostart.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_videostart.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_videostart.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_videostart, "BUT_videostart");
+            this.BUT_videostart.ForeColor = System.Drawing.Color.White;
             this.BUT_videostart.Name = "BUT_videostart";
-            this.BUT_videostart.UseVisualStyleBackColor = true;
+            this.BUT_videostart.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_videostart.TextColor = System.Drawing.Color.White;
+            this.BUT_videostart.UseVisualStyleBackColor = false;
             this.BUT_videostart.Click += new System.EventHandler(this.BUT_videostart_Click);
             // 
             // label3
@@ -513,8 +530,13 @@
             // 
             // BUT_logdirbrowse
             // 
+            this.BUT_logdirbrowse.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_logdirbrowse.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_logdirbrowse.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_logdirbrowse, "BUT_logdirbrowse");
             this.BUT_logdirbrowse.Name = "BUT_logdirbrowse";
+            this.BUT_logdirbrowse.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_logdirbrowse.TextColor = System.Drawing.Color.White;
             this.BUT_logdirbrowse.UseVisualStyleBackColor = true;
             this.BUT_logdirbrowse.Click += new System.EventHandler(this.BUT_logdirbrowse_Click);
             // 
@@ -533,8 +555,13 @@
             // 
             // BUT_themecustom
             // 
+            this.BUT_themecustom.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_themecustom.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_themecustom.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_themecustom, "BUT_themecustom");
             this.BUT_themecustom.Name = "BUT_themecustom";
+            this.BUT_themecustom.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_themecustom.TextColor = System.Drawing.Color.White;
             this.BUT_themecustom.UseVisualStyleBackColor = true;
             this.BUT_themecustom.Click += new System.EventHandler(this.BUT_themecustom_Click);
             // 
@@ -547,8 +574,13 @@
             // 
             // BUT_Vario
             // 
+            this.BUT_Vario.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Vario.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Vario.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_Vario, "BUT_Vario");
             this.BUT_Vario.Name = "BUT_Vario";
+            this.BUT_Vario.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Vario.TextColor = System.Drawing.Color.White;
             this.BUT_Vario.UseVisualStyleBackColor = true;
             this.BUT_Vario.Click += new System.EventHandler(this.BUT_Vario_Click);
             // 
@@ -621,8 +653,13 @@
             // 
             // but_AAsignin
             // 
+            this.but_AAsignin.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.but_AAsignin.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.but_AAsignin.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.but_AAsignin, "but_AAsignin");
             this.but_AAsignin.Name = "but_AAsignin";
+            this.but_AAsignin.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.but_AAsignin.TextColor = System.Drawing.Color.White;
             this.but_AAsignin.UseVisualStyleBackColor = true;
             this.but_AAsignin.Click += new System.EventHandler(this.but_AAsignin_Click);
             // 
@@ -711,8 +748,8 @@
             this.Controls.Add(this.BUT_Joystick);
             this.Controls.Add(this.BUT_videostop);
             this.Controls.Add(this.BUT_videostart);
-            this.Name = "ConfigPlanner";
             resources.ApplyResources(this, "$this");
+            this.Name = "ConfigPlanner";
             this.Load += new System.EventHandler(this.ConfigPlanner_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NUM_tracklength)).EndInit();
             this.ResumeLayout(false);

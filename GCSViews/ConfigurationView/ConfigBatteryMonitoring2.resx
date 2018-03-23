@@ -157,7 +157,7 @@
     <value>344, 44</value>
   </data>
   <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
+    <value>101, 16</value>
   </data>
   <data name="label29.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -205,10 +205,10 @@
     <value>9</value>
   </data>
   <data name="TXT_battcapacity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 41</value>
+    <value>451, 41</value>
   </data>
   <data name="TXT_battcapacity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+    <value>50, 21</value>
   </data>
   <data name="TXT_battcapacity.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -292,10 +292,10 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 44</value>
+    <value>504, 44</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 13</value>
+    <value>32, 16</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -325,7 +325,7 @@
     <value>347, 67</value>
   </data>
   <data name="CHK_speechbattery.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 17</value>
+    <value>154, 20</value>
   </data>
   <data name="CHK_speechbattery.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -352,7 +352,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="TXT_measuredvoltage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
+    <value>76, 21</value>
   </data>
   <data name="TXT_measuredvoltage.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -376,7 +376,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="TXT_voltage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
+    <value>76, 21</value>
   </data>
   <data name="TXT_voltage.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -406,7 +406,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 13</value>
+    <value>114, 16</value>
   </data>
   <data name="label35.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -433,7 +433,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="TXT_divider.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
+    <value>76, 21</value>
   </data>
   <data name="TXT_divider.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -463,7 +463,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 13</value>
+    <value>158, 16</value>
   </data>
   <data name="label34.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -490,7 +490,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="TXT_ampspervolt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
+    <value>76, 21</value>
   </data>
   <data name="TXT_ampspervolt.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -520,7 +520,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 13</value>
+    <value>159, 16</value>
   </data>
   <data name="label33.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -553,7 +553,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 13</value>
+    <value>167, 16</value>
   </data>
   <data name="label32.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -573,6 +573,18 @@
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="txt_current.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 98</value>
+  </data>
+  <data name="txt_current.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="txt_current.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 21</value>
+  </data>
+  <data name="txt_current.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
   <data name="&gt;&gt;txt_current.Name" xml:space="preserve">
     <value>txt_current</value>
   </data>
@@ -584,6 +596,27 @@
   </data>
   <data name="&gt;&gt;txt_current.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 101</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 16</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>5. Current (Calced)</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -597,6 +630,18 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="txt_meascurrent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 77</value>
+  </data>
+  <data name="txt_meascurrent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="txt_meascurrent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 21</value>
+  </data>
+  <data name="txt_meascurrent.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
   <data name="&gt;&gt;txt_meascurrent.Name" xml:space="preserve">
     <value>txt_meascurrent</value>
   </data>
@@ -608,6 +653,27 @@
   </data>
   <data name="&gt;&gt;txt_meascurrent.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 80</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 16</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>4. Measured current:</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -645,120 +711,6 @@
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="txt_current.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 98</value>
-  </data>
-  <data name="txt_current.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="txt_current.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
-  </data>
-  <data name="txt_current.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;txt_current.Name" xml:space="preserve">
-    <value>txt_current</value>
-  </data>
-  <data name="&gt;&gt;txt_current.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_current.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;txt_current.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 101</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>5. Current (Calced)</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txt_meascurrent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 77</value>
-  </data>
-  <data name="txt_meascurrent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="txt_meascurrent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
-  </data>
-  <data name="txt_meascurrent.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;txt_meascurrent.Name" xml:space="preserve">
-    <value>txt_meascurrent</value>
-  </data>
-  <data name="&gt;&gt;txt_meascurrent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txt_meascurrent.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;txt_meascurrent.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 80</value>
-  </data>
-  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 13</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>4. Measured current:</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="mavlinkComboBox3.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -766,7 +718,7 @@
     <value>177, 95</value>
   </data>
   <data name="mavlinkComboBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
+    <value>165, 24</value>
   </data>
   <data name="mavlinkComboBox3.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -775,7 +727,7 @@
     <value>mavlinkComboBox3</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox3.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6466.23388, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6655.28311, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -790,7 +742,7 @@
     <value>177, 68</value>
   </data>
   <data name="mavlinkComboBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
+    <value>165, 24</value>
   </data>
   <data name="mavlinkComboBox2.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -799,7 +751,7 @@
     <value>mavlinkComboBox2</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6466.23388, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6655.28311, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -814,7 +766,7 @@
     <value>177, 42</value>
   </data>
   <data name="mavlinkComboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 21</value>
+    <value>165, 24</value>
   </data>
   <data name="mavlinkComboBox1.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -823,7 +775,7 @@
     <value>mavlinkComboBox1</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6466.23388, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6655.28311, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -834,8 +786,11 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 8.25pt</value>
+  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>518, 322</value>
+    <value>539, 322</value>
   </data>
   <data name="&gt;&gt;timer1.Name" xml:space="preserve">
     <value>timer1</value>
