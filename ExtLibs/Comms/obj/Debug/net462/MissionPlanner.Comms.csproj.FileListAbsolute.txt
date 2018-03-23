@@ -33,3 +33,10 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\bin\Debug\net462\log4net.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfoInputs.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojResolveAssemblyReference.cache
