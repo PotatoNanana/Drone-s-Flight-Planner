@@ -86,11 +86,8 @@ namespace MissionPlanner.GCSViews
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(DG_Farm.Columns[e.ColumnIndex].Name == "part_detail")
-            {
-                OnGotoDronePreClicked(e);
-            }
-
+            textBox_partID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+            textBox_partName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -100,33 +97,66 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_add_drone_part_Click(object sender, EventArgs e)
         {
+            //pass to add part
             Form_Add_drone_part form_Add_Drone_Part = new Form_Add_drone_part();
             form_Add_Drone_Part.ShowDialog();
         }
         
         private void but_backto_pre_Click(object sender, EventArgs e)
         {
+            //go back
             OnGotoDroneClicked(e);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //pass to previtive maintain
             Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre();
             menu_maintenance_pre.ShowUserControl();
         }
 
         private void button_edit_Click(object sender, EventArgs e)
         {
+            //edit
             Form_Edit_drone_part form_Edit_Drone_Part = new Form_Edit_drone_part();
             form_Edit_Drone_Part.ShowDialog();
         }
 
         private void button_delete_Click(object sender, EventArgs e)
         {
+            //delete
             if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DG_Farm.RemoveCurrent();
+                con.Open();
+                String query = "DELETE * FROM DeviceList where device_id = '" + textBox_partID.Text + "' ";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("DELETE Record From DB Success!!");
+
             }
+        }
+
+        private void button_show_Click(object sender, EventArgs e)
+        {
+            //show data to DataGridView
+            con.Open();
+            String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
+        }
+
+        private void button_serch_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList where device_id = '" + textBox_partID.Text + "'OR device_name = '" + textBox_partName.Text + "' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+            con.Close();
+            
         }
     }
 }

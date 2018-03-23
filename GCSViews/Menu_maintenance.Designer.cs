@@ -41,8 +41,6 @@
             this.button_detail = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
             this.DG_Drone = new MissionPlanner.Controls.MyDataGridView();
-            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drone_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.droneFlightPlannerDataSet = new MissionPlanner.DroneFlightPlannerDataSet();
             this.BUT_drone_add = new System.Windows.Forms.Button();
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
@@ -50,12 +48,19 @@
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.droneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.droneTableAdapter = new MissionPlanner.DroneFlightPlannerDataSetTableAdapters.DroneTableAdapter();
+            this.drone = new MissionPlanner.Drone();
+            this.droneBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.droneTableAdapter1 = new MissionPlanner.DroneTableAdapters.DroneTableAdapter();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dronenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -214,28 +219,15 @@
             this.DG_Drone.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_Drone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Drone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.drone_id,
-            this.drone_name});
-            this.DG_Drone.DataSource = this.droneFlightPlannerDataSet;
+            this.droneidDataGridViewTextBoxColumn,
+            this.dronenameDataGridViewTextBoxColumn});
+            this.DG_Drone.DataSource = this.droneBindingSource1;
             this.DG_Drone.Location = new System.Drawing.Point(25, 70);
             this.DG_Drone.Name = "DG_Drone";
-            this.DG_Drone.ReadOnly = true;
             this.DG_Drone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Drone.Size = new System.Drawing.Size(298, 350);
             this.DG_Drone.TabIndex = 9;
             this.DG_Drone.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Drone_CellContentClick);
-            // 
-            // drone_id
-            // 
-            this.drone_id.HeaderText = "รหัสโดรน";
-            this.drone_id.Name = "drone_id";
-            this.drone_id.ReadOnly = true;
-            // 
-            // drone_name
-            // 
-            this.drone_name.HeaderText = "ชื่อโดรน";
-            this.drone_name.Name = "drone_name";
-            this.drone_name.ReadOnly = true;
             // 
             // droneFlightPlannerDataSet
             // 
@@ -307,6 +299,32 @@
             // 
             this.droneTableAdapter.ClearBeforeFill = true;
             // 
+            // drone
+            // 
+            this.drone.DataSetName = "Drone";
+            this.drone.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // droneBindingSource1
+            // 
+            this.droneBindingSource1.DataMember = "Drone";
+            this.droneBindingSource1.DataSource = this.drone;
+            // 
+            // droneTableAdapter1
+            // 
+            this.droneTableAdapter1.ClearBeforeFill = true;
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
+            // dronenameDataGridViewTextBoxColumn
+            // 
+            this.dronenameDataGridViewTextBoxColumn.DataPropertyName = "drone_name";
+            this.dronenameDataGridViewTextBoxColumn.HeaderText = "ชื่อโดรน";
+            this.dronenameDataGridViewTextBoxColumn.Name = "dronenameDataGridViewTextBoxColumn";
+            // 
             // Menu_maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,6 +340,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,7 +366,10 @@
         private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Button button_serch;
         private System.Windows.Forms.TextBox textBox_droneName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn drone_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn drone_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dronenameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource droneBindingSource1;
+        private Drone drone;
+        private DroneTableAdapters.DroneTableAdapter droneTableAdapter1;
     }
 }

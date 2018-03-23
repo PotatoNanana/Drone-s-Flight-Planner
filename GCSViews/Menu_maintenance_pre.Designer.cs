@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.but_backto_pre = new System.Windows.Forms.Button();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
@@ -40,24 +41,28 @@
             this.button_delete = new System.Windows.Forms.Button();
             this.button_show = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.BUT_add_drone_pre = new System.Windows.Forms.Button();
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.maintainace = new MissionPlanner.maintainace();
+            this.maintainanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maintainanceTableAdapter = new MissionPlanner.maintainaceTableAdapters.MaintainanceTableAdapter();
+            this.maintainidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintaindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainlengthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainresponderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainvenderNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainvenderAddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainvenderPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maintainace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maintainanceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -160,6 +165,7 @@
             this.button_serch.Text = "ค้นหา";
             this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_serch.UseVisualStyleBackColor = false;
+            this.button_serch.Click += new System.EventHandler(this.button_serch_Click);
             // 
             // button_edit
             // 
@@ -216,87 +222,25 @@
             // 
             // DG_Farm
             // 
+            this.DG_Farm.AutoGenerateColumns = false;
             this.DG_Farm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.date,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column6,
-            this.Column11,
-            this.Column2,
-            this.Delete,
-            this.Edit});
+            this.maintainidDataGridViewTextBoxColumn,
+            this.maintainactivityDataGridViewTextBoxColumn,
+            this.maintaindateDataGridViewTextBoxColumn,
+            this.maintainpriceDataGridViewTextBoxColumn,
+            this.maintainlengthDataGridViewTextBoxColumn,
+            this.maintainresponderDataGridViewTextBoxColumn,
+            this.maintainvenderNameDataGridViewTextBoxColumn,
+            this.maintainvenderAddDataGridViewTextBoxColumn,
+            this.maintainvenderPhoneDataGridViewTextBoxColumn});
+            this.DG_Farm.DataSource = this.maintainanceBindingSource;
             this.DG_Farm.Location = new System.Drawing.Point(25, 70);
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.Size = new System.Drawing.Size(831, 350);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "วันที่ส่งซ่อม";
-            this.Column3.Name = "Column3";
-            // 
-            // date
-            // 
-            this.date.HeaderText = "กิจกรรม";
-            this.date.Name = "date";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "ราคา";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "ชื่อตัวแทนซ่อมบำรุง";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "เบอร์ตัวแทนซ่อมบำรุง";
-            this.Column10.Name = "Column10";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "ที่อยู่ตัวแทนซ่อมบำรุง";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 200;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "ระยะเวลาในการดำเนินการ";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "ชื่อผู้ติดต่อกับตัวแทนซ่อมบำรุง";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "ลบ";
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Text = "ลบ";
-            this.Delete.ToolTipText = "ลบ";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 50;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "แก้ไข";
-            this.Edit.Name = "Edit";
-            this.Edit.Text = "แก้ไข";
-            this.Edit.ToolTipText = "แก้ไข";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 50;
             // 
             // BUT_add_drone_pre
             // 
@@ -354,6 +298,74 @@
             this.Main_but_farm.UseVisualStyleBackColor = false;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
+            // maintainace
+            // 
+            this.maintainace.DataSetName = "maintainace";
+            this.maintainace.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // maintainanceBindingSource
+            // 
+            this.maintainanceBindingSource.DataMember = "Maintainance";
+            this.maintainanceBindingSource.DataSource = this.maintainace;
+            // 
+            // maintainanceTableAdapter
+            // 
+            this.maintainanceTableAdapter.ClearBeforeFill = true;
+            // 
+            // maintainidDataGridViewTextBoxColumn
+            // 
+            this.maintainidDataGridViewTextBoxColumn.DataPropertyName = "maintain_id";
+            this.maintainidDataGridViewTextBoxColumn.HeaderText = "หมายเลขการซ่อมบำรุง";
+            this.maintainidDataGridViewTextBoxColumn.Name = "maintainidDataGridViewTextBoxColumn";
+            // 
+            // maintainactivityDataGridViewTextBoxColumn
+            // 
+            this.maintainactivityDataGridViewTextBoxColumn.DataPropertyName = "maintain_activity";
+            this.maintainactivityDataGridViewTextBoxColumn.HeaderText = "ชื่อกิจกรรมการซ่อมบำรุง";
+            this.maintainactivityDataGridViewTextBoxColumn.Name = "maintainactivityDataGridViewTextBoxColumn";
+            // 
+            // maintaindateDataGridViewTextBoxColumn
+            // 
+            this.maintaindateDataGridViewTextBoxColumn.DataPropertyName = "maintain_date";
+            this.maintaindateDataGridViewTextBoxColumn.HeaderText = "วันที่ทำการซ่อมบำรุง";
+            this.maintaindateDataGridViewTextBoxColumn.Name = "maintaindateDataGridViewTextBoxColumn";
+            // 
+            // maintainpriceDataGridViewTextBoxColumn
+            // 
+            this.maintainpriceDataGridViewTextBoxColumn.DataPropertyName = "maintain_price";
+            this.maintainpriceDataGridViewTextBoxColumn.HeaderText = "ราคาการซ่อมบำรุง";
+            this.maintainpriceDataGridViewTextBoxColumn.Name = "maintainpriceDataGridViewTextBoxColumn";
+            // 
+            // maintainlengthDataGridViewTextBoxColumn
+            // 
+            this.maintainlengthDataGridViewTextBoxColumn.DataPropertyName = "maintain_length";
+            this.maintainlengthDataGridViewTextBoxColumn.HeaderText = "ระยะเวลาการซ่อมบำรุง";
+            this.maintainlengthDataGridViewTextBoxColumn.Name = "maintainlengthDataGridViewTextBoxColumn";
+            // 
+            // maintainresponderDataGridViewTextBoxColumn
+            // 
+            this.maintainresponderDataGridViewTextBoxColumn.DataPropertyName = "maintain_responder";
+            this.maintainresponderDataGridViewTextBoxColumn.HeaderText = "ชื่อผู้ติดต่อกับตัวแทนการซ่อมบำรุง";
+            this.maintainresponderDataGridViewTextBoxColumn.Name = "maintainresponderDataGridViewTextBoxColumn";
+            // 
+            // maintainvenderNameDataGridViewTextBoxColumn
+            // 
+            this.maintainvenderNameDataGridViewTextBoxColumn.DataPropertyName = "maintain_venderName";
+            this.maintainvenderNameDataGridViewTextBoxColumn.HeaderText = "ชื่อตัวแทนการซ่อมบำรุง";
+            this.maintainvenderNameDataGridViewTextBoxColumn.Name = "maintainvenderNameDataGridViewTextBoxColumn";
+            // 
+            // maintainvenderAddDataGridViewTextBoxColumn
+            // 
+            this.maintainvenderAddDataGridViewTextBoxColumn.DataPropertyName = "maintain_venderAdd";
+            this.maintainvenderAddDataGridViewTextBoxColumn.HeaderText = "ที่อยู่ตัวแทนการซ่อมบำรุง";
+            this.maintainvenderAddDataGridViewTextBoxColumn.Name = "maintainvenderAddDataGridViewTextBoxColumn";
+            // 
+            // maintainvenderPhoneDataGridViewTextBoxColumn
+            // 
+            this.maintainvenderPhoneDataGridViewTextBoxColumn.DataPropertyName = "maintain_venderPhone";
+            this.maintainvenderPhoneDataGridViewTextBoxColumn.HeaderText = "เบอร์โทรศัพท์ตัวแทนการซ่อมบำรุง";
+            this.maintainvenderPhoneDataGridViewTextBoxColumn.Name = "maintainvenderPhoneDataGridViewTextBoxColumn";
+            // 
             // Menu_maintenance_pre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +379,8 @@
             this.panel_Main_farm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.maintainace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maintainanceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,16 +394,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
         private System.Windows.Forms.Button but_backto_pre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_edit;
@@ -398,5 +402,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_partID;
         private System.Windows.Forms.TextBox textBox_partName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainactivityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintaindateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainpriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainlengthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainresponderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainvenderNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainvenderAddDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maintainvenderPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource maintainanceBindingSource;
+        private maintainace maintainace;
+        private maintainaceTableAdapters.MaintainanceTableAdapter maintainanceTableAdapter;
     }
 }

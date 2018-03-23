@@ -460,6 +460,16 @@
     <Compile Include="Controls\Video.Designer.cs">
       <DependentUpon>Video.cs</DependentUpon>
     </Compile>
+    <Compile Include="DEVICE_LIST.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DEVICE_LIST.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drone.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Drone.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneFlightPlannerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -682,6 +692,11 @@
       <DependentUpon>LogDownloadscp.cs</DependentUpon>
     </Compile>
     <Compile Include="Log\test\MotorFailure.cs" />
+    <Compile Include="maintainace.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>maintainace.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainV3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3846,6 +3861,17 @@
     <None Include="aot.sh">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="DEVICE_LIST.xsc">
+      <DependentUpon>DEVICE_LIST.xsd</DependentUpon>
+    </None>
+    <None Include="DEVICE_LIST.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DEVICE_LIST.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DEVICE_LIST.xss">
+      <DependentUpon>DEVICE_LIST.xsd</DependentUpon>
+    </None>
     <None Include="Drivers\arduinomega2560.cat" />
     <None Include="Drivers\ArduinoMEGA2560.inf" />
     <None Include="Drivers\mindpx.cat">
@@ -3888,6 +3914,17 @@
     <None Include="Drivers\vrubrain.cat" />
     <None Include="Drivers\vrugimbal.cat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Drone.xsc">
+      <DependentUpon>Drone.xsd</DependentUpon>
+    </None>
+    <None Include="Drone.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Drone.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Drone.xss">
+      <DependentUpon>Drone.xsd</DependentUpon>
     </None>
     <None Include="DroneFlightPlannerDataSet.xsc">
       <DependentUpon>DroneFlightPlannerDataSet.xsd</DependentUpon>
@@ -4418,6 +4455,17 @@
     <None Include="Lib\__phello__.foo.py" />
     <None Include="LogAnalyzer\py2exe\createexe.bat" />
     <None Include="LogAnalyzer\upload.bat" />
+    <None Include="maintainace.xsc">
+      <DependentUpon>maintainace.xsd</DependentUpon>
+    </None>
+    <None Include="maintainace.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>maintainace.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="maintainace.xss">
+      <DependentUpon>maintainace.xsd</DependentUpon>
+    </None>
     <None Include="NoFly\Areas-Lisboa.kmz" />
     <None Include="NoFly\Regulamento-RPA-ver-3.0.kmz">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

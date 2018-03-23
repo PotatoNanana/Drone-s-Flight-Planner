@@ -97,6 +97,7 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_add_drone_pre_Click(object sender, EventArgs e)
         {
+            //add previtive 
             Form_Add_drone_pre form_Add_Drone_Pre = new Form_Add_drone_pre();
             form_Add_Drone_Pre.ShowDialog();
         }
@@ -108,12 +109,14 @@ namespace MissionPlanner.GCSViews
 
         private void button_edit_Click(object sender, EventArgs e)
         {
+            //update
             Form_Edit_drone_pre form_Edit_Drone_Pre = new Form_Edit_drone_pre();
             form_Edit_Drone_Pre.ShowDialog();
         }
 
         private void button_show_Click(object sender, EventArgs e)
         {
+            //show data to dataGridView
             con.Open();
             String query = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_vendorPhone,maintain_venderAdd,maintain_length,maintain_responder,maintain_date FROM Maintainance";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
@@ -125,10 +128,16 @@ namespace MissionPlanner.GCSViews
 
         private void button_delete_Click(object sender, EventArgs e)
         {
+            // delete
             if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DG_Farm.RemoveCurrent();
             }
+        }
+
+        private void button_serch_Click(object sender, EventArgs e)
+        {
+            // serch record
         }
     }
 }

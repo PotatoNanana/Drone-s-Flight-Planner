@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Add_drone_part));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.comboBox_alarm = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.button_serch = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.dateTimePicker_ExpDate = new System.Windows.Forms.DateTimePicker();
@@ -61,8 +63,6 @@
             this.But_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox_alarm = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -120,6 +120,28 @@
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
+            // comboBox_alarm
+            // 
+            this.comboBox_alarm.FormattingEnabled = true;
+            this.comboBox_alarm.Items.AddRange(new object[] {
+            "ทุกวัน",
+            "ทุกอาทิตย์",
+            "ทุกเดือน",
+            "ทุก1ปี"});
+            this.comboBox_alarm.Location = new System.Drawing.Point(217, 321);
+            this.comboBox_alarm.Name = "comboBox_alarm";
+            this.comboBox_alarm.Size = new System.Drawing.Size(200, 32);
+            this.comboBox_alarm.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(60, 324);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 24);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "แจ้งเตือนการบำรุงรักษา";
+            // 
             // button_serch
             // 
             this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
@@ -140,10 +162,12 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.InitialImage")));
             this.pictureBox.Location = new System.Drawing.Point(640, 280);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 15;
             this.pictureBox.TabStop = false;
             // 
@@ -412,28 +436,6 @@
             this.Main_but_farm.UseCompatibleTextRendering = true;
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(60, 324);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 24);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "แจ้งเตือนการบำรุงรักษา";
-            // 
-            // comboBox_alarm
-            // 
-            this.comboBox_alarm.FormattingEnabled = true;
-            this.comboBox_alarm.Items.AddRange(new object[] {
-            "ทุกวัน",
-            "ทุกอาทิตย์",
-            "ทุกเดือน",
-            "ทุก1ปี"});
-            this.comboBox_alarm.Location = new System.Drawing.Point(217, 321);
-            this.comboBox_alarm.Name = "comboBox_alarm";
-            this.comboBox_alarm.Size = new System.Drawing.Size(200, 32);
-            this.comboBox_alarm.TabIndex = 18;
             // 
             // Form_Add_drone_part
             // 

@@ -98,7 +98,7 @@ namespace MissionPlanner.GCSViews
             if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 con.Open();
-                String query = "DELETE FROM Drone where drone_id = '"+textBox_droneID.Text+"' ";
+                String query = "DELETE * FROM Drone where drone_id = '"+textBox_droneID.Text+"' ";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
@@ -111,11 +111,11 @@ namespace MissionPlanner.GCSViews
         {
             //search drone
             con.Open();
-            String query = "SELECT * FROM Drone where drone_id = '" + textBox_droneID.Text + "', drone_name = '"+textBox_droneName.Text+"' ";
+            String query = "SELECT * FROM Drone where drone_id = '" + textBox_droneID.Text + "'OR drone_name = '"+textBox_droneName.Text+"' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("Delete Record  in DB Success!!");
+            
         }
 
         private void button_modify_Click(object sender, EventArgs e)
