@@ -32,7 +32,17 @@ namespace MissionPlanner.GCSViews
                         
         }
 
+        public Menu_maintenance_part(string id_drone)
+        {
+            this.id_drone = id_drone;
+            InitializeComponent();
+
+            MyView = new MainSwitcher(this);
+        }
+
         Controls.MainSwitcher MyView;
+        private string id_drone;
+
         public static event EventHandler Goto_Drone_Clicked;
         public static event EventHandler Goto_DronePre_Clicked;
 
@@ -100,7 +110,7 @@ namespace MissionPlanner.GCSViews
         private void BUT_add_drone_part_Click(object sender, EventArgs e)
         {
             //pass to add part
-            Form_Add_drone_part form_Add_Drone_Part = new Form_Add_drone_part();
+            Form_Add_drone_part form_Add_Drone_Part = new Form_Add_drone_part(id_drone);
             form_Add_Drone_Part.ShowDialog();
         }
         

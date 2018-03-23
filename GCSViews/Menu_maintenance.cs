@@ -31,6 +31,7 @@ namespace MissionPlanner.GCSViews
 
         Controls.MainSwitcher MyView;
         public static event EventHandler Goto_DronePart_Clicked;
+        public String id_drone;
 
         protected virtual void OnGotoDronePartClicked(EventArgs e)
         {
@@ -78,6 +79,7 @@ namespace MissionPlanner.GCSViews
         }
                
         private void BUT_add_drone_Click(object sender, EventArgs e)
+
         {
             //add drone
 
@@ -88,7 +90,7 @@ namespace MissionPlanner.GCSViews
         private void button1_Click(object sender, EventArgs e)
         {
             //detail part of drone
-            Menu_maintenance_part menu_maintain_part = new Menu_maintenance_part();
+            Menu_maintenance_part menu_maintain_part = new Menu_maintenance_part(id_drone);
             menu_maintain_part.ShowUserControl();
 
         }
@@ -144,6 +146,7 @@ namespace MissionPlanner.GCSViews
         private void DG_Drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
+            id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString(); 
             textBox_droneName.Text = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
         }
     }

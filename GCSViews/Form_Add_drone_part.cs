@@ -19,17 +19,18 @@ namespace MissionPlanner.GCSViews
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         string imgLocation = "";
         SqlCommand cmd;
+        private string id_drone;
 
         public Form_Add_drone_part()
         {
             InitializeComponent();
 
-            add_DG();
+        }
 
-            void add_DG()
-            {
-
-            }
+        public Form_Add_drone_part(string id_drone)
+        {
+            this.id_drone = id_drone;
+            InitializeComponent();
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -76,8 +77,8 @@ namespace MissionPlanner.GCSViews
             comboBox_alarm.SelectedItem.ToString();
             string format = "yyyy-MM-dd";
 
-            String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price) "
-                                       + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_ExpDate.Value.ToString(format) + "','" + textBox_VenName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respond.Text + "',@images,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_price.Text + "')";
+            String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id) "
+                                       + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_ExpDate.Value.ToString(format) + "','" + textBox_VenName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respond.Text + "',@images,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_price.Text + "','" + id_drone + "')";
             //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             //SDA.SelectCommand.ExecuteNonQuery();
 
