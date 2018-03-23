@@ -39,4 +39,3 @@ C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\ne
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfoInputs.cache
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
-C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojResolveAssemblyReference.cache

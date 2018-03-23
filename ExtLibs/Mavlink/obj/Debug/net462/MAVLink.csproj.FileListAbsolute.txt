@@ -35,7 +35,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.dll
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Mavlink\bin\Debug\net462\log4net.dll
-C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.csprojResolveAssemblyReference.cache
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.csproj.CoreCompileInputs.cache
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.AssemblyInfoInputs.cache
 C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.AssemblyInfo.cs
