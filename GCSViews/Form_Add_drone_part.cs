@@ -76,15 +76,15 @@ namespace MissionPlanner.GCSViews
             comboBox_alarm.SelectedItem.ToString();
             string format = "yyyy-MM-dd";
 
-            String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,vender_responder,device_img,device_alarm,device_price) "
+            String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price) "
                                        + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_ExpDate.Value.ToString(format) + "','" + textBox_VenName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respond.Text + "',@images,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_price.Text + "')";
             //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             //SDA.SelectCommand.ExecuteNonQuery();
 
             SqlCommand cmd = new SqlCommand(query, con);
             //cmd.Parameters.Add(new SqlParameter("@images", images));
-            cmd.Parameters.Add("@Image", SqlDbType.Image, imgBytes.Length);
-            cmd.Parameters["Image"].Value = imgBytes;
+            cmd.Parameters.Add("@Images", SqlDbType.Image, imgBytes.Length);
+            cmd.Parameters["@Images"].Value = imgBytes;
             cmd.ExecuteNonQuery();
 
             con.Close();
