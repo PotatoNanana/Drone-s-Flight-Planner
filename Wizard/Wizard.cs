@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
+using MissionPlanner.Wizard;
 
 namespace MissionPlanner.Wizard
 {
@@ -79,7 +80,6 @@ namespace MissionPlanner.Wizard
             progressStep1.Maximum = wiz_main.screens.Count + 1;
             progressStep1.Step = 1;
         }
-
         public void GoNext(int progresspages, bool saveinhistory = true)
         {
             // do the current page busy check
