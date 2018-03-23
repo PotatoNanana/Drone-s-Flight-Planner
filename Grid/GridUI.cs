@@ -179,9 +179,9 @@ namespace MissionPlanner
                 kmlpolygonsoverlay.Routes.Add(new GMapRoute(temp.Points,""));
             }
 
-            xmlcamera(false, Settings.GetRunningDirectory() + "camerasBuiltin.xml");
+            xmlcamera(false, Utilities.Settings.GetRunningDirectory() + "camerasBuiltin.xml");
 
-            xmlcamera(false, Settings.GetUserDataDirectory() + "cameras.xml");
+            xmlcamera(false, Utilities.Settings.GetUserDataDirectory() + "cameras.xml");
 
             loading = false;
         }
@@ -1565,7 +1565,7 @@ namespace MissionPlanner
 
             cameras[CMB_camera.Text] = camera;
 
-            xmlcamera(true, Settings.GetUserDataDirectory() + "cameras.xml");
+            xmlcamera(true, Utilities.Settings.GetUserDataDirectory() + "cameras.xml");
         }
 
         private void BUT_Accept_Click(object sender, EventArgs e)
@@ -1827,13 +1827,13 @@ namespace MissionPlanner
 
                     if (CHK_camdirection.Checked)
                     {
-                        Settings.Instance["camera_fovh"] = fovha.ToString();
-                        Settings.Instance["camera_fovv"] = fovva.ToString();
+                        Utilities.Settings.Instance["camera_fovh"] = fovha.ToString();
+                        Utilities.Settings.Instance["camera_fovv"] = fovva.ToString();
                     }
                     else
                     {
-                        Settings.Instance["camera_fovh"] = fovva.ToString();
-                        Settings.Instance["camera_fovv"] = fovha.ToString();
+                        Utilities.Settings.Instance["camera_fovh"] = fovva.ToString();
+                        Utilities.Settings.Instance["camera_fovv"] = fovha.ToString();
                     }
                 }
                 catch(Exception ex)

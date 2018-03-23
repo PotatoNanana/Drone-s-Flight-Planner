@@ -27,10 +27,10 @@ namespace MissionPlanner
 
         public static CultureInfo GetConfigLang()
         {
-            if (Settings.Instance["language"] == null)
+            if (Utilities.Settings.Instance["language"] == null)
                 return CultureInfo.CurrentUICulture;
             else
-                return CultureInfoEx.GetCultureInfo(Settings.Instance["language"]);
+                return CultureInfoEx.GetCultureInfo(Utilities.Settings.Instance["language"]);
         }
 
         public static string ReplaceMirrorUrl(ref string url)

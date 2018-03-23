@@ -100,7 +100,7 @@ namespace MissionPlanner.Plugin
 
         public static void LoadAll()
         {
-            string path = Settings.GetRunningDirectory() + "plugins" +
+            string path = Utilities.Settings.GetRunningDirectory() + "plugins" +
                           Path.DirectorySeparatorChar;
 
             if (!Directory.Exists(path))
