@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace MissionPlanner.GCSViews
 {
@@ -50,7 +52,23 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_save_Click(object sender, EventArgs e)
         {
-            this.Close();
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=napat;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+            string query = "INSERT Farm(farm_id, farm_name, farm_location, farm_host) VALUES ('"+ Farm_id.Text.Trim() + "','" + Farm_name.Text.Trim() + "', '" + Farm_location.Text.Trim() + "', '" + Farm_host.Text.Trim() + "')";
+            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+            if (dataTable.Rows.Count == 1)
+            {
+                Menu_farm menu_Farm = new Menu_farm();
+                menu_Farm.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                MessageBox.Show("มีฟาร์มนี้อยู่แล้ว");
+            }
+            
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
