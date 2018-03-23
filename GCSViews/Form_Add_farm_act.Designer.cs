@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Add_farm_act));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.textBox_droneID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox_cost = new System.Windows.Forms.TextBox();
             this.textBox_cap = new System.Windows.Forms.TextBox();
             this.textBox_actName = new System.Windows.Forms.TextBox();
@@ -46,7 +49,6 @@
             this.But_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -58,12 +60,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(434, 391);
+            this.panel1.Size = new System.Drawing.Size(434, 438);
             this.panel1.TabIndex = 0;
             // 
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.textBox_droneID);
+            this.panel_Main_farm.Controls.Add(this.label7);
             this.panel_Main_farm.Controls.Add(this.dateTimePicker);
             this.panel_Main_farm.Controls.Add(this.textBox_cost);
             this.panel_Main_farm.Controls.Add(this.textBox_cap);
@@ -83,34 +87,57 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(434, 391);
+            this.panel_Main_farm.Size = new System.Drawing.Size(434, 438);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
+            // textBox_droneID
+            // 
+            this.textBox_droneID.Location = new System.Drawing.Point(144, 163);
+            this.textBox_droneID.Name = "textBox_droneID";
+            this.textBox_droneID.Size = new System.Drawing.Size(200, 31);
+            this.textBox_droneID.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(60, 170);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 24);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "รหัสโดรน";
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(144, 75);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker.TabIndex = 14;
+            // 
             // textBox_cost
             // 
-            this.textBox_cost.Location = new System.Drawing.Point(144, 277);
+            this.textBox_cost.Location = new System.Drawing.Point(144, 330);
             this.textBox_cost.Name = "textBox_cost";
             this.textBox_cost.Size = new System.Drawing.Size(200, 31);
             this.textBox_cost.TabIndex = 13;
             // 
             // textBox_cap
             // 
-            this.textBox_cap.Location = new System.Drawing.Point(144, 237);
+            this.textBox_cap.Location = new System.Drawing.Point(144, 290);
             this.textBox_cap.Name = "textBox_cap";
             this.textBox_cap.Size = new System.Drawing.Size(200, 31);
             this.textBox_cap.TabIndex = 13;
             // 
             // textBox_actName
             // 
-            this.textBox_actName.Location = new System.Drawing.Point(144, 197);
+            this.textBox_actName.Location = new System.Drawing.Point(144, 250);
             this.textBox_actName.Name = "textBox_actName";
             this.textBox_actName.Size = new System.Drawing.Size(200, 31);
             this.textBox_actName.TabIndex = 13;
             // 
             // textBox_actID
             // 
-            this.textBox_actID.Location = new System.Drawing.Point(144, 157);
+            this.textBox_actID.Location = new System.Drawing.Point(144, 210);
             this.textBox_actID.Name = "textBox_actID";
             this.textBox_actID.Size = new System.Drawing.Size(200, 31);
             this.textBox_actID.TabIndex = 13;
@@ -125,7 +152,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 240);
+            this.label6.Location = new System.Drawing.Point(60, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 24);
             this.label6.TabIndex = 12;
@@ -135,7 +162,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 280);
+            this.label5.Location = new System.Drawing.Point(60, 333);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 24);
             this.label5.TabIndex = 12;
@@ -145,7 +172,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 200);
+            this.label4.Location = new System.Drawing.Point(60, 253);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 24);
             this.label4.TabIndex = 12;
@@ -155,7 +182,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 160);
+            this.label3.Location = new System.Drawing.Point(60, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 24);
             this.label3.TabIndex = 12;
@@ -189,7 +216,7 @@
             this.But_exit.ForeColor = System.Drawing.Color.White;
             this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_exit.Location = new System.Drawing.Point(232, 330);
+            this.But_exit.Location = new System.Drawing.Point(214, 381);
             this.But_exit.Name = "But_exit";
             this.But_exit.Size = new System.Drawing.Size(130, 40);
             this.But_exit.TabIndex = 10;
@@ -207,7 +234,7 @@
             this.But_save.ForeColor = System.Drawing.Color.White;
             this.But_save.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_save.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_save.Location = new System.Drawing.Point(72, 330);
+            this.But_save.Location = new System.Drawing.Point(64, 381);
             this.But_save.Name = "But_save";
             this.But_save.Size = new System.Drawing.Size(130, 40);
             this.But_save.TabIndex = 6;
@@ -246,22 +273,16 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.Location = new System.Drawing.Point(144, 75);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 31);
-            this.dateTimePicker.TabIndex = 14;
-            // 
             // Form_Add_farm_act
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 391);
+            this.ClientSize = new System.Drawing.Size(434, 438);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Add_farm_act";
             this.Text = "Activity Adding";
+            this.Load += new System.EventHandler(this.Form_Add_farm_act_Load);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
@@ -290,5 +311,7 @@
         private System.Windows.Forms.TextBox textBox_actID;
         private System.Windows.Forms.TextBox textBox_farmID;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.TextBox textBox_droneID;
+        private System.Windows.Forms.Label label7;
     }
 }

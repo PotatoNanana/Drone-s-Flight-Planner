@@ -28,25 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_act));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.But_exit = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.droneFlightPlannerDataSet1 = new MissionPlanner.DroneFlightPlannerDataSet1();
+            this.scheduleactionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schedule_actionTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter();
+            this.actiondateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actioncapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actioncostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleactionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,61 +117,23 @@
             // 
             // DG_Farm
             // 
+            this.DG_Farm.AutoGenerateColumns = false;
             this.DG_Farm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column5,
-            this.Column2,
-            this.Column3,
-            this.Column6,
-            this.Column1,
-            this.Column4,
-            this.Activity});
+            this.actiondateDataGridViewTextBoxColumn,
+            this.actionnoDataGridViewTextBoxColumn,
+            this.actionnameDataGridViewTextBoxColumn,
+            this.actioncapacityDataGridViewTextBoxColumn,
+            this.actioncostDataGridViewTextBoxColumn,
+            this.farmidDataGridViewTextBoxColumn,
+            this.droneidDataGridViewTextBoxColumn});
+            this.DG_Farm.DataSource = this.scheduleactionBindingSource;
             this.DG_Farm.Location = new System.Drawing.Point(25, 75);
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.Size = new System.Drawing.Size(784, 300);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "วันที่";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "รหัสกิจกรรม";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 120;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "ชื่อกิจกรรม";
-            this.Column3.Name = "Column3";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "รูปแบบการบิน";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 120;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "รหัสโดรน";
-            this.Column1.Name = "Column1";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ปริมาณสาร";
-            this.Column4.Name = "Column4";
-            // 
-            // Activity
-            // 
-            this.Activity.HeaderText = "ค่าใช้จ่าย";
-            this.Activity.Name = "Activity";
-            this.Activity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Activity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // panel3
             // 
@@ -197,6 +165,62 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
+            // droneFlightPlannerDataSet1
+            // 
+            this.droneFlightPlannerDataSet1.DataSetName = "DroneFlightPlannerDataSet1";
+            this.droneFlightPlannerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // scheduleactionBindingSource
+            // 
+            this.scheduleactionBindingSource.DataMember = "schedule_action";
+            this.scheduleactionBindingSource.DataSource = this.droneFlightPlannerDataSet1;
+            // 
+            // schedule_actionTableAdapter
+            // 
+            this.schedule_actionTableAdapter.ClearBeforeFill = true;
+            // 
+            // actiondateDataGridViewTextBoxColumn
+            // 
+            this.actiondateDataGridViewTextBoxColumn.DataPropertyName = "action_date";
+            this.actiondateDataGridViewTextBoxColumn.HeaderText = "วันที่";
+            this.actiondateDataGridViewTextBoxColumn.Name = "actiondateDataGridViewTextBoxColumn";
+            // 
+            // actionnoDataGridViewTextBoxColumn
+            // 
+            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.HeaderText = "รหัสกิจกรรม";
+            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
+            // 
+            // actionnameDataGridViewTextBoxColumn
+            // 
+            this.actionnameDataGridViewTextBoxColumn.DataPropertyName = "action_name";
+            this.actionnameDataGridViewTextBoxColumn.HeaderText = "ชื่อกิจกรรม";
+            this.actionnameDataGridViewTextBoxColumn.Name = "actionnameDataGridViewTextBoxColumn";
+            // 
+            // actioncapacityDataGridViewTextBoxColumn
+            // 
+            this.actioncapacityDataGridViewTextBoxColumn.DataPropertyName = "action_capacity";
+            this.actioncapacityDataGridViewTextBoxColumn.HeaderText = "ปริมาณสาร";
+            this.actioncapacityDataGridViewTextBoxColumn.Name = "actioncapacityDataGridViewTextBoxColumn";
+            // 
+            // actioncostDataGridViewTextBoxColumn
+            // 
+            this.actioncostDataGridViewTextBoxColumn.DataPropertyName = "action_cost";
+            this.actioncostDataGridViewTextBoxColumn.HeaderText = "ค่าใช้จ่าย";
+            this.actioncostDataGridViewTextBoxColumn.Name = "actioncostDataGridViewTextBoxColumn";
+            // 
+            // farmidDataGridViewTextBoxColumn
+            // 
+            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.HeaderText = "รหัสฟาร์ม";
+            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
             // Form_farm_act
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,10 +230,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_farm_act";
             this.Text = "Flight Schedule";
+            this.Load += new System.EventHandler(this.Form_farm_act_Load);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleactionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,13 +249,16 @@
         private Controls.MyDataGridView DG_Farm;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Activity;
         private System.Windows.Forms.Button button1;
+        private DroneFlightPlannerDataSet1 droneFlightPlannerDataSet1;
+        private System.Windows.Forms.BindingSource scheduleactionBindingSource;
+        private DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter schedule_actionTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actiondateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actionnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actionnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actioncapacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actioncostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
     }
 }

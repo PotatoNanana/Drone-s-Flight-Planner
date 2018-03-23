@@ -58,7 +58,7 @@ namespace MissionPlanner.GCSViews
 
             string format = "yyyy-MM-dd";
 
-            String query = "INSERT INTO schedule_action (farm_id,action_no,action_name,action_capacity,action_cost,action_date) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_actID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
+            String query = "INSERT INTO schedule_action (farm_id,action_no,action_name,action_capacity,action_cost,action_date,drone_id) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_actID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + dateTimePicker.Value.ToString(format) + "','" + textBox_droneID.Text + "')";
 
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
@@ -67,6 +67,11 @@ namespace MissionPlanner.GCSViews
             MessageBox.Show("Save To DB Success!!");
 
             this.Close();
+        }
+
+        private void Form_Add_farm_act_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

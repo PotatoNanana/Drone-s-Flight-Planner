@@ -41,20 +41,16 @@
             this.button_show = new System.Windows.Forms.Button();
             this.But_exit = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.But_add_act = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.schedule_act = new MissionPlanner.schedule_act();
+            this.schedule_actionTableAdapter = new MissionPlanner.schedule_actTableAdapters.schedule_actionTableAdapter();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.schedule_act)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,6 +100,7 @@
             this.button_serch.Text = "ค้นหา";
             this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_serch.UseVisualStyleBackColor = false;
+            this.button_serch.Click += new System.EventHandler(this.button_serch_Click);
             // 
             // button_edit
             // 
@@ -121,6 +118,7 @@
             this.button_edit.Text = "แก้ไข";
             this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_edit.UseVisualStyleBackColor = false;
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
             // button_delete
             // 
@@ -211,65 +209,12 @@
             // 
             this.DG_Farm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_Farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column5,
-            this.Column2,
-            this.Column3,
-            this.Column6,
-            this.Column1,
-            this.Delete,
-            this.Edit});
             this.DG_Farm.Location = new System.Drawing.Point(25, 75);
             this.DG_Farm.Name = "DG_Farm";
+            this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Farm.Size = new System.Drawing.Size(562, 333);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "วันที่";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "รหัสกิจกรรม";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 120;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "ชื่อกิจกรรม";
-            this.Column3.Name = "Column3";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "รูปแบบการบิน";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 120;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "รหัสโดรน";
-            this.Column1.Name = "Column1";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "ลบ";
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Text = "ลบ";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 80;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "แก้ไข";
-            this.Edit.Name = "Edit";
-            this.Edit.Text = "แก้ไข";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 80;
             // 
             // But_add_act
             // 
@@ -319,6 +264,15 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
+            // schedule_act
+            // 
+            this.schedule_act.DataSetName = "schedule_act";
+            this.schedule_act.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // schedule_actionTableAdapter
+            // 
+            this.schedule_actionTableAdapter.ClearBeforeFill = true;
+            // 
             // Form_farm_Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,11 +282,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_farm_Schedule";
             this.Text = "Flight Schedule";
+            this.Load += new System.EventHandler(this.Form_farm_Schedule_Load);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.schedule_act)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,13 +302,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
         private System.Windows.Forms.Button But_add_act;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_actName;
@@ -361,5 +310,7 @@
         private System.Windows.Forms.Button button_serch;
         private System.Windows.Forms.Button button_edit;
         private System.Windows.Forms.Button button_delete;
+        private schedule_act schedule_act;
+        private schedule_actTableAdapters.schedule_actionTableAdapter schedule_actionTableAdapter;
     }
 }

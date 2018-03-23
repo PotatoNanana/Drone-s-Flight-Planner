@@ -83,6 +83,24 @@ namespace MissionPlanner.GCSViews
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //show data to DataGridView
+            con.Open();
+
+            //string a = "yyyy-MM-dd";
+            string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
+
+            String query = "SELECT * FROM schedule_action WHERE action_date < dateNow";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
+        }
+
+        private void Form_farm_act_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet1.schedule_action' table. You can move, or remove it, as needed.
+            this.schedule_actionTableAdapter.Fill(this.droneFlightPlannerDataSet1.schedule_action);
 
         }
     }

@@ -475,11 +475,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlannerDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DroneLog.Designer.cs">
       <DependentUpon>DroneLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightSchedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightSchedule.xsd</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\maintenance_RegisTool.cs">
       <SubType>UserControl</SubType>
@@ -721,6 +731,21 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Schedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleAct.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleAct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="schedule_act.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>schedule_act.xsd</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs">
       <SubType>Form</SubType>
@@ -3939,6 +3964,28 @@
     <None Include="DroneFlightPlannerDataSet.xss">
       <DependentUpon>DroneFlightPlannerDataSet.xsd</DependentUpon>
     </None>
+    <None Include="DroneFlightPlannerDataSet1.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet1.xss">
+      <DependentUpon>DroneFlightPlannerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FlightSchedule.xsc">
+      <DependentUpon>FlightSchedule.xsd</DependentUpon>
+    </None>
+    <None Include="FlightSchedule.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlightSchedule.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FlightSchedule.xss">
+      <DependentUpon>FlightSchedule.xsd</DependentUpon>
+    </None>
     <None Include="Lib.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -4480,6 +4527,39 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schedule.xsc">
+      <DependentUpon>Schedule.xsd</DependentUpon>
+    </None>
+    <None Include="Schedule.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Schedule.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schedule.xss">
+      <DependentUpon>Schedule.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleAct.xsc">
+      <DependentUpon>ScheduleAct.xsd</DependentUpon>
+    </None>
+    <None Include="ScheduleAct.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleAct.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScheduleAct.xss">
+      <DependentUpon>ScheduleAct.xsd</DependentUpon>
+    </None>
+    <None Include="schedule_act.xsc">
+      <DependentUpon>schedule_act.xsd</DependentUpon>
+    </None>
+    <None Include="schedule_act.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>schedule_act.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schedule_act.xss">
+      <DependentUpon>schedule_act.xsd</DependentUpon>
     </None>
     <None Include="Utilities\ImageOverFilter.cs" />
     <EmbeddedResource Include="Antenna\Tracker.id-ID.resx">

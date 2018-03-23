@@ -53,6 +53,18 @@ namespace MissionPlanner.GCSViews
 
         private void But_save_Click(object sender, EventArgs e)
         {
+            con.Open();
+
+            string format = "yyyy-MM-dd";
+
+            String query = "UPDATE schedule_action SET farm_id = '" + textBox_farmID.Text + "',action_no = '" + textBox_actID.Text + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "',action_date = '" + dateTimePicker.Value.ToString(format) + "',drone_id = '" + textBox_droneID.Text + "') ";
+            
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+
+            con.Close();
+            MessageBox.Show("Edit To DB Success!!");
+
             this.Close();
         }
     }

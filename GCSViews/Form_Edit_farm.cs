@@ -58,6 +58,13 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_edit_Click(object sender, EventArgs e)
         {
+            con.Open();
+            String query = "UPDATE Farm SET farm_id = '" + textBox_farmID.Text + "',farm_name = '" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Edit To DB Success!!");
+
             this.Close();
         }
 
