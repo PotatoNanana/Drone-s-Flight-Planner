@@ -106,9 +106,6 @@ namespace MissionPlanner.GCSViews
 
             if (DG_Drone.Columns[e.ColumnIndex].Name == "Edit")
             {
-                Form_Edit_farm form_Edit_Farm = new Form_Edit_farm();
-                form_Edit_Farm.ShowDialog();
-
                 Form_Edit_drone form_Edit_Drone = new Form_Edit_drone();
                 form_Edit_Drone.ShowDialog();
             }
