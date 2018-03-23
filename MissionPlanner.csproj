@@ -580,12 +580,6 @@
     <Compile Include="GCSViews\Menu_main2.Designer.cs">
       <DependentUpon>Menu_main2.cs</DependentUpon>
     </Compile>
-    <Compile Include="GCSViews\UserLogin - Copy.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GCSViews\UserLogin - Copy.Designer.cs">
-      <DependentUpon>UserLogin - Copy.cs</DependentUpon>
-    </Compile>
     <Compile Include="GCSViews\UserLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -3051,9 +3045,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Menu_main2.resx">
       <DependentUpon>Menu_main2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\UserLogin - Copy.resx">
-      <DependentUpon>UserLogin - Copy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>

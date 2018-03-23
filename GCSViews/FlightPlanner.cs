@@ -581,7 +581,7 @@ namespace MissionPlanner.GCSViews
             MainMap.ForceDoubleBuffer = false;
 
             //WebRequest.DefaultWebProxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
-
+            FlightData = new GCSViews.FlightData();
             // get map type
             comboBoxMapType.ValueMember = "Name";
             comboBoxMapType.DataSource = GMapProviders.List.ToArray();
