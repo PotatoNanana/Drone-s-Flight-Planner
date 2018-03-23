@@ -17,11 +17,18 @@ namespace MissionPlanner.GCSViews
         //SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
+        private string id_drone;
 
         public Form_Add_drone_pre()
         {
             InitializeComponent();
                   
+        }
+
+        public Form_Add_drone_pre(string id_drone)
+        {
+            this.id_drone = id_drone;
+            InitializeComponent();
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -60,8 +67,8 @@ namespace MissionPlanner.GCSViews
                         
             string format = "yyyy-MM-dd";
 
-            String query = "INSERT INTO Maintainance (maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_vendorPhone,maintain_venderAdd,maintain_length,maintain_responder,maintain_date) "
-                                       + "VALUES('" + textBox_mainID.Text + "','" + textBox_mainAct.Text + "','" + textBox_price.Text + "','" + textBox_venName.Text + "','" + textBox_venPhone.Text + "','" + textBox_venAdd.Text + "','" + textBox_time.Text + "','" + textBox_respond.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
+            String query = "INSERT INTO Maintainance (drone_id,maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_vendorPhone,maintain_venderAdd,maintain_length,maintain_responder,maintain_date) "
+                                       + "VALUES('"+id_drone+"','" + textBox_mainID.Text + "','" + textBox_mainAct.Text + "','" + textBox_price.Text + "','" + textBox_venName.Text + "','" + textBox_venPhone.Text + "','" + textBox_venAdd.Text + "','" + textBox_time.Text + "','" + textBox_respond.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();

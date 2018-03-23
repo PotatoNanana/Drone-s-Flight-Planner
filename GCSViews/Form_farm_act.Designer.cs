@@ -35,11 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.But_exit = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Main_but_farm = new System.Windows.Forms.Button();
-            this.droneFlightPlannerDataSet1 = new MissionPlanner.DroneFlightPlannerDataSet1();
-            this.scheduleactionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.schedule_actionTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter();
             this.actiondateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,12 +42,23 @@
             this.actioncostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scheduleactionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.droneFlightPlannerDataSet1 = new MissionPlanner.DroneFlightPlannerDataSet1();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
+            this.schedule_actionTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter();
+            this.button_edit = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.textBox_actName = new System.Windows.Forms.TextBox();
+            this.textBox_actID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleactionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,12 +67,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 461);
+            this.panel1.Size = new System.Drawing.Size(834, 395);
             this.panel1.TabIndex = 0;
             // 
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.button_edit);
+            this.panel_Main_farm.Controls.Add(this.button_delete);
+            this.panel_Main_farm.Controls.Add(this.textBox_actName);
+            this.panel_Main_farm.Controls.Add(this.textBox_actID);
+            this.panel_Main_farm.Controls.Add(this.label2);
+            this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.button1);
             this.panel_Main_farm.Controls.Add(this.But_exit);
             this.panel_Main_farm.Controls.Add(this.DG_Farm);
@@ -75,7 +87,7 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(834, 461);
+            this.panel_Main_farm.Size = new System.Drawing.Size(834, 395);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
@@ -88,7 +100,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(268, 390);
+            this.button1.Location = new System.Drawing.Point(517, 292);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 40);
             this.button1.TabIndex = 11;
@@ -106,7 +118,7 @@
             this.But_exit.ForeColor = System.Drawing.Color.White;
             this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_exit.Location = new System.Drawing.Point(485, 390);
+            this.But_exit.Location = new System.Drawing.Point(677, 292);
             this.But_exit.Name = "But_exit";
             this.But_exit.Size = new System.Drawing.Size(130, 40);
             this.But_exit.TabIndex = 10;
@@ -131,53 +143,10 @@
             this.DG_Farm.DataSource = this.scheduleactionBindingSource;
             this.DG_Farm.Location = new System.Drawing.Point(25, 75);
             this.DG_Farm.Name = "DG_Farm";
-            this.DG_Farm.Size = new System.Drawing.Size(784, 300);
+            this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DG_Farm.Size = new System.Drawing.Size(460, 300);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.Main_but_farm);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(834, 50);
-            this.panel3.TabIndex = 0;
-            // 
-            // Main_but_farm
-            // 
-            this.Main_but_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main_but_farm.FlatAppearance.BorderSize = 0;
-            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
-            this.Main_but_farm.ForeColor = System.Drawing.Color.White;
-            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
-            this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(834, 50);
-            this.Main_but_farm.TabIndex = 6;
-            this.Main_but_farm.Text = "ตารางปฏิทินการบิน";
-            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Main_but_farm.UseCompatibleTextRendering = true;
-            this.Main_but_farm.UseVisualStyleBackColor = true;
-            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
-            // 
-            // droneFlightPlannerDataSet1
-            // 
-            this.droneFlightPlannerDataSet1.DataSetName = "DroneFlightPlannerDataSet1";
-            this.droneFlightPlannerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // scheduleactionBindingSource
-            // 
-            this.scheduleactionBindingSource.DataMember = "schedule_action";
-            this.scheduleactionBindingSource.DataSource = this.droneFlightPlannerDataSet1;
-            // 
-            // schedule_actionTableAdapter
-            // 
-            this.schedule_actionTableAdapter.ClearBeforeFill = true;
             // 
             // actiondateDataGridViewTextBoxColumn
             // 
@@ -221,11 +190,123 @@
             this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
             this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
             // 
+            // scheduleactionBindingSource
+            // 
+            this.scheduleactionBindingSource.DataMember = "schedule_action";
+            this.scheduleactionBindingSource.DataSource = this.droneFlightPlannerDataSet1;
+            // 
+            // droneFlightPlannerDataSet1
+            // 
+            this.droneFlightPlannerDataSet1.DataSetName = "DroneFlightPlannerDataSet1";
+            this.droneFlightPlannerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Main_but_farm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(834, 50);
+            this.panel3.TabIndex = 0;
+            // 
+            // Main_but_farm
+            // 
+            this.Main_but_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Main_but_farm.FlatAppearance.BorderSize = 0;
+            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
+            this.Main_but_farm.ForeColor = System.Drawing.Color.White;
+            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Name = "Main_but_farm";
+            this.Main_but_farm.Size = new System.Drawing.Size(834, 50);
+            this.Main_but_farm.TabIndex = 6;
+            this.Main_but_farm.Text = "ตารางปฏิทินการบิน";
+            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Main_but_farm.UseCompatibleTextRendering = true;
+            this.Main_but_farm.UseVisualStyleBackColor = true;
+            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
+            // 
+            // schedule_actionTableAdapter
+            // 
+            this.schedule_actionTableAdapter.ClearBeforeFill = true;
+            // 
+            // button_edit
+            // 
+            this.button_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_edit.FlatAppearance.BorderSize = 0;
+            this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_edit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_edit.ForeColor = System.Drawing.Color.White;
+            this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_edit.Location = new System.Drawing.Point(677, 226);
+            this.button_edit.Name = "button_edit";
+            this.button_edit.Size = new System.Drawing.Size(130, 40);
+            this.button_edit.TabIndex = 31;
+            this.button_edit.Text = "แก้ไข";
+            this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_edit.UseVisualStyleBackColor = false;
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
+            // 
+            // button_delete
+            // 
+            this.button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_delete.FlatAppearance.BorderSize = 0;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_delete.ForeColor = System.Drawing.Color.White;
+            this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_delete.Location = new System.Drawing.Point(517, 226);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(130, 40);
+            this.button_delete.TabIndex = 30;
+            this.button_delete.Text = "ลบ";
+            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
+            // textBox_actName
+            // 
+            this.textBox_actName.Location = new System.Drawing.Point(629, 160);
+            this.textBox_actName.Name = "textBox_actName";
+            this.textBox_actName.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actName.TabIndex = 29;
+            // 
+            // textBox_actID
+            // 
+            this.textBox_actID.Location = new System.Drawing.Point(629, 103);
+            this.textBox_actID.Name = "textBox_actID";
+            this.textBox_actID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actID.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(513, 163);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "ชื่อกิจกรรม";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(513, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 24);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "รหัสกิจกรรม";
+            // 
             // Form_farm_act
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 461);
+            this.ClientSize = new System.Drawing.Size(834, 395);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_farm_act";
@@ -233,10 +314,11 @@
             this.Load += new System.EventHandler(this.Form_farm_act_Load);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
+            this.panel_Main_farm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleactionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -260,5 +342,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn actioncostDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button_edit;
+        private System.Windows.Forms.Button button_delete;
+        private System.Windows.Forms.TextBox textBox_actName;
+        private System.Windows.Forms.TextBox textBox_actID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -110,7 +110,7 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void button_serch_Click(object sender, EventArgs e)
+       /* private void button_serch_Click(object sender, EventArgs e)
         {
             //search drone
             con.Open();
@@ -122,12 +122,12 @@ namespace MissionPlanner.GCSViews
             DG_Drone.DataSource = dt;
             con.Close();
             
-        }
+        } */
 
         private void button_modify_Click(object sender, EventArgs e)
         {
             //edit drone
-            Form_Edit_drone form_edit_drone = new Form_Edit_drone();
+            Form_Edit_drone form_edit_drone = new Form_Edit_drone(id_drone);
             form_edit_drone.ShowDialog();
         }
 

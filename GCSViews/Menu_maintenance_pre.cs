@@ -24,6 +24,7 @@ namespace MissionPlanner.GCSViews
         SqlCommand cmd;
 
 
+
         public Menu_maintenance_pre()
         {
             InitializeComponent();
@@ -32,7 +33,16 @@ namespace MissionPlanner.GCSViews
             
         }
 
+        public Menu_maintenance_pre(string id_drone)
+        {
+            this.id_drone = id_drone;
+            InitializeComponent();
+            MyView = new MainSwitcher(this);
+        }
+
         Controls.MainSwitcher MyView;
+        private string id_drone;
+
         public static event EventHandler Goto_Drone_Clicked;
 
         protected virtual void OnGotoDroneClicked(EventArgs e)
@@ -94,19 +104,19 @@ namespace MissionPlanner.GCSViews
         private void BUT_add_drone_pre_Click(object sender, EventArgs e)
         {
             //add previtive 
-            Form_Add_drone_pre form_Add_Drone_Pre = new Form_Add_drone_pre();
+            Form_Add_drone_pre form_Add_Drone_Pre = new Form_Add_drone_pre(id_drone);
             form_Add_Drone_Pre.ShowDialog();
         }
         
         private void but_backto_pre_Click(object sender, EventArgs e)
         {
-            OnGotoDroneClicked(e);
+            OnGotoDroneClicked(e); 
         }
 
         private void button_edit_Click(object sender, EventArgs e)
         {
-            //update
-            Form_Edit_drone_pre form_Edit_Drone_Pre = new Form_Edit_drone_pre();
+            //pass to update
+            Form_Edit_drone_pre form_Edit_Drone_Pre = new Form_Edit_drone_pre(id_drone);
             form_Edit_Drone_Pre.ShowDialog();
         }
 
@@ -136,7 +146,7 @@ namespace MissionPlanner.GCSViews
             }
         }
 
-        private void button_serch_Click(object sender, EventArgs e)
+       /* private void button_serch_Click(object sender, EventArgs e)
         {
             // serch record
             con.Open();
@@ -147,6 +157,6 @@ namespace MissionPlanner.GCSViews
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
             con.Close();
-        }
+        } */
     }
 }

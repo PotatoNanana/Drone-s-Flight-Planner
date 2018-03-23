@@ -18,8 +18,14 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
         }
 
+        public Form_Edit_drone(string id_drone)
+        {
+            this.id_drone = id_drone;
+        }
+
         //SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        private string id_drone;
 
         private void Main_but_farm_Click(object sender, EventArgs e)
         {

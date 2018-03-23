@@ -36,18 +36,10 @@
             this.textBox_mainID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_serch = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
             this.button_show = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.BUT_add_drone_pre = new System.Windows.Forms.Button();
-            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Main_but_farm = new System.Windows.Forms.Button();
-            this.maintainace = new MissionPlanner.maintainace();
-            this.maintainanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.maintainanceTableAdapter = new MissionPlanner.maintainaceTableAdapters.MaintainanceTableAdapter();
             this.maintainidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintainactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintaindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +49,19 @@
             this.maintainvenderNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintainvenderAddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintainvenderPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maintainanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maintainace = new MissionPlanner.maintainace();
+            this.BUT_add_drone_pre = new System.Windows.Forms.Button();
+            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
+            this.maintainanceTableAdapter = new MissionPlanner.maintainaceTableAdapters.MaintainanceTableAdapter();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maintainace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintainanceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maintainace)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -100,7 +99,6 @@
             this.panel_Main_farm.Controls.Add(this.textBox_mainID);
             this.panel_Main_farm.Controls.Add(this.label2);
             this.panel_Main_farm.Controls.Add(this.label1);
-            this.panel_Main_farm.Controls.Add(this.button_serch);
             this.panel_Main_farm.Controls.Add(this.button_edit);
             this.panel_Main_farm.Controls.Add(this.button_delete);
             this.panel_Main_farm.Controls.Add(this.button_show);
@@ -149,24 +147,6 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "หมายเลขการซ่อมบำรุง";
             // 
-            // button_serch
-            // 
-            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_serch.FlatAppearance.BorderSize = 0;
-            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_serch.ForeColor = System.Drawing.Color.White;
-            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_serch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serch.Location = new System.Drawing.Point(994, 209);
-            this.button_serch.Name = "button_serch";
-            this.button_serch.Size = new System.Drawing.Size(130, 41);
-            this.button_serch.TabIndex = 33;
-            this.button_serch.Text = "ค้นหา";
-            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_serch.UseVisualStyleBackColor = false;
-            this.button_serch.Click += new System.EventHandler(this.button_serch_Click);
-            // 
             // button_edit
             // 
             this.button_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
@@ -176,7 +156,7 @@
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_edit.Location = new System.Drawing.Point(1074, 284);
+            this.button_edit.Location = new System.Drawing.Point(1074, 232);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(130, 40);
             this.button_edit.TabIndex = 32;
@@ -194,7 +174,7 @@
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete.Location = new System.Drawing.Point(895, 284);
+            this.button_delete.Location = new System.Drawing.Point(895, 232);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(130, 40);
             this.button_delete.TabIndex = 31;
@@ -211,7 +191,7 @@
             this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_show.ForeColor = System.Drawing.Color.White;
             this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(1074, 357);
+            this.button_show.Location = new System.Drawing.Point(1074, 305);
             this.button_show.Name = "button_show";
             this.button_show.Size = new System.Drawing.Size(130, 40);
             this.button_show.TabIndex = 30;
@@ -242,76 +222,6 @@
             this.DG_Farm.Size = new System.Drawing.Size(831, 350);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
-            // 
-            // BUT_add_drone_pre
-            // 
-            this.BUT_add_drone_pre.BackColor = System.Drawing.Color.LimeGreen;
-            this.BUT_add_drone_pre.FlatAppearance.BorderSize = 0;
-            this.BUT_add_drone_pre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BUT_add_drone_pre.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BUT_add_drone_pre.ForeColor = System.Drawing.Color.White;
-            this.BUT_add_drone_pre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_drone_pre.Location = new System.Drawing.Point(895, 357);
-            this.BUT_add_drone_pre.Name = "BUT_add_drone_pre";
-            this.BUT_add_drone_pre.Size = new System.Drawing.Size(130, 40);
-            this.BUT_add_drone_pre.TabIndex = 6;
-            this.BUT_add_drone_pre.Text = "เพิ่มข้อมูล";
-            this.BUT_add_drone_pre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BUT_add_drone_pre.UseVisualStyleBackColor = false;
-            this.BUT_add_drone_pre.Click += new System.EventHandler(this.BUT_add_drone_pre_Click);
-            // 
-            // lineSeparator2
-            // 
-            this.lineSeparator2.Location = new System.Drawing.Point(10, 50);
-            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator2.Size = new System.Drawing.Size(1194, 2);
-            this.lineSeparator2.TabIndex = 8;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.Main_but_farm);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1266, 50);
-            this.panel3.TabIndex = 0;
-            // 
-            // Main_but_farm
-            // 
-            this.Main_but_farm.BackColor = System.Drawing.Color.White;
-            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main_but_farm.Enabled = false;
-            this.Main_but_farm.FlatAppearance.BorderSize = 0;
-            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
-            this.Main_but_farm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
-            this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(1266, 50);
-            this.Main_but_farm.TabIndex = 6;
-            this.Main_but_farm.Text = "ข้อมูลการบำรุงรักษาชิ้นส่วนภายในโดรน";
-            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Main_but_farm.UseVisualStyleBackColor = false;
-            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
-            // 
-            // maintainace
-            // 
-            this.maintainace.DataSetName = "maintainace";
-            this.maintainace.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // maintainanceBindingSource
-            // 
-            this.maintainanceBindingSource.DataMember = "Maintainance";
-            this.maintainanceBindingSource.DataSource = this.maintainace;
-            // 
-            // maintainanceTableAdapter
-            // 
-            this.maintainanceTableAdapter.ClearBeforeFill = true;
             // 
             // maintainidDataGridViewTextBoxColumn
             // 
@@ -367,6 +277,76 @@
             this.maintainvenderPhoneDataGridViewTextBoxColumn.HeaderText = "เบอร์โทรศัพท์ตัวแทนการซ่อมบำรุง";
             this.maintainvenderPhoneDataGridViewTextBoxColumn.Name = "maintainvenderPhoneDataGridViewTextBoxColumn";
             // 
+            // maintainanceBindingSource
+            // 
+            this.maintainanceBindingSource.DataMember = "Maintainance";
+            this.maintainanceBindingSource.DataSource = this.maintainace;
+            // 
+            // maintainace
+            // 
+            this.maintainace.DataSetName = "maintainace";
+            this.maintainace.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // BUT_add_drone_pre
+            // 
+            this.BUT_add_drone_pre.BackColor = System.Drawing.Color.LimeGreen;
+            this.BUT_add_drone_pre.FlatAppearance.BorderSize = 0;
+            this.BUT_add_drone_pre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BUT_add_drone_pre.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BUT_add_drone_pre.ForeColor = System.Drawing.Color.White;
+            this.BUT_add_drone_pre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BUT_add_drone_pre.Location = new System.Drawing.Point(895, 305);
+            this.BUT_add_drone_pre.Name = "BUT_add_drone_pre";
+            this.BUT_add_drone_pre.Size = new System.Drawing.Size(130, 40);
+            this.BUT_add_drone_pre.TabIndex = 6;
+            this.BUT_add_drone_pre.Text = "เพิ่มข้อมูล";
+            this.BUT_add_drone_pre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BUT_add_drone_pre.UseVisualStyleBackColor = false;
+            this.BUT_add_drone_pre.Click += new System.EventHandler(this.BUT_add_drone_pre_Click);
+            // 
+            // lineSeparator2
+            // 
+            this.lineSeparator2.Location = new System.Drawing.Point(10, 50);
+            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator2.Name = "lineSeparator2";
+            this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
+            this.lineSeparator2.Size = new System.Drawing.Size(1194, 2);
+            this.lineSeparator2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Main_but_farm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1266, 50);
+            this.panel3.TabIndex = 0;
+            // 
+            // Main_but_farm
+            // 
+            this.Main_but_farm.BackColor = System.Drawing.Color.White;
+            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Main_but_farm.Enabled = false;
+            this.Main_but_farm.FlatAppearance.BorderSize = 0;
+            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
+            this.Main_but_farm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Name = "Main_but_farm";
+            this.Main_but_farm.Size = new System.Drawing.Size(1266, 50);
+            this.Main_but_farm.TabIndex = 6;
+            this.Main_but_farm.Text = "ข้อมูลการบำรุงรักษาชิ้นส่วนภายในโดรน";
+            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Main_but_farm.UseVisualStyleBackColor = false;
+            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
+            // 
+            // maintainanceTableAdapter
+            // 
+            this.maintainanceTableAdapter.ClearBeforeFill = true;
+            // 
             // Menu_maintenance_pre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,9 +359,9 @@
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.maintainace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maintainanceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maintainace)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -398,7 +378,6 @@
         private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_edit;
-        private System.Windows.Forms.Button button_serch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_mainID;

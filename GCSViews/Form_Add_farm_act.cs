@@ -16,10 +16,17 @@ namespace MissionPlanner.GCSViews
         //SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
+        private string id_farm;
 
         public Form_Add_farm_act()
         {
             InitializeComponent();           
+        }
+
+        public Form_Add_farm_act(string id_farm)
+        {
+            this.id_farm = id_farm;
+            InitializeComponent();
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -58,11 +65,16 @@ namespace MissionPlanner.GCSViews
 
             string format = "yyyy-MM-dd";
 
-            String query = "INSERT INTO schedule_action (farm_id,action_no,action_name,action_capacity,action_cost,action_date,drone_id) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_actID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + dateTimePicker.Value.ToString(format) + "','" + textBox_droneID.Text + "')";
+            String query2 = "INSERT INTO schedule_action (action_no,action_name,action_capacity,action_cost) " + "VALUES('" + textBox_actID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "')";
+
+            String query = "INSERT INTO FlightSchedule (farm_id,drone_id,action_no,schedule_date) " + "VALUES('" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actID.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
+
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+            SDA2.SelectCommand.ExecuteNonQuery();
 
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
-
+            
             con.Close();
             MessageBox.Show("Save To DB Success!!");
 
@@ -70,6 +82,11 @@ namespace MissionPlanner.GCSViews
         }
 
         private void Form_Add_farm_act_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_farmID_TextChanged(object sender, EventArgs e)
         {
 
         }

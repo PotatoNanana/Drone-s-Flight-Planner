@@ -19,7 +19,14 @@ namespace MissionPlanner.GCSViews
             
         }
 
+        public Form_Edit_farm_act(string id_farm)
+        {
+            this.id_farm = id_farm;
+            InitializeComponent();
+        }
+
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        private string id_farm;
 
         private void Main_but_farm_Click(object sender, EventArgs e)
         {
@@ -57,11 +64,17 @@ namespace MissionPlanner.GCSViews
 
             string format = "yyyy-MM-dd";
 
-            String query = "UPDATE schedule_action SET farm_id = '" + textBox_farmID.Text + "',action_no = '" + textBox_actID.Text + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "',action_date = '" + dateTimePicker.Value.ToString(format) + "',drone_id = '" + textBox_droneID.Text + "') ";
-            
+            String query2 = "UPDATE schedule_action SET action_no,action_name,action_capacity,action_cost) " 
+                + "VALUES('" + textBox_actID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "')";
+
+            String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',schedule_date = '" + dateTimePicker.Value.ToString(format) + "') "
+                + "VALUES(,,,)";
+
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+            SDA2.SelectCommand.ExecuteNonQuery();
+
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
-
             con.Close();
             MessageBox.Show("Edit To DB Success!!");
 

@@ -18,7 +18,14 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();            
         }
 
+        public Form_farm_Schedule(string id_farm)
+        {
+            this.id_farm = id_farm;
+            InitializeComponent();
+        }
+
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        private string id_farm;
 
         private void Main_but_farm_Click(object sender, EventArgs e)
         {
@@ -38,8 +45,8 @@ namespace MissionPlanner.GCSViews
 
         private void But_add_act_Click(object sender, EventArgs e)
         { 
-            // add sschedule
-            Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act();
+            // add schedule
+            Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act(id_farm);
             form_Add_Farm_Act.ShowDialog();
         }
 
@@ -51,7 +58,7 @@ namespace MissionPlanner.GCSViews
             //string a = "yyyy-MM-dd";
             string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
-            String query = "SELECT * FROM schedule_action WHERE action_date >= dateNow";
+            String query = "SELECT * FROM schedule_action WHERE farm_id = '" + id_farm + "' AND action_date >= dateNow";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);

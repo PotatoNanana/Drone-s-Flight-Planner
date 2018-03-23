@@ -32,7 +32,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
             this.button_show = new System.Windows.Forms.Button();
-            this.button_serch = new System.Windows.Forms.Button();
             this.textBox_droneName = new System.Windows.Forms.TextBox();
             this.textBox_droneID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,7 +76,6 @@
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
             this.panel_Main_farm.Controls.Add(this.button_show);
-            this.panel_Main_farm.Controls.Add(this.button_serch);
             this.panel_Main_farm.Controls.Add(this.textBox_droneName);
             this.panel_Main_farm.Controls.Add(this.textBox_droneID);
             this.panel_Main_farm.Controls.Add(this.label2);
@@ -112,23 +110,6 @@
             this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_show.UseVisualStyleBackColor = false;
             this.button_show.Click += new System.EventHandler(this.button_show_Click);
-            // 
-            // button_serch
-            // 
-            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_serch.FlatAppearance.BorderSize = 0;
-            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_serch.ForeColor = System.Drawing.Color.White;
-            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_serch.Location = new System.Drawing.Point(531, 223);
-            this.button_serch.Name = "button_serch";
-            this.button_serch.Size = new System.Drawing.Size(133, 48);
-            this.button_serch.TabIndex = 17;
-            this.button_serch.Text = "ค้นหาโดรน";
-            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_serch.UseVisualStyleBackColor = false;
-            this.button_serch.Click += new System.EventHandler(this.button_serch_Click);
             // 
             // textBox_droneName
             // 
@@ -187,7 +168,7 @@
             this.button_detail.Font = new System.Drawing.Font("PJ Standard", 12F, System.Drawing.FontStyle.Bold);
             this.button_detail.ForeColor = System.Drawing.Color.White;
             this.button_detail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_detail.Location = new System.Drawing.Point(348, 224);
+            this.button_detail.Location = new System.Drawing.Point(438, 224);
             this.button_detail.Name = "button_detail";
             this.button_detail.Size = new System.Drawing.Size(134, 48);
             this.button_detail.TabIndex = 10;
@@ -364,7 +345,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_droneID;
         private System.Windows.Forms.Button button_show;
-        private System.Windows.Forms.Button button_serch;
         private System.Windows.Forms.TextBox textBox_droneName;
         private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dronenameDataGridViewTextBoxColumn;

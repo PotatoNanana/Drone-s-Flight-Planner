@@ -123,14 +123,14 @@ namespace MissionPlanner.GCSViews
         private void button1_Click(object sender, EventArgs e)
         {
             //pass to previtive maintain
-            Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre();
+            Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre(id_drone);
             menu_maintenance_pre.ShowUserControl();
         }
 
         private void button_edit_Click(object sender, EventArgs e)
         {
             //edit
-            Form_Edit_drone_part form_Edit_Drone_Part = new Form_Edit_drone_part();
+            Form_Edit_drone_part form_Edit_Drone_Part = new Form_Edit_drone_part(id_drone);
             form_Edit_Drone_Part.ShowDialog();
         }
 
@@ -161,7 +161,7 @@ namespace MissionPlanner.GCSViews
             con.Close();
         }
 
-        private void button_serch_Click(object sender, EventArgs e)
+        /*private void button_serch_Click(object sender, EventArgs e)
         {
             //serch record
             con.Open();
@@ -173,6 +173,6 @@ namespace MissionPlanner.GCSViews
             DG_Farm.DataSource = dt;
             con.Close();
             
-        }
+        } */
     }
 }

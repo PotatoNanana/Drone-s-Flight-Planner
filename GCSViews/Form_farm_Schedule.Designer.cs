@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_Schedule));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.button_serch = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
             this.textBox_actName = new System.Windows.Forms.TextBox();
@@ -65,7 +64,6 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button_serch);
             this.panel_Main_farm.Controls.Add(this.button_edit);
             this.panel_Main_farm.Controls.Add(this.button_delete);
             this.panel_Main_farm.Controls.Add(this.textBox_actName);
@@ -83,24 +81,6 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(968, 426);
             this.panel_Main_farm.TabIndex = 10;
-            // 
-            // button_serch
-            // 
-            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_serch.FlatAppearance.BorderSize = 0;
-            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_serch.ForeColor = System.Drawing.Color.White;
-            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_serch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serch.Location = new System.Drawing.Point(632, 285);
-            this.button_serch.Name = "button_serch";
-            this.button_serch.Size = new System.Drawing.Size(130, 40);
-            this.button_serch.TabIndex = 26;
-            this.button_serch.Text = "ค้นหา";
-            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_serch.UseVisualStyleBackColor = false;
-            this.button_serch.Click += new System.EventHandler(this.button_serch_Click);
             // 
             // button_edit
             // 
@@ -178,7 +158,7 @@
             this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_show.ForeColor = System.Drawing.Color.White;
             this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(632, 352);
+            this.button_show.Location = new System.Drawing.Point(632, 289);
             this.button_show.Name = "button_show";
             this.button_show.Size = new System.Drawing.Size(130, 40);
             this.button_show.TabIndex = 19;
@@ -196,7 +176,7 @@
             this.But_exit.ForeColor = System.Drawing.Color.White;
             this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_exit.Location = new System.Drawing.Point(801, 352);
+            this.But_exit.Location = new System.Drawing.Point(710, 353);
             this.But_exit.Name = "But_exit";
             this.But_exit.Size = new System.Drawing.Size(130, 40);
             this.But_exit.TabIndex = 10;
@@ -225,7 +205,7 @@
             this.But_add_act.ForeColor = System.Drawing.Color.White;
             this.But_add_act.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_add_act.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_add_act.Location = new System.Drawing.Point(801, 285);
+            this.But_add_act.Location = new System.Drawing.Point(801, 289);
             this.But_add_act.Name = "But_add_act";
             this.But_add_act.Size = new System.Drawing.Size(130, 40);
             this.But_add_act.TabIndex = 6;
@@ -307,7 +287,6 @@
         private System.Windows.Forms.TextBox textBox_actName;
         private System.Windows.Forms.TextBox textBox_actID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button_serch;
         private System.Windows.Forms.Button button_edit;
         private System.Windows.Forms.Button button_delete;
         private schedule_act schedule_act;

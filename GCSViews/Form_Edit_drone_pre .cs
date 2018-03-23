@@ -20,9 +20,16 @@ namespace MissionPlanner.GCSViews
 
         }
 
+        public Form_Edit_drone_pre(string id_drone)
+        {
+            this.id_drone = id_drone;
+            InitializeComponent();
+        }
+
         //SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
+        private string id_drone;
 
         private void Main_but_farm_Click(object sender, EventArgs e)
         {
@@ -61,7 +68,7 @@ namespace MissionPlanner.GCSViews
 
             string format = "yyyy-MM-dd";
 
-            String query = "INSERT INTO Maintainance SET maintain_id = '"+textBox_mainID.Text+"', maintain_activity = '" + textBox_mainAct.Text + "', maintain_price = '" + textBox_mainPrice.Text + "', maintain_venderName = '" + textBox_venName.Text + "', maintain_vendorPhone = '" + textBox_venPhone.Text + "', maintain_venderAdd = '" + textBox_venAdd.Text + "', maintain_length = '" + textBox_time.Text + "', maintain_responder = '" + textBox_responder.Text + "', maintain_date = '" + dateTimePicker.Value.ToString(format) + "') ";
+            String query = "INSERT INTO Maintainance SET drone_id = '"+id_drone+"',maintain_id = '"+textBox_mainID.Text+"', maintain_activity = '" + textBox_mainAct.Text + "', maintain_price = '" + textBox_mainPrice.Text + "', maintain_venderName = '" + textBox_venName.Text + "', maintain_vendorPhone = '" + textBox_venPhone.Text + "', maintain_venderAdd = '" + textBox_venAdd.Text + "', maintain_length = '" + textBox_time.Text + "', maintain_responder = '" + textBox_responder.Text + "', maintain_date = '" + dateTimePicker.Value.ToString(format) + "') ";
                                               
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
