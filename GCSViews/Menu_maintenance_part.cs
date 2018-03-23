@@ -19,7 +19,8 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Menu_maintenance_part : MyUserControl
     {
-        SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
 
         public Menu_maintenance_part()

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MissionPlanner.GCSViews
 {
@@ -17,6 +18,8 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
             
         }
+
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
 
         private void Main_but_farm_Click(object sender, EventArgs e)
         {

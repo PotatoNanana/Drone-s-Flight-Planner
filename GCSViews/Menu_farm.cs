@@ -12,6 +12,7 @@ using MissionPlanner.Controls;
 using MissionPlanner.Log;
 using MissionPlanner.Utilities;
 using MissionPlanner.Plugin;
+using System.Data.SqlClient;
 
 namespace MissionPlanner.GCSViews
 {
@@ -42,6 +43,8 @@ namespace MissionPlanner.GCSViews
                 }
             }
         }
+
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
 
         private void label5_Click(object sender, EventArgs e)
         {

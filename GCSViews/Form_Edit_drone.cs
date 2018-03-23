@@ -18,9 +18,9 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
-        
-        
+        //SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+
         private void Main_but_farm_Click(object sender, EventArgs e)
         {
 

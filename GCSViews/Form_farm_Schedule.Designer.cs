@@ -31,6 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_Schedule));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_serch = new System.Windows.Forms.Button();
+            this.button_edit = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.textBox_actName = new System.Windows.Forms.TextBox();
+            this.textBox_actID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_show = new System.Windows.Forms.Button();
             this.But_exit = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,14 +51,6 @@
             this.But_add_act = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.button_show = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_actID = new System.Windows.Forms.TextBox();
-            this.textBox_actName = new System.Windows.Forms.TextBox();
-            this.button_delete = new System.Windows.Forms.Button();
-            this.button_edit = new System.Windows.Forms.Button();
-            this.button_serch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
@@ -87,6 +87,107 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(968, 426);
             this.panel_Main_farm.TabIndex = 10;
+            // 
+            // button_serch
+            // 
+            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_serch.FlatAppearance.BorderSize = 0;
+            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_serch.ForeColor = System.Drawing.Color.White;
+            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_serch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_serch.Location = new System.Drawing.Point(632, 285);
+            this.button_serch.Name = "button_serch";
+            this.button_serch.Size = new System.Drawing.Size(130, 40);
+            this.button_serch.TabIndex = 26;
+            this.button_serch.Text = "ค้นหา";
+            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_serch.UseVisualStyleBackColor = false;
+            // 
+            // button_edit
+            // 
+            this.button_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_edit.FlatAppearance.BorderSize = 0;
+            this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_edit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_edit.ForeColor = System.Drawing.Color.White;
+            this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_edit.Location = new System.Drawing.Point(801, 222);
+            this.button_edit.Name = "button_edit";
+            this.button_edit.Size = new System.Drawing.Size(130, 40);
+            this.button_edit.TabIndex = 25;
+            this.button_edit.Text = "แก้ไข";
+            this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_edit.UseVisualStyleBackColor = false;
+            // 
+            // button_delete
+            // 
+            this.button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_delete.FlatAppearance.BorderSize = 0;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_delete.ForeColor = System.Drawing.Color.White;
+            this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_delete.Location = new System.Drawing.Point(632, 222);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(130, 40);
+            this.button_delete.TabIndex = 24;
+            this.button_delete.Text = "ลบ";
+            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_delete.UseVisualStyleBackColor = false;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
+            // textBox_actName
+            // 
+            this.textBox_actName.Location = new System.Drawing.Point(744, 156);
+            this.textBox_actName.Name = "textBox_actName";
+            this.textBox_actName.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actName.TabIndex = 23;
+            // 
+            // textBox_actID
+            // 
+            this.textBox_actID.Location = new System.Drawing.Point(744, 99);
+            this.textBox_actID.Name = "textBox_actID";
+            this.textBox_actID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actID.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(628, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "ชื่อกิจกรรม";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(628, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 24);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "รหัสกิจกรรม";
+            // 
+            // button_show
+            // 
+            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_show.FlatAppearance.BorderSize = 0;
+            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_show.ForeColor = System.Drawing.Color.White;
+            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_show.Location = new System.Drawing.Point(632, 352);
+            this.button_show.Name = "button_show";
+            this.button_show.Size = new System.Drawing.Size(130, 40);
+            this.button_show.TabIndex = 19;
+            this.button_show.Text = "แสดงตาราง";
+            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_show.UseVisualStyleBackColor = false;
+            this.button_show.Click += new System.EventHandler(this.button_show_Click);
             // 
             // But_exit
             // 
@@ -217,106 +318,6 @@
             this.Main_but_farm.UseCompatibleTextRendering = true;
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
-            // 
-            // button_show
-            // 
-            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button_show.FlatAppearance.BorderSize = 0;
-            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_show.ForeColor = System.Drawing.Color.White;
-            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(632, 352);
-            this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(130, 40);
-            this.button_show.TabIndex = 19;
-            this.button_show.Text = "แสดงตาราง";
-            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_show.UseVisualStyleBackColor = false;
-            this.button_show.Click += new System.EventHandler(this.button_show_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(628, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 24);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "รหัสกิจกรรม";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(628, 159);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 24);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "ชื่อกิจกรรม";
-            // 
-            // textBox_actID
-            // 
-            this.textBox_actID.Location = new System.Drawing.Point(744, 99);
-            this.textBox_actID.Name = "textBox_actID";
-            this.textBox_actID.Size = new System.Drawing.Size(187, 31);
-            this.textBox_actID.TabIndex = 22;
-            // 
-            // textBox_actName
-            // 
-            this.textBox_actName.Location = new System.Drawing.Point(744, 156);
-            this.textBox_actName.Name = "textBox_actName";
-            this.textBox_actName.Size = new System.Drawing.Size(187, 31);
-            this.textBox_actName.TabIndex = 23;
-            // 
-            // button_delete
-            // 
-            this.button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_delete.FlatAppearance.BorderSize = 0;
-            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_delete.ForeColor = System.Drawing.Color.White;
-            this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete.Location = new System.Drawing.Point(632, 222);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(130, 40);
-            this.button_delete.TabIndex = 24;
-            this.button_delete.Text = "ลบ";
-            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_delete.UseVisualStyleBackColor = false;
-            // 
-            // button_edit
-            // 
-            this.button_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_edit.FlatAppearance.BorderSize = 0;
-            this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_edit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_edit.ForeColor = System.Drawing.Color.White;
-            this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_edit.Location = new System.Drawing.Point(801, 222);
-            this.button_edit.Name = "button_edit";
-            this.button_edit.Size = new System.Drawing.Size(130, 40);
-            this.button_edit.TabIndex = 25;
-            this.button_edit.Text = "แก้ไข";
-            this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_edit.UseVisualStyleBackColor = false;
-            // 
-            // button_serch
-            // 
-            this.button_serch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_serch.FlatAppearance.BorderSize = 0;
-            this.button_serch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_serch.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_serch.ForeColor = System.Drawing.Color.White;
-            this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_serch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serch.Location = new System.Drawing.Point(632, 285);
-            this.button_serch.Name = "button_serch";
-            this.button_serch.Size = new System.Drawing.Size(130, 40);
-            this.button_serch.TabIndex = 26;
-            this.button_serch.Text = "ค้นหา";
-            this.button_serch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_serch.UseVisualStyleBackColor = false;
             // 
             // Form_farm_Schedule
             // 

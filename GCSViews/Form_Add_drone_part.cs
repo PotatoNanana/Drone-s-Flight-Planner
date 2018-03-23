@@ -15,7 +15,8 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Form_Add_drone_part : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        //SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         string imgLocation = "";
         SqlCommand cmd;
 

@@ -13,19 +13,13 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Form_Add_farm_act : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        //SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
 
         public Form_Add_farm_act()
         {
-            InitializeComponent();
-
-            add_DG();
-
-            void add_DG()
-            {
-
-            }
+            InitializeComponent();           
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
