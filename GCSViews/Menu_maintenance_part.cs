@@ -151,10 +151,14 @@ namespace MissionPlanner.GCSViews
 
         private void button_serch_Click(object sender, EventArgs e)
         {
+            //serch recorg
             con.Open();
             String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList where device_id = '" + textBox_partID.Text + "'OR device_name = '" + textBox_partName.Text + "' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
             con.Close();
             
         }

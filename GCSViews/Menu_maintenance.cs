@@ -114,6 +114,9 @@ namespace MissionPlanner.GCSViews
             String query = "SELECT * FROM Drone where drone_id = '" + textBox_droneID.Text + "'OR drone_name = '"+textBox_droneName.Text+"' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
             con.Close();
             
         }

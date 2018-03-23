@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Add_drone_pre));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_mainAct = new System.Windows.Forms.TextBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox_venAdd = new System.Windows.Forms.TextBox();
             this.textBox_respond = new System.Windows.Forms.TextBox();
@@ -38,7 +41,7 @@
             this.textBox_venPhone = new System.Windows.Forms.TextBox();
             this.textBox_venName = new System.Windows.Forms.TextBox();
             this.textBox_price = new System.Windows.Forms.TextBox();
-            this.textBox_activity = new System.Windows.Forms.TextBox();
+            this.textBox_mainID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -51,9 +54,6 @@
             this.But_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.textBox_id = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,7 +72,7 @@
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
             this.panel_Main_farm.Controls.Add(this.label8);
-            this.panel_Main_farm.Controls.Add(this.textBox_id);
+            this.panel_Main_farm.Controls.Add(this.textBox_mainAct);
             this.panel_Main_farm.Controls.Add(this.dateTimePicker);
             this.panel_Main_farm.Controls.Add(this.textBox7);
             this.panel_Main_farm.Controls.Add(this.textBox_venAdd);
@@ -81,7 +81,7 @@
             this.panel_Main_farm.Controls.Add(this.textBox_venPhone);
             this.panel_Main_farm.Controls.Add(this.textBox_venName);
             this.panel_Main_farm.Controls.Add(this.textBox_price);
-            this.panel_Main_farm.Controls.Add(this.textBox_activity);
+            this.panel_Main_farm.Controls.Add(this.textBox_mainID);
             this.panel_Main_farm.Controls.Add(this.label6);
             this.panel_Main_farm.Controls.Add(this.label7);
             this.panel_Main_farm.Controls.Add(this.label14);
@@ -100,6 +100,29 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(484, 550);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(60, 80);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 24);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "เลขที่การซ่อมบำรุง";
+            // 
+            // textBox_mainAct
+            // 
+            this.textBox_mainAct.Location = new System.Drawing.Point(216, 117);
+            this.textBox_mainAct.Name = "textBox_mainAct";
+            this.textBox_mainAct.Size = new System.Drawing.Size(200, 31);
+            this.textBox_mainAct.TabIndex = 15;
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(216, 153);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker.TabIndex = 14;
             // 
             // textBox7
             // 
@@ -151,12 +174,12 @@
             this.textBox_price.Size = new System.Drawing.Size(200, 31);
             this.textBox_price.TabIndex = 13;
             // 
-            // textBox_activity
+            // textBox_mainID
             // 
-            this.textBox_activity.Location = new System.Drawing.Point(216, 153);
-            this.textBox_activity.Name = "textBox_activity";
-            this.textBox_activity.Size = new System.Drawing.Size(200, 31);
-            this.textBox_activity.TabIndex = 13;
+            this.textBox_mainID.Location = new System.Drawing.Point(216, 80);
+            this.textBox_mainID.Name = "textBox_mainID";
+            this.textBox_mainID.Size = new System.Drawing.Size(200, 31);
+            this.textBox_mainID.TabIndex = 13;
             // 
             // label6
             // 
@@ -220,7 +243,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 160);
+            this.label2.Location = new System.Drawing.Point(60, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 24);
             this.label2.TabIndex = 12;
@@ -229,7 +252,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 120);
+            this.label1.Location = new System.Drawing.Point(60, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 24);
             this.label1.TabIndex = 11;
@@ -302,29 +325,6 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.Location = new System.Drawing.Point(216, 113);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 31);
-            this.dateTimePicker.TabIndex = 14;
-            // 
-            // textBox_id
-            // 
-            this.textBox_id.Location = new System.Drawing.Point(217, 73);
-            this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(200, 31);
-            this.textBox_id.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(60, 80);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 24);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "เลขที่การซ่อมบำรุง";
-            // 
             // Form_Add_drone_pre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,7 +357,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox_venAdd;
-        private System.Windows.Forms.TextBox textBox_activity;
+        private System.Windows.Forms.TextBox textBox_mainID;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox_time;
         private System.Windows.Forms.Label label14;
@@ -368,6 +368,6 @@
         private System.Windows.Forms.TextBox textBox_price;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox_id;
+        private System.Windows.Forms.TextBox textBox_mainAct;
     }
 }

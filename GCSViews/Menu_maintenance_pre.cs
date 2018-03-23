@@ -81,13 +81,8 @@ namespace MissionPlanner.GCSViews
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "Delete")
-            {
-               
-            }
-
-            
-
+            textBox_mainID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+            textBox_mainAct.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -131,13 +126,26 @@ namespace MissionPlanner.GCSViews
             // delete
             if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                DG_Farm.RemoveCurrent();
+                con.Open();
+                String query = "DELETE * FROM Maintainance where maintain_id = '" + textBox_mainID.Text + "' ";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("DELETE Record From DB Success!!");
             }
         }
 
         private void button_serch_Click(object sender, EventArgs e)
         {
             // serch record
+            con.Open();
+            String query = "maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_vendorPhone,maintain_venderAdd,maintain_length,maintain_responder,maintain_date FROM Maintainance where device_id = '" + textBox_mainID.Text + "'OR device_name = '" + textBox_mainAct.Text + "' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
         }
     }
 }

@@ -32,8 +32,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.but_backto_pre = new System.Windows.Forms.Button();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.textBox_partName = new System.Windows.Forms.TextBox();
-            this.textBox_partID = new System.Windows.Forms.TextBox();
+            this.textBox_mainAct = new System.Windows.Forms.TextBox();
+            this.textBox_mainID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button_serch = new System.Windows.Forms.Button();
@@ -96,8 +96,8 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.textBox_partName);
-            this.panel_Main_farm.Controls.Add(this.textBox_partID);
+            this.panel_Main_farm.Controls.Add(this.textBox_mainAct);
+            this.panel_Main_farm.Controls.Add(this.textBox_mainID);
             this.panel_Main_farm.Controls.Add(this.label2);
             this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.button_serch);
@@ -115,39 +115,39 @@
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
             // 
-            // textBox_partName
+            // textBox_mainAct
             // 
-            this.textBox_partName.Location = new System.Drawing.Point(1017, 147);
-            this.textBox_partName.Name = "textBox_partName";
-            this.textBox_partName.Size = new System.Drawing.Size(187, 31);
-            this.textBox_partName.TabIndex = 37;
+            this.textBox_mainAct.Location = new System.Drawing.Point(1034, 147);
+            this.textBox_mainAct.Name = "textBox_mainAct";
+            this.textBox_mainAct.Size = new System.Drawing.Size(187, 31);
+            this.textBox_mainAct.TabIndex = 37;
             // 
-            // textBox_partID
+            // textBox_mainID
             // 
-            this.textBox_partID.Location = new System.Drawing.Point(1017, 86);
-            this.textBox_partID.Name = "textBox_partID";
-            this.textBox_partID.Size = new System.Drawing.Size(187, 31);
-            this.textBox_partID.TabIndex = 36;
+            this.textBox_mainID.Location = new System.Drawing.Point(1034, 82);
+            this.textBox_mainID.Name = "textBox_mainID";
+            this.textBox_mainID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_mainID.TabIndex = 36;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("PJ Standard", 14.25F);
-            this.label2.Location = new System.Drawing.Point(926, 154);
+            this.label2.Location = new System.Drawing.Point(872, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 24);
+            this.label2.Size = new System.Drawing.Size(139, 24);
             this.label2.TabIndex = 35;
-            this.label2.Text = "ชื่อชิ้นส่วน";
+            this.label2.Text = "ชื่อกิจกรรมการซ่อมบำรุง";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("PJ Standard", 14.25F);
-            this.label1.Location = new System.Drawing.Point(926, 93);
+            this.label1.Location = new System.Drawing.Point(872, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 24);
+            this.label1.Size = new System.Drawing.Size(128, 24);
             this.label1.TabIndex = 34;
-            this.label1.Text = "รหัสชิ้นส่วน";
+            this.label1.Text = "หมายเลขการซ่อมบำรุง";
             // 
             // button_serch
             // 
@@ -238,6 +238,7 @@
             this.DG_Farm.DataSource = this.maintainanceBindingSource;
             this.DG_Farm.Location = new System.Drawing.Point(25, 70);
             this.DG_Farm.Name = "DG_Farm";
+            this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Farm.Size = new System.Drawing.Size(831, 350);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
@@ -400,8 +401,8 @@
         private System.Windows.Forms.Button button_serch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_partID;
-        private System.Windows.Forms.TextBox textBox_partName;
+        private System.Windows.Forms.TextBox textBox_mainID;
+        private System.Windows.Forms.TextBox textBox_mainAct;
         private System.Windows.Forms.DataGridViewTextBoxColumn maintainidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maintainactivityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maintaindateDataGridViewTextBoxColumn;
