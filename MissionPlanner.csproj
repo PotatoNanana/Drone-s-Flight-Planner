@@ -571,6 +571,18 @@
     <Compile Include="GCSViews\FlightLog.Designer.cs">
       <DependentUpon>FlightLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\Form_Edit_act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_act.Designer.cs">
+      <DependentUpon>Form_Edit_act.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_act.Designer.cs">
+      <DependentUpon>Form_Add_act.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\Form_Edit_drone_pre .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3083,6 +3095,12 @@
     <EmbeddedResource Include="GCSViews\FlightPlanner.zh-TW.resx">
       <DependentUpon>FlightPlanner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_act.resx">
+      <DependentUpon>Form_Edit_act.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_act.resx">
+      <DependentUpon>Form_Add_act.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_Edit_drone_pre .resx">
       <DependentUpon>Form_Edit_drone_pre .cs</DependentUpon>
     </EmbeddedResource>
@@ -3437,6 +3455,7 @@
     <EmbeddedResource Include="RAW_Sensor.pt.resx">
       <DependentUpon>RAW_Sensor.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Resources\Form_Add_act.resx" />
     <EmbeddedResource Include="ScriptConsole.ar.resx">
       <DependentUpon>ScriptConsole.cs</DependentUpon>
     </EmbeddedResource>

@@ -26,7 +26,7 @@ using TrackerHomeGPS;
         public override bool Loaded()
         {
             /* Register with Device Change event */
-            Host.DeviceChanged += deviceChanged;
+            //Host.DeviceChanged += deviceChanged;
             /* Add to Flight Planner Map Menu */
             ToolStripMenuItem trkrHome = new ToolStripMenuItem(Strings.TrackerHome);
             trkrHome.Name = "trkrHomeMenuItem";
