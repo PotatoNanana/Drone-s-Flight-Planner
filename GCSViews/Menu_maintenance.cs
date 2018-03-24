@@ -110,19 +110,11 @@ namespace MissionPlanner.GCSViews
 
         }
 
-       /* private void button_serch_Click(object sender, EventArgs e)
-        {
-            //search drone
-            con.Open();
-            String query = "SELECT * FROM Drone where drone_id = '" + textBox_droneID + "'OR drone_name = '"+textBox_droneName+"' ";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            SDA.SelectCommand.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Drone.DataSource = dt;
-            con.Close();
-            
-        } */
+            if (DG_Drone.Columns[e.ColumnIndex].Name == "Edit")
+            {
+                Form_Edit_drone form_Edit_Drone = new Form_Edit_drone();
+                form_Edit_Drone.ShowDialog();
+            }
 
         private void button_modify_Click(object sender, EventArgs e)
         {

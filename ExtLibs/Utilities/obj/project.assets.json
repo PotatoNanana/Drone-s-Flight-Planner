@@ -723,15 +723,6 @@
           "bin/placeholder/GeoUtility.dll": {}
         }
       },
-      "GMap.NET.Core/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/GMap.NET.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GMap.NET.Core.dll": {}
-        }
-      },
       "MAVLink/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.6.2",
@@ -3524,11 +3515,6 @@
       "path": "../GeoUtility/GeoUtility.csproj",
       "msbuildProject": "../GeoUtility/GeoUtility.csproj"
     },
-    "GMap.NET.Core/1.0.0": {
-      "type": "project",
-      "path": "../GMap.NET.Core/GMap.NET.Core.csproj",
-      "msbuildProject": "../GMap.NET.Core/GMap.NET.Core.csproj"
-    },
     "MAVLink/1.0.0": {
       "type": "project",
       "path": "../Mavlink/MAVLink.csproj",
@@ -3538,7 +3524,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
       "BitMiracle.LibTiff.NET >= 2.4.571",
-      "GMap.NET.Core >= 1.0.0",
+      "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj",
       "GeoUtility >= 1.0.0",
       "MAVLink >= 1.0.0",
       "Newtonsoft.Json >= 10.0.2",
@@ -3616,5 +3602,16 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj'. The project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.2"
+      ]
+    }
+  ]
 }

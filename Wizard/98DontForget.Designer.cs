@@ -51,7 +51,7 @@ namespace MissionPlanner.Wizard
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.label3);
@@ -76,7 +76,7 @@ namespace MissionPlanner.Wizard
             // linkLabel1
             // 
             resources.ApplyResources(this.linkLabel1, "linkLabel1");
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Tag = "http://ardupilot.org/";
@@ -85,7 +85,7 @@ namespace MissionPlanner.Wizard
             // linkLabel2
             // 
             resources.ApplyResources(this.linkLabel2, "linkLabel2");
-            this.linkLabel2.LinkColor = System.Drawing.Color.White;
+            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Tag = "http://ardupilot.org/copter/";
@@ -94,7 +94,7 @@ namespace MissionPlanner.Wizard
             // linkLabel3
             // 
             resources.ApplyResources(this.linkLabel3, "linkLabel3");
-            this.linkLabel3.LinkColor = System.Drawing.Color.White;
+            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Tag = "http://ardupilot.org/plane/";
@@ -103,7 +103,7 @@ namespace MissionPlanner.Wizard
             // linkLabel8
             // 
             resources.ApplyResources(this.linkLabel8, "linkLabel8");
-            this.linkLabel8.LinkColor = System.Drawing.Color.White;
+            this.linkLabel8.LinkColor = System.Drawing.Color.Black;
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Tag = "http://ardupilot.org/rover/";
@@ -112,7 +112,7 @@ namespace MissionPlanner.Wizard
             // linkLabel4
             // 
             resources.ApplyResources(this.linkLabel4, "linkLabel4");
-            this.linkLabel4.LinkColor = System.Drawing.Color.White;
+            this.linkLabel4.LinkColor = System.Drawing.Color.Black;
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Tag = "http://ardupilot.org/planner/";
@@ -121,7 +121,7 @@ namespace MissionPlanner.Wizard
             // linkLabel5
             // 
             resources.ApplyResources(this.linkLabel5, "linkLabel5");
-            this.linkLabel5.LinkColor = System.Drawing.Color.White;
+            this.linkLabel5.LinkColor = System.Drawing.Color.Black;
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Tag = "http://ardupilot.org/copter/docs/esc-calibration.html";
@@ -130,7 +130,7 @@ namespace MissionPlanner.Wizard
             // linkLabel6
             // 
             resources.ApplyResources(this.linkLabel6, "linkLabel6");
-            this.linkLabel6.LinkColor = System.Drawing.Color.White;
+            this.linkLabel6.LinkColor = System.Drawing.Color.Black;
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Tag = "http://ardupilot.org/copter/docs/initial-setup.html#";
@@ -139,7 +139,7 @@ namespace MissionPlanner.Wizard
             // linkLabel7
             // 
             resources.ApplyResources(this.linkLabel7, "linkLabel7");
-            this.linkLabel7.LinkColor = System.Drawing.Color.White;
+            this.linkLabel7.LinkColor = System.Drawing.Color.Black;
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Tag = "http://ardupilot.org/copter/docs/flying-arducopter.html";
@@ -148,7 +148,7 @@ namespace MissionPlanner.Wizard
             // linkLabel9
             // 
             resources.ApplyResources(this.linkLabel9, "linkLabel9");
-            this.linkLabel9.LinkColor = System.Drawing.Color.White;
+            this.linkLabel9.LinkColor = System.Drawing.Color.Black;
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Tag = "http://www.youtube.com/user/rmackay9/videos?shelf_index=1&sort=p&view=0";
@@ -156,17 +156,19 @@ namespace MissionPlanner.Wizard
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Name = "label3";
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Name = "label1";
             // 
             // radialGradientBG1
             // 
             this.radialGradientBG1.BackColor = System.Drawing.Color.Black;
-            this.radialGradientBG1.CenterColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(164)))), ((int)(((byte)(33)))));
+            this.radialGradientBG1.CenterColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             // 
             // 
             // 
@@ -195,13 +197,12 @@ namespace MissionPlanner.Wizard
             this.radialGradientBG1.Label.Text = resources.GetString("radialGradientBG1.Label.Text");
             resources.ApplyResources(this.radialGradientBG1, "radialGradientBG1");
             this.radialGradientBG1.Name = "radialGradientBG1";
-            this.radialGradientBG1.OutsideColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(107)))), ((int)(((byte)(10)))));
+            this.radialGradientBG1.OutsideColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             // 
             // _98DontForget
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.BackgroundImage = global::MissionPlanner.Properties.Resources.planebackground;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.radialGradientBG1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;

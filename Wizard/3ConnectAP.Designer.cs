@@ -47,8 +47,7 @@ namespace MissionPlanner.Wizard
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -66,17 +65,19 @@ namespace MissionPlanner.Wizard
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Name = "label2";
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Name = "label1";
             // 
             // radialGradientBG1
             // 
             this.radialGradientBG1.BackColor = System.Drawing.Color.Black;
-            this.radialGradientBG1.CenterColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(164)))), ((int)(((byte)(33)))));
+            this.radialGradientBG1.CenterColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             // 
             // 
             // 
@@ -105,12 +106,11 @@ namespace MissionPlanner.Wizard
             this.radialGradientBG1.Label.Text = resources.GetString("radialGradientBG1.Label.Text");
             resources.ApplyResources(this.radialGradientBG1, "radialGradientBG1");
             this.radialGradientBG1.Name = "radialGradientBG1";
-            this.radialGradientBG1.OutsideColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(107)))), ((int)(((byte)(10)))));
+            this.radialGradientBG1.OutsideColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.CMB_port);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label8);
@@ -130,19 +130,20 @@ namespace MissionPlanner.Wizard
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Name = "label7";
             // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Name = "label8";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // _3ConnectAP
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.BackgroundImage = global::MissionPlanner.Properties.Resources.planebackground;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.radialGradientBG1);
             this.Controls.Add(this.panel1);

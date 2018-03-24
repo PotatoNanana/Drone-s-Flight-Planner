@@ -262,8 +262,8 @@
             this.Controls.Add(this.TXT_battcapacity);
             this.Controls.Add(this.CMB_batmontype);
             this.Controls.Add(this.pictureBox5);
-            this.Name = "ConfigBatteryMonitoring";
             resources.ApplyResources(this, "$this");
+            this.Name = "ConfigBatteryMonitoring";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

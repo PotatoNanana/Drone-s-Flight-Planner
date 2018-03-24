@@ -496,6 +496,7 @@
     <Compile Include="DroneLog.Designer.cs">
       <DependentUpon>DroneLog.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="FArm.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -520,6 +521,19 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FlightSchedule2.xsd</DependentUpon>
+=======
+    <Compile Include="GCSViews\ConfigurationView\ConfigApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigApp.Designer.cs">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigDrone.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigDrone.Designer.cs">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\maintenance_RegisTool.cs">
       <SubType>UserControl</SubType>
@@ -696,6 +710,12 @@
     </Compile>
     <Compile Include="GCSViews\Menu_main2.Designer.cs">
       <DependentUpon>Menu_main2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_setup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_setup.Designer.cs">
+      <DependentUpon>Menu_setup.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\UserLogin.cs">
       <SubType>UserControl</SubType>
@@ -1997,6 +2017,30 @@
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigCompassMot.resx">
       <DependentUpon>ConfigCompassMot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ar.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.de-DE.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.id-ID.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ja-JP.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.ko-KR.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.pt.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigApp.zh-Hans.resx">
+      <DependentUpon>ConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigESCCalibration.ar.resx">
       <DependentUpon>ConfigESCCalibration.cs</DependentUpon>
     </EmbeddedResource>
@@ -2059,6 +2103,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigFailSafe.zh-TW.resx">
       <DependentUpon>ConfigFailSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.ar.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.de-DE.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.id-ID.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.ja-JP.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.ko-KR.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.pt.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigDrone.zh-Hans.resx">
+      <DependentUpon>ConfigDrone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\maintenance_RegisTool.ar.resx">
       <DependentUpon>maintenance_RegisTool.cs</DependentUpon>
@@ -3237,6 +3305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Menu_main2.resx">
       <DependentUpon>Menu_main2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_setup.resx">
+      <DependentUpon>Menu_setup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>

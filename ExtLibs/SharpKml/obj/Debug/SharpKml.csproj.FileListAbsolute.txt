@@ -44,3 +44,11 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpKml\obj\Debug\SharpKml.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpKml\obj\Debug\SharpKml.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpKml\obj\Debug\SharpKml.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\SharpKml\bin\Debug\SharpKml.XML
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\SharpKml\bin\Debug\SharpKml.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\SharpKml\bin\Debug\SharpKml.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\SharpKml\bin\Debug\Ionic.Zip.Reduced.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\SharpKml\obj\Debug\SharpKml.csprojResolveAssemblyReference.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\SharpKml\obj\Debug\SharpKml.csproj.CoreCompileInputs.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\SharpKml\obj\Debug\SharpKml.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\SharpKml\obj\Debug\SharpKml.pdb

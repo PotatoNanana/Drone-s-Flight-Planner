@@ -43,10 +43,11 @@
             // 
             // ConfigWizard
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.PIC_wizard);
             this.Name = "ConfigWizard";
+            resources.ApplyResources(this, "$this");
+            this.Load += new System.EventHandler(this.ConfigWizard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PIC_wizard)).EndInit();
             this.ResumeLayout(false);
 

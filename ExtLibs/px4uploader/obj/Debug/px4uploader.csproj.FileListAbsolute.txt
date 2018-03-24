@@ -54,3 +54,13 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\px4uploader\obj\Debug\px4uploader.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\px4uploader\obj\Debug\px4uploader.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\px4uploader\obj\Debug\px4uploader.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\bin\Debug\validcertificates.xml
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\bin\Debug\px4uploader.exe
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\bin\Debug\px4uploader.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\bin\Debug\DotNetZip.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\bin\Debug\DotNetZip.xml
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\obj\Debug\px4uploader.csprojResolveAssemblyReference.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\obj\Debug\px4uploader.csproj.CoreCompileInputs.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\obj\Debug\px4uploader.exe
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\px4uploader\obj\Debug\px4uploader.pdb

@@ -44,3 +44,11 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\KMLib\obj\Debug\KMLib.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\KMLib\obj\Debug\KMLib.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\KMLib\obj\Debug\KMLib.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\KMLib\bin\Debug\KMLib.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\KMLib\bin\Debug\KMLib.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\KMLib\bin\Debug\Core.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\KMLib\bin\Debug\Core.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\KMLib\obj\Debug\KMLib.csprojResolveAssemblyReference.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\KMLib\obj\Debug\KMLib.csproj.CoreCompileInputs.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\KMLib\obj\Debug\KMLib.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\KMLib\obj\Debug\KMLib.pdb

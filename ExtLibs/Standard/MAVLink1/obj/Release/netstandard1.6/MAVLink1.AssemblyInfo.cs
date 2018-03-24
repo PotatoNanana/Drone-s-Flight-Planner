@@ -13,7 +13,10 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("MAVLink1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Package Description")]
+=======
+>>>>>>> master
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MAVLink1")]

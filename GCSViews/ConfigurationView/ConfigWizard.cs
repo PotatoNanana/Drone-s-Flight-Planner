@@ -23,5 +23,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             cfg.ShowDialog(this);
         }
+
+        private void ConfigWizard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

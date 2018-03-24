@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigHWPX4Flow));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.imagebox = new System.Windows.Forms.PictureBox();
             this.but_focusmode = new MissionPlanner.Controls.MyButton();
+            this.lineSeparator1 = new MissionPlanner.Controls.LineSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagebox)).BeginInit();
             this.SuspendLayout();
@@ -52,12 +52,6 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // groupBox4
-            // 
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
             // imagebox
             // 
             resources.ApplyResources(this.imagebox, "imagebox");
@@ -66,21 +60,30 @@
             // 
             // but_focusmode
             // 
+            this.but_focusmode.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.but_focusmode.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.but_focusmode, "but_focusmode");
             this.but_focusmode.Name = "but_focusmode";
+            this.but_focusmode.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.but_focusmode.TextColor = System.Drawing.Color.White;
             this.but_focusmode.UseVisualStyleBackColor = true;
             this.but_focusmode.Click += new System.EventHandler(this.but_focusmode_Click);
             // 
+            // lineSeparator1
+            // 
+            resources.ApplyResources(this.lineSeparator1, "lineSeparator1");
+            this.lineSeparator1.Name = "lineSeparator1";
+            // 
             // ConfigHWPX4Flow
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.lineSeparator1);
             this.Controls.Add(this.but_focusmode);
             this.Controls.Add(this.imagebox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.pictureBox2);
             this.Name = "ConfigHWPX4Flow";
+            resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagebox)).EndInit();
             this.ResumeLayout(false);
@@ -91,8 +94,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox imagebox;
         private Controls.MyButton but_focusmode;
+        private Controls.LineSeparator lineSeparator1;
     }
 }

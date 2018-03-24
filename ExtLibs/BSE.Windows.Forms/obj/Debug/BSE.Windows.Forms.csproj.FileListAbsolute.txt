@@ -79,3 +79,17 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.XML
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csprojResolveAssemblyReference.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Properties.Resources.resources
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Panel.resources
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanel.resources
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanelList.resources
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.GenerateResource.Cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.CoreCompileInputs.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb
