@@ -64,14 +64,9 @@ namespace MissionPlanner.GCSViews
             con.Open();
 
             string format = "yyyy-MM-dd";
-
-            String query2 = "INSERT INTO schedule_action (action_no,action_name,action_capacity,action_cost) " + "VALUES('" + textBox_actID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "')";
-
-            String query = "INSERT INTO FlightSchedule (farm_id,schedule_no,drone_id,action_no,schedule_datetime) " + "VALUES('" + id_farm + "','" + textBox_scheduleNo.Text + "','" + textBox_droneID.Text + "','" + textBox_actID.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
-
-            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-            SDA2.SelectCommand.ExecuteNonQuery();
-
+            
+            String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,action_name,action_capacity,action_cost,action_datetime) " + "VALUES('" + textBox_actID.Text + "','" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
+            
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             
@@ -87,6 +82,11 @@ namespace MissionPlanner.GCSViews
         }
 
         private void textBox_farmID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_droneID_TextChanged(object sender, EventArgs e)
         {
 
         }

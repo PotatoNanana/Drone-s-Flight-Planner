@@ -93,6 +93,7 @@
             this.textBox_droneID.Name = "textBox_droneID";
             this.textBox_droneID.Size = new System.Drawing.Size(200, 31);
             this.textBox_droneID.TabIndex = 17;
+            this.textBox_droneID.TextChanged += new System.EventHandler(this.textBox_droneID_TextChanged);
             // 
             // label7
             // 

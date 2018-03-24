@@ -511,6 +511,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>flightSchedule1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FlightSchedule11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightSchedule11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FlightSchedule2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightSchedule2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\ConfigurationView\maintenance_RegisTool.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -781,6 +791,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>schedule_act.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tableSchedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tableSchedule.xsd</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs">
       <SubType>Form</SubType>
@@ -4065,6 +4080,28 @@
     <None Include="flightSchedule1.xss">
       <DependentUpon>flightSchedule1.xsd</DependentUpon>
     </None>
+    <None Include="FlightSchedule11.xsc">
+      <DependentUpon>FlightSchedule11.xsd</DependentUpon>
+    </None>
+    <None Include="FlightSchedule11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlightSchedule11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FlightSchedule11.xss">
+      <DependentUpon>FlightSchedule11.xsd</DependentUpon>
+    </None>
+    <None Include="FlightSchedule2.xsc">
+      <DependentUpon>FlightSchedule2.xsd</DependentUpon>
+    </None>
+    <None Include="FlightSchedule2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlightSchedule2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FlightSchedule2.xss">
+      <DependentUpon>FlightSchedule2.xsd</DependentUpon>
+    </None>
     <None Include="Lib.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -4672,6 +4709,17 @@
     </None>
     <None Include="schedule_act.xss">
       <DependentUpon>schedule_act.xsd</DependentUpon>
+    </None>
+    <None Include="tableSchedule.xsc">
+      <DependentUpon>tableSchedule.xsd</DependentUpon>
+    </None>
+    <None Include="tableSchedule.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tableSchedule.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tableSchedule.xss">
+      <DependentUpon>tableSchedule.xsd</DependentUpon>
     </None>
     <None Include="Utilities\ImageOverFilter.cs" />
     <EmbeddedResource Include="Antenna\Tracker.id-ID.resx">

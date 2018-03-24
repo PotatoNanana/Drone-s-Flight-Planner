@@ -58,7 +58,7 @@ namespace MissionPlanner.GCSViews
             //string a = "yyyy-MM-dd";
             string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
-            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_date >= '" + dateNow + "' ";
+            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "'";// AND action_date >= '" + dateNow + "' ";
             //String query2 = "SELECT f.schedule_no, f.schedule_datetime, f.farm_id, f.drone_id, f.action_no,s.action_name,s.action_capacity,s.action_cost  FROM FlightSchedule AS f,schedule_action AS s WHERE f.action_no = s.action_no AND farm_id = '" + id_farm + "' ";// AND action_date >= '" + dateNow + "' "; 
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
@@ -73,12 +73,13 @@ namespace MissionPlanner.GCSViews
             if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 con.Open();
-                String query = "DELETE FROM schedule_action where action_id = '" + textBox_actID.Text + "' ";
+                String query = "DELETE FROM FlightSchedule where action_no = '" + textBox_actID.Text + "' ";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
+                MessageBox.Show("DELETE Record From DB Success!!");
             }
-            MessageBox.Show("DELETE Record From DB Success!!");
+            
         }
 
         private void button_edit_Click(object sender, EventArgs e)
@@ -95,6 +96,10 @@ namespace MissionPlanner.GCSViews
 
         private void Form_farm_Schedule_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'flightSchedule2.FlightSchedule' table. You can move, or remove it, as needed.
+            //this.flightScheduleTableAdapter.Fill(this.flightSchedule2.FlightSchedule);
+            // TODO: This line of code loads data into the 'flightSchedule1.FlightSchedule' table. You can move, or remove it, as needed.
+            //this.flightScheduleTableAdapter1.Fill(this.flightSchedule1.FlightSchedule);
             // TODO: This line of code loads data into the 'droneFlightPlannerDataSet3.FlightSchedule' table. You can move, or remove it, as needed.
             //this.flightScheduleTableAdapter.Fill(this.droneFlightPlannerDataSet3.FlightSchedule);
             // TODO: This line of code loads data into the 'schedule_act.schedule_action' table. You can move, or remove it, as needed.

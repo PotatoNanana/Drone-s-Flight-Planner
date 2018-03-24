@@ -178,5 +178,18 @@ namespace MissionPlanner.GCSViews
             DG_maintenance.DataSource = dt;
             con.Close();
         }
+
+        private void button_showDGSchedule_Click(object sender, EventArgs e)
+        {
+            //show data to DataGridView
+            con.Open();
+            String query = "SELECT * FROM FlightSchedule";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_schedule.DataSource = dt;
+            con.Close();
+
+        }
     }
 }

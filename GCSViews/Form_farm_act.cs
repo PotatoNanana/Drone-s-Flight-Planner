@@ -76,7 +76,7 @@ namespace MissionPlanner.GCSViews
         private void Form_farm_act_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'flightSchedule.FlightSchedule' table. You can move, or remove it, as needed.
-            this.flightScheduleTableAdapter.Fill(this.flightSchedule.FlightSchedule);
+            //this.flightScheduleTableAdapter.Fill(this.flightSchedule.FlightSchedule);
             // TODO: This line of code loads data into the 'droneFlightPlannerDataSet1.schedule_action' table. You can move, or remove it, as needed.
             //this.schedule_actionTableAdapter.Fill(this.droneFlightPlannerDataSet1.schedule_action);
 
@@ -85,15 +85,16 @@ namespace MissionPlanner.GCSViews
         private void button_delete_Click(object sender, EventArgs e)
         {
             // delete
-            if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 con.Open();
                 string query = "DELETE FROM FlightSchedule where action_id = '" + textBox_actID.Text + "' ";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
+                MessageBox.Show("DELETE Record From DB Success!!");
             }
-            MessageBox.Show("DELETE Record From DB Success!!");
+            
         }
 
         private void button_edit_Click(object sender, EventArgs e)
