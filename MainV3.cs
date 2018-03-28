@@ -417,7 +417,7 @@ namespace MissionPlanner
 
         private Form connectionStatsForm;
         private ConnectionStats _connectionStats;
-        
+
         /// <summary>
         /// This 'Control' is the toolstrip control that holds the comport combo, baudrate combo etc
         /// Otiginally seperate controls, each hosted in a toolstip sqaure, combined into this custom
@@ -604,7 +604,7 @@ namespace MissionPlanner
             //        _connectionControl.CMB_baudrate.Text = temp2;
             //    }
 
-               // comPortBaud = int.Parse(temp2);
+            // comPortBaud = int.Parse(temp2);
             //}
             //string temp3 = Settings.Instance.APMFirmware;
             //if (!string.IsNullOrEmpty(temp3))
@@ -668,24 +668,24 @@ namespace MissionPlanner
                     log.Error(exception);
                 }
 
-                if (ThemeManager.CurrentTheme == ThemeManager.Themes.Custom)
-                {
-                    try
-                    {
-                        ThemeManager.BGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_bg"].ToString()));
-                        ThemeManager.ControlBGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_ctlbg"].ToString()));
-                        ThemeManager.TextColor = Color.FromArgb(int.Parse(Settings.Instance["theme_text"].ToString()));
-                        ThemeManager.ButBG = Color.FromArgb(int.Parse(Settings.Instance["theme_butbg"].ToString()));
-                        ThemeManager.ButBorder = Color.FromArgb(int.Parse(Settings.Instance["theme_butbord"].ToString()));
-                    }
-                    catch
-                    {
-                        log.Error("Bad Custom theme - reset to standard");
-                        ThemeManager.SetTheme(ThemeManager.Themes.BurntKermit);
-                    }
-                }
+                //if (ThemeManager.CurrentTheme == ThemeManager.Themes.Custom)
+                //{
+                //    try
+                //    {
+                //        ThemeManager.BGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_bg"].ToString()));
+                //        ThemeManager.ControlBGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_ctlbg"].ToString()));
+                //        ThemeManager.TextColor = Color.FromArgb(int.Parse(Settings.Instance["theme_text"].ToString()));
+                //        ThemeManager.ButBG = Color.FromArgb(int.Parse(Settings.Instance["theme_butbg"].ToString()));
+                //        ThemeManager.ButBorder = Color.FromArgb(int.Parse(Settings.Instance["theme_butbord"].ToString()));
+                //    }
+                //    catch
+                //    {
+                //        log.Error("Bad Custom theme - reset to standard");
+                //        ThemeManager.SetTheme(ThemeManager.Themes.BurntKermit);
+                //    }
+                //}
 
-                if (ThemeManager.CurrentTheme == ThemeManager.Themes.HighContrast)
+                //if (ThemeManager.CurrentTheme == ThemeManager.Themes.HighContrast)
                 {
                     switchicons(new highcontrastmenuicons());
                 }
@@ -728,8 +728,8 @@ namespace MissionPlanner
                 GCSViews.FlightPlanner.OnMenuSimmulationButtonClick += MenuSimulation_Click;
 
 
-                    //Configuration = new GCSViews.ConfigurationView.Setup();
-                    log.Info("Create SIM");
+                //Configuration = new GCSViews.ConfigurationView.Setup();
+                log.Info("Create SIM");
                 Simulation = new SITL();
                 //Firmware = new GCSViews.Firmware();
                 //Terminal = new GCSViews.Terminal();
@@ -743,7 +743,7 @@ namespace MissionPlanner
 
                 Menu_main2.Width = MyView.Width;
 
-                
+
             }
             catch (ArgumentException e)
             {
@@ -1189,13 +1189,15 @@ namespace MissionPlanner
         {
             if (Settings.Instance.GetBoolean("password_protect") == false)
             {
-                MyView.ShowScreen("SWConfig");
+                //MyView.ShowScreen("SWConfig");
+                MyView.ShowScreen("Menu_setup");
             }
             else
             {
                 if (Password.VerifyPassword())
                 {
-                    MyView.ShowScreen("SWConfig");
+                    //MyView.ShowScreen("SWConfig");
+                    MyView.ShowScreen("Menu_setup");
                 }
             }
         }
@@ -1249,8 +1251,10 @@ namespace MissionPlanner
             {
                 if (MyView.current.Name == "HWConfig")
                     MyView.ShowScreen("HWConfig");
-                if (MyView.current.Name == "SWConfig")
-                    MyView.ShowScreen("SWConfig");
+                //if (MyView.current.Name == "SWConfig")
+                //    MyView.ShowScreen("SWConfig");
+                if (MyView.current.Name == "Menu_setup")
+                    MyView.ShowScreen("Menu_setup");
             }
 
             try
@@ -1449,7 +1453,7 @@ namespace MissionPlanner
                 comPort.compidcurrent = comPort.MAVlist.First().compid;
 
                 _connectionControl.UpdateSysIDS();
-                
+
 
                 // check for newer firmware
                 var softwares = Firmware.LoadSoftwares();
@@ -1507,8 +1511,10 @@ namespace MissionPlanner
                 {
                     if (MyView.current.Name == "HWConfig")
                         MyView.ShowScreen("HWConfig");
-                    if (MyView.current.Name == "SWConfig")
-                        MyView.ShowScreen("SWConfig");
+                    //if (MyView.current.Name == "SWConfig")
+                    //    MyView.ShowScreen("SWConfig");
+                    if (MyView.current.Name == "Menu_setup")
+                        MyView.ShowScreen("Menu_setup");
                 }
 
                 // load wps on connect option.
@@ -2555,8 +2561,10 @@ namespace MissionPlanner
                                             {
                                                 if (MyView.current.Name == "HWConfig")
                                                     MyView.ShowScreen("HWConfig");
-                                                if (MyView.current.Name == "SWConfig")
-                                                    MyView.ShowScreen("SWConfig");
+                                                //if (MyView.current.Name == "SWConfig")
+                                                //    MyView.ShowScreen("SWConfig");
+                                                if (MyView.current.Name == "Menu_setup")
+                                                    MyView.ShowScreen("Menu_setup");
                                             });
                                         }
                                     }
@@ -2669,7 +2677,7 @@ namespace MissionPlanner
             MyView.AddScreen(new MainSwitcher.Screen("SWConfig", typeof(GCSViews.SoftwareConfig), false));
             MyView.AddScreen(new MainSwitcher.Screen("Simulation", Simulation, true));
             MyView.AddScreen(new MainSwitcher.Screen("Terminal", typeof(GCSViews.Terminal), false));
-            MyView.AddScreen(new MainSwitcher.Screen("Help", typeof(GCSViews.Help), false));
+            MyView.AddScreen(new MainSwitcher.Screen("Menu_setup", typeof(GCSViews.Menu_setup), false));
 
             /// Added
             MyView.AddScreen(new MainSwitcher.Screen("UserLogin", typeof(GCSViews.UserLogin), false));
@@ -2884,7 +2892,7 @@ namespace MissionPlanner
                     logbrowse.Show(this);
                     logbrowse.BringToFront();
                 }
-                
+
                 if (cmds.ContainsKey("cam"))
                 {
                     try
@@ -3399,7 +3407,7 @@ namespace MissionPlanner
                 panel1.SendToBack();
                 panel1.Visible = true;
                 menu.Visible = false;
-               // MainMenu.MouseLeave -= MainMenu_MouseLeave;
+                // MainMenu.MouseLeave -= MainMenu_MouseLeave;
                 panel1.MouseLeave -= MainMenu_MouseLeave;
                 //toolStripConnectionControl.MouseLeave -= MainMenu_MouseLeave;
                 this.ResumeLayout(false);
@@ -3411,7 +3419,7 @@ namespace MissionPlanner
                 panel1.Visible = false;
                 //MainMenu.MouseLeave += MainMenu_MouseLeave;
                 panel1.MouseLeave += MainMenu_MouseLeave;
-               // toolStripConnectionControl.MouseLeave += MainMenu_MouseLeave;
+                // toolStripConnectionControl.MouseLeave += MainMenu_MouseLeave;
                 menu.Visible = true;
                 menu.SendToBack();
                 this.ResumeLayout(false);
@@ -3600,23 +3608,10 @@ namespace MissionPlanner
             DBT_QUERYCHANGECONFIG = 0x17,
             DBT_USERDEFINED = 0xFFFF,
         }
-          
+
         private void MainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            //foreach (ToolStripItem item in MainMenu.Items)
-            //{
-            //    if (e.ClickedItem == item)
-            //    {
-            //        item.BackColor = ThemeManager.ControlBGColor;
-            //    }
-            //    else
-            //    {
-            //        item.BackColor = Color.Transparent;
-            //        item.BackgroundImage = displayicons.bg; //.BackColor = Color.Black;
-            //    }
-            //}
-            //MainMenu.BackColor = Color.Black;
-            //MainMenu.BackgroundImage = MissionPlanner.Properties.Resources.bgdark;
+
         }
 
         private void fullScreenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3708,9 +3703,9 @@ namespace MissionPlanner
         {
             SidePanel.Width = but_setup.Width;
             SidePanel.Left = but_setup.Left;
-            MyView.ShowScreen("HWConfig");
+            MyView.ShowScreen("Menu_setup");
         }
-        
+
         private void MainV3_Load(object sender, EventArgs e)
         {
 
@@ -3721,7 +3716,7 @@ namespace MissionPlanner
 
         }
 
-        
+
 
         private void menu_Click(object sender, EventArgs e)
         {

@@ -643,6 +643,18 @@
     <Compile Include="GCSViews\Form_farm_Schedule.Designer.cs">
       <DependentUpon>Form_farm_Schedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\Form_Add_act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Add_act.Designer.cs">
+      <DependentUpon>Form_Add_act.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Edit_act.Designer.cs">
+      <DependentUpon>Form_Edit_act.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\Form_main_Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -684,6 +696,12 @@
     </Compile>
     <Compile Include="GCSViews\Menu_main2.Designer.cs">
       <DependentUpon>Menu_main2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Menu_setup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Menu_setup.Designer.cs">
+      <DependentUpon>Menu_setup.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\UserLogin.cs">
       <SubType>UserControl</SubType>
@@ -3119,6 +3137,12 @@
     <EmbeddedResource Include="GCSViews\Form_farm_Schedule.resx">
       <DependentUpon>Form_farm_Schedule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Add_act.resx">
+      <DependentUpon>Form_Add_act.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Edit_act.resx">
+      <DependentUpon>Form_Edit_act.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_main_Schedule.resx">
       <DependentUpon>Form_main_Schedule.cs</DependentUpon>
     </EmbeddedResource>
@@ -3219,6 +3243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Menu_main2.resx">
       <DependentUpon>Menu_main2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Menu_setup.resx">
+      <DependentUpon>Menu_setup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>

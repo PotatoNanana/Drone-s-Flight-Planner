@@ -25,9 +25,9 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
-            
+
         }
-        
+
         Controls.MainSwitcher MyView;
         public static event EventHandler Goto_farmProfile_Clicked;
         public static event EventHandler Goto_farmMaintenance_Clicked;
@@ -84,7 +84,7 @@ namespace MissionPlanner.GCSViews
 
         private void button1_Click(object sender, EventArgs e)
         {
- 
+
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -121,7 +121,7 @@ namespace MissionPlanner.GCSViews
 
         public void DG_farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void button3_Click_1(object sender, EventArgs e)

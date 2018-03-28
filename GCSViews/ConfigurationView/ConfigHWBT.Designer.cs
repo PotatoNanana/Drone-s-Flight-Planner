@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigHWBT));
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.BUT_btsettings = new MissionPlanner.Controls.MyButton();
             this.cmb_baud = new System.Windows.Forms.ComboBox();
@@ -39,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lineSeparator1 = new MissionPlanner.Controls.LineSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,12 +46,6 @@
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            // 
-            // groupBox5
-            // 
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -65,13 +59,18 @@
             // 
             // BUT_btsettings
             // 
+            this.BUT_btsettings.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_btsettings.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             resources.ApplyResources(this.BUT_btsettings, "BUT_btsettings");
             this.BUT_btsettings.Name = "BUT_btsettings";
+            this.BUT_btsettings.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_btsettings.TextColor = System.Drawing.Color.White;
             this.BUT_btsettings.UseVisualStyleBackColor = true;
             this.BUT_btsettings.Click += new System.EventHandler(this.BUT_btsettings_Click);
             // 
             // cmb_baud
             // 
+            resources.ApplyResources(this.cmb_baud, "cmb_baud");
             this.cmb_baud.FormattingEnabled = true;
             this.cmb_baud.Items.AddRange(new object[] {
             resources.GetString("cmb_baud.Items"),
@@ -82,7 +81,6 @@
             resources.GetString("cmb_baud.Items5"),
             resources.GetString("cmb_baud.Items6"),
             resources.GetString("cmb_baud.Items7")});
-            resources.ApplyResources(this.cmb_baud, "cmb_baud");
             this.cmb_baud.Name = "cmb_baud";
             // 
             // txt_name
@@ -110,10 +108,15 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
+            // lineSeparator1
+            // 
+            resources.ApplyResources(this.lineSeparator1, "lineSeparator1");
+            this.lineSeparator1.Name = "lineSeparator1";
+            // 
             // ConfigHWBT
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.lineSeparator1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -122,9 +125,9 @@
             this.Controls.Add(this.cmb_baud);
             this.Controls.Add(this.BUT_btsettings);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.pictureBox5);
             this.Name = "ConfigHWBT";
+            resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,7 +137,6 @@
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private Controls.MyButton BUT_btsettings;
         private System.Windows.Forms.ComboBox cmb_baud;
@@ -143,5 +145,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Controls.LineSeparator lineSeparator1;
     }
 }
