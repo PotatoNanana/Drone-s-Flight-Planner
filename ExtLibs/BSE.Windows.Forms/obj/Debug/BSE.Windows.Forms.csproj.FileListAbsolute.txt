@@ -78,3 +78,4 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csprojResolveAssemblyReference.cache
