@@ -35,7 +35,7 @@ namespace MissionPlanner.Wizard
         public int WizardValidate()
         {
             if (selected)
-                return 1;
+                return 2; // TODO Change back to 1
 
             return 0;
         }
