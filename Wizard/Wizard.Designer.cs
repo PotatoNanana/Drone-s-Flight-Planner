@@ -39,9 +39,10 @@ namespace MissionPlanner.Wizard
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // progressStep1
             // 
@@ -54,22 +55,32 @@ namespace MissionPlanner.Wizard
             // BUT_Next
             // 
             resources.ApplyResources(this.BUT_Next, "BUT_Next");
+            this.BUT_Next.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Next.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Next.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BUT_Next.Name = "BUT_Next";
+            this.BUT_Next.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Next.TextColor = System.Drawing.Color.White;
             this.BUT_Next.UseVisualStyleBackColor = true;
             this.BUT_Next.Click += new System.EventHandler(this.BUT_Next_Click);
             // 
             // BUT_Back
             // 
             resources.ApplyResources(this.BUT_Back, "BUT_Back");
+            this.BUT_Back.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Back.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Back.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BUT_Back.Name = "BUT_Back";
+            this.BUT_Back.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_Back.TextColor = System.Drawing.Color.White;
             this.BUT_Back.UseVisualStyleBackColor = true;
             this.BUT_Back.Click += new System.EventHandler(this.BUT_Back_Click);
             // 
             // Wizard
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.progressStep1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BUT_Next);
