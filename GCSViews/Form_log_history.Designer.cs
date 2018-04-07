@@ -1,0 +1,286 @@
+﻿namespace MissionPlanner.GCSViews
+{
+    partial class Form_log_history
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_log_history));
+            this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_show = new System.Windows.Forms.Button();
+            this.But_exit = new System.Windows.Forms.Button();
+            this.DG_Flight = new MissionPlanner.Controls.MyDataGridView();
+            this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
+            this.flightLog = new MissionPlanner.FlightLog();
+            this.flightLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flightLogTableAdapter = new MissionPlanner.FlightLogTableAdapters.FlightLogTableAdapter();
+            this.log_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.log_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pattern_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pattern_mask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel_Main_farm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_Flight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flightLog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightLogBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel_Main_farm
+            // 
+            this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.button_show);
+            this.panel_Main_farm.Controls.Add(this.But_exit);
+            this.panel_Main_farm.Controls.Add(this.DG_Flight);
+            this.panel_Main_farm.Controls.Add(this.panel3);
+            this.panel_Main_farm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
+            this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
+            this.panel_Main_farm.Name = "panel_Main_farm";
+            this.panel_Main_farm.Size = new System.Drawing.Size(613, 495);
+            this.panel_Main_farm.TabIndex = 10;
+            // 
+            // button_show
+            // 
+            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_show.FlatAppearance.BorderSize = 0;
+            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_show.ForeColor = System.Drawing.Color.White;
+            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_show.Location = new System.Drawing.Point(118, 430);
+            this.button_show.Name = "button_show";
+            this.button_show.Size = new System.Drawing.Size(130, 40);
+            this.button_show.TabIndex = 19;
+            this.button_show.Text = "แสดงตาราง";
+            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_show.UseVisualStyleBackColor = false;
+            this.button_show.Click += new System.EventHandler(this.button_show_Click);
+            // 
+            // But_exit
+            // 
+            this.But_exit.BackColor = System.Drawing.Color.Tomato;
+            this.But_exit.FlatAppearance.BorderSize = 0;
+            this.But_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.But_exit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.But_exit.ForeColor = System.Drawing.Color.White;
+            this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.But_exit.Location = new System.Drawing.Point(312, 430);
+            this.But_exit.Name = "But_exit";
+            this.But_exit.Size = new System.Drawing.Size(130, 40);
+            this.But_exit.TabIndex = 10;
+            this.But_exit.Text = "ปิด";
+            this.But_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.But_exit.UseVisualStyleBackColor = false;
+            this.But_exit.Click += new System.EventHandler(this.But_exit_Click);
+            // 
+            // DG_Flight
+            // 
+            this.DG_Flight.AutoGenerateColumns = false;
+            this.DG_Flight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
+            this.DG_Flight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DG_Flight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.log_no,
+            this.log_datetime,
+            this.action_no,
+            this.farm_id,
+            this.drone_id,
+            this.pattern_name,
+            this.pattern_mask});
+            this.DG_Flight.DataSource = this.flightLogBindingSource;
+            this.DG_Flight.Location = new System.Drawing.Point(25, 75);
+            this.DG_Flight.Name = "DG_Flight";
+            this.DG_Flight.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DG_Flight.Size = new System.Drawing.Size(562, 333);
+            this.DG_Flight.TabIndex = 9;
+            // 
+            // flightScheduleBindingSource
+            // 
+            this.flightScheduleBindingSource.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource.DataSource = this.flightSchedule2;
+            // 
+            // flightSchedule2
+            // 
+            this.flightSchedule2.DataSetName = "FlightSchedule2";
+            this.flightSchedule2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Main_but_farm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(613, 50);
+            this.panel3.TabIndex = 0;
+            // 
+            // Main_but_farm
+            // 
+            this.Main_but_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Main_but_farm.FlatAppearance.BorderSize = 0;
+            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
+            this.Main_but_farm.ForeColor = System.Drawing.Color.White;
+            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Name = "Main_but_farm";
+            this.Main_but_farm.Size = new System.Drawing.Size(613, 50);
+            this.Main_but_farm.TabIndex = 6;
+            this.Main_but_farm.Text = "ตารางบันทึกผลการบิน";
+            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Main_but_farm.UseCompatibleTextRendering = true;
+            this.Main_but_farm.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel_Main_farm);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(613, 495);
+            this.panel1.TabIndex = 1;
+            // 
+            // flightScheduleTableAdapter
+            // 
+            this.flightScheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // flightLog
+            // 
+            this.flightLog.DataSetName = "FlightLog";
+            this.flightLog.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flightLogBindingSource
+            // 
+            this.flightLogBindingSource.DataMember = "FlightLog";
+            this.flightLogBindingSource.DataSource = this.flightLog;
+            // 
+            // flightLogTableAdapter
+            // 
+            this.flightLogTableAdapter.ClearBeforeFill = true;
+            // 
+            // log_no
+            // 
+            this.log_no.DataPropertyName = "log_no";
+            this.log_no.HeaderText = "รหัสประวัติการบิน";
+            this.log_no.Name = "log_no";
+            // 
+            // log_datetime
+            // 
+            this.log_datetime.DataPropertyName = "log_datetime";
+            this.log_datetime.HeaderText = "วันที่";
+            this.log_datetime.Name = "log_datetime";
+            this.log_datetime.ReadOnly = true;
+            // 
+            // action_no
+            // 
+            this.action_no.DataPropertyName = "action_no";
+            this.action_no.HeaderText = "รหัสกิจกรรม";
+            this.action_no.Name = "action_no";
+            // 
+            // farm_id
+            // 
+            this.farm_id.DataPropertyName = "farm_id";
+            this.farm_id.HeaderText = "รหัสฟาร์ม";
+            this.farm_id.Name = "farm_id";
+            // 
+            // drone_id
+            // 
+            this.drone_id.DataPropertyName = "drone_id";
+            this.drone_id.HeaderText = "รหัสโดรน";
+            this.drone_id.Name = "drone_id";
+            // 
+            // pattern_name
+            // 
+            this.pattern_name.DataPropertyName = "pattern_name";
+            this.pattern_name.HeaderText = "รูปแบบการบิน";
+            this.pattern_name.Name = "pattern_name";
+            // 
+            // pattern_mask
+            // 
+            this.pattern_mask.DataPropertyName = "pattern_mask";
+            this.pattern_mask.HeaderText = "หมายเหตุ";
+            this.pattern_mask.Name = "pattern_mask";
+            // 
+            // Form_log_history
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(613, 495);
+            this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form_log_history";
+            this.Text = "Form_log_history";
+            this.Load += new System.EventHandler(this.Form_log_history_Load);
+            this.panel_Main_farm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DG_Flight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.flightLog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightLogBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel_Main_farm;
+        private System.Windows.Forms.Button button_show;
+        private System.Windows.Forms.Button But_exit;
+        private Controls.MyDataGridView DG_Flight;
+        private System.Windows.Forms.BindingSource flightScheduleBindingSource;
+        private FlightSchedule2 flightSchedule2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button Main_but_farm;
+        private System.Windows.Forms.Panel panel1;
+        private FlightSchedule2TableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter;
+        private MissionPlanner.FlightLog flightLog;
+        private System.Windows.Forms.BindingSource flightLogBindingSource;
+        private FlightLogTableAdapters.FlightLogTableAdapter flightLogTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn log_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn log_datetime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn action_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn drone_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pattern_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pattern_mask;
+    }
+}

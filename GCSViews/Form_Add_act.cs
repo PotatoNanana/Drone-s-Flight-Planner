@@ -42,5 +42,10 @@ namespace MissionPlanner.GCSViews
         {
             this.Close();
         }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

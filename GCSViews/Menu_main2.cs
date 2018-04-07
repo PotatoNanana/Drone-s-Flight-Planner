@@ -110,13 +110,11 @@ namespace MissionPlanner.GCSViews
         private void Goto_farmProfile_Click(object sender, EventArgs e)
         {
             OnGotoFarmProfileClicked(e);
-
         }
 
         private void Goto_farmMaintenance_Click(object sender, EventArgs e)
         {
             OnGotoFarmMaintenanceClicked(e);
-
         }
 
         public void DG_farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -171,7 +169,7 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView
             con.Open();
-            String query = "SELECT * FROM Maintainance";
+            String query = "SELECT * FROM Maintainance ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -183,7 +181,7 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView
             con.Open();
-            String query = "SELECT * FROM FlightSchedule";
+            String query = "SELECT * FROM FlightSchedule WHERE action_finish = 'n' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);

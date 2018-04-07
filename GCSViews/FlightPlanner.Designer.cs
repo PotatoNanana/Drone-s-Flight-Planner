@@ -210,6 +210,7 @@ namespace MissionPlanner.GCSViews
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.button_log = new MissionPlanner.Controls.MyButton();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
@@ -379,6 +380,7 @@ namespace MissionPlanner.GCSViews
             this.panelWaypoints.CaptionFont = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelWaypoints.CaptionHeight = 21;
             this.panelWaypoints.ColorScheme = BSE.Windows.Forms.ColorScheme.Custom;
+            this.panelWaypoints.Controls.Add(this.button_log);
             this.panelWaypoints.Controls.Add(this.connectionControl1);
             this.panelWaypoints.Controls.Add(this.MenuConnect);
             this.panelWaypoints.Controls.Add(this.menuTakeoff);
@@ -1414,6 +1416,17 @@ namespace MissionPlanner.GCSViews
             resources.ApplyResources(this.toolStripConnectionControl, "toolStripConnectionControl");
             this.toolStripConnectionControl.Name = "toolStripConnectionControl";
             // 
+            // button_log
+            // 
+            resources.ApplyResources(this.button_log, "button_log");
+            this.button_log.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.button_log.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.button_log.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
+            this.button_log.Name = "button_log";
+            this.toolTip1.SetToolTip(this.button_log, resources.GetString("button_log.ToolTip"));
+            this.button_log.UseVisualStyleBackColor = true;
+            this.button_log.Click += new System.EventHandler(this.button_log_Click);
+            // 
             // FlightPlanner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1600,5 +1613,6 @@ namespace MissionPlanner.GCSViews
         public System.Windows.Forms.ToolTip toolTip2;
         public MyButton MenuConnect;
         private ConnectionControl connectionControl1;
+        private MyButton button_log;
     }
 }

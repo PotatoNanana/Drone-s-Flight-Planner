@@ -39,8 +39,8 @@ namespace MissionPlanner.GCSViews
         
         private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
         {
-            textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-            textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+            textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
+            textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
@@ -56,10 +56,8 @@ namespace MissionPlanner.GCSViews
             con.Open();
 
             //string a = "yyyy-MM-dd";
-            string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
-            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "'";// AND action_date >= '" + dateNow + "' ";
-            //String query2 = "SELECT f.schedule_no, f.schedule_datetime, f.farm_id, f.drone_id, f.action_no,s.action_name,s.action_capacity,s.action_cost  FROM FlightSchedule AS f,schedule_action AS s WHERE f.action_no = s.action_no AND farm_id = '" + id_farm + "' ";// AND action_date >= '" + dateNow + "' "; 
+            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -70,7 +68,7 @@ namespace MissionPlanner.GCSViews
         private void button_delete_Click(object sender, EventArgs e)
         {
             // delete Schedule
-            if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 con.Open();
                 String query = "DELETE FROM FlightSchedule where action_no = '" + textBox_actID.Text + "' ";

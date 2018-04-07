@@ -45,6 +45,7 @@ using MissionPlanner.Warnings;
 using MissionPlanner.Comms;
 using System.Linq;
 
+
 namespace MissionPlanner.GCSViews
 {
     public partial class FlightPlanner : MyUserControl, IDeactivate, IActivate
@@ -55,6 +56,9 @@ namespace MissionPlanner.GCSViews
         {
             OnMenuSimmulationButtonClick?.Invoke(this, e);
         }
+
+        
+        public string file; // name of waypoint path
 
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         int selectedrow;
@@ -3019,14 +3023,14 @@ namespace MissionPlanner.GCSViews
             }
             writeKML();
         }
-
+        
         private void BUT_loadwpfile_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog fd = new OpenFileDialog())
             {
                 fd.Filter = "All Supported Types|*.txt;*.waypoints;*.shp;*.plan";
                 DialogResult result = fd.ShowDialog();
-                string file = fd.FileName;
+                file = fd.FileName;
 
                 if (File.Exists(file))
                 {
@@ -3059,9 +3063,7 @@ namespace MissionPlanner.GCSViews
                             wpfilename = file;
                             readQGC110wpfile(file);
                         }
-                    }
-
-                    lbl_wpfile.Text = "Loaded " + Path.GetFileName(file);
+                    }                  
                 }
             }
         }
@@ -7313,6 +7315,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             ChangeColumnHeader(MAVLink.MAV_CMD.TAKEOFF.ToString());
 
             writeKML();
+
+            //go to form log after finish
+            Form_log form_Log = new Form_log(file);
+            form_Log.ShowDialog();
+
         }
 
         private void MenuSimulation_Click(object sender, EventArgs e)
@@ -7943,7 +7950,13 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             public abstract Image wizard { get; }
         }
 
+        private void button_log_Click(object sender, EventArgs e)
+        {
+            //go to form log history after finish
+            Form_log_history form_Log_History = new Form_log_history();
+            form_Log_History.ShowDialog();
 
+        }
     }
 
 

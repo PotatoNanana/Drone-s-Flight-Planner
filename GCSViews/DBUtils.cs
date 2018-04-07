@@ -11,7 +11,7 @@ namespace Tutorial.SqlConn
     {
         public static SqlConnection GetDBConnection()
         {
-            string datasource = @"napat";
+            string datasource = @"CS-RABBIT\SQLEXPRESS";
 
             string database = "DroneFlightPlanner";
             string username = "test";

@@ -63,16 +63,9 @@ namespace MissionPlanner.GCSViews
             con.Open();
 
             string format = "yyyy-MM-dd";
-
-            String query2 = "UPDATE schedule_action SET action_no,action_name,action_capacity,action_cost) " 
-                + "VALUES('" + textBox_actID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "')";
-
-            String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',schedule_date = '" + dateTimePicker.Value.ToString(format) + "') "
-                + "VALUES(,,,)";
-
-            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-            SDA2.SelectCommand.ExecuteNonQuery();
-
+                        
+            String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',action_datetime = '" + dateTimePicker.Value.ToString(format) + "',action_name = '"+textBox_actName.Text+ "',action_capacity = '"+textBox_cap.Text+ "',action_cost = '"+textBox_cost.Text+"') ";
+                   
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();

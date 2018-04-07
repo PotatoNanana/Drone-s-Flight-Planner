@@ -16,7 +16,6 @@ namespace MissionPlanner.GCSViews
         public Form_farm_act()
         {
             InitializeComponent();
-
         }
         
         public Form_farm_act(string id_farm)
@@ -40,9 +39,8 @@ namespace MissionPlanner.GCSViews
         
         private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
         {
-            textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-            textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-            
+            textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
+            textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();            
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
@@ -65,7 +63,7 @@ namespace MissionPlanner.GCSViews
             //string a = "yyyy-MM-dd";
             string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
-            String query = "SELECT * FROM schedule_action WHERE farm_id = '" + id_farm + "' AND action_date < '"+ dateNow+"' ";
+            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'y' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -75,6 +73,8 @@ namespace MissionPlanner.GCSViews
 
         private void Form_farm_act_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'activitySchedule.FlightSchedule' table. You can move, or remove it, as needed.
+            //this.flightScheduleTableAdapter1.Fill(this.activitySchedule.FlightSchedule);
             // TODO: This line of code loads data into the 'flightSchedule.FlightSchedule' table. You can move, or remove it, as needed.
             //this.flightScheduleTableAdapter.Fill(this.flightSchedule.FlightSchedule);
             // TODO: This line of code loads data into the 'droneFlightPlannerDataSet1.schedule_action' table. You can move, or remove it, as needed.

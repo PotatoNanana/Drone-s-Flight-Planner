@@ -36,12 +36,11 @@ namespace MissionPlanner.GCSViews
             string format = "yyyy-MM-dd";
 
             String query = "UPDATE FlightSchedule SET action_no = '" + textBox_actID.Text + "',farm_id = '" + textBox_farmID.Text + "',drone_id = '" + textBox_droneID.Text + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "',action_datetime = '" + dateTimePicker.Value.ToString(format) + "' ";
-
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
 
             con.Close();
-            MessageBox.Show("Save To DB Success!!");
+            MessageBox.Show("Edit To DB Success!!");
 
             this.Close();
         }

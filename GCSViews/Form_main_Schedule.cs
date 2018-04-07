@@ -15,32 +15,7 @@ namespace MissionPlanner.GCSViews
     {
         public Form_main_Schedule()
         {
-            InitializeComponent();
-
-            add_DG();
-
-            void add_DG()
-            {
-                int n = 0;
-                for (int i = 1; i <= 8; i++)
-                {
-                    n = DG_Farm.Rows.Add();
-                    DG_Farm.Rows[n].Cells[0].Value = "25/06/2016";
-                    DG_Farm.Rows[n].Cells[1].Value = "0025";
-                    DG_Farm.Rows[n].Cells[2].Value = "รดน้ำ";
-                    DG_Farm.Rows[n].Cells[3].Value = "DR01";
-                    DG_Farm.Rows[n].Cells[4].Value = "1250";
-                    DG_Farm.Rows[n].Cells[5].Value = "30000";
-
-                    n = DG_Farm.Rows.Add();
-                    DG_Farm.Rows[n].Cells[0].Value = "13/09/2016";
-                    DG_Farm.Rows[n].Cells[1].Value = "0074";
-                    DG_Farm.Rows[n].Cells[2].Value = "โรยปุ๋ย";
-                    DG_Farm.Rows[n].Cells[3].Value = "DR03";
-                    DG_Farm.Rows[n].Cells[4].Value = "230";
-                    DG_Farm.Rows[n].Cells[5].Value = "25000";
-                }
-            }
+            InitializeComponent();            
         }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
@@ -57,23 +32,14 @@ namespace MissionPlanner.GCSViews
         
         private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
         {
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "Delete")
-            {
-                if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    DG_Farm.RemoveCurrent();
-            }
-
-            if (DG_Farm.Columns[e.ColumnIndex].Name == "Edit")
-            {
-                Form_Edit_farm_act form_Edit_Farm = new Form_Edit_farm_act();
-                form_Edit_Farm.ShowDialog();
-            }
+            textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+            textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
         {
-            Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act();
-            form_Add_Farm_Act.ShowDialog();
+            Form_Add_act form_Add_Act = new Form_Add_act();
+            form_Add_Act.ShowDialog();
         }
 
         private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
@@ -82,6 +48,46 @@ namespace MissionPlanner.GCSViews
         }
 
         private void button_show_Click(object sender, EventArgs e)
+        {
+            //show data to DataGridView
+            con.Open();
+
+            //string a = "yyyy-MM-dd";
+            string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
+
+            String query = "SELECT * FROM FlightSchedule WHERE action_finish = 'n' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
+        }
+
+        private void Form_main_Schedule_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'f_Schedule.FlightSchedule' table. You can move, or remove it, as needed.            
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                con.Open();
+                string query = "DELETE FROM FlightSchedule WHERE action_id = '" + textBox_actID.Text + "' ";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("DELETE Record From DB Success!!");
+            }
+        }
+
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+            Form_Edit_act form_Edit_Act = new Form_Edit_act();
+            form_Edit_Act.ShowDialog();
+        }
+
+        private void textBox_actID_TextChanged(object sender, EventArgs e)
         {
 
         }
