@@ -1,4 +1,6 @@
 *.pfx
+*.dll
+*.pdb
 *.suo
 *.user
 bin/
@@ -59,3 +61,9 @@ obj/
 /Plugins/Shortcuts
 /test
 /ExtLibs/GDAL/Native/gdal
+.vs/MissionPlanner/v15/sqlite3/storage.ide
+.vs/MissionPlanner/v15/sqlite3/storage.ide
+.vs/MissionPlanner/v15/sqlite3/storage.ide-wal
+*.dll
+*.dll
+*.dll
