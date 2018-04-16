@@ -632,38 +632,7 @@ namespace MissionPlanner
 
             if (Settings.Instance["theme"] != null)
             {
-                try
-                {
-                    ThemeManager.SetTheme(
-                        (ThemeManager.Themes)
-                            Enum.Parse(typeof(ThemeManager.Themes), Settings.Instance["theme"].ToString()));
-                }
-                catch (Exception exception)
-                {
-                    log.Error(exception);
-                }
-
-                if (ThemeManager.CurrentTheme == ThemeManager.Themes.Custom)
-                {
-                    try
-                    {
-                        ThemeManager.BGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_bg"].ToString()));
-                        ThemeManager.ControlBGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_ctlbg"].ToString()));
-                        ThemeManager.TextColor = Color.FromArgb(int.Parse(Settings.Instance["theme_text"].ToString()));
-                        ThemeManager.ButBG = Color.FromArgb(int.Parse(Settings.Instance["theme_butbg"].ToString()));
-                        ThemeManager.ButBorder = Color.FromArgb(int.Parse(Settings.Instance["theme_butbord"].ToString()));
-                    }
-                    catch
-                    {
-                        log.Error("Bad Custom theme - reset to standard");
-                        ThemeManager.SetTheme(ThemeManager.Themes.BurntKermit);
-                    }
-                }
-
-                if (ThemeManager.CurrentTheme == ThemeManager.Themes.HighContrast)
-                {
-                    switchicons(new highcontrastmenuicons());
-                }
+               ThemeManager.SetTheme(ThemeManager.Themes.None);
             }
 
             if (Settings.Instance["showairports"] != null)

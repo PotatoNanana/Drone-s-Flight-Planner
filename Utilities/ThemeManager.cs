@@ -36,7 +36,7 @@ namespace MissionPlanner.Utilities
             /// <summary>
             /// Standard Planner Charcoal & Green colours
             /// </summary>
-            //BurntKermit,
+            BurntKermit,
             //HighContrast,
             //Test,
             //Custom,
