@@ -73,7 +73,7 @@ namespace MissionPlanner.GCSViews
             if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 con.Open();
-                string query = "DELETE FROM FlightSchedule WHERE action_id = '" + textBox_actID.Text + "' ";
+                string query = "DELETE FROM FlightSchedule WHERE action_no = '" + textBox_actID.Text + "' ";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();

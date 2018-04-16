@@ -47,7 +47,7 @@ namespace MissionPlanner.GCSViews
         private void Form_log_history_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'flightLog._FlightLog' table. You can move, or remove it, as needed.
-            this.flightLogTableAdapter.Fill(this.flightLog._FlightLog);
+            //this.flightLogTableAdapter.Fill(this.flightLog._FlightLog);
 
         }
     }

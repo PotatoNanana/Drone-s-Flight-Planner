@@ -19,7 +19,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPla
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\Core\obj\Debug\Core.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Core\bin\Debug\Core.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Core\bin\Debug\Core.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Core\obj\Debug\Core.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Core\obj\Debug\Core.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Core\bin\Debug\Core.dll

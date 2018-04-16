@@ -7272,6 +7272,10 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void menuTakeoff_Click(object sender, EventArgs e)
         {
+            //go to form log 
+            Form_log form_Log = new Form_log(file);
+            form_Log.ShowDialog();
+            
             // altitude
             string alt = "10";
 
@@ -7316,9 +7320,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             writeKML();
 
-            //go to form log after finish
-            Form_log form_Log = new Form_log(file);
-            form_Log.ShowDialog();
+          
 
         }
 
@@ -7955,6 +7957,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             //go to form log history after finish
             Form_log_history form_Log_History = new Form_log_history();
             form_Log_History.ShowDialog();
+            
 
         }
     }

@@ -12,3 +12,4 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\TrackerHome\obj\Debug\TrackerHome.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csprojResolveAssemblyReference.cache

@@ -688,6 +688,12 @@
     <Compile Include="GCSViews\Form_main_Schedule.Designer.cs">
       <DependentUpon>Form_main_Schedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\Form_Notify_drone_part.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Notify_drone_part.Designer.cs">
+      <DependentUpon>Form_Notify_drone_part.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\Maintain.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -802,6 +808,11 @@
       <DependentUpon>Menu_main.cs</DependentUpon>
     </Compile>
     <Compile Include="MyView\AddScreen.cs" />
+    <Compile Include="PartDroneNotify.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartDroneNotify.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3179,6 +3190,9 @@
     <EmbeddedResource Include="GCSViews\Form_main_Schedule.resx">
       <DependentUpon>Form_main_Schedule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Notify_drone_part.resx">
+      <DependentUpon>Form_Notify_drone_part.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Help.ar.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
@@ -4740,6 +4754,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="PartDroneNotify.xsc">
+      <DependentUpon>PartDroneNotify.xsd</DependentUpon>
+    </None>
+    <None Include="PartDroneNotify.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartDroneNotify.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PartDroneNotify.xss">
+      <DependentUpon>PartDroneNotify.xsd</DependentUpon>
+    </None>
     <None Include="ph2_serial.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

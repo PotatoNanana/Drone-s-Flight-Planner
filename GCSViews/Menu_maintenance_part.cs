@@ -14,7 +14,9 @@ using MissionPlanner.Utilities;
 using MissionPlanner.Plugin;
 using System.Data.SqlClient;
 using System.Data.Sql;
-
+using Community.CsharpSqlite.SQLiteClient;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace MissionPlanner.GCSViews
 {
@@ -149,6 +151,7 @@ namespace MissionPlanner.GCSViews
             }
         }
 
+
         private void button_show_Click(object sender, EventArgs e)
         {
             //show data to DataGridView
@@ -157,8 +160,27 @@ namespace MissionPlanner.GCSViews
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
-            DG_Farm.DataSource = dt;
             con.Close();
+            DG_Farm.DataSource = dt;
+        }
+
+        private byte[] ObjectToByteArray(object obj)
+        {
+            if (obj == null)
+                return null;
+            BinaryFormatter bf = new BinaryFormatter();
+            using (MemoryStream ms = new MemoryStream())
+            {
+                bf.Serialize(ms, obj);
+                return ms.ToArray();
+            }
+        }
+
+        private string FixBase64ForImage(string pic)
+        {
+           System.Text.StringBuilder sbText = new System.Text.StringBuilder(pic,pic.Length);
+            sbText.Replace("\r\n", String.Empty); sbText.Replace(" ", String.Empty); 
+            return sbText.ToString(); 
         }
 
         /*private void button_serch_Click(object sender, EventArgs e)

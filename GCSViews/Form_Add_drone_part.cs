@@ -18,6 +18,7 @@ namespace MissionPlanner.GCSViews
         //SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         string imgLocation = "";
+        byte[] imgby;
         SqlCommand cmd;
         private string id_drone;
 
@@ -67,12 +68,6 @@ namespace MissionPlanner.GCSViews
         {
             con.Open();
 
-            byte[] images = null;
-            FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-            BinaryReader brs = new BinaryReader(Streem);
-            images = brs.ReadBytes((int)Streem.Length);
-            MemoryStream memStream = new MemoryStream();
-            byte[] imgBytes = memStream.GetBuffer();
 
             comboBox_alarm.SelectedItem.ToString();
             string format = "yyyy-MM-dd";
@@ -84,8 +79,8 @@ namespace MissionPlanner.GCSViews
 
             SqlCommand cmd = new SqlCommand(query, con);
             //cmd.Parameters.Add(new SqlParameter("@images", images));
-            cmd.Parameters.Add("@Images", SqlDbType.Image, imgBytes.Length);
-            cmd.Parameters["@Images"].Value = imgBytes;
+            cmd.Parameters.Add("@Images", SqlDbType.Image, imgby.Length);
+            cmd.Parameters["@Images"].Value = imgby;
             cmd.ExecuteNonQuery();
 
             con.Close();
@@ -101,8 +96,24 @@ namespace MissionPlanner.GCSViews
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 imgLocation = dialog.FileName.ToString();
+                imgby = imageToByteArray(Image.FromFile(dialog.FileName));
                 pictureBox.ImageLocation = imgLocation;
             }
         }
+
+         public byte[] imageToByteArray(System.Drawing.Image imageIn)
+ {
+    MemoryStream ms = new MemoryStream();
+    imageIn.Save(ms,System.Drawing.Imaging.ImageFormat.Jpeg);
+    return  ms.ToArray();
+ }
+
+//Byte array to photo
+public Image byteArrayToImage(byte[] byteArrayIn)
+{
+     MemoryStream ms = new MemoryStream(byteArrayIn);
+     Image returnImage = Image.FromStream(ms);
+     return returnImage;
+}
     }
 }

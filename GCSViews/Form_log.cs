@@ -36,6 +36,8 @@ namespace MissionPlanner.GCSViews
 
         }
 
+        public String droneId;
+
         private void But_save_Click(object sender, EventArgs e) // 
         {
             con.Open();
@@ -51,6 +53,14 @@ namespace MissionPlanner.GCSViews
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Save To DB Success!!");
+
+            //notify drone tools
+            droneId = textBox_droneID.Text;
+            
+            //go to form notify drone part 
+            Form_Notify_drone_part form_notify_drone_part = new Form_Notify_drone_part(droneId);
+            form_notify_drone_part.ShowDialog();
+
             this.Close();
         }
 
