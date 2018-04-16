@@ -31,7 +31,7 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
-                        
+
         }
 
         public Menu_maintenance_part(string id_drone)
@@ -104,7 +104,6 @@ namespace MissionPlanner.GCSViews
             textBox_partName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
         }
 
-
         private void Main_but_farm_Click(object sender, EventArgs e)
         {
 
@@ -116,7 +115,7 @@ namespace MissionPlanner.GCSViews
             Form_Add_drone_part form_Add_Drone_Part = new Form_Add_drone_part(id_drone);
             form_Add_Drone_Part.ShowDialog();
         }
-        
+
         private void but_backto_pre_Click(object sender, EventArgs e)
         {
             //go back
@@ -179,9 +178,9 @@ namespace MissionPlanner.GCSViews
 
         private string FixBase64ForImage(string pic)
         {
-           System.Text.StringBuilder sbText = new System.Text.StringBuilder(pic,pic.Length);
-            sbText.Replace("\r\n", String.Empty); sbText.Replace(" ", String.Empty); 
-            return sbText.ToString(); 
+            System.Text.StringBuilder sbText = new System.Text.StringBuilder(pic, pic.Length);
+            sbText.Replace("\r\n", String.Empty); sbText.Replace(" ", String.Empty);
+            return sbText.ToString();
         }
 
         /*private void button_serch_Click(object sender, EventArgs e)
