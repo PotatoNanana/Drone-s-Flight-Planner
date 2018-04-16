@@ -430,7 +430,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
