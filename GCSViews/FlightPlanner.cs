@@ -7319,9 +7319,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             ChangeColumnHeader(MAVLink.MAV_CMD.TAKEOFF.ToString());
 
             writeKML();
-
           
-
         }
 
         private void MenuSimulation_Click(object sender, EventArgs e)
