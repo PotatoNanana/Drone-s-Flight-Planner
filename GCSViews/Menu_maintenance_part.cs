@@ -22,6 +22,13 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Menu_maintenance_part : MyUserControl
     {
+        //for image
+        #region Variables
+        String strFilePath = "";
+        Image DefaultImage;
+        Byte[] ImageByteArray;
+        #endregion
+
         //SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
@@ -31,7 +38,6 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
-
         }
 
         public Menu_maintenance_part(string id_drone)
@@ -102,6 +108,19 @@ namespace MissionPlanner.GCSViews
         {
             textBox_partID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
             textBox_partName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+
+            //img
+            txtTitle.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
+            byte[] ImageArray = (byte[])DG_Farm.CurrentRow.Cells[2].Value;
+            if (ImageArray.Length == 0)
+                pictureBox.Image = DefaultImage;
+            else
+            {
+                ImageByteArray = ImageArray;
+                pictureBox.Image = Image.FromStream(new MemoryStream(ImageArray));
+            }
+           /* ImageID = Convert.ToInt32(dgvImages.CurrentRow.Cells[0].Value);
+            btnSave.Text = "Update";    */
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -181,6 +200,11 @@ namespace MissionPlanner.GCSViews
             System.Text.StringBuilder sbText = new System.Text.StringBuilder(pic, pic.Length);
             sbText.Replace("\r\n", String.Empty); sbText.Replace(" ", String.Empty);
             return sbText.ToString();
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+
         }
 
         /*private void button_serch_Click(object sender, EventArgs e)
