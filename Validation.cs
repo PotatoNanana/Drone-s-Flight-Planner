@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MissionPlanner
 {
@@ -17,6 +18,9 @@ namespace MissionPlanner
             string strVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             
         }
+
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        SqlCommand cmd;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -35,7 +39,9 @@ namespace MissionPlanner
 
         private void BUT_login_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            con.Open();
+
+            this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -46,6 +52,42 @@ namespace MissionPlanner
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void userid_enter(object sender, EventArgs e)
+        {
+            if(txtUsername.Text == "ชื่อผู้ใช้งาน")
+            {
+                txtUsername.Text = "";
+                txtUsername.ForeColor = Color.Black;
+            }
+        }
+
+        private void userid_leave(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "")
+            {
+                txtUsername.Text = "ชื่อผู้ใช้งาน";
+                txtUsername.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void pwd_enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "รหัสผ่าน")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void pwd_leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
+            {
+                txtPassword.Text = "รหัสผ่าน";
+                txtPassword.ForeColor = Color.DimGray;
+            }
         }
     }
 }

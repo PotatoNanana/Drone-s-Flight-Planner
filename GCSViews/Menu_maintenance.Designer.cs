@@ -96,7 +96,7 @@
             // 
             // button_show
             // 
-            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.button_show.FlatAppearance.BorderSize = 0;
             this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,12 +165,12 @@
             this.button_detail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.button_detail.FlatAppearance.BorderSize = 0;
             this.button_detail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_detail.Font = new System.Drawing.Font("PJ Standard", 12F, System.Drawing.FontStyle.Bold);
+            this.button_detail.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
             this.button_detail.ForeColor = System.Drawing.Color.White;
             this.button_detail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_detail.Location = new System.Drawing.Point(438, 224);
+            this.button_detail.Location = new System.Drawing.Point(407, 223);
             this.button_detail.Name = "button_detail";
-            this.button_detail.Size = new System.Drawing.Size(134, 48);
+            this.button_detail.Size = new System.Drawing.Size(201, 48);
             this.button_detail.TabIndex = 10;
             this.button_detail.Text = "รายละเอียดส่วนประกอบ";
             this.button_detail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -234,7 +234,7 @@
             // 
             // BUT_drone_add
             // 
-            this.BUT_drone_add.BackColor = System.Drawing.Color.LimeGreen;
+            this.BUT_drone_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.BUT_drone_add.FlatAppearance.BorderSize = 0;
             this.BUT_drone_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BUT_drone_add.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
