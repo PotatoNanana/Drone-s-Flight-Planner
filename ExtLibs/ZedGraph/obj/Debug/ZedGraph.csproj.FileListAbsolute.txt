@@ -31,9 +31,16 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPla
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\ZedGraph\obj\Debug\ZedGraph.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\ZedGraph\obj\Debug\ZedGraph.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\MissionPlanner-master\ExtLibs\ZedGraph\obj\Debug\ZedGraph.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\ZedGraph\bin\Debug\ZedGraph.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\ZedGraph\bin\Debug\ZedGraph.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.ZedGraph.ZedGraphControl.resources
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.ZedGraph.ZedGraphLocale.resources
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.csproj.GenerateResource.Cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.csproj.CoreCompileInputs.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ZedGraph\bin\Debug\ZedGraph.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ZedGraph\bin\Debug\ZedGraph.pdb
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.ZedGraph.ZedGraphControl.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.ZedGraph.ZedGraphLocale.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ZedGraph\obj\Debug\ZedGraph.csproj.GenerateResource.Cache

@@ -11,6 +11,13 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\bin\Debug\plugins\MissionPlanner.Stats.dll.config
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\bin\Debug\plugins\MissionPlanner.Stats.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\bin\Debug\plugins\MissionPlanner.Stats.pdb
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csprojResolveAssemblyReference.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CoreCompileInputs.cache
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.dll
+C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\plugins\MissionPlanner.Stats.dll.config
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\plugins\MissionPlanner.Stats.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\plugins\MissionPlanner.Stats.pdb
