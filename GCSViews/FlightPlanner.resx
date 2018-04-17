@@ -2393,64 +2393,64 @@
   <data name="&gt;&gt;panelMap.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button_showData.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="button_showDGFarm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button_showData.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="button_showDGFarm.Font" type="System.Drawing.Font, System.Drawing">
     <value>PJ Standard, 15.75pt, style=Bold</value>
   </data>
-  <data name="button_showData.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="button_showDGFarm.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="button_showData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="button_showDGFarm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button_showData.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="button_showDGFarm.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 226</value>
   </data>
-  <data name="button_showData.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="button_showDGFarm.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 40</value>
   </data>
-  <data name="button_showData.TabIndex" type="System.Int32, mscorlib">
+  <data name="button_showDGFarm.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
-  <data name="button_showData.Text" xml:space="preserve">
+  <data name="button_showDGFarm.Text" xml:space="preserve">
     <value>แสดงข้อมูลฟาร์ม</value>
   </data>
-  <data name="button_showData.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="button_showDGFarm.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
-  <data name="&gt;&gt;button_showData.Name" xml:space="preserve">
-    <value>button_showData</value>
+  <data name="&gt;&gt;button_showDGFarm.Name" xml:space="preserve">
+    <value>button_showDGFarm</value>
   </data>
-  <data name="&gt;&gt;button_showData.Type" xml:space="preserve">
+  <data name="&gt;&gt;button_showDGFarm.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_showData.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button_showDGFarm.Parent" xml:space="preserve">
     <value>panel_Main_farm</value>
   </data>
-  <data name="&gt;&gt;button_showData.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button_showDGFarm.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="textBox_farmName.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textBox_droneID.Location" type="System.Drawing.Point, System.Drawing">
     <value>85, 323</value>
   </data>
-  <data name="textBox_farmName.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textBox_droneID.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 31</value>
   </data>
-  <data name="textBox_farmName.TabIndex" type="System.Int32, mscorlib">
+  <data name="textBox_droneID.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
   </data>
-  <data name="&gt;&gt;textBox_farmName.Name" xml:space="preserve">
-    <value>textBox_farmName</value>
+  <data name="&gt;&gt;textBox_droneID.Name" xml:space="preserve">
+    <value>textBox_droneID</value>
   </data>
-  <data name="&gt;&gt;textBox_farmName.Type" xml:space="preserve">
+  <data name="&gt;&gt;textBox_droneID.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox_farmName.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textBox_droneID.Parent" xml:space="preserve">
     <value>panel_Main_farm</value>
   </data>
-  <data name="&gt;&gt;textBox_farmName.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textBox_droneID.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="textBox_farmID.Location" type="System.Drawing.Point, System.Drawing">
@@ -2487,13 +2487,13 @@
     <value>18, 327</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 24</value>
+    <value>58, 24</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>ชื่อฟาร์ม</value>
+    <value>รหัสโดรน</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -2540,109 +2540,109 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="button_showDGFarm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="button_showDGDrone.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="button_showDGFarm.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="button_showDGDrone.Font" type="System.Drawing.Font, System.Drawing">
     <value>PJ Standard, 15.75pt, style=Bold</value>
   </data>
-  <data name="button_showDGFarm.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="button_showDGDrone.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="button_showDGFarm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="button_showDGDrone.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button_showDGFarm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 370</value>
+  <data name="button_showDGDrone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 370</value>
   </data>
-  <data name="button_showDGFarm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 40</value>
+  <data name="button_showDGDrone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 40</value>
   </data>
-  <data name="button_showDGFarm.TabIndex" type="System.Int32, mscorlib">
+  <data name="button_showDGDrone.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="button_showDGFarm.Text" xml:space="preserve">
-    <value>แสดงรูปแบบการบิน</value>
+  <data name="button_showDGDrone.Text" xml:space="preserve">
+    <value>แสดงข้อมูลโดรน</value>
   </data>
-  <data name="button_showDGFarm.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="button_showDGDrone.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
-  <data name="&gt;&gt;button_showDGFarm.Name" xml:space="preserve">
-    <value>button_showDGFarm</value>
+  <data name="&gt;&gt;button_showDGDrone.Name" xml:space="preserve">
+    <value>button_showDGDrone</value>
   </data>
-  <data name="&gt;&gt;button_showDGFarm.Type" xml:space="preserve">
+  <data name="&gt;&gt;button_showDGDrone.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_showDGFarm.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button_showDGDrone.Parent" xml:space="preserve">
     <value>panel_Main_farm</value>
   </data>
-  <data name="&gt;&gt;button_showDGFarm.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button_showDGDrone.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="dataGridViewButtonColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewButtonColumn1.HeaderText" xml:space="preserve">
+  <data name="farmidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>รหัสฟาร์ม</value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+  <data name="farmnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>ชื่อฟาร์ม</value>
   </data>
-  <data name="myDataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+  <metadata name="farmBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>510, 56</value>
+  </metadata>
+  <metadata name="farm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>427, 56</value>
+  </metadata>
+  <data name="DG_Farm.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 70</value>
   </data>
-  <data name="myDataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DG_Farm.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 150</value>
   </data>
-  <data name="myDataGridView1.TabIndex" type="System.Int32, mscorlib">
+  <data name="DG_Farm.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;myDataGridView1.Name" xml:space="preserve">
-    <value>myDataGridView1</value>
+  <data name="&gt;&gt;DG_Farm.Name" xml:space="preserve">
+    <value>DG_Farm</value>
   </data>
-  <data name="&gt;&gt;myDataGridView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;DG_Farm.Type" xml:space="preserve">
     <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6681.38094, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;myDataGridView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DG_Farm.Parent" xml:space="preserve">
     <value>panel_Main_farm</value>
   </data>
-  <data name="&gt;&gt;myDataGridView1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DG_Farm.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="pattern_id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="pattern_id.HeaderText" xml:space="preserve">
-    <value>รหัสรูปแบบการบิน</value>
+  <data name="droneidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>รหัสโดรน</value>
   </data>
-  <metadata name="button_load.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="button_load.HeaderText" xml:space="preserve">
-    <value>คลิกเพื่อแสดงแผนการบิน</value>
+  <data name="dronenameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ชื่อโดรน</value>
   </data>
-  <data name="DG_farm.Location" type="System.Drawing.Point, System.Drawing">
+  <metadata name="droneBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>107, 56</value>
+  </metadata>
+  <metadata name="drone1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <data name="DG_Drone.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 430</value>
   </data>
-  <data name="DG_farm.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="DG_Drone.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 200</value>
   </data>
-  <data name="DG_farm.TabIndex" type="System.Int32, mscorlib">
+  <data name="DG_Drone.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;DG_farm.Name" xml:space="preserve">
-    <value>DG_farm</value>
+  <data name="&gt;&gt;DG_Drone.Name" xml:space="preserve">
+    <value>DG_Drone</value>
   </data>
-  <data name="&gt;&gt;DG_farm.Type" xml:space="preserve">
+  <data name="&gt;&gt;DG_Drone.Type" xml:space="preserve">
     <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6681.38094, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;DG_farm.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DG_Drone.Parent" xml:space="preserve">
     <value>panel_Main_farm</value>
   </data>
-  <data name="&gt;&gt;DG_farm.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DG_Drone.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="lineSeparator2.Location" type="System.Drawing.Point, System.Drawing">
@@ -3045,6 +3045,12 @@
   <data name="toolStripConnectionControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 54</value>
   </data>
+  <metadata name="droneTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>270, 56</value>
+  </metadata>
+  <metadata name="farmTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>665, 56</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3630,29 +3636,53 @@
   <data name="&gt;&gt;flightPattern.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewButtonColumn1.Name" xml:space="preserve">
-    <value>dataGridViewButtonColumn1</value>
+  <data name="&gt;&gt;farmidDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>farmidDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;dataGridViewButtonColumn1.Type" xml:space="preserve">
+  <data name="&gt;&gt;farmidDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn1</value>
+  <data name="&gt;&gt;farmnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>farmnameDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+  <data name="&gt;&gt;farmnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pattern_id.Name" xml:space="preserve">
-    <value>pattern_id</value>
+  <data name="&gt;&gt;farmBindingSource.Name" xml:space="preserve">
+    <value>farmBindingSource</value>
   </data>
-  <data name="&gt;&gt;pattern_id.Type" xml:space="preserve">
+  <data name="&gt;&gt;farmBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;farm1.Name" xml:space="preserve">
+    <value>farm1</value>
+  </data>
+  <data name="&gt;&gt;farm1.Type" xml:space="preserve">
+    <value>MissionPlanner.farm1, farm1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;droneidDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>droneidDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;droneidDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_load.Name" xml:space="preserve">
-    <value>button_load</value>
+  <data name="&gt;&gt;dronenameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>dronenameDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;button_load.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dronenameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;droneBindingSource.Name" xml:space="preserve">
+    <value>droneBindingSource</value>
+  </data>
+  <data name="&gt;&gt;droneBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;drone1.Name" xml:space="preserve">
+    <value>drone1</value>
+  </data>
+  <data name="&gt;&gt;drone1.Type" xml:space="preserve">
+    <value>MissionPlanner.Drone1, Drone1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
@@ -3695,6 +3725,18 @@
   </data>
   <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
     <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6681.38094, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;droneTableAdapter.Name" xml:space="preserve">
+    <value>droneTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;droneTableAdapter.Type" xml:space="preserve">
+    <value>MissionPlanner.Drone1TableAdapters.DroneTableAdapter, Drone1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;farmTableAdapter.Name" xml:space="preserve">
+    <value>farmTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;farmTableAdapter.Type" xml:space="preserve">
+    <value>MissionPlanner.farm1TableAdapters.FarmTableAdapter, farm1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FlightPlanner</value>
