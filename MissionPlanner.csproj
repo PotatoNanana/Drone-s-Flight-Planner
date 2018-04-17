@@ -801,12 +801,6 @@
     <Compile Include="MainV3.Designer.cs">
       <DependentUpon>MainV3.cs</DependentUpon>
     </Compile>
-    <Compile Include="GCSViews\Menu_main.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Menu_main.Designer.cs">
-      <DependentUpon>Menu_main.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyView\AddScreen.cs" />
     <Compile Include="PartDroneNotify.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -3486,9 +3480,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainV2.pt.resx">
       <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Menu_main.resx">
-      <DependentUpon>Menu_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovingBase.ar.resx">
       <DependentUpon>MovingBase.cs</DependentUpon>

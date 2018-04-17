@@ -41,6 +41,13 @@
             this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pattern_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pattern_mask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lognoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logdatetimeDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patternnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patternmaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flightLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flightLog = new MissionPlanner.FlightLog();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -50,13 +57,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
             this.flightLogTableAdapter = new MissionPlanner.FlightLogTableAdapters.FlightLogTableAdapter();
-            this.lognoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.logdatetimeDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patternnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patternmaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Flight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightLogBindingSource)).BeginInit();
@@ -83,7 +83,7 @@
             // 
             // button_show
             // 
-            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.button_show.FlatAppearance.BorderSize = 0;
             this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,7 +100,7 @@
             // 
             // But_exit
             // 
-            this.But_exit.BackColor = System.Drawing.Color.Tomato;
+            this.But_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.But_exit.FlatAppearance.BorderSize = 0;
             this.But_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.But_exit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
@@ -186,6 +186,49 @@
             this.pattern_mask.HeaderText = "หมายเหตุ";
             this.pattern_mask.Name = "pattern_mask";
             // 
+            // lognoDataGridViewTextBoxColumn
+            // 
+            this.lognoDataGridViewTextBoxColumn.DataPropertyName = "log_no";
+            this.lognoDataGridViewTextBoxColumn.HeaderText = "log_no";
+            this.lognoDataGridViewTextBoxColumn.Name = "lognoDataGridViewTextBoxColumn";
+            // 
+            // logdatetimeDataGridViewImageColumn
+            // 
+            this.logdatetimeDataGridViewImageColumn.DataPropertyName = "log_datetime";
+            this.logdatetimeDataGridViewImageColumn.HeaderText = "log_datetime";
+            this.logdatetimeDataGridViewImageColumn.Name = "logdatetimeDataGridViewImageColumn";
+            this.logdatetimeDataGridViewImageColumn.ReadOnly = true;
+            // 
+            // actionnoDataGridViewTextBoxColumn
+            // 
+            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.HeaderText = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
+            // 
+            // farmidDataGridViewTextBoxColumn
+            // 
+            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.HeaderText = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
+            // patternnameDataGridViewTextBoxColumn
+            // 
+            this.patternnameDataGridViewTextBoxColumn.DataPropertyName = "pattern_name";
+            this.patternnameDataGridViewTextBoxColumn.HeaderText = "pattern_name";
+            this.patternnameDataGridViewTextBoxColumn.Name = "patternnameDataGridViewTextBoxColumn";
+            // 
+            // patternmaskDataGridViewTextBoxColumn
+            // 
+            this.patternmaskDataGridViewTextBoxColumn.DataPropertyName = "pattern_mask";
+            this.patternmaskDataGridViewTextBoxColumn.HeaderText = "pattern_mask";
+            this.patternmaskDataGridViewTextBoxColumn.Name = "patternmaskDataGridViewTextBoxColumn";
+            // 
             // flightLogBindingSource
             // 
             this.flightLogBindingSource.DataMember = "FlightLog";
@@ -251,49 +294,6 @@
             // flightLogTableAdapter
             // 
             this.flightLogTableAdapter.ClearBeforeFill = true;
-            // 
-            // lognoDataGridViewTextBoxColumn
-            // 
-            this.lognoDataGridViewTextBoxColumn.DataPropertyName = "log_no";
-            this.lognoDataGridViewTextBoxColumn.HeaderText = "log_no";
-            this.lognoDataGridViewTextBoxColumn.Name = "lognoDataGridViewTextBoxColumn";
-            // 
-            // logdatetimeDataGridViewImageColumn
-            // 
-            this.logdatetimeDataGridViewImageColumn.DataPropertyName = "log_datetime";
-            this.logdatetimeDataGridViewImageColumn.HeaderText = "log_datetime";
-            this.logdatetimeDataGridViewImageColumn.Name = "logdatetimeDataGridViewImageColumn";
-            this.logdatetimeDataGridViewImageColumn.ReadOnly = true;
-            // 
-            // actionnoDataGridViewTextBoxColumn
-            // 
-            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
-            this.actionnoDataGridViewTextBoxColumn.HeaderText = "action_no";
-            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
-            // 
-            // farmidDataGridViewTextBoxColumn
-            // 
-            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
-            this.farmidDataGridViewTextBoxColumn.HeaderText = "farm_id";
-            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
-            // 
-            // droneidDataGridViewTextBoxColumn
-            // 
-            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
-            this.droneidDataGridViewTextBoxColumn.HeaderText = "drone_id";
-            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
-            // 
-            // patternnameDataGridViewTextBoxColumn
-            // 
-            this.patternnameDataGridViewTextBoxColumn.DataPropertyName = "pattern_name";
-            this.patternnameDataGridViewTextBoxColumn.HeaderText = "pattern_name";
-            this.patternnameDataGridViewTextBoxColumn.Name = "patternnameDataGridViewTextBoxColumn";
-            // 
-            // patternmaskDataGridViewTextBoxColumn
-            // 
-            this.patternmaskDataGridViewTextBoxColumn.DataPropertyName = "pattern_mask";
-            this.patternmaskDataGridViewTextBoxColumn.HeaderText = "pattern_mask";
-            this.patternmaskDataGridViewTextBoxColumn.Name = "patternmaskDataGridViewTextBoxColumn";
             // 
             // Form_log_history
             // 
