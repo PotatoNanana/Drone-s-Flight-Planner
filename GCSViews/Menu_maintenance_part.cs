@@ -21,16 +21,11 @@ using System.IO;
 namespace MissionPlanner.GCSViews
 {
     public partial class Menu_maintenance_part : MyUserControl
-    {
-        //for image
-        #region Variables
-        String strFilePath = "";
-        Image DefaultImage;
-        Byte[] ImageByteArray;
-        #endregion
-
+    {        
         //SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        string imgLocation = "";
+        byte[] imgby;
         SqlCommand cmd;
 
         public Menu_maintenance_part()
@@ -106,21 +101,44 @@ namespace MissionPlanner.GCSViews
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_partID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-            textBox_partName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-
-            //img
-            txtTitle.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
-            byte[] ImageArray = (byte[])DG_Farm.CurrentRow.Cells[2].Value;
-            if (ImageArray.Length == 0)
-                pictureBox.Image = DefaultImage;
-            else
+            /*textBox_partID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+           textBox_partName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+           pictureBox.Image = null;*/
+            try
             {
-                ImageByteArray = ImageArray;
-                pictureBox.Image = Image.FromStream(new MemoryStream(ImageArray));
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = " + id_drone + " ";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBox_partID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+                    textBox_partName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                    byte[] img = (byte[])(reader[8]);
+                    if (img == null)
+                    { pictureBox.Image = null; }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBox.Image = Image.FromStream(ms);
+                    }
+                }
+                else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                con.Close();
             }
-           /* ImageID = Convert.ToInt32(dgvImages.CurrentRow.Cells[0].Value);
-            btnSave.Text = "Update";    */
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
+
+            /*  //img
+              byte[] ImageArray = (byte[])DG_Farm.CurrentRow.Cells[2].Value;
+              ImageByteArray = ImageArray;
+              pictureBox.Image = Image.FromStream(new MemoryStream(ImageArray)); */
+
+            /* ImageID = Convert.ToInt32(dgvImages.CurrentRow.Cells[0].Value);
+             btnSave.Text = "Update";    */
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -166,21 +184,28 @@ namespace MissionPlanner.GCSViews
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("DELETE Record From DB Success!!");
-
             }
         }
 
-
         private void button_show_Click(object sender, EventArgs e)
         {
-            //show data to DataGridView
-            con.Open();
-            String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            con.Close();
-            DG_Farm.DataSource = dt;
+            try
+            {
+                //show data to DataGridView
+                  String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = "+id_drone+" ";
+                  if (con.State != ConnectionState.Open)
+                  { con.Open(); }
+                  cmd = new SqlCommand(query, con);   
+
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                con.Close();
+                DG_Farm.DataSource = dt;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
         }
 
         private byte[] ObjectToByteArray(object obj)
