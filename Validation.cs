@@ -47,5 +47,41 @@ namespace MissionPlanner
         {
 
         }
+
+        private void userid_enter(object sender, EventArgs e)
+        {
+            if(txtUsername.Text == "ชื่อผู้ใช้งาน")
+            {
+                txtUsername.Text = "";
+                txtUsername.ForeColor = Color.Black;
+            }
+        }
+
+        private void userid_leave(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "")
+            {
+                txtUsername.Text = "ชื่อผู้ใช้งาน";
+                txtUsername.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void pwd_enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "รหัสผ่าน")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.Black;
+            }
+        }
+
+        private void pwd_leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
+            {
+                txtPassword.Text = "รหัสผ่าน";
+                txtPassword.ForeColor = Color.DimGray;
+            }
+        }
     }
 }

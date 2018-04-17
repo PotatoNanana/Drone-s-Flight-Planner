@@ -127,16 +127,13 @@ namespace MissionPlanner
                 Splash.Icon = Icon.FromHandle(((Bitmap)IconFile).GetHicon());
 
             //string strVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            Splash.Text = name + " " + "1.0.0" ;
+            Splash.Text = name + " " + "1.0.2" ;
             Splash.Show();
             
-            /// Added validated page
-            //Validation = new MissionPlanner.Validation();
-            //Validation.Show();
-
             Application.DoEvents();
-            //Application.DoEvents();
             
+            //Application.DoEvents();
+
 
             // setup theme provider
             CustomMessageBox.ApplyTheme += MissionPlanner.Utilities.ThemeManager.ApplyThemeTo;
@@ -224,6 +221,9 @@ namespace MissionPlanner
             tmp.GenerateMAVLinkPacket20(MAVLink.MAVLINK_MSG_ID.HEARTBEAT, hb, true);
             tmp.GenerateMAVLinkPacket20(MAVLink.MAVLINK_MSG_ID.HEARTBEAT, hb, true);
 
+            /// Added validated page
+            Validation = new MissionPlanner.Validation();
+            Validation.Show();
 
             try
             {
