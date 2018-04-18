@@ -795,6 +795,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>maintainace.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MainV3_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainV3_admin.Designer.cs">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainV3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3447,6 +3453,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Log\MavlinkLog.pt.resx">
       <DependentUpon>MavlinkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.ar.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.id-ID.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.ja-JP.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.ko-KR.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.pt.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.zh-Hans.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.zh-Hant.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_admin.zh-TW.resx">
+      <DependentUpon>MainV3_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainV3.ar.resx">
       <DependentUpon>MainV3.cs</DependentUpon>
