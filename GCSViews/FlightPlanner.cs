@@ -44,6 +44,7 @@ using System.Text;
 using MissionPlanner.Warnings;
 using MissionPlanner.Comms;
 using System.Linq;
+using System.Data.SqlClient;
 
 
 namespace MissionPlanner.GCSViews
@@ -59,6 +60,21 @@ namespace MissionPlanner.GCSViews
 
         
         public string file; // name of waypoint path
+        public static string id_drone1;
+        public static string id_farm1;
+        public static string id_drone
+        {
+            get { return id_drone; }
+            set { id_drone = id_drone1; }
+        }
+        
+        public static string id_farm
+        {
+            get { return id_farm; }
+            set { id_farm = id_farm1; }
+        }
+
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
 
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         int selectedrow;
@@ -7751,7 +7767,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
             if ((DateTime.Now - connectButtonUpdate).Milliseconds > 500)
             {
-                //                        Console.WriteLine(DateTime.Now.Millisecond);
+                // Console.WriteLine(DateTime.Now.Millisecond);
                 if (comPort.BaseStream.IsOpen)
                 {
                     if ((string)this.MenuConnect.Image.Tag != "Disconnect")
@@ -7954,14 +7970,50 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
             //go to form log history after finish
             Form_log_history form_Log_History = new Form_log_history();
-            form_Log_History.ShowDialog();
-            
-
+            form_Log_History.ShowDialog();           
         }
 
         private void DG_farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // grid view farm
+            textBox_farmID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+            id_farm1 = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+        }
 
+        private void myDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void button_showData_Click(object sender, EventArgs e)
+        {
+            //show data to DataGridView farm
+            con.Open();
+            String query = "SELECT * FROM Farm";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
+        }
+
+        private void button_showDGFarm_Click(object sender, EventArgs e)
+        {
+            //show data to DataGridView drone
+            con.Open();
+            String query = "SELECT Drone_id,Drone_name FROM Drone";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Drone.DataSource = dt;
+            con.Close();
+        }
+
+        private void DG_drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // grid view drone
+            textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
+            id_drone1 = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
         }
     }
 

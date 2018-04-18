@@ -106,10 +106,11 @@ namespace MissionPlanner.GCSViews
            pictureBox.Image = null;*/
             try
             {
-                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = " + id_drone + " ";
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = @iddrone";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add("@iddrone", id_drone); // if in same dbo or same schema use like this first
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
                 if (reader.HasRows)
@@ -192,7 +193,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 //show data to DataGridView
-                  String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = "+id_drone+" ";
+                  String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '"+id_drone+"' ";
                   if (con.State != ConnectionState.Open)
                   { con.Open(); }
                   cmd = new SqlCommand(query, con);   
@@ -232,7 +233,7 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        /*private void button_serch_Click(object sender, EventArgs e)
+        /* private void button_serch_Click(object sender, EventArgs e)
         {
             //serch record
             con.Open();

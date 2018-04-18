@@ -98,7 +98,7 @@ namespace MissionPlanner.GCSViews
         private void button2_Click(object sender, EventArgs e)
         {
             //delete drone
-            if (MessageBox.Show("Are you wnat to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 con.Open();
                 String query = "DELETE FROM Drone where drone_id = '"+textBox_droneID.Text+"' ";
