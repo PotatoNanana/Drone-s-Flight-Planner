@@ -50,8 +50,11 @@ namespace MissionPlanner.GCSViews
             con.Open();
 
             // edit flight log
-            String query = "INSERT INTO FlightLog (log_no,action_no,farm_no,drone_id,pattern_name,pattern_mask) " + "VALUES('" + textBox_logNo.Text + "','" +textBox_actNo.Text + "','" + ID_farm + "','" + ID_drone +"','" + file + "','" +textBox_patternMask.Text+"' )";
+            String query = "INSERT INTO FlightLog (log_no,action_no,farm_no,drone_id,pattern_name,pattern_mask) " + "VALUES('" + textBox_logNo.Text + "','" +textBox_actNo.Text + "',@idfarm,@iddrone,'" + file + "','" +textBox_patternMask.Text+"' )";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+
+            cmd.Parameters.Add("@idfarm", ID_farm);
+            cmd.Parameters.Add("@iddrone", ID_drone);
 
             // update status activity in flight_schedule
             String query2 = "UPDATE FlightSchedule SET action_finish = 'y' ";

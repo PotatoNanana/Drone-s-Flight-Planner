@@ -63,7 +63,6 @@
             this.But_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.txtTitle = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -82,7 +81,6 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.txtTitle);
             this.panel_Main_farm.Controls.Add(this.comboBox_alarm);
             this.panel_Main_farm.Controls.Add(this.label7);
             this.panel_Main_farm.Controls.Add(this.button_serch);
@@ -153,7 +151,7 @@
             this.button_serch.ForeColor = System.Drawing.Color.White;
             this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_serch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serch.Location = new System.Drawing.Point(792, 324);
+            this.button_serch.Location = new System.Drawing.Point(760, 340);
             this.button_serch.Name = "button_serch";
             this.button_serch.Size = new System.Drawing.Size(80, 40);
             this.button_serch.TabIndex = 16;
@@ -439,14 +437,6 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
-            // txtTitle
-            // 
-            this.txtTitle.Location = new System.Drawing.Point(760, 280);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(129, 31);
-            this.txtTitle.TabIndex = 19;
-            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
-            // 
             // Form_Add_drone_part
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,6 +491,5 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_reg;
         private System.Windows.Forms.ComboBox comboBox_alarm;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTitle;
     }
 }

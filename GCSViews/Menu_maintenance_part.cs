@@ -110,7 +110,7 @@ namespace MissionPlanner.GCSViews
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add("@iddrone", id_drone); // ถ้าอยู่ในดีบีโอ/สกีมาเดียวกัน ต้องทำแบบนี้ก่อน
+                cmd.Parameters.Add("@iddrone", id_drone); // if in same dbo or same schema use like this first
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
                 if (reader.HasRows)
@@ -233,7 +233,7 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        /*private void button_serch_Click(object sender, EventArgs e)
+        /* private void button_serch_Click(object sender, EventArgs e)
         {
             //serch record
             con.Open();
