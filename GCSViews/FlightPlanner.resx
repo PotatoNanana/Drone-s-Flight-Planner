@@ -127,7 +127,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CHK_verifyheight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>523, 42</value>
+    <value>552, 39</value>
   </data>
   <data name="CHK_verifyheight.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 20</value>
@@ -151,7 +151,7 @@
     <value>15</value>
   </data>
   <data name="TXT_WPRad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 41</value>
+    <value>273, 38</value>
   </data>
   <data name="TXT_WPRad.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 21</value>
@@ -175,7 +175,7 @@
     <value>11</value>
   </data>
   <data name="TXT_DefaultAlt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 41</value>
+    <value>413, 38</value>
   </data>
   <data name="TXT_DefaultAlt.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 21</value>
@@ -205,7 +205,7 @@
     <value>NoControl</value>
   </data>
   <data name="LBL_WPRad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 27</value>
+    <value>262, 24</value>
   </data>
   <data name="LBL_WPRad.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 16</value>
@@ -235,7 +235,7 @@
     <value>NoControl</value>
   </data>
   <data name="LBL_defalutalt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 27</value>
+    <value>404, 24</value>
   </data>
   <data name="LBL_defalutalt.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 16</value>
@@ -259,7 +259,7 @@
     <value>20</value>
   </data>
   <data name="TXT_loiterrad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>315, 40</value>
+    <value>344, 37</value>
   </data>
   <data name="TXT_loiterrad.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 21</value>
@@ -289,7 +289,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 27</value>
+    <value>328, 24</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 16</value>
@@ -367,10 +367,10 @@
     <value>1</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 124</value>
+    <value>152, 113</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 63</value>
+    <value>90, 60</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -571,7 +571,7 @@
     <value>6</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 95</value>
+    <value>23, 92</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 89</value>
@@ -686,7 +686,7 @@
     <value>NoControl</value>
   </data>
   <data name="button_log.Location" type="System.Drawing.Point, System.Drawing">
-    <value>580, 201</value>
+    <value>747, 208</value>
   </data>
   <data name="button_log.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 36</value>
@@ -873,7 +873,7 @@
 </value>
   </data>
   <data name="connectionControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 194</value>
+    <value>23, 189</value>
   </data>
   <data name="connectionControl1.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>230, 54</value>
@@ -888,7 +888,7 @@
     <value>connectionControl1</value>
   </data>
   <data name="&gt;&gt;connectionControl1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ConnectionControl, MissionPlanner, Version=1.1.6681.38094, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ConnectionControl, MissionPlanner, Version=1.1.6682.19919, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;connectionControl1.Parent" xml:space="preserve">
     <value>panelWaypoints</value>
@@ -906,7 +906,7 @@
     <value>NoControl</value>
   </data>
   <data name="MenuConnect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 201</value>
+    <value>407, 208</value>
   </data>
   <data name="MenuConnect.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 36</value>
@@ -942,7 +942,7 @@
     <value>NoControl</value>
   </data>
   <data name="menuTakeoff.Location" type="System.Drawing.Point, System.Drawing">
-    <value>500, 201</value>
+    <value>667, 208</value>
   </data>
   <data name="menuTakeoff.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 36</value>
@@ -978,7 +978,7 @@
     <value>NoControl</value>
   </data>
   <data name="MenuSimulation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 201</value>
+    <value>537, 208</value>
   </data>
   <data name="MenuSimulation.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 36</value>
@@ -1089,7 +1089,7 @@
     <value>3</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 28</value>
+    <value>23, 25</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 61</value>
@@ -1110,7 +1110,7 @@
     <value>7</value>
   </data>
   <data name="CMB_altmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>438, 37</value>
+    <value>467, 34</value>
   </data>
   <data name="CMB_altmode.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 24</value>
@@ -1218,7 +1218,7 @@
     <value>2</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 31</value>
+    <value>155, 39</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 59</value>
@@ -1242,7 +1242,7 @@
     <value>NoControl</value>
   </data>
   <data name="BUT_Add.Location" type="System.Drawing.Point, System.Drawing">
-    <value>618, 37</value>
+    <value>647, 34</value>
   </data>
   <data name="BUT_Add.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -1555,7 +1555,7 @@
     <value>5</value>
   </data>
   <data name="Commands.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 66</value>
+    <value>255, 63</value>
   </data>
   <data name="Commands.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>50</value>
@@ -1570,7 +1570,7 @@
     <value>Commands</value>
   </data>
   <data name="&gt;&gt;Commands.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6681.38094, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6682.19919, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Commands.Parent" xml:space="preserve">
     <value>panelWaypoints</value>
@@ -1585,7 +1585,7 @@
     <value>NoControl</value>
   </data>
   <data name="CHK_splinedefault.Location" type="System.Drawing.Point, System.Drawing">
-    <value>752, 35</value>
+    <value>781, 32</value>
   </data>
   <data name="CHK_splinedefault.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 20</value>
@@ -1615,7 +1615,7 @@
     <value>NoControl</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>701, 27</value>
+    <value>730, 24</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 16</value>
@@ -1639,7 +1639,7 @@
     <value>17</value>
   </data>
   <data name="TXT_altwarn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>706, 40</value>
+    <value>735, 37</value>
   </data>
   <data name="TXT_altwarn.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 21</value>
@@ -2604,7 +2604,7 @@
     <value>DG_Farm</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6681.38094, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6682.19919, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Parent" xml:space="preserve">
     <value>panel_Main_farm</value>
@@ -2637,7 +2637,7 @@
     <value>DG_Drone</value>
   </data>
   <data name="&gt;&gt;DG_Drone.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6681.38094, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6682.19919, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Drone.Parent" xml:space="preserve">
     <value>panel_Main_farm</value>
@@ -3724,7 +3724,7 @@
     <value>toolStripConnectionControl</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6681.38094, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6682.19919, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;droneTableAdapter.Name" xml:space="preserve">
     <value>droneTableAdapter</value>
