@@ -475,6 +475,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Drone.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Drone1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Drone1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneFlightPlannerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -505,6 +510,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FArm.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="farm1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>farm1.xsd</DependentUpon>
     </Compile>
     <Compile Include="FlightLog.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -4112,6 +4122,17 @@
     <None Include="Drone.xss">
       <DependentUpon>Drone.xsd</DependentUpon>
     </None>
+    <None Include="Drone1.xsc">
+      <DependentUpon>Drone1.xsd</DependentUpon>
+    </None>
+    <None Include="Drone1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Drone1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Drone1.xss">
+      <DependentUpon>Drone1.xsd</DependentUpon>
+    </None>
     <None Include="DroneFlightPlannerDataSet.xsc">
       <DependentUpon>DroneFlightPlannerDataSet.xsd</DependentUpon>
     </None>
@@ -4166,6 +4187,17 @@
     </None>
     <None Include="FArm.xss">
       <DependentUpon>FArm.xsd</DependentUpon>
+    </None>
+    <None Include="farm1.xsc">
+      <DependentUpon>farm1.xsd</DependentUpon>
+    </None>
+    <None Include="farm1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>farm1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="farm1.xss">
+      <DependentUpon>farm1.xsd</DependentUpon>
     </None>
     <None Include="FlightLog.xsc">
       <DependentUpon>FlightLog.xsd</DependentUpon>
