@@ -91,5 +91,20 @@ namespace MissionPlanner.GCSViews
         {
 
         }
+
+        private void Form_main_Schedule_KeyDown(object sender, KeyEventArgs e)
+        {
+            ProcessDialogKey(e.KeyData);
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
     }
 }

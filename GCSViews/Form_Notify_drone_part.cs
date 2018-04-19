@@ -54,5 +54,20 @@ namespace MissionPlanner.GCSViews
         {
             this.Close();
         }
+
+        private void Form_Notify_drone_part_KeyDown(object sender, KeyEventArgs e)
+        {
+            ProcessDialogKey(e.KeyData);
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
     }
 }

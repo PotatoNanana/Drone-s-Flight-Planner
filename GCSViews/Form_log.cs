@@ -78,5 +78,20 @@ namespace MissionPlanner.GCSViews
         {
             textBox_patternName.Text = file;
         }
+
+        private void Form_log_KeyDown(object sender, KeyEventArgs e)
+        {
+            ProcessDialogKey(e.KeyData);
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
     }
 }

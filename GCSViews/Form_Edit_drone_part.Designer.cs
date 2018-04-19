@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Edit_drone_part));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox_alarm = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker_expDate = new System.Windows.Forms.DateTimePicker();
@@ -61,8 +63,6 @@
             this.But_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.comboBox_alarm = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,6 +119,28 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(914, 461);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(60, 325);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 24);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "แจ้งเตือนการบำรุงรักษา";
+            // 
+            // comboBox_alarm
+            // 
+            this.comboBox_alarm.FormattingEnabled = true;
+            this.comboBox_alarm.Items.AddRange(new object[] {
+            "ทุกวัน",
+            "ทุกอาทิตย์",
+            "ทุกเดือน",
+            "ทุก1ปี"});
+            this.comboBox_alarm.Location = new System.Drawing.Point(217, 317);
+            this.comboBox_alarm.Name = "comboBox_alarm";
+            this.comboBox_alarm.Size = new System.Drawing.Size(200, 32);
+            this.comboBox_alarm.TabIndex = 19;
             // 
             // button1
             // 
@@ -415,28 +437,6 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
-            // comboBox_alarm
-            // 
-            this.comboBox_alarm.FormattingEnabled = true;
-            this.comboBox_alarm.Items.AddRange(new object[] {
-            "ทุกวัน",
-            "ทุกอาทิตย์",
-            "ทุกเดือน",
-            "ทุก1ปี"});
-            this.comboBox_alarm.Location = new System.Drawing.Point(217, 317);
-            this.comboBox_alarm.Name = "comboBox_alarm";
-            this.comboBox_alarm.Size = new System.Drawing.Size(200, 32);
-            this.comboBox_alarm.TabIndex = 19;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(60, 325);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 24);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "แจ้งเตือนการบำรุงรักษา";
-            // 
             // Form_Edit_drone_part
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,6 +446,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Edit_drone_part";
             this.Text = "Drone\'s component Editing";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Edit_drone_part_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();

@@ -302,6 +302,7 @@
             this.Name = "Form_farm_act";
             this.Text = "Flight Schedule";
             this.Load += new System.EventHandler(this.Form_farm_act_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_farm_act_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();

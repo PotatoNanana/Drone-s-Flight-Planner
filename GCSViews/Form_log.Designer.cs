@@ -188,6 +188,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_log";
             this.Text = "Flight Log";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_log_KeyDown);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
             this.panel3.ResumeLayout(false);

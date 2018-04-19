@@ -191,6 +191,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Add_drone";
             this.Text = "Drone Adding";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Add_drone_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();

@@ -235,6 +235,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Add_farm";
             this.Text = "Farm Adding";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Add_farm_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();

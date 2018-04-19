@@ -98,5 +98,20 @@ namespace MissionPlanner.GCSViews
                 pictureBox1.ImageLocation = imgLocation;
             }
         }
+
+        private void Form_Edit_drone_part_KeyDown(object sender, KeyEventArgs e)
+        {
+            ProcessDialogKey(e.KeyData);
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
     }
 }

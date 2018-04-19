@@ -264,6 +264,7 @@
             this.Name = "Form_Add_farm_act";
             this.Text = "Activity Adding";
             this.Load += new System.EventHandler(this.Form_Add_farm_act_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Add_farm_act_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();

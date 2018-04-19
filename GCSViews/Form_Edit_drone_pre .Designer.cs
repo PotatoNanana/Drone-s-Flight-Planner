@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Edit_drone_pre));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_mainID = new System.Windows.Forms.TextBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox_venAdd = new System.Windows.Forms.TextBox();
             this.textBox_responder = new System.Windows.Forms.TextBox();
@@ -51,9 +54,6 @@
             this.But_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.textBox_mainID = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -100,6 +100,29 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(484, 535);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(60, 76);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 24);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "เลขที่การซ่อมบำรุง";
+            // 
+            // textBox_mainID
+            // 
+            this.textBox_mainID.Location = new System.Drawing.Point(217, 73);
+            this.textBox_mainID.Name = "textBox_mainID";
+            this.textBox_mainID.Size = new System.Drawing.Size(200, 31);
+            this.textBox_mainID.TabIndex = 16;
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(217, 113);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 31);
+            this.dateTimePicker.TabIndex = 15;
             // 
             // textBox7
             // 
@@ -302,29 +325,6 @@
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.Location = new System.Drawing.Point(217, 113);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 31);
-            this.dateTimePicker.TabIndex = 15;
-            // 
-            // textBox_mainID
-            // 
-            this.textBox_mainID.Location = new System.Drawing.Point(217, 73);
-            this.textBox_mainID.Name = "textBox_mainID";
-            this.textBox_mainID.Size = new System.Drawing.Size(200, 31);
-            this.textBox_mainID.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(60, 76);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 24);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "เลขที่การซ่อมบำรุง";
-            // 
             // Form_Edit_drone_pre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,6 +334,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Edit_drone_pre";
             this.Text = "Drone\'s component preventive maintenance";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Edit_drone_pre_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();

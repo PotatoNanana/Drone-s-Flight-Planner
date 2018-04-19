@@ -334,6 +334,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Add_drone_pre";
             this.Text = "Drone\'s component preventive maintenance";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Add_drone_pre_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();

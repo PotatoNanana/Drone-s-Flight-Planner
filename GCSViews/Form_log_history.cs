@@ -50,5 +50,20 @@ namespace MissionPlanner.GCSViews
             //this.flightLogTableAdapter.Fill(this.flightLog._FlightLog);
 
         }
+
+        private void Form_log_history_KeyDown(object sender, KeyEventArgs e)
+        {
+            ProcessDialogKey(e.KeyData);
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
     }
 }

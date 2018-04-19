@@ -277,6 +277,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Add_act";
             this.Text = "Activity Adding";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Add_act_KeyDown);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
