@@ -29,7 +29,15 @@ namespace MissionPlanner.GCSViews
         {
             InitializeComponent();
             MyView = new MainSwitcher(this);
-              
+
+            //show data to DataGridView
+            con.Open();
+            String query = "SELECT drone_id,drone_name,drone_pic FROM Drone";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Drone.DataSource = dt;
+            con.Close();
         }
 
         Controls.MainSwitcher MyView;
@@ -75,7 +83,7 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView
             con.Open();
-            String query = "SELECT Drone_id,Drone_name FROM Drone";
+            String query = "SELECT drone_id,drone_name FROM Drone";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -92,7 +100,6 @@ namespace MissionPlanner.GCSViews
 
         {
             //add drone
-
             Form_Add_drone form_Add_Drone = new Form_Add_drone();
             form_Add_Drone.ShowDialog();
         }
@@ -102,7 +109,6 @@ namespace MissionPlanner.GCSViews
             //detail part of drone
             Menu_maintenance_part menu_maintain_part = new Menu_maintenance_part(id_drone);
             menu_maintain_part.ShowUserControl();
-
         }
 
         private void button2_Click(object sender, EventArgs e)

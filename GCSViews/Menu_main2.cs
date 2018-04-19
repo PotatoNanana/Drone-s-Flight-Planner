@@ -100,9 +100,7 @@ namespace MissionPlanner.GCSViews
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        
+        }        
 
         private void Goto_farmProfile_Click(object sender, EventArgs e)
         {
@@ -117,9 +115,7 @@ namespace MissionPlanner.GCSViews
         private void button3_Click_1(object sender, EventArgs e)
         {
 
-        }
-
-        
+        }        
 
         private void button5_Click(object sender, EventArgs e)
         {

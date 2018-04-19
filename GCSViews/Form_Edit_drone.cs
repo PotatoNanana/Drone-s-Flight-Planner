@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using MissionPlanner.Utilities;
 
 namespace MissionPlanner.GCSViews
 {
@@ -82,7 +83,10 @@ namespace MissionPlanner.GCSViews
 
             con.Close();
             MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
-             
+
+            Menu_maintenance menu_maintain = new Menu_maintenance();
+            menu_maintain.ShowUserControl();
+
             this.Close();
         }
 

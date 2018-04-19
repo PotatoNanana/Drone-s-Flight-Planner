@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.IO;
+using MissionPlanner.Utilities;
 
 namespace MissionPlanner.GCSViews
 {
@@ -83,6 +84,9 @@ namespace MissionPlanner.GCSViews
             {
                 MessageBox.Show(ex.Message);
             }
+
+            Menu_maintenance menu_maintain = new Menu_maintenance();
+            menu_maintain.ShowUserControl();
 
             this.Close();
         }
