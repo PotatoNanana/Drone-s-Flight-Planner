@@ -38,8 +38,6 @@
             this.textBox_actID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_show = new System.Windows.Forms.Button();
-            this.But_exit = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
             this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,8 +77,6 @@
             this.panel_Main_farm.Controls.Add(this.textBox_actID);
             this.panel_Main_farm.Controls.Add(this.label2);
             this.panel_Main_farm.Controls.Add(this.label1);
-            this.panel_Main_farm.Controls.Add(this.button_show);
-            this.panel_Main_farm.Controls.Add(this.But_exit);
             this.panel_Main_farm.Controls.Add(this.DG_Farm);
             this.panel_Main_farm.Controls.Add(this.But_add_act);
             this.panel_Main_farm.Controls.Add(this.panel3);
@@ -90,6 +86,7 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(968, 426);
             this.panel_Main_farm.TabIndex = 10;
+            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_schedule_Paint);
             // 
             // button_edit
             // 
@@ -100,7 +97,7 @@
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_edit.Location = new System.Drawing.Point(801, 222);
+            this.button_edit.Location = new System.Drawing.Point(712, 280);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(130, 40);
             this.button_edit.TabIndex = 25;
@@ -118,7 +115,7 @@
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete.Location = new System.Drawing.Point(632, 222);
+            this.button_delete.Location = new System.Drawing.Point(712, 340);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(130, 40);
             this.button_delete.TabIndex = 24;
@@ -162,41 +159,6 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "รหัสกิจกรรม";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // button_show
-            // 
-            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_show.FlatAppearance.BorderSize = 0;
-            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_show.ForeColor = System.Drawing.Color.White;
-            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(632, 289);
-            this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(130, 40);
-            this.button_show.TabIndex = 19;
-            this.button_show.Text = "แสดงตาราง";
-            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_show.UseVisualStyleBackColor = false;
-            this.button_show.Click += new System.EventHandler(this.button_show_Click);
-            // 
-            // But_exit
-            // 
-            this.But_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.But_exit.FlatAppearance.BorderSize = 0;
-            this.But_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.But_exit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.But_exit.ForeColor = System.Drawing.Color.White;
-            this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_exit.Location = new System.Drawing.Point(710, 353);
-            this.But_exit.Name = "But_exit";
-            this.But_exit.Size = new System.Drawing.Size(130, 40);
-            this.But_exit.TabIndex = 10;
-            this.But_exit.Text = "ปิด";
-            this.But_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.But_exit.UseVisualStyleBackColor = false;
-            this.But_exit.Click += new System.EventHandler(this.But_exit_Click);
             // 
             // DG_Farm
             // 
@@ -273,7 +235,7 @@
             this.But_add_act.ForeColor = System.Drawing.Color.White;
             this.But_add_act.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_add_act.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_add_act.Location = new System.Drawing.Point(801, 289);
+            this.But_add_act.Location = new System.Drawing.Point(712, 220);
             this.But_add_act.Name = "But_add_act";
             this.But_add_act.Size = new System.Drawing.Size(130, 40);
             this.But_add_act.TabIndex = 6;
@@ -342,12 +304,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_Main_farm;
-        private System.Windows.Forms.Button But_exit;
         private Controls.MyDataGridView DG_Farm;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
         private System.Windows.Forms.Button But_add_act;
-        private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_actName;
         private System.Windows.Forms.TextBox textBox_actID;

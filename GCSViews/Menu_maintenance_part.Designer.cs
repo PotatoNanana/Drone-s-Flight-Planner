@@ -39,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.but_backto_pre = new System.Windows.Forms.Button();
-            this.button_show = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -96,7 +95,6 @@
             this.panel_Main_farm.Controls.Add(this.label2);
             this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.but_backto_pre);
-            this.panel_Main_farm.Controls.Add(this.button_show);
             this.panel_Main_farm.Controls.Add(this.button_edit);
             this.panel_Main_farm.Controls.Add(this.button_delete);
             this.panel_Main_farm.Controls.Add(this.button1);
@@ -109,7 +107,7 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(1259, 500);
             this.panel_Main_farm.TabIndex = 8;
-            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
+            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_pre_Paint);
             // 
             // label3
             // 
@@ -184,23 +182,6 @@
             this.but_backto_pre.UseVisualStyleBackColor = false;
             this.but_backto_pre.Click += new System.EventHandler(this.but_backto_pre_Click);
             // 
-            // button_show
-            // 
-            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button_show.FlatAppearance.BorderSize = 0;
-            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_show.ForeColor = System.Drawing.Color.White;
-            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(1028, 420);
-            this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(130, 40);
-            this.button_show.TabIndex = 29;
-            this.button_show.Text = "แสดงตาราง";
-            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_show.UseVisualStyleBackColor = false;
-            this.button_show.Click += new System.EventHandler(this.button_show_Click);
-            // 
             // button_edit
             // 
             this.button_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
@@ -210,7 +191,7 @@
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_edit.Location = new System.Drawing.Point(1028, 338);
+            this.button_edit.Location = new System.Drawing.Point(932, 384);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(130, 40);
             this.button_edit.TabIndex = 27;
@@ -228,7 +209,7 @@
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete.Location = new System.Drawing.Point(834, 338);
+            this.button_delete.Location = new System.Drawing.Point(932, 430);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(130, 40);
             this.button_delete.TabIndex = 26;
@@ -364,13 +345,13 @@
             // 
             // BUT_add_drone_part
             // 
-            this.BUT_add_drone_part.BackColor = System.Drawing.Color.LimeGreen;
+            this.BUT_add_drone_part.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.BUT_add_drone_part.FlatAppearance.BorderSize = 0;
             this.BUT_add_drone_part.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BUT_add_drone_part.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_add_drone_part.ForeColor = System.Drawing.Color.White;
             this.BUT_add_drone_part.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_drone_part.Location = new System.Drawing.Point(834, 420);
+            this.BUT_add_drone_part.Location = new System.Drawing.Point(932, 338);
             this.BUT_add_drone_part.Name = "BUT_add_drone_part";
             this.BUT_add_drone_part.Size = new System.Drawing.Size(130, 40);
             this.BUT_add_drone_part.TabIndex = 6;
@@ -466,7 +447,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_edit;
-        private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_partName;

@@ -61,9 +61,16 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void panel_Main_farm_Paint_1(object sender, PaintEventArgs e)
+        private void panelFarm_Paint(object sender, PaintEventArgs e)
         {
-
+            //show data to DataGridView
+            con.Open();
+            String query = "SELECT * FROM Farm";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
         }
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -120,17 +127,6 @@ namespace MissionPlanner.GCSViews
             Form_Edit_farm form_Edit_Farm = new Form_Edit_farm(id_farm);
             form_Edit_Farm.ShowDialog();
         }
-
-        private void button_showData_Click(object sender, EventArgs e)
-        {
-            //show data to DataGridView
-            con.Open();
-            String query = "SELECT * FROM Farm";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Farm.DataSource = dt;
-            con.Close();
-        }
+        
     }
 }

@@ -94,9 +94,24 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void panel_Main_farm_Paint_1(object sender, PaintEventArgs e)
+        private void panelMaintenance_pre_Paint(object sender, PaintEventArgs e)
         {
+            try
+            {
+                //show data to DataGridView
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
 
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                con.Close();
+                DG_Farm.DataSource = dt;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)

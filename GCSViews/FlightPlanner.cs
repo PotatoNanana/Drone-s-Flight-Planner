@@ -7980,12 +7980,14 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             id_farm1 = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
         }
 
-        private void myDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DG_drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            // grid view drone
+            textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
+            id_drone1 = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
         }
 
-        private void button_showData_Click(object sender, EventArgs e)
+        private void panelPflightPlanner_farm_Paint(object sender, PaintEventArgs e)
         {
             //show data to DataGridView farm
             con.Open();
@@ -7997,7 +7999,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             con.Close();
         }
 
-        private void button_showDGFarm_Click(object sender, EventArgs e)
+        private void panelDrone_Paint(object sender, PaintEventArgs e)
         {
             //show data to DataGridView drone
             con.Open();
@@ -8007,13 +8009,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             SDA.Fill(dt);
             DG_Drone.DataSource = dt;
             con.Close();
-        }
-
-        private void DG_drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // grid view drone
-            textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
-            id_drone1 = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
         }
     }
 

@@ -36,8 +36,6 @@
             this.textBox_actID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.But_exit = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
             this.action_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,8 +82,6 @@
             this.panel_Main_farm.Controls.Add(this.textBox_actID);
             this.panel_Main_farm.Controls.Add(this.label2);
             this.panel_Main_farm.Controls.Add(this.label1);
-            this.panel_Main_farm.Controls.Add(this.button1);
-            this.panel_Main_farm.Controls.Add(this.But_exit);
             this.panel_Main_farm.Controls.Add(this.DG_Farm);
             this.panel_Main_farm.Controls.Add(this.panel3);
             this.panel_Main_farm.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -94,7 +90,7 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(834, 395);
             this.panel_Main_farm.TabIndex = 10;
-            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
+            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Act_Paint);
             // 
             // textBox_actName
             // 
@@ -127,42 +123,6 @@
             this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 26;
             this.label1.Text = "รหัสกิจกรรม";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(600, 228);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "แสดงข้อมูล";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // But_exit
-            // 
-            this.But_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.But_exit.FlatAppearance.BorderSize = 0;
-            this.But_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.But_exit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.But_exit.ForeColor = System.Drawing.Color.White;
-            this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_exit.Location = new System.Drawing.Point(600, 297);
-            this.But_exit.Name = "But_exit";
-            this.But_exit.Size = new System.Drawing.Size(130, 40);
-            this.But_exit.TabIndex = 10;
-            this.But_exit.Text = "ปิด";
-            this.But_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.But_exit.UseVisualStyleBackColor = false;
-            this.But_exit.Click += new System.EventHandler(this.But_exit_Click);
             // 
             // DG_Farm
             // 
@@ -322,11 +282,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_Main_farm;
-        private System.Windows.Forms.Button But_exit;
         private Controls.MyDataGridView DG_Farm;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
-        private System.Windows.Forms.Button button1;
         private DroneFlightPlannerDataSet1 droneFlightPlannerDataSet1;
         private System.Windows.Forms.BindingSource scheduleactionBindingSource;
         private DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter schedule_actionTableAdapter;

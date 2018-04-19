@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.button_show = new System.Windows.Forms.Button();
             this.textBox_droneName = new System.Windows.Forms.TextBox();
             this.textBox_droneID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,7 +74,6 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button_show);
             this.panel_Main_farm.Controls.Add(this.textBox_droneName);
             this.panel_Main_farm.Controls.Add(this.textBox_droneID);
             this.panel_Main_farm.Controls.Add(this.label2);
@@ -92,24 +90,7 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(700, 454);
             this.panel_Main_farm.TabIndex = 8;
-            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
-            // 
-            // button_show
-            // 
-            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_show.FlatAppearance.BorderSize = 0;
-            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_show.ForeColor = System.Drawing.Color.White;
-            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(531, 372);
-            this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(137, 48);
-            this.button_show.TabIndex = 18;
-            this.button_show.Text = "แสดงตาราง";
-            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_show.UseVisualStyleBackColor = false;
-            this.button_show.Click += new System.EventHandler(this.button_show_Click);
+            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
             // 
             // textBox_droneName
             // 
@@ -151,7 +132,7 @@
             this.button_edit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_edit.Location = new System.Drawing.Point(531, 298);
+            this.button_edit.Location = new System.Drawing.Point(439, 330);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(134, 48);
             this.button_edit.TabIndex = 12;
@@ -168,7 +149,7 @@
             this.button_detail.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
             this.button_detail.ForeColor = System.Drawing.Color.White;
             this.button_detail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_detail.Location = new System.Drawing.Point(407, 223);
+            this.button_detail.Location = new System.Drawing.Point(407, 210);
             this.button_detail.Name = "button_detail";
             this.button_detail.Size = new System.Drawing.Size(201, 48);
             this.button_detail.TabIndex = 10;
@@ -185,7 +166,7 @@
             this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_delete.Location = new System.Drawing.Point(349, 298);
+            this.button_delete.Location = new System.Drawing.Point(439, 390);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(133, 48);
             this.button_delete.TabIndex = 11;
@@ -240,7 +221,7 @@
             this.BUT_drone_add.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_drone_add.ForeColor = System.Drawing.Color.White;
             this.BUT_drone_add.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_drone_add.Location = new System.Drawing.Point(348, 372);
+            this.BUT_drone_add.Location = new System.Drawing.Point(439, 270);
             this.BUT_drone_add.Name = "BUT_drone_add";
             this.BUT_drone_add.Size = new System.Drawing.Size(137, 48);
             this.BUT_drone_add.TabIndex = 6;
@@ -344,7 +325,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_droneID;
-        private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.TextBox textBox_droneName;
         private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dronenameDataGridViewTextBoxColumn;

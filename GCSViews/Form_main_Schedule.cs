@@ -47,8 +47,10 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void button_show_Click(object sender, EventArgs e)
+        private void Form_main_Schedule_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'f_Schedule.FlightSchedule' table. You can move, or remove it, as needed.   
+
             //show data to DataGridView
             con.Open();
 
@@ -61,11 +63,6 @@ namespace MissionPlanner.GCSViews
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
             con.Close();
-        }
-
-        private void Form_main_Schedule_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'f_Schedule.FlightSchedule' table. You can move, or remove it, as needed.            
         }
 
         private void button_delete_Click(object sender, EventArgs e)

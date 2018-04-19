@@ -50,12 +50,7 @@ namespace MissionPlanner.GCSViews
             form_Add_Farm_Act.ShowDialog();
         }
 
-        private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void panelFarm_Act_Paint(object sender, PaintEventArgs e)
         {
             //show data to DataGridView
             con.Open();

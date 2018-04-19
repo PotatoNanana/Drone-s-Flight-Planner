@@ -68,9 +68,16 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void panel_Main_farm_Paint_1(object sender, PaintEventArgs e)
+        private void panelMaintenance_Paint(object sender, PaintEventArgs e)
         {
-
+            //show data to DataGridView
+            con.Open();
+            String query = "SELECT Drone_id,Drone_name FROM Drone";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Drone.DataSource = dt;
+            con.Close();
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -129,18 +136,6 @@ namespace MissionPlanner.GCSViews
             //edit drone
             Form_Edit_drone form_edit_drone = new Form_Edit_drone(id_drone);
             form_edit_drone.ShowDialog();
-        }
-
-        private void button_show_Click(object sender, EventArgs e)
-        {
-            //show data to DataGridView
-            con.Open();
-            String query = "SELECT Drone_id,Drone_name FROM Drone";
-            SqlDataAdapter SDA = new SqlDataAdapter(query,con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Drone.DataSource = dt;
-            con.Close();
         }
 
         private void DG_Drone_CellContentClick(object sender, DataGridViewCellEventArgs e)

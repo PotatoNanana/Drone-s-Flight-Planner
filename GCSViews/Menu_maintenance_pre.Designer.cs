@@ -38,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button_edit = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
-            this.button_show = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
             this.maintainidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintainactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,7 +100,6 @@
             this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.button_edit);
             this.panel_Main_farm.Controls.Add(this.button_delete);
-            this.panel_Main_farm.Controls.Add(this.button_show);
             this.panel_Main_farm.Controls.Add(this.DG_Farm);
             this.panel_Main_farm.Controls.Add(this.BUT_add_drone_pre);
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
@@ -111,7 +109,7 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(1266, 450);
             this.panel_Main_farm.TabIndex = 8;
-            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint_1);
+            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_pre_Paint);
             // 
             // textBox_mainAct
             // 
@@ -156,7 +154,7 @@
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_edit.Location = new System.Drawing.Point(1074, 232);
+            this.button_edit.Location = new System.Drawing.Point(986, 269);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(130, 40);
             this.button_edit.TabIndex = 32;
@@ -174,7 +172,7 @@
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete.Location = new System.Drawing.Point(895, 232);
+            this.button_delete.Location = new System.Drawing.Point(986, 315);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(130, 40);
             this.button_delete.TabIndex = 31;
@@ -182,23 +180,6 @@
             this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_delete.UseVisualStyleBackColor = false;
             this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
-            // 
-            // button_show
-            // 
-            this.button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button_show.FlatAppearance.BorderSize = 0;
-            this.button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_show.ForeColor = System.Drawing.Color.White;
-            this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(1074, 305);
-            this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(130, 40);
-            this.button_show.TabIndex = 30;
-            this.button_show.Text = "แสดงตาราง";
-            this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_show.UseVisualStyleBackColor = false;
-            this.button_show.Click += new System.EventHandler(this.button_show_Click);
             // 
             // DG_Farm
             // 
@@ -289,13 +270,13 @@
             // 
             // BUT_add_drone_pre
             // 
-            this.BUT_add_drone_pre.BackColor = System.Drawing.Color.LimeGreen;
+            this.BUT_add_drone_pre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.BUT_add_drone_pre.FlatAppearance.BorderSize = 0;
             this.BUT_add_drone_pre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BUT_add_drone_pre.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_add_drone_pre.ForeColor = System.Drawing.Color.White;
             this.BUT_add_drone_pre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_drone_pre.Location = new System.Drawing.Point(895, 305);
+            this.BUT_add_drone_pre.Location = new System.Drawing.Point(986, 223);
             this.BUT_add_drone_pre.Name = "BUT_add_drone_pre";
             this.BUT_add_drone_pre.Size = new System.Drawing.Size(130, 40);
             this.BUT_add_drone_pre.TabIndex = 6;
@@ -375,7 +356,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
         private System.Windows.Forms.Button but_backto_pre;
-        private System.Windows.Forms.Button button_show;
         private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_edit;
         private System.Windows.Forms.Label label1;

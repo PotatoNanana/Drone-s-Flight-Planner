@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button_showDGSchedule = new System.Windows.Forms.Button();
             this.but_schedule = new System.Windows.Forms.Button();
             this.lineSeparator3 = new MissionPlanner.Controls.LineSeparator();
             this.DG_schedule = new MissionPlanner.Controls.MyDataGridView();
@@ -47,7 +46,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_showDGMaintain = new System.Windows.Forms.Button();
             this.DG_maintenance = new MissionPlanner.Controls.MyDataGridView();
             this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maintainidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +64,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.button_showDGFarm = new System.Windows.Forms.Button();
             this.DG_farm = new MissionPlanner.Controls.MyDataGridView();
             this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.farmnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,7 +112,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.button_showDGSchedule);
             this.panel5.Controls.Add(this.but_schedule);
             this.panel5.Controls.Add(this.lineSeparator3);
             this.panel5.Controls.Add(this.DG_schedule);
@@ -125,23 +121,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(716, 280);
             this.panel5.TabIndex = 10;
-            // 
-            // button_showDGSchedule
-            // 
-            this.button_showDGSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_showDGSchedule.FlatAppearance.BorderSize = 0;
-            this.button_showDGSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_showDGSchedule.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_showDGSchedule.ForeColor = System.Drawing.Color.White;
-            this.button_showDGSchedule.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_showDGSchedule.Location = new System.Drawing.Point(226, 220);
-            this.button_showDGSchedule.Name = "button_showDGSchedule";
-            this.button_showDGSchedule.Size = new System.Drawing.Size(130, 40);
-            this.button_showDGSchedule.TabIndex = 12;
-            this.button_showDGSchedule.Text = "แสดงตาราง";
-            this.button_showDGSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_showDGSchedule.UseVisualStyleBackColor = false;
-            this.button_showDGSchedule.Click += new System.EventHandler(this.button_showDGSchedule_Click);
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFlightSchedule_Paint);
             // 
             // but_schedule
             // 
@@ -151,7 +131,7 @@
             this.but_schedule.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
             this.but_schedule.ForeColor = System.Drawing.Color.White;
             this.but_schedule.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_schedule.Location = new System.Drawing.Point(404, 220);
+            this.but_schedule.Location = new System.Drawing.Point(293, 220);
             this.but_schedule.Name = "but_schedule";
             this.but_schedule.Size = new System.Drawing.Size(130, 40);
             this.but_schedule.TabIndex = 6;
@@ -274,7 +254,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button_showDGMaintain);
             this.panel2.Controls.Add(this.DG_maintenance);
             this.panel2.Controls.Add(this.Goto_farmMaintenance);
             this.panel2.Controls.Add(this.lineSeparator1);
@@ -284,24 +263,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1246, 280);
             this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
-            // 
-            // button_showDGMaintain
-            // 
-            this.button_showDGMaintain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_showDGMaintain.FlatAppearance.BorderSize = 0;
-            this.button_showDGMaintain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_showDGMaintain.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_showDGMaintain.ForeColor = System.Drawing.Color.White;
-            this.button_showDGMaintain.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_showDGMaintain.Location = new System.Drawing.Point(402, 220);
-            this.button_showDGMaintain.Name = "button_showDGMaintain";
-            this.button_showDGMaintain.Size = new System.Drawing.Size(130, 40);
-            this.button_showDGMaintain.TabIndex = 11;
-            this.button_showDGMaintain.Text = "แสดงตาราง";
-            this.button_showDGMaintain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_showDGMaintain.UseVisualStyleBackColor = false;
-            this.button_showDGMaintain.Click += new System.EventHandler(this.button_showDGMaintain_Click);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
             // 
             // DG_maintenance
             // 
@@ -455,7 +417,6 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button_showDGFarm);
             this.panel_Main_farm.Controls.Add(this.DG_farm);
             this.panel_Main_farm.Controls.Add(this.Goto_farmProfile);
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
@@ -465,24 +426,7 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(500, 280);
             this.panel_Main_farm.TabIndex = 7;
-            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // button_showDGFarm
-            // 
-            this.button_showDGFarm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_showDGFarm.FlatAppearance.BorderSize = 0;
-            this.button_showDGFarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_showDGFarm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_showDGFarm.ForeColor = System.Drawing.Color.White;
-            this.button_showDGFarm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_showDGFarm.Location = new System.Drawing.Point(103, 220);
-            this.button_showDGFarm.Name = "button_showDGFarm";
-            this.button_showDGFarm.Size = new System.Drawing.Size(130, 40);
-            this.button_showDGFarm.TabIndex = 10;
-            this.button_showDGFarm.Text = "แสดงตาราง";
-            this.button_showDGFarm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_showDGFarm.UseVisualStyleBackColor = false;
-            this.button_showDGFarm.Click += new System.EventHandler(this.button_showDGFarm_Click);
+            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Paint);
             // 
             // DG_farm
             // 
@@ -500,7 +444,6 @@
             this.DG_farm.Name = "DG_farm";
             this.DG_farm.Size = new System.Drawing.Size(450, 140);
             this.DG_farm.TabIndex = 9;
-            this.DG_farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_farm_CellContentClick);
             // 
             // farmidDataGridViewTextBoxColumn
             // 
@@ -544,7 +487,7 @@
             this.Goto_farmProfile.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Goto_farmProfile.ForeColor = System.Drawing.Color.White;
             this.Goto_farmProfile.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Goto_farmProfile.Location = new System.Drawing.Point(279, 220);
+            this.Goto_farmProfile.Location = new System.Drawing.Point(185, 220);
             this.Goto_farmProfile.Name = "Goto_farmProfile";
             this.Goto_farmProfile.Size = new System.Drawing.Size(130, 40);
             this.Goto_farmProfile.TabIndex = 6;
@@ -653,8 +596,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button Goto_farmMaintenance;
-        private System.Windows.Forms.Button button_showDGSchedule;
-        private System.Windows.Forms.Button button_showDGMaintain;
         private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maintainidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maintainactivityDataGridViewTextBoxColumn;
@@ -667,7 +608,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maintainvenderPhoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource maintainanceBindingSource;
         private MAintain mAintain;
-        private System.Windows.Forms.Button button_showDGFarm;
         private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn farmnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn farmhostDataGridViewTextBoxColumn;

@@ -85,9 +85,16 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void panel_Main_farm_Paint_1(object sender, PaintEventArgs e)
+        private void panelMaintenance_pre_Paint(object sender, PaintEventArgs e)
         {
-
+            //show data to dataGridView
+            con.Open();
+            String query = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date FROM Maintainance";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
         }
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -49,22 +49,7 @@ namespace MissionPlanner.GCSViews
             Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act(id_farm);
             form_Add_Farm_Act.ShowDialog();
         }
-
-        private void button_show_Click(object sender, EventArgs e)
-        {
-            //show data to DataGridView
-            con.Open();
-
-            //string a = "yyyy-MM-dd";
-
-            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Farm.DataSource = dt;
-            con.Close();
-        }
-
+        
         private void button_delete_Click(object sender, EventArgs e)
         {
             // delete Schedule
@@ -138,6 +123,21 @@ namespace MissionPlanner.GCSViews
                 return true;
             }
             return base.ProcessDialogKey(keyData);
+        }
+
+        private void panelFarm_schedule_Paint(object sender, PaintEventArgs e)
+        {
+            //show data to DataGridView
+            con.Open();
+
+            //string a = "yyyy-MM-dd";
+
+            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
         }
     }
 }

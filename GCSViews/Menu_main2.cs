@@ -102,10 +102,7 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void Goto_farmProfile_Click(object sender, EventArgs e)
         {
@@ -117,20 +114,12 @@ namespace MissionPlanner.GCSViews
             OnGotoFarmMaintenanceClicked(e);
         }
 
-        public void DG_farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button3_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void panel2_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -153,9 +142,9 @@ namespace MissionPlanner.GCSViews
             form_Schedule.ShowDialog();
         }
 
-        private void button_showDGFarm_Click(object sender, EventArgs e)
+        private void panelFarm_Paint(object sender, PaintEventArgs e)
         {
-            //show data to DataGridView
+            //show data to DataGridView 
             con.Open();
             String query = "SELECT * FROM Farm";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
@@ -165,7 +154,19 @@ namespace MissionPlanner.GCSViews
             con.Close();
         }
 
-        private void button_showDGMaintain_Click(object sender, EventArgs e)
+        private void panelFlightSchedule_Paint(object sender, PaintEventArgs e)
+        {
+            //show data to DataGridView 
+            con.Open();
+            String query = "SELECT * FROM FlightSchedule WHERE action_finish = 'n' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_schedule.DataSource = dt;
+            con.Close();
+        }
+
+        private void panelMaintenance_Paint(object sender, PaintEventArgs e)
         {
             //show data to DataGridView
             con.Open();
@@ -175,19 +176,6 @@ namespace MissionPlanner.GCSViews
             SDA.Fill(dt);
             DG_maintenance.DataSource = dt;
             con.Close();
-        }
-
-        private void button_showDGSchedule_Click(object sender, EventArgs e)
-        {
-            //show data to DataGridView
-            con.Open();
-            String query = "SELECT * FROM FlightSchedule WHERE action_finish = 'n' ";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_schedule.DataSource = dt;
-            con.Close();
-
         }
     }
 }
