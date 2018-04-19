@@ -17,13 +17,13 @@ namespace MissionPlanner.GCSViews
     {
         public Form_Edit_drone_part()
         {
-            InitializeComponent();
-                        
+            InitializeComponent();                        
         }
 
         public Form_Edit_drone_part(string id_drone)
         {
             this.id_drone = id_drone;
+            InitializeComponent();
         }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
@@ -83,7 +83,7 @@ namespace MissionPlanner.GCSViews
             int N = cmd.ExecuteNonQuery();
 
             con.Close();
-            MessageBox.Show("Update To DB Success!!");
+            MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
 
             this.Close();
         }

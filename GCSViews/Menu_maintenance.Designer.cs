@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_maintenance));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
             this.textBox_droneName = new System.Windows.Forms.TextBox();
@@ -51,6 +52,8 @@
             this.droneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.droneTableAdapter = new MissionPlanner.DroneFlightPlannerDataSetTableAdapters.DroneTableAdapter();
             this.droneTableAdapter1 = new MissionPlanner.DroneTableAdapters.DroneTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).BeginInit();
@@ -59,6 +62,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -74,6 +78,8 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.label3);
+            this.panel_Main_farm.Controls.Add(this.pictureBox);
             this.panel_Main_farm.Controls.Add(this.textBox_droneName);
             this.panel_Main_farm.Controls.Add(this.textBox_droneID);
             this.panel_Main_farm.Controls.Add(this.label2);
@@ -88,7 +94,7 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14F);
             this.panel_Main_farm.Location = new System.Drawing.Point(60, 40);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(700, 454);
+            this.panel_Main_farm.Size = new System.Drawing.Size(707, 599);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
             // 
@@ -132,7 +138,7 @@
             this.button_edit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_edit.Location = new System.Drawing.Point(439, 330);
+            this.button_edit.Location = new System.Drawing.Point(435, 461);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(134, 48);
             this.button_edit.TabIndex = 12;
@@ -149,7 +155,7 @@
             this.button_detail.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
             this.button_detail.ForeColor = System.Drawing.Color.White;
             this.button_detail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_detail.Location = new System.Drawing.Point(407, 210);
+            this.button_detail.Location = new System.Drawing.Point(403, 341);
             this.button_detail.Name = "button_detail";
             this.button_detail.Size = new System.Drawing.Size(201, 48);
             this.button_detail.TabIndex = 10;
@@ -166,7 +172,7 @@
             this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_delete.Location = new System.Drawing.Point(439, 390);
+            this.button_delete.Location = new System.Drawing.Point(435, 521);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(133, 48);
             this.button_delete.TabIndex = 11;
@@ -187,7 +193,7 @@
             this.DG_Drone.Location = new System.Drawing.Point(25, 70);
             this.DG_Drone.Name = "DG_Drone";
             this.DG_Drone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Drone.Size = new System.Drawing.Size(298, 350);
+            this.DG_Drone.Size = new System.Drawing.Size(298, 499);
             this.DG_Drone.TabIndex = 9;
             this.DG_Drone.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Drone_CellContentClick);
             // 
@@ -221,7 +227,7 @@
             this.BUT_drone_add.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_drone_add.ForeColor = System.Drawing.Color.White;
             this.BUT_drone_add.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_drone_add.Location = new System.Drawing.Point(439, 270);
+            this.BUT_drone_add.Location = new System.Drawing.Point(435, 401);
             this.BUT_drone_add.Name = "BUT_drone_add";
             this.BUT_drone_add.Size = new System.Drawing.Size(137, 48);
             this.BUT_drone_add.TabIndex = 6;
@@ -246,7 +252,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(700, 50);
+            this.panel3.Size = new System.Drawing.Size(707, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -261,7 +267,7 @@
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(700, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(707, 50);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ข้อมูลโดรน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -287,6 +293,27 @@
             // 
             this.droneTableAdapter1.ClearBeforeFill = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("PJ Standard", 14.25F);
+            this.label3.Location = new System.Drawing.Point(354, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 24);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "รูปโดรน";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.InitialImage")));
+            this.pictureBox.Location = new System.Drawing.Point(454, 207);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(130, 115);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 37;
+            this.pictureBox.TabStop = false;
+            // 
             // Menu_maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +331,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,5 +359,7 @@
         private System.Windows.Forms.BindingSource droneBindingSource1;
         private Drone drone;
         private DroneTableAdapters.DroneTableAdapter droneTableAdapter1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }

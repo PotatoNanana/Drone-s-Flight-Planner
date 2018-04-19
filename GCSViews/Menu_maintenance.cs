@@ -13,7 +13,7 @@ using MissionPlanner.Log;
 using MissionPlanner.Utilities;
 using MissionPlanner.Plugin;
 using System.Data.SqlClient;
-
+using System.IO;
 
 namespace MissionPlanner.GCSViews
 {
@@ -21,10 +21,13 @@ namespace MissionPlanner.GCSViews
     {
         // SqlConnection con = new SqlConnection(@"Data Source=CS-RABBIT\SQLEXPRESS;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        string imgLocation = "";
+        byte[] imgby;
+        SqlCommand cmd;
+
         public Menu_maintenance()
         {
             InitializeComponent();
-
             MyView = new MainSwitcher(this);
               
         }
@@ -105,16 +108,25 @@ namespace MissionPlanner.GCSViews
         private void button2_Click(object sender, EventArgs e)
         {
             //delete drone
-            if (MessageBox.Show("Do you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("ต้องการที่จะลบข้อมูลใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                con.Open();
-                String query = "DELETE FROM Drone where drone_id = '"+textBox_droneID.Text+"' ";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                SDA.SelectCommand.ExecuteNonQuery();
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }                
+                String query2 = "DELETE FROM Drone where drone_id = '" + textBox_droneID.Text + "' ";
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                SDA2.SelectCommand.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("Delete Record  in DB Success!!");
+                MessageBox.Show("ลบข้อมูลเสร็จเรียบร้อย !!");
             }
 
+            //show data to DataGridView
+            con.Open();
+            String query = "SELECT Drone_id,Drone_name FROM Drone";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Drone.DataSource = dt;
+            con.Close();
         }
 
        /* private void button_serch_Click(object sender, EventArgs e)
@@ -139,10 +151,37 @@ namespace MissionPlanner.GCSViews
         }
 
         private void DG_Drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
-            id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString(); 
-            textBox_droneName.Text = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
+        {          
+            try
+            {
+                String query = "SELECT * FROM Drone WHERE drone_id = '" + textBox_droneID.Text + "'";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);            
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
+                    id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
+                    textBox_droneName.Text = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
+                    byte[] img = (byte[])(reader[2]);
+                    if (img == null)
+                    { pictureBox.Image = null; }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBox.Image = Image.FromStream(ms);
+                    }
+                }
+                else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                con.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }          
+
         }
+        public void showGridView()
+        { }
     }
 }

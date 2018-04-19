@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace MissionPlanner.GCSViews
 {
@@ -21,12 +22,16 @@ namespace MissionPlanner.GCSViews
         public Form_Edit_drone(string id_drone)
         {
             this.id_drone = id_drone;
+            InitializeComponent();
         }
 
         //SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         private string id_drone;
 
+        string imgLocation = "";
+        SqlCommand cmd;
+        
         private void Main_but_farm_Click(object sender, EventArgs e)
         {
 
@@ -61,12 +66,24 @@ namespace MissionPlanner.GCSViews
         private void BUT_save_Click(object sender, EventArgs e)
         {
             con.Open();
-            String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "'";
+
+            byte[] images = null;
+            FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+            BinaryReader brs = new BinaryReader(Streem);
+            images = brs.ReadBytes((int)Streem.Length);
+
+            String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "',drone_pic = @images";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Update To DB Success!!");
 
+            cmd = new SqlCommand(query, con);
+            cmd.Parameters.Add(new SqlParameter("@images", images));
+            int N = cmd.ExecuteNonQuery();
+
+            con.Close();
+            MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
+             
+            this.Close();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -104,11 +121,6 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form_Edit_drone_KeyDown(object sender, KeyEventArgs e)
         {
             ProcessDialogKey(e.KeyData);
@@ -122,6 +134,17 @@ namespace MissionPlanner.GCSViews
                 return true;
             }
             return base.ProcessDialogKey(keyData);
+        }
+
+        private void button_serch_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png file(*.png)|*.png|.jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                pictureBox.ImageLocation = imgLocation;
+            }
         }
     }
 }

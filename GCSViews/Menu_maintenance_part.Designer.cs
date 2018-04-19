@@ -118,6 +118,7 @@
             this.label3.Size = new System.Drawing.Size(57, 24);
             this.label3.TabIndex = 36;
             this.label3.Text = "รูปชิ้นส่วน";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox
             // 

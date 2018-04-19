@@ -199,7 +199,20 @@ namespace MissionPlanner.GCSViews
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("DELETE Record From DB Success!!");
+
+                //show data to DataGridView
+                String query2 = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query2, con);
+
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                con.Close();
+                DG_Farm.DataSource = dt;
+
+                MessageBox.Show("DELETE Record From DB Success!!");                
             }
         }
 
@@ -244,6 +257,11 @@ namespace MissionPlanner.GCSViews
         }
 
         private void pictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

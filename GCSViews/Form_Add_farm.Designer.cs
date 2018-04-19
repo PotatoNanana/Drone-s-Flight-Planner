@@ -109,6 +109,7 @@
             // 
             this.textBox_farmID.Location = new System.Drawing.Point(176, 97);
             this.textBox_farmID.Name = "textBox_farmID";
+            this.textBox_farmID.ReadOnly = true;
             this.textBox_farmID.Size = new System.Drawing.Size(200, 30);
             this.textBox_farmID.TabIndex = 14;
             this.textBox_farmID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);

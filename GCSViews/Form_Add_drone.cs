@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using System.IO;
 
 namespace MissionPlanner.GCSViews
 {
@@ -17,7 +18,9 @@ namespace MissionPlanner.GCSViews
         //SqlConnection con = new SqlConnection("Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
-
+        string imgLocation = "";
+        byte[] imgby;
+        
         public Form_Add_drone()
         {
             InitializeComponent();
@@ -56,15 +59,30 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_save_Click(object sender, EventArgs e)
         {
-            con.Open();
+            try
+            {
+                // for img 
+                byte[] img = null;
+                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
 
-            String query = "INSERT INTO Drone (drone_id,drone_name) " + "VALUES('" + textBox_droneID.Text + "','" +textBox_droneName.Text + "')";
+                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "')";
 
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            SDA.SelectCommand.ExecuteNonQuery();
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
 
-            con.Close();
-            MessageBox.Show("Save To DB Success!!");
+                cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("บันทึกข้อมูลสำเร็จ!!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             this.Close();
         }
@@ -104,11 +122,6 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form_Add_drone_KeyDown(object sender, KeyEventArgs e)
         {
             ProcessDialogKey(e.KeyData);
@@ -123,5 +136,32 @@ namespace MissionPlanner.GCSViews
             }
             return base.ProcessDialogKey(keyData);
         }
+
+        private void button_serch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                dialog.Title = "เลือกรูปภาพของชิ้นส่วนโดรน";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    /*imgLocation = dialog.FileName.ToString();
+                    imgby = imageToByteArray(Image.FromFile(dialog.FileName));
+                    pictureBox.ImageLocation = imgLocation; */
+
+                    imgLocation = dialog.FileName.ToString();
+                    pictureBox.ImageLocation = imgLocation;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
     }
 }
+
+
+
+
+
+        
