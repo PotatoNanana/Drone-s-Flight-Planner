@@ -705,9 +705,6 @@
       "GeoUtility/1.0.0": {
         "type": "project"
       },
-      "GMap.NET.Core/1.0.0": {
-        "type": "project"
-      },
       "MAVLink/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.6.2",
@@ -3494,11 +3491,6 @@
       "path": "../GeoUtility/GeoUtility.csproj",
       "msbuildProject": "../GeoUtility/GeoUtility.csproj"
     },
-    "GMap.NET.Core/1.0.0": {
-      "type": "project",
-      "path": "../GMap.NET.Core/GMap.NET.Core.csproj",
-      "msbuildProject": "../GMap.NET.Core/GMap.NET.Core.csproj"
-    },
     "MAVLink/1.0.0": {
       "type": "project",
       "path": "../Mavlink/MAVLink.csproj",
@@ -3508,7 +3500,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
       "BitMiracle.LibTiff.NET >= 2.4.571",
-      "GMap.NET.Core >= 1.0.0",
+      "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj",
       "GeoUtility >= 1.0.0",
       "MAVLink >= 1.0.0",
       "Newtonsoft.Json >= 10.0.2",

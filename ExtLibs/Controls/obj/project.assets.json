@@ -717,14 +717,8 @@
       "GeoUtility/1.0.0": {
         "type": "project"
       },
-      "GMap.NET.Core/1.0.0": {
-        "type": "project"
-      },
       "GMap.NET.WindowsForms/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "GMap.NET.Core": "1.0.0"
-        }
+        "type": "project"
       },
       "MAVLink/1.0.0": {
         "type": "project",
@@ -738,7 +732,7 @@
         "framework": ".NETFramework,Version=v4.6.2",
         "dependencies": {
           "BitMiracle.LibTiff.NET": "2.4.571",
-          "GMap.NET.Core": "1.0.0",
+          "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": "1.0.0",
           "GeoUtility": "1.0.0",
           "MAVLink": "1.0.0",
           "Newtonsoft.Json": "10.0.2",
@@ -3543,11 +3537,6 @@
       "path": "../GeoUtility/GeoUtility.csproj",
       "msbuildProject": "../GeoUtility/GeoUtility.csproj"
     },
-    "GMap.NET.Core/1.0.0": {
-      "type": "project",
-      "path": "../GMap.NET.Core/GMap.NET.Core.csproj",
-      "msbuildProject": "../GMap.NET.Core/GMap.NET.Core.csproj"
-    },
     "GMap.NET.WindowsForms/1.0.0": {
       "type": "project",
       "path": "../GMap.NET.WindowsForms/GMap.NET.WindowsForms.csproj",
@@ -3567,7 +3556,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
       "BSE.Windows.Forms >= 1.0.0",
-      "GMap.NET.Core >= 1.0.0",
+      "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj",
       "GMap.NET.WindowsForms >= 1.0.0",
       "GeoUtility >= 1.0.0",
       "MissionPlanner.Utilities >= 1.0.0",
