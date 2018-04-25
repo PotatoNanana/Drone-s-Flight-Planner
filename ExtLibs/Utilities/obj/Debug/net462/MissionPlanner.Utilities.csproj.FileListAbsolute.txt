@@ -306,12 +306,15 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.AssemblyInfo.cs
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.dll
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csprojResolveAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.Properties.Resources.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csproj.GenerateResource.Cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.AssemblyInfo.cs
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.dll
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 946bca58... import extlibs
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\MissionPlanner.Utilities.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\BitMiracle.LibTiff.NET.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\log4net.dll
@@ -350,5 +353,13 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\n
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\GMap.NET.Core.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\OpenTK.GLControl.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\zh-Hans\GMap.NET.Core.resources.dll
+<<<<<<< HEAD
 =======
 >>>>>>> 219a3d1f1077fe7ca4010641177377e21d4a2391
+=======
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.Properties.Resources.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.AssemblyInfo.cs
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.dll
+>>>>>>> parent of 946bca58... import extlibs
