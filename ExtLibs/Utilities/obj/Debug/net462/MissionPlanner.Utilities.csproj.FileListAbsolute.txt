@@ -306,3 +306,8 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.AssemblyInfo.cs
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.Properties.Resources.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.AssemblyInfo.cs
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.dll
