@@ -55,7 +55,7 @@
     <WarningLevel>4</WarningLevel>
     <Optimize>false</Optimize>
     <NoWarn>1591</NoWarn>
-    <IntermediateOutputPath>C:\Users\User\AppData\Local\Temp\vs9DF.tmp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\User\AppData\Local\Temp\vsD3A.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
@@ -76,7 +76,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <WarningLevel>4</WarningLevel>
     <NoWarn>1591</NoWarn>
-    <IntermediateOutputPath>C:\Users\User\AppData\Local\Temp\vs9DF.tmp\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\User\AppData\Local\Temp\vsD3A.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
