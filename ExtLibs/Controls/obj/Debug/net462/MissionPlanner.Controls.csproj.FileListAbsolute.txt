@@ -550,6 +550,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\ne
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.GenerateResource.Cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfo.cs
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\MissionPlanner.Controls.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\MissionPlanner.Controls.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\BitMiracle.LibTiff.NET.dll
@@ -597,3 +598,5 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\ne
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\GMap.NET.Core.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
+=======
+>>>>>>> 219a3d1f1077fe7ca4010641177377e21d4a2391
