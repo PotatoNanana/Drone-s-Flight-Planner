@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.2": {
       "BitMiracle.LibTiff.NET/2.4.571": {
@@ -363,6 +363,10 @@
           "lib/net46/System.Net.Http.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net46/System.Net.Http.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -549,6 +553,10 @@
           "lib/net461/System.Security.Cryptography.Algorithms.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net461/System.Security.Cryptography.Algorithms.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -608,6 +616,10 @@
           "lib/net461/System.Security.Cryptography.X509Certificates.dll": {}
         },
         "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
           "runtimes/win/lib/net461/System.Security.Cryptography.X509Certificates.dll": {
             "assetType": "runtime",
             "rid": "win"
@@ -703,13 +715,34 @@
         }
       },
       "GeoUtility/1.0.0": {
-        "type": "project"
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GeoUtility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GeoUtility.dll": {}
+        }
+      },
+      "GMap.NET.Core/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GMap.NET.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GMap.NET.Core.dll": {}
+        }
       },
       "MAVLink/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.6.2",
         "dependencies": {
           "log4net": "2.0.8"
+        },
+        "compile": {
+          "bin/placeholder/MAVLink.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MAVLink.dll": {}
         }
       }
     }
@@ -3491,6 +3524,11 @@
       "path": "../GeoUtility/GeoUtility.csproj",
       "msbuildProject": "../GeoUtility/GeoUtility.csproj"
     },
+    "GMap.NET.Core/1.0.0": {
+      "type": "project",
+      "path": "../GMap.NET.Core/GMap.NET.Core.csproj",
+      "msbuildProject": "../GMap.NET.Core/GMap.NET.Core.csproj"
+    },
     "MAVLink/1.0.0": {
       "type": "project",
       "path": "../Mavlink/MAVLink.csproj",
@@ -3500,7 +3538,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
       "BitMiracle.LibTiff.NET >= 2.4.571",
-      "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj",
+      "GMap.NET.Core >= 1.0.0",
       "GeoUtility >= 1.0.0",
       "MAVLink >= 1.0.0",
       "Newtonsoft.Json >= 10.0.2",
@@ -3510,30 +3548,43 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\paper\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
       "projectName": "MissionPlanner.Utilities",
-      "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
-      "outputPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Utilities\\obj\\",
+      "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
+      "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
+        "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "net462"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
-              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
+            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
+              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
             },
-            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Mavlink\\MAVLink.csproj": {
-              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Mavlink\\MAVLink.csproj"
+            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj": {
+              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj"
             },
-            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
-              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
+            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
+              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
             }
           }
         }
