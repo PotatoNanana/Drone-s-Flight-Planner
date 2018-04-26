@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace MissionPlanner.GCSViews
 {
@@ -24,7 +25,8 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
         }
 
-        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();        
+        SqlCommand cmd;
         private string id_farm;
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -41,35 +43,89 @@ namespace MissionPlanner.GCSViews
         {
             textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
             textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+            textBox_droneID.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+            textBox_cap.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+            textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
-        { 
-            // add schedule
-            Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act(id_farm);
-            form_Add_Farm_Act.ShowDialog();
+        {             
+            try
+            {
+                
+               // String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host,farm_pic) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "',@img)";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                string format = "yyyy-MM-dd";
+                String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,action_name,action_capacity,action_cost,action_datetime) " + "VALUES('" + textBox_actID.Text + "','" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.Value.ToString(format) + "')";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
+              
+                //show data to DataGridView
+                con.Open();
+                String query2 = "SELECT * FROM ";
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                SDA2.Fill(dt);
+                DG_Farm.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
         
         private void button_delete_Click(object sender, EventArgs e)
         {
             // delete Schedule
-            if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("ต้องการลบกิจกรรมนี้ใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 con.Open();
                 String query = "DELETE FROM FlightSchedule where action_no = '" + textBox_actID.Text + "' ";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("DELETE Record From DB Success!!");
+                MessageBox.Show("ลบข้อมูลลกิจกรรมสำเร็จ !!");
+
+                //string a = "yyyy-MM-dd";
+
+                // show data to data Grid view
+                String query2 = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                SDA2.Fill(dt);
+                DG_Farm.DataSource = dt;
+                con.Close();
             }
             
         }
 
         private void button_edit_Click(object sender, EventArgs e)
-        {
-            // edit schedule
-            Form_Edit_farm_act form_Edit_Farm = new Form_Edit_farm_act();
-            form_Edit_Farm.ShowDialog();
+        {            
+            try
+            {
+                // String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host,farm_pic) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "',@img)";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                string format = "yyyy-MM-dd";
+                String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',action_datetime = '" + monthCalendar1.Value.ToString(format) + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "') ";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();                
+                MessageBox.Show("แก้ไขข้อมูลสำเร็จ !!");
+
+                //show data to DataGridView
+                con.Open();
+                String query2 = "SELECT * FROM ";
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                SDA2.Fill(dt);
+                DG_Farm.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void button_serch_Click(object sender, EventArgs e)
@@ -132,10 +188,10 @@ namespace MissionPlanner.GCSViews
 
             //string a = "yyyy-MM-dd";
 
-            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            String query2 = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt = new DataTable();
-            SDA.Fill(dt);
+            SDA2.Fill(dt);
             DG_Farm.DataSource = dt;
             con.Close();
         }

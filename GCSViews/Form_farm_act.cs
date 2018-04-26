@@ -40,7 +40,10 @@ namespace MissionPlanner.GCSViews
         private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
         {
             textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
-            textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();            
+            textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+            textBox_droneID.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+            textBox_capacity.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+            textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
@@ -56,7 +59,7 @@ namespace MissionPlanner.GCSViews
             con.Open();
 
             //string a = "yyyy-MM-dd";
-            string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
+            //string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
             String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'y' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
@@ -87,7 +90,7 @@ namespace MissionPlanner.GCSViews
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("DELETE Record From DB Success!!");
+                MessageBox.Show("ลบข้อมูลสำเร็จ !!");
             }
             
         }

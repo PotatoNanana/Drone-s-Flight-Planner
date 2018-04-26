@@ -500,6 +500,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlannerDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -4177,6 +4182,17 @@
     <None Include="DroneFlightPlannerDataSet3.xss">
       <DependentUpon>DroneFlightPlannerDataSet3.xsd</DependentUpon>
     </None>
+    <None Include="DroneFlightPlannerDataSet4.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet4.xss">
+      <DependentUpon>DroneFlightPlannerDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="FArm.xsc">
       <DependentUpon>FArm.xsd</DependentUpon>
     </None>
@@ -5790,6 +5806,7 @@
     <Content Include="ArduCopterConfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="calendar.png" />
     <Content Include="camerasBuiltin.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

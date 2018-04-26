@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_act));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.textBox_cost = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox_capacity = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_droneID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox_actName = new System.Windows.Forms.TextBox();
             this.textBox_actID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,12 +78,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 395);
+            this.panel1.Size = new System.Drawing.Size(834, 356);
             this.panel1.TabIndex = 0;
             // 
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.textBox_cost);
+            this.panel_Main_farm.Controls.Add(this.label6);
+            this.panel_Main_farm.Controls.Add(this.textBox_capacity);
+            this.panel_Main_farm.Controls.Add(this.label5);
+            this.panel_Main_farm.Controls.Add(this.textBox_droneID);
+            this.panel_Main_farm.Controls.Add(this.label3);
             this.panel_Main_farm.Controls.Add(this.textBox_actName);
             this.panel_Main_farm.Controls.Add(this.textBox_actID);
             this.panel_Main_farm.Controls.Add(this.label2);
@@ -88,39 +100,97 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(834, 395);
+            this.panel_Main_farm.Size = new System.Drawing.Size(834, 356);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Act_Paint);
             // 
+            // textBox_cost
+            // 
+            this.textBox_cost.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_cost.Location = new System.Drawing.Point(623, 294);
+            this.textBox_cost.Name = "textBox_cost";
+            this.textBox_cost.Size = new System.Drawing.Size(187, 34);
+            this.textBox_cost.TabIndex = 37;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label6.Location = new System.Drawing.Point(507, 297);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 27);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "ค่าใช้จ่าย";
+            // 
+            // textBox_capacity
+            // 
+            this.textBox_capacity.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_capacity.Location = new System.Drawing.Point(623, 245);
+            this.textBox_capacity.Name = "textBox_capacity";
+            this.textBox_capacity.Size = new System.Drawing.Size(187, 34);
+            this.textBox_capacity.TabIndex = 35;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label5.Location = new System.Drawing.Point(507, 248);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 27);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "ปริมาณสาร";
+            // 
+            // textBox_droneID
+            // 
+            this.textBox_droneID.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_droneID.Location = new System.Drawing.Point(623, 95);
+            this.textBox_droneID.Name = "textBox_droneID";
+            this.textBox_droneID.Size = new System.Drawing.Size(187, 34);
+            this.textBox_droneID.TabIndex = 31;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label3.Location = new System.Drawing.Point(507, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 27);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "รหัสโดรน";
+            // 
             // textBox_actName
             // 
-            this.textBox_actName.Location = new System.Drawing.Point(629, 160);
+            this.textBox_actName.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_actName.Location = new System.Drawing.Point(623, 193);
             this.textBox_actName.Name = "textBox_actName";
-            this.textBox_actName.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actName.Size = new System.Drawing.Size(187, 34);
             this.textBox_actName.TabIndex = 29;
             // 
             // textBox_actID
             // 
-            this.textBox_actID.Location = new System.Drawing.Point(629, 103);
+            this.textBox_actID.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_actID.Location = new System.Drawing.Point(623, 144);
             this.textBox_actID.Name = "textBox_actID";
-            this.textBox_actID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actID.Size = new System.Drawing.Size(187, 34);
             this.textBox_actID.TabIndex = 28;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(513, 163);
+            this.label2.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label2.Location = new System.Drawing.Point(507, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.Size = new System.Drawing.Size(78, 27);
             this.label2.TabIndex = 27;
             this.label2.Text = "ชื่อกิจกรรม";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(513, 106);
+            this.label1.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label1.Location = new System.Drawing.Point(507, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 24);
+            this.label1.Size = new System.Drawing.Size(88, 27);
             this.label1.TabIndex = 26;
             this.label1.Text = "รหัสกิจกรรม";
             // 
@@ -140,7 +210,7 @@
             this.DG_Farm.Location = new System.Drawing.Point(25, 75);
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Farm.Size = new System.Drawing.Size(460, 300);
+            this.DG_Farm.Size = new System.Drawing.Size(460, 262);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             // 
@@ -159,7 +229,7 @@
             // actionnoDataGridViewTextBoxColumn
             // 
             this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
-            this.actionnoDataGridViewTextBoxColumn.HeaderText = "เลขที่กิจกรรม";
+            this.actionnoDataGridViewTextBoxColumn.HeaderText = "รหัสกิจกรรม";
             this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
             // 
             // action_name
@@ -256,7 +326,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 395);
+            this.ClientSize = new System.Drawing.Size(834, 356);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_farm_act";
@@ -298,6 +368,12 @@
         private ActivitySchedule activitySchedule;
         private System.Windows.Forms.BindingSource flightScheduleBindingSource1;
         private ActivityScheduleTableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter1;
+        private System.Windows.Forms.TextBox textBox_cost;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox_capacity;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox_droneID;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn action_datetime;
         private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn actionnoDataGridViewTextBoxColumn;
