@@ -2645,17 +2645,8 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="droneidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>รหัสโดรน</value>
-  </data>
-  <data name="dronenameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>ชื่อโดรน</value>
-  </data>
   <metadata name="droneBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>107, 56</value>
-  </metadata>
-  <metadata name="drone1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
   </metadata>
   <data name="DG_Drone.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 3</value>
@@ -2679,7 +2670,7 @@
     <value>0</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 420</value>
+    <value>0, 334</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 171</value>
@@ -3029,6 +3020,18 @@
   <data name="&gt;&gt;panelBASE.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="droneidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>รหัสโดรน</value>
+  </data>
+  <data name="dronenameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ชื่อโดรน</value>
+  </data>
+  <metadata name="droneBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>107, 56</value>
+  </metadata>
+  <metadata name="drone1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <metadata name="drone1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>

@@ -37,11 +37,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox_patternName = new System.Windows.Forms.TextBox();
             this.action_name = new MissionPlanner.action_name();
             this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flightScheduleTableAdapter = new MissionPlanner.action_nameTableAdapters.FlightScheduleTableAdapter();
@@ -65,9 +63,7 @@
             this.panel_Main_farm.Controls.Add(this.textBox_logNo);
             this.panel_Main_farm.Controls.Add(this.label8);
             this.panel_Main_farm.Controls.Add(this.label3);
-            this.panel_Main_farm.Controls.Add(this.textBox_patternName);
             this.panel_Main_farm.Controls.Add(this.label2);
-            this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.panel3);
             this.panel_Main_farm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
@@ -97,10 +93,10 @@
             // 
             // textBox_patternMask
             // 
-            this.textBox_patternMask.Location = new System.Drawing.Point(149, 220);
+            this.textBox_patternMask.Location = new System.Drawing.Point(149, 173);
             this.textBox_patternMask.Multiline = true;
             this.textBox_patternMask.Name = "textBox_patternMask";
-            this.textBox_patternMask.Size = new System.Drawing.Size(200, 62);
+            this.textBox_patternMask.Size = new System.Drawing.Size(200, 101);
             this.textBox_patternMask.TabIndex = 42;
             // 
             // textBox_logNo
@@ -122,7 +118,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 220);
+            this.label3.Location = new System.Drawing.Point(33, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 24);
             this.label3.TabIndex = 30;
@@ -136,15 +132,6 @@
             this.label2.Size = new System.Drawing.Size(68, 24);
             this.label2.TabIndex = 27;
             this.label2.Text = "ชื่อกิจกรรม";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 170);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 24);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "รูปแบบการบิน";
             // 
             // panel3
             // 
@@ -185,14 +172,6 @@
             this.comboBox1.Size = new System.Drawing.Size(200, 32);
             this.comboBox1.TabIndex = 44;
             this.comboBox1.ValueMember = "action_no";
-            // 
-            // textBox_patternName
-            // 
-            this.textBox_patternName.Location = new System.Drawing.Point(149, 167);
-            this.textBox_patternName.Name = "textBox_patternName";
-            this.textBox_patternName.Size = new System.Drawing.Size(200, 31);
-            this.textBox_patternName.TabIndex = 28;
-            this.textBox_patternName.TextChanged += new System.EventHandler(this.textBox_patternName_TextChanged);
             // 
             // action_name
             // 
@@ -247,7 +226,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_Main_farm;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
         private System.Windows.Forms.Label label3;
@@ -257,7 +235,6 @@
         private System.Windows.Forms.TextBox textBox_logNo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox_patternName;
         private action_name action_name;
         private System.Windows.Forms.BindingSource flightScheduleBindingSource;
         private action_nameTableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter;
