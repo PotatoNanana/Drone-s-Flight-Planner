@@ -99,9 +99,39 @@ namespace MissionPlanner.GCSViews
         private void BUT_add_drone_Click(object sender, EventArgs e)
 
         {
-            //add drone
-            Form_Add_drone form_Add_Drone = new Form_Add_drone();
-            form_Add_Drone.ShowDialog();
+            try
+            {
+                // for img 
+                byte[] img = null;
+                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+
+                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "')";
+
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+
+                cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("บันทึกข้อมูลโดรนสำเร็จ !!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            //show data to DataGridView Drone
+            con.Open();
+            String query2 = "SELECT drone_id,drone_name FROM Drone";
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            SDA2.Fill(dt);
+            DG_Drone.DataSource = dt;
+            con.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -114,7 +144,7 @@ namespace MissionPlanner.GCSViews
         private void button2_Click(object sender, EventArgs e)
         {
             //delete drone
-            if (MessageBox.Show("ต้องการที่จะลบข้อมูลใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("ต้องการที่จะลบข้อมูลโดรนใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }                
@@ -122,7 +152,7 @@ namespace MissionPlanner.GCSViews
                 SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
                 SDA2.SelectCommand.ExecuteNonQuery();
                 con.Close();
-                MessageBox.Show("ลบข้อมูลเสร็จเรียบร้อย !!");
+                MessageBox.Show("ลบข้อมูลโดรนเสร็จเรียบร้อย !!");
             }
 
             //show data to DataGridView
@@ -151,9 +181,42 @@ namespace MissionPlanner.GCSViews
 
         private void button_modify_Click(object sender, EventArgs e)
         {
-            //edit drone
-            Form_Edit_drone form_edit_drone = new Form_Edit_drone(id_drone);
-            form_edit_drone.ShowDialog();
+            try
+            {
+                // for img 
+                byte[] img = null;
+                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+
+                String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "',drone_pic = @imag";
+
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+
+                cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("แก้ไขข้อมูลโดรนสำเร็จ !!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            //show data to DataGridView Drone
+            con.Open();
+            String query2 = "SELECT drone_id,drone_name FROM Drone";
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            SDA2.Fill(dt);
+            DG_Drone.DataSource = dt;
+            con.Close();
         }
 
         private void DG_Drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -189,5 +252,207 @@ namespace MissionPlanner.GCSViews
         }
         public void showGridView()
         { }
+
+        private void button_MaintainPart_Click(object sender, EventArgs e)
+        {
+            //pass to previtive maintain
+            Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre(id_drone);
+            menu_maintenance_pre.ShowUserControl();
+        }
+
+        private void DG_Part_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '"+textBox_droneID+"'";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBox_partID.Text = DG_Part.SelectedRows[0].Cells[0].Value.ToString();
+                    textBox_partName.Text = DG_Part.SelectedRows[0].Cells[1].Value.ToString();
+                    byte[] img = (byte[])(reader[8]);
+                    if (img == null)
+                    { pictureBox.Image = null; }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBox.Image = Image.FromStream(ms);
+                    }
+                }
+                else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                con.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
+
+        private void button_serchPart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                dialog.Title = "เลือกรูปภาพของส่วนประกอบโดรน";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    /*imgLocation = dialog.FileName.ToString();
+                    imgby = imageToByteArray(Image.FromFile(dialog.FileName));
+                    pictureBox.ImageLocation = imgLocation; */
+
+                    imgLocation = dialog.FileName.ToString();
+                    pictureBox.ImageLocation = imgLocation;
+
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
+
+        private void button_serchDrrone_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                dialog.Title = "เลือกรูปภาพของโดรน";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    /*imgLocation = dialog.FileName.ToString();
+                    imgby = imageToByteArray(Image.FromFile(dialog.FileName));
+                    pictureBox.ImageLocation = imgLocation; */
+
+                    imgLocation = dialog.FileName.ToString();
+                    pictureBox.ImageLocation = imgLocation;
+
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
+
+        private void button_deletePart_Click(object sender, EventArgs e)
+        {
+            //delete drone
+            if (MessageBox.Show("ต้องการที่จะลบข้อมูลส่วนประกอบโดรนใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                String query = "DELETE FROM DeviceList where device_id = '" + textBox_partID.Text + "' ";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("ลบข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+            }
+
+            //show data to DataGridView
+            String query2 = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+            cmd = new SqlCommand(query2, con);
+
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            SDA2.Fill(dt);
+            con.Close();
+        }
+
+        private void BUT_addPart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // for date
+                comboBox_alarm.SelectedItem.ToString();
+                string format = "yyyy-MM-dd";
+
+                // for img 
+                byte[] img = null;
+                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+
+                String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id) "
+                                       + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respon.Text + "',@img,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_partPrice.Text + "','" + id_drone + "')";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("บันทึกข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
+            //show data to dataGridView Part
+            try
+            {
+                //show data to DataGridView
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                con.Close();
+                DG_Part.DataSource = dt;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
+
+        private void button_editPart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // for date
+                comboBox_alarm.SelectedItem.ToString();
+                string format = "yyyy-MM-dd";
+
+                // for img 
+                byte[] img = null;
+                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+
+                String query = "UPDATE DeviceList SET device_id = '" + textBox_partID.Text + "' , device_name = '" + textBox_partName.Text + "' , device_position = '" + textBox_partPosition.Text + "' , device_startDate = '" + dateTimePicker_startDate.Value.ToString(format) + "',device_buyDate = '" + dateTimePicker_reg.Value.ToString(format) + "',device_expDate = '" + dateTimePicker_expDate.Value.ToString(format) + "',vender_name = '" + textBox_venName.Text + "',vender_add = '" + textBox_venAdd.Text + "',vender_phone = '" + textBox_venPhone.Text + "',vender_responder = '" + textBox_respon.Text + "',device_img = @images,device_alarm = '" + comboBox_alarm.SelectedItem.ToString() + "',device_price = '" + textBox_partPrice.Text + "',device_pic = @img) ";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("แก้ไขข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
+            //show data to dataGridView Part
+            try
+            {
+                //show data to DataGridView
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                con.Close();
+                DG_Part.DataSource = dt;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
     }
 }

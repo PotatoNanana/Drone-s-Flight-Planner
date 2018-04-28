@@ -818,6 +818,11 @@
       <DependentUpon>MainV3.cs</DependentUpon>
     </Compile>
     <Compile Include="MyView\AddScreen.cs" />
+    <Compile Include="part.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>part.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PartDroneNotify.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -4810,6 +4815,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="part.xsc">
+      <DependentUpon>part.xsd</DependentUpon>
+    </None>
+    <None Include="part.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>part.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="part.xss">
+      <DependentUpon>part.xsd</DependentUpon>
+    </None>
     <None Include="PartDroneNotify.xsc">
       <DependentUpon>PartDroneNotify.xsd</DependentUpon>
     </None>
