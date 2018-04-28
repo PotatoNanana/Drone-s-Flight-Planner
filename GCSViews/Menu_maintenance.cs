@@ -107,7 +107,7 @@ namespace MissionPlanner.GCSViews
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
 
-                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "')";
+                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "',@img)";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
