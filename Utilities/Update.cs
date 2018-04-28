@@ -171,7 +171,7 @@ namespace MissionPlanner.Utilities
             if (updateFound)
             {
                 // do the update in the main thread
-                MainV2.instance.Invoke((MethodInvoker) delegate
+                MainV3.instance.Invoke((MethodInvoker) delegate
                 {
                     string extra = "";
 

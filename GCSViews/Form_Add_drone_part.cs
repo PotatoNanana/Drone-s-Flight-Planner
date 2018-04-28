@@ -115,7 +115,7 @@ namespace MissionPlanner.GCSViews
             {
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Filter = "Images(.jpg,.png)|*.png;*.jpg";
-                dialog.Title = "เลือกรูปภาพของชิ้นส่วนโดรน";
+                dialog.Title = "เลือกรูปภาพของส่วนประกอบโดรน";
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     /*imgLocation = dialog.FileName.ToString();

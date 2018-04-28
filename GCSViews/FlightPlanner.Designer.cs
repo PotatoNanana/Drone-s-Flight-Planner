@@ -53,13 +53,13 @@ namespace MissionPlanner.GCSViews
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlightPlanner));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CHK_verifyheight = new System.Windows.Forms.CheckBox();
             this.TXT_WPRad = new System.Windows.Forms.TextBox();
             this.TXT_DefaultAlt = new System.Windows.Forms.TextBox();
@@ -207,6 +207,12 @@ namespace MissionPlanner.GCSViews
             this.panelBASE = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.DG_Drone = new MissionPlanner.Controls.MyDataGridView();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dronenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.drone1 = new MissionPlanner.Drone1();
             this.panel7 = new System.Windows.Forms.Panel();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
             this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -217,11 +223,6 @@ namespace MissionPlanner.GCSViews
             this.textBox_farmID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.DG_Drone = new MissionPlanner.Controls.MyDataGridView();
-            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dronenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.droneBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.drone1 = new MissionPlanner.Drone1();
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
             this.panel6 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
@@ -236,7 +237,6 @@ namespace MissionPlanner.GCSViews
             this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.droneTableAdapter = new MissionPlanner.Drone1TableAdapters.DroneTableAdapter();
             this.farmTableAdapter = new MissionPlanner.farm1TableAdapters.FarmTableAdapter();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
@@ -249,17 +249,17 @@ namespace MissionPlanner.GCSViews
             this.panelBASE.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drone1)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.farm1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drone1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dEVICE_LIST)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceListBindingSource)).BeginInit();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // CHK_verifyheight
@@ -386,8 +386,8 @@ namespace MissionPlanner.GCSViews
             // 
             // dataGridViewImageColumn1
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle15;
             resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -395,8 +395,8 @@ namespace MissionPlanner.GCSViews
             // 
             // dataGridViewImageColumn2
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle16;
             resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
             this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
             this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -628,17 +628,17 @@ namespace MissionPlanner.GCSViews
             this.TagData});
             this.Commands.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Commands.Name = "Commands";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.Format = "N0";
-            dataGridViewCellStyle13.NullValue = "0";
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Commands.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.Commands.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.Format = "N0";
+            dataGridViewCellStyle20.NullValue = "0";
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Commands.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            this.Commands.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.Commands.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellContentClick);
             this.Commands.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellEndEdit);
             this.Commands.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Commands_DataError);
@@ -651,9 +651,9 @@ namespace MissionPlanner.GCSViews
             // Command
             // 
             this.Command.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(68)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            this.Command.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(68)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            this.Command.DefaultCellStyle = dataGridViewCellStyle17;
             this.Command.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             resources.ApplyResources(this.Command, "Command");
             this.Command.Name = "Command";
@@ -737,7 +737,7 @@ namespace MissionPlanner.GCSViews
             // Up
             // 
             this.Up.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.Up.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Up.DefaultCellStyle = dataGridViewCellStyle18;
             resources.ApplyResources(this.Up, "Up");
             this.Up.Image = ((System.Drawing.Image)(resources.GetObject("Up.Image")));
             this.Up.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -746,8 +746,8 @@ namespace MissionPlanner.GCSViews
             // Down
             // 
             this.Down.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Down.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Down.DefaultCellStyle = dataGridViewCellStyle19;
             resources.ApplyResources(this.Down, "Down");
             this.Down.Image = ((System.Drawing.Image)(resources.GetObject("Down.Image")));
             this.Down.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -1442,6 +1442,50 @@ namespace MissionPlanner.GCSViews
             resources.ApplyResources(this.panel_Main_farm, "panel_Main_farm");
             this.panel_Main_farm.Name = "panel_Main_farm";
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.DG_Drone);
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrone_Paint);
+            // 
+            // DG_Drone
+            // 
+            this.DG_Drone.AllowUserToOrderColumns = true;
+            this.DG_Drone.AutoGenerateColumns = false;
+            this.DG_Drone.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
+            this.DG_Drone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DG_Drone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.droneidDataGridViewTextBoxColumn,
+            this.dronenameDataGridViewTextBoxColumn});
+            this.DG_Drone.DataSource = this.droneBindingSource;
+            resources.ApplyResources(this.DG_Drone, "DG_Drone");
+            this.DG_Drone.Name = "DG_Drone";
+            this.DG_Drone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DG_Drone.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_drone_CellContentClick);
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            resources.ApplyResources(this.droneidDataGridViewTextBoxColumn, "droneidDataGridViewTextBoxColumn");
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
+            // dronenameDataGridViewTextBoxColumn
+            // 
+            this.dronenameDataGridViewTextBoxColumn.DataPropertyName = "drone_name";
+            resources.ApplyResources(this.dronenameDataGridViewTextBoxColumn, "dronenameDataGridViewTextBoxColumn");
+            this.dronenameDataGridViewTextBoxColumn.Name = "dronenameDataGridViewTextBoxColumn";
+            // 
+            // droneBindingSource
+            // 
+            this.droneBindingSource.DataMember = "Drone";
+            this.droneBindingSource.DataSource = this.drone1;
+            // 
+            // drone1
+            // 
+            this.drone1.DataSetName = "Drone1";
+            this.drone1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.DG_Farm);
@@ -1505,43 +1549,6 @@ namespace MissionPlanner.GCSViews
             // 
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            // 
-            // DG_Drone
-            // 
-            this.DG_Drone.AllowUserToOrderColumns = true;
-            this.DG_Drone.AutoGenerateColumns = false;
-            this.DG_Drone.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.DG_Drone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_Drone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.droneidDataGridViewTextBoxColumn,
-            this.dronenameDataGridViewTextBoxColumn});
-            this.DG_Drone.DataSource = this.droneBindingSource;
-            resources.ApplyResources(this.DG_Drone, "DG_Drone");
-            this.DG_Drone.Name = "DG_Drone";
-            this.DG_Drone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Drone.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_drone_CellContentClick);
-            // 
-            // droneidDataGridViewTextBoxColumn
-            // 
-            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
-            resources.ApplyResources(this.droneidDataGridViewTextBoxColumn, "droneidDataGridViewTextBoxColumn");
-            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
-            // 
-            // dronenameDataGridViewTextBoxColumn
-            // 
-            this.dronenameDataGridViewTextBoxColumn.DataPropertyName = "drone_name";
-            resources.ApplyResources(this.dronenameDataGridViewTextBoxColumn, "dronenameDataGridViewTextBoxColumn");
-            this.dronenameDataGridViewTextBoxColumn.Name = "dronenameDataGridViewTextBoxColumn";
-            // 
-            // droneBindingSource
-            // 
-            this.droneBindingSource.DataMember = "Drone";
-            this.droneBindingSource.DataSource = this.drone1;
-            // 
-            // drone1
-            // 
-            this.drone1.DataSetName = "Drone1";
-            this.drone1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lineSeparator2
             // 
@@ -1632,13 +1639,6 @@ namespace MissionPlanner.GCSViews
             // 
             this.farmTableAdapter.ClearBeforeFill = true;
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.DG_Drone);
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrone_Paint);
-            // 
             // FlightPlanner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1667,17 +1667,17 @@ namespace MissionPlanner.GCSViews
             this.panel4.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drone1)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.farm1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_Drone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drone1)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dEVICE_LIST)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceListBindingSource)).EndInit();
-            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
