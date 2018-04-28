@@ -9,8 +9,8 @@
     <DebugType>embedded</DebugType>
     <DebugSymbols>True</DebugSymbols>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Michael Oborne</Authors>
-    <Company>Michael Oborne</Company>
+    <Authors></Authors>
+    <Company></Company>
     <Description>MAVLink for Ardupilot</Description>
   </PropertyGroup>
 

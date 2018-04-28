@@ -54,6 +54,12 @@
             this.schedule_actionTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter();
             this.flightScheduleTableAdapter = new MissionPlanner.flightScheduleTableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleTableAdapter1 = new MissionPlanner.ActivityScheduleTableAdapters.FlightScheduleTableAdapter();
+            this.textBox_droneID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox_cost = new System.Windows.Forms.TextBox();
+            this.textBox_cap = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
@@ -72,12 +78,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 395);
+            this.panel1.Size = new System.Drawing.Size(834, 382);
             this.panel1.TabIndex = 0;
             // 
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.textBox_droneID);
+            this.panel_Main_farm.Controls.Add(this.label7);
+            this.panel_Main_farm.Controls.Add(this.textBox_cost);
+            this.panel_Main_farm.Controls.Add(this.textBox_cap);
+            this.panel_Main_farm.Controls.Add(this.label6);
+            this.panel_Main_farm.Controls.Add(this.label5);
             this.panel_Main_farm.Controls.Add(this.textBox_actName);
             this.panel_Main_farm.Controls.Add(this.textBox_actID);
             this.panel_Main_farm.Controls.Add(this.label2);
@@ -88,20 +100,20 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(834, 395);
+            this.panel_Main_farm.Size = new System.Drawing.Size(834, 382);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Act_Paint);
             // 
             // textBox_actName
             // 
-            this.textBox_actName.Location = new System.Drawing.Point(629, 160);
+            this.textBox_actName.Location = new System.Drawing.Point(623, 206);
             this.textBox_actName.Name = "textBox_actName";
             this.textBox_actName.Size = new System.Drawing.Size(187, 31);
             this.textBox_actName.TabIndex = 29;
             // 
             // textBox_actID
             // 
-            this.textBox_actID.Location = new System.Drawing.Point(629, 103);
+            this.textBox_actID.Location = new System.Drawing.Point(623, 151);
             this.textBox_actID.Name = "textBox_actID";
             this.textBox_actID.Size = new System.Drawing.Size(187, 31);
             this.textBox_actID.TabIndex = 28;
@@ -109,7 +121,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(513, 163);
+            this.label2.Location = new System.Drawing.Point(507, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 24);
             this.label2.TabIndex = 27;
@@ -118,7 +130,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(513, 106);
+            this.label1.Location = new System.Drawing.Point(507, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 26;
@@ -137,10 +149,10 @@
             this.action_capacity,
             this.action_cost});
             this.DG_Farm.DataSource = this.flightScheduleBindingSource1;
-            this.DG_Farm.Location = new System.Drawing.Point(25, 75);
+            this.DG_Farm.Location = new System.Drawing.Point(19, 87);
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Farm.Size = new System.Drawing.Size(460, 300);
+            this.DG_Farm.Size = new System.Drawing.Size(460, 280);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             // 
@@ -252,11 +264,60 @@
             // 
             this.flightScheduleTableAdapter1.ClearBeforeFill = true;
             // 
+            // textBox_droneID
+            // 
+            this.textBox_droneID.Location = new System.Drawing.Point(623, 98);
+            this.textBox_droneID.Name = "textBox_droneID";
+            this.textBox_droneID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_droneID.TabIndex = 39;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(507, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 24);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "รหัสโดรน";
+            // 
+            // textBox_cost
+            // 
+            this.textBox_cost.Location = new System.Drawing.Point(623, 318);
+            this.textBox_cost.Name = "textBox_cost";
+            this.textBox_cost.Size = new System.Drawing.Size(187, 31);
+            this.textBox_cost.TabIndex = 34;
+            this.textBox_cost.TextChanged += new System.EventHandler(this.textBox_cost_TextChanged);
+            // 
+            // textBox_cap
+            // 
+            this.textBox_cap.Location = new System.Drawing.Point(623, 261);
+            this.textBox_cap.Name = "textBox_cap";
+            this.textBox_cap.Size = new System.Drawing.Size(187, 31);
+            this.textBox_cap.TabIndex = 35;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(507, 264);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 24);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "ปริมาณสาร";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(507, 321);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 24);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "ค่าใช้จ่าย";
+            // 
             // Form_farm_act
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 395);
+            this.ClientSize = new System.Drawing.Size(834, 382);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_farm_act";
@@ -304,5 +365,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn action_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn action_capacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn action_cost;
+        private System.Windows.Forms.TextBox textBox_droneID;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox_cost;
+        private System.Windows.Forms.TextBox textBox_cap;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }

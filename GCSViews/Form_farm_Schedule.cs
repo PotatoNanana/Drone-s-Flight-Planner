@@ -41,35 +41,92 @@ namespace MissionPlanner.GCSViews
         {
             textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
             textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+            textBox_droneID.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+            textBox_cap.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+            textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
-        { 
-            // add schedule
-            Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act(id_farm);
-            form_Add_Farm_Act.ShowDialog();
+        {            
+            try
+            {               
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    string format = "yyyy-MM-dd";
+                    String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,action_name,action_capacity,action_cost,action_datetime) " + "VALUES('" + textBox_actID.Text + "','" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.SelectionEnd.ToShortDateString() + "')";
+                    SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                    SDA.SelectCommand.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("ทำการบันทึกข้อมูลเรียบร้อยแล้ว !!");
+
+                    //show data to DataGridView
+                    con.Open();
+                    String query2 = "SELECT * FROM Farm";
+                    SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                    DataTable dt = new DataTable();
+                    SDA2.Fill(dt);
+                    DG_Farm.DataSource = dt;
+                    con.Close();
+                
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
         
         private void button_delete_Click(object sender, EventArgs e)
-        {
-            // delete Schedule
-            if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        {            
+            try
             {
-                con.Open();
-                String query = "DELETE FROM FlightSchedule where action_no = '" + textBox_actID.Text + "' ";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                SDA.SelectCommand.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("DELETE Record From DB Success!!");
+                if (MessageBox.Show("คุณต้อการลบกิจกรรมนี้ใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    String query = "DELETE FROM FlightSchedule where action_no = '" + textBox_actID.Text + "' ";
+                    SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                    SDA.SelectCommand.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("ทำการลบข้อมูลเรียบร้อยแล้ว !!");
+
+                    //show data to DataGridView
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    String query2 = "SELECT * FROM Farm";
+                    SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                    DataTable dt = new DataTable();
+                    SDA2.Fill(dt);
+                    DG_Farm.DataSource = dt;
+                    con.Close();
+                }
             }
-            
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void button_edit_Click(object sender, EventArgs e)
         {
-            // edit schedule
-            Form_Edit_farm_act form_Edit_Farm = new Form_Edit_farm_act();
-            form_Edit_Farm.ShowDialog();
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                string format = "yyyy-MM-dd";
+                String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',action_datetime = '" + monthCalendar1.SelectionEnd.ToShortDateString() + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "') ";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("ทำการแก้ไขข้อมูลเรียบร้อยแล้ว !!");
+
+                //show data to DataGridView
+                con.Open();
+                String query2 = "SELECT * FROM Farm";
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                SDA2.Fill(dt);
+                DG_Farm.DataSource = dt;
+                con.Close();
+
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void button_serch_Click(object sender, EventArgs e)
@@ -128,15 +185,15 @@ namespace MissionPlanner.GCSViews
         private void panelFarm_schedule_Paint(object sender, PaintEventArgs e)
         {
             //show data to DataGridView
-            con.Open();
-
-            //string a = "yyyy-MM-dd";
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
 
             String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
+
             con.Close();
         }
     }

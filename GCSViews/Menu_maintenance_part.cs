@@ -115,10 +115,7 @@ namespace MissionPlanner.GCSViews
         }
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*textBox_partID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-           textBox_partName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-           pictureBox.Image = null;*/
+        {            
             try
             {
                 String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = @iddrone";

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="action_name" targetNamespace="http://tempuri.org/action_name.xsd" xmlns:mstns="http://tempuri.org/action_name.xsd" xmlns="http://tempuri.org/action_name.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DroneFlightPlannerConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DroneFlightPlannerConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MissionPlanner.Properties.Settings.GlobalReference.Default.DroneFlightPlannerConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FlightScheduleTableAdapter" GeneratorDataComponentClassName="FlightScheduleTableAdapter" Name="FlightSchedule" UserDataComponentName="FlightScheduleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DroneFlightPlannerConnectionString (Settings)" DbObjectName="DroneFlightPlanner.dbo.FlightSchedule" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT action_name FROM dbo.FlightSchedule</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="action_name" DataSetColumn="action_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="action_name" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="action_name" msprop:Generator_UserDSName="action_name">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FlightSchedule" msprop:Generator_TableClassName="FlightScheduleDataTable" msprop:Generator_TableVarName="tableFlightSchedule" msprop:Generator_TablePropName="FlightSchedule" msprop:Generator_RowDeletingName="FlightScheduleRowDeleting" msprop:Generator_RowChangingName="FlightScheduleRowChanging" msprop:Generator_RowEvHandlerName="FlightScheduleRowChangeEventHandler" msprop:Generator_RowDeletedName="FlightScheduleRowDeleted" msprop:Generator_UserTableName="FlightSchedule" msprop:Generator_RowChangedName="FlightScheduleRowChanged" msprop:Generator_RowEvArgName="FlightScheduleRowChangeEvent" msprop:Generator_RowClassName="FlightScheduleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="action_name" msprop:Generator_ColumnVarNameInTable="columnaction_name" msprop:Generator_ColumnPropNameInRow="action_name" msprop:Generator_ColumnPropNameInTable="action_nameColumn" msprop:Generator_UserColumnName="action_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
