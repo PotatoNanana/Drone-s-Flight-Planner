@@ -3653,7 +3653,7 @@ namespace MissionPlanner
         }
         private void MenuMain_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("Menu_main2");
+            MyView.ShowScreen("FlightPlanner");
         }
 
         private void toolStripConnectionControl_Click(object sender, EventArgs e)
@@ -3663,16 +3663,16 @@ namespace MissionPlanner
 
         private void but_mainMenu_Click(object sender, EventArgs e)
         {
-            SidePanel.Width = but_mainMenu.Width;
-            SidePanel.Left = but_mainMenu.Left;
-            MyView.ShowScreen("Menu_main2");
+            //SidePanel.Width = but_mainMenu.Width;
+            //SidePanel.Left = but_mainMenu.Left;
+            //MyView.ShowScreen("Menu_main2");
         }
 
         private void but_farmProfile_Click(object sender, EventArgs e)
         {
-            SidePanel.Width = but_farmProfile.Width;
-            SidePanel.Left = but_farmProfile.Left;
-            MyView.ShowScreen("Menu_farm");
+            //SidePanel.Width = but_farmProfile.Width;
+            //SidePanel.Left = but_farmProfile.Left;
+            //MyView.ShowScreen("Menu_farm");
         }
 
         private void but_dronePart_Click(object sender, EventArgs e)

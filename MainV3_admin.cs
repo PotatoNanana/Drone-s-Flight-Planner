@@ -3706,9 +3706,9 @@ namespace MissionPlanner
 
         private void but_setup_Click(object sender, EventArgs e)
         {
-            SidePanel.Width = but_setup.Width;
-            SidePanel.Left = but_setup.Left;
-            MyView.ShowScreen("Menu_setup");
+            //SidePanel.Width = but_setup.Width;
+            //SidePanel.Left = but_setup.Left;
+            //MyView.ShowScreen("Menu_setup");
         }
 
         private void MainV3_admin_Load(object sender, EventArgs e)
@@ -3726,6 +3726,11 @@ namespace MissionPlanner
         private void menu_Click(object sender, EventArgs e)
         {
 
+        }
+        
+        private void MainV3_admin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

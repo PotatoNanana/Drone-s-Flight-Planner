@@ -129,7 +129,6 @@ namespace MissionPlanner
                     {
                         case "developer":
                             {
-                                MessageBox.Show("YOU ARE developer");
                                 this.Hide();
                                 var frm = new MainV3_developer();
                                 frm.ShowDialog();
@@ -138,16 +137,14 @@ namespace MissionPlanner
 
                         case "admin":
                             {
-                                MessageBox.Show("YOU ARE ADMIN");
                                 this.Hide();
                                 var frm = new MainV3_admin();
                                 frm.ShowDialog();
                                 break;
                             }
 
-                        case "flighter":
+                        case "pilot":
                             {
-                                MessageBox.Show("YOU ARE flighter");
                                 this.Hide();
                                 var frm = new MainV3_pilot();
                                 frm.ShowDialog();
@@ -156,7 +153,6 @@ namespace MissionPlanner
 
                         default:
                             {
-                                MessageBox.Show(role);
                                 this.Hide();
                                 var frm = new MainV3();
                                 frm.ShowDialog();
@@ -167,7 +163,7 @@ namespace MissionPlanner
             }
             else
             {
-                MessageBox.Show("YOU ARE NOT GRANTED WITH ACCESS \n please try again!");
+                MessageBox.Show("ชื่อผู้ใช้งานหรือรหัสผ่านของคุณไม่ถูกต้อง \nกรุณากรอกใหม่อีกครั้ง");
             }
             con.Close();
         }

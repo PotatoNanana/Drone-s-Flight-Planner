@@ -121,6 +121,15 @@
     <value>242, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CTX_mainmenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 92</value>
+  </data>
+  <data name="&gt;&gt;CTX_mainmenu.Name" xml:space="preserve">
+    <value>CTX_mainmenu</value>
+  </data>
+  <data name="&gt;&gt;CTX_mainmenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="autoHideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 22</value>
   </data>
@@ -144,15 +153,6 @@
   </data>
   <data name="connectionOptionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Connection Options</value>
-  </data>
-  <data name="CTX_mainmenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 92</value>
-  </data>
-  <data name="&gt;&gt;CTX_mainmenu.Name" xml:space="preserve">
-    <value>CTX_mainmenu</value>
-  </data>
-  <data name="&gt;&gt;CTX_mainmenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="but_maintenance.AutoSize" type="System.Boolean, mscorlib">
@@ -182,7 +182,7 @@
     <value>NoControl</value>
   </data>
   <data name="but_maintenance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>474, 8</value>
+    <value>158, 8</value>
   </data>
   <data name="but_maintenance.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 51</value>
@@ -234,7 +234,7 @@
     <value>NoControl</value>
   </data>
   <data name="but_setup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>698, 8</value>
+    <value>382, 8</value>
   </data>
   <data name="but_setup.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 51</value>
@@ -306,7 +306,7 @@
     <value>NoControl</value>
   </data>
   <data name="but_flightPlan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 8</value>
+    <value>0, 8</value>
   </data>
   <data name="but_flightPlan.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 51</value>
@@ -331,114 +331,6 @@
   </data>
   <data name="&gt;&gt;but_flightPlan.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="but_mainMenu.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="but_mainMenu.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="but_mainMenu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PJ Standard, 18pt, style=Bold</value>
-  </data>
-  <data name="but_mainMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAYAAAAiwE4nAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADvSURBVEhL7Zbh
-        DYIwEIUZwVEYgREYgREYiVEcwRE6ghvUe6ZtjuO12tL4QyX5Er3evS9KWhi899U45y6Arb2CFkuIaBTi
-        NbKeErSYAwLhLvgAPldJaZEhwXMQRJmWzmyGQYsWCVyUIMfCZi20qJGg1QSXWFmGhhYjErCZwHfYWFaE
-        FgEGTVANWemhIM3YYzc13AoyDnt19wUNoZEFtHCQahn2WE9ZBFfaq1rG9lgv0gHxCVnkKU1/afilk2ro
-        xaQdNULc32uG0r1vFu4GNVgzvZq/kA6B7xfiMYV1RukR1ixs5ceFOFfZSXIG9VbnhwcF5v9Zr8Ru4gAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="but_mainMenu.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="but_mainMenu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="but_mainMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 8</value>
-  </data>
-  <data name="but_mainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 51</value>
-  </data>
-  <data name="but_mainMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="but_mainMenu.Text" xml:space="preserve">
-    <value> หน้าหลัก</value>
-  </data>
-  <data name="but_mainMenu.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;but_mainMenu.Name" xml:space="preserve">
-    <value>but_mainMenu</value>
-  </data>
-  <data name="&gt;&gt;but_mainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;but_mainMenu.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;but_mainMenu.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="but_farmProfile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="but_farmProfile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="but_farmProfile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>PJ Standard, 18pt, style=Bold</value>
-  </data>
-  <data name="but_farmProfile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABYAAAAcCAYAAABlL09dAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF7SURBVEhLlZVb
-        ccMwEEULIRCKoGMI+e70IxACIRAMoRACoRAMIRAEoQzce9SsR96sHvbMkSXr7rW0s7Lf1nXdkVI6iZtY
-        ChifvLbFbqDgi/gVawDPL6W+xdZR0LkwaXEuDWpsHQVwRUaeVBrUyI20o6s1Jm/kyY2EswvscfNGntxI
-        eNR49kae3Eh4dYE9utWRGwmp3cgggrLr1vTWkXg0Hd00wG6goLsz8dxLfYuXBwom31ylIde10JA6dvgQ
-        zHPst3koDRGy4vfnmGDqO+eT54L5D2GGnm1HZkpQKSDwW/Ay7maEMeNS68krN+Oe2GAHXNGcsZTGtS+a
-        Z+To/xurc+Q7ccj4yHEmZVRANGfk7wjGP26iBSn7fN6j+QemZlwrnRr8ZSbBguwF3NnNdtQx9oEtSIMd
-        DA6S1Tzlagcr/2GOGn+JXgXtqmIU/taRmWfK+RhFAb2KMObQoEZgUGMJDSIkphIik4gUmkRIS44jk5DQ
-        JEJiVkyOB0jLH+Ip+PUtuTTIAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="but_farmProfile.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="but_farmProfile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="but_farmProfile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 8</value>
-  </data>
-  <data name="but_farmProfile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 51</value>
-  </data>
-  <data name="but_farmProfile.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="but_farmProfile.Text" xml:space="preserve">
-    <value> ข้อมูลฟาร์ม</value>
-  </data>
-  <data name="but_farmProfile.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;but_farmProfile.Name" xml:space="preserve">
-    <value>but_farmProfile</value>
-  </data>
-  <data name="&gt;&gt;but_farmProfile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;but_farmProfile.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;but_farmProfile.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

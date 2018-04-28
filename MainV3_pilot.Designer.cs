@@ -44,8 +44,6 @@ namespace MissionPlanner
             this.but_setup = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.but_flightPlan = new System.Windows.Forms.Button();
-            this.but_mainMenu = new System.Windows.Forms.Button();
-            this.but_farmProfile = new System.Windows.Forms.Button();
             this.menu = new MissionPlanner.Controls.MyButton();
             this.CTX_mainmenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,8 +93,6 @@ namespace MissionPlanner
             this.panel1.Controls.Add(this.but_setup);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.but_flightPlan);
-            this.panel1.Controls.Add(this.but_mainMenu);
-            this.panel1.Controls.Add(this.but_farmProfile);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
@@ -140,28 +136,6 @@ namespace MissionPlanner
             this.but_flightPlan.UseVisualStyleBackColor = true;
             this.but_flightPlan.Click += new System.EventHandler(this.but_flightPlan_Click);
             // 
-            // but_mainMenu
-            // 
-            resources.ApplyResources(this.but_mainMenu, "but_mainMenu");
-            this.but_mainMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.but_mainMenu.FlatAppearance.BorderSize = 0;
-            this.but_mainMenu.ForeColor = System.Drawing.Color.White;
-            this.but_mainMenu.Name = "but_mainMenu";
-            this.but_mainMenu.UseCompatibleTextRendering = true;
-            this.but_mainMenu.UseVisualStyleBackColor = true;
-            this.but_mainMenu.Click += new System.EventHandler(this.but_mainMenu_Click);
-            // 
-            // but_farmProfile
-            // 
-            resources.ApplyResources(this.but_farmProfile, "but_farmProfile");
-            this.but_farmProfile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.but_farmProfile.FlatAppearance.BorderSize = 0;
-            this.but_farmProfile.ForeColor = System.Drawing.Color.White;
-            this.but_farmProfile.Name = "but_farmProfile";
-            this.but_farmProfile.UseCompatibleTextRendering = true;
-            this.but_farmProfile.UseVisualStyleBackColor = true;
-            this.but_farmProfile.Click += new System.EventHandler(this.but_farmProfile_Click);
-            // 
             // menu
             // 
             resources.ApplyResources(this.menu, "menu");
@@ -195,8 +169,6 @@ namespace MissionPlanner
         private System.Windows.Forms.ToolStripMenuItem readonlyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectionOptionsToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button but_mainMenu;
-        private System.Windows.Forms.Button but_farmProfile;
         private System.Windows.Forms.Button but_setup;
         private System.Windows.Forms.Button but_flightPlan;
         private System.Windows.Forms.Panel SidePanel;
