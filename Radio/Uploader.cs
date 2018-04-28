@@ -474,7 +474,7 @@ namespace uploader
             {
                 var fred = 1;
                 fred++;
-                Console.WriteLine("slowdown");
+                //Console.WriteLine("slowdown");
             }
             port.Write(b, 0, 1);
         }
@@ -485,7 +485,7 @@ namespace uploader
             {
                 var fred = 1;
                 fred++;
-                Console.WriteLine("slowdown");
+                //Console.WriteLine("slowdown");
             }
             port.Write(data, offset, length);
         }

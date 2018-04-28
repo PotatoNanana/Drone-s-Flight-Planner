@@ -310,7 +310,7 @@ namespace MissionPlanner.GeoRef
                             }
                             catch
                             {
-                                Console.WriteLine("Bad "+gpstouse+" Line");
+                                //Console.WriteLine("Bad "+gpstouse+" Line");
                             }
                         }
                         else if (item.msgtype == "ATT")
@@ -837,7 +837,7 @@ namespace MissionPlanner.GeoRef
 
                     RectangleF rect = getboundingbox(picInfo.Lat, picInfo.Lon, picInfo.AltAMSL, alpha, (double)num_hfov.Value, (double)num_vfov.Value);
 
-                    Console.WriteLine(rect);
+                    //Console.WriteLine(rect);
 
                     //http://en.wikipedia.org/wiki/World_file
                     /* using (StreamWriter swjpw = new StreamWriter(dirWithImages + Path.DirectorySeparatorChar + Path.GetFileNameWithoutExtension(filename) + ".jgw"))
@@ -1305,7 +1305,7 @@ namespace MissionPlanner.GeoRef
         private int GenPhotoStationRecord(XmlTextWriter swloctrim, string imgname, double lat, double lng, double alt,
             double roll, double pitch, double yaw, int imgwidth, int imgheight, int lastRecordN)
         {
-            Console.WriteLine("yaw {0}", yaw);
+            //Console.WriteLine("yaw {0}", yaw);
 
             int photoStationID = lastRecordN++;
             int pointRecordID = lastRecordN++;
@@ -1426,7 +1426,7 @@ namespace MissionPlanner.GeoRef
                 maxy = Math.Max(maxy, pnt.Lng);
             }
 
-            Console.WriteLine("{0} {1} {2} {3}", minx, maxx, miny, maxy);
+            //Console.WriteLine("{0} {1} {2} {3}", minx, maxx, miny, maxy);
 
             return new RectangleF((float) miny, (float) minx, (float) (maxy - miny), (float) (maxx - minx));
         }

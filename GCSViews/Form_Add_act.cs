@@ -62,5 +62,6 @@ namespace MissionPlanner.GCSViews
             }
             return base.ProcessDialogKey(keyData);
         }
+        
     }
 }

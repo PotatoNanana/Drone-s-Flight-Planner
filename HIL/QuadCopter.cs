@@ -420,19 +420,19 @@ namespace MissionPlanner.HIL
                 thrust += m[i]*self.thrust_scale; // newtons
             }
 
-            //Console.WriteLine("rot_accel " + rot_accel.ToString());
+            ////Console.WriteLine("rot_accel " + rot_accel.ToString());
 
             // rotational air resistance
             rot_accel.x -= self.gyro.x*radians(5000.0)/self.terminal_rotation_rate;
             rot_accel.y -= self.gyro.y*radians(5000.0)/self.terminal_rotation_rate;
             rot_accel.z -= self.gyro.z*radians(400.0)/self.terminal_rotation_rate;
 
-            //  Console.WriteLine("rot_accel " + rot_accel.ToString());
+            //  //Console.WriteLine("rot_accel " + rot_accel.ToString());
 
             // update rotational rates in body frame
             self.gyro += rot_accel*delta_time.TotalSeconds;
 
-            //   Console.WriteLine("gyro " + gyro.ToString());
+            //   //Console.WriteLine("gyro " + gyro.ToString());
 
             // update attitude
             self.dcm.rotate(self.gyro*delta_time.TotalSeconds);
@@ -480,7 +480,7 @@ namespace MissionPlanner.HIL
             if (self.on_ground())
             {
                 if (!self.on_ground(old_position))
-                    Console.WriteLine("Hit ground at {0} m/s", (self.velocity.z));
+                    //Console.WriteLine("Hit ground at {0} m/s", (self.velocity.z));
 
                 self.velocity = new Vector3(0, 0, 0);
                 // zero roll/pitch, but keep yaw

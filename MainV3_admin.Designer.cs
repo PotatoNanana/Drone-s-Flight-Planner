@@ -14,7 +14,7 @@ namespace MissionPlanner
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            Console.WriteLine("MainV3_Dispose");
+            //Console.WriteLine("MainV3_Dispose");
             if (PluginThreadrunner != null)
                 PluginThreadrunner.Dispose();
             if (disposing && (components != null))
@@ -34,7 +34,7 @@ namespace MissionPlanner
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainV3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainV3_admin));
             this.CTX_mainmenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.autoHideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -178,7 +178,7 @@ namespace MissionPlanner
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menu);
             this.KeyPreview = true;
-            this.Name = "MainV3";
+            this.Name = "MainV3_admin";
             this.Load += new System.EventHandler(this.MainV3_admin_Load);
             this.CTX_mainmenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

@@ -107,7 +107,7 @@ namespace MissionPlanner.NoFly
             {
                 foreach (var feat in doc.Features)
                 {
-                    //Console.WriteLine("feat " + feat.GetType());
+                    ////Console.WriteLine("feat " + feat.GetType());
                     //processKML((Element)feat);
                 }
             }
@@ -115,7 +115,7 @@ namespace MissionPlanner.NoFly
             {
                 foreach (SharpKml.Dom.Feature feat in folder.Features)
                 {
-                    //Console.WriteLine("feat "+feat.GetType());
+                    ////Console.WriteLine("feat "+feat.GetType());
                     //processKML(feat);
                 }
             }

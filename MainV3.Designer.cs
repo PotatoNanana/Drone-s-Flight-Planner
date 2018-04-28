@@ -178,6 +178,7 @@ namespace MissionPlanner
             this.Controls.Add(this.menu);
             this.KeyPreview = true;
             this.Name = "MainV3";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainV3_FormClosed);
             this.Load += new System.EventHandler(this.MainV3_Load);
             this.CTX_mainmenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
