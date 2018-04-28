@@ -996,7 +996,7 @@
     <value>connectionControl1</value>
   </data>
   <data name="&gt;&gt;connectionControl1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ConnectionControl, MissionPlanner, Version=1.1.6683.30108, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ConnectionControl, MissionPlanner, Version=1.1.6692.40084, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;connectionControl1.Parent" xml:space="preserve">
     <value>panelWaypoints</value>
@@ -1582,7 +1582,7 @@
     <value>Commands</value>
   </data>
   <data name="&gt;&gt;Commands.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6683.30108, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6692.40084, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Commands.Parent" xml:space="preserve">
     <value>panelWaypoints</value>
@@ -2645,14 +2645,23 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="droneidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>รหัสโดรน</value>
+  </data>
+  <data name="dronenameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ชื่อโดรน</value>
+  </data>
   <metadata name="droneBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>107, 56</value>
+  </metadata>
+  <metadata name="drone1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
   <data name="DG_Drone.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 3</value>
   </data>
   <data name="DG_Drone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 200</value>
+    <value>260, 152</value>
   </data>
   <data name="DG_Drone.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2661,7 +2670,7 @@
     <value>DG_Drone</value>
   </data>
   <data name="&gt;&gt;DG_Drone.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6683.30108, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6692.40084, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Drone.Parent" xml:space="preserve">
     <value>panel8</value>
@@ -2670,10 +2679,10 @@
     <value>0</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 335</value>
+    <value>0, 420</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 210</value>
+    <value>300, 171</value>
   </data>
   <data name="panel8.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -2694,7 +2703,7 @@
     <value>DG_Farm</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6683.30108, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6692.40084, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Parent" xml:space="preserve">
     <value>panel7</value>
@@ -3020,6 +3029,9 @@
   <data name="&gt;&gt;panelBASE.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="drone1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <metadata name="farmBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>510, 56</value>
   </metadata>
@@ -3036,7 +3048,7 @@
     <value>DG_Farm</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6683.30108, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.1.6692.40084, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Parent" xml:space="preserve">
     <value>panel7</value>
@@ -3058,21 +3070,6 @@
   </metadata>
   <metadata name="farm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>427, 56</value>
-  </metadata>
-  <data name="droneidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>รหัสโดรน</value>
-  </data>
-  <data name="dronenameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>ชื่อโดรน</value>
-  </data>
-  <metadata name="droneBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>107, 56</value>
-  </metadata>
-  <metadata name="drone1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="drone1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
   </metadata>
   <data name="Main_but_farm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -3891,30 +3888,6 @@
   <data name="&gt;&gt;flightPattern.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;farmidDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>farmidDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;farmidDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;farmnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>farmnameDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;farmnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;farmBindingSource.Name" xml:space="preserve">
-    <value>farmBindingSource</value>
-  </data>
-  <data name="&gt;&gt;farmBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;farm1.Name" xml:space="preserve">
-    <value>farm1</value>
-  </data>
-  <data name="&gt;&gt;farm1.Type" xml:space="preserve">
-    <value>MissionPlanner.farm1, farm1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;droneidDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>droneidDataGridViewTextBoxColumn</value>
   </data>
@@ -3938,6 +3911,30 @@
   </data>
   <data name="&gt;&gt;drone1.Type" xml:space="preserve">
     <value>MissionPlanner.Drone1, Drone1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;farmidDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>farmidDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;farmidDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;farmnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>farmnameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;farmnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;farmBindingSource.Name" xml:space="preserve">
+    <value>farmBindingSource</value>
+  </data>
+  <data name="&gt;&gt;farmBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;farm1.Name" xml:space="preserve">
+    <value>farm1</value>
+  </data>
+  <data name="&gt;&gt;farm1.Type" xml:space="preserve">
+    <value>MissionPlanner.farm1, farm1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
@@ -3979,7 +3976,7 @@
     <value>toolStripConnectionControl</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6683.30108, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6692.40084, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;droneTableAdapter.Name" xml:space="preserve">
     <value>droneTableAdapter</value>

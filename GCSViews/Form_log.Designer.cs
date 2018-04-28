@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_log));
             this.panel_Main_farm = new System.Windows.Forms.Panel();
             this.But_save = new System.Windows.Forms.Button();
@@ -35,25 +36,35 @@
             this.textBox_logNo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_actNo = new System.Windows.Forms.TextBox();
-            this.textBox_patternName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox_patternName = new System.Windows.Forms.TextBox();
+            this.action_name = new MissionPlanner.action_name();
+            this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flightScheduleTableAdapter = new MissionPlanner.action_nameTableAdapters.FlightScheduleTableAdapter();
+            this.droneFlightPlannerDataSet4 = new MissionPlanner.DroneFlightPlannerDataSet4();
+            this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.flightScheduleTableAdapter1 = new MissionPlanner.DroneFlightPlannerDataSet4TableAdapters.FlightScheduleTableAdapter();
             this.panel_Main_farm.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.action_name)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.comboBox1);
             this.panel_Main_farm.Controls.Add(this.But_save);
             this.panel_Main_farm.Controls.Add(this.textBox_patternMask);
             this.panel_Main_farm.Controls.Add(this.textBox_logNo);
             this.panel_Main_farm.Controls.Add(this.label8);
             this.panel_Main_farm.Controls.Add(this.label3);
-            this.panel_Main_farm.Controls.Add(this.textBox_actNo);
             this.panel_Main_farm.Controls.Add(this.textBox_patternName);
             this.panel_Main_farm.Controls.Add(this.label2);
             this.panel_Main_farm.Controls.Add(this.label1);
@@ -117,29 +128,14 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "หมายเหตุเพิ่มเติม";
             // 
-            // textBox_actNo
-            // 
-            this.textBox_actNo.Location = new System.Drawing.Point(149, 121);
-            this.textBox_actNo.Name = "textBox_actNo";
-            this.textBox_actNo.Size = new System.Drawing.Size(200, 31);
-            this.textBox_actNo.TabIndex = 29;
-            // 
-            // textBox_patternName
-            // 
-            this.textBox_patternName.Location = new System.Drawing.Point(149, 167);
-            this.textBox_patternName.Name = "textBox_patternName";
-            this.textBox_patternName.Size = new System.Drawing.Size(200, 31);
-            this.textBox_patternName.TabIndex = 28;
-            this.textBox_patternName.TextChanged += new System.EventHandler(this.textBox_patternName_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(33, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 24);
+            this.label2.Size = new System.Drawing.Size(68, 24);
             this.label2.TabIndex = 27;
-            this.label2.Text = "รหัสกิจกรรม";
+            this.label2.Text = "ชื่อกิจกรรม";
             // 
             // label1
             // 
@@ -179,6 +175,53 @@
             this.Main_but_farm.UseCompatibleTextRendering = true;
             this.Main_but_farm.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.flightScheduleBindingSource1;
+            this.comboBox1.DisplayMember = "action_name";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(149, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 32);
+            this.comboBox1.TabIndex = 44;
+            this.comboBox1.ValueMember = "action_no";
+            // 
+            // textBox_patternName
+            // 
+            this.textBox_patternName.Location = new System.Drawing.Point(149, 167);
+            this.textBox_patternName.Name = "textBox_patternName";
+            this.textBox_patternName.Size = new System.Drawing.Size(200, 31);
+            this.textBox_patternName.TabIndex = 28;
+            this.textBox_patternName.TextChanged += new System.EventHandler(this.textBox_patternName_TextChanged);
+            // 
+            // action_name
+            // 
+            this.action_name.DataSetName = "action_name";
+            this.action_name.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flightScheduleBindingSource
+            // 
+            this.flightScheduleBindingSource.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource.DataSource = this.action_name;
+            // 
+            // flightScheduleTableAdapter
+            // 
+            this.flightScheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // droneFlightPlannerDataSet4
+            // 
+            this.droneFlightPlannerDataSet4.DataSetName = "DroneFlightPlannerDataSet4";
+            this.droneFlightPlannerDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flightScheduleBindingSource1
+            // 
+            this.flightScheduleBindingSource1.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource1.DataSource = this.droneFlightPlannerDataSet4;
+            // 
+            // flightScheduleTableAdapter1
+            // 
+            this.flightScheduleTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form_log
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,10 +231,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_log";
             this.Text = "Flight Log";
+            this.Load += new System.EventHandler(this.Form_log_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_log_KeyDown);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.action_name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,16 +247,22 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_Main_farm;
-        private System.Windows.Forms.TextBox textBox_patternName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_actNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_patternMask;
         private System.Windows.Forms.Button But_save;
         private System.Windows.Forms.TextBox textBox_logNo;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox_patternName;
+        private action_name action_name;
+        private System.Windows.Forms.BindingSource flightScheduleBindingSource;
+        private action_nameTableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter;
+        private DroneFlightPlannerDataSet4 droneFlightPlannerDataSet4;
+        private System.Windows.Forms.BindingSource flightScheduleBindingSource1;
+        private DroneFlightPlannerDataSet4TableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter1;
     }
 }

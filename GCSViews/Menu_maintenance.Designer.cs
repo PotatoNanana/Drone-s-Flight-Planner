@@ -177,7 +177,7 @@
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
             this.panel_Main_farm.Controls.Add(this.panel3);
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14F);
-            this.panel_Main_farm.Location = new System.Drawing.Point(36, 40);
+            this.panel_Main_farm.Location = new System.Drawing.Point(19, 16);
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(1390, 673);
             this.panel_Main_farm.TabIndex = 8;
@@ -336,7 +336,7 @@
             this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator2.Name = "lineSeparator2";
             this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator2.Size = new System.Drawing.Size(680, 2);
+            this.lineSeparator2.Size = new System.Drawing.Size(1269, 2);
             this.lineSeparator2.TabIndex = 8;
             // 
             // panel3

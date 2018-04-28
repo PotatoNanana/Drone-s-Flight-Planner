@@ -50,19 +50,19 @@ namespace MissionPlanner.GCSViews
             con.Open();
 
             // edit flight log
-            String query = "INSERT INTO FlightLog (log_no,action_no,farm_no,drone_id,pattern_name,pattern_mask) " + "VALUES('" + textBox_logNo.Text + "','" +textBox_actNo.Text + "',@idfarm,@iddrone,'" + file + "','" +textBox_patternMask.Text+"' )";
+            String query = "INSERT INTO FlightLog (log_no,action_no,farm_no,drone_id,pattern_name,pattern_mask) " + "VALUES('" + textBox_logNo.Text + "','" +comboBox1.Text + "',@idfarm,@iddrone,'" + file + "','" +textBox_patternMask.Text+"' )";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
 
             cmd.Parameters.Add("@idfarm", ID_farm);
             cmd.Parameters.Add("@iddrone", ID_drone);
 
             // update status activity in flight_schedule
-            String query2 = "UPDATE FlightSchedule SET action_finish = 'y' ";
+            String query2 = "UPDATE FlightSchedule SET action_finish = 'y' WHERE action_id = '"+comboBox1.Text+"' ";
 
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("Save To DB Success!!");
+            MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
 
             //notify drone tools
             droneId = ID_drone;
@@ -92,6 +92,15 @@ namespace MissionPlanner.GCSViews
                 return true;
             }
             return base.ProcessDialogKey(keyData);
+        }
+
+        private void Form_log_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet4.FlightSchedule' table. You can move, or remove it, as needed.
+            this.flightScheduleTableAdapter1.Fill(this.droneFlightPlannerDataSet4.FlightSchedule);
+            // TODO: This line of code loads data into the 'action_name.FlightSchedule' table. You can move, or remove it, as needed.
+            this.flightScheduleTableAdapter.Fill(this.action_name.FlightSchedule);
+
         }
     }
 }

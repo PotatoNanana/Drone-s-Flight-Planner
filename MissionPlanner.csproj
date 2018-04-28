@@ -435,6 +435,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="action_name.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>action_name.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ActivitySchedule.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -499,6 +504,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DroneFlightPlannerDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
@@ -4048,6 +4058,17 @@
     <EmbeddedResource Include="Wizard\Wizard.zh-TW.resx">
       <DependentUpon>Wizard.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="action_name.xsc">
+      <DependentUpon>action_name.xsd</DependentUpon>
+    </None>
+    <None Include="action_name.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>action_name.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="action_name.xss">
+      <DependentUpon>action_name.xsd</DependentUpon>
+    </None>
     <None Include="ActivitySchedule.xsc">
       <DependentUpon>ActivitySchedule.xsd</DependentUpon>
     </None>
@@ -4181,6 +4202,17 @@
     </None>
     <None Include="DroneFlightPlannerDataSet3.xss">
       <DependentUpon>DroneFlightPlannerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet4.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet4.xss">
+      <DependentUpon>DroneFlightPlannerDataSet4.xsd</DependentUpon>
     </None>
     <None Include="FArm.xsc">
       <DependentUpon>FArm.xsd</DependentUpon>
