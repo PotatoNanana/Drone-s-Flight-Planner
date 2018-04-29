@@ -8010,6 +8010,16 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             DG_Drone.DataSource = dt;
             con.Close();
         }
+
+        internal string id_droneGet()
+        {
+            return id_drone;
+        }
+
+        internal string id_farmGet()
+        {
+            return id_farm;
+        }
     }
 
 

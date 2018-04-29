@@ -44,8 +44,8 @@ namespace MissionPlanner.GCSViews
             FlightPlanner FP = new FlightPlanner();
             // FlightPlanner.id_farm = ID_farm;
             // FlightPlanner.id_drone = ID_drone;
-            string ID_farm = FlightPlanner.id_farm;       
-            string ID_drone = FlightPlanner.id_drone;
+            string ID_farm = FP.id_farmGet();       
+            string ID_drone = FP.id_droneGet();
 
             con.Open();
 

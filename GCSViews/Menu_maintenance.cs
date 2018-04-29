@@ -106,8 +106,8 @@ namespace MissionPlanner.GCSViews
                 FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
-
-                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "',@img)";
+                
+                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES(,'" + textBox_droneName.Text + "',@img)";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
@@ -374,8 +374,8 @@ namespace MissionPlanner.GCSViews
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
 
-                String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id) "
-                                       + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respon.Text + "',@img,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_partPrice.Text + "','" + id_drone + "')";
+                String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id,device_remindDate) "
+                                       + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respon.Text + "',@img,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_partPrice.Text + "','" + id_drone + "','" + dateTimePicker_startDate.Value.ToString(format) + "')";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);
