@@ -244,15 +244,21 @@ namespace MissionPlanner.GCSViews
                     }
                 }
                 else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                con.Close();
 
-                //show data to gridView Part
-                String query2 = "SELECT * FROM DeviceList WHERE drone_id = '"+textBox_droneID.Text+"'";
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }                
-                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                DataTable dt2 = new DataTable();
-                DG_Part.DataSource = dt2;
-                con.Close();                
+
+                //show data to DataGridView
+                String query2 = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query2, con);
+
+                    SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                    DataTable dt2 = new DataTable();
+                    SDA2.Fill(dt2);
+                    con.Close();
+                    DG_Part.DataSource = dt2;
+                
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }           
@@ -272,10 +278,11 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '"+textBox_droneID+"'";
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = @iddrone";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add("@iddrone", id_drone); // if in same dbo or same schema use like this first
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
                 if (reader.HasRows)
