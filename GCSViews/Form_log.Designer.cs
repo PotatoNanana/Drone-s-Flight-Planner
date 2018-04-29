@@ -129,9 +129,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(33, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.Size = new System.Drawing.Size(55, 24);
             this.label2.TabIndex = 27;
-            this.label2.Text = "ชื่อกิจกรรม";
+            this.label2.Text = "กิจกรรม";
             // 
             // panel3
             // 

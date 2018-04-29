@@ -37,24 +37,6 @@
             this.button_show = new System.Windows.Forms.Button();
             this.But_exit = new System.Windows.Forms.Button();
             this.DG_Noti = new MissionPlanner.Controls.MyDataGridView();
-            this.device_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.device_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.device_position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.device_alarm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deviceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.devicenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.devicepositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.devicepriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.devicebuyDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deviceexpDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.devicestartDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deviceresponderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.devicepicDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.devicealarmDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vendernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.venderaddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.venderphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deviceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partDroneNotify = new MissionPlanner.PartDroneNotify();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -64,6 +46,10 @@
             this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
             this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deviceListTableAdapter = new MissionPlanner.PartDroneNotifyTableAdapters.DeviceListTableAdapter();
+            this.device_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.device_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.device_position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.device_alarm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Noti)).BeginInit();
@@ -90,7 +76,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(613, 495);
+            this.panel1.Size = new System.Drawing.Size(491, 478);
             this.panel1.TabIndex = 2;
             // 
             // panel_Main_farm
@@ -104,8 +90,9 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(613, 495);
+            this.panel_Main_farm.Size = new System.Drawing.Size(491, 478);
             this.panel_Main_farm.TabIndex = 10;
+            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
             // button_show
             // 
@@ -115,11 +102,11 @@
             this.button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_show.ForeColor = System.Drawing.Color.White;
             this.button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_show.Location = new System.Drawing.Point(118, 430);
+            this.button_show.Location = new System.Drawing.Point(73, 426);
             this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(130, 40);
+            this.button_show.Size = new System.Drawing.Size(173, 40);
             this.button_show.TabIndex = 19;
-            this.button_show.Text = "แสดงตาราง";
+            this.button_show.Text = "บำรุงรักษาเรียบร้อยแล้ว";
             this.button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_show.UseVisualStyleBackColor = false;
             this.button_show.Click += new System.EventHandler(this.button_show_Click);
@@ -133,11 +120,11 @@
             this.But_exit.ForeColor = System.Drawing.Color.White;
             this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_exit.Location = new System.Drawing.Point(312, 430);
+            this.But_exit.Location = new System.Drawing.Point(272, 426);
             this.But_exit.Name = "But_exit";
             this.But_exit.Size = new System.Drawing.Size(130, 40);
             this.But_exit.TabIndex = 10;
-            this.But_exit.Text = "ปิด";
+            this.But_exit.Text = "ข้าม";
             this.But_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.But_exit.UseVisualStyleBackColor = false;
             this.But_exit.Click += new System.EventHandler(this.But_exit_Click);
@@ -151,135 +138,13 @@
             this.device_id,
             this.device_name,
             this.device_position,
-            this.device_alarm,
-            this.deviceidDataGridViewTextBoxColumn,
-            this.devicenameDataGridViewTextBoxColumn,
-            this.devicepositionDataGridViewTextBoxColumn,
-            this.devicepriceDataGridViewTextBoxColumn,
-            this.devicebuyDateDataGridViewTextBoxColumn,
-            this.deviceexpDateDataGridViewTextBoxColumn,
-            this.devicestartDateDataGridViewTextBoxColumn,
-            this.deviceresponderDataGridViewTextBoxColumn,
-            this.devicepicDataGridViewImageColumn,
-            this.devicealarmDataGridViewTextBoxColumn,
-            this.vendernameDataGridViewTextBoxColumn,
-            this.venderaddDataGridViewTextBoxColumn,
-            this.venderphoneDataGridViewTextBoxColumn,
-            this.droneidDataGridViewTextBoxColumn});
+            this.device_alarm});
             this.DG_Noti.DataSource = this.deviceListBindingSource;
             this.DG_Noti.Location = new System.Drawing.Point(25, 75);
             this.DG_Noti.Name = "DG_Noti";
             this.DG_Noti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Noti.Size = new System.Drawing.Size(562, 333);
+            this.DG_Noti.Size = new System.Drawing.Size(445, 333);
             this.DG_Noti.TabIndex = 9;
-            // 
-            // device_id
-            // 
-            this.device_id.DataPropertyName = "device_id";
-            this.device_id.HeaderText = "รหัสชิ้นส่วนโดรน";
-            this.device_id.Name = "device_id";
-            // 
-            // device_name
-            // 
-            this.device_name.DataPropertyName = "device_name";
-            this.device_name.HeaderText = "ชื่อชิ้นส่วนโดรน";
-            this.device_name.Name = "device_name";
-            // 
-            // device_position
-            // 
-            this.device_position.DataPropertyName = "device_position";
-            this.device_position.HeaderText = "ตำแหน่งชิ้นส่วนโดรน";
-            this.device_position.Name = "device_position";
-            // 
-            // device_alarm
-            // 
-            this.device_alarm.DataPropertyName = "device_alarm";
-            this.device_alarm.HeaderText = "การแจ้งเตือน";
-            this.device_alarm.Name = "device_alarm";
-            // 
-            // deviceidDataGridViewTextBoxColumn
-            // 
-            this.deviceidDataGridViewTextBoxColumn.DataPropertyName = "device_id";
-            this.deviceidDataGridViewTextBoxColumn.HeaderText = "device_id";
-            this.deviceidDataGridViewTextBoxColumn.Name = "deviceidDataGridViewTextBoxColumn";
-            // 
-            // devicenameDataGridViewTextBoxColumn
-            // 
-            this.devicenameDataGridViewTextBoxColumn.DataPropertyName = "device_name";
-            this.devicenameDataGridViewTextBoxColumn.HeaderText = "device_name";
-            this.devicenameDataGridViewTextBoxColumn.Name = "devicenameDataGridViewTextBoxColumn";
-            // 
-            // devicepositionDataGridViewTextBoxColumn
-            // 
-            this.devicepositionDataGridViewTextBoxColumn.DataPropertyName = "device_position";
-            this.devicepositionDataGridViewTextBoxColumn.HeaderText = "device_position";
-            this.devicepositionDataGridViewTextBoxColumn.Name = "devicepositionDataGridViewTextBoxColumn";
-            // 
-            // devicepriceDataGridViewTextBoxColumn
-            // 
-            this.devicepriceDataGridViewTextBoxColumn.DataPropertyName = "device_price";
-            this.devicepriceDataGridViewTextBoxColumn.HeaderText = "device_price";
-            this.devicepriceDataGridViewTextBoxColumn.Name = "devicepriceDataGridViewTextBoxColumn";
-            // 
-            // devicebuyDateDataGridViewTextBoxColumn
-            // 
-            this.devicebuyDateDataGridViewTextBoxColumn.DataPropertyName = "device_buyDate";
-            this.devicebuyDateDataGridViewTextBoxColumn.HeaderText = "device_buyDate";
-            this.devicebuyDateDataGridViewTextBoxColumn.Name = "devicebuyDateDataGridViewTextBoxColumn";
-            // 
-            // deviceexpDateDataGridViewTextBoxColumn
-            // 
-            this.deviceexpDateDataGridViewTextBoxColumn.DataPropertyName = "device_expDate";
-            this.deviceexpDateDataGridViewTextBoxColumn.HeaderText = "device_expDate";
-            this.deviceexpDateDataGridViewTextBoxColumn.Name = "deviceexpDateDataGridViewTextBoxColumn";
-            // 
-            // devicestartDateDataGridViewTextBoxColumn
-            // 
-            this.devicestartDateDataGridViewTextBoxColumn.DataPropertyName = "device_startDate";
-            this.devicestartDateDataGridViewTextBoxColumn.HeaderText = "device_startDate";
-            this.devicestartDateDataGridViewTextBoxColumn.Name = "devicestartDateDataGridViewTextBoxColumn";
-            // 
-            // deviceresponderDataGridViewTextBoxColumn
-            // 
-            this.deviceresponderDataGridViewTextBoxColumn.DataPropertyName = "device_responder";
-            this.deviceresponderDataGridViewTextBoxColumn.HeaderText = "device_responder";
-            this.deviceresponderDataGridViewTextBoxColumn.Name = "deviceresponderDataGridViewTextBoxColumn";
-            // 
-            // devicepicDataGridViewImageColumn
-            // 
-            this.devicepicDataGridViewImageColumn.DataPropertyName = "device_pic";
-            this.devicepicDataGridViewImageColumn.HeaderText = "device_pic";
-            this.devicepicDataGridViewImageColumn.Name = "devicepicDataGridViewImageColumn";
-            // 
-            // devicealarmDataGridViewTextBoxColumn
-            // 
-            this.devicealarmDataGridViewTextBoxColumn.DataPropertyName = "device_alarm";
-            this.devicealarmDataGridViewTextBoxColumn.HeaderText = "device_alarm";
-            this.devicealarmDataGridViewTextBoxColumn.Name = "devicealarmDataGridViewTextBoxColumn";
-            // 
-            // vendernameDataGridViewTextBoxColumn
-            // 
-            this.vendernameDataGridViewTextBoxColumn.DataPropertyName = "vender_name";
-            this.vendernameDataGridViewTextBoxColumn.HeaderText = "vender_name";
-            this.vendernameDataGridViewTextBoxColumn.Name = "vendernameDataGridViewTextBoxColumn";
-            // 
-            // venderaddDataGridViewTextBoxColumn
-            // 
-            this.venderaddDataGridViewTextBoxColumn.DataPropertyName = "vender_add";
-            this.venderaddDataGridViewTextBoxColumn.HeaderText = "vender_add";
-            this.venderaddDataGridViewTextBoxColumn.Name = "venderaddDataGridViewTextBoxColumn";
-            // 
-            // venderphoneDataGridViewTextBoxColumn
-            // 
-            this.venderphoneDataGridViewTextBoxColumn.DataPropertyName = "vender_phone";
-            this.venderphoneDataGridViewTextBoxColumn.HeaderText = "vender_phone";
-            this.venderphoneDataGridViewTextBoxColumn.Name = "venderphoneDataGridViewTextBoxColumn";
-            // 
-            // droneidDataGridViewTextBoxColumn
-            // 
-            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
-            this.droneidDataGridViewTextBoxColumn.HeaderText = "drone_id";
-            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
             // 
             // deviceListBindingSource
             // 
@@ -297,7 +162,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(613, 50);
+            this.panel3.Size = new System.Drawing.Size(491, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -312,7 +177,7 @@
             this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(613, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(491, 50);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "แจ้งเตือนชิ้นส่วนการบิน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,11 +209,35 @@
             // 
             this.deviceListTableAdapter.ClearBeforeFill = true;
             // 
+            // device_id
+            // 
+            this.device_id.DataPropertyName = "device_id";
+            this.device_id.HeaderText = "รหัสชิ้นส่วนโดรน";
+            this.device_id.Name = "device_id";
+            // 
+            // device_name
+            // 
+            this.device_name.DataPropertyName = "device_name";
+            this.device_name.HeaderText = "ชื่อชิ้นส่วนโดรน";
+            this.device_name.Name = "device_name";
+            // 
+            // device_position
+            // 
+            this.device_position.DataPropertyName = "device_position";
+            this.device_position.HeaderText = "ตำแหน่งชิ้นส่วนโดรน";
+            this.device_position.Name = "device_position";
+            // 
+            // device_alarm
+            // 
+            this.device_alarm.DataPropertyName = "device_alarm";
+            this.device_alarm.HeaderText = "การแจ้งเตือน";
+            this.device_alarm.Name = "device_alarm";
+            // 
             // Form_Notify_drone_part
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 495);
+            this.ClientSize = new System.Drawing.Size(491, 478);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Notify_drone_part";
@@ -390,19 +279,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn device_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_position;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_alarm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deviceidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn devicenameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn devicepositionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn devicepriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn devicebuyDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deviceexpDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn devicestartDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deviceresponderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn devicepicDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn devicealarmDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vendernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn venderaddDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn venderphoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
     }
 }

@@ -74,10 +74,10 @@ namespace MissionPlanner.GCSViews
             this.Close();
         }
 
-        private void textBox_patternName_TextChanged(object sender, EventArgs e)
+        /*private void textBox_patternName_TextChanged(object sender, EventArgs e)
         {
             textBox_patternName.Text = file;
-        }
+        }*/
 
         private void Form_log_KeyDown(object sender, KeyEventArgs e)
         {

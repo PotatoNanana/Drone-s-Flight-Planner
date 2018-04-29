@@ -39,15 +39,7 @@ namespace MissionPlanner.GCSViews
 
         private void button_show_Click(object sender, EventArgs e)
         {
-            //show data to DataGridView
-            con.Open();
             
-            String query = "SELECT device_id,device_name,device_position,device_alarm FROM DeviceList WHERE drone_id = '" + droneId + "'";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Noti.DataSource = dt;
-            con.Close();
         }
 
         private void But_exit_Click(object sender, EventArgs e)
@@ -68,6 +60,19 @@ namespace MissionPlanner.GCSViews
                 return true;
             }
             return base.ProcessDialogKey(keyData);
+        }
+
+        private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
+        {
+            //show data to DataGridView
+            con.Open();
+
+            String query = "SELECT device_id,device_name,device_position,device_alarm FROM DeviceList WHERE drone_id = '" + droneId + "'";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Noti.DataSource = dt;
+            con.Close();
         }
     }
 }
