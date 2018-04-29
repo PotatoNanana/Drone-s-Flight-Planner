@@ -67,13 +67,13 @@ namespace MissionPlanner.GCSViews
             //calcurate date remind
             con.Open();
             DateTime nowDay = DateTime.Now;
-            String queryDate1 = "UPDATE DeviceList SET device_remind = 'y' WHERE DATEDIFF(@nowDate, device_remindDate) <= 1 AND device_alarm = 'ทุกวัน' AND drone_id = '" + droneId + "' ";
+            String queryDate1 = "UPDATE DeviceList SET device_remind = 'y', device_remindDate = @nowDate WHERE DATEDIFF(@nowDate, device_remindDate) <= 1 AND device_alarm = 'ทุกวัน' AND drone_id = '" + droneId + "' ";
                         
-            String queryDate7 = "UPDATE DeviceList SET device_remind = 'y' WHERE DATEDIFF(@nowDate, device_remindDate) <= 7 AND device_alarm = 'ทุกอาทิตย์' AND drone_id = '" + droneId + "' ";
+            String queryDate7 = "UPDATE DeviceList SET device_remind = 'y', device_remindDate = @nowDate WHERE DATEDIFF(@nowDate, device_remindDate) <= 7 AND device_alarm = 'ทุกอาทิตย์' AND drone_id = '" + droneId + "' ";
             
-            String queryDate30 = "UPDATE DeviceList SET device_remind = 'y' WHERE DATEDIFF(@nowDate, device_remindDate) <= 30 AND device_alarm = 'ทุกเดือน' AND drone_id = '" + droneId + "' ";
+            String queryDate30 = "UPDATE DeviceList SET device_remind = 'y', device_remindDate = @nowDate WHERE DATEDIFF(@nowDate, device_remindDate) <= 30 AND device_alarm = 'ทุกเดือน' AND drone_id = '" + droneId + "' ";
 
-            String queryDate365 = "UPDATE DeviceList SET device_remind = 'y' WHERE DATEDIFF(@nowDate, device_remindDate) <= 365 AND device_alarm = 'ทุก1ปี' AND drone_id = '" + droneId + "' ";
+            String queryDate365 = "UPDATE DeviceList SET device_remind = 'y', device_remindDate = @nowDate WHERE DATEDIFF(@nowDate, device_remindDate) <= 365 AND device_alarm = 'ทุก1ปี' AND drone_id = '" + droneId + "' ";
 
             cmd = new SqlCommand(queryDate1, con);
             cmd = new SqlCommand(queryDate7, con);
