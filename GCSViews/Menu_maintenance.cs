@@ -244,15 +244,15 @@ namespace MissionPlanner.GCSViews
                     }
                 }
                 else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+
                 //show data to gridView Part
-                String query2 = "SELECT * FROM DeviceList ";
+                String query2 = "SELECT * FROM DeviceList WHERE drone_id = '"+textBox_droneID.Text+"'";
                 if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                //cmd = new SqlCommand(query2, con);                
+                { con.Open(); }                
                 SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                DataTable dt = new DataTable();
-                DG_Part.DataSource = dt;                
-                con.Close();
+                DataTable dt2 = new DataTable();
+                DG_Part.DataSource = dt2;
+                con.Close();                
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }           
@@ -332,13 +332,8 @@ namespace MissionPlanner.GCSViews
                 dialog.Title = "เลือกรูปภาพของโดรน";
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    /*imgLocation = dialog.FileName.ToString();
-                    imgby = imageToByteArray(Image.FromFile(dialog.FileName));
-                    pictureBox.ImageLocation = imgLocation; */
-
                     imgLocation = dialog.FileName.ToString();
                     pictureBox.ImageLocation = imgLocation;
-
                 }
             }
             catch (Exception ex)
