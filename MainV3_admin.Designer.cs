@@ -14,7 +14,7 @@ namespace MissionPlanner
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            Console.WriteLine("MainV3_Dispose");
+            //Console.WriteLine("MainV3_Dispose");
             if (PluginThreadrunner != null)
                 PluginThreadrunner.Dispose();
             if (disposing && (components != null))
@@ -34,20 +34,19 @@ namespace MissionPlanner
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainV3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainV3_admin));
             this.CTX_mainmenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.autoHideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readonlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.but_maintenance = new System.Windows.Forms.Button();
-            this.but_setup = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.but_flightPlan = new System.Windows.Forms.Button();
             this.but_mainMenu = new System.Windows.Forms.Button();
             this.but_farmProfile = new System.Windows.Forms.Button();
             this.menu = new MissionPlanner.Controls.MyButton();
+            this.but_maintenance = new System.Windows.Forms.Button();
             this.CTX_mainmenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +92,6 @@ namespace MissionPlanner
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.panel1.Controls.Add(this.but_maintenance);
-            this.panel1.Controls.Add(this.but_setup);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.but_flightPlan);
             this.panel1.Controls.Add(this.but_mainMenu);
@@ -101,28 +99,6 @@ namespace MissionPlanner
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // but_maintenance
-            // 
-            resources.ApplyResources(this.but_maintenance, "but_maintenance");
-            this.but_maintenance.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.but_maintenance.FlatAppearance.BorderSize = 0;
-            this.but_maintenance.ForeColor = System.Drawing.Color.White;
-            this.but_maintenance.Name = "but_maintenance";
-            this.but_maintenance.UseCompatibleTextRendering = true;
-            this.but_maintenance.UseVisualStyleBackColor = true;
-            this.but_maintenance.Click += new System.EventHandler(this.but_maintenance_Click);
-            // 
-            // but_setup
-            // 
-            resources.ApplyResources(this.but_setup, "but_setup");
-            this.but_setup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.but_setup.FlatAppearance.BorderSize = 0;
-            this.but_setup.ForeColor = System.Drawing.Color.White;
-            this.but_setup.Name = "but_setup";
-            this.but_setup.UseCompatibleTextRendering = true;
-            this.but_setup.UseVisualStyleBackColor = true;
-            this.but_setup.Click += new System.EventHandler(this.but_setup_Click);
             // 
             // SidePanel
             // 
@@ -171,14 +147,26 @@ namespace MissionPlanner
             this.menu.Click += new System.EventHandler(this.menu_Click);
             this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
             // 
-            // MainV3
+            // but_maintenance
+            // 
+            resources.ApplyResources(this.but_maintenance, "but_maintenance");
+            this.but_maintenance.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.but_maintenance.FlatAppearance.BorderSize = 0;
+            this.but_maintenance.ForeColor = System.Drawing.Color.White;
+            this.but_maintenance.Name = "but_maintenance";
+            this.but_maintenance.UseCompatibleTextRendering = true;
+            this.but_maintenance.UseVisualStyleBackColor = true;
+            this.but_maintenance.Click += new System.EventHandler(this.but_maintenance_Click);
+            // 
+            // MainV3_admin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menu);
             this.KeyPreview = true;
-            this.Name = "MainV3";
+            this.Name = "MainV3_admin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainV3_admin_FormClosed);
             this.Load += new System.EventHandler(this.MainV3_admin_Load);
             this.CTX_mainmenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -197,7 +185,6 @@ namespace MissionPlanner
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button but_mainMenu;
         private System.Windows.Forms.Button but_farmProfile;
-        private System.Windows.Forms.Button but_setup;
         private System.Windows.Forms.Button but_flightPlan;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button but_maintenance;

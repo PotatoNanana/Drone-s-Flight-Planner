@@ -13,9 +13,9 @@ namespace Tutorial.SqlConn
         {
             string datasource = @"CS-RABBIT\SQLEXPRESS";
 
-            string database = "DroneFlightPlanner";
+            string database = "DroneFlightPlanner2";
             string username = "test";
-            string password = "p@ssw0rd";
+            string password = "p@assw0rd";
 
             return DBSQLServerUtils.GetDBConnection(datasource, database, username, password);
         }

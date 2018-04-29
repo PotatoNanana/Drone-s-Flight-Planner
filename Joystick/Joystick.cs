@@ -494,7 +494,7 @@ namespace MissionPlanner.Joystick
                 properties = type.GetProperties();
                 foreach (PropertyInfo property in properties)
                 {
-                    //Console.WriteLine("Name: " + property.Name + ", Value: " + property.GetValue(obj, null));
+                    ////Console.WriteLine("Name: " + property.Name + ", Value: " + property.GetValue(obj, null));
 
                     log.InfoFormat("test name {0} old {1} new {2} ", property.Name, values[property.Name],
                         int.Parse(property.GetValue(nextstate, null).ToString()));
@@ -674,7 +674,7 @@ namespace MissionPlanner.Joystick
                     joystick.Poll();
                     state = joystick.CurrentJoystickState();
 
-                    //Console.WriteLine(state);
+                    ////Console.WriteLine(state);
 
                     if (getNumberPOV() > 0)
                     {
@@ -755,7 +755,7 @@ namespace MissionPlanner.Joystick
                     if (MainV2.comPort.BaseStream.IsOpen)
                         DoJoystickButtonFunction();
 
-                    //Console.WriteLine("{0} {1} {2} {3}", MainV2.comPort.MAV.cs.rcoverridech1, MainV2.comPort.MAV.cs.rcoverridech2, MainV2.comPort.MAV.cs.rcoverridech3, MainV2.comPort.MAV.cs.rcoverridech4);
+                    ////Console.WriteLine("{0} {1} {2} {3}", MainV2.comPort.MAV.cs.rcoverridech1, MainV2.comPort.MAV.cs.rcoverridech2, MainV2.comPort.MAV.cs.rcoverridech3, MainV2.comPort.MAV.cs.rcoverridech4);
                 }
                 catch (SharpDX.SharpDXException ex)
                 {

@@ -573,29 +573,29 @@
   <data name="MenuFlightLog.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="MenuFlightLog.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -2451,24 +2451,6 @@
   <data name="&gt;&gt;connectionOptionsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MenuLogin.Name" xml:space="preserve">
-    <value>MenuLogin</value>
-  </data>
-  <data name="&gt;&gt;MenuLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuConnect.Name" xml:space="preserve">
-    <value>MenuConnect</value>
-  </data>
-  <data name="&gt;&gt;MenuConnect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripConnectionControl.Name" xml:space="preserve">
-    <value>toolStripConnectionControl</value>
-  </data>
-  <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6652.37275, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;MenuFlightData.Name" xml:space="preserve">
     <value>MenuFlightData</value>
   </data>
@@ -2510,6 +2492,24 @@
   </data>
   <data name="&gt;&gt;MenuFlightLog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuLogin.Name" xml:space="preserve">
+    <value>MenuLogin</value>
+  </data>
+  <data name="&gt;&gt;MenuLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuConnect.Name" xml:space="preserve">
+    <value>MenuConnect</value>
+  </data>
+  <data name="&gt;&gt;MenuConnect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripConnectionControl.Name" xml:space="preserve">
+    <value>toolStripConnectionControl</value>
+  </data>
+  <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6692.43018, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainV2</value>

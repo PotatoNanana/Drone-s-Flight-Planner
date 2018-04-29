@@ -563,6 +563,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\ne
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\System.Data.SqlServerCe.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\DirectShowLib-2005.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\BSE.Windows.Forms.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\GeoUtility.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.Core.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.pdb

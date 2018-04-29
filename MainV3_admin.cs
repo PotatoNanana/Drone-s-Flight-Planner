@@ -1862,10 +1862,10 @@ namespace MissionPlanner
             // save config
             SaveConfig();
 
-            Console.WriteLine(httpthread.IsAlive);
-            Console.WriteLine(joystickthread.IsAlive);
-            Console.WriteLine(serialreaderthread.IsAlive);
-            Console.WriteLine(pluginthread.IsAlive);
+            //Console.WriteLine(httpthread.IsAlive);
+            //Console.WriteLine(joystickthread.IsAlive);
+            //Console.WriteLine(serialreaderthread.IsAlive);
+            //Console.WriteLine(pluginthread.IsAlive);
 
             log.Info("MainV2_FormClosing done");
 
@@ -1883,7 +1883,7 @@ namespace MissionPlanner
         {
             base.OnFormClosed(e);
 
-            Console.WriteLine("MainV2_FormClosed");
+            //Console.WriteLine("MainV2_FormClosed");
 
             if (joystick != null)
             {
@@ -2017,9 +2017,9 @@ namespace MissionPlanner
                                  
                                 }
                                 */
-                                    //                                Console.WriteLine(DateTime.Now.Millisecond + " {0} {1} {2} {3} {4}", rc.chan1_raw, rc.chan2_raw, rc.chan3_raw, rc.chan4_raw,rate);
+                                    //                                //Console.WriteLine(DateTime.Now.Millisecond + " {0} {1} {2} {3} {4}", rc.chan1_raw, rc.chan2_raw, rc.chan3_raw, rc.chan4_raw,rate);
 
-                                    //Console.WriteLine("Joystick btw " + comPort.BaseStream.BytesToWrite);
+                                    ////Console.WriteLine("Joystick btw " + comPort.BaseStream.BytesToWrite);
 
                                     if (!comPort.BaseStream.IsOpen)
                                         continue;
@@ -2092,7 +2092,7 @@ namespace MissionPlanner
         //{
         //    if ((DateTime.Now - connectButtonUpdate).Milliseconds > 500)
         //    {
-        //        //                        Console.WriteLine(DateTime.Now.Millisecond);
+        //        //                        //Console.WriteLine(DateTime.Now.Millisecond);
         //        if (comPort.BaseStream.IsOpen)
         //        {
         //            if ((string)this.MenuConnect.Image.Tag != "Disconnect")
@@ -2590,7 +2590,7 @@ namespace MissionPlanner
                             {
                                 if (port.BaseStream.IsOpen)
                                 {
-                                    Console.WriteLine("Main comport shut, swapping to other mav");
+                                    //Console.WriteLine("Main comport shut, swapping to other mav");
                                     comPort = port;
                                     break;
                                 }
@@ -2656,7 +2656,7 @@ namespace MissionPlanner
                 }
             }
 
-            Console.WriteLine("SerialReader Done");
+            //Console.WriteLine("SerialReader Done");
             SerialThreadrunner.Set();
         }
 
@@ -3435,7 +3435,7 @@ namespace MissionPlanner
         {
             Message temp = new Message();
             ProcessCmdKey(ref temp, e.KeyData);
-            Console.WriteLine("MainV2_KeyDown " + e.ToString());
+            //Console.WriteLine("MainV2_KeyDown " + e.ToString());
         }
 
 
@@ -3511,16 +3511,16 @@ namespace MissionPlanner
                     var l = m.LParam;
                     if (n == WM_DEVICECHANGE_enum.DBT_DEVICEREMOVEPENDING)
                     {
-                        Console.WriteLine("DBT_DEVICEREMOVEPENDING");
+                        //Console.WriteLine("DBT_DEVICEREMOVEPENDING");
                     }
                     if (n == WM_DEVICECHANGE_enum.DBT_DEVNODES_CHANGED)
                     {
-                        Console.WriteLine("DBT_DEVNODES_CHANGED");
+                        //Console.WriteLine("DBT_DEVNODES_CHANGED");
                     }
                     if (n == WM_DEVICECHANGE_enum.DBT_DEVICEARRIVAL ||
                         n == WM_DEVICECHANGE_enum.DBT_DEVICEREMOVECOMPLETE)
                     {
-                        Console.WriteLine(((WM_DEVICECHANGE_enum)n).ToString());
+                        //Console.WriteLine(((WM_DEVICECHANGE_enum)n).ToString());
 
                         DEV_BROADCAST_HDR hdr = new DEV_BROADCAST_HDR();
                         Marshal.PtrToStructure(m.LParam, hdr);
@@ -3548,7 +3548,7 @@ namespace MissionPlanner
                         }
 
                         //string port = Marshal.PtrToStringAuto((IntPtr)((long)m.LParam + 12));
-                        //Console.WriteLine("Added port {0}",port);
+                        ////Console.WriteLine("Added port {0}",port);
                     }
                     log.InfoFormat("Device Change {0} {1} {2}", m.Msg, (WM_DEVICECHANGE_enum)m.WParam, m.LParam);
 
@@ -3581,7 +3581,7 @@ namespace MissionPlanner
                     }
                     break;
                 default:
-                    //Console.WriteLine(m.ToString());
+                    ////Console.WriteLine(m.ToString());
                     break;
             }
             base.WndProc(ref m);
@@ -3706,14 +3706,14 @@ namespace MissionPlanner
 
         private void but_setup_Click(object sender, EventArgs e)
         {
-            SidePanel.Width = but_setup.Width;
-            SidePanel.Left = but_setup.Left;
-            MyView.ShowScreen("Menu_setup");
+            //SidePanel.Width = but_setup.Width;
+            //SidePanel.Left = but_setup.Left;
+            //MyView.ShowScreen("Menu_setup");
         }
 
         private void MainV3_admin_Load(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -3726,6 +3726,11 @@ namespace MissionPlanner
         private void menu_Click(object sender, EventArgs e)
         {
 
+        }
+        
+        private void MainV3_admin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

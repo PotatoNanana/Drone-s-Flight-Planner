@@ -17,7 +17,7 @@ namespace Updater
         {
             OperatingSystem os = Environment.OSVersion;
 
-            Console.WriteLine(os.VersionString.ToString());
+            //Console.WriteLine(os.VersionString.ToString());
 
             if (os.VersionString.ToString().ToUpper().Contains("UNIX"))
             {
@@ -33,8 +33,8 @@ namespace Updater
 
             if (!UpdateFiles(path))
             {
-                Console.WriteLine("Update failed, please try it later.");
-                Console.WriteLine("Press any key to continue.");
+                //Console.WriteLine("Update failed, please try it later.");
+                //Console.WriteLine("Press any key to continue.");
                 Console.ReadKey();
             }
             else
@@ -52,7 +52,7 @@ namespace Updater
                         P.StartInfo.FileName = Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar + "MissionPlanner.exe";
                         P.StartInfo.Arguments = "";
                     }
-                    Console.WriteLine("Start " + P.StartInfo.FileName + " with " + P.StartInfo.Arguments);
+                    //Console.WriteLine("Start " + P.StartInfo.FileName + " with " + P.StartInfo.Arguments);
                     P.Start();
                 }
                 catch { } // likely file didnt exist
@@ -66,13 +66,13 @@ namespace Updater
             {
                 string[] files = Directory.GetFiles(directory);
 
-                Console.WriteLine("dir: "+directory);
+                //Console.WriteLine("dir: "+directory);
 
                 foreach (string file in files)
                 {
                     if (file.ToLower().EndsWith(".new") && file.ToLower() != ".new") // cant move ".new" to ""
                     {
-                        Console.WriteLine("\t file: " + file);
+                        //Console.WriteLine("\t file: " + file);
 
                         bool done = false;
                         for (int try_count = 0; try_count < 10 && !done; try_count++)  // try no more than 5 times
@@ -88,11 +88,11 @@ namespace Updater
                                 File.Copy(file, file.Remove(file.Length - 4), true);
                                 done = true;
                                 File.Delete(file);
-                                Console.WriteLine(" Done.");
+                                //Console.WriteLine(" Done.");
                             }
                             catch
                             {
-                                Console.WriteLine(file + " Failed.");
+                                //Console.WriteLine(file + " Failed.");
                                 System.Threading.Thread.Sleep(500);
                                 // normally in use by explorer.exe
                                 if (file.ToLower().Contains("tlogthumbnailhandler"))

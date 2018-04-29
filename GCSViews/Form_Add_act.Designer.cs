@@ -188,6 +188,7 @@
             this.But_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.But_exit.UseVisualStyleBackColor = false;
             this.But_exit.Click += new System.EventHandler(this.But_exit_Click);
+            this.But_exit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Add_act_KeyDown);
             // 
             // But_save
             // 

@@ -17,11 +17,21 @@ using System.Text.RegularExpressions;
 using MissionPlanner.Comms;
 using MissionPlanner.Controls;
 using MissionPlanner.GCSViews;
+using System.Runtime.InteropServices;
 
 namespace MissionPlanner
 {
     public static class Program
     {
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        const int SW_HIDE = 0;
+        const int SW_SHOW = 5;
+
         private static readonly ILog log = LogManager.GetLogger("Program");
 
         public static DateTime starttime = DateTime.Now;
@@ -54,7 +64,12 @@ namespace MissionPlanner
         [STAThread]
         public static void Main(string[] args)
         {
-            Program.args = args;
+            var handle = GetConsoleWindow();
+            // Hide
+            ShowWindow(handle, SW_HIDE);
+
+            System.Console.SetOut(new System.IO.StreamWriter(System.IO.Stream.Null));
+            //Program.args = args;
             Console.WriteLine(
                 "If your error is about Microsoft.DirectX.DirectInput, please install the latest directx redist from here http://www.microsoft.com/en-us/download/details.aspx?id=35 \n\n");
             Console.WriteLine("Debug under mono    MONO_LOG_LEVEL=debug mono MissionPlanner.exe");
@@ -222,21 +237,21 @@ namespace MissionPlanner
             tmp.GenerateMAVLinkPacket20(MAVLink.MAVLINK_MSG_ID.HEARTBEAT, hb, true);
 
             /// Added validated page
-            Validation = new MissionPlanner.Validation();
-            Validation.Show();
+            //Validation = new MissionPlanner.Validation();
+            //Validation.Show();
 
             try
             {
                 System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
                 Thread.CurrentThread.Name = "Base Thread";
-                Application.Run(new MainV3());
+                Application.Run(new Validation());
             }
             catch (Exception ex)
             {
                 log.Fatal("Fatal app exception", ex);
-                Console.WriteLine(ex.ToString());
+                //Console.WriteLine(ex.ToString());
 
-                Console.WriteLine("\nPress any key to exit!");
+                //Console.WriteLine("\nPress any key to exit!");
                 Console.ReadLine();
             }
 
@@ -329,7 +344,7 @@ namespace MissionPlanner
                                  + "  (IL offset: 0x" + frame.GetILOffset().ToString("x") + ")\n" + stackTrace;
                 }
                 Console.Write(stackTrace);
-                Console.WriteLine("Message: " + e.Message);
+                //Console.WriteLine("Message: " + e.Message);
             }
             catch
             {
@@ -345,6 +360,12 @@ namespace MissionPlanner
             }
 
             if (MainV3.instance != null && MainV3.instance.IsDisposed)
+                return;
+
+            if (MainV3_admin.instance != null && MainV3_admin.instance.IsDisposed)
+                return;
+
+            if (MainV3_developer.instance != null && MainV3_developer.instance.IsDisposed)
                 return;
 
             MissionPlanner.Utilities.Tracking.AddException(ex);

@@ -6,21 +6,87 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
+using Community.CsharpSqlite.SQLiteClient;
 
 namespace MissionPlanner
 {
     public partial class Validation : Form
     {
+        public static bool WindowsStoreApp { get { return Application.ExecutablePath.Contains("WindowsApps"); } }
+
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        public static event EventHandler Goto_main_Clicked;
+        
         public Validation()
         {
+            Application.DoEvents();
+
+            Form splash = Program.Splash;
+            splash.Refresh();
+
             InitializeComponent();
 
             string strVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             
         }
 
-        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
-        SqlCommand cmd;
+        static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
+        {
+            Exception ex = e.Exception;
+
+            handleException(ex);
+        }
+
+        static void handleException(Exception ex)
+        {
+            if (ex.Message == "Safe handle has been closed")
+            {
+                return;
+            }
+
+            if (MainV3.instance != null && MainV3.instance.IsDisposed)
+                return;
+
+            MissionPlanner.Utilities.Tracking.AddException(ex);
+
+            // hyperlinks error
+            if (ex.Message == "Requested registry access is not allowed." ||
+                ex.ToString().Contains("System.Windows.Forms.LinkUtilities.GetIELinkBehavior"))
+            {
+                return;
+            }
+            if (ex.Message == "The port is closed.")
+            {
+                CustomMessageBox.Show("Serial connection has been lost");
+                return;
+            }
+            if (ex.Message == "A device attached to the system is not functioning.")
+            {
+                CustomMessageBox.Show("Serial connection has been lost");
+                return;
+            }
+            if (ex.GetType() == typeof(OpenTK.Graphics.GraphicsContextException))
+            {
+                CustomMessageBox.Show("Please update your graphics card drivers. Failed to create opengl surface\n" + ex.Message);
+                return;
+            }
+            if (ex.GetType() == typeof(MissingMethodException) || ex.GetType() == typeof(TypeLoadException))
+            {
+                CustomMessageBox.Show("Please Update - Some older library dlls are causing problems\n" + ex.Message);
+                return;
+            }
+
+            DialogResult dr =
+                CustomMessageBox.Show("An error has occurred\n" + ex.ToString() + "\n\nReport this Error???",
+                    "Send Error", MessageBoxButtons.YesNo);
+
+        }
+
+        protected virtual void OnGotoMainClicked(EventArgs e)
+        {
+            Goto_main_Clicked?.Invoke(this, e);
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -36,14 +102,72 @@ namespace MissionPlanner
         {
 
         }
-
-        private void BUT_login_Click(object sender, EventArgs e)
+        
+        private void Goto_main_Click(object sender, EventArgs e)
         {
+            String query = "select count(*) from UserLogin where username=@usr and password=@pwd";
+            SqlCommand scmd = new SqlCommand(query, con);
+            scmd.Parameters.Clear();
+            scmd.Parameters.AddWithValue("@usr", txtUsername.Text);
+            scmd.Parameters.AddWithValue("@pwd", txtPassword.Text);
+
+            SqlCommand cmd = new SqlCommand("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'   ", con);
+            string role;
+
             con.Open();
+            if(scmd.ExecuteScalar().ToString() == "1")
+            {
+                SqlDataReader dtr = cmd.ExecuteReader();
+                //SqlDataAdapter sda = new SqlDataAdapter("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'   ", con);
+                //DataTable dt = new DataTable();
+                //sda.Fill(dt);
 
-            this.Close();
+                while (dtr.Read())
+                {
+                    role = dtr["role"].ToString();
+                    switch (role)
+                    {
+                        case "developer":
+                            {
+                                this.Hide();
+                                var frm = new MainV3_developer();
+                                frm.ShowDialog();
+                                break;
+                            }
+
+                        case "admin":
+                            {
+                                this.Hide();
+                                var frm = new MainV3_admin();
+                                frm.ShowDialog();
+                                break;
+                            }
+
+                        case "pilot":
+                            {
+                                this.Hide();
+                                var frm = new MainV3_pilot();
+                                frm.ShowDialog();
+                                break;
+                            }
+
+                        default:
+                            {
+                                this.Hide();
+                                var frm = new MainV3();
+                                frm.ShowDialog();
+                                break;
+                            }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("ชื่อผู้ใช้งานหรือรหัสผ่านของคุณไม่ถูกต้อง \nกรุณากรอกใหม่อีกครั้ง");
+            }
+            con.Close();
         }
-
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -88,6 +212,25 @@ namespace MissionPlanner
                 txtPassword.Text = "รหัสผ่าน";
                 txtPassword.ForeColor = Color.DimGray;
             }
+        }
+        
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Enter)
+            {
+                Goto_main.PerformClick();
+            }
+            return base.ProcessDialogKey(keyData);
+        }
+
+        private void Goto_main_KeyDown(object sender, KeyEventArgs e)
+        {
+            ProcessDialogKey(e.KeyData);
+        }
+
+        private void Validation_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

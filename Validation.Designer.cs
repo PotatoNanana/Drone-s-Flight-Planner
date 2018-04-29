@@ -30,7 +30,7 @@
         {
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.BUT_login = new MissionPlanner.Controls.MyButton();
+            this.Goto_main = new MissionPlanner.Controls.MyButton();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -53,35 +53,38 @@
             this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.Location = new System.Drawing.Point(103, 249);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(135, 31);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.Text = "รหัสผ่าน";
             this.txtPassword.Enter += new System.EventHandler(this.pwd_enter);
             this.txtPassword.Leave += new System.EventHandler(this.pwd_leave);
             // 
-            // BUT_login
+            // Goto_main
             // 
-            this.BUT_login.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
-            this.BUT_login.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
-            this.BUT_login.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
-            this.BUT_login.Font = new System.Drawing.Font("PJ Standard", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BUT_login.Location = new System.Drawing.Point(113, 295);
-            this.BUT_login.Name = "BUT_login";
-            this.BUT_login.Size = new System.Drawing.Size(100, 30);
-            this.BUT_login.TabIndex = 2;
-            this.BUT_login.Text = "เข้าสู่ระบบ";
-            this.BUT_login.UseVisualStyleBackColor = true;
-            this.BUT_login.Click += new System.EventHandler(this.BUT_login_Click);
+            this.Goto_main.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.Goto_main.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(232)))), ((int)(((byte)(108)))));
+            this.Goto_main.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
+            this.Goto_main.Font = new System.Drawing.Font("PJ Standard", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Goto_main.Location = new System.Drawing.Point(113, 295);
+            this.Goto_main.Name = "Goto_main";
+            this.Goto_main.Size = new System.Drawing.Size(100, 30);
+            this.Goto_main.TabIndex = 2;
+            this.Goto_main.Text = "เข้าสู่ระบบ";
+            this.Goto_main.UseVisualStyleBackColor = true;
+            this.Goto_main.Click += new System.EventHandler(this.Goto_main_Click);
+            this.Goto_main.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Goto_main_KeyDown);
             // 
             // Validation
             // 
             this.BackgroundImage = global::MissionPlanner.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(327, 444);
-            this.Controls.Add(this.BUT_login);
+            this.Controls.Add(this.Goto_main);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Name = "Validation";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Validation_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,6 +97,6 @@
         private System.Windows.Forms.TextBox Username;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private Controls.MyButton BUT_login;
+        private Controls.MyButton Goto_main;
     }
 }

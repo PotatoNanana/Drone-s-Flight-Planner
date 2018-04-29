@@ -184,7 +184,7 @@ namespace MissionPlanner.Joystick
             {
                 if (MainV2.joystick == null || MainV2.joystick.enabled == false)
                 {
-                    //Console.WriteLine(DateTime.Now.Millisecond + " start ");
+                    ////Console.WriteLine(DateTime.Now.Millisecond + " start ");
                     Joystick joy = MainV2.joystick;
                     if (joy == null)
                     {
@@ -265,7 +265,7 @@ namespace MissionPlanner.Joystick
                     MainV2.comPort.MAV.cs.rcoverridech7 = joy.getValueForChannel(7, CMB_joysticks.Text);
                     MainV2.comPort.MAV.cs.rcoverridech8 = joy.getValueForChannel(8, CMB_joysticks.Text);
 
-                    //Console.WriteLine(DateTime.Now.Millisecond + " end ");
+                    ////Console.WriteLine(DateTime.Now.Millisecond + " end ");
                 }
             }
             catch (SharpDX.SharpDXException ex)

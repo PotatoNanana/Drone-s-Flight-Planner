@@ -167,8 +167,8 @@ namespace MissionPlanner.HIL
                     sitldata.yAccel = DATA[4][6]*9.8;
                     sitldata.zAccel = (0 - DATA[4][4])*9.8;
 
-                    //      Console.WriteLine(accel_body.ToString());
-                    //      Console.WriteLine("        {0} {1} {2}",sitldata.xAccel, sitldata.yAccel, sitldata.zAccel);
+                    //      //Console.WriteLine(accel_body.ToString());
+                    //      //Console.WriteLine("        {0} {1} {2}",sitldata.xAccel, sitldata.yAccel, sitldata.zAccel);
                 }
             }
         }
@@ -274,7 +274,7 @@ namespace MissionPlanner.HIL
                 // save current fix = 3
                 sitl_fdmbuffer[gpsbufferindex%sitl_fdmbuffer.Length] = sitldata;
 
-                //                Console.WriteLine((gpsbufferindex % gpsbuffer.Length) + " " + ((gpsbufferindex + (gpsbuffer.Length - 1)) % gpsbuffer.Length));
+                //                //Console.WriteLine((gpsbufferindex % gpsbuffer.Length) + " " + ((gpsbufferindex + (gpsbuffer.Length - 1)) % gpsbuffer.Length));
 
                 // return buffer index + 5 = (3 + 5) = 8 % 6 = 2
                 oldgps = sitl_fdmbuffer[(gpsbufferindex + (sitl_fdmbuffer.Length - 1))%sitl_fdmbuffer.Length];
@@ -292,7 +292,7 @@ namespace MissionPlanner.HIL
             hilstate.lon = (int) (oldgps.longitude*1e7); // * 1E7
             hilstate.alt = (int) (oldgps.altitude*1000); // mm
 
-            //   Console.WriteLine(hilstate.alt);
+            //   //Console.WriteLine(hilstate.alt);
 
             hilstate.pitch = (float)( sitldata.pitchDeg*MathHelper.deg2rad); // (rad)
             hilstate.pitchspeed = (float)(sitldata.pitchRate*MathHelper.deg2rad); // (rad/s)

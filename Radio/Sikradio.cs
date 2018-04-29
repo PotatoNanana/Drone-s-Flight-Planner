@@ -183,7 +183,7 @@ S15: MAX_WINDOW=131
 
                 Thread.Sleep(2000);
                 var tempd = comPort.ReadExisting();
-                Console.WriteLine(tempd);
+                //Console.WriteLine(tempd);
                 comPort.Write("U");
                 Thread.Sleep(1000);
                 var resp1 = Serial_ReadLine(comPort); // echo
@@ -460,7 +460,7 @@ S15: MAX_WINDOW=131
                 if (level == 0)
                 {
                     lbl_status.Text = message;
-                    Console.WriteLine(message);
+                    //Console.WriteLine(message);
                     log.Info(message);
                     Application.DoEvents();
                 }
@@ -1137,7 +1137,7 @@ S15: MAX_WINDOW=131
         {
             try
             {
-                Console.WriteLine("doConnect");
+                //Console.WriteLine("doConnect");
 
                 var trys = 1;
 

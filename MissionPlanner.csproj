@@ -815,6 +815,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>maintainace.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MainV3_pilot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainV3_pilot.Designer.cs">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainV3_developer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainV3_developer.Designer.cs">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainV3_admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3478,6 +3490,60 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Log\MavlinkLog.pt.resx">
       <DependentUpon>MavlinkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.ar.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.id-ID.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.ja-JP.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.ko-KR.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.pt.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.zh-Hans.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.zh-Hant.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_pilot.zh-TW.resx">
+      <DependentUpon>MainV3_pilot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.ar.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.id-ID.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.ja-JP.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.ko-KR.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.pt.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.zh-Hans.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.zh-Hant.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainV3_developer.zh-TW.resx">
+      <DependentUpon>MainV3_developer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainV3_admin.ar.resx">
       <DependentUpon>MainV3_admin.cs</DependentUpon>

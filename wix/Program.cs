@@ -72,7 +72,7 @@ namespace wix
         {
             if (args.Length == 0)
             {
-                Console.WriteLine("Bad Directory");
+                //Console.WriteLine("Bad Directory");
                 return;
             }
 
