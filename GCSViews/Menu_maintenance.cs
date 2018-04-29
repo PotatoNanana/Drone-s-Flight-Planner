@@ -223,7 +223,7 @@ namespace MissionPlanner.GCSViews
         {          
             try
             {
-                String query = "SELECT * FROM Drone WHERE drone_id = '" + textBox_droneID.Text + "'";
+                String query = "SELECT * FROM Drone ";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);            
@@ -244,10 +244,18 @@ namespace MissionPlanner.GCSViews
                     }
                 }
                 else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                //show data to gridView Part
+                String query2 = "SELECT * FROM DeviceList ";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                //cmd = new SqlCommand(query2, con);                
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                DG_Part.DataSource = dt;                
                 con.Close();
             }
             catch (Exception ex)
-            { MessageBox.Show(ex.Message); }          
+            { MessageBox.Show(ex.Message); }           
 
         }
         public void showGridView()
@@ -274,13 +282,21 @@ namespace MissionPlanner.GCSViews
                 {
                     textBox_partID.Text = DG_Part.SelectedRows[0].Cells[0].Value.ToString();
                     textBox_partName.Text = DG_Part.SelectedRows[0].Cells[1].Value.ToString();
+                    textBox_partPosition.Text = DG_Part.SelectedRows[0].Cells[2].Value.ToString();
+                    textBox_partPrice.Text = DG_Part.SelectedRows[0].Cells[3].Value.ToString();
+                    textBox_respon.Text = DG_Part.SelectedRows[0].Cells[11].Value.ToString();
+                    textBox_venAdd.Text = DG_Part.SelectedRows[0].Cells[9].Value.ToString();
+                    textBox_venName.Text = DG_Part.SelectedRows[0].Cells[8].Value.ToString();
+                    textBox_venPhone.Text = DG_Part.SelectedRows[0].Cells[10].Value.ToString();
+                    comboBox_alarm.Text = DG_Part.SelectedRows[0].Cells[7].Value.ToString();
+                    //dateTimePicker_reg.Value.Date = DG_Part.SelectedRows[0].Cells[10].Value.ToString();
                     byte[] img = (byte[])(reader[8]);
                     if (img == null)
-                    { pictureBox.Image = null; }
+                    { pictureBox_part.Image = null; }
                     else
                     {
                         MemoryStream ms = new MemoryStream(img);
-                        pictureBox.Image = Image.FromStream(ms);
+                        pictureBox_part.Image = Image.FromStream(ms);
                     }
                 }
                 else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
@@ -298,14 +314,9 @@ namespace MissionPlanner.GCSViews
                 dialog.Filter = "Images(.jpg,.png)|*.png;*.jpg";
                 dialog.Title = "เลือกรูปภาพของส่วนประกอบโดรน";
                 if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    /*imgLocation = dialog.FileName.ToString();
-                    imgby = imageToByteArray(Image.FromFile(dialog.FileName));
-                    pictureBox.ImageLocation = imgLocation; */
-
+                {                    
                     imgLocation = dialog.FileName.ToString();
-                    pictureBox.ImageLocation = imgLocation;
-
+                    pictureBox_part.ImageLocation = imgLocation;
                 }
             }
             catch (Exception ex)
