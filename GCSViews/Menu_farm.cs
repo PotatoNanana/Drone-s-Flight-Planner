@@ -78,7 +78,7 @@ namespace MissionPlanner.GCSViews
             //click and show  data to dataGridView
             try
             {
-                String query = "SELECT * FROM Farm where farm_id = '" + textBox_farmID.Text + "' ";
+                String query = "SELECT * FROM Farm ";
                 if (con.State != ConnectionState.Open)
                      { con.Open(); }
                 cmd = new SqlCommand(query, con);

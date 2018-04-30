@@ -106,8 +106,8 @@ namespace MissionPlanner.GCSViews
                 FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
-
-                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "',@img)";
+                
+                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES(,'" + textBox_droneName.Text + "',@img)";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
@@ -223,7 +223,7 @@ namespace MissionPlanner.GCSViews
         {          
             try
             {
-                String query = "SELECT * FROM Drone WHERE drone_id = '" + textBox_droneID.Text + "'";
+                String query = "SELECT * FROM Drone ";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);            
@@ -245,9 +245,23 @@ namespace MissionPlanner.GCSViews
                 }
                 else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
                 con.Close();
+
+
+                //show data to DataGridView
+                String query2 = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query2, con);
+
+                    SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                    DataTable dt2 = new DataTable();
+                    SDA2.Fill(dt2);
+                    con.Close();
+                    DG_Part.DataSource = dt2;
+                
             }
             catch (Exception ex)
-            { MessageBox.Show(ex.Message); }          
+            { MessageBox.Show(ex.Message); }           
 
         }
         public void showGridView()
@@ -264,23 +278,32 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '"+textBox_droneID+"'";
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = @iddrone";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add("@iddrone", id_drone); // if in same dbo or same schema use like this first
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
                 if (reader.HasRows)
                 {
                     textBox_partID.Text = DG_Part.SelectedRows[0].Cells[0].Value.ToString();
                     textBox_partName.Text = DG_Part.SelectedRows[0].Cells[1].Value.ToString();
+                    textBox_partPosition.Text = DG_Part.SelectedRows[0].Cells[2].Value.ToString();
+                    textBox_partPrice.Text = DG_Part.SelectedRows[0].Cells[3].Value.ToString();
+                    textBox_respon.Text = DG_Part.SelectedRows[0].Cells[11].Value.ToString();
+                    textBox_venAdd.Text = DG_Part.SelectedRows[0].Cells[9].Value.ToString();
+                    textBox_venName.Text = DG_Part.SelectedRows[0].Cells[8].Value.ToString();
+                    textBox_venPhone.Text = DG_Part.SelectedRows[0].Cells[10].Value.ToString();
+                    comboBox_alarm.Text = DG_Part.SelectedRows[0].Cells[7].Value.ToString();
+                    //dateTimePicker_reg.Value.Date = DG_Part.SelectedRows[0].Cells[10].Value.ToString();
                     byte[] img = (byte[])(reader[8]);
                     if (img == null)
-                    { pictureBox.Image = null; }
+                    { pictureBox_part.Image = null; }
                     else
                     {
                         MemoryStream ms = new MemoryStream(img);
-                        pictureBox.Image = Image.FromStream(ms);
+                        pictureBox_part.Image = Image.FromStream(ms);
                     }
                 }
                 else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
@@ -298,14 +321,9 @@ namespace MissionPlanner.GCSViews
                 dialog.Filter = "Images(.jpg,.png)|*.png;*.jpg";
                 dialog.Title = "เลือกรูปภาพของส่วนประกอบโดรน";
                 if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    /*imgLocation = dialog.FileName.ToString();
-                    imgby = imageToByteArray(Image.FromFile(dialog.FileName));
-                    pictureBox.ImageLocation = imgLocation; */
-
+                {                    
                     imgLocation = dialog.FileName.ToString();
-                    pictureBox.ImageLocation = imgLocation;
-
+                    pictureBox_part.ImageLocation = imgLocation;
                 }
             }
             catch (Exception ex)
@@ -321,13 +339,8 @@ namespace MissionPlanner.GCSViews
                 dialog.Title = "เลือกรูปภาพของโดรน";
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    /*imgLocation = dialog.FileName.ToString();
-                    imgby = imageToByteArray(Image.FromFile(dialog.FileName));
-                    pictureBox.ImageLocation = imgLocation; */
-
                     imgLocation = dialog.FileName.ToString();
                     pictureBox.ImageLocation = imgLocation;
-
                 }
             }
             catch (Exception ex)
@@ -374,8 +387,8 @@ namespace MissionPlanner.GCSViews
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
 
-                String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id) "
-                                       + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respon.Text + "',@img,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_partPrice.Text + "','" + id_drone + "')";
+                String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id,device_remindDate) "
+                                       + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respon.Text + "',@img,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_partPrice.Text + "','" + id_drone + "','" + dateTimePicker_startDate.Value.ToString(format) + "')";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);

@@ -60,20 +60,9 @@ namespace MissionPlanner.GCSViews
 
         
         public string file; // name of waypoint path
-        public static string id_drone1;
-        public static string id_farm1;
-        public static string id_drone
-        {
-            get { return id_drone; }
-            set { id_drone = id_drone1; }
-        }
+        public static string id_drone;
+        public static string id_farm;
         
-        public static string id_farm
-        {
-            get { return id_farm; }
-            set { id_farm = id_farm1; }
-        }
-
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
 
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
@@ -7977,14 +7966,14 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
             // grid view farm
             textBox_farmID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-            id_farm1 = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+            id_farm = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
         }
 
         private void DG_drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // grid view drone
             textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
-            id_drone1 = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
+            id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
         }
 
         private void panelPflightPlanner_farm_Paint(object sender, PaintEventArgs e)
@@ -8009,6 +7998,16 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             SDA.Fill(dt);
             DG_Drone.DataSource = dt;
             con.Close();
+        }
+
+        internal string id_droneGet()
+        {
+            return id_drone;
+        }
+
+        internal string id_farmGet()
+        {
+            return id_farm;
         }
     }
 

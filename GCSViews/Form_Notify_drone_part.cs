@@ -39,15 +39,7 @@ namespace MissionPlanner.GCSViews
 
         private void button_show_Click(object sender, EventArgs e)
         {
-            //show data to DataGridView
-            con.Open();
             
-            String query = "SELECT device_id,device_name,device_position,device_alarm FROM DeviceList WHERE drone_id = '" + droneId + "'";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Noti.DataSource = dt;
-            con.Close();
         }
 
         private void But_exit_Click(object sender, EventArgs e)
@@ -68,6 +60,44 @@ namespace MissionPlanner.GCSViews
                 return true;
             }
             return base.ProcessDialogKey(keyData);
+        }
+
+        private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
+        {
+            //calcurate date remind
+            con.Open();
+            DateTime nowDay = DateTime.Now;
+            String queryDate1 = "UPDATE DeviceList SET device_remind = 'y', device_remindDate = @nowDate WHERE DATEDIFF(@nowDate, device_remindDate) <= 1 AND device_alarm = 'ทุกวัน' AND drone_id = '" + droneId + "' ";
+                        
+            String queryDate7 = "UPDATE DeviceList SET device_remind = 'y', device_remindDate = @nowDate WHERE DATEDIFF(@nowDate, device_remindDate) <= 7 AND device_alarm = 'ทุกอาทิตย์' AND drone_id = '" + droneId + "' ";
+            
+            String queryDate30 = "UPDATE DeviceList SET device_remind = 'y', device_remindDate = @nowDate WHERE DATEDIFF(@nowDate, device_remindDate) <= 30 AND device_alarm = 'ทุกเดือน' AND drone_id = '" + droneId + "' ";
+
+            String queryDate365 = "UPDATE DeviceList SET device_remind = 'y', device_remindDate = @nowDate WHERE DATEDIFF(@nowDate, device_remindDate) <= 365 AND device_alarm = 'ทุก1ปี' AND drone_id = '" + droneId + "' ";
+
+            cmd = new SqlCommand(queryDate1, con);
+            cmd = new SqlCommand(queryDate7, con);
+            cmd = new SqlCommand(queryDate30, con);
+            cmd = new SqlCommand(queryDate365, con);
+            cmd.Parameters.Add(new SqlParameter("@nowDate", nowDay));
+            int x = cmd.ExecuteNonQuery();
+
+            con.Close();
+
+            //show data to DataGridView
+            con.Open();
+            
+            String queryShow = "SELECT device_id,device_name,device_position,device_alarm,device_startDate,device_remindDate FROM DeviceList WHERE drone_id = '" + droneId + "' AND device_remind = 'y' ";
+            SqlDataAdapter SDAShow = new SqlDataAdapter(queryShow, con);
+            DataTable dt = new DataTable();         
+            SDAShow.Fill(dt);
+            DG_Noti.DataSource = dt;
+
+            //chang back to not noti
+            String queryFinal = "UPDATE DeviceList SET device_remind = 'n' WHERE device_remind = 'y' ";
+            SqlDataAdapter SDAFinal = new SqlDataAdapter(queryFinal, con);
+
+            con.Close();
         }
     }
 }
