@@ -166,10 +166,10 @@ namespace MissionPlanner.Plugin
         /// <summary>
         /// The point where the menu was drawn
         /// </summary>
-       /* public PointLatLng FPMenuMapPosition
+        public PointLatLng FPMenuMapPosition
         {
             get { return MainV3.instance.FlightPlanner.MouseDownEnd; }
-        } */
+        }
 
         /// <summary>
         /// The polygon drawn by the user on the FP page
