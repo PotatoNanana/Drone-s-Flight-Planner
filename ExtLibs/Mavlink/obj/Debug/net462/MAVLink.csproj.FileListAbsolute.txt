@@ -1,3 +1,8 @@
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\net462\log4net.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.AssemblyInfo.cs
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.dll
+D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Mavlink\bin\Debug\net462\log4net.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Mavlink\obj\Debug\net462\MAVLink.csproj.CoreCompileInputs.cache
