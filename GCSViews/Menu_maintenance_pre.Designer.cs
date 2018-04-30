@@ -55,6 +55,21 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.maintainanceTableAdapter = new MissionPlanner.maintainaceTableAdapters.MaintainanceTableAdapter();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.textBox_venName = new System.Windows.Forms.TextBox();
+            this.textBox_price = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox_venAdd = new System.Windows.Forms.TextBox();
+            this.textBox_respond = new System.Windows.Forms.TextBox();
+            this.textBox_time = new System.Windows.Forms.TextBox();
+            this.textBox_venPhone = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
@@ -81,7 +96,7 @@
             this.but_backto_pre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_backto_pre.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_backto_pre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_backto_pre.Location = new System.Drawing.Point(60, 515);
+            this.but_backto_pre.Location = new System.Drawing.Point(70, 474);
             this.but_backto_pre.Name = "but_backto_pre";
             this.but_backto_pre.Size = new System.Drawing.Size(70, 40);
             this.but_backto_pre.TabIndex = 10;
@@ -94,6 +109,21 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.textBox7);
+            this.panel_Main_farm.Controls.Add(this.textBox_venAdd);
+            this.panel_Main_farm.Controls.Add(this.textBox_respond);
+            this.panel_Main_farm.Controls.Add(this.textBox_time);
+            this.panel_Main_farm.Controls.Add(this.textBox_venPhone);
+            this.panel_Main_farm.Controls.Add(this.label5);
+            this.panel_Main_farm.Controls.Add(this.label7);
+            this.panel_Main_farm.Controls.Add(this.label14);
+            this.panel_Main_farm.Controls.Add(this.label8);
+            this.panel_Main_farm.Controls.Add(this.dateTimePicker);
+            this.panel_Main_farm.Controls.Add(this.textBox_venName);
+            this.panel_Main_farm.Controls.Add(this.textBox_price);
+            this.panel_Main_farm.Controls.Add(this.label4);
+            this.panel_Main_farm.Controls.Add(this.label3);
+            this.panel_Main_farm.Controls.Add(this.label6);
             this.panel_Main_farm.Controls.Add(this.textBox_mainAct);
             this.panel_Main_farm.Controls.Add(this.textBox_mainID);
             this.panel_Main_farm.Controls.Add(this.label2);
@@ -107,41 +137,41 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_Main_farm.Location = new System.Drawing.Point(60, 40);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(1266, 450);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1284, 410);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_pre_Paint);
             // 
             // textBox_mainAct
             // 
-            this.textBox_mainAct.Location = new System.Drawing.Point(1034, 147);
+            this.textBox_mainAct.Location = new System.Drawing.Point(675, 136);
             this.textBox_mainAct.Name = "textBox_mainAct";
-            this.textBox_mainAct.Size = new System.Drawing.Size(187, 31);
+            this.textBox_mainAct.Size = new System.Drawing.Size(195, 31);
             this.textBox_mainAct.TabIndex = 37;
             // 
             // textBox_mainID
             // 
-            this.textBox_mainID.Location = new System.Drawing.Point(1034, 82);
+            this.textBox_mainID.Location = new System.Drawing.Point(674, 97);
             this.textBox_mainID.Name = "textBox_mainID";
-            this.textBox_mainID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_mainID.Size = new System.Drawing.Size(195, 31);
             this.textBox_mainID.TabIndex = 36;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("PJ Standard", 14.25F);
-            this.label2.Location = new System.Drawing.Point(872, 150);
+            this.label2.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label2.Location = new System.Drawing.Point(499, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 24);
+            this.label2.Size = new System.Drawing.Size(159, 27);
             this.label2.TabIndex = 35;
             this.label2.Text = "ชื่อกิจกรรมการซ่อมบำรุง";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("PJ Standard", 14.25F);
-            this.label1.Location = new System.Drawing.Point(872, 89);
+            this.label1.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label1.Location = new System.Drawing.Point(499, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 24);
+            this.label1.Size = new System.Drawing.Size(146, 27);
             this.label1.TabIndex = 34;
             this.label1.Text = "หมายเลขการซ่อมบำรุง";
             // 
@@ -154,7 +184,7 @@
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_edit.Location = new System.Drawing.Point(986, 269);
+            this.button_edit.Location = new System.Drawing.Point(805, 327);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(130, 40);
             this.button_edit.TabIndex = 32;
@@ -172,7 +202,7 @@
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete.Location = new System.Drawing.Point(986, 315);
+            this.button_delete.Location = new System.Drawing.Point(1037, 327);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(130, 40);
             this.button_delete.TabIndex = 31;
@@ -200,7 +230,7 @@
             this.DG_Farm.Location = new System.Drawing.Point(25, 70);
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Farm.Size = new System.Drawing.Size(831, 350);
+            this.DG_Farm.Size = new System.Drawing.Size(449, 297);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             // 
@@ -276,7 +306,7 @@
             this.BUT_add_drone_pre.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_add_drone_pre.ForeColor = System.Drawing.Color.White;
             this.BUT_add_drone_pre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_drone_pre.Location = new System.Drawing.Point(986, 223);
+            this.BUT_add_drone_pre.Location = new System.Drawing.Point(582, 327);
             this.BUT_add_drone_pre.Name = "BUT_add_drone_pre";
             this.BUT_add_drone_pre.Size = new System.Drawing.Size(130, 40);
             this.BUT_add_drone_pre.TabIndex = 6;
@@ -292,7 +322,7 @@
             this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator2.Name = "lineSeparator2";
             this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator2.Size = new System.Drawing.Size(1194, 2);
+            this.lineSeparator2.Size = new System.Drawing.Size(1241, 2);
             this.lineSeparator2.TabIndex = 8;
             // 
             // panel3
@@ -301,7 +331,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1266, 50);
+            this.panel3.Size = new System.Drawing.Size(1284, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -316,7 +346,7 @@
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(1266, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(1284, 50);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ข้อมูลการบำรุงรักษาชิ้นส่วนภายในโดรน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -327,6 +357,133 @@
             // maintainanceTableAdapter
             // 
             this.maintainanceTableAdapter.ClearBeforeFill = true;
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(675, 173);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(194, 31);
+            this.dateTimePicker.TabIndex = 45;
+            // 
+            // textBox_venName
+            // 
+            this.textBox_venName.Location = new System.Drawing.Point(675, 253);
+            this.textBox_venName.Name = "textBox_venName";
+            this.textBox_venName.Size = new System.Drawing.Size(194, 31);
+            this.textBox_venName.TabIndex = 42;
+            // 
+            // textBox_price
+            // 
+            this.textBox_price.Location = new System.Drawing.Point(676, 213);
+            this.textBox_price.Name = "textBox_price";
+            this.textBox_price.Size = new System.Drawing.Size(194, 31);
+            this.textBox_price.TabIndex = 43;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label4.Location = new System.Drawing.Point(499, 255);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 27);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "ชื่อตัวแทนซ่อมบำรุง";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label3.Location = new System.Drawing.Point(499, 215);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(165, 27);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "ราคาการซ่อมบำรุง (บาท)";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label6.Location = new System.Drawing.Point(499, 173);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(132, 27);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "วันที่ทำการซ่อมบำรุง";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(1052, 139);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(0, 31);
+            this.textBox7.TabIndex = 50;
+            // 
+            // textBox_venAdd
+            // 
+            this.textBox_venAdd.Location = new System.Drawing.Point(1052, 139);
+            this.textBox_venAdd.Multiline = true;
+            this.textBox_venAdd.Name = "textBox_venAdd";
+            this.textBox_venAdd.Size = new System.Drawing.Size(200, 62);
+            this.textBox_venAdd.TabIndex = 51;
+            // 
+            // textBox_respond
+            // 
+            this.textBox_respond.Location = new System.Drawing.Point(1052, 257);
+            this.textBox_respond.Name = "textBox_respond";
+            this.textBox_respond.Size = new System.Drawing.Size(200, 31);
+            this.textBox_respond.TabIndex = 52;
+            // 
+            // textBox_time
+            // 
+            this.textBox_time.Location = new System.Drawing.Point(1051, 215);
+            this.textBox_time.Name = "textBox_time";
+            this.textBox_time.Size = new System.Drawing.Size(200, 31);
+            this.textBox_time.TabIndex = 53;
+            // 
+            // textBox_venPhone
+            // 
+            this.textBox_venPhone.Location = new System.Drawing.Point(1051, 95);
+            this.textBox_venPhone.Name = "textBox_venPhone";
+            this.textBox_venPhone.Size = new System.Drawing.Size(200, 31);
+            this.textBox_venPhone.TabIndex = 54;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label5.Location = new System.Drawing.Point(878, 92);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(159, 27);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "เบอร์โทรตัวแทนซ่อมบำรุง";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label7.Location = new System.Drawing.Point(878, 261);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(174, 27);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "ชื่อผู้ติดต่อกับตัวแทนจำหน่าย";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label14.Location = new System.Drawing.Point(878, 215);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(172, 27);
+            this.label14.TabIndex = 48;
+            this.label14.Text = "ระยะเวลาในการดำเนินการ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label8.Location = new System.Drawing.Point(878, 136);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 27);
+            this.label8.TabIndex = 49;
+            this.label8.Text = "ที่อยู่ตัวแทนซ่อมบำรุง";
             // 
             // Menu_maintenance_pre
             // 
@@ -374,5 +531,20 @@
         private System.Windows.Forms.BindingSource maintainanceBindingSource;
         private maintainace maintainace;
         private maintainaceTableAdapters.MaintainanceTableAdapter maintainanceTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.TextBox textBox_venName;
+        private System.Windows.Forms.TextBox textBox_price;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox_venAdd;
+        private System.Windows.Forms.TextBox textBox_respond;
+        private System.Windows.Forms.TextBox textBox_time;
+        private System.Windows.Forms.TextBox textBox_venPhone;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label8;
     }
 }

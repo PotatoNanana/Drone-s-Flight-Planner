@@ -94,8 +94,11 @@ namespace MissionPlanner.GCSViews
             DG_Noti.DataSource = dt;
 
             //chang back to not noti
-            String queryFinal = "UPDATE DeviceList SET device_remind = 'n' WHERE device_remind = 'y' ";
+            String queryFinal = "UPDATE DeviceList SET device_remind = 'n' AND device_remindDate = @nowDate WHERE device_remind = 'y' ";
             SqlDataAdapter SDAFinal = new SqlDataAdapter(queryFinal, con);
+            cmd = new SqlCommand(queryFinal, con);
+            cmd.Parameters.Add(new SqlParameter("@nowDate", nowDay));
+            int x2 = cmd.ExecuteNonQuery();
 
             con.Close();
         }
