@@ -69,7 +69,7 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(382, 347);
+            this.panel_Main_farm.Size = new System.Drawing.Size(382, 355);
             this.panel_Main_farm.TabIndex = 11;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
@@ -205,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 347);
+            this.ClientSize = new System.Drawing.Size(382, 355);
             this.Controls.Add(this.panel_Main_farm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_log";

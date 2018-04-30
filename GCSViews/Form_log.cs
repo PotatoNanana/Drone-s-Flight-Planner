@@ -109,5 +109,18 @@ namespace MissionPlanner.GCSViews
             this.flightScheduleTableAdapter.Fill(this.action_name.FlightSchedule);
 
         }
+
+       /* private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.flightScheduleTableAdapter1.FillBy(this.droneFlightPlannerDataSet4.FlightSchedule, id_farmToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        } */
     }
 }
