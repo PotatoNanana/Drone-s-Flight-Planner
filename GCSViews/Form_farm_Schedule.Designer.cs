@@ -32,6 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_Schedule));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.textBox_droneID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox_cost = new System.Windows.Forms.TextBox();
+            this.textBox_cap = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_actName = new System.Windows.Forms.TextBox();
+            this.textBox_actID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_edit = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
@@ -48,17 +59,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.textBox_droneID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox_cost = new System.Windows.Forms.TextBox();
-            this.textBox_cap = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox_actName = new System.Windows.Forms.TextBox();
-            this.textBox_actID = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_startTime = new System.Windows.Forms.TextBox();
+            this.textBox_finishTime = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,6 +84,10 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.textBox_finishTime);
+            this.panel_Main_farm.Controls.Add(this.textBox_startTime);
+            this.panel_Main_farm.Controls.Add(this.label2);
+            this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.textBox_droneID);
             this.panel_Main_farm.Controls.Add(this.label7);
             this.panel_Main_farm.Controls.Add(this.textBox_cost);
@@ -104,6 +112,93 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(968, 580);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_schedule_Paint);
+            // 
+            // textBox_droneID
+            // 
+            this.textBox_droneID.Location = new System.Drawing.Point(183, 401);
+            this.textBox_droneID.Name = "textBox_droneID";
+            this.textBox_droneID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_droneID.TabIndex = 49;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(67, 404);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 24);
+            this.label7.TabIndex = 48;
+            this.label7.Text = "รหัสโดรน";
+            // 
+            // textBox_cost
+            // 
+            this.textBox_cost.Location = new System.Drawing.Point(511, 457);
+            this.textBox_cost.Name = "textBox_cost";
+            this.textBox_cost.Size = new System.Drawing.Size(187, 31);
+            this.textBox_cost.TabIndex = 46;
+            // 
+            // textBox_cap
+            // 
+            this.textBox_cap.Location = new System.Drawing.Point(511, 400);
+            this.textBox_cap.Name = "textBox_cap";
+            this.textBox_cap.Size = new System.Drawing.Size(187, 31);
+            this.textBox_cap.TabIndex = 47;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(395, 403);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 24);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "ปริมาณสาร";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(395, 460);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 24);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "ค่าใช้จ่าย";
+            // 
+            // textBox_actName
+            // 
+            this.textBox_actName.Location = new System.Drawing.Point(183, 509);
+            this.textBox_actName.Name = "textBox_actName";
+            this.textBox_actName.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actName.TabIndex = 43;
+            // 
+            // textBox_actID
+            // 
+            this.textBox_actID.Location = new System.Drawing.Point(183, 454);
+            this.textBox_actID.Name = "textBox_actID";
+            this.textBox_actID.Size = new System.Drawing.Size(187, 31);
+            this.textBox_actID.TabIndex = 42;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(67, 514);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 24);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "ชื่อกิจกรรม";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(67, 457);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 24);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "รหัสกิจกรรม";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 1);
+            this.monthCalendar1.Location = new System.Drawing.Point(71, 164);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 27;
             // 
             // pictureBox1
             // 
@@ -270,92 +365,39 @@
             // 
             this.flightScheduleTableAdapter.ClearBeforeFill = true;
             // 
-            // monthCalendar1
+            // label1
             // 
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 1);
-            this.monthCalendar1.Location = new System.Drawing.Point(71, 164);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 27;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(395, 512);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 24);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "เวลาที่เริ่ม";
             // 
-            // textBox_droneID
+            // label2
             // 
-            this.textBox_droneID.Location = new System.Drawing.Point(183, 401);
-            this.textBox_droneID.Name = "textBox_droneID";
-            this.textBox_droneID.Size = new System.Drawing.Size(187, 31);
-            this.textBox_droneID.TabIndex = 49;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(561, 514);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 24);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "เวลาที่เสร็จ";
             // 
-            // label7
+            // textBox_startTime
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(67, 404);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 24);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "รหัสโดรน";
+            this.textBox_startTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_startTime.Location = new System.Drawing.Point(462, 507);
+            this.textBox_startTime.Name = "textBox_startTime";
+            this.textBox_startTime.ShortcutsEnabled = false;
+            this.textBox_startTime.Size = new System.Drawing.Size(93, 31);
+            this.textBox_startTime.TabIndex = 52;
             // 
-            // textBox_cost
+            // textBox_finishTime
             // 
-            this.textBox_cost.Location = new System.Drawing.Point(511, 457);
-            this.textBox_cost.Name = "textBox_cost";
-            this.textBox_cost.Size = new System.Drawing.Size(187, 31);
-            this.textBox_cost.TabIndex = 46;
-            // 
-            // textBox_cap
-            // 
-            this.textBox_cap.Location = new System.Drawing.Point(511, 400);
-            this.textBox_cap.Name = "textBox_cap";
-            this.textBox_cap.Size = new System.Drawing.Size(187, 31);
-            this.textBox_cap.TabIndex = 47;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(395, 403);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 24);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "ปริมาณสาร";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(395, 460);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 24);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "ค่าใช้จ่าย";
-            // 
-            // textBox_actName
-            // 
-            this.textBox_actName.Location = new System.Drawing.Point(183, 509);
-            this.textBox_actName.Name = "textBox_actName";
-            this.textBox_actName.Size = new System.Drawing.Size(187, 31);
-            this.textBox_actName.TabIndex = 43;
-            // 
-            // textBox_actID
-            // 
-            this.textBox_actID.Location = new System.Drawing.Point(183, 454);
-            this.textBox_actID.Name = "textBox_actID";
-            this.textBox_actID.Size = new System.Drawing.Size(187, 31);
-            this.textBox_actID.TabIndex = 42;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 514);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 24);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "ชื่อกิจกรรม";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(67, 457);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 24);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "รหัสกิจกรรม";
+            this.textBox_finishTime.Location = new System.Drawing.Point(634, 507);
+            this.textBox_finishTime.Name = "textBox_finishTime";
+            this.textBox_finishTime.Size = new System.Drawing.Size(93, 31);
+            this.textBox_finishTime.TabIndex = 53;
             // 
             // Form_farm_Schedule
             // 
@@ -411,5 +453,9 @@
         private System.Windows.Forms.TextBox textBox_actID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox_finishTime;
+        private System.Windows.Forms.TextBox textBox_startTime;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

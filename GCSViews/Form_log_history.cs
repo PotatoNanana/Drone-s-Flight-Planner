@@ -25,17 +25,7 @@ namespace MissionPlanner.GCSViews
 
         private void button_show_Click(object sender, EventArgs e)
         {
-            //show data to DataGridView
-            con.Open();
-
-            //string a = "yyyy-MM-dd";
-         
-            String query = "SELECT * FROM FlightLog ";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Flight.DataSource = dt;
-            con.Close();
+            
                        
         }
 
@@ -64,6 +54,21 @@ namespace MissionPlanner.GCSViews
                 return true;
             }
             return base.ProcessDialogKey(keyData);
+        }
+
+        private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
+        {
+            //show data to DataGridView
+            con.Open();
+
+            //string a = "yyyy-MM-dd";
+
+            String query = "SELECT * FROM FlightLog ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Flight.DataSource = dt;
+            con.Close();
         }
     }
 }

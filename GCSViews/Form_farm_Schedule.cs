@@ -53,7 +53,7 @@ namespace MissionPlanner.GCSViews
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     string format = "yyyy-MM-dd";
-                    String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,action_name,action_capacity,action_cost,action_datetime) " + "VALUES('" + textBox_actID.Text + "','" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.SelectionEnd.ToShortDateString() + "')";
+                    String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,action_name,action_capacity,action_cost,action_datetime,action_startTime,action_finishTime) " + "VALUES('" + textBox_actID.Text + "','" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.SelectionEnd.ToShortDateString() + "','" +textBox_startTime.Text + "','" +textBox_finishTime.Text + "')";
                     SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                     SDA.SelectCommand.ExecuteNonQuery();
                     con.Close();
@@ -109,7 +109,7 @@ namespace MissionPlanner.GCSViews
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 string format = "yyyy-MM-dd";
-                String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',action_datetime = '" + monthCalendar1.SelectionEnd.ToShortDateString() + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "') ";
+                String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',action_datetime = '" + monthCalendar1.SelectionEnd.ToShortDateString() + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "',action_startTime = '" +textBox_startTime.Text + "',action_finishTime= '" +textBox_finishTime.Text + "') ";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
