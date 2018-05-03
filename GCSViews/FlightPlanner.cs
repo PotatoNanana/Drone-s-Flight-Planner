@@ -7281,50 +7281,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             Form_log form_Log = new Form_log(file);
             form_Log.ShowDialog();
             
-            // altitude
-            string alt = "10";
-
-            if (DialogResult.Cancel == InputBox.Show("Altitude", "Please enter your takeoff altitude", ref alt))
-                return;
-
-            int alti = -1;
-
-            if (!int.TryParse(alt, out alti))
-            {
-                MessageBox.Show("Bad Alt");
-                return;
-            }
-
-            // take off pitch
-            int topi = 0;
-
-            if (comPort.MAV.cs.firmware.Equals(Firmwares.ArduPlane) ||
-                comPort.MAV.cs.firmware.Equals(Firmwares.Ateryx))
-            {
-                string top = "15";
-
-                if (DialogResult.Cancel == InputBox.Show("Takeoff Pitch", "Please enter your takeoff pitch", ref top))
-                    return;
-
-                if (!int.TryParse(top, out topi))
-                {
-                    MessageBox.Show("Bad Takeoff pitch");
-                    return;
-                }
-            }
-
-            selectedrow = Commands.Rows.Add();
-
-            Commands.Rows[selectedrow].Cells[Command.Index].Value = MAVLink.MAV_CMD.TAKEOFF.ToString();
-
-            Commands.Rows[selectedrow].Cells[Param1.Index].Value = topi;
-
-            Commands.Rows[selectedrow].Cells[Alt.Index].Value = alti;
-
-            ChangeColumnHeader(MAVLink.MAV_CMD.TAKEOFF.ToString());
-
-            writeKML();
-          
+            MyView.ShowScreen("FlightData");
+            
         }
 
         private void MenuSimulation_Click(object sender, EventArgs e)
