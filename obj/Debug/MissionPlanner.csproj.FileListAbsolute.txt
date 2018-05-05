@@ -2885,3 +2885,4 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ja-JP\MissionPlanne
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ru-RU\MissionPlanner.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_after_flight.resources

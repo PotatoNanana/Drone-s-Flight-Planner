@@ -119,6 +119,8 @@
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
+            this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.panel_Main_farm);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -877,6 +879,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

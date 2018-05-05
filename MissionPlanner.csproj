@@ -606,6 +606,12 @@
     <Compile Include="GCSViews\FlightLog.Designer.cs">
       <DependentUpon>FlightLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\Form_After_flight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_After_flight.Designer.cs">
+      <DependentUpon>Form_After_flight.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\Form_Edit_drone_pre .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -3175,6 +3181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\FlightPlanner.zh-TW.resx">
       <DependentUpon>FlightPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_after_flight.resx">
+      <DependentUpon>Form_After_flight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_Edit_drone_pre .resx">
       <DependentUpon>Form_Edit_drone_pre .cs</DependentUpon>
