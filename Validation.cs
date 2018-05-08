@@ -111,7 +111,7 @@ namespace MissionPlanner
             scmd.Parameters.AddWithValue("@usr", txtUsername.Text);
             scmd.Parameters.AddWithValue("@pwd", txtPassword.Text);
 
-            SqlCommand cmd = new SqlCommand("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'   ", con);
+            SqlCommand cmd = new SqlCommand("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", con);
             string role;
 
             con.Open();

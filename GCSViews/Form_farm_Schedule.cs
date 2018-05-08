@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace MissionPlanner.GCSViews
 {
@@ -50,24 +52,60 @@ namespace MissionPlanner.GCSViews
         {            
             try
             {               
-                    if (con.State != ConnectionState.Open)
-                    { con.Open(); }
-                    string format = "yyyy-MM-dd";
-                    String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,action_name,action_capacity,action_cost,action_datetime,action_startTime,action_finishTime) " + "VALUES('" + textBox_actID.Text + "','" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.SelectionEnd.ToShortDateString() + "','" +textBox_startTime.Text + "','" +textBox_finishTime.Text + "')";
-                    SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                    SDA.SelectCommand.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("ทำการบันทึกข้อมูลเรียบร้อยแล้ว !!");
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                string format = "yyyy-MM-dd";
+                String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,action_name,action_capacity,action_cost,action_datetime,action_startTime,action_finishTime) " + "VALUES('" + textBox_actID.Text + "','" + id_farm + "','" + textBox_droneID.Text + "','" + textBox_actName.Text + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.SelectionEnd.ToShortDateString() + "','" +textBox_startTime.Text + "','" +textBox_finishTime.Text + "')";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                SDA.SelectCommand.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("ทำการบันทึกข้อมูลเรียบร้อยแล้ว !!");
 
-                    //show data to DataGridView
-                    con.Open();
-                    String query2 = "SELECT * FROM Farm";
-                    SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                    DataTable dt = new DataTable();
-                    SDA2.Fill(dt);
-                    DG_Farm.DataSource = dt;
-                    con.Close();
-                
+                //show data to DataGridView
+                con.Open();
+                String query2 = "SELECT * FROM Farm";
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                System.Data.DataTable dt = new System.Data.DataTable();
+                SDA2.Fill(dt);
+                DG_Farm.DataSource = dt;
+                con.Close();
+
+                ///
+                /// got value from menu_farm
+                ///
+                Menu_farm menu_Farm = new Menu_farm();
+
+                /// added export worksheet to excel file
+                string fileTest = "C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now + ".xlsx";
+                if (File.Exists(fileTest))
+                {
+                    File.Delete(fileTest);
+                }
+
+                Excel.Application oApp;
+                Excel.Worksheet oSheet;
+                Excel.Workbook oBook;
+
+                oApp = new Excel.Application();
+                oBook = oApp.Workbooks.Add();
+                oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
+                oSheet.Cells[1, 1] = "รหัสฟาร์ม";
+                oSheet.Cells[1, 2] = "รหัสโดรน";
+                oSheet.Cells[1, 3] = "รหัสกิจกรรม";
+                oSheet.Cells[1, 4] = "ชื่อกิจกรรม";
+                oSheet.Cells[1, 5] = "ปริมาณสาร";
+                oSheet.Cells[1, 6] = "วันที่";
+
+                oSheet.Cells[2, 1] = menu_Farm.farmIDText;
+                oSheet.Cells[2, 2] = textBox_droneID.Text;
+                oSheet.Cells[2, 3] = textBox_actID.Text;
+                oSheet.Cells[2, 4] = textBox_actName.Text;
+                oSheet.Cells[2, 5] = textBox_cap.Text;
+                oSheet.Cells[2, 6] = monthCalendar1.Text;
+
+                oBook.SaveAs(fileTest);
+                oBook.Close();
+                oApp.Quit();
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
@@ -92,7 +130,7 @@ namespace MissionPlanner.GCSViews
                     { con.Open(); }
                     String query2 = "SELECT * FROM Farm";
                     SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                    DataTable dt = new DataTable();
+                    System.Data.DataTable dt = new System.Data.DataTable();
                     SDA2.Fill(dt);
                     DG_Farm.DataSource = dt;
                     con.Close();
@@ -119,7 +157,7 @@ namespace MissionPlanner.GCSViews
                 con.Open();
                 String query2 = "SELECT * FROM Farm";
                 SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                DataTable dt = new DataTable();
+                System.Data.DataTable dt = new System.Data.DataTable();
                 SDA2.Fill(dt);
                 DG_Farm.DataSource = dt;
                 con.Close();
@@ -190,7 +228,7 @@ namespace MissionPlanner.GCSViews
 
             String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
 

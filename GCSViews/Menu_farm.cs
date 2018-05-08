@@ -234,5 +234,10 @@ namespace MissionPlanner.GCSViews
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
         }
+
+        public string farmIDText
+        {
+            get { return textBox_farmID.Text; }
+        }
     }
 }

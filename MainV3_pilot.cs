@@ -24,11 +24,21 @@ using System.Collections.Concurrent;
 using MissionPlanner.GCSViews.ConfigurationView;
 using WebCamService;
 using MissionPlanner.GCSViews;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Data.SqlClient;
+using System.Globalization;
 
 namespace MissionPlanner
 {
     public partial class MainV3_pilot : Form
     {
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+
+        Excel.Application xlApp;
+        Excel.Workbook xlWorkBook;
+        Excel.Worksheet xlWorkSheet;
+        Excel.Range range;
+
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -3731,6 +3741,62 @@ namespace MissionPlanner
         private void MainV3_pilot_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void but_act_file_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            string strfilename = null;
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                strfilename = openFileDialog.FileName;
+            }
+
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Open(strfilename, 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            CultureInfo provider = CultureInfo.InvariantCulture;
+
+            string str_dateTransaction = ((Excel.Range)xlWorkSheet.Cells[2, 1]).Value.ToString();
+
+            MessageBox.Show(str_dateTransaction);
+            DateTime str_dateTransaction_Date = DateTime.Parse(str_dateTransaction, provider);
+            string str_farmID = ((Excel.Range)xlWorkSheet.Cells[2, 2]).Value.ToString();
+            string str_DroneID = ((Excel.Range)xlWorkSheet.Cells[2, 3]).Value.ToString();
+            string str_ActID = ((Excel.Range)xlWorkSheet.Cells[2, 4]).Value.ToString();
+            string str_ActName = ((Excel.Range)xlWorkSheet.Cells[2, 5]).Value.ToString();
+            string str_qtyUsed = ((Excel.Range)xlWorkSheet.Cells[2, 6]).Value.ToString();
+
+            string str_dateAct = ((Excel.Range)xlWorkSheet.Cells[2, 7]).Value.ToString();
+            DateTime str_dateAct_Date = DateTime.Parse(str_dateAct, provider);
+            var dateAct = str_dateAct_Date.ToString("dd/MM/yyyy");
+
+            con.Open();
+
+            String query = "INSERT INTO Transact (transaction_datetime,farm_id,drone_id,action_no,action_name,action_capacity,action_datetime) " + "VALUES(@p1, @p2, @p3,@p4, @p5, @p6, @p7)";
+
+            SqlCommand SCMD = new SqlCommand();
+            SCMD.Connection = con;
+            SCMD.CommandText = query;
+            SCMD.Parameters.AddWithValue("@p1", str_dateTransaction_Date.ToString());
+            SCMD.Parameters.AddWithValue("@p2", str_farmID);
+            SCMD.Parameters.AddWithValue("@p3", str_DroneID);
+            SCMD.Parameters.AddWithValue("@p4", str_ActID);
+            SCMD.Parameters.AddWithValue("@p5", str_ActName);
+            SCMD.Parameters.AddWithValue("@p6", str_qtyUsed);
+            SCMD.Parameters.AddWithValue("@p7", dateAct.ToString());
+            SCMD.ExecuteNonQuery();
+
+            con.Close();
+
+            xlWorkBook.Close(true, null, null);
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlWorkSheet);
+            Marshal.ReleaseComObject(xlWorkBook);
+            Marshal.ReleaseComObject(xlApp);
+
+            MessageBox.Show("เก็บข้อมูลลงฐานข้อมูลเรียบร้อยแล้ว");
         }
     }
 }

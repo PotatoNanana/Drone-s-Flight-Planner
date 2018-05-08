@@ -40,12 +40,12 @@ namespace MissionPlanner
             this.readonlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.but_act_file = new System.Windows.Forms.Button();
             this.but_maintenance = new System.Windows.Forms.Button();
             this.but_setup = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.but_flightPlan = new System.Windows.Forms.Button();
             this.menu = new MissionPlanner.Controls.MyButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.CTX_mainmenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +90,7 @@ namespace MissionPlanner
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.but_act_file);
             this.panel1.Controls.Add(this.but_maintenance);
             this.panel1.Controls.Add(this.but_setup);
             this.panel1.Controls.Add(this.SidePanel);
@@ -98,6 +98,17 @@ namespace MissionPlanner
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // but_act_file
+            // 
+            resources.ApplyResources(this.but_act_file, "but_act_file");
+            this.but_act_file.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.but_act_file.FlatAppearance.BorderSize = 0;
+            this.but_act_file.ForeColor = System.Drawing.Color.White;
+            this.but_act_file.Name = "but_act_file";
+            this.but_act_file.UseCompatibleTextRendering = true;
+            this.but_act_file.UseVisualStyleBackColor = true;
+            this.but_act_file.Click += new System.EventHandler(this.but_act_file_Click);
             // 
             // but_maintenance
             // 
@@ -146,16 +157,6 @@ namespace MissionPlanner
             this.menu.Click += new System.EventHandler(this.menu_Click);
             this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
             // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Name = "button1";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // MainV3_pilot
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -185,6 +186,6 @@ namespace MissionPlanner
         private System.Windows.Forms.Button but_flightPlan;
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Button but_maintenance;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button but_act_file;
     }
 }
