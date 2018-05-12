@@ -357,9 +357,10 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.xml
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.App.config
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.Properties.Resources.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.GenerateResource.Cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csprojAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.CopyComplete

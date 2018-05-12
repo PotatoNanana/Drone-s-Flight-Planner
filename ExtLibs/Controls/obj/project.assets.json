@@ -3623,13 +3623,11 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paper\\.nuget\\packages\\": {}
+    "C:\\Users\\paper\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Controls\\MissionPlanner.Controls.csproj",
       "projectName": "MissionPlanner.Controls",
@@ -3637,6 +3635,9 @@
       "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Controls\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
         "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3652,23 +3653,28 @@
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj"
-            },
             "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\BSE.Windows.Forms\\BSE.Windows.Forms.csproj": {
               "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\BSE.Windows.Forms\\BSE.Windows.Forms.csproj"
+            },
+            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
+              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
             },
             "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
               "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
             },
+            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj": {
+              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.WindowsForms\\GMap.NET.WindowsForms.csproj"
+            },
             "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj": {
               "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj"
-            },
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -3676,7 +3682,7 @@
         "dependencies": {
           "OpenTK": {
             "target": "Package",
-            "version": "1.1.1589.5942"
+            "version": "[1.1.1589.5942, )"
           }
         }
       }

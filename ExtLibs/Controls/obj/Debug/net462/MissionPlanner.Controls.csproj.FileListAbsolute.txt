@@ -494,7 +494,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\GMap.NET.WindowsForms.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\OpenTK.GLControl.xml
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\bin\Debug\net462\net462\zh-Hans\GMap.NET.Core.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AGauge.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.BackstageView.BackstageView.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.Coords.resources
@@ -523,3 +522,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfo.cs
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csprojAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.AssemblyInfoInputs.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.CopyComplete
