@@ -26,7 +26,6 @@ using WebCamService;
 using MissionPlanner.GCSViews;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data.SqlClient;
-using System.Globalization;
 
 namespace MissionPlanner
 {

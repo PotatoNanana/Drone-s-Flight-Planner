@@ -14,6 +14,7 @@ using MissionPlanner.Utilities;
 using MissionPlanner.Plugin;
 using System.Data.SqlClient;
 using System.IO;
+using System.Globalization;
 
 namespace MissionPlanner.GCSViews
 {
@@ -107,7 +108,7 @@ namespace MissionPlanner.GCSViews
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
                 
-                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES(,'" + textBox_droneName.Text + "',@img)";
+                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('"+ textBox_droneID.Text +"','" + textBox_droneName.Text + "',@imgInsert)";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
@@ -189,41 +190,41 @@ namespace MissionPlanner.GCSViews
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
 
-                String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "',drone_pic = @imag";
+                String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "',drone_pic = @imgModified where drone_id='" + id_drone +"'";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
 
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                SDA.SelectCommand.ExecuteNonQuery();
+                //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                //SDA.SelectCommand.ExecuteNonQuery();
 
                 cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add(new SqlParameter("@img", img));
+                cmd.Parameters.Add(new SqlParameter("@imgModified", img));
                 int x = cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("แก้ไขข้อมูลโดรนสำเร็จ !!");
+
+                //show data to DataGridView Drone
+                con.Open();
+                String query2 = "SELECT drone_id,drone_name FROM Drone";
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                DataTable dt = new DataTable();
+                SDA2.Fill(dt);
+                DG_Drone.DataSource = dt;
+                con.Close();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            //show data to DataGridView Drone
-            con.Open();
-            String query2 = "SELECT drone_id,drone_name FROM Drone";
-            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-            DataTable dt = new DataTable();
-            SDA2.Fill(dt);
-            DG_Drone.DataSource = dt;
-            con.Close();
         }
 
         private void DG_Drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {          
             try
             {
-                String query = "SELECT * FROM Drone ";
+                String query = "SELECT * FROM Drone where drone_id='"+ DG_Drone.SelectedRows[0].Cells[0].Value.ToString() +"'";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);            
@@ -234,11 +235,9 @@ namespace MissionPlanner.GCSViews
                     textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
                     id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
                     textBox_droneName.Text = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
-                    byte[] img = (byte[])(reader[2]);
-                    if (img == null)
-                    { pictureBox.Image = null; }
-                    else
+                    if (!Convert.IsDBNull(reader[2]))
                     {
+                        byte[] img = (byte[])(reader[2]);
                         MemoryStream ms = new MemoryStream(img);
                         pictureBox.Image = Image.FromStream(ms);
                     }
@@ -278,11 +277,14 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = @iddrone";
+                //DateTime dt_reg = DateTime.ParseExact(DG_Part.SelectedRows[0].Cells[5].Value.ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                //DateTime dt_startDate = DateTime.ParseExact(DG_Part.SelectedRows[0].Cells[5].Value.ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                //DateTime dt_expDate = DateTime.ParseExact(DG_Part.SelectedRows[0].Cells[6].Value.ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = @drone_id";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add("@iddrone", id_drone); // if in same dbo or same schema use like this first
+                cmd.Parameters.Add("@drone_id", id_drone); // if in same dbo or same schema use like this first
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Read();
                 if (reader.HasRows)
@@ -291,12 +293,16 @@ namespace MissionPlanner.GCSViews
                     textBox_partName.Text = DG_Part.SelectedRows[0].Cells[1].Value.ToString();
                     textBox_partPosition.Text = DG_Part.SelectedRows[0].Cells[2].Value.ToString();
                     textBox_partPrice.Text = DG_Part.SelectedRows[0].Cells[3].Value.ToString();
-                    textBox_respon.Text = DG_Part.SelectedRows[0].Cells[11].Value.ToString();
-                    textBox_venAdd.Text = DG_Part.SelectedRows[0].Cells[9].Value.ToString();
-                    textBox_venName.Text = DG_Part.SelectedRows[0].Cells[8].Value.ToString();
-                    textBox_venPhone.Text = DG_Part.SelectedRows[0].Cells[10].Value.ToString();
+                    DateTime dt_reg = DateTime.ParseExact(DG_Part.SelectedRows[0].Cells[4].Value.ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                    dateTimePicker_reg.Value = dt_reg;
+                    //dateTimePicker_startDate.Value = dt_startDate;
+                    //dateTimePicker_expDate.Value = dt_expDate;
                     comboBox_alarm.Text = DG_Part.SelectedRows[0].Cells[7].Value.ToString();
-                    //dateTimePicker_reg.Value.Date = DG_Part.SelectedRows[0].Cells[10].Value.ToString();
+                    textBox_venName.Text = DG_Part.SelectedRows[0].Cells[8].Value.ToString();
+                    textBox_venAdd.Text = DG_Part.SelectedRows[0].Cells[9].Value.ToString();
+                    textBox_venPhone.Text = DG_Part.SelectedRows[0].Cells[10].Value.ToString();
+                    textBox_respon.Text = DG_Part.SelectedRows[0].Cells[11].Value.ToString();
+                    
                     byte[] img = (byte[])(reader[8]);
                     if (img == null)
                     { pictureBox_part.Image = null; }
