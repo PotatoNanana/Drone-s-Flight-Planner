@@ -293,8 +293,8 @@ namespace MissionPlanner.GCSViews
                     textBox_partName.Text = DG_Part.SelectedRows[0].Cells[1].Value.ToString();
                     textBox_partPosition.Text = DG_Part.SelectedRows[0].Cells[2].Value.ToString();
                     textBox_partPrice.Text = DG_Part.SelectedRows[0].Cells[3].Value.ToString();
-                    DateTime dt_reg = DateTime.ParseExact(DG_Part.SelectedRows[0].Cells[4].Value.ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
-                    dateTimePicker_reg.Value = dt_reg;
+                    //DateTime dt_reg = DateTime.ParseExact(DG_Part.SelectedRows[0].Cells[4].Value.ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                    //dateTimePicker_reg.Value = dt_reg;
                     //dateTimePicker_startDate.Value = dt_startDate;
                     //dateTimePicker_expDate.Value = dt_expDate;
                     comboBox_alarm.Text = DG_Part.SelectedRows[0].Cells[7].Value.ToString();
