@@ -13,7 +13,7 @@ namespace Tutorial.SqlConn
         {
             string datasource = @"CS-RABBIT\SQLEXPRESS";
 
-            string database = "DroneFlightPlanner";
+            string database = "DroneFlightPlanner1";
             string username = "test";
             string password = "p@ssw0rd";
 

@@ -22,3 +22,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Properties.Resources.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.csproj.GenerateResource.Cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.GridUIv2.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Properties.Resources.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Gridv2\obj\Debug\MissionPlanner.Gridv2.csproj.GenerateResource.Cache
