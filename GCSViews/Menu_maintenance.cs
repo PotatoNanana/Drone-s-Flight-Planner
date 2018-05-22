@@ -473,5 +473,10 @@ namespace MissionPlanner.GCSViews
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
         }
+
+        private void button_report_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

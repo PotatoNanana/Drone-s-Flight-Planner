@@ -491,6 +491,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Drone1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlanner1DataSet_device.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlanner1DataSet_device.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DroneFlightPlanner1DataSet_drone.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlanner1DataSet_drone.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DroneFlightPlanner1DataSet_droneID.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlanner1DataSet_droneID.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneFlightPlannerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -725,6 +740,12 @@
     </Compile>
     <Compile Include="GCSViews\Form_Notify_drone_part.Designer.cs">
       <DependentUpon>Form_Notify_drone_part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_report_drone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_report_drone.Designer.cs">
+      <DependentUpon>Form_report_drone.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\Maintain.cs">
       <SubType>UserControl</SubType>
@@ -3245,6 +3266,9 @@
     <EmbeddedResource Include="GCSViews\Form_Notify_drone_part.resx">
       <DependentUpon>Form_Notify_drone_part.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_report_drone.resx">
+      <DependentUpon>Form_report_drone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Help.ar.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
@@ -4239,6 +4263,39 @@
     </None>
     <None Include="Drone1.xss">
       <DependentUpon>Drone1.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_device.xsc">
+      <DependentUpon>DroneFlightPlanner1DataSet_device.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_device.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlanner1DataSet_device.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_device.xss">
+      <DependentUpon>DroneFlightPlanner1DataSet_device.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_drone.xsc">
+      <DependentUpon>DroneFlightPlanner1DataSet_drone.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_drone.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlanner1DataSet_drone.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_drone.xss">
+      <DependentUpon>DroneFlightPlanner1DataSet_drone.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_droneID.xsc">
+      <DependentUpon>DroneFlightPlanner1DataSet_droneID.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_droneID.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlanner1DataSet_droneID.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlanner1DataSet_droneID.xss">
+      <DependentUpon>DroneFlightPlanner1DataSet_droneID.xsd</DependentUpon>
     </None>
     <None Include="DroneFlightPlannerDataSet.xsc">
       <DependentUpon>DroneFlightPlannerDataSet.xsd</DependentUpon>
