@@ -78,6 +78,7 @@ namespace MissionPlanner.GCSViews
             //click and show  data to dataGridView
             try
             {
+                byte[] img = null;
                 String query = "SELECT * FROM Farm where farm_id='"+ DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
                 if (con.State != ConnectionState.Open)
                      { con.Open(); }
@@ -91,7 +92,7 @@ namespace MissionPlanner.GCSViews
                     textBox_farmName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
                     textBox_farmLocation.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
                     textBox_farmHost.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
-                    byte[] img = (byte[])(reader[4]);
+                    img = (byte[])(reader[4]);
                     if (img == null)
                     { pictureBox.Image = null; }
                     else

@@ -90,8 +90,32 @@ namespace MissionPlanner.GCSViews
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_mainID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-            textBox_mainAct.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+            try
+            {
+                byte[] img = null;
+                String query = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBox_mainID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+                    textBox_mainAct.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                    dateTimePicker.Value = Convert.ToDateTime(DG_Farm.SelectedRows[0].Cells[2].Value);
+                    textBox_price.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+                    textBox_time.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+                    textBox_respond.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+                    textBox_venName.Text = DG_Farm.SelectedRows[0].Cells[6].Value.ToString();
+                    textBox_venAdd.Text = DG_Farm.SelectedRows[0].Cells[7].Value.ToString();
+                    textBox_venPhone.Text = DG_Farm.SelectedRows[0].Cells[8].Value.ToString();
+                }
+                else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                con.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -114,14 +138,13 @@ namespace MissionPlanner.GCSViews
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("บันทึกข้อมูลการบำรุงรักษาส่วนประกอบโดรนเสร็จเรียบร้อย !!");
-
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date FROM Maintainance";
+            String query2 = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);
@@ -155,7 +178,7 @@ namespace MissionPlanner.GCSViews
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date FROM Maintainance";
+            String query2 = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);
@@ -187,25 +210,12 @@ namespace MissionPlanner.GCSViews
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date FROM Maintainance";
+            String query2 = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);
             DG_Farm.DataSource = dt2;
             con.Close();
         }
-
-        /* private void button_serch_Click(object sender, EventArgs e)
-         {
-             // serch record
-             con.Open();
-             String query = "maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_vendorPhone,maintain_venderAdd,maintain_length,maintain_responder,maintain_date FROM Maintainance where device_id = '" + textBox_mainID.Text + "'OR device_name = '" + textBox_mainAct.Text + "' ";
-             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-             SDA.SelectCommand.ExecuteNonQuery();
-             DataTable dt = new DataTable();
-             SDA.Fill(dt);
-             DG_Farm.DataSource = dt;
-             con.Close();
-         } */
     }
 }
