@@ -31,3 +31,4 @@ C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\AviFile\obj\Debug\
 =======
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.csprojResolveAssemblyReference.cache
 >>>>>>> origin/master
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.csprojAssemblyReference.cache

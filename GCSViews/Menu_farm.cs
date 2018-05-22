@@ -78,11 +78,11 @@ namespace MissionPlanner.GCSViews
             //click and show  data to dataGridView
             try
             {
-                String query = "SELECT * FROM Farm ";
+                String query = "SELECT * FROM Farm where farm_id='"+ DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
                 if (con.State != ConnectionState.Open)
                      { con.Open(); }
                 cmd = new SqlCommand(query, con);
-                SqlDataReader reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader(); 
                 reader.Read();
                 if (reader.HasRows)
                 {
@@ -196,7 +196,7 @@ namespace MissionPlanner.GCSViews
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
 
-                String query = "UPDATE Farm SET farm_id = '" + textBox_farmID.Text + "',farm_name = '" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "',farm_pic = @img ";
+                String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "',farm_pic = @img where farm_id ='" + id_farm + "'";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);
@@ -233,6 +233,11 @@ namespace MissionPlanner.GCSViews
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
+        }
+
+        public string farmIDText
+        {
+            get { return textBox_farmID.Text; }
         }
     }
 }

@@ -89,22 +89,8 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\bin\Debug\GMap.NET.Core.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\bin\Debug\log4net.xml
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GDAL.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GDAL.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\gdalconst_csharp.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\gdal_csharp.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GMap.NET.Core.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\log4net.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\ogr_csharp.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\osr_csharp.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\System.Data.SqlServerCe.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GMap.NET.Core.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\log4net.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\obj\Debug\GDAL.csprojResolveAssemblyReference.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\obj\Debug\GDAL.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\obj\Debug\GDAL.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.csprojAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.csproj.CopyComplete

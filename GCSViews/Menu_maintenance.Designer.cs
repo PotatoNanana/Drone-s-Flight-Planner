@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_maintenance));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
             this.button_deletePart = new System.Windows.Forms.Button();
             this.button_editPart = new System.Windows.Forms.Button();
@@ -119,13 +120,21 @@
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.panel_Main_farm);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1366, 768);
+            this.panel2.Size = new System.Drawing.Size(1366, 680);
             this.panel2.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(731, 719);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 30);
+            this.panel1.TabIndex = 9;
             // 
             // panel_Main_farm
             // 
@@ -177,9 +186,9 @@
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
             this.panel_Main_farm.Controls.Add(this.panel3);
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14F);
-            this.panel_Main_farm.Location = new System.Drawing.Point(19, 16);
+            this.panel_Main_farm.Location = new System.Drawing.Point(25, 25);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(1390, 673);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1316, 691);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
             // 
@@ -434,7 +443,9 @@
             // 
             // dateTimePicker_expDate
             // 
+            this.dateTimePicker_expDate.CustomFormat = "MM/dd/yyyy";
             this.dateTimePicker_expDate.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_expDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_expDate.Location = new System.Drawing.Point(622, 417);
             this.dateTimePicker_expDate.Name = "dateTimePicker_expDate";
             this.dateTimePicker_expDate.Size = new System.Drawing.Size(200, 34);
@@ -442,7 +453,9 @@
             // 
             // dateTimePicker_startDate
             // 
+            this.dateTimePicker_startDate.CustomFormat = "MM/dd/yyyy";
             this.dateTimePicker_startDate.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_startDate.Location = new System.Drawing.Point(622, 377);
             this.dateTimePicker_startDate.Name = "dateTimePicker_startDate";
             this.dateTimePicker_startDate.Size = new System.Drawing.Size(200, 34);
@@ -450,7 +463,9 @@
             // 
             // dateTimePicker_reg
             // 
+            this.dateTimePicker_reg.CustomFormat = "MM/dd/yyyy";
             this.dateTimePicker_reg.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_reg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_reg.Location = new System.Drawing.Point(622, 337);
             this.dateTimePicker_reg.Name = "dateTimePicker_reg";
             this.dateTimePicker_reg.Size = new System.Drawing.Size(200, 34);
@@ -809,13 +824,12 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1390, 50);
+            this.panel3.Size = new System.Drawing.Size(1316, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
             // 
             this.Main_but_farm.BackColor = System.Drawing.Color.White;
-            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Main_but_farm.Enabled = false;
             this.Main_but_farm.FlatAppearance.BorderSize = 0;
             this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -824,7 +838,7 @@
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(1390, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(1366, 50);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ข้อมูลโดรน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -953,5 +967,6 @@
         private System.Windows.Forms.Button BUT_addPart;
         private System.Windows.Forms.Button button_editPart;
         private System.Windows.Forms.Button button_deletePart;
+        private System.Windows.Forms.Panel panel1;
     }
 }

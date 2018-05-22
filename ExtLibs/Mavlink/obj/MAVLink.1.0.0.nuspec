@@ -3,8 +3,8 @@
   <metadata>
     <id>MAVLink</id>
     <version>1.0.0</version>
-    <authors>MAVLink</authors>
-    <owners>MAVLink</owners>
+    <authors>Michael Oborne</authors>
+    <owners>Michael Oborne</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>MAVLink for Ardupilot</description>
     <dependencies>
@@ -12,8 +12,19 @@
         <dependency id="log4net" version="2.0.8" exclude="Build,Analyzers" />
       </group>
     </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework4.6.2" />
+      <frameworkAssembly assemblyName="System.Data" targetFramework=".NETFramework4.6.2" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.6.2" />
+      <frameworkAssembly assemblyName="System.Drawing" targetFramework=".NETFramework4.6.2" />
+      <frameworkAssembly assemblyName="System.IO.Compression.FileSystem" targetFramework=".NETFramework4.6.2" />
+      <frameworkAssembly assemblyName="System.Numerics" targetFramework=".NETFramework4.6.2" />
+      <frameworkAssembly assemblyName="System.Runtime.Serialization" targetFramework=".NETFramework4.6.2" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.6.2" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework=".NETFramework4.6.2" />
+    </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
+    <file src="C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
   </files>
 </package>
