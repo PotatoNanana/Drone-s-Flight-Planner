@@ -445,7 +445,7 @@
             // 
             // dateTimePicker_expDate
             // 
-            this.dateTimePicker_expDate.CustomFormat = "MM/dd/yyyy";
+            this.dateTimePicker_expDate.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker_expDate.Font = new System.Drawing.Font("PJ Standard", 16F);
             this.dateTimePicker_expDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_expDate.Location = new System.Drawing.Point(622, 417);
@@ -455,7 +455,7 @@
             // 
             // dateTimePicker_startDate
             // 
-            this.dateTimePicker_startDate.CustomFormat = "MM/dd/yyyy";
+            this.dateTimePicker_startDate.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker_startDate.Font = new System.Drawing.Font("PJ Standard", 16F);
             this.dateTimePicker_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_startDate.Location = new System.Drawing.Point(622, 377);
@@ -465,7 +465,7 @@
             // 
             // dateTimePicker_reg
             // 
-            this.dateTimePicker_reg.CustomFormat = "MM/dd/yyyy";
+            this.dateTimePicker_reg.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker_reg.Font = new System.Drawing.Font("PJ Standard", 16F);
             this.dateTimePicker_reg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_reg.Location = new System.Drawing.Point(622, 337);

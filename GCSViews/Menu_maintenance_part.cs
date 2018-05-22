@@ -45,6 +45,7 @@ namespace MissionPlanner.GCSViews
 
         Controls.MainSwitcher MyView;
         private string id_drone;
+        private string id_part;
 
         public static event EventHandler Goto_Drone_Clicked;
         public static event EventHandler Goto_DronePre_Clicked;

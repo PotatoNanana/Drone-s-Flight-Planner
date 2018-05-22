@@ -46,10 +46,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\KMLib\obj\Debug\KMLib.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\KMLib\obj\Debug\KMLib.csprojAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\KMLib\obj\Debug\KMLib.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\KMLib\bin\Debug\KMLib.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\KMLib\bin\Debug\KMLib.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\KMLib\bin\Debug\Core.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\KMLib\bin\Debug\Core.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\KMLib\obj\Debug\KMLib.csprojResolveAssemblyReference.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\KMLib\obj\Debug\KMLib.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\KMLib\obj\Debug\KMLib.pdb

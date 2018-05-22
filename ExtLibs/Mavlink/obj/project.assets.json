@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.2": {
       "log4net/2.0.8": {
@@ -43,23 +43,42 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\paper\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Mavlink\\MAVLink.csproj",
+      "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj",
       "projectName": "MAVLink",
-      "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Mavlink\\MAVLink.csproj",
-      "outputPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Mavlink\\obj\\",
+      "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj",
+      "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
+        "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "net462"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net462": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -67,7 +86,7 @@
         "dependencies": {
           "log4net": {
             "target": "Package",
-            "version": "2.0.8"
+            "version": "[2.0.8, )"
           }
         }
       }

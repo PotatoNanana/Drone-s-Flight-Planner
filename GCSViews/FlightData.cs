@@ -3968,7 +3968,7 @@ namespace MissionPlanner.GCSViews
         {
             threadrun = false;
 
-            while (thisthread.IsAlive)
+             while (thisthread.IsAlive)
             {
                 Application.DoEvents();
             }

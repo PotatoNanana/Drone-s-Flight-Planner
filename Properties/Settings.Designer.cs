@@ -33,16 +33,5 @@ namespace MissionPlanner.Properties {
                 return ((string)(this["DroneFlightPlannerConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CS-RABBIT\\SQLEXPRESS;Initial Catalog=DroneFlightPlanner1;Integrated S" +
-            "ecurity=True")]
-        public string DroneFlightPlanner1ConnectionString {
-            get {
-                return ((string)(this["DroneFlightPlanner1ConnectionString"]));
-            }
-        }
     }
 }

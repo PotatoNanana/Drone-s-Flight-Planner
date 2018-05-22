@@ -11,11 +11,11 @@ namespace Tutorial.SqlConn
     {
         public static SqlConnection GetDBConnection()
         {
-            string datasource = @"CS-RABBIT\SQLEXPRESS";
+            string datasource = @"napat";
 
-            string database = "DroneFlightPlanner1";
-            string username = "test";
-            string password = "p@ssw0rd";
+            string database = "DroneFlightPlanner";
+            string username = "";
+            string password = "";
 
             return DBSQLServerUtils.GetDBConnection(datasource, database, username, password);
         }
