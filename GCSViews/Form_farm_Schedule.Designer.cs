@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_Schedule));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.textBox_finishTime = new System.Windows.Forms.TextBox();
+            this.textBox_startTime = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox_droneID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_cost = new System.Windows.Forms.TextBox();
@@ -47,22 +51,23 @@
             this.button_edit = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actioncapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actioncostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
             this.But_add_act = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_startTime = new System.Windows.Forms.TextBox();
-            this.textBox_finishTime = new System.Windows.Forms.TextBox();
+            this.droneFlightPlannerDataSet5 = new MissionPlanner.DroneFlightPlannerDataSet5();
+            this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.flightScheduleTableAdapter1 = new MissionPlanner.DroneFlightPlannerDataSet5TableAdapters.FlightScheduleTableAdapter();
+            this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actioncapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actioncostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_finishTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,6 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,6 +119,40 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(968, 580);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_schedule_Paint);
+            // 
+            // textBox_finishTime
+            // 
+            this.textBox_finishTime.Location = new System.Drawing.Point(634, 507);
+            this.textBox_finishTime.Name = "textBox_finishTime";
+            this.textBox_finishTime.Size = new System.Drawing.Size(93, 31);
+            this.textBox_finishTime.TabIndex = 53;
+            // 
+            // textBox_startTime
+            // 
+            this.textBox_startTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox_startTime.Location = new System.Drawing.Point(462, 507);
+            this.textBox_startTime.Name = "textBox_startTime";
+            this.textBox_startTime.ShortcutsEnabled = false;
+            this.textBox_startTime.Size = new System.Drawing.Size(93, 31);
+            this.textBox_startTime.TabIndex = 52;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(561, 514);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 24);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "เวลาที่เสร็จ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(395, 512);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 24);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "เวลาที่เริ่ม";
             // 
             // textBox_droneID
             // 
@@ -258,50 +299,16 @@
             this.actionnoDataGridViewTextBoxColumn,
             this.actionnameDataGridViewTextBoxColumn,
             this.actioncapacityDataGridViewTextBoxColumn,
-            this.actioncostDataGridViewTextBoxColumn});
-            this.DG_Farm.DataSource = this.flightScheduleBindingSource;
+            this.actioncostDataGridViewTextBoxColumn,
+            this.action_startTime,
+            this.action_finishTime});
+            this.DG_Farm.DataSource = this.flightScheduleBindingSource1;
             this.DG_Farm.Location = new System.Drawing.Point(511, 94);
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Farm.Size = new System.Drawing.Size(429, 257);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
-            // 
-            // actiondatetimeDataGridViewTextBoxColumn
-            // 
-            this.actiondatetimeDataGridViewTextBoxColumn.DataPropertyName = "action_datetime";
-            this.actiondatetimeDataGridViewTextBoxColumn.HeaderText = "วันที่";
-            this.actiondatetimeDataGridViewTextBoxColumn.Name = "actiondatetimeDataGridViewTextBoxColumn";
-            // 
-            // droneidDataGridViewTextBoxColumn
-            // 
-            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
-            this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
-            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
-            // 
-            // actionnoDataGridViewTextBoxColumn
-            // 
-            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
-            this.actionnoDataGridViewTextBoxColumn.HeaderText = "เลขที่กิจกรรม";
-            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
-            // 
-            // actionnameDataGridViewTextBoxColumn
-            // 
-            this.actionnameDataGridViewTextBoxColumn.DataPropertyName = "action_name";
-            this.actionnameDataGridViewTextBoxColumn.HeaderText = "ชื่อกิจกรรม";
-            this.actionnameDataGridViewTextBoxColumn.Name = "actionnameDataGridViewTextBoxColumn";
-            // 
-            // actioncapacityDataGridViewTextBoxColumn
-            // 
-            this.actioncapacityDataGridViewTextBoxColumn.DataPropertyName = "action_capacity";
-            this.actioncapacityDataGridViewTextBoxColumn.HeaderText = "ปริมาณสาร";
-            this.actioncapacityDataGridViewTextBoxColumn.Name = "actioncapacityDataGridViewTextBoxColumn";
-            // 
-            // actioncostDataGridViewTextBoxColumn
-            // 
-            this.actioncostDataGridViewTextBoxColumn.DataPropertyName = "action_cost";
-            this.actioncostDataGridViewTextBoxColumn.HeaderText = "ค่าใช้จ่าย";
-            this.actioncostDataGridViewTextBoxColumn.Name = "actioncostDataGridViewTextBoxColumn";
             // 
             // flightScheduleBindingSource
             // 
@@ -365,39 +372,67 @@
             // 
             this.flightScheduleTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // droneFlightPlannerDataSet5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(395, 512);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 24);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "เวลาที่เริ่ม";
+            this.droneFlightPlannerDataSet5.DataSetName = "DroneFlightPlannerDataSet5";
+            this.droneFlightPlannerDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label2
+            // flightScheduleBindingSource1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(561, 514);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 24);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "เวลาที่เสร็จ";
+            this.flightScheduleBindingSource1.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource1.DataSource = this.droneFlightPlannerDataSet5;
             // 
-            // textBox_startTime
+            // flightScheduleTableAdapter1
             // 
-            this.textBox_startTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_startTime.Location = new System.Drawing.Point(462, 507);
-            this.textBox_startTime.Name = "textBox_startTime";
-            this.textBox_startTime.ShortcutsEnabled = false;
-            this.textBox_startTime.Size = new System.Drawing.Size(93, 31);
-            this.textBox_startTime.TabIndex = 52;
+            this.flightScheduleTableAdapter1.ClearBeforeFill = true;
             // 
-            // textBox_finishTime
+            // actiondatetimeDataGridViewTextBoxColumn
             // 
-            this.textBox_finishTime.Location = new System.Drawing.Point(634, 507);
-            this.textBox_finishTime.Name = "textBox_finishTime";
-            this.textBox_finishTime.Size = new System.Drawing.Size(93, 31);
-            this.textBox_finishTime.TabIndex = 53;
+            this.actiondatetimeDataGridViewTextBoxColumn.DataPropertyName = "action_datetime";
+            this.actiondatetimeDataGridViewTextBoxColumn.HeaderText = "วันที่";
+            this.actiondatetimeDataGridViewTextBoxColumn.Name = "actiondatetimeDataGridViewTextBoxColumn";
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
+            // actionnoDataGridViewTextBoxColumn
+            // 
+            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.HeaderText = "เลขที่กิจกรรม";
+            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
+            // 
+            // actionnameDataGridViewTextBoxColumn
+            // 
+            this.actionnameDataGridViewTextBoxColumn.DataPropertyName = "action_name";
+            this.actionnameDataGridViewTextBoxColumn.HeaderText = "ชื่อกิจกรรม";
+            this.actionnameDataGridViewTextBoxColumn.Name = "actionnameDataGridViewTextBoxColumn";
+            // 
+            // actioncapacityDataGridViewTextBoxColumn
+            // 
+            this.actioncapacityDataGridViewTextBoxColumn.DataPropertyName = "action_capacity";
+            this.actioncapacityDataGridViewTextBoxColumn.HeaderText = "ปริมาณสาร";
+            this.actioncapacityDataGridViewTextBoxColumn.Name = "actioncapacityDataGridViewTextBoxColumn";
+            // 
+            // actioncostDataGridViewTextBoxColumn
+            // 
+            this.actioncostDataGridViewTextBoxColumn.DataPropertyName = "action_cost";
+            this.actioncostDataGridViewTextBoxColumn.HeaderText = "ค่าใช้จ่าย";
+            this.actioncostDataGridViewTextBoxColumn.Name = "actioncostDataGridViewTextBoxColumn";
+            // 
+            // action_startTime
+            // 
+            this.action_startTime.DataPropertyName = "action_startTime";
+            this.action_startTime.HeaderText = "เวลาเริ่มต้น";
+            this.action_startTime.Name = "action_startTime";
+            // 
+            // action_finishTime
+            // 
+            this.action_finishTime.DataPropertyName = "action_finishTime";
+            this.action_finishTime.HeaderText = "เวลาสิ้นสุด";
+            this.action_finishTime.Name = "action_finishTime";
             // 
             // Form_farm_Schedule
             // 
@@ -418,6 +453,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,12 +472,6 @@
         private FlightSchedule2 flightSchedule2;
         private System.Windows.Forms.BindingSource flightScheduleBindingSource;
         private FlightSchedule2TableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actiondatetimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actionnoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actionnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actioncapacityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actioncostDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TextBox textBox_droneID;
@@ -457,5 +488,16 @@
         private System.Windows.Forms.TextBox textBox_startTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private DroneFlightPlannerDataSet5 droneFlightPlannerDataSet5;
+        private System.Windows.Forms.BindingSource flightScheduleBindingSource1;
+        private DroneFlightPlannerDataSet5TableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actiondatetimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actionnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actionnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actioncapacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actioncostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn action_startTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn action_finishTime;
     }
 }

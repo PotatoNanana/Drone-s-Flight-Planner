@@ -39,11 +39,11 @@ namespace MissionPlanner.GCSViews
         
         private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
         {
-            textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
-            textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
-            textBox_droneID.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-            textBox_cap.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
-            textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+            //textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
+            //textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+            //textBox_droneID.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+            //textBox_cap.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+            //textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
@@ -79,20 +79,20 @@ namespace MissionPlanner.GCSViews
 
         }
 
-        private void button_delete_Click(object sender, EventArgs e)
-        {
-            // delete
-            if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                con.Open();
-                string query = "DELETE FROM FlightSchedule where action_id = '" + textBox_actID.Text + "' ";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                SDA.SelectCommand.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("DELETE Record From DB Success!!");
-            }
+        //private void button_delete_Click(object sender, EventArgs e)
+        //{
+        //    // delete
+        //    if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //    {
+        //        con.Open();
+        //        string query = "DELETE FROM FlightSchedule where action_id = '" + textBox_actID.Text + "' ";
+        //        SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+        //        SDA.SelectCommand.ExecuteNonQuery();
+        //        con.Close();
+        //        MessageBox.Show("DELETE Record From DB Success!!");
+        //    }
             
-        }
+        //}
 
         private void button_edit_Click(object sender, EventArgs e)
         {
