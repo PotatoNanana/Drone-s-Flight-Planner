@@ -102,21 +102,43 @@ namespace MissionPlanner.GCSViews
             {
                 // for img 
                 byte[] img = null;
-                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
-                
-                String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('"+ textBox_droneID.Text +"','" + textBox_droneName.Text + "',@img)";
 
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
+                if (!String.IsNullOrEmpty(imgLocation))
+                {
+                    FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
+                }
 
-                cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add(new SqlParameter("@img", img));
-                int x = cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("บันทึกข้อมูลโดรนสำเร็จ !!");
+                if (textBox_droneID.Text == "" || textBox_droneName.Text == "")
+                {
+                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสโดรนหรือชื่อโดรนไม่ครบถ้วน !!");
+                }
+                else if (img == null)
+                {
+                    String query = "INSERT INTO Drone (drone_id,drone_name) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "')";
 
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+
+                    cmd = new SqlCommand(query, con);
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("บันทึกข้อมูลโดรนสำเร็จ !!");
+                }
+                else
+                {
+                    String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES('"+ textBox_droneID.Text +"','" + textBox_droneName.Text + "',@img)";
+
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("บันทึกข้อมูลโดรนสำเร็จ !!");
+                }
             }
             catch (Exception ex)
             {
@@ -169,23 +191,46 @@ namespace MissionPlanner.GCSViews
             {
                 // for img 
                 byte[] img = null;
-                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
+                if (!String.IsNullOrEmpty(imgLocation))
+                {
+                    FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
+                }
 
-                String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "',drone_pic = @imgModified where drone_id='" + id_drone +"'";
+                if (textBox_droneID.Text == "" || textBox_droneName.Text == "")
+                {
+                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสอุปกรณ์หรือชื่ออุปกรณ์ไม่ครบถ้วน !!");
+                }
+                else if (img == null)
+                {
+                    String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "' where drone_id='" + id_drone + "'";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
 
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
+                    //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                    //SDA.SelectCommand.ExecuteNonQuery();
 
-                //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                //SDA.SelectCommand.ExecuteNonQuery();
+                    cmd = new SqlCommand(query, con);
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("แก้ไขข้อมูลโดรนสำเร็จ !!");
+                }
+                else
+                {
+                    String query = "UPDATE Drone SET drone_id = '" + textBox_droneID.Text + "',drone_name = '" + textBox_droneName.Text + "',drone_pic = @imgModified where drone_id='" + id_drone + "'";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
 
-                cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add(new SqlParameter("@imgModified", img));
-                int x = cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("แก้ไขข้อมูลโดรนสำเร็จ !!");
+                    //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                    //SDA.SelectCommand.ExecuteNonQuery();
+
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.Add(new SqlParameter("@imgModified", img));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("แก้ไขข้อมูลโดรนสำเร็จ !!");
+                }
 
                 //show data to DataGridView Drone
                 con.Open();
@@ -195,7 +240,7 @@ namespace MissionPlanner.GCSViews
                 SDA2.Fill(dt);
                 DG_Drone.DataSource = dt;
                 con.Close();
-
+                
             }
             catch (Exception ex)
             {
@@ -393,20 +438,40 @@ namespace MissionPlanner.GCSViews
 
                 // for img 
                 byte[] img = null;
-                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
-
-                String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id,device_remindDate) "
-                                       + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respon.Text + "',@img,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_partPrice.Text + "','" + id_drone + "','" + dateTimePicker_startDate.Value.ToString(format) + "')";
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add(new SqlParameter("@img", img));
-                int x = cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("บันทึกข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
-
+                if (!String.IsNullOrEmpty(imgLocation))
+                {
+                    FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
+                }
+                    
+                if (textBox_partID.Text == "" || textBox_partName.Text == "")
+                {
+                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสอุปกรณ์หรือชื่ออุปกรณ์ไม่ครบถ้วน !!");
+                }
+                else if (img == null)
+                {
+                    String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_alarm,device_price,drone_id,device_remindDate) "
+                   + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respon.Text + "','" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_partPrice.Text + "','" + id_drone + "','" + dateTimePicker_startDate.Value.ToString(format) + "')";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query, con);
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("บันทึกข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+                }
+                else
+                {
+                    String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate,device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id,device_remindDate) "
+                   + "VALUES('" + textBox_partID.Text + "','" + textBox_partName.Text + "','" + textBox_partPosition.Text + "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + textBox_respon.Text + "',@img,'" + comboBox_alarm.SelectedItem.ToString() + "','" + textBox_partPrice.Text + "','" + id_drone + "','" + dateTimePicker_startDate.Value.ToString(format) + "')";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("บันทึกข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+                }
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
@@ -440,21 +505,42 @@ namespace MissionPlanner.GCSViews
 
                 // for img 
                 byte[] img = null;
-                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
+                if (!String.IsNullOrEmpty(imgLocation))
+                {
+                    FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
+                }
 
-                String query = "UPDATE DeviceList SET device_id = '" + textBox_partID.Text + "' , device_name = '" + textBox_partName.Text + "' , device_position = '" + textBox_partPosition.Text + "' , device_startDate = '" + dateTimePicker_startDate.Value.ToString(format) + "',device_buyDate = '" + dateTimePicker_reg.Value.ToString(format) + "',device_expDate = '" + dateTimePicker_expDate.Value.ToString(format) + "',vender_name = '" + textBox_venName.Text + "',vender_add = '" + textBox_venAdd.Text + "',vender_phone = '" + textBox_venPhone.Text + "',device_responder = '" + textBox_respon.Text + "',device_alarm = '" + comboBox_alarm.SelectedItem.ToString() + "',device_price = '" + textBox_partPrice.Text + "',device_pic = @img WHERE drone_id = '"+ id_drone + "' AND device_id = '" + textBox_partID.Text + "'";
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                //SDA.SelectCommand.ExecuteNonQuery();
-                cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add(new SqlParameter("@img", img));
-                int x = cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("แก้ไขข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
-
+                if (textBox_partID.Text == "" || textBox_partName.Text == "")
+                {
+                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสอุปกรณ์หรือชื่ออุปกรณ์ไม่ครบถ้วน !!");
+                }
+                else if (img == null)
+                {
+                    String query = "UPDATE DeviceList SET device_id = '" + textBox_partID.Text + "' , device_name = '" + textBox_partName.Text + "' , device_position = '" + textBox_partPosition.Text + "' , device_startDate = '" + dateTimePicker_startDate.Value.ToString(format) + "',device_buyDate = '" + dateTimePicker_reg.Value.ToString(format) + "',device_expDate = '" + dateTimePicker_expDate.Value.ToString(format) + "',vender_name = '" + textBox_venName.Text + "',vender_add = '" + textBox_venAdd.Text + "',vender_phone = '" + textBox_venPhone.Text + "',device_responder = '" + textBox_respon.Text + "',device_alarm = '" + comboBox_alarm.SelectedItem.ToString() + "',device_price = '" + textBox_partPrice.Text + "' WHERE drone_id = '" + id_drone + "' AND device_id = '" + textBox_partID.Text + "'";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                    //SDA.SelectCommand.ExecuteNonQuery();
+                    cmd = new SqlCommand(query, con);
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("แก้ไขข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+                }
+                else
+                {
+                    String query = "UPDATE DeviceList SET device_id = '" + textBox_partID.Text + "' , device_name = '" + textBox_partName.Text + "' , device_position = '" + textBox_partPosition.Text + "' , device_startDate = '" + dateTimePicker_startDate.Value.ToString(format) + "',device_buyDate = '" + dateTimePicker_reg.Value.ToString(format) + "',device_expDate = '" + dateTimePicker_expDate.Value.ToString(format) + "',vender_name = '" + textBox_venName.Text + "',vender_add = '" + textBox_venAdd.Text + "',vender_phone = '" + textBox_venPhone.Text + "',device_responder = '" + textBox_respon.Text + "',device_alarm = '" + comboBox_alarm.SelectedItem.ToString() + "',device_price = '" + textBox_partPrice.Text + "',device_pic = @img WHERE drone_id = '"+ id_drone + "' AND device_id = '" + textBox_partID.Text + "'";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    //SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                    //SDA.SelectCommand.ExecuteNonQuery();
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("แก้ไขข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+                }
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }

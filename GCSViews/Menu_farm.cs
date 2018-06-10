@@ -119,18 +119,37 @@ namespace MissionPlanner.GCSViews
             {
                 // for img 
                 byte[] img = null;
-                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
-
-                String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host,farm_pic) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "',@img)";
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add(new SqlParameter("@img", img));
-                int x = cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
+                if (!String.IsNullOrEmpty(imgLocation))
+                {
+                    FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
+                }
+                if (textBox_farmID.Text == "" || textBox_farmName.Text == "")
+                {
+                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสฟาร์มหรือชื่อฟาร์มไม่ครบถ้วน !!");
+                }
+                else if (img == null)
+                {
+                    String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "')";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query, con);
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
+                }
+                else
+                {
+                    String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host,farm_pic) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "',@img)";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
+                }
 
                 //show data to DataGridView
                 con.Open();
@@ -163,7 +182,7 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                if (MessageBox.Show("คุณต้อการลบฟาร์มนี้ใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("คุณต้องการลบฟาร์มนี้ใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
                     String query = "DELETE FROM Farm where farm_id = '" + textBox_farmID.Text + "' ";
@@ -193,18 +212,38 @@ namespace MissionPlanner.GCSViews
             {
                 // for img 
                 byte[] img = null;
-                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
+                if (!String.IsNullOrEmpty(imgLocation))
+                {
+                    FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
+                }
 
-                String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "',farm_pic = @img where farm_id ='" + id_farm + "'";
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                cmd = new SqlCommand(query, con);
-                cmd.Parameters.Add(new SqlParameter("@img", img));
-                int x = cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("แก้ไขข้อมูลสำเร็จ !!");
+                if (textBox_farmID.Text == "" || textBox_farmName.Text == "")
+                {
+                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสฟาร์มหรือชื่อฟาร์มไม่ครบถ้วน !!");
+                }
+                else if (img == null)
+                {
+                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "' where farm_id ='" + id_farm + "'";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query, con);
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("แก้ไขข้อมูลสำเร็จ !!");
+                }
+                else
+                {
+                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "',farm_pic = @img where farm_id ='" + id_farm + "'";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("แก้ไขข้อมูลสำเร็จ !!");
+                }
 
                 //show data to DataGridView
                 con.Open();
