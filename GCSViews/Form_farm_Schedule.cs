@@ -46,6 +46,10 @@ namespace MissionPlanner.GCSViews
             textBox_droneID.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
             textBox_cap.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
             textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+            
+            //added by Napat 10/06/2018
+            textBox_startTime.Text = DG_Farm.SelectedRows[0].Cells[6].Value.ToString();
+            textBox_finishTime.Text = DG_Farm.SelectedRows[0].Cells[7].Value.ToString();
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
@@ -174,6 +178,8 @@ namespace MissionPlanner.GCSViews
 
         private void Form_farm_Schedule_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet5.FlightSchedule' table. You can move, or remove it, as needed.
+            this.flightScheduleTableAdapter1.Fill(this.droneFlightPlannerDataSet5.FlightSchedule);
             // TODO: This line of code loads data into the 'flightSchedule2.FlightSchedule' table. You can move, or remove it, as needed.
             //this.flightScheduleTableAdapter.Fill(this.flightSchedule2.FlightSchedule);
             // TODO: This line of code loads data into the 'flightSchedule1.FlightSchedule' table. You can move, or remove it, as needed.

@@ -516,6 +516,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlannerDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -677,6 +682,12 @@
     </Compile>
     <Compile Include="GCSViews\Form_Add_farm.Designer.cs">
       <DependentUpon>Form_Add_farm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_farm_act2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_farm_act2.Designer.cs">
+      <DependentUpon>Form_farm_act2.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\Form_farm_act.cs">
       <SubType>Form</SubType>
@@ -3221,6 +3232,9 @@
     <EmbeddedResource Include="GCSViews\Form_Add_farm.resx">
       <DependentUpon>Form_Add_farm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_farm_act2.resx">
+      <DependentUpon>Form_farm_act2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_farm_act.resx">
       <DependentUpon>Form_farm_act.cs</DependentUpon>
     </EmbeddedResource>
@@ -4294,6 +4308,17 @@
     </None>
     <None Include="DroneFlightPlannerDataSet4.xss">
       <DependentUpon>DroneFlightPlannerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet5.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet5.xss">
+      <DependentUpon>DroneFlightPlannerDataSet5.xsd</DependentUpon>
     </None>
     <None Include="FArm.xsc">
       <DependentUpon>FArm.xsd</DependentUpon>
