@@ -1,4 +1,6 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using System;
+
+namespace MissionPlanner.GCSViews
 {
     partial class Menu_maintenance
     {
@@ -33,6 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_report = new System.Windows.Forms.Button();
             this.button_deletePart = new System.Windows.Forms.Button();
             this.button_editPart = new System.Windows.Forms.Button();
             this.BUT_addPart = new System.Windows.Forms.Button();
@@ -103,7 +106,6 @@
             this.droneTableAdapter = new MissionPlanner.DroneFlightPlannerDataSetTableAdapters.DroneTableAdapter();
             this.droneTableAdapter1 = new MissionPlanner.DroneTableAdapters.DroneTableAdapter();
             this.deviceListTableAdapter = new MissionPlanner.partTableAdapters.DeviceListTableAdapter();
-            this.button_report = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Part)).BeginInit();
@@ -193,6 +195,24 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(1316, 691);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
+            // 
+            // button_report
+            // 
+            this.button_report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_report.FlatAppearance.BorderSize = 0;
+            this.button_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_report.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_report.ForeColor = System.Drawing.Color.White;
+            this.button_report.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_report.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_report.Location = new System.Drawing.Point(814, 549);
+            this.button_report.Name = "button_report";
+            this.button_report.Size = new System.Drawing.Size(92, 40);
+            this.button_report.TabIndex = 73;
+            this.button_report.Text = "รายงาน";
+            this.button_report.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_report.UseVisualStyleBackColor = false;
+            this.button_report.Click += new System.EventHandler(this.button_report_Click);
             // 
             // button_deletePart
             // 
@@ -870,24 +890,6 @@
             // 
             this.deviceListTableAdapter.ClearBeforeFill = true;
             // 
-            // button_report
-            // 
-            this.button_report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_report.FlatAppearance.BorderSize = 0;
-            this.button_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_report.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_report.ForeColor = System.Drawing.Color.White;
-            this.button_report.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_report.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_report.Location = new System.Drawing.Point(814, 549);
-            this.button_report.Name = "button_report";
-            this.button_report.Size = new System.Drawing.Size(92, 40);
-            this.button_report.TabIndex = 73;
-            this.button_report.Text = "รายงาน";
-            this.button_report.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_report.UseVisualStyleBackColor = false;
-            this.button_report.Click += new System.EventHandler(this.button_report_Click_1);
-            // 
             // Menu_maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -989,5 +991,6 @@
         private System.Windows.Forms.Button button_deletePart;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button_report;
+        private EventHandler button_report_Click_1;
     }
 }
