@@ -163,6 +163,9 @@
     <Reference Include="CSMatIO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\CSMatIO.1.0.2\lib\net45\CSMatIO.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="DirectShowLib-2005, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>ExtLibs\DirectShowLib-2005.dll</HintPath>
@@ -481,6 +484,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DEVICE_LIST.xsd</DependentUpon>
     </Compile>
+    <Compile Include="drone.cs">
+      <DependentUpon>Drone.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Drone.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -520,6 +526,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DroneFlightPlannerDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DroneFlightPlannerDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
@@ -736,6 +752,18 @@
     </Compile>
     <Compile Include="GCSViews\Form_Notify_drone_part.Designer.cs">
       <DependentUpon>Form_Notify_drone_part.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_report_drone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_report_drone.Designer.cs">
+      <DependentUpon>Form_report_drone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\Form_Report_Farm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Form_Report_Farm.Designer.cs">
+      <DependentUpon>Form_Report_Farm.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\Maintain.cs">
       <SubType>UserControl</SubType>
@@ -3259,6 +3287,12 @@
     <EmbeddedResource Include="GCSViews\Form_Notify_drone_part.resx">
       <DependentUpon>Form_Notify_drone_part.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_report_drone.resx">
+      <DependentUpon>Form_report_drone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Form_Report_Farm.resx">
+      <DependentUpon>Form_Report_Farm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Help.ar.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
@@ -4319,6 +4353,28 @@
     </None>
     <None Include="DroneFlightPlannerDataSet5.xss">
       <DependentUpon>DroneFlightPlannerDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet6.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet6.xss">
+      <DependentUpon>DroneFlightPlannerDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet7.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet7.xss">
+      <DependentUpon>DroneFlightPlannerDataSet7.xsd</DependentUpon>
     </None>
     <None Include="FArm.xsc">
       <DependentUpon>FArm.xsd</DependentUpon>

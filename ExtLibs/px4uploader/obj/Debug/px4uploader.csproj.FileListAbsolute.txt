@@ -61,7 +61,9 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Debug
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Debug\px4uploader.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Debug\px4uploader.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Debug\Dapper.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Debug\DotNetZip.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Debug\Dapper.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Debug\DotNetZip.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\obj\Debug\px4uploader.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\obj\Debug\px4uploader.pdb

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DroneFlightPlannerDataSet6" targetNamespace="http://tempuri.org/DroneFlightPlannerDataSet6.xsd" xmlns:mstns="http://tempuri.org/DroneFlightPlannerDataSet6.xsd" xmlns="http://tempuri.org/DroneFlightPlannerDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DroneFlightPlannerConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DroneFlightPlannerConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MissionPlanner.Properties.Settings.GlobalReference.Default.DroneFlightPlannerConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AfterFlightTableAdapter" GeneratorDataComponentClassName="AfterFlightTableAdapter" Name="AfterFlight" UserDataComponentName="AfterFlightTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DroneFlightPlannerConnectionString (Settings)" DbObjectName="DroneFlightPlanner.dbo.AfterFlight" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT af_name, af_capacity, af_cost, af_datetime, af_startTime, af_finishTime, drone_id, farm_id FROM dbo.AfterFlight</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="af_name" DataSetColumn="af_name" />
+              <Mapping SourceColumn="af_capacity" DataSetColumn="af_capacity" />
+              <Mapping SourceColumn="af_cost" DataSetColumn="af_cost" />
+              <Mapping SourceColumn="af_datetime" DataSetColumn="af_datetime" />
+              <Mapping SourceColumn="af_startTime" DataSetColumn="af_startTime" />
+              <Mapping SourceColumn="af_finishTime" DataSetColumn="af_finishTime" />
+              <Mapping SourceColumn="drone_id" DataSetColumn="drone_id" />
+              <Mapping SourceColumn="farm_id" DataSetColumn="farm_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DroneFlightPlannerDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DroneFlightPlannerDataSet6" msprop:Generator_UserDSName="DroneFlightPlannerDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AfterFlight" msprop:Generator_TableClassName="AfterFlightDataTable" msprop:Generator_TableVarName="tableAfterFlight" msprop:Generator_TablePropName="AfterFlight" msprop:Generator_RowDeletingName="AfterFlightRowDeleting" msprop:Generator_RowChangingName="AfterFlightRowChanging" msprop:Generator_RowEvHandlerName="AfterFlightRowChangeEventHandler" msprop:Generator_RowDeletedName="AfterFlightRowDeleted" msprop:Generator_UserTableName="AfterFlight" msprop:Generator_RowChangedName="AfterFlightRowChanged" msprop:Generator_RowEvArgName="AfterFlightRowChangeEvent" msprop:Generator_RowClassName="AfterFlightRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="af_name" msprop:Generator_ColumnVarNameInTable="columnaf_name" msprop:Generator_ColumnPropNameInRow="af_name" msprop:Generator_ColumnPropNameInTable="af_nameColumn" msprop:Generator_UserColumnName="af_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="af_capacity" msprop:Generator_ColumnVarNameInTable="columnaf_capacity" msprop:Generator_ColumnPropNameInRow="af_capacity" msprop:Generator_ColumnPropNameInTable="af_capacityColumn" msprop:Generator_UserColumnName="af_capacity" type="xs:double" />
+              <xs:element name="af_cost" msprop:Generator_ColumnVarNameInTable="columnaf_cost" msprop:Generator_ColumnPropNameInRow="af_cost" msprop:Generator_ColumnPropNameInTable="af_costColumn" msprop:Generator_UserColumnName="af_cost" type="xs:double" />
+              <xs:element name="af_datetime" msprop:Generator_ColumnVarNameInTable="columnaf_datetime" msprop:Generator_ColumnPropNameInRow="af_datetime" msprop:Generator_ColumnPropNameInTable="af_datetimeColumn" msprop:Generator_UserColumnName="af_datetime">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="af_startTime" msprop:Generator_ColumnVarNameInTable="columnaf_startTime" msprop:Generator_ColumnPropNameInRow="af_startTime" msprop:Generator_ColumnPropNameInTable="af_startTimeColumn" msprop:Generator_UserColumnName="af_startTime">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="af_finishTime" msprop:Generator_ColumnVarNameInTable="columnaf_finishTime" msprop:Generator_ColumnPropNameInRow="af_finishTime" msprop:Generator_ColumnPropNameInTable="af_finishTimeColumn" msprop:Generator_UserColumnName="af_finishTime">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="drone_id" msprop:Generator_ColumnVarNameInTable="columndrone_id" msprop:Generator_ColumnPropNameInRow="drone_id" msprop:Generator_ColumnPropNameInTable="drone_idColumn" msprop:Generator_UserColumnName="drone_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="farm_id" msprop:Generator_ColumnVarNameInTable="columnfarm_id" msprop:Generator_ColumnPropNameInRow="farm_id" msprop:Generator_ColumnPropNameInTable="farm_idColumn" msprop:Generator_UserColumnName="farm_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

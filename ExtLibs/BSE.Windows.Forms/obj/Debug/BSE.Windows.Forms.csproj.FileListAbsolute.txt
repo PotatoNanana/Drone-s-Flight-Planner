@@ -84,7 +84,9 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.XML
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\bin\Debug\Dapper.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\bin\Debug\Dapper.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Properties.Resources.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Panel.resources

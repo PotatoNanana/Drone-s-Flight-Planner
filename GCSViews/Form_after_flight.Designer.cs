@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.textBox_cost = new System.Windows.Forms.TextBox();
+            this.textBox_cap = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.But_save = new System.Windows.Forms.Button();
             this.textBox_patternMask = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
-            this.textBox_cost = new System.Windows.Forms.TextBox();
-            this.textBox_cap = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel_Main_farm.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,38 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(368, 355);
             this.panel_Main_farm.TabIndex = 12;
             // 
+            // textBox_cost
+            // 
+            this.textBox_cost.Location = new System.Drawing.Point(149, 121);
+            this.textBox_cost.Name = "textBox_cost";
+            this.textBox_cost.Size = new System.Drawing.Size(200, 31);
+            this.textBox_cost.TabIndex = 60;
+            // 
+            // textBox_cap
+            // 
+            this.textBox_cap.Location = new System.Drawing.Point(149, 64);
+            this.textBox_cap.Name = "textBox_cap";
+            this.textBox_cap.Size = new System.Drawing.Size(200, 31);
+            this.textBox_cap.TabIndex = 61;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(33, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 24);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "ปริมาณสาร";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 24);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "ค่าใช้จ่าย";
+            // 
             // But_save
             // 
             this.But_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
@@ -76,6 +108,7 @@
             this.But_save.Text = "บันทึก";
             this.But_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.But_save.UseVisualStyleBackColor = false;
+            this.But_save.Click += new System.EventHandler(this.But_save_Click);
             // 
             // textBox_patternMask
             // 
@@ -122,38 +155,6 @@
             this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Main_but_farm.UseCompatibleTextRendering = true;
             this.Main_but_farm.UseVisualStyleBackColor = true;
-            // 
-            // textBox_cost
-            // 
-            this.textBox_cost.Location = new System.Drawing.Point(149, 121);
-            this.textBox_cost.Name = "textBox_cost";
-            this.textBox_cost.Size = new System.Drawing.Size(200, 31);
-            this.textBox_cost.TabIndex = 60;
-            // 
-            // textBox_cap
-            // 
-            this.textBox_cap.Location = new System.Drawing.Point(149, 64);
-            this.textBox_cap.Name = "textBox_cap";
-            this.textBox_cap.Size = new System.Drawing.Size(200, 31);
-            this.textBox_cap.TabIndex = 61;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 24);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "ปริมาณสาร";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 24);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "ค่าใช้จ่าย";
             // 
             // Form_after_flight
             // 

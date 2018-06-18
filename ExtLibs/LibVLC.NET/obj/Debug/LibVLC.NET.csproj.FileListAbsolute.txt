@@ -60,8 +60,10 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\bin\Debug\LibVLC.NET.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\bin\Debug\LibVLC.NET.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\bin\Debug\LibVLC.NET.XML
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\bin\Debug\Dapper.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\bin\Debug\System.Runtime.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\bin\Debug\System.Runtime.Extensions.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\bin\Debug\System.Runtime.InteropServices.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\bin\Debug\Dapper.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\obj\Debug\LibVLC.NET.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\LibVLC.NET\obj\Debug\LibVLC.NET.pdb

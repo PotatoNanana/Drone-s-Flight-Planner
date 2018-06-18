@@ -2872,6 +2872,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.Log.
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.Log.LogBrowse.zh-Hans.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.Joystick.JoystickSetup.zh-Hans.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ar\DroneFlightPlanner.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\pt\DroneFlightPlanner.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\de-DE\DroneFlightPlanner.resources.dll
@@ -2888,3 +2889,24 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ja-JP\DroneFlightPl
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ru-RU\DroneFlightPlanner.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\DroneFlightPlanner.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\DroneFlightPlanner.pdb
+||||||| merged common ancestors
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ar\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\pt\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\de-DE\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\es-ES\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\fr\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\id-ID\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\it-IT\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ko-KR\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\pl\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\zh-Hans\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\zh-Hant\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\zh-TW\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ja-JP\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ru-RU\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.exe
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.pdb
+=======
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_farm_act2.resources
+>>>>>>> 42c10e7527fb72b98a2dfa8b566d3118be18d1e3
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_farm_act2.resources

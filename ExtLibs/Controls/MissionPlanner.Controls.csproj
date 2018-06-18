@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
     <PackageReference Include="OpenTK" Version="1.1.1589.5942" />
   </ItemGroup>
 

@@ -16,5 +16,10 @@ namespace MissionPlanner.GCSViews
         {
             InitializeComponent();
         }
+
+        private void But_save_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,6 +9,7 @@
     <description>MAVLink for Ardupilot</description>
     <dependencies>
       <group targetFramework=".NETFramework4.6.2">
+        <dependency id="Dapper" version="1.50.5" exclude="Build,Analyzers" />
         <dependency id="log4net" version="2.0.8" exclude="Build,Analyzers" />
       </group>
     </dependencies>

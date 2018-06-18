@@ -57,7 +57,8 @@ namespace MissionPlanner.GCSViews
             cmd.Parameters.Add("@iddrone", ID_drone);
 
             // update status activity in flight_schedule
-            String query2 = "UPDATE FlightSchedule SET action_finish = 'y' WHERE action_id = '"+comboBox1.Text+"' ";
+            //String query2 = "UPDATE FlightSchedule SET action_finish = 'y' WHERE action_id = '"+comboBox1.Text+"' "; //old
+            String query2 = "SELECT * INTO AfterFlight WHERE action_id = '"+comboBox1.Text+"'";
 
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             SDA.SelectCommand.ExecuteNonQuery();

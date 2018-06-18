@@ -15,6 +15,22 @@
           "lib/net20/BitMiracle.LibTiff.NET.dll": {}
         }
       },
+      "Dapper/1.50.5": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Data",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net451/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Dapper.dll": {}
+        }
+      },
       "log4net/2.0.8": {
         "type": "package",
         "compile": {
@@ -712,6 +728,7 @@
         "type": "project",
         "framework": ".NETFramework,Version=v4.6.2",
         "dependencies": {
+          "Dapper": "1.50.5",
           "log4net": "2.0.8"
         }
       }
@@ -729,6 +746,21 @@
         "lib/net20/BitMiracle.LibTiff.NET.xml",
         "lib/netstandard1.0/BitMiracle.LibTiff.NetStandard.dll",
         "lib/netstandard1.0/BitMiracle.LibTiff.NetStandard.xml"
+      ]
+    },
+    "Dapper/1.50.5": {
+      "sha512": "1vPpX7WQmQCIb7rwlGOUoVs/yWZhVKvdhuG7WrJV+V+qsP8btnrrCqVWHENAlJxBAnUw5rhWfmuba9/Egei9MA==",
+      "type": "package",
+      "path": "dapper/1.50.5",
+      "files": [
+        "dapper.1.50.5.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net451/Dapper.dll",
+        "lib/net451/Dapper.xml",
+        "lib/netstandard1.3/Dapper.dll",
+        "lib/netstandard1.3/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
       ]
     },
     "log4net/2.0.8": {
@@ -3508,6 +3540,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
       "BitMiracle.LibTiff.NET >= 2.4.571",
+      "Dapper >= 1.50.5",
       "GMap.NET.Core >= 1.0.0",
       "GeoUtility >= 1.0.0",
       "MAVLink >= 1.0.0",
@@ -3557,6 +3590,10 @@
           "ProjNet": {
             "target": "Package",
             "version": "1.2.0"
+          },
+          "Dapper": {
+            "target": "Package",
+            "version": "1.50.5"
           },
           "SharpZipLib": {
             "target": "Package",

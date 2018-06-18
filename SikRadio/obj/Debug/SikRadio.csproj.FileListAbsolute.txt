@@ -166,6 +166,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\it-IT\SikR
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\zh-Hans\SikRadio.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\zh-Hant\SikRadio.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\zh-TW\SikRadio.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\Dapper.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\log4net.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\System.IO.FileSystem.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\System.IO.FileSystem.Primitives.dll
@@ -177,6 +178,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\System.Sec
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\ZedGraph.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\ZedGraph.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\Dapper.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\log4net.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.csprojResolveAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\MissionPlanner.Sikradio.resources

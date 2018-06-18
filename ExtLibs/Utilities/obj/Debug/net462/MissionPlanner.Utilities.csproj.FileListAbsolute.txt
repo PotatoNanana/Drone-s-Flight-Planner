@@ -310,6 +310,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\MissionPlanner.Utilities.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\BitMiracle.LibTiff.NET.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\Dapper.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\log4net.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\Microsoft.Win32.Primitives.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Utilities\bin\Debug\net462\Newtonsoft.Json.dll

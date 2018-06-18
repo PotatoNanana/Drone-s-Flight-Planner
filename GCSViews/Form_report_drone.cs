@@ -10,19 +10,20 @@ using System.Windows.Forms;
 
 namespace MissionPlanner.GCSViews
 {
-    public partial class Form_report_drone : Form
+    public partial class Form_Report_Drone : Form
     {
-        public Form_report_drone()
+        public Form_Report_Drone()
         {
             InitializeComponent();
         }
 
-        private void Form_report_drone_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'droneFlightPlanner1DataSet_device.DeviceList' table. You can move, or remove it, as needed.
-            this.deviceListTableAdapter.Fill(this.droneFlightPlanner1DataSet_device.DeviceList);
-            // TODO: This line of code loads data into the 'droneFlightPlanner1DataSet_droneID.Drone' table. You can move, or remove it, as needed.
-            this.droneTableAdapter.Fill(this.droneFlightPlanner1DataSet_droneID.Drone);
+
+        }
+
+        private void Form_Report_Drone_Load(object sender, EventArgs e)
+        {
 
         }
     }
