@@ -56,12 +56,16 @@ namespace MissionPlanner.GCSViews
             cmd.Parameters.Add("@idfarm", ID_farm);
             cmd.Parameters.Add("@iddrone", ID_drone);
 
-            // update status activity in flight_schedule
+            // copy activity in flight_schedule to back up in afterFlight
             //String query2 = "UPDATE FlightSchedule SET action_finish = 'y' WHERE action_id = '"+comboBox1.Text+"' "; //old
             String query2 = "SELECT * INTO AfterFlight WHERE action_id = '"+comboBox1.Text+"'";
-
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-            SDA.SelectCommand.ExecuteNonQuery();
+            SDA2.SelectCommand.ExecuteNonQuery();
+
+            // delete data after backup in flightSchedule
+            SqlDataAdapter SDA3 = new SqlDataAdapter("DELETE FROM FlightSchedule WHERE action_id = '" + comboBox1.Text +"' ", con);
+            SDA3.SelectCommand.ExecuteNonQuery();
+
             con.Close();
             MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
 

@@ -35,6 +35,7 @@ namespace MissionPlanner.GCSViews
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_print = new System.Windows.Forms.Button();
             this.button_deletePart = new System.Windows.Forms.Button();
             this.button_editPart = new System.Windows.Forms.Button();
             this.BUT_addPart = new System.Windows.Forms.Button();
@@ -105,7 +106,6 @@ namespace MissionPlanner.GCSViews
             this.droneTableAdapter = new MissionPlanner.DroneFlightPlannerDataSetTableAdapters.DroneTableAdapter();
             this.droneTableAdapter1 = new MissionPlanner.DroneTableAdapters.DroneTableAdapter();
             this.deviceListTableAdapter = new MissionPlanner.partTableAdapters.DeviceListTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Part)).BeginInit();
@@ -142,7 +142,7 @@ namespace MissionPlanner.GCSViews
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button2);
+            this.panel_Main_farm.Controls.Add(this.button_print);
             this.panel_Main_farm.Controls.Add(this.button_deletePart);
             this.panel_Main_farm.Controls.Add(this.button_editPart);
             this.panel_Main_farm.Controls.Add(this.BUT_addPart);
@@ -195,6 +195,23 @@ namespace MissionPlanner.GCSViews
             this.panel_Main_farm.Size = new System.Drawing.Size(1321, 688);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
+            // 
+            // button_print
+            // 
+            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_print.FlatAppearance.BorderSize = 0;
+            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_print.ForeColor = System.Drawing.Color.White;
+            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_print.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_print.Location = new System.Drawing.Point(804, 557);
+            this.button_print.Name = "button_print";
+            this.button_print.Size = new System.Drawing.Size(102, 39);
+            this.button_print.TabIndex = 73;
+            this.button_print.Text = "พิมพ์รายงาน";
+            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_print.UseVisualStyleBackColor = false;
             // 
             // button_deletePart
             // 
@@ -872,23 +889,6 @@ namespace MissionPlanner.GCSViews
             // 
             this.deviceListTableAdapter.ClearBeforeFill = true;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(804, 557);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 39);
-            this.button2.TabIndex = 73;
-            this.button2.Text = "พิมพ์รายงาน";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // Menu_maintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -990,6 +990,6 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.Button button_deletePart;
         private System.Windows.Forms.Panel panel1;
         private EventHandler button_report_Click_1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_print;
     }
 }

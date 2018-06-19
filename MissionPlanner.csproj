@@ -537,6 +537,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlannerDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DroneFlightPlannerDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -4375,6 +4385,28 @@
     </None>
     <None Include="DroneFlightPlannerDataSet7.xss">
       <DependentUpon>DroneFlightPlannerDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet8.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet8.xss">
+      <DependentUpon>DroneFlightPlannerDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet9.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet9.xss">
+      <DependentUpon>DroneFlightPlannerDataSet9.xsd</DependentUpon>
     </None>
     <None Include="FArm.xsc">
       <DependentUpon>FArm.xsd</DependentUpon>

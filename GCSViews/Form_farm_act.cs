@@ -64,7 +64,7 @@ namespace MissionPlanner.GCSViews
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
-            DG_Farm.DataSource = dt;
+            DG_afterFlight.DataSource = dt;
             con.Close();
         }
 
