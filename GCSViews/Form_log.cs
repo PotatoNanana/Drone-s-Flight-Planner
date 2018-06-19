@@ -58,7 +58,9 @@ namespace MissionPlanner.GCSViews
 
             // copy activity in flight_schedule to back up in afterFlight
             //String query2 = "UPDATE FlightSchedule SET action_finish = 'y' WHERE action_id = '"+comboBox1.Text+"' "; //old
-            String query2 = "SELECT * INTO AfterFlight WHERE action_id = '"+comboBox1.Text+"'";
+            String query2 = "INSERT INTO AfterFlight (af_no,af_name,af_capacity,af_cost,af_datetime,af_startTime,af_finishTime,drone_id,farm_id)" +
+                "SELECT action_no,action_name,action_capacity,action_cost,action_datetime,action_startTime,action_finishTime,drone_id,farm_id FROM AfterFlight " +
+                "WHERE action_no = '"+comboBox1.Text+"'";  //copy done schedule to log in AfterFlight
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             SDA2.SelectCommand.ExecuteNonQuery();
 

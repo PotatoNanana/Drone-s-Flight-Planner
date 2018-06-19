@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_Schedule));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox_finishTime = new System.Windows.Forms.TextBox();
             this.textBox_startTime = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,7 +69,6 @@
             this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
             this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleTableAdapter1 = new MissionPlanner.DroneFlightPlannerDataSet5TableAdapters.FlightScheduleTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
@@ -122,6 +122,23 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(968, 578);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_schedule_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(773, 524);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "พิมพ์";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox_finishTime
             // 
@@ -450,23 +467,6 @@
             // flightScheduleTableAdapter1
             // 
             this.flightScheduleTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(773, 524);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "พิมพ์";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // contextMenuStrip1
             // 
