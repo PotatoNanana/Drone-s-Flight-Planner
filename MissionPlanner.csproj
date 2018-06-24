@@ -441,6 +441,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="-\System\IO\DirectoryInfoExtensions.cs" />
     <Compile Include="action_name.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
