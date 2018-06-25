@@ -101,24 +101,6 @@ namespace MissionPlanner.Utilities
 
             switch (_currentTheme)
             {
-                //case Themes.BurntKermit:
-                //    SetBurntKermitColors();
-                //    ApplyTheme(control, 0);
-                //    break;
-
-                //case Themes.HighContrast:
-                //    SetHighContrastColours();
-                //    ApplyTheme(control, 0);
-                //    break;
-
-                //case Themes.Test:
-                //    ApplyTestTheme(control, 0);
-                //    break;
-
-                //case Themes.Custom:
-                //    ApplyCustomTheme(control, 0);
-                //    break;
-
                 default:
                     break;
             }

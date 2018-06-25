@@ -41,7 +41,7 @@ namespace MissionPlanner.GCSViews
             /// added export worksheet to excel file
             /// save file with date and time using the ISO 8601 format
             /// 
-            string fileTest = "C:\\Temp\\DroneFlightPlanner\\add_activity_"+ DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
+            string fileTest = "C:\\Temp\\DroneFlightPlanner\\add_activity_"+ DateTime.Now.ToString("yyyyMMddTHHmmss") + ".csv";
             Excel.Application oApp;
             Excel.Worksheet oSheet;
             Excel.Workbook oBook;

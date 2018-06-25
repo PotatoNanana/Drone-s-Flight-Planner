@@ -24,7 +24,6 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using Ionic.Zip;
 using log4net;
-using MissionPlanner;
 using MissionPlanner.Plugin;
 using MissionPlanner.Controls;
 using MissionPlanner.Controls.Waypoints;
@@ -703,15 +702,68 @@ namespace MissionPlanner.GCSViews
             // TODO start changing
 
             MyView = new MainSwitcher(this);
-            titlebar = splash.Text;
 
-            _connectionControl = connectionControl1;
+            _connectionControl = toolStripConnectionControl1.ConnectionControl;
             _connectionControl.CMB_baudrate.TextChanged += this.CMB_baudrate_TextChanged;
             _connectionControl.CMB_serialport.SelectedIndexChanged += this.CMB_serialport_SelectedIndexChanged;
             _connectionControl.CMB_serialport.Click += this.CMB_serialport_Click;
             _connectionControl.cmb_sysid.Click += cmb_sysid_Click;
 
             _connectionControl.ShowLinkStats += (sender, e) => ShowConnectionStatsForm();
+
+            foreach (object obj in Enum.GetValues(typeof(Firmwares)))
+            {
+                _connectionControl.TOOL_APMFirmware.Items.Add(obj);
+            }
+
+            if (_connectionControl.TOOL_APMFirmware.Items.Count > 0)
+                _connectionControl.TOOL_APMFirmware.SelectedIndex = 0;
+
+            comPort.BaseStream.BaudRate = 115200;
+
+            PopulateSerialportList();
+            if (_connectionControl.CMB_serialport.Items.Count > 0)
+            {
+                _connectionControl.CMB_baudrate.SelectedIndex = 8;
+                _connectionControl.CMB_serialport.SelectedIndex = 0;
+            }
+
+            // load last saved connection settings
+            string temp = Utilities.Settings.Instance.ComPort;
+            if (!string.IsNullOrEmpty(temp))
+            {
+                _connectionControl.CMB_serialport.SelectedIndex = _connectionControl.CMB_serialport.FindString(temp);
+                if (_connectionControl.CMB_serialport.SelectedIndex == -1)
+                {
+                    _connectionControl.CMB_serialport.Text = temp; // allows ports that dont exist - yet
+                }
+                comPort.BaseStream.PortName = temp;
+                comPortName = temp;
+            }
+            string temp2 = Utilities.Settings.Instance.BaudRate;
+            if (!string.IsNullOrEmpty(temp2))
+            {
+                _connectionControl.CMB_baudrate.SelectedIndex = _connectionControl.CMB_baudrate.FindString(temp2);
+                if (_connectionControl.CMB_baudrate.SelectedIndex == -1)
+                {
+                    _connectionControl.CMB_baudrate.Text = temp2;
+                }
+
+                comPortBaud = int.Parse(temp2);
+            }
+            string temp3 = Utilities.Settings.Instance.APMFirmware;
+            if (!string.IsNullOrEmpty(temp3))
+            {
+                _connectionControl.TOOL_APMFirmware.SelectedIndex =
+                    _connectionControl.TOOL_APMFirmware.FindStringExact(temp3);
+                if (_connectionControl.TOOL_APMFirmware.SelectedIndex == -1)
+                    _connectionControl.TOOL_APMFirmware.SelectedIndex = 0;
+                MainV2.comPort.MAV.cs.firmware =
+                    (MainV2.Firmwares)Enum.Parse(typeof(MainV2.Firmwares), _connectionControl.TOOL_APMFirmware.Text);
+            }
+
+            // save config to test we have write access
+            SaveConfig();
         }
 
         private Form connectionStatsForm;
@@ -787,6 +839,26 @@ namespace MissionPlanner.GCSViews
             }
             catch
             {
+            }
+        }
+
+        private void SaveConfig()
+        {
+            try
+            {
+                log.Info("Saving config");
+                Utilities.Settings.Instance.ComPort = comPortName;
+
+                if (_connectionControl != null)
+                    Utilities.Settings.Instance.BaudRate = _connectionControl.CMB_baudrate.Text;
+
+                Utilities.Settings.Instance.APMFirmware = MainV2.comPort.MAV.cs.firmware.ToString();
+
+                Utilities.Settings.Instance.Save();
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show(ex.ToString());
             }
         }
 
@@ -6670,8 +6742,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         DateTime connecttime = DateTime.Now;
         string titlebar;
         public GCSViews.FlightData FlightData;
-        Form splash = Program.Splash;
-
 
         private void enterUTMCoordToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -7358,7 +7428,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             loadph_serial();
         }
 
-        public void doConnect(MAVLinkInterface comPort, string portname, string baud)
+        public void doConnect(MAVLinkInterface comPort, string portname, string baud, bool getparams = true)
         {
             bool skipconnectcheck = false;
             log.Info("We are connecting to " + portname + " " + baud);
@@ -7519,6 +7589,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     }
                     return;
                 }
+
+                if (getparams)
+                    comPort.getParamList();
+
+                _connectionControl.UpdateSysIDS();
 
                 // get all the params
                 foreach (var mavstate in comPort.MAVlist)
@@ -7717,26 +7792,28 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 // Console.WriteLine(DateTime.Now.Millisecond);
                 if (comPort.BaseStream.IsOpen)
                 {
-                    if ((string)this.MenuConnect.Image.Tag != "Disconnect")
+                    if ((string)this.MenuConnect.Text != "หยุดการเชื่อมต่อ")
                     {
                         this.BeginInvoke((MethodInvoker)delegate
                         {
-                            this.MenuConnect.Image = displayicons.disconnect;
-                            this.MenuConnect.Image.Tag = "Disconnect";
-                            this.MenuConnect.Text = Strings.DISCONNECTc;
+                            //this.MenuConnect.Image = displayicons.disconnect;
+                            //this.MenuConnect.Image.Tag = "Disconnect";
+                            //this.MenuConnect.Text = Strings.DISCONNECTc;
+                            this.MenuConnect.Text = "หยุดการเชื่อมต่อ";
                             _connectionControl.IsConnected(true);
                         });
                     }
                 }
                 else
                 {
-                    if (this.MenuConnect.Image != null && (string)this.MenuConnect.Image.Tag != "Connect")
+                    if (this.MenuConnect.Text != null && (string)this.MenuConnect.Text != "เชื่อมต่อ")
                     {
                         this.BeginInvoke((MethodInvoker)delegate
                         {
-                            this.MenuConnect.Image = displayicons.connect;
-                            this.MenuConnect.Image.Tag = "Connect";
-                            this.MenuConnect.Text = Strings.CONNECTc;
+                            //this.MenuConnect.Image = displayicons.connect;
+                            //this.MenuConnect.Image.Tag = "Connect";
+                            //this.MenuConnect.Text = Strings.CONNECTc;
+                            this.MenuConnect.Text = "เชื่อมต่อ";
                             _connectionControl.IsConnected(false);
                             if (_connectionStats != null)
                             {
@@ -7966,6 +8043,20 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         internal string id_farmGet()
         {
             return id_farm;
+        }
+
+        //added by Napat
+
+        private void MainMenu_MouseLeave(object sender, EventArgs e)
+        {
+            if (_connectionControl.PointToClient(Control.MousePosition).Y < MainMenu.Height)
+                return;
+
+            this.SuspendLayout();
+
+            panel1.Visible = false;
+
+            this.ResumeLayout();
         }
     }
 

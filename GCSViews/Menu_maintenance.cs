@@ -49,6 +49,7 @@ namespace MissionPlanner.GCSViews
         public static event EventHandler Goto_DronePart_Clicked;
         public String id_drone;
         public String id_part;
+        public String name_drone;
 
         protected virtual void OnGotoDronePartClicked(EventArgs e)
         {
@@ -296,6 +297,7 @@ namespace MissionPlanner.GCSViews
                     textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
                     id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
                     textBox_droneName.Text = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
+                    name_drone = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
                     if (!Convert.IsDBNull(reader[2]))
                     {
                         img = (byte[])(reader[2]);

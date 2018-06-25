@@ -359,6 +359,9 @@ namespace MissionPlanner
                 return;
             }
 
+            if (MainV2.instance != null && MainV2.instance.IsDisposed)
+                return;
+
             if (MainV3.instance != null && MainV3.instance.IsDisposed)
                 return;
 
@@ -366,6 +369,9 @@ namespace MissionPlanner
                 return;
 
             if (MainV3_developer.instance != null && MainV3_developer.instance.IsDisposed)
+                return;
+
+            if (MainV3_pilot.instance != null && MainV3_pilot.instance.IsDisposed)
                 return;
 
             MissionPlanner.Utilities.Tracking.AddException(ex);

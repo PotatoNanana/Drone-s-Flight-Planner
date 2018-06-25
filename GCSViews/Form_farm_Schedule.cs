@@ -23,11 +23,13 @@ namespace MissionPlanner.GCSViews
         public Form_farm_Schedule(string id_farm)
         {
             this.id_farm = id_farm;
+            this.name_farm = name_farm;
             InitializeComponent();
         }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         private string id_farm;
+        private string name_farm;
 
         private void Main_but_farm_Click(object sender, EventArgs e)
         {
@@ -119,8 +121,8 @@ namespace MissionPlanner.GCSViews
                     Directory.CreateDirectory(filepath);
                 }
                 /// added export worksheet to excel file
-                string fileTest = "C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
-                MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
+                string fileTest = "C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".csv";
+                MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".csv แล้ว");
                 Excel.Application oApp;
                 Excel.Worksheet oSheet;
                 Excel.Workbook oBook;
@@ -258,16 +260,21 @@ namespace MissionPlanner.GCSViews
                 oBook = oApp.Workbooks.Add();
                 oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
                 oSheet.Cells[1, 1] = "รหัสฟาร์ม";
-                oSheet.Cells[1, 2] = "รหัสโดรน";
-                oSheet.Cells[1, 3] = "รหัสกิจกรรม";
-                oSheet.Cells[1, 4] = "ชื่อกิจกรรม";
-                oSheet.Cells[1, 5] = "ปริมาณสาร";
-                oSheet.Cells[1, 6] = "วันที่";
-                oSheet.Cells[1, 7] = "เวลาเริ่ม";
-                oSheet.Cells[1, 8] = "เวลาเสร็จ";
+                oSheet.Cells[1, 2] = "ชื่อฟาร์ม";
+                oSheet.Cells[1, 3] = "รหัสโดรน";
+                oSheet.Cells[1, 4] = "ชือโดรน";
+                oSheet.Cells[1, 5] = "รหัสกิจกรรม";
+                oSheet.Cells[1, 6] = "ชื่อกิจกรรม";
+                oSheet.Cells[1, 7] = "ปริมาณสาร";
+                oSheet.Cells[1, 8] = "วันที่";
+                oSheet.Cells[1, 9] = "เวลาเริ่ม";
+                oSheet.Cells[1, 10] = "เวลาเสร็จ";
 
-                oSheet.Cells[2, 1] = menu_Farm.farmIDText;
-                oSheet.Cells[2, 2] = textBox_droneID.Text;
+                oSheet.Cells[2, 1] = id_farm;
+                oSheet.Cells[2, 2] = name_farm;
+
+                oSheet.Cells[2, 3] = textBox_droneID.Text;
+
                 oSheet.Cells[2, 3] = textBox_actID.Text;
                 oSheet.Cells[2, 4] = textBox_actName.Text;
                 oSheet.Cells[2, 5] = textBox_cap.Text;
