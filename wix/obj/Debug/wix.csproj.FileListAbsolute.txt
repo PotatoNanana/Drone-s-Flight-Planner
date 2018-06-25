@@ -17,12 +17,12 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\wix\ob
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Msi\licence.rtf
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Msi\wix.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Msi\wix.pdb
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.Properties.Resources.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.csproj.GenerateResource.Cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.pdb
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Msi\licence.rtf
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Msi\wix.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Msi\wix.pdb
@@ -32,3 +32,8 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.csproj.Core
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.pdb
+||||||| merged common ancestors
+=======
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.csprojAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\wix\obj\Debug\wix.csproj.CopyComplete
+>>>>>>> d97299fbab704b220782279e6d4a8385d6f5d2da

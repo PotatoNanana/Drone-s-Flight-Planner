@@ -125,7 +125,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\bin\Debug\ZedGraph.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\bin\Debug\ZedGraph.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\bin\Debug\log4net.xml
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\SikRadio.csprojResolveAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\MissionPlanner.Sikradio.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\SikRadio.Config.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\SikRadio.Properties.Resources.resources
@@ -156,6 +155,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\zh-TW\SikRadio.resources.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\SikRadio.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\SikRadio.pdb
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\ChangeLog.txt
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\SikRadio.exe.config
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\SikRadio.exe
@@ -212,3 +212,8 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\zh-TW\SikR
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.pdb
+||||||| merged common ancestors
+=======
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\SikRadio.csprojAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\SikRadio\obj\Debug\SikRadio.csproj.CopyComplete
+>>>>>>> d97299fbab704b220782279e6d4a8385d6f5d2da

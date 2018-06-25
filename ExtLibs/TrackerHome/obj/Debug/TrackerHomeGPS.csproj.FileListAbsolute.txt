@@ -24,5 +24,10 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\TrackerHome\obj\Debug\TrackerHome.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\TrackerHome\obj\Debug\TrackerHome.pdb
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csproj.CoreCompileInputs.cache
+||||||| merged common ancestors
+=======
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csprojAssemblyReference.cache
+>>>>>>> d97299fbab704b220782279e6d4a8385d6f5d2da

@@ -70,6 +70,15 @@
             this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleTableAdapter1 = new MissionPlanner.DroneFlightPlannerDataSet5TableAdapters.FlightScheduleTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.droneFlightPlannerDataSet5 = new MissionPlanner.DroneFlightPlannerDataSet5();
+            this.But_add_act = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
+            this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
+            this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
+            this.flightScheduleTableAdapter1 = new MissionPlanner.DroneFlightPlannerDataSet5TableAdapters.FlightScheduleTableAdapter();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -274,6 +283,7 @@
             this.monthCalendar1.Location = new System.Drawing.Point(71, 164);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 27;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // pictureBox1
             // 
@@ -472,6 +482,54 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // actiondatetimeDataGridViewTextBoxColumn
+            // 
+            this.actiondatetimeDataGridViewTextBoxColumn.DataPropertyName = "action_datetime";
+            this.actiondatetimeDataGridViewTextBoxColumn.HeaderText = "วันที่";
+            this.actiondatetimeDataGridViewTextBoxColumn.Name = "actiondatetimeDataGridViewTextBoxColumn";
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
+            // actionnoDataGridViewTextBoxColumn
+            // 
+            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.HeaderText = "เลขที่กิจกรรม";
+            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
+            // 
+            // actionnameDataGridViewTextBoxColumn
+            // 
+            this.actionnameDataGridViewTextBoxColumn.DataPropertyName = "action_name";
+            this.actionnameDataGridViewTextBoxColumn.HeaderText = "ชื่อกิจกรรม";
+            this.actionnameDataGridViewTextBoxColumn.Name = "actionnameDataGridViewTextBoxColumn";
+            // 
+            // actioncapacityDataGridViewTextBoxColumn
+            // 
+            this.actioncapacityDataGridViewTextBoxColumn.DataPropertyName = "action_capacity";
+            this.actioncapacityDataGridViewTextBoxColumn.HeaderText = "ปริมาณสาร";
+            this.actioncapacityDataGridViewTextBoxColumn.Name = "actioncapacityDataGridViewTextBoxColumn";
+            // 
+            // actioncostDataGridViewTextBoxColumn
+            // 
+            this.actioncostDataGridViewTextBoxColumn.DataPropertyName = "action_cost";
+            this.actioncostDataGridViewTextBoxColumn.HeaderText = "ค่าใช้จ่าย";
+            this.actioncostDataGridViewTextBoxColumn.Name = "actioncostDataGridViewTextBoxColumn";
+            // 
+            // action_startTime
+            // 
+            this.action_startTime.DataPropertyName = "action_startTime";
+            this.action_startTime.HeaderText = "เวลาเริ่มต้น";
+            this.action_startTime.Name = "action_startTime";
+            // 
+            // action_finishTime
+            // 
+            this.action_finishTime.DataPropertyName = "action_finishTime";
+            this.action_finishTime.HeaderText = "เวลาสิ้นสุด";
+            this.action_finishTime.Name = "action_finishTime";
             // 
             // Form_farm_Schedule
             // 
