@@ -36,8 +36,10 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\plugins\ExtGuided.dll.config
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\plugins\ExtGuided.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\plugins\ExtGuided.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.FilePick.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ExtGuided\obj\Debug\ExtGuided.pdb

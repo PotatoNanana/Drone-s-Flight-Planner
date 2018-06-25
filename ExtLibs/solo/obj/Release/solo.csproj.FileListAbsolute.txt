@@ -56,3 +56,35 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\solo\obj\Release\solo.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\solo\obj\Release\solo.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\solo\obj\Release\solo.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\solo.exe.config
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\solo.exe
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\solo.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Flurl.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Flurl.Http.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Microsoft.Win32.Primitives.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Renci.SshNet.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.IO.FileSystem.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.IO.FileSystem.Primitives.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Net.Http.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Reflection.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Reflection.TypeExtensions.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Security.Cryptography.Encoding.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Security.Cryptography.Primitives.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Security.Cryptography.X509Certificates.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Text.Encoding.CodePages.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Flurl.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Flurl.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Flurl.Http.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Flurl.Http.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Newtonsoft.Json.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\Renci.SshNet.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Release\solo.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Release\solo.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Release\solo.exe
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Release\solo.pdb

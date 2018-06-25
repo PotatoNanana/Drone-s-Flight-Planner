@@ -2910,3 +2910,14 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_farm_act2.resources
 >>>>>>> 42c10e7527fb72b98a2dfa8b566d3118be18d1e3
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_farm_act2.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_Report_Drone.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_Report_Farm.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.CopyComplete

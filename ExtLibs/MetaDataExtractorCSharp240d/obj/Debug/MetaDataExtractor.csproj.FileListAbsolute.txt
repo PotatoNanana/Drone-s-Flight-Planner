@@ -59,5 +59,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSha
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\MetaDataExtractor.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\Dapper.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb

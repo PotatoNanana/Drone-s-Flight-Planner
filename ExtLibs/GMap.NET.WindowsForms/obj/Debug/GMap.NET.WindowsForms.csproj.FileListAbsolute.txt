@@ -84,9 +84,11 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Debug\GMap.NET.Core.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Debug\Dapper.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.WindowsForms.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.WindowsForms.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.TilePrefetcher.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\System.Windows.Forms.Properties.Resources.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.WindowsForms.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.WindowsForms.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.WindowsForms.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.WindowsForms.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Debug\GMap.NET.WindowsForms.pdb

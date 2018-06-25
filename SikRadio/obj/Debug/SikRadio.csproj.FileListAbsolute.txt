@@ -180,7 +180,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\ZedGraph.d
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\ZedGraph.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\Dapper.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\bin\Debug\log4net.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\MissionPlanner.Sikradio.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.Config.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.Properties.Resources.resources
@@ -201,12 +201,14 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.R
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.Terminal.zh-Hans.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.Terminal.zh-Hant.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.Terminal.zh-TW.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\de-DE\SikRadio.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\fr\SikRadio.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\it-IT\SikRadio.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\zh-Hans\SikRadio.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\zh-Hant\SikRadio.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\zh-TW\SikRadio.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\SikRadio\obj\Debug\SikRadio.pdb

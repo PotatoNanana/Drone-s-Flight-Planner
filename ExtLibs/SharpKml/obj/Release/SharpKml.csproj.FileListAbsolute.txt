@@ -12,3 +12,13 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpKml\obj\Release\SharpKml.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpKml\obj\Release\SharpKml.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpKml\obj\Release\SharpKml.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\bin\Release\SharpKml.XML
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\bin\Release\SharpKml.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\bin\Release\SharpKml.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\bin\Release\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\bin\Release\Ionic.Zip.Reduced.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\bin\Release\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\obj\Release\SharpKml.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\obj\Release\SharpKml.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\obj\Release\SharpKml.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpKml\obj\Release\SharpKml.pdb

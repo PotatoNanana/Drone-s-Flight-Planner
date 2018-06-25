@@ -206,6 +206,8 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Debug\Flurl.
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Debug\Newtonsoft.Json.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Debug\Renci.SshNet.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Debug\solo.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Debug\solo.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Debug\solo.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Debug\solo.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Debug\solo.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\solo\obj\Debug\solo.pdb

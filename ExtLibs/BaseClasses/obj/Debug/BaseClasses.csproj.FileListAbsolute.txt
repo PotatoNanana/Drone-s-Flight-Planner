@@ -21,5 +21,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BaseClasses\bin\Debug
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BaseClasses\bin\Debug\BaseClassesNET.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BaseClasses\bin\Debug\Dapper.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BaseClasses\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BaseClasses\obj\Debug\BaseClasses.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BaseClasses\obj\Debug\BaseClasses.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BaseClasses\obj\Debug\BaseClassesNET.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\BaseClasses\obj\Debug\BaseClassesNET.pdb

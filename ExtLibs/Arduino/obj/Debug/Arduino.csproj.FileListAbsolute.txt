@@ -68,6 +68,8 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\bin\Debug\log
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\bin\Debug\MissionPlanner.Comms.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\bin\Debug\Dapper.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\bin\Debug\log4net.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\obj\Debug\Arduino.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\obj\Debug\Arduino.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\obj\Debug\Arduino.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\obj\Debug\Arduino.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\obj\Debug\Arduino.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Arduino\obj\Debug\Arduino.pdb

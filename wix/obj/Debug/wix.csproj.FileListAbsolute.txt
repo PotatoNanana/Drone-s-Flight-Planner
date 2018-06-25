@@ -26,8 +26,9 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Msi\licence.rtf
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Msi\wix.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Msi\wix.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.csprojResolveAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.Properties.Resources.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\wix\obj\Debug\wix.pdb

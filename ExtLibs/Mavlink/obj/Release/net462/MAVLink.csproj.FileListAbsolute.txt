@@ -8,3 +8,11 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Mavlink\obj\Release\net462\MAVLink.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Mavlink\obj\Release\net462\MAVLink.AssemblyInfo.cs
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Mavlink\obj\Release\net462\MAVLink.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\bin\Release\net462\MAVLink.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\bin\Release\net462\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\bin\Release\net462\log4net.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\obj\Release\net462\MAVLink.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\obj\Release\net462\MAVLink.AssemblyInfoInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\obj\Release\net462\MAVLink.AssemblyInfo.cs
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\obj\Release\net462\MAVLink.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\obj\Release\net462\MAVLink.dll

@@ -421,8 +421,9 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\bi
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\bin\Debug\System.Reactive.Windows.Threading.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.App.config
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csprojResolveAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.Properties.Resources.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AltitudeAngelWings\obj\Debug\AltitudeAngelWings.pdb

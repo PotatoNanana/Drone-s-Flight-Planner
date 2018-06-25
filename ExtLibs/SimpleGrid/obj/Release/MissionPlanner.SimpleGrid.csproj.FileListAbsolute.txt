@@ -13,3 +13,16 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\pt\MissionPlanner.SimpleGrid.resources.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Release\plugins\MissionPlanner.SimpleGrid.dll.config
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Release\plugins\MissionPlanner.SimpleGrid.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Release\plugins\MissionPlanner.SimpleGrid.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Release\plugins\pt\MissionPlanner.SimpleGrid.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.GridUI.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.GridUI.pt.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\pt\MissionPlanner.SimpleGrid.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SimpleGrid\obj\Release\MissionPlanner.SimpleGrid.pdb
