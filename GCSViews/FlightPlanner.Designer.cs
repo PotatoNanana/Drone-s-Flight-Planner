@@ -53,13 +53,13 @@ namespace MissionPlanner.GCSViews
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlightPlanner));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CHK_verifyheight = new System.Windows.Forms.CheckBox();
             this.TXT_WPRad = new System.Windows.Forms.TextBox();
             this.TXT_DefaultAlt = new System.Windows.Forms.TextBox();
@@ -234,9 +234,11 @@ namespace MissionPlanner.GCSViews
             this.dEVICE_LIST = new MissionPlanner.DEVICE_LIST();
             this.deviceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deviceListTableAdapter = new MissionPlanner.DEVICE_LISTTableAdapters.DeviceListTableAdapter();
-            this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.droneTableAdapter = new MissionPlanner.Drone1TableAdapters.DroneTableAdapter();
             this.farmTableAdapter = new MissionPlanner.farm1TableAdapters.FarmTableAdapter();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.MainMenu = new System.Windows.Forms.MenuStrip();
+            this.toolStripConnectionControl1 = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
@@ -260,6 +262,8 @@ namespace MissionPlanner.GCSViews
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dEVICE_LIST)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceListBindingSource)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // CHK_verifyheight
@@ -386,8 +390,8 @@ namespace MissionPlanner.GCSViews
             // 
             // dataGridViewImageColumn1
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -395,8 +399,8 @@ namespace MissionPlanner.GCSViews
             // 
             // dataGridViewImageColumn2
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.dataGridViewImageColumn2, "dataGridViewImageColumn2");
             this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
             this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -414,6 +418,7 @@ namespace MissionPlanner.GCSViews
             this.panelWaypoints.CaptionFont = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelWaypoints.CaptionHeight = 21;
             this.panelWaypoints.ColorScheme = BSE.Windows.Forms.ColorScheme.Custom;
+            this.panelWaypoints.Controls.Add(this.panel9);
             this.panelWaypoints.Controls.Add(this.button_log);
             this.panelWaypoints.Controls.Add(this.connectionControl1);
             this.panelWaypoints.Controls.Add(this.MenuConnect);
@@ -628,17 +633,17 @@ namespace MissionPlanner.GCSViews
             this.TagData});
             this.Commands.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Commands.Name = "Commands";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.Format = "N0";
-            dataGridViewCellStyle20.NullValue = "0";
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Commands.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            this.Commands.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.Format = "N0";
+            dataGridViewCellStyle6.NullValue = "0";
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Commands.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.Commands.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.Commands.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellContentClick);
             this.Commands.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Commands_CellEndEdit);
             this.Commands.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Commands_DataError);
@@ -651,9 +656,9 @@ namespace MissionPlanner.GCSViews
             // Command
             // 
             this.Command.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(68)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            this.Command.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(68)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.Command.DefaultCellStyle = dataGridViewCellStyle3;
             this.Command.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             resources.ApplyResources(this.Command, "Command");
             this.Command.Name = "Command";
@@ -737,7 +742,7 @@ namespace MissionPlanner.GCSViews
             // Up
             // 
             this.Up.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.Up.DefaultCellStyle = dataGridViewCellStyle18;
+            this.Up.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.Up, "Up");
             this.Up.Image = ((System.Drawing.Image)(resources.GetObject("Up.Image")));
             this.Up.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -746,8 +751,8 @@ namespace MissionPlanner.GCSViews
             // Down
             // 
             this.Down.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Down.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Down.DefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.Down, "Down");
             this.Down.Image = ((System.Drawing.Image)(resources.GetObject("Down.Image")));
             this.Down.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
@@ -1626,11 +1631,6 @@ namespace MissionPlanner.GCSViews
             // 
             this.deviceListTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripConnectionControl
-            // 
-            resources.ApplyResources(this.toolStripConnectionControl, "toolStripConnectionControl");
-            this.toolStripConnectionControl.Name = "toolStripConnectionControl";
-            // 
             // droneTableAdapter
             // 
             this.droneTableAdapter.ClearBeforeFill = true;
@@ -1638,6 +1638,34 @@ namespace MissionPlanner.GCSViews
             // farmTableAdapter
             // 
             this.farmTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.MainMenu);
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
+            // 
+            // MainMenu
+            // 
+            this.MainMenu.BackgroundImage = global::MissionPlanner.Properties.Resources.bgdark;
+            resources.ApplyResources(this.MainMenu, "MainMenu");
+            this.MainMenu.GripMargin = new System.Windows.Forms.Padding(0);
+            this.MainMenu.ImageScalingSize = new System.Drawing.Size(0, 0);
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripConnectionControl1});
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.ShowItemToolTips = true;
+            this.MainMenu.Stretch = false;
+            // 
+            // toolStripConnectionControl1
+            // 
+            this.toolStripConnectionControl1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripConnectionControl1.BackgroundImage = global::MissionPlanner.Properties.Resources.bgdark;
+            this.toolStripConnectionControl1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripConnectionControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripConnectionControl1.Name = "toolStripConnectionControl1";
+            resources.ApplyResources(this.toolStripConnectionControl1, "toolStripConnectionControl1");
+            this.toolStripConnectionControl1.MouseLeave += new System.EventHandler(this.MainMenu_MouseLeave);
             // 
             // FlightPlanner
             // 
@@ -1678,6 +1706,10 @@ namespace MissionPlanner.GCSViews
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dEVICE_LIST)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceListBindingSource)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.MainMenu.ResumeLayout(false);
+            this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1833,10 +1865,11 @@ namespace MissionPlanner.GCSViews
         /// <summary>
         /// added connect drone function
         /// </summary>
-        public Controls.ToolStripConnectionControl toolStripConnectionControl;
+        private Controls.ToolStripConnectionControl toolStripConnectionControl1;
+        //private Controls.ConnectionControl ConnectionControl;
         public System.Windows.Forms.ToolTip toolTip2;
         public MyButton MenuConnect;
-        private ConnectionControl connectionControl1;
+        private Controls.ConnectionControl connectionControl1;
         private MyButton button_log;
         public BSE.Windows.Forms.Panel panelAction;
         private System.Windows.Forms.Label label6;
@@ -1866,5 +1899,7 @@ namespace MissionPlanner.GCSViews
         private farm1TableAdapters.FarmTableAdapter farmTableAdapter;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        public System.Windows.Forms.MenuStrip MainMenu;
     }
 }

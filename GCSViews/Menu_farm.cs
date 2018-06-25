@@ -26,6 +26,7 @@ namespace MissionPlanner.GCSViews
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         public string id_farm;
+        public string name_farm;
         string imgLocation = "";
         byte[] imgby;
         SqlCommand cmd;       
@@ -90,6 +91,7 @@ namespace MissionPlanner.GCSViews
                     textBox_farmID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
                     id_farm = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
                     textBox_farmName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                    name_farm = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
                     textBox_farmLocation.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
                     textBox_farmHost.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
                     img = (byte[])(reader[4]);

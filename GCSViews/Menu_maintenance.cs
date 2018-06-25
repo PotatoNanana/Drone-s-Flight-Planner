@@ -49,6 +49,7 @@ namespace MissionPlanner.GCSViews
         public static event EventHandler Goto_DronePart_Clicked;
         public String id_drone;
         public String id_part;
+        public String name_drone;
 
         protected virtual void OnGotoDronePartClicked(EventArgs e)
         {
@@ -98,33 +99,69 @@ namespace MissionPlanner.GCSViews
         private void BUT_add_drone_Click(object sender, EventArgs e)
 
         {
-            try
+            // for img 
+            byte[] img = null;
+
+            if (!String.IsNullOrEmpty(imgLocation))
             {
-                // for img 
-                byte[] img = null;
+                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+            }
 
-                if (!String.IsNullOrEmpty(imgLocation))
+            if (textBox_droneID.Text == "" || textBox_droneName.Text == "")
+            {
+                MessageBox.Show("คุณยังกรอกข้อมูลรหัสโดรนหรือชื่อโดรนไม่ครบถ้วน !!");
+            }
+            else if (img == null)
+            {
+                if (textBox_droneID.Text != "")
                 {
-                    FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
-                    img = br.ReadBytes((int)fs.Length);
-                }
-
-                if (textBox_droneID.Text == "" || textBox_droneName.Text == "")
-                {
-                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสโดรนหรือชื่อโดรนไม่ครบถ้วน !!");
-                }
-                else if (img == null)
-                {
-                    String query = "INSERT INTO Drone (drone_id,drone_name) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "')";
-
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
+                    String queryDrone = "SELECT * from drone where drone_id ='" + textBox_droneID.Text + "'";
+                    SqlCommand cmd = new SqlCommand(queryDrone, con);
+                    int exists = cmd.ExecuteNonQuery();
+                    if (exists > 0)
+                    {
+                        MessageBox.Show("กรุณากรอกข้อมูลรหัสโดรนอื่นแทน !!");
+                        con.Close();
+                    }
+                    else
+                    {
+                        con.Close();
+                        String query = "INSERT INTO Drone (drone_id,drone_name) " + "VALUES('" + textBox_droneID.Text + "','" + textBox_droneName.Text + "')";
 
-                    cmd = new SqlCommand(query, con);
-                    int x = cmd.ExecuteNonQuery();
+                        if (con.State != ConnectionState.Open)
+                        { con.Open(); }
+
+                        cmd = new SqlCommand(query, con);
+                        int x = cmd.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("บันทึกข้อมูลโดรนสำเร็จ !!");
+
+                        //show data to DataGridView Drone
+                        con.Open();
+                        String query2 = "SELECT drone_id,drone_name FROM Drone";
+                        SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                        DataTable dt = new DataTable();
+                        SDA2.Fill(dt);
+                        DG_Drone.DataSource = dt;
+                        con.Close();
+                    }
+                }
+            }
+            else
+            {
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                String queryDrone = "SELECT * from drone where drone_id ='" + textBox_droneID.Text + "'";
+                SqlCommand cmd = new SqlCommand(queryDrone, con);
+                int exists = cmd.ExecuteNonQuery();
+                if (exists > 0)
+                {
+                    MessageBox.Show("กรุณากรอกข้อมูลรหัสโดรนอื่นแทน !!");
                     con.Close();
-                    MessageBox.Show("บันทึกข้อมูลโดรนสำเร็จ !!");
                 }
                 else
                 {
@@ -138,21 +175,17 @@ namespace MissionPlanner.GCSViews
                     int x = cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("บันทึกข้อมูลโดรนสำเร็จ !!");
+
+                    //show data to DataGridView Drone
+                    con.Open();
+                    String query2 = "SELECT drone_id,drone_name FROM Drone";
+                    SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                    DataTable dt = new DataTable();
+                    SDA2.Fill(dt);
+                    DG_Drone.DataSource = dt;
+                    con.Close();
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            //show data to DataGridView Drone
-            con.Open();
-            String query2 = "SELECT drone_id,drone_name FROM Drone";
-            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-            DataTable dt = new DataTable();
-            SDA2.Fill(dt);
-            DG_Drone.DataSource = dt;
-            con.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -264,6 +297,7 @@ namespace MissionPlanner.GCSViews
                     textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
                     id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
                     textBox_droneName.Text = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
+                    name_drone = DG_Drone.SelectedRows[0].Cells[1].Value.ToString();
                     if (!Convert.IsDBNull(reader[2]))
                     {
                         img = (byte[])(reader[2]);
