@@ -57,7 +57,8 @@ namespace MissionPlanner.GCSViews
             OnMenuSimmulationButtonClick?.Invoke(this, e);
         }
 
-        
+        Controls.SITL Simulation;
+
         public string file; // name of waypoint path
         public static string id_drone;
         public static string id_farm;
@@ -7428,7 +7429,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             loadph_serial();
         }
 
-        public void doConnect(MAVLinkInterface comPort, string portname, string baud, bool getparams = true)
+        public void doConnect(MAVLinkInterface comPort, string portname, string baud)
         {
             bool skipconnectcheck = false;
             log.Info("We are connecting to " + portname + " " + baud);
@@ -7590,11 +7591,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     return;
                 }
 
-                if (getparams)
-                    comPort.getParamList();
-
-                _connectionControl.UpdateSysIDS();
-
                 // get all the params
                 foreach (var mavstate in comPort.MAVlist)
                 {
@@ -7604,8 +7600,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // set to first seen
-                comPort.sysidcurrent = comPort.MAVlist.First().sysid;
-                comPort.compidcurrent = comPort.MAVlist.First().compid;
+                comPort.sysidcurrent = comPort.MAVlist.FirstOrDefault().sysid;
+                comPort.compidcurrent = comPort.MAVlist.FirstOrDefault().compid;
 
                 _connectionControl.UpdateSysIDS();
 
@@ -7702,7 +7698,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     // only do it if we are connected.
                     if (comPort.BaseStream.IsOpen)
                     {
-                        MenuFlightPlanner_Click(null, null);
+                        //MenuFlightPlanner_Click(null, null);
                         BUT_read_Click(null, null);
                     }
                 }
@@ -7761,11 +7757,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 {
                     log.Warn(ex2);
                 }
-                CustomMessageBox.Show("Can not establish a connection\n\n" + ex.Message);
+                CustomMessageBox.Show("Can not establish a connection\n\n" + ex.StackTrace);
                 return;
             }
         }
-
+        
         private void ResetConnectionStats()
         {
             log.Info("Reset connection stats");
