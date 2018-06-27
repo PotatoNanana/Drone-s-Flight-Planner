@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using Dapper;
 
 
 namespace MissionPlanner.GCSViews
@@ -69,6 +70,11 @@ namespace MissionPlanner.GCSViews
             SDA.Fill(dt);
             DG_Flight.DataSource = dt;
             con.Close();
+        }
+
+        private void DG_Flight_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

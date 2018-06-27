@@ -17,6 +17,9 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="Microsoft.Report.Viewer" Version="11.0.0" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="140.1000.523" />
+    <PackageReference Include="Microsoft.ReportViewer.Common" Version="10.0.40219.1" />
     <PackageReference Include="OpenTK" Version="1.1.1589.5942" />
   </ItemGroup>
 

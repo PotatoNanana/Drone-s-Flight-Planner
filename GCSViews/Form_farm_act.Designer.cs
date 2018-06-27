@@ -39,13 +39,6 @@
             this.dateTimePicker_startDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.DG_afterFlight = new MissionPlanner.Controls.MyDataGridView();
-            this.af_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.af_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.af_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.af_capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.af_startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.af_finishTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.droneFlightPlannerDataSet7 = new MissionPlanner.DroneFlightPlannerDataSet7();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -60,15 +53,13 @@
             this.flightScheduleTableAdapter1 = new MissionPlanner.ActivityScheduleTableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.afterFlightTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet7TableAdapters.AfterFlightTableAdapter();
-            this.afnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.afnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.afcapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.afcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.afdatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.afstartTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.affinishTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_finishTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).BeginInit();
@@ -127,6 +118,7 @@
             this.button_print.Text = "พิมพ์";
             this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_print.UseVisualStyleBackColor = false;
+            this.button_print.Click += new System.EventHandler(this.button_print_Click);
             // 
             // Button_show
             // 
@@ -144,6 +136,7 @@
             this.Button_show.Text = "แสดงข้อมูล";
             this.Button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Button_show.UseVisualStyleBackColor = false;
+            this.Button_show.Click += new System.EventHandler(this.Button_show_Click);
             // 
             // dateTimePicker_stopDate
             // 
@@ -159,7 +152,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label1.Location = new System.Drawing.Point(281, 73);
+            this.label1.Location = new System.Drawing.Point(279, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 27);
             this.label1.TabIndex = 64;
@@ -197,16 +190,7 @@
             this.af_cost,
             this.af_capacity,
             this.af_startTime,
-            this.af_finishTime,
-            this.afnoDataGridViewTextBoxColumn,
-            this.afnameDataGridViewTextBoxColumn,
-            this.afcapacityDataGridViewTextBoxColumn,
-            this.afcostDataGridViewTextBoxColumn,
-            this.afdatetimeDataGridViewTextBoxColumn,
-            this.afstartTimeDataGridViewTextBoxColumn,
-            this.affinishTimeDataGridViewTextBoxColumn,
-            this.droneidDataGridViewTextBoxColumn,
-            this.farmidDataGridViewTextBoxColumn});
+            this.af_finishTime});
             this.DG_afterFlight.DataSource = this.afterFlightBindingSource;
             this.DG_afterFlight.Location = new System.Drawing.Point(12, 116);
             this.DG_afterFlight.Name = "DG_afterFlight";
@@ -214,48 +198,6 @@
             this.DG_afterFlight.Size = new System.Drawing.Size(679, 229);
             this.DG_afterFlight.TabIndex = 9;
             this.DG_afterFlight.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
-            // 
-            // af_datetime
-            // 
-            this.af_datetime.DataPropertyName = "af_datetime";
-            this.af_datetime.HeaderText = "วันที่";
-            this.af_datetime.Name = "af_datetime";
-            // 
-            // drone_id
-            // 
-            this.drone_id.DataPropertyName = "drone_id";
-            this.drone_id.HeaderText = "รหัสโดรน";
-            this.drone_id.Name = "drone_id";
-            // 
-            // af_name
-            // 
-            this.af_name.DataPropertyName = "af_name";
-            this.af_name.HeaderText = "ชื่อกิจกรรม";
-            this.af_name.Name = "af_name";
-            // 
-            // af_cost
-            // 
-            this.af_cost.DataPropertyName = "af_cost";
-            this.af_cost.HeaderText = "ค่าใช้จ่ายในการทำกิจกรรม";
-            this.af_cost.Name = "af_cost";
-            // 
-            // af_capacity
-            // 
-            this.af_capacity.DataPropertyName = "af_capacity";
-            this.af_capacity.HeaderText = "ปริมาณสาร";
-            this.af_capacity.Name = "af_capacity";
-            // 
-            // af_startTime
-            // 
-            this.af_startTime.DataPropertyName = "af_startTime";
-            this.af_startTime.HeaderText = "เวลาที่เริ่มทำ";
-            this.af_startTime.Name = "af_startTime";
-            // 
-            // af_finishTime
-            // 
-            this.af_finishTime.DataPropertyName = "af_finishTime";
-            this.af_finishTime.HeaderText = "เวลาที่ทสำเร็จ";
-            this.af_finishTime.Name = "af_finishTime";
             // 
             // afterFlightBindingSource
             // 
@@ -343,59 +285,47 @@
             // 
             this.afterFlightTableAdapter.ClearBeforeFill = true;
             // 
-            // afnoDataGridViewTextBoxColumn
+            // af_datetime
             // 
-            this.afnoDataGridViewTextBoxColumn.DataPropertyName = "af_no";
-            this.afnoDataGridViewTextBoxColumn.HeaderText = "af_no";
-            this.afnoDataGridViewTextBoxColumn.Name = "afnoDataGridViewTextBoxColumn";
+            this.af_datetime.DataPropertyName = "af_datetime";
+            this.af_datetime.HeaderText = "วันที่";
+            this.af_datetime.Name = "af_datetime";
             // 
-            // afnameDataGridViewTextBoxColumn
+            // drone_id
             // 
-            this.afnameDataGridViewTextBoxColumn.DataPropertyName = "af_name";
-            this.afnameDataGridViewTextBoxColumn.HeaderText = "af_name";
-            this.afnameDataGridViewTextBoxColumn.Name = "afnameDataGridViewTextBoxColumn";
+            this.drone_id.DataPropertyName = "drone_id";
+            this.drone_id.HeaderText = "รหัสโดรน";
+            this.drone_id.Name = "drone_id";
             // 
-            // afcapacityDataGridViewTextBoxColumn
+            // af_name
             // 
-            this.afcapacityDataGridViewTextBoxColumn.DataPropertyName = "af_capacity";
-            this.afcapacityDataGridViewTextBoxColumn.HeaderText = "af_capacity";
-            this.afcapacityDataGridViewTextBoxColumn.Name = "afcapacityDataGridViewTextBoxColumn";
+            this.af_name.DataPropertyName = "af_name";
+            this.af_name.HeaderText = "ชื่อกิจกรรม";
+            this.af_name.Name = "af_name";
             // 
-            // afcostDataGridViewTextBoxColumn
+            // af_cost
             // 
-            this.afcostDataGridViewTextBoxColumn.DataPropertyName = "af_cost";
-            this.afcostDataGridViewTextBoxColumn.HeaderText = "af_cost";
-            this.afcostDataGridViewTextBoxColumn.Name = "afcostDataGridViewTextBoxColumn";
+            this.af_cost.DataPropertyName = "af_cost";
+            this.af_cost.HeaderText = "ค่าใช้จ่ายในการทำกิจกรรม";
+            this.af_cost.Name = "af_cost";
             // 
-            // afdatetimeDataGridViewTextBoxColumn
+            // af_capacity
             // 
-            this.afdatetimeDataGridViewTextBoxColumn.DataPropertyName = "af_datetime";
-            this.afdatetimeDataGridViewTextBoxColumn.HeaderText = "af_datetime";
-            this.afdatetimeDataGridViewTextBoxColumn.Name = "afdatetimeDataGridViewTextBoxColumn";
+            this.af_capacity.DataPropertyName = "af_capacity";
+            this.af_capacity.HeaderText = "ปริมาณสาร";
+            this.af_capacity.Name = "af_capacity";
             // 
-            // afstartTimeDataGridViewTextBoxColumn
+            // af_startTime
             // 
-            this.afstartTimeDataGridViewTextBoxColumn.DataPropertyName = "af_startTime";
-            this.afstartTimeDataGridViewTextBoxColumn.HeaderText = "af_startTime";
-            this.afstartTimeDataGridViewTextBoxColumn.Name = "afstartTimeDataGridViewTextBoxColumn";
+            this.af_startTime.DataPropertyName = "af_startTime";
+            this.af_startTime.HeaderText = "เวลาที่เริ่มทำ";
+            this.af_startTime.Name = "af_startTime";
             // 
-            // affinishTimeDataGridViewTextBoxColumn
+            // af_finishTime
             // 
-            this.affinishTimeDataGridViewTextBoxColumn.DataPropertyName = "af_finishTime";
-            this.affinishTimeDataGridViewTextBoxColumn.HeaderText = "af_finishTime";
-            this.affinishTimeDataGridViewTextBoxColumn.Name = "affinishTimeDataGridViewTextBoxColumn";
-            // 
-            // droneidDataGridViewTextBoxColumn
-            // 
-            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
-            this.droneidDataGridViewTextBoxColumn.HeaderText = "drone_id";
-            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
-            // 
-            // farmidDataGridViewTextBoxColumn
-            // 
-            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
-            this.farmidDataGridViewTextBoxColumn.HeaderText = "farm_id";
-            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
+            this.af_finishTime.DataPropertyName = "af_finishTime";
+            this.af_finishTime.HeaderText = "เวลาที่ทำเสร็จ";
+            this.af_finishTime.Name = "af_finishTime";
             // 
             // Form_farm_act
             // 
@@ -444,6 +374,12 @@
         private DroneFlightPlannerDataSet7 droneFlightPlannerDataSet7;
         private System.Windows.Forms.BindingSource afterFlightBindingSource;
         private DroneFlightPlannerDataSet7TableAdapters.AfterFlightTableAdapter afterFlightTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_stopDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_startDate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button_print;
+        private System.Windows.Forms.Button Button_show;
         private System.Windows.Forms.DataGridViewTextBoxColumn af_datetime;
         private System.Windows.Forms.DataGridViewTextBoxColumn drone_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn af_name;
@@ -451,20 +387,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn af_capacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn af_startTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn af_finishTime;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_stopDate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_startDate;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button_print;
-        private System.Windows.Forms.Button Button_show;
-        private System.Windows.Forms.DataGridViewTextBoxColumn afnoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn afnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn afcapacityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn afcostDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn afdatetimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn afstartTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn affinishTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
     }
 }

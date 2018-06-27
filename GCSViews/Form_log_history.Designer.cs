@@ -33,6 +33,13 @@
             this.panel_Main_farm = new System.Windows.Forms.Panel();
             this.But_print = new System.Windows.Forms.Button();
             this.DG_Flight = new MissionPlanner.Controls.MyDataGridView();
+            this.log_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.log_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pattern_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pattern_mask = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flightLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flightLog = new MissionPlanner.FlightLog();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,13 +49,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
             this.flightLogTableAdapter = new MissionPlanner.FlightLogTableAdapters.FlightLogTableAdapter();
-            this.log_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.log_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.farm_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pattern_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pattern_mask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lognoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.logdatetimeDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patternnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patternmaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Flight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightLogBindingSource)).BeginInit();
@@ -102,13 +109,64 @@
             this.farm_id,
             this.drone_id,
             this.pattern_name,
-            this.pattern_mask});
+            this.pattern_mask,
+            this.lognoDataGridViewTextBoxColumn,
+            this.logdatetimeDataGridViewImageColumn,
+            this.actionnoDataGridViewTextBoxColumn,
+            this.farmidDataGridViewTextBoxColumn,
+            this.droneidDataGridViewTextBoxColumn,
+            this.patternnameDataGridViewTextBoxColumn,
+            this.patternmaskDataGridViewTextBoxColumn});
             this.DG_Flight.DataSource = this.flightLogBindingSource;
             this.DG_Flight.Location = new System.Drawing.Point(25, 75);
             this.DG_Flight.Name = "DG_Flight";
             this.DG_Flight.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Flight.Size = new System.Drawing.Size(562, 333);
             this.DG_Flight.TabIndex = 9;
+            this.DG_Flight.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Flight_CellContentClick);
+            // 
+            // log_no
+            // 
+            this.log_no.DataPropertyName = "log_no";
+            this.log_no.HeaderText = "รหัสประวัติการบิน";
+            this.log_no.Name = "log_no";
+            // 
+            // log_datetime
+            // 
+            this.log_datetime.DataPropertyName = "log_datetime";
+            this.log_datetime.HeaderText = "วันที่";
+            this.log_datetime.Name = "log_datetime";
+            this.log_datetime.ReadOnly = true;
+            // 
+            // action_no
+            // 
+            this.action_no.DataPropertyName = "action_no";
+            this.action_no.HeaderText = "รหัสกิจกรรม";
+            this.action_no.Name = "action_no";
+            // 
+            // farm_id
+            // 
+            this.farm_id.DataPropertyName = "farm_id";
+            this.farm_id.HeaderText = "รหัสฟาร์ม";
+            this.farm_id.Name = "farm_id";
+            // 
+            // drone_id
+            // 
+            this.drone_id.DataPropertyName = "drone_id";
+            this.drone_id.HeaderText = "รหัสโดรน";
+            this.drone_id.Name = "drone_id";
+            // 
+            // pattern_name
+            // 
+            this.pattern_name.DataPropertyName = "pattern_name";
+            this.pattern_name.HeaderText = "รูปแบบการบิน";
+            this.pattern_name.Name = "pattern_name";
+            // 
+            // pattern_mask
+            // 
+            this.pattern_mask.DataPropertyName = "pattern_mask";
+            this.pattern_mask.HeaderText = "หมายเหตุ";
+            this.pattern_mask.Name = "pattern_mask";
             // 
             // flightLogBindingSource
             // 
@@ -176,48 +234,48 @@
             // 
             this.flightLogTableAdapter.ClearBeforeFill = true;
             // 
-            // log_no
+            // lognoDataGridViewTextBoxColumn
             // 
-            this.log_no.DataPropertyName = "log_no";
-            this.log_no.HeaderText = "รหัสประวัติการบิน";
-            this.log_no.Name = "log_no";
+            this.lognoDataGridViewTextBoxColumn.DataPropertyName = "log_no";
+            this.lognoDataGridViewTextBoxColumn.HeaderText = "log_no";
+            this.lognoDataGridViewTextBoxColumn.Name = "lognoDataGridViewTextBoxColumn";
             // 
-            // log_datetime
+            // logdatetimeDataGridViewImageColumn
             // 
-            this.log_datetime.DataPropertyName = "log_datetime";
-            this.log_datetime.HeaderText = "วันที่";
-            this.log_datetime.Name = "log_datetime";
-            this.log_datetime.ReadOnly = true;
+            this.logdatetimeDataGridViewImageColumn.DataPropertyName = "log_datetime";
+            this.logdatetimeDataGridViewImageColumn.HeaderText = "log_datetime";
+            this.logdatetimeDataGridViewImageColumn.Name = "logdatetimeDataGridViewImageColumn";
+            this.logdatetimeDataGridViewImageColumn.ReadOnly = true;
             // 
-            // action_no
+            // actionnoDataGridViewTextBoxColumn
             // 
-            this.action_no.DataPropertyName = "action_no";
-            this.action_no.HeaderText = "รหัสกิจกรรม";
-            this.action_no.Name = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.HeaderText = "action_no";
+            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
             // 
-            // farm_id
+            // farmidDataGridViewTextBoxColumn
             // 
-            this.farm_id.DataPropertyName = "farm_id";
-            this.farm_id.HeaderText = "รหัสฟาร์ม";
-            this.farm_id.Name = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.HeaderText = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
             // 
-            // drone_id
+            // droneidDataGridViewTextBoxColumn
             // 
-            this.drone_id.DataPropertyName = "drone_id";
-            this.drone_id.HeaderText = "รหัสโดรน";
-            this.drone_id.Name = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
             // 
-            // pattern_name
+            // patternnameDataGridViewTextBoxColumn
             // 
-            this.pattern_name.DataPropertyName = "pattern_name";
-            this.pattern_name.HeaderText = "รูปแบบการบิน";
-            this.pattern_name.Name = "pattern_name";
+            this.patternnameDataGridViewTextBoxColumn.DataPropertyName = "pattern_name";
+            this.patternnameDataGridViewTextBoxColumn.HeaderText = "pattern_name";
+            this.patternnameDataGridViewTextBoxColumn.Name = "patternnameDataGridViewTextBoxColumn";
             // 
-            // pattern_mask
+            // patternmaskDataGridViewTextBoxColumn
             // 
-            this.pattern_mask.DataPropertyName = "pattern_mask";
-            this.pattern_mask.HeaderText = "หมายเหตุ";
-            this.pattern_mask.Name = "pattern_mask";
+            this.patternmaskDataGridViewTextBoxColumn.DataPropertyName = "pattern_mask";
+            this.patternmaskDataGridViewTextBoxColumn.HeaderText = "pattern_mask";
+            this.patternmaskDataGridViewTextBoxColumn.Name = "patternmaskDataGridViewTextBoxColumn";
             // 
             // Form_log_history
             // 
@@ -263,5 +321,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn drone_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn pattern_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn pattern_mask;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lognoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn logdatetimeDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actionnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patternnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patternmaskDataGridViewTextBoxColumn;
     }
 }

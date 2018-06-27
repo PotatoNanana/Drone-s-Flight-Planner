@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Dapper;
 
 namespace MissionPlanner.GCSViews
 {
@@ -38,12 +39,8 @@ namespace MissionPlanner.GCSViews
         }
         
         private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
-        {
-            //textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
-            //textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
-            //textBox_droneID.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-            //textBox_cap.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
-            //textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+        {   
+            
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
@@ -57,10 +54,11 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView
             con.Open();
-           
-            string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
+            string format = "yyyy-MM-dd";
+            //string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
-            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'y' ";
+            String query = "SELECT * FROM AfterFlight WHERE farm_id = '" + id_farm + "' ";
+
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -122,6 +120,43 @@ namespace MissionPlanner.GCSViews
         private void textBox_cost_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button_show_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString)) // if napat change cn to cn1
+            {
+                if (db.State == ConnectionState.Closed)
+                    db.Open();
+                //Execute query to get data from farm_act data
+                string format = "yyyy-MM-dd";
+                String query = "SELECT * FROM AfterFlight WHERE farm_id = '" + id_farm + "' AND af_datetime between '{dateTimePicker_startDate.Value.ToString(format)}'  and '{dateTimePicker_stopDate.Value.ToString(format)}'   ";
+
+                f
+                afterFlightBindingSource.DataSource = db.Query<Farm_act>(query, commandType: CommandType.Text);
+            }          
+
+        }
+
+        private void button_print_Click(object sender, EventArgs e)
+        {
+            Farm_Act obj = afterFlightBindingSource.Current as Farm_act;
+            if (obj != null)
+            {
+                using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
+                {
+                    if (db.State == ConnectionState.Closed)
+                        db.Open();
+                    //Execute query to get Farm data
+                    string format = "yyyy-MM-dd";
+                    String query = "SELECT * FROM Farm WHERE farm_id = '" + id_farm + "' ";
+                    List<Farm> list = db.Query<Farm>(query, commandType: CommandType.Text).ToList();
+                    using (frmPrint frm = new frmPrint(obj, list))
+                    {
+                        frm.ShowDialog();
+                    }
+                }
+            }
         }
     }
 }

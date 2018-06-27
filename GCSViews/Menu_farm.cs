@@ -14,6 +14,7 @@ using MissionPlanner.Utilities;
 using MissionPlanner.Plugin;
 using System.Data.SqlClient;
 using System.IO;
+using Dapper;
 
 namespace MissionPlanner.GCSViews
 {
@@ -74,8 +75,7 @@ namespace MissionPlanner.GCSViews
         }
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+        {            
             //click and show  data to dataGridView
             try
             {
@@ -280,6 +280,11 @@ namespace MissionPlanner.GCSViews
         public string farmIDText
         {
             get { return textBox_farmID.Text; }
+        }
+
+        private void button_print_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

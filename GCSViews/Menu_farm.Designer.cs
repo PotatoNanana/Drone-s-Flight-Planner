@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_farm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_print = new System.Windows.Forms.Button();
             this.button_serch = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
@@ -59,7 +60,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.farmTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet2TableAdapters.FarmTableAdapter();
-            this.button_print = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -108,6 +108,23 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(1228, 580);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Paint);
+            // 
+            // button_print
+            // 
+            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_print.FlatAppearance.BorderSize = 0;
+            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_print.ForeColor = System.Drawing.Color.White;
+            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_print.Location = new System.Drawing.Point(1042, 414);
+            this.button_print.Name = "button_print";
+            this.button_print.Size = new System.Drawing.Size(130, 40);
+            this.button_print.TabIndex = 48;
+            this.button_print.Text = "พิมพ์รายงาน";
+            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_print.UseVisualStyleBackColor = false;
+            this.button_print.Click += new System.EventHandler(this.button_print_Click);
             // 
             // button_serch
             // 
@@ -399,22 +416,6 @@
             // farmTableAdapter
             // 
             this.farmTableAdapter.ClearBeforeFill = true;
-            // 
-            // button_print
-            // 
-            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_print.FlatAppearance.BorderSize = 0;
-            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_print.Location = new System.Drawing.Point(1042, 414);
-            this.button_print.Name = "button_print";
-            this.button_print.Size = new System.Drawing.Size(130, 40);
-            this.button_print.TabIndex = 48;
-            this.button_print.Text = "พิมพ์รายงาน";
-            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_print.UseVisualStyleBackColor = false;
             // 
             // Menu_farm
             // 

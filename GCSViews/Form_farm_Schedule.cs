@@ -23,7 +23,7 @@ namespace MissionPlanner.GCSViews
         public Form_farm_Schedule(string id_farm)
         {
             this.id_farm = id_farm;
-            this.name_farm = name_farm;
+            this.name_farm = name_farm; //??
             InitializeComponent();
         }
 

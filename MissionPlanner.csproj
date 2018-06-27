@@ -248,17 +248,23 @@
       <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Scripting, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.dll</HintPath>
@@ -268,6 +274,9 @@
     </Reference>
     <Reference Include="Microsoft.Scripting.Metadata, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.VisualStudio.Threading.15.3.23\lib\net45\Microsoft.VisualStudio.Threading.dll</HintPath>
@@ -467,6 +476,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ActivitySchedule.xsd</DependentUpon>
     </Compile>
+    <Compile Include="activity_finish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>activity_finish.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Antenna\ArduTracker.cs" />
     <Compile Include="Antenna\DegreeTracker.cs" />
     <Compile Include="Antenna\ITrackerOutput.cs" />
@@ -492,6 +506,8 @@
     <Compile Include="Controls\Video.Designer.cs">
       <DependentUpon>Video.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataReport\Farm.cs" />
+    <Compile Include="DataReport\Farm_act.cs" />
     <Compile Include="DEVICE_LIST.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -830,6 +846,12 @@
     <Compile Include="GCSViews\Menu_setup.Designer.cs">
       <DependentUpon>Menu_setup.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\Print_Form\Form_Print_farm_act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\Print_Form\Form_Print_farm_act.Designer.cs">
+      <DependentUpon>Form_Print_farm_act.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\UserLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -959,6 +981,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>schedule_act.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="tableSchedule.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3417,6 +3440,9 @@
     <EmbeddedResource Include="GCSViews\Menu_setup.resx">
       <DependentUpon>Menu_setup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\Print_Form\Form_Print_farm_act.resx">
+      <DependentUpon>Form_Print_farm_act.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -3712,6 +3738,7 @@
     <EmbeddedResource Include="RAW_Sensor.pt.resx">
       <DependentUpon>RAW_Sensor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_Farm_act.rdlc" />
     <EmbeddedResource Include="ScriptConsole.ar.resx">
       <DependentUpon>ScriptConsole.cs</DependentUpon>
     </EmbeddedResource>
@@ -4231,6 +4258,17 @@
     </None>
     <None Include="ActivitySchedule.xss">
       <DependentUpon>ActivitySchedule.xsd</DependentUpon>
+    </None>
+    <None Include="activity_finish.xsc">
+      <DependentUpon>activity_finish.xsd</DependentUpon>
+    </None>
+    <None Include="activity_finish.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>activity_finish.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="activity_finish.xss">
+      <DependentUpon>activity_finish.xsd</DependentUpon>
     </None>
     <None Include="aot.sh">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -6043,6 +6081,19 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ArduCopterConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="calendar.png" />

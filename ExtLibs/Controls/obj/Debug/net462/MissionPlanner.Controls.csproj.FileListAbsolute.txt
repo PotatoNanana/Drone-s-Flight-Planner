@@ -603,3 +603,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\ne
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\net462\zh-Hans\MissionPlanner.Controls.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\obj\Debug\net462\MissionPlanner.Controls.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.ReportViewer.Common.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Controls\bin\Debug\net462\net462\Microsoft.ReportViewer.DataVisualization.dll

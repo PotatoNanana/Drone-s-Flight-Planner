@@ -15,6 +15,7 @@ using MissionPlanner.Plugin;
 using System.Data.SqlClient;
 using System.IO;
 using System.Globalization;
+using Dapper;
 
 namespace MissionPlanner.GCSViews
 {
