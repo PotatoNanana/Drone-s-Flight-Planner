@@ -132,7 +132,7 @@ namespace MissionPlanner.GCSViews
                 string format = "yyyy-MM-dd";
                 String query = "SELECT * FROM AfterFlight WHERE farm_id = '" + id_farm + "' AND af_datetime between '{dateTimePicker_startDate.Value.ToString(format)}'  and '{dateTimePicker_stopDate.Value.ToString(format)}'   ";
 
-                f
+                
                 afterFlightBindingSource.DataSource = db.Query<Farm_act>(query, commandType: CommandType.Text);
             }          
 

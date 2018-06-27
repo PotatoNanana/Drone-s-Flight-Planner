@@ -26,7 +26,7 @@ namespace MissionPlanner.GCSViews.Print_Form
         private void reportViewer1_Load(object sender, EventArgs e)
         {
             //Init data source
-            .DataSource = _list;
+            afterFlightBindingSource.DataSource = _list;
             //Set parameter for your report
             Microsoft.Reporting.WinForms.ReportParameter[] p = new Microsoft.Reporting.WinForms.ReportParameter[]
             {

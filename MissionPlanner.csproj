@@ -536,6 +536,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DroneFlightPlannerDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet10.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DroneFlightPlannerDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -575,6 +580,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DroneFlightPlannerDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DroneFlightPlannerDataSet_drone_part.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DroneFlightPlannerDataSet_drone_part.xsd</DependentUpon>
     </Compile>
     <Compile Include="DroneLog.cs">
       <SubType>Form</SubType>
@@ -3738,6 +3748,8 @@
     <EmbeddedResource Include="RAW_Sensor.pt.resx">
       <DependentUpon>RAW_Sensor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_drone.rdlc" />
+    <EmbeddedResource Include="Report\Report_drone_part.rdlc" />
     <EmbeddedResource Include="Report\Report_Farm_act.rdlc" />
     <EmbeddedResource Include="ScriptConsole.ar.resx">
       <DependentUpon>ScriptConsole.cs</DependentUpon>
@@ -4371,6 +4383,17 @@
     <None Include="DroneFlightPlannerDataSet1.xss">
       <DependentUpon>DroneFlightPlannerDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="DroneFlightPlannerDataSet10.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet10.xss">
+      <DependentUpon>DroneFlightPlannerDataSet10.xsd</DependentUpon>
+    </None>
     <None Include="DroneFlightPlannerDataSet2.xsc">
       <DependentUpon>DroneFlightPlannerDataSet2.xsd</DependentUpon>
     </None>
@@ -4458,6 +4481,17 @@
     </None>
     <None Include="DroneFlightPlannerDataSet9.xss">
       <DependentUpon>DroneFlightPlannerDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet_drone_part.xsc">
+      <DependentUpon>DroneFlightPlannerDataSet_drone_part.xsd</DependentUpon>
+    </None>
+    <None Include="DroneFlightPlannerDataSet_drone_part.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DroneFlightPlannerDataSet_drone_part.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DroneFlightPlannerDataSet_drone_part.xss">
+      <DependentUpon>DroneFlightPlannerDataSet_drone_part.xsd</DependentUpon>
     </None>
     <None Include="FArm.xsc">
       <DependentUpon>FArm.xsd</DependentUpon>
