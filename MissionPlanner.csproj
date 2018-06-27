@@ -911,6 +911,11 @@
       <DependentUpon>LogDownloadscp.cs</DependentUpon>
     </Compile>
     <Compile Include="Log\test\MotorFailure.cs" />
+    <Compile Include="Log_flight.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Log_flight.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MAintain.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -3751,6 +3756,7 @@
     <EmbeddedResource Include="Report\Report_drone.rdlc" />
     <EmbeddedResource Include="Report\Report_drone_part.rdlc" />
     <EmbeddedResource Include="Report\Report_Farm_act.rdlc" />
+    <EmbeddedResource Include="Report\Report_log_flight.rdlc" />
     <EmbeddedResource Include="ScriptConsole.ar.resx">
       <DependentUpon>ScriptConsole.cs</DependentUpon>
     </EmbeddedResource>
@@ -5099,6 +5105,17 @@
     <None Include="Lib\__phello__.foo.py" />
     <None Include="LogAnalyzer\py2exe\createexe.bat" />
     <None Include="LogAnalyzer\upload.bat" />
+    <None Include="Log_flight.xsc">
+      <DependentUpon>Log_flight.xsd</DependentUpon>
+    </None>
+    <None Include="Log_flight.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Log_flight.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Log_flight.xss">
+      <DependentUpon>Log_flight.xsd</DependentUpon>
+    </None>
     <None Include="MAintain.xsc">
       <DependentUpon>MAintain.xsd</DependentUpon>
     </None>
