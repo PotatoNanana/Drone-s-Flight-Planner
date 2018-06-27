@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
+using MissionPlanner.GCSViews;
 
 namespace MissionPlanner.Comms
 {
@@ -155,30 +156,30 @@ namespace MissionPlanner.Comms
 
         static void doconnect(SerialPort port)
         {
-            if (MainV2.instance == null)
+            if (FlightPlanner.instance == null)
             {
-                MainV2.comPort.BaseStream = port;
-                MainV2.comPort.Open(false);
+                FlightPlanner.comPort.BaseStream = port;
+                FlightPlanner.comPort.Open(false);
             }
             else
             {
-                if (MainV2.instance.InvokeRequired)
+                if (FlightPlanner.instance.InvokeRequired)
                 {
-                    MainV2.instance.BeginInvoke(
+                    FlightPlanner.instance.BeginInvoke(
                         (MethodInvoker) delegate()
                         {
                             MAVLinkInterface mav = new MAVLinkInterface();
                             mav.BaseStream = port;
-                            MainV2.instance.doConnect(mav, "preset", "0");
-                            MainV2.Comports.Add(mav);
+                            FlightPlanner.instance.doConnect(mav, "preset", "0");
+                            FlightPlanner.Comports.Add(mav);
                         });
                 }
                 else
                 {
                     MAVLinkInterface mav = new MAVLinkInterface();
                     mav.BaseStream = port;
-                    MainV2.instance.doConnect(mav, "preset", "0");
-                    MainV2.Comports.Add(mav);
+                    FlightPlanner.instance.doConnect(mav, "preset", "0");
+                    FlightPlanner.Comports.Add(mav);
                 }
             }
         }

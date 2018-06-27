@@ -17,6 +17,8 @@ namespace MissionPlanner
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         public static event EventHandler Goto_main_Clicked;
+
+        public static int roleid;
         
         public Validation()
         {
@@ -102,7 +104,8 @@ namespace MissionPlanner
         {
 
         }
-        
+
+        private static int role_id;
         private void Goto_main_Click(object sender, EventArgs e)
         {
             String query = "select count(*) from UserLogin where username=@usr and password=@pwd";
@@ -113,7 +116,6 @@ namespace MissionPlanner
 
             SqlCommand cmd = new SqlCommand("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", con);
             string role;
-
             con.Open();
             if(scmd.ExecuteScalar().ToString() == "1")
             {
@@ -129,14 +131,16 @@ namespace MissionPlanner
                     {
                         case "developer":
                             {
+                                roleid = 1;
                                 this.Hide();
-                                var frm = new MainV3_developer();
+                                var frm = new MainV2();
                                 frm.ShowDialog();
                                 break;
                             }
 
                         case "admin":
                             {
+                                roleid = 2;
                                 this.Hide();
                                 var frm = new MainV3_admin();
                                 frm.ShowDialog();
@@ -145,6 +149,7 @@ namespace MissionPlanner
 
                         case "pilot":
                             {
+                                roleid = 3;
                                 this.Hide();
                                 var frm = new MainV3_pilot();
                                 frm.ShowDialog();

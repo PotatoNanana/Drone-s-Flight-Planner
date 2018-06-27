@@ -1446,7 +1446,7 @@
     <value>Commands</value>
   </data>
   <data name="&gt;&gt;Commands.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.5221, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.17613, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Commands.Parent" xml:space="preserve">
     <value>panelWaypoints</value>
@@ -2294,7 +2294,7 @@
     <value>DG_Drone</value>
   </data>
   <data name="&gt;&gt;DG_Drone.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.5221, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.17613, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Drone.Parent" xml:space="preserve">
     <value>panel8</value>
@@ -2348,7 +2348,7 @@
     <value>DG_Farm</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.5221, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.17613, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Parent" xml:space="preserve">
     <value>panel7</value>
@@ -2762,7 +2762,7 @@
     <value>toolStripConnectionControl1</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, DroneFlightPlanner, Version=1.1.6751.5221, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, DroneFlightPlanner, Version=1.1.6751.17613, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Command.Name" xml:space="preserve">
     <value>Command</value>

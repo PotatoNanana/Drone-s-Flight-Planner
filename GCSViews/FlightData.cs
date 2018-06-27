@@ -1958,7 +1958,7 @@ namespace MissionPlanner.GCSViews
             {
                 if (CMB_action.Text == "Trigger Camera NOW")
                 {
-                    MainV2.comPort.setDigicamControl(true);
+                    FlightPlanner.comPort.setDigicamControl(true);
                     return;
                 }
             }
@@ -1982,7 +1982,7 @@ namespace MissionPlanner.GCSViews
                     // request gyro
                     if (CMB_action.Text == "PREFLIGHT_CALIBRATION")
                     {
-                        if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                        if (FlightPlanner.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
                             param1 = 1; // gyro
                         param3 = 1; // baro / airspeed
                     }
@@ -1991,7 +1991,7 @@ namespace MissionPlanner.GCSViews
                         param1 = 1; // reboot
                     }
 
-                    MainV2.comPort.doCommand((MAVLink.MAV_CMD)Enum.Parse(typeof(MAVLink.MAV_CMD), CMB_action.Text),
+                    FlightPlanner.comPort.doCommand((MAVLink.MAV_CMD)Enum.Parse(typeof(MAVLink.MAV_CMD), CMB_action.Text),
                         param1, 0, param3, 0, 0, 0, 0);
                 }
                 catch

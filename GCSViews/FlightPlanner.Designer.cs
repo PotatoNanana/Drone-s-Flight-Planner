@@ -1666,7 +1666,7 @@ namespace MissionPlanner.GCSViews
             resources.ApplyResources(this, "$this");
             this.Name = "FlightPlanner";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FlightPlanner_FormClosing);
-            this.Load += new System.EventHandler(this.FlightPlanner_Load);
+            this.Load += new System.EventHandler(this.FlightPlanner1_Load);
             this.Resize += new System.EventHandler(this.Planner_Resize);
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

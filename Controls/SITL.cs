@@ -16,6 +16,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using MissionPlanner.Utilities;
+using MissionPlanner.GCSViews;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -23,7 +24,8 @@ namespace MissionPlanner.Controls
 {
     public partial class SITL : MyUserControl, IActivate
     {
-        
+        int mainRole = MissionPlanner.Validation.roleid;
+
         //https://regex101.com/r/cH3kV3/2
         //https://regex101.com/r/cH3kV3/3
         Regex default_params_regex = new Regex(@"""([^""]+)""\s*:\s*\{\s*[^\{}]+""default_params_filename""\s*:\s*\[*""([^""]+)""\s*[^\}]*\}");
@@ -100,7 +102,7 @@ namespace MissionPlanner.Controls
 
         public void Activate()
         {
-            homemarker.Position = MainV2.comPort.MAV.cs.HomeLocation;
+            homemarker.Position = FlightPlanner.comPort.MAV.cs.HomeLocation;
 
             myGMAP1.Position = homemarker.Position;
 
@@ -410,26 +412,52 @@ namespace MissionPlanner.Controls
             }
 
             System.Threading.Thread.Sleep(2000);
+            
+            switch (mainRole)
+            {
+                case 1:
+                    {
+                        MainV2.View.ShowScreen(MainV2.View.screens[0].Name);
+                        break;
+                    }
 
-            MainV3.View.ShowScreen(MainV3.View.screens[0].Name);
+                case 2:
+                    {
+                        MainV3_admin.View.ShowScreen(MainV3_admin.View.screens[0].Name);
+                        break;
+                    }
 
+                case 3:
+                    {
+                        MainV3_pilot.View.ShowScreen(MainV3_pilot.View.screens[0].Name);
+                        break;
+                    }
+
+                default:
+                    {
+                        MainV3.View.ShowScreen(MainV3.View.screens[0].Name);
+                        break;
+                    }
+            }
+            
             var client = new Comms.TcpSerial();
 
             try
             {
                 client.client = new TcpClient("127.0.0.1", 5760);
 
-                MainV2.comPort.BaseStream = client;
+                FlightPlanner.comPort.BaseStream = client;
 
                 SITLSEND = new UdpClient("127.0.0.1", 5501);
 
                 Thread.Sleep(200);
 
-                MainV2.instance.doConnect(MainV2.comPort, "preset", "5760");
+                FlightPlanner.instance.doConnect(FlightPlanner.comPort, "preset", "5760");
             }
-            catch
+            catch(Exception ex)
             {
-                CustomMessageBox.Show(Strings.Failed_to_connect_to_SITL_instance, Strings.ERROR);
+                //CustomMessageBox.Show(Strings.Failed_to_connect_to_SITL_instance, Strings.ERROR);
+                CustomMessageBox.Show(ex.StackTrace);
                 return;
             }
         }
@@ -439,14 +467,14 @@ namespace MissionPlanner.Controls
             try
             {
                 byte[] rcreceiver = new byte[2*8];
-                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) MainV2.comPort.MAV.cs.rcoverridech1), 0, rcreceiver,0, 2);
-                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) MainV2.comPort.MAV.cs.rcoverridech2), 0, rcreceiver,2, 2);
-                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) MainV2.comPort.MAV.cs.rcoverridech3), 0, rcreceiver,4, 2);
-                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) MainV2.comPort.MAV.cs.rcoverridech4), 0, rcreceiver,6, 2);
-                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) MainV2.comPort.MAV.cs.rcoverridech5), 0, rcreceiver,8, 2);
-                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) MainV2.comPort.MAV.cs.rcoverridech6), 0, rcreceiver,10, 2);
-                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) MainV2.comPort.MAV.cs.rcoverridech7), 0, rcreceiver,12, 2);
-                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) MainV2.comPort.MAV.cs.rcoverridech8), 0, rcreceiver,14, 2);
+                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) FlightPlanner.comPort.MAV.cs.rcoverridech1), 0, rcreceiver,0, 2);
+                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) FlightPlanner.comPort.MAV.cs.rcoverridech2), 0, rcreceiver,2, 2);
+                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) FlightPlanner.comPort.MAV.cs.rcoverridech3), 0, rcreceiver,4, 2);
+                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) FlightPlanner.comPort.MAV.cs.rcoverridech4), 0, rcreceiver,6, 2);
+                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) FlightPlanner.comPort.MAV.cs.rcoverridech5), 0, rcreceiver,8, 2);
+                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) FlightPlanner.comPort.MAV.cs.rcoverridech6), 0, rcreceiver,10, 2);
+                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) FlightPlanner.comPort.MAV.cs.rcoverridech7), 0, rcreceiver,12, 2);
+                Array.ConstrainedCopy(BitConverter.GetBytes((ushort) FlightPlanner.comPort.MAV.cs.rcoverridech8), 0, rcreceiver,14, 2);
 
                 SITLSEND.Send(rcreceiver, rcreceiver.Length);
             }

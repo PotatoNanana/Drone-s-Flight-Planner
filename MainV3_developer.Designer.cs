@@ -1,7 +1,7 @@
 ﻿using System;
 namespace MissionPlanner
 {
-    partial class MainV3_developer
+    partial class MainV2
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace MissionPlanner
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainV3_developer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainV2));
             this.CTX_mainmenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.autoHideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -177,9 +177,9 @@ namespace MissionPlanner
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menu);
             this.KeyPreview = true;
-            this.Name = "MainV3_developer";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainV3_developer_FormClosed);
-            this.Load += new System.EventHandler(this.MainV3_developer_Load);
+            this.Name = "MainV2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainV2_FormClosed);
+            this.Load += new System.EventHandler(this.MainV2_Load);
             this.CTX_mainmenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

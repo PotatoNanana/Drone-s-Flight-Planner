@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
 using log4net;
+using MissionPlanner.GCSViews;
 
 namespace MissionPlanner.Utilities
 {
@@ -44,20 +45,20 @@ namespace MissionPlanner.Utilities
             {
                 var udpclient = new Comms.UdpSerial(client);
 
-                MainV2.instance.BeginInvoke((Action) delegate
+                FlightPlanner.instance.BeginInvoke((Action) delegate
                 {
-                    if (MainV2.comPort.BaseStream.IsOpen)
+                    if (FlightPlanner.comPort.BaseStream.IsOpen)
                     {
                         var mav = new MAVLinkInterface();
                         mav.BaseStream = udpclient;
-                        MainV2.instance.doConnect(mav, "preset", port.ToString());
+                        FlightPlanner.instance.doConnect(mav, "preset", port.ToString());
 
-                        MainV2.Comports.Add(mav);
+                        FlightPlanner.Comports.Add(mav);
                     }
                     else
                     {
-                        MainV2.comPort.BaseStream = udpclient;
-                        MainV2.instance.doConnect(MainV2.comPort, "preset", port.ToString());
+                        FlightPlanner.comPort.BaseStream = udpclient;
+                        FlightPlanner.instance.doConnect(FlightPlanner.comPort, "preset", port.ToString());
                     }
                 });
             }

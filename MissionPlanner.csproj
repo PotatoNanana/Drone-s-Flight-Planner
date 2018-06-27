@@ -3629,12 +3629,6 @@
     <EmbeddedResource Include="MainV3.zh-TW.resx">
       <DependentUpon>MainV3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.ar.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.pt.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MovingBase.ar.resx">
       <DependentUpon>MovingBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -5265,21 +5259,6 @@
     <EmbeddedResource Include="Log\MavlinkLog.ko-KR.resx">
       <DependentUpon>MavlinkLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.id-ID.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.ja-JP.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.ko-KR.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.zh-Hant.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.zh-TW.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MovingBase.id-ID.resx">
       <DependentUpon>MovingBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -5481,9 +5460,6 @@
     <EmbeddedResource Include="Log\LogDownloadMavLink.zh-TW.resx">
       <DependentUpon>LogDownloadMavLink.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.zh-Hans.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MovingBase.de-DE.resx">
       <DependentUpon>MovingBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -5623,12 +5599,6 @@
     </Compile>
     <Compile Include="RAW_Sensor.Designer.cs">
       <DependentUpon>RAW_Sensor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainV2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainV2.Designer.cs">
-      <DependentUpon>MainV2.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrentState.cs" />
     <Compile Include="ElevationProfile.cs">
@@ -5866,9 +5836,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Joystick\JoystickSetup.zh-Hans.resx">
       <DependentUpon>JoystickSetup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainV2.resx">
-      <DependentUpon>MainV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElevationProfile.resx">
       <DependentUpon>ElevationProfile.cs</DependentUpon>

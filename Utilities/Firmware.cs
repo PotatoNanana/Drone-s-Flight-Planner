@@ -16,6 +16,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
+using MissionPlanner.GCSViews;
 
 namespace MissionPlanner.Utilities
 {
@@ -800,25 +801,25 @@ namespace MissionPlanner.Utilities
                 }
             }
 
-            if (MainV2.comPort.BaseStream is SerialPort)
+            if (FlightPlanner.comPort.BaseStream is SerialPort)
             {
                 try
                 {
                     updateProgress(-1, "Look for HeartBeat");
                     // check if we are seeing heartbeats
-                    MainV2.comPort.BaseStream.Open();
-                    MainV2.comPort.giveComport = true;
+                    FlightPlanner.comPort.BaseStream.Open();
+                    FlightPlanner.comPort.giveComport = true;
 
-                    if (MainV2.comPort.getHeartBeat().Length > 0)
+                    if (FlightPlanner.comPort.getHeartBeat().Length > 0)
                     {
                         updateProgress(-1, "Reboot to Bootloader");
-                        MainV2.comPort.doReboot(true, false);
-                        MainV2.comPort.Close();
+                        FlightPlanner.comPort.doReboot(true, false);
+                        FlightPlanner.comPort.Close();
                     }
                     else
                     {
                         updateProgress(-1, "No HeartBeat found");
-                        MainV2.comPort.BaseStream.Close();
+                        FlightPlanner.comPort.BaseStream.Close();
                         CustomMessageBox.Show(Strings.PleaseUnplugTheBoardAnd);
                     }
                 }
@@ -852,13 +853,13 @@ namespace MissionPlanner.Utilities
             try
             {
                 // check if we are seeing heartbeats
-                MainV2.comPort.BaseStream.Open();
-                MainV2.comPort.giveComport = true;
+                FlightPlanner.comPort.BaseStream.Open();
+                FlightPlanner.comPort.giveComport = true;
 
-                if (MainV2.comPort.getHeartBeat().Length > 0)
+                if (FlightPlanner.comPort.getHeartBeat().Length > 0)
                 {
-                    MainV2.comPort.doReboot(true, false);
-                    MainV2.comPort.Close();
+                    FlightPlanner.comPort.doReboot(true, false);
+                    FlightPlanner.comPort.Close();
 
                     //specific action for VRBRAIN4 board that needs to be manually disconnected before uploading
                     if (board == BoardDetect.boards.vrbrainv40)
@@ -869,7 +870,7 @@ namespace MissionPlanner.Utilities
                 }
                 else
                 {
-                    MainV2.comPort.BaseStream.Close();
+                    FlightPlanner.comPort.BaseStream.Close();
                     CustomMessageBox.Show(Strings.PleaseUnplugTheBoardAnd);
                 }
             }
@@ -1471,7 +1472,7 @@ namespace MissionPlanner.Utilities
                 }
                 return false;
             }
-            MainV2.comPort.giveComport = false;
+            FlightPlanner.comPort.giveComport = false;
             return true;
         }
 

@@ -51,10 +51,16 @@ namespace MissionPlanner.GCSViews
     public partial class FlightPlanner : MyUserControl, IDeactivate, IActivate
     {
         public static event EventHandler OnMenuSimmulationButtonClick;
+        public static event EventHandler OnMenuFlightdataButtonClick;
 
         protected virtual void OnMenuSimulationButtonClicked(EventArgs e)
         {
             OnMenuSimmulationButtonClick?.Invoke(this, e);
+        }
+
+        protected virtual void OnMenuFlightdataButtonClicked(EventArgs e)
+        {
+            OnMenuFlightdataButtonClick?.Invoke(this, e);
         }
 
         Controls.SITL Simulation;
@@ -77,6 +83,8 @@ namespace MissionPlanner.GCSViews
         bool grid;
 
         public static FlightPlanner instance;
+        public static List<MAVLinkInterface> Comports = new List<MAVLinkInterface>();
+        public GCSViews.FlightPlanner FlightPlanner2;
 
         public bool autopan { get; set; }
 
@@ -111,8 +119,8 @@ namespace MissionPlanner.GCSViews
             Gymbal,
             PX4
         }
-
-        private void poieditToolStripMenuItem_Click(object sender, EventArgs e)
+       
+            private void poieditToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (CurrentGMapMarker == null || !(CurrentGMapMarker is GMapMarkerPOI))
                 return;
@@ -561,9 +569,17 @@ namespace MissionPlanner.GCSViews
 
         public FlightPlanner()
         {
-            instance = this;
 
+            instance = this;
             InitializeComponent();
+
+
+            // FlightPlanner2 = new GCSViews.FlightPlanner();
+            //FlightPlanner2 = instance;
+            // MyView.AddScreen(new MainSwitcher.Screen("FlightData", FlightData, true));
+
+
+            //MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", instance, true));
 
             // config map             
             MainMap.CacheLocation = Utilities.Settings.GetDataDirectory() +
@@ -601,6 +617,9 @@ namespace MissionPlanner.GCSViews
             MainMap.RoutesEnabled = true;
 
             //MainMap.MaxZoom = 18;
+
+            Comports.Add(comPort);
+            FlightPlanner.comPort.MavChanged += comPort_MavChanged;
 
             // get zoom  
             MainMap.MinZoom = 0;
@@ -1132,7 +1151,7 @@ namespace MissionPlanner.GCSViews
             writeKML();
         }
 
-        private void FlightPlanner_Load(object sender, EventArgs e)
+        private void FlightPlanner1_Load(object sender, EventArgs e)
         {
             quickadd = true;
 
@@ -7348,12 +7367,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void menuTakeoff_Click(object sender, EventArgs e)
         {
+            OnMenuFlightdataButtonClicked(e);
+
             //go to form log 
             Form_log form_Log = new Form_log(file);
             form_Log.ShowDialog();
-            
-            MyView.ShowScreen("FlightData");
-            
         }
 
         private void MenuSimulation_Click(object sender, EventArgs e)
@@ -7421,7 +7439,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             }
             else
             {
-                doConnect(comPort, _connectionControl.CMB_serialport.Text, _connectionControl.CMB_baudrate.Text);
+             //   doConnect(comPort, "COM3", _connectionControl.CMB_baudrate.Text);
+             doConnect(comPort, _connectionControl.CMB_serialport.Text, _connectionControl.CMB_baudrate.Text);
             }
 
             _connectionControl.UpdateSysIDS();
@@ -7698,7 +7717,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     // only do it if we are connected.
                     if (comPort.BaseStream.IsOpen)
                     {
-                        //MenuFlightPlanner_Click(null, null);
+                        MenuFlightPlanner_Click(null, null);
                         BUT_read_Click(null, null);
                     }
                 }
@@ -7779,7 +7798,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void MenuFlightPlanner_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("FlightPlanner");
+            this.Activate();
+            //MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", this, true));
+           // MyView.ShowScreen("FlightPlanner");
         }
         private void UpdateConnectIcon()
         {
@@ -8054,6 +8075,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             this.ResumeLayout();
         }
+
     }
 
 

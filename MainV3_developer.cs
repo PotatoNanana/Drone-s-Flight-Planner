@@ -27,7 +27,7 @@ using MissionPlanner.GCSViews;
 
 namespace MissionPlanner
 {
-    public partial class MainV3_developer : Form
+    public partial class MainV2 : Form
     {
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -262,13 +262,15 @@ namespace MissionPlanner
         {
             get
             {
+                if(FlightPlanner.comPort!=null)
+                    { return FlightPlanner.comPort; }
                 return _comPort;
             }
             set
             {
-                if (_comPort == value)
+                if (_comPort == FlightPlanner.comPort)
                     return;
-                _comPort = value;
+                _comPort = FlightPlanner.comPort;
                 _comPort.MavChanged -= instance.comPort_MavChanged;
                 _comPort.MavChanged += instance.comPort_MavChanged;
                 instance.comPort_MavChanged(null, null);
@@ -367,7 +369,7 @@ namespace MissionPlanner
         /// <summary>
         /// used to call anything as needed.
         /// </summary>
-        public static MainV3_developer instance = null;
+        public static MainV2 instance = null;
 
 
         public static MainSwitcher View;
@@ -434,9 +436,9 @@ namespace MissionPlanner
             //MenuHelp.Visible = DisplayConfiguration.displayHelp;
             MissionPlanner.Controls.BackstageView.BackstageView.Advanced = DisplayConfiguration.isAdvancedMode;
 
-            if (MainV3_developer.instance.FlightData != null)
+            if (MainV2.instance.FlightData != null)
             {
-                TabControl t = MainV3_developer.instance.FlightData.tabControlactions;
+                TabControl t = MainV2.instance.FlightData.tabControlactions;
 
                 if (DisplayConfiguration.displayAdvActionsTab && !t.TabPages.Contains(FlightData.tabActions))
                 {
@@ -482,9 +484,9 @@ namespace MissionPlanner
         }
 
 
-        public MainV3_developer()
+        public MainV2()
         {
-            log.Info("MainV3_developer ctor");
+            log.Info("MainV2 ctor");
 
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
 
@@ -724,8 +726,8 @@ namespace MissionPlanner
                 Menu_maintenance_part.Goto_Drone_Clicked += but_drone_Click;
                 Menu_maintenance_part.Goto_DronePre_Clicked += but_dronePre_Click;
                 Menu_maintenance_pre.Goto_Drone_Clicked += but_drone_Click;
-
-                GCSViews.FlightPlanner.OnMenuSimmulationButtonClick += MenuSimulation_Click;
+                FlightPlanner.OnMenuFlightdataButtonClick += MenuFlightData_Click;
+                FlightPlanner.OnMenuSimmulationButtonClick += MenuSimulation_Click;
 
 
                 //Configuration = new GCSViews.ConfigurationView.Setup();
@@ -3711,7 +3713,7 @@ namespace MissionPlanner
             MyView.ShowScreen("Menu_setup");
         }
 
-        private void MainV3_developer_Load(object sender, EventArgs e)
+        private void MainV2_Load(object sender, EventArgs e)
         {
 
         }
@@ -3728,7 +3730,7 @@ namespace MissionPlanner
 
         }
 
-        private void MainV3_developer_FormClosed(object sender, FormClosedEventArgs e)
+        private void MainV2_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
