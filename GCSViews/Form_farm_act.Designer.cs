@@ -32,17 +32,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_act));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.action_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.activitySchedule = new MissionPlanner.ActivitySchedule();
+            this.button_print = new System.Windows.Forms.Button();
+            this.Button_show = new System.Windows.Forms.Button();
+            this.dateTimePicker_stopDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker_startDate = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DG_afterFlight = new MissionPlanner.Controls.MyDataGridView();
+            this.af_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.af_finishTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.droneFlightPlannerDataSet7 = new MissionPlanner.DroneFlightPlannerDataSet7();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
+            this.activitySchedule = new MissionPlanner.ActivitySchedule();
             this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flightSchedule = new MissionPlanner.flightSchedule();
             this.scheduleactionBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -50,16 +58,29 @@
             this.schedule_actionTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter();
             this.flightScheduleTableAdapter = new MissionPlanner.flightScheduleTableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleTableAdapter1 = new MissionPlanner.ActivityScheduleTableAdapters.FlightScheduleTableAdapter();
+            this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.afterFlightTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet7TableAdapters.AfterFlightTableAdapter();
+            this.afnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.afnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.afcapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.afcostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.afdatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.afstartTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.affinishTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.activitySchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet7)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.activitySchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleactionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,89 +89,183 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(717, 382);
+            this.panel1.Size = new System.Drawing.Size(717, 408);
             this.panel1.TabIndex = 0;
             // 
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.DG_Farm);
+            this.panel_Main_farm.Controls.Add(this.button_print);
+            this.panel_Main_farm.Controls.Add(this.Button_show);
+            this.panel_Main_farm.Controls.Add(this.dateTimePicker_stopDate);
+            this.panel_Main_farm.Controls.Add(this.label1);
+            this.panel_Main_farm.Controls.Add(this.dateTimePicker_startDate);
+            this.panel_Main_farm.Controls.Add(this.label4);
+            this.panel_Main_farm.Controls.Add(this.DG_afterFlight);
             this.panel_Main_farm.Controls.Add(this.panel3);
             this.panel_Main_farm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(717, 382);
+            this.panel_Main_farm.Size = new System.Drawing.Size(717, 408);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Act_Paint);
             // 
-            // DG_Farm
+            // button_print
             // 
-            this.DG_Farm.AutoGenerateColumns = false;
-            this.DG_Farm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_Farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.action_datetime,
+            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_print.FlatAppearance.BorderSize = 0;
+            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_print.ForeColor = System.Drawing.Color.White;
+            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_print.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_print.Location = new System.Drawing.Point(286, 357);
+            this.button_print.Name = "button_print";
+            this.button_print.Size = new System.Drawing.Size(130, 40);
+            this.button_print.TabIndex = 67;
+            this.button_print.Text = "พิมพ์";
+            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_print.UseVisualStyleBackColor = false;
+            // 
+            // Button_show
+            // 
+            this.Button_show.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Button_show.FlatAppearance.BorderSize = 0;
+            this.Button_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_show.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.Button_show.ForeColor = System.Drawing.Color.White;
+            this.Button_show.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Button_show.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Button_show.Location = new System.Drawing.Point(540, 61);
+            this.Button_show.Name = "Button_show";
+            this.Button_show.Size = new System.Drawing.Size(130, 40);
+            this.Button_show.TabIndex = 66;
+            this.Button_show.Text = "แสดงข้อมูล";
+            this.Button_show.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Button_show.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker_stopDate
+            // 
+            this.dateTimePicker_stopDate.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker_stopDate.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_stopDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_stopDate.Location = new System.Drawing.Point(363, 67);
+            this.dateTimePicker_stopDate.Name = "dateTimePicker_stopDate";
+            this.dateTimePicker_stopDate.Size = new System.Drawing.Size(130, 34);
+            this.dateTimePicker_stopDate.TabIndex = 65;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label1.Location = new System.Drawing.Point(281, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 27);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "วันที่สุดท้าย";
+            // 
+            // dateTimePicker_startDate
+            // 
+            this.dateTimePicker_startDate.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker_startDate.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_startDate.Location = new System.Drawing.Point(87, 67);
+            this.dateTimePicker_startDate.Name = "dateTimePicker_startDate";
+            this.dateTimePicker_startDate.Size = new System.Drawing.Size(130, 34);
+            this.dateTimePicker_startDate.TabIndex = 63;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.label4.Location = new System.Drawing.Point(24, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 27);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "วันที่เริ่ม";
+            // 
+            // DG_afterFlight
+            // 
+            this.DG_afterFlight.AutoGenerateColumns = false;
+            this.DG_afterFlight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
+            this.DG_afterFlight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DG_afterFlight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.af_datetime,
+            this.drone_id,
+            this.af_name,
+            this.af_cost,
+            this.af_capacity,
+            this.af_startTime,
+            this.af_finishTime,
+            this.afnoDataGridViewTextBoxColumn,
+            this.afnameDataGridViewTextBoxColumn,
+            this.afcapacityDataGridViewTextBoxColumn,
+            this.afcostDataGridViewTextBoxColumn,
+            this.afdatetimeDataGridViewTextBoxColumn,
+            this.afstartTimeDataGridViewTextBoxColumn,
+            this.affinishTimeDataGridViewTextBoxColumn,
             this.droneidDataGridViewTextBoxColumn,
-            this.actionnoDataGridViewTextBoxColumn,
-            this.action_name,
-            this.action_capacity,
-            this.action_cost});
-            this.DG_Farm.DataSource = this.flightScheduleBindingSource1;
-            this.DG_Farm.Location = new System.Drawing.Point(19, 87);
-            this.DG_Farm.Name = "DG_Farm";
-            this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Farm.Size = new System.Drawing.Size(679, 280);
-            this.DG_Farm.TabIndex = 9;
-            this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
+            this.farmidDataGridViewTextBoxColumn});
+            this.DG_afterFlight.DataSource = this.afterFlightBindingSource;
+            this.DG_afterFlight.Location = new System.Drawing.Point(12, 116);
+            this.DG_afterFlight.Name = "DG_afterFlight";
+            this.DG_afterFlight.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DG_afterFlight.Size = new System.Drawing.Size(679, 229);
+            this.DG_afterFlight.TabIndex = 9;
+            this.DG_afterFlight.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             // 
-            // action_datetime
+            // af_datetime
             // 
-            this.action_datetime.DataPropertyName = "action_datetime";
-            this.action_datetime.HeaderText = "วันที่";
-            this.action_datetime.Name = "action_datetime";
+            this.af_datetime.DataPropertyName = "af_datetime";
+            this.af_datetime.HeaderText = "วันที่";
+            this.af_datetime.Name = "af_datetime";
             // 
-            // droneidDataGridViewTextBoxColumn
+            // drone_id
             // 
-            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
-            this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
-            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            this.drone_id.DataPropertyName = "drone_id";
+            this.drone_id.HeaderText = "รหัสโดรน";
+            this.drone_id.Name = "drone_id";
             // 
-            // actionnoDataGridViewTextBoxColumn
+            // af_name
             // 
-            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
-            this.actionnoDataGridViewTextBoxColumn.HeaderText = "เลขที่กิจกรรม";
-            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
-            this.actionnoDataGridViewTextBoxColumn.Width = 120;
+            this.af_name.DataPropertyName = "af_name";
+            this.af_name.HeaderText = "ชื่อกิจกรรม";
+            this.af_name.Name = "af_name";
             // 
-            // action_name
+            // af_cost
             // 
-            this.action_name.DataPropertyName = "action_name";
-            this.action_name.HeaderText = "ชื่อกิจกรรม";
-            this.action_name.Name = "action_name";
+            this.af_cost.DataPropertyName = "af_cost";
+            this.af_cost.HeaderText = "ค่าใช้จ่ายในการทำกิจกรรม";
+            this.af_cost.Name = "af_cost";
             // 
-            // action_capacity
+            // af_capacity
             // 
-            this.action_capacity.DataPropertyName = "action_capacity";
-            this.action_capacity.HeaderText = "ปริมาณสาร";
-            this.action_capacity.Name = "action_capacity";
+            this.af_capacity.DataPropertyName = "af_capacity";
+            this.af_capacity.HeaderText = "ปริมาณสาร";
+            this.af_capacity.Name = "af_capacity";
             // 
-            // action_cost
+            // af_startTime
             // 
-            this.action_cost.DataPropertyName = "action_cost";
-            this.action_cost.HeaderText = "ค่าใช้จ่ายในการทำกิจกรรม";
-            this.action_cost.Name = "action_cost";
-            this.action_cost.Width = 150;
+            this.af_startTime.DataPropertyName = "af_startTime";
+            this.af_startTime.HeaderText = "เวลาที่เริ่มทำ";
+            this.af_startTime.Name = "af_startTime";
             // 
-            // flightScheduleBindingSource1
+            // af_finishTime
             // 
-            this.flightScheduleBindingSource1.DataMember = "FlightSchedule";
-            this.flightScheduleBindingSource1.DataSource = this.activitySchedule;
+            this.af_finishTime.DataPropertyName = "af_finishTime";
+            this.af_finishTime.HeaderText = "เวลาที่ทสำเร็จ";
+            this.af_finishTime.Name = "af_finishTime";
             // 
-            // activitySchedule
+            // afterFlightBindingSource
             // 
-            this.activitySchedule.DataSetName = "ActivitySchedule";
-            this.activitySchedule.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.afterFlightBindingSource.DataMember = "AfterFlight";
+            this.afterFlightBindingSource.DataSource = this.droneFlightPlannerDataSet7;
+            // 
+            // droneFlightPlannerDataSet7
+            // 
+            this.droneFlightPlannerDataSet7.DataSetName = "DroneFlightPlannerDataSet7";
+            this.droneFlightPlannerDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -181,6 +296,11 @@
             this.Main_but_farm.UseCompatibleTextRendering = true;
             this.Main_but_farm.UseVisualStyleBackColor = true;
             this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
+            // 
+            // activitySchedule
+            // 
+            this.activitySchedule.DataSetName = "ActivitySchedule";
+            this.activitySchedule.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // flightScheduleBindingSource
             // 
@@ -214,11 +334,74 @@
             // 
             this.flightScheduleTableAdapter1.ClearBeforeFill = true;
             // 
+            // flightScheduleBindingSource1
+            // 
+            this.flightScheduleBindingSource1.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource1.DataSource = this.activitySchedule;
+            // 
+            // afterFlightTableAdapter
+            // 
+            this.afterFlightTableAdapter.ClearBeforeFill = true;
+            // 
+            // afnoDataGridViewTextBoxColumn
+            // 
+            this.afnoDataGridViewTextBoxColumn.DataPropertyName = "af_no";
+            this.afnoDataGridViewTextBoxColumn.HeaderText = "af_no";
+            this.afnoDataGridViewTextBoxColumn.Name = "afnoDataGridViewTextBoxColumn";
+            // 
+            // afnameDataGridViewTextBoxColumn
+            // 
+            this.afnameDataGridViewTextBoxColumn.DataPropertyName = "af_name";
+            this.afnameDataGridViewTextBoxColumn.HeaderText = "af_name";
+            this.afnameDataGridViewTextBoxColumn.Name = "afnameDataGridViewTextBoxColumn";
+            // 
+            // afcapacityDataGridViewTextBoxColumn
+            // 
+            this.afcapacityDataGridViewTextBoxColumn.DataPropertyName = "af_capacity";
+            this.afcapacityDataGridViewTextBoxColumn.HeaderText = "af_capacity";
+            this.afcapacityDataGridViewTextBoxColumn.Name = "afcapacityDataGridViewTextBoxColumn";
+            // 
+            // afcostDataGridViewTextBoxColumn
+            // 
+            this.afcostDataGridViewTextBoxColumn.DataPropertyName = "af_cost";
+            this.afcostDataGridViewTextBoxColumn.HeaderText = "af_cost";
+            this.afcostDataGridViewTextBoxColumn.Name = "afcostDataGridViewTextBoxColumn";
+            // 
+            // afdatetimeDataGridViewTextBoxColumn
+            // 
+            this.afdatetimeDataGridViewTextBoxColumn.DataPropertyName = "af_datetime";
+            this.afdatetimeDataGridViewTextBoxColumn.HeaderText = "af_datetime";
+            this.afdatetimeDataGridViewTextBoxColumn.Name = "afdatetimeDataGridViewTextBoxColumn";
+            // 
+            // afstartTimeDataGridViewTextBoxColumn
+            // 
+            this.afstartTimeDataGridViewTextBoxColumn.DataPropertyName = "af_startTime";
+            this.afstartTimeDataGridViewTextBoxColumn.HeaderText = "af_startTime";
+            this.afstartTimeDataGridViewTextBoxColumn.Name = "afstartTimeDataGridViewTextBoxColumn";
+            // 
+            // affinishTimeDataGridViewTextBoxColumn
+            // 
+            this.affinishTimeDataGridViewTextBoxColumn.DataPropertyName = "af_finishTime";
+            this.affinishTimeDataGridViewTextBoxColumn.HeaderText = "af_finishTime";
+            this.affinishTimeDataGridViewTextBoxColumn.Name = "affinishTimeDataGridViewTextBoxColumn";
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.HeaderText = "drone_id";
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            // 
+            // farmidDataGridViewTextBoxColumn
+            // 
+            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.HeaderText = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
+            // 
             // Form_farm_act
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 382);
+            this.ClientSize = new System.Drawing.Size(717, 408);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_farm_act";
@@ -227,14 +410,17 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_farm_act_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.activitySchedule)).EndInit();
+            this.panel_Main_farm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet7)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.activitySchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleactionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,7 +429,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel_Main_farm;
-        private Controls.MyDataGridView DG_Farm;
+        private Controls.MyDataGridView DG_afterFlight;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Main_but_farm;
         private DroneFlightPlannerDataSet1 droneFlightPlannerDataSet1;
@@ -253,13 +439,32 @@
         private System.Windows.Forms.BindingSource flightScheduleBindingSource;
         private flightScheduleTableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter;
         private ActivitySchedule activitySchedule;
-        private System.Windows.Forms.BindingSource flightScheduleBindingSource1;
         private ActivityScheduleTableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn action_datetime;
+        private System.Windows.Forms.BindingSource flightScheduleBindingSource1;
+        private DroneFlightPlannerDataSet7 droneFlightPlannerDataSet7;
+        private System.Windows.Forms.BindingSource afterFlightBindingSource;
+        private DroneFlightPlannerDataSet7TableAdapters.AfterFlightTableAdapter afterFlightTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn af_datetime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn drone_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn af_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn af_cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn af_capacity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn af_startTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn af_finishTime;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_stopDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_startDate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button_print;
+        private System.Windows.Forms.Button Button_show;
+        private System.Windows.Forms.DataGridViewTextBoxColumn afnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn afnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn afcapacityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn afcostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn afdatetimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn afstartTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn affinishTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actionnoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn action_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn action_capacity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn action_cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
     }
 }

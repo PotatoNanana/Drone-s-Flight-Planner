@@ -1,4 +1,6 @@
-﻿namespace MissionPlanner.GCSViews
+﻿using System;
+
+namespace MissionPlanner.GCSViews
 {
     partial class Menu_maintenance
     {
@@ -33,6 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_print = new System.Windows.Forms.Button();
             this.button_deletePart = new System.Windows.Forms.Button();
             this.button_editPart = new System.Windows.Forms.Button();
             this.BUT_addPart = new System.Windows.Forms.Button();
@@ -103,7 +106,6 @@
             this.droneTableAdapter = new MissionPlanner.DroneFlightPlannerDataSetTableAdapters.DroneTableAdapter();
             this.droneTableAdapter1 = new MissionPlanner.DroneTableAdapters.DroneTableAdapter();
             this.deviceListTableAdapter = new MissionPlanner.partTableAdapters.DeviceListTableAdapter();
-            this.button_report = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Part)).BeginInit();
@@ -140,7 +142,7 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button_report);
+            this.panel_Main_farm.Controls.Add(this.button_print);
             this.panel_Main_farm.Controls.Add(this.button_deletePart);
             this.panel_Main_farm.Controls.Add(this.button_editPart);
             this.panel_Main_farm.Controls.Add(this.BUT_addPart);
@@ -190,9 +192,26 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14F);
             this.panel_Main_farm.Location = new System.Drawing.Point(25, 25);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(1316, 691);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1321, 688);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
+            // 
+            // button_print
+            // 
+            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_print.FlatAppearance.BorderSize = 0;
+            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_print.ForeColor = System.Drawing.Color.White;
+            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_print.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_print.Location = new System.Drawing.Point(804, 557);
+            this.button_print.Name = "button_print";
+            this.button_print.Size = new System.Drawing.Size(102, 39);
+            this.button_print.TabIndex = 73;
+            this.button_print.Text = "พิมพ์รายงาน";
+            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_print.UseVisualStyleBackColor = false;
             // 
             // button_deletePart
             // 
@@ -255,7 +274,7 @@
             this.button_MaintainPart.Font = new System.Drawing.Font("PJ Standard", 16F, System.Drawing.FontStyle.Bold);
             this.button_MaintainPart.ForeColor = System.Drawing.Color.White;
             this.button_MaintainPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_MaintainPart.Location = new System.Drawing.Point(512, 550);
+            this.button_MaintainPart.Location = new System.Drawing.Point(506, 557);
             this.button_MaintainPart.Name = "button_MaintainPart";
             this.button_MaintainPart.Size = new System.Drawing.Size(267, 39);
             this.button_MaintainPart.TabIndex = 69;
@@ -826,7 +845,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1316, 50);
+            this.panel3.Size = new System.Drawing.Size(1321, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -869,24 +888,6 @@
             // deviceListTableAdapter
             // 
             this.deviceListTableAdapter.ClearBeforeFill = true;
-            // 
-            // button_report
-            // 
-            this.button_report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_report.FlatAppearance.BorderSize = 0;
-            this.button_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_report.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_report.ForeColor = System.Drawing.Color.White;
-            this.button_report.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_report.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_report.Location = new System.Drawing.Point(814, 549);
-            this.button_report.Name = "button_report";
-            this.button_report.Size = new System.Drawing.Size(92, 40);
-            this.button_report.TabIndex = 73;
-            this.button_report.Text = "รายงาน";
-            this.button_report.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_report.UseVisualStyleBackColor = false;
-            this.button_report.Click += new System.EventHandler(this.button_report_Click_1);
             // 
             // Menu_maintenance
             // 
@@ -988,6 +989,7 @@
         private System.Windows.Forms.Button button_editPart;
         private System.Windows.Forms.Button button_deletePart;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button_report;
+        private EventHandler button_report_Click_1;
+        private System.Windows.Forms.Button button_print;
     }
 }

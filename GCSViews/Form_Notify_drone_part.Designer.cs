@@ -34,6 +34,7 @@
             this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.But_exit = new System.Windows.Forms.Button();
             this.DG_Noti = new MissionPlanner.Controls.MyDataGridView();
             this.device_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.device_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +49,9 @@
             this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
             this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deviceListTableAdapter = new MissionPlanner.PartDroneNotifyTableAdapters.DeviceListTableAdapter();
+            this.droneFlightPlannerDataSet6 = new MissionPlanner.DroneFlightPlannerDataSet6();
+            this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.afterFlightTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet6TableAdapters.AfterFlightTableAdapter();
             this.deviceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devicenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devicepositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +66,6 @@
             this.venderaddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.venderphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.But_exit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Noti)).BeginInit();
@@ -73,6 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // flightLogTableAdapter
@@ -105,6 +110,24 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(491, 478);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
+            // 
+            // But_exit
+            // 
+            this.But_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.But_exit.FlatAppearance.BorderSize = 0;
+            this.But_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.But_exit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.But_exit.ForeColor = System.Drawing.Color.White;
+            this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.But_exit.Location = new System.Drawing.Point(167, 426);
+            this.But_exit.Name = "But_exit";
+            this.But_exit.Size = new System.Drawing.Size(130, 40);
+            this.But_exit.TabIndex = 10;
+            this.But_exit.Text = "รับทราบ";
+            this.But_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.But_exit.UseVisualStyleBackColor = false;
+            this.But_exit.Click += new System.EventHandler(this.But_exit_Click);
             // 
             // DG_Noti
             // 
@@ -224,6 +247,20 @@
             // 
             this.deviceListTableAdapter.ClearBeforeFill = true;
             // 
+            // droneFlightPlannerDataSet6
+            // 
+            this.droneFlightPlannerDataSet6.DataSetName = "DroneFlightPlannerDataSet6";
+            this.droneFlightPlannerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // afterFlightBindingSource
+            // 
+            this.afterFlightBindingSource.DataMember = "AfterFlight";
+            this.afterFlightBindingSource.DataSource = this.droneFlightPlannerDataSet6;
+            // 
+            // afterFlightTableAdapter
+            // 
+            this.afterFlightTableAdapter.ClearBeforeFill = true;
+            // 
             // deviceidDataGridViewTextBoxColumn
             // 
             this.deviceidDataGridViewTextBoxColumn.DataPropertyName = "device_id";
@@ -308,24 +345,6 @@
             this.droneidDataGridViewTextBoxColumn.HeaderText = "drone_id";
             this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
             // 
-            // But_exit
-            // 
-            this.But_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.But_exit.FlatAppearance.BorderSize = 0;
-            this.But_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.But_exit.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.But_exit.ForeColor = System.Drawing.Color.White;
-            this.But_exit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.But_exit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_exit.Location = new System.Drawing.Point(167, 426);
-            this.But_exit.Name = "But_exit";
-            this.But_exit.Size = new System.Drawing.Size(130, 40);
-            this.But_exit.TabIndex = 10;
-            this.But_exit.Text = "รับทราบ";
-            this.But_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.But_exit.UseVisualStyleBackColor = false;
-            this.But_exit.Click += new System.EventHandler(this.But_exit_Click);
-            // 
             // Form_Notify_drone_part
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,6 +366,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,11 +387,14 @@
         private PartDroneNotify partDroneNotify;
         private System.Windows.Forms.BindingSource deviceListBindingSource;
         private PartDroneNotifyTableAdapters.DeviceListTableAdapter deviceListTableAdapter;
+        private System.Windows.Forms.Button But_exit;
+        private DroneFlightPlannerDataSet6 droneFlightPlannerDataSet6;
+        private System.Windows.Forms.BindingSource afterFlightBindingSource;
+        private DroneFlightPlannerDataSet6TableAdapters.AfterFlightTableAdapter afterFlightTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_position;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_alarm;
-        private System.Windows.Forms.Button But_exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn deviceidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn devicenameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn devicepositionDataGridViewTextBoxColumn;

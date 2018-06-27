@@ -75,6 +75,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.flightScheduleBindingSource1, "action_no", true));
             this.comboBox1.DataSource = this.flightScheduleBindingSource1;
             this.comboBox1.DisplayMember = "action_name";
             this.comboBox1.FormattingEnabled = true;

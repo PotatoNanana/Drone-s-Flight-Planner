@@ -598,9 +598,16 @@ namespace MissionPlanner.GCSViews
             { MessageBox.Show(ex.Message); }
         }
 
-        private void button_report_Click_1(object sender, EventArgs e)
+        private void button_report_Click(object sender, EventArgs e)
         {
 
         }
+
+
+        private void Button_report_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

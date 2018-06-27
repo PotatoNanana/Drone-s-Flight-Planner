@@ -224,7 +224,8 @@ namespace MissionPlanner.GCSViews
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 string format = "yyyy-MM-dd";
-                String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',action_datetime = '" + monthCalendar1.SelectionEnd.ToShortDateString() + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "',action_startTime = '" + textBox_startTime.Text + "',action_finishTime= '" + textBox_finishTime.Text + "' ";
+                String query = "UPDATE FlightSchedule SET farm_id = '" + id_farm + "',drone_id = '" + textBox_droneID.Text + "',action_no = '" + textBox_actID.Text + "',action_datetime = '" + monthCalendar1.SelectionEnd.ToShortDateString() + "',action_name = '" + textBox_actName.Text + "',action_capacity = '" + textBox_cap.Text + "',action_cost = '" + textBox_cost.Text + "',action_startTime = '" +textBox_startTime.Text + "',action_finishTime= '" +textBox_finishTime.Text + "' ";
+
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();

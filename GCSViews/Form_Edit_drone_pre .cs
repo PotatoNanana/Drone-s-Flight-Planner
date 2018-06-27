@@ -17,7 +17,6 @@ namespace MissionPlanner.GCSViews
         public Form_Edit_drone_pre()
         {
             InitializeComponent();
-
         }
 
         public Form_Edit_drone_pre(string id_drone)
