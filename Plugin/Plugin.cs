@@ -97,9 +97,9 @@ namespace MissionPlanner.Plugin
         /// <summary>
         /// access to the main form, this is on a diffrent thread.
         /// </summary>
-        public MainV3 MainForm
+        public MainV2 MainForm
         {
-            get { return MainV3.instance; }
+            get { return MainV2.instance; }
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public ContextMenuStrip FDMenuMap
         {
-            get { return MainV3.instance.FlightData.contextMenuStripMap; }
+            get { return MainV2.instance.FlightData.contextMenuStripMap; }
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public PointLatLng FDMenuMapPosition
         {
-            get { return MainV3.instance.FlightData.MouseDownStart; }
+            get { return MainV2.instance.FlightData.MouseDownStart; }
         }
 
         public GMapProvider FDMapType
@@ -152,7 +152,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public ContextMenuStrip FDMenuHud
         {
-            get { return MainV3.instance.FlightData.contextMenuStripHud; }
+            get { return MainV2.instance.FlightData.contextMenuStripHud; }
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public ContextMenuStrip FPMenuMap
         {
-            get { return MainV3.instance.FlightPlanner.contextMenuStrip1; }
+            get { return MainV2.instance.FlightPlanner.contextMenuStrip1; }
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
        /* public PointLatLng FPMenuMapPosition
         {
-            get { return MainV3.instance.FlightPlanner.MouseDownEnd; }
+            get { return MainV2.instance.FlightPlanner.MouseDownEnd; }
         } */
 
         /// <summary>
@@ -178,14 +178,14 @@ namespace MissionPlanner.Plugin
         {
             get
             {
-                return new GMapPolygon(new List<PointLatLng>(MainV3.instance.FlightPlanner.drawnpolygon.Points),
-                    "Poly Copy") {Stroke = MainV3.instance.FlightPlanner.drawnpolygon.Stroke};
+                return new GMapPolygon(new List<PointLatLng>(MainV2.instance.FlightPlanner.drawnpolygon.Points),
+                    "Poly Copy") {Stroke = MainV2.instance.FlightPlanner.drawnpolygon.Stroke};
             }
         }
 
         public void RedrawFPPolygon(List<PointLatLngAlt> list)
         {
-            MainV3.instance.FlightPlanner.redrawPolygonSurvey(list);
+            MainV2.instance.FlightPlanner.redrawPolygonSurvey(list);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public GMapControl FPGMapControl
         {
-            get { return MainV3.instance.FlightPlanner.MainMap; }
+            get { return MainV2.instance.FlightPlanner.MainMap; }
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public GMapControl FDGMapControl
         {
-            get { return MainV3.instance.FlightData.gMapControl1; }
+            get { return MainV2.instance.FlightData.gMapControl1; }
         }
 
         /// <summary>
@@ -218,14 +218,14 @@ namespace MissionPlanner.Plugin
         public int AddWPtoList(MAVLink.MAV_CMD cmd, double p1, double p2, double p3, double p4, double x, double y,
             double z, object tag = null)
         {
-            return MainV3.instance.FlightPlanner.AddCommand(cmd, p1, p2, p3, p4, x, y, z, tag);
+            return MainV2.instance.FlightPlanner.AddCommand(cmd, p1, p2, p3, p4, x, y, z, tag);
         }
 
         public void InsertWP(int idx, MAVLink.MAV_CMD cmd, double p1, double p2, double p3, double p4, double x,
             double y,
             double z, object tag = null)
         {
-            MainV3.instance.FlightPlanner.InsertCommand(idx, cmd, p1, p2, p3, p4, x, y, z);
+            MainV2.instance.FlightPlanner.InsertCommand(idx, cmd, p1, p2, p3, p4, x, y, z);
         }
 
         public int AddWPtoList(MAVLink.MAV_CMD cmd, double p1, double p2, double p3, double p4, double x, double y,
@@ -246,7 +246,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public void GetWPs()
         {
-            MainV3.instance.FlightPlanner.BUT_read_Click(null, null);
+            MainV2.instance.FlightPlanner.BUT_read_Click(null, null);
         }
     }
 }
