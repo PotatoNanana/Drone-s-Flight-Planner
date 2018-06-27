@@ -51,3 +51,4 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MetaDataExtractorCSharp240d\obj\Debug\MetaDataExtractor.csprojAssemblyReference.cache
