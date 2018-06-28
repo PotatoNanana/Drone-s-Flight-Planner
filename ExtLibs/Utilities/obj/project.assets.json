@@ -15,22 +15,6 @@
           "lib/net20/BitMiracle.LibTiff.NET.dll": {}
         }
       },
-      "Dapper/1.50.5": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "System",
-          "System.Data",
-          "System.Xml",
-          "System.Xml.Linq"
-        ],
-        "compile": {
-          "lib/net451/Dapper.dll": {}
-        },
-        "runtime": {
-          "lib/net451/Dapper.dll": {}
-        }
-      },
       "log4net/2.0.8": {
         "type": "package",
         "compile": {
@@ -915,29 +899,10 @@
           "lib/net45/_._": {}
         }
       },
-      "GeoUtility/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/GeoUtility.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GeoUtility.dll": {}
-        }
-      },
-      "GMap.NET.Core/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/GMap.NET.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GMap.NET.Core.dll": {}
-        }
-      },
       "MAVLink/1.0.0": {
         "type": "project",
         "framework": ".NETFramework,Version=v4.6.2",
         "dependencies": {
-          "Dapper": "1.50.5",
           "Microsoft.Report.Viewer": "11.0.0",
           "Microsoft.ReportViewer.Common": "10.0.40219.1",
           "Microsoft.ReportingServices.ReportViewerControl.Winforms": "140.1000.523",
@@ -964,21 +929,6 @@
         "lib/net20/BitMiracle.LibTiff.NET.xml",
         "lib/netstandard1.0/BitMiracle.LibTiff.NetStandard.dll",
         "lib/netstandard1.0/BitMiracle.LibTiff.NetStandard.xml"
-      ]
-    },
-    "Dapper/1.50.5": {
-      "sha512": "1vPpX7WQmQCIb7rwlGOUoVs/yWZhVKvdhuG7WrJV+V+qsP8btnrrCqVWHENAlJxBAnUw5rhWfmuba9/Egei9MA==",
-      "type": "package",
-      "path": "dapper/1.50.5",
-      "files": [
-        "dapper.1.50.5.nupkg.sha512",
-        "dapper.nuspec",
-        "lib/net451/Dapper.dll",
-        "lib/net451/Dapper.xml",
-        "lib/netstandard1.3/Dapper.dll",
-        "lib/netstandard1.3/Dapper.xml",
-        "lib/netstandard2.0/Dapper.dll",
-        "lib/netstandard2.0/Dapper.xml"
       ]
     },
     "log4net/2.0.8": {
@@ -3842,16 +3792,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "GeoUtility/1.0.0": {
-      "type": "project",
-      "path": "../GeoUtility/GeoUtility.csproj",
-      "msbuildProject": "../GeoUtility/GeoUtility.csproj"
-    },
-    "GMap.NET.Core/1.0.0": {
-      "type": "project",
-      "path": "../GMap.NET.Core/GMap.NET.Core.csproj",
-      "msbuildProject": "../GMap.NET.Core/GMap.NET.Core.csproj"
-    },
     "MAVLink/1.0.0": {
       "type": "project",
       "path": "../Mavlink/MAVLink.csproj",
@@ -3861,9 +3801,8 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
       "BitMiracle.LibTiff.NET >= 2.4.571",
-      "Dapper >= 1.50.5",
-      "GMap.NET.Core >= 1.0.0",
-      "GeoUtility >= 1.0.0",
+      "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj",
+      "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GeoUtility\\GeoUtility.csproj",
       "MAVLink >= 1.0.0",
       "Microsoft.Report.Viewer >= 11.0.0",
       "Microsoft.ReportViewer.Common >= 10.0.40219.1",
@@ -3930,10 +3869,6 @@
             "target": "Package",
             "version": "[2.4.571, )"
           },
-          "Dapper": {
-            "target": "Package",
-            "version": "[1.50.5, )"
-          },
           "Microsoft.Report.Viewer": {
             "target": "Package",
             "version": "[11.0.0, )"
@@ -3973,6 +3908,24 @@
       "warningLevel": 1,
       "message": "Microsoft.ReportingServices.ReportViewerControl.Winforms 140.1000.523 depends on Microsoft.SqlServer.Types (>= 14.0.0) but Microsoft.SqlServer.Types 14.0.0 was not found. An approximate best match of Microsoft.SqlServer.Types 14.0.314.76 was resolved.",
       "libraryId": "Microsoft.SqlServer.Types",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.2"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GeoUtility\\GeoUtility.csproj'. The project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GeoUtility\\GeoUtility.csproj",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.2"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj'. The project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj",
       "targetGraphs": [
         ".NETFramework,Version=v4.6.2"
       ]

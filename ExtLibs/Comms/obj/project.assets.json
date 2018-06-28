@@ -2,22 +2,6 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.2": {
-      "Dapper/1.50.5": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "Microsoft.CSharp",
-          "System",
-          "System.Data",
-          "System.Xml",
-          "System.Xml.Linq"
-        ],
-        "compile": {
-          "lib/net451/Dapper.dll": {}
-        },
-        "runtime": {
-          "lib/net451/Dapper.dll": {}
-        }
-      },
       "log4net/2.0.8": {
         "type": "package",
         "compile": {
@@ -215,21 +199,6 @@
     }
   },
   "libraries": {
-    "Dapper/1.50.5": {
-      "sha512": "1vPpX7WQmQCIb7rwlGOUoVs/yWZhVKvdhuG7WrJV+V+qsP8btnrrCqVWHENAlJxBAnUw5rhWfmuba9/Egei9MA==",
-      "type": "package",
-      "path": "dapper/1.50.5",
-      "files": [
-        "dapper.1.50.5.nupkg.sha512",
-        "dapper.nuspec",
-        "lib/net451/Dapper.dll",
-        "lib/net451/Dapper.xml",
-        "lib/netstandard1.3/Dapper.dll",
-        "lib/netstandard1.3/Dapper.xml",
-        "lib/netstandard2.0/Dapper.dll",
-        "lib/netstandard2.0/Dapper.xml"
-      ]
-    },
     "log4net/2.0.8": {
       "sha512": "N41MQGHZImiCfn0cUuSBjZxrcNfIQCuCgQP0rpgB3J/NWponEh3lc1LxJEuIsPAR9Oc1jVvfkNNFCY1C5hf9LA==",
       "type": "package",
@@ -358,7 +327,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.2": [
-      "Dapper >= 1.50.5",
       "Microsoft.Report.Viewer >= 11.0.0",
       "Microsoft.ReportViewer.Common >= 10.0.40219.1",
       "Microsoft.ReportingServices.ReportViewerControl.Winforms >= 140.1000.523",
@@ -407,10 +375,6 @@
     "frameworks": {
       "net462": {
         "dependencies": {
-          "Dapper": {
-            "target": "Package",
-            "version": "[1.50.5, )"
-          },
           "Microsoft.Report.Viewer": {
             "target": "Package",
             "version": "[11.0.0, )"
@@ -432,6 +396,12 @@
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner3\\ExtLibs\\Comms\\obj\\MissionPlanner.Comms.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1603",
       "level": "Warning",

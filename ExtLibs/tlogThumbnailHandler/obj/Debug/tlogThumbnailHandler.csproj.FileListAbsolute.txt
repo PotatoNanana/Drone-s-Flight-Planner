@@ -27,6 +27,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.pdb
+<<<<<<< HEAD
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\tlogThumbnailHandler.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\tlogThumbnailHandler.pdb
@@ -121,3 +122,15 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+||||||| merged common ancestors
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\tlogThumbnailHandler.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\tlogThumbnailHandler.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.pdb
+=======
+>>>>>>> 93d3aebc83daf45cb364e35722ab0009447cfbfc

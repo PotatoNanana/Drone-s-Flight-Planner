@@ -9,15 +9,20 @@
     <description>MAVLink for Ardupilot</description>
     <dependencies>
       <group targetFramework=".NETFramework4.6.2">
+<<<<<<< HEAD
         <dependency id="Dapper" version="1.50.5" exclude="Build,Analyzers" />
         <dependency id="Microsoft.Report.Viewer" version="11.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.ReportViewer.Common" version="10.0.40219.1" exclude="Build,Analyzers" />
         <dependency id="Microsoft.ReportingServices.ReportViewerControl.Winforms" version="140.1000.523" exclude="Build,Analyzers" />
+||||||| merged common ancestors
+        <dependency id="Dapper" version="1.50.5" exclude="Build,Analyzers" />
+=======
+>>>>>>> 93d3aebc83daf45cb364e35722ab0009447cfbfc
         <dependency id="log4net" version="2.0.8" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
+    <file src="C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
   </files>
 </package>

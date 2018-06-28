@@ -450,7 +450,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.Log.LogDownloadscp.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.Log.LogStrings.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_pilot.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_admin.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.Validation.resources
@@ -1067,14 +1066,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_pilot.zh-Hans.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_pilot.zh-Hant.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_pilot.zh-TW.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.ar.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.id-ID.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.ja-JP.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.ko-KR.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.pt.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.zh-Hans.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.zh-Hant.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_developer.zh-TW.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_admin.ar.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_admin.id-ID.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.MainV3_admin.ja-JP.resources
@@ -1406,44 +1397,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.Joystick.JoystickSetup.zh-Hans.resources
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.csproj.GenerateResource.Cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.csproj.CoreCompileInputs.cache
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_after_flight.resources
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.csprojAssemblyReference.cache
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.csproj.CopyComplete
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.exe.config
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.exe
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.pdb
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\ar\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\pt\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\de-DE\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\es-ES\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\fr\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\id-ID\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\it-IT\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\ko-KR\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\pl\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\zh-Hans\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\zh-Hant\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\zh-TW\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\ja-JP\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\ru-RU\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.exe.CodeAnalysisLog.xml
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.exe.lastcodeanalysissucceeded
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ar\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\pt\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\de-DE\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\es-ES\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\fr\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\id-ID\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\it-IT\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ko-KR\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\pl\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\zh-Hans\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\zh-Hant\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\zh-TW\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ja-JP\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ru-RU\DroneFlightPlanner.resources.dll
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\DroneFlightPlanner.exe
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\DroneFlightPlanner.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\exif.xslt
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\sampleFile.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\MetadataExtractor.dtd
@@ -1536,25 +1489,25 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ph2_serial.csv
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\yuvtorgb_fragment.glsl
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\yuvtorgb_vertex.glsl
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\libSkiaSharp.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\DroneFlightPlanner.exe.config
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\DroneFlightPlanner.exe
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\DroneFlightPlanner.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ar\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\pt\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\de-DE\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\es-ES\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\fr\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\id-ID\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\it-IT\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ko-KR\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\pl\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\zh-Hans\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\zh-Hant\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\zh-TW\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ja-JP\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ru-RU\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\DroneFlightPlanner.exe.CodeAnalysisLog.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\DroneFlightPlanner.exe.lastcodeanalysissucceeded
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\MissionPlanner.exe.config
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\MissionPlanner.exe
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\MissionPlanner.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ar\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\pt\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\de-DE\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\es-ES\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\fr\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\id-ID\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\it-IT\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ko-KR\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\pl\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\zh-Hans\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\zh-Hant\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\zh-TW\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ja-JP\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\ru-RU\MissionPlanner.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\MissionPlanner.exe.CodeAnalysisLog.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\MissionPlanner.exe.lastcodeanalysissucceeded
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\alglibnet2.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\AltitudeAngelWings.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Arduino.dll
@@ -1877,7 +1830,6 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSV
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.ConfigurationView.ConfigWizard.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.FlightData.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.FlightPlanner.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_after_flight.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_Edit_drone_pre.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_Add_drone_pre.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_Edit_drone_part.resources
@@ -2872,24 +2824,6 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.Log.
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.Log.LogBrowse.zh-Hans.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.Joystick.JoystickSetup.zh-Hans.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ar\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\pt\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\de-DE\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\es-ES\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\fr\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\id-ID\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\it-IT\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ko-KR\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\pl\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\zh-Hans\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\zh-Hant\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\zh-TW\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ja-JP\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ru-RU\DroneFlightPlanner.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\DroneFlightPlanner.exe
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\DroneFlightPlanner.pdb
-||||||| merged common ancestors
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ar\MissionPlanner.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\pt\MissionPlanner.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\de-DE\MissionPlanner.resources.dll
@@ -2906,8 +2840,46 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ja-JP\MissionPlanne
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\ru-RU\MissionPlanner.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.exe
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.pdb
-=======
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_after_flight.resources
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.csprojAssemblyReference.cache
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.csproj.CopyComplete
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.exe.config
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.pdb
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\ar\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\pt\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\de-DE\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\es-ES\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\fr\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\id-ID\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\it-IT\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\ko-KR\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\pl\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\zh-Hans\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\zh-Hant\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\zh-TW\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\ja-JP\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\ru-RU\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.exe.CodeAnalysisLog.xml
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\bin\Debug\DroneFlightPlanner.exe.lastcodeanalysissucceeded
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ar\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\pt\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\de-DE\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\es-ES\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\fr\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\id-ID\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\it-IT\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ko-KR\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\pl\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\zh-Hans\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\zh-Hant\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\zh-TW\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ja-JP\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\ru-RU\DroneFlightPlanner.resources.dll
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\DroneFlightPlanner.exe
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\DroneFlightPlanner.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\obj\Debug\MissionPlanner.GCSViews.Form_farm_act2.resources
+<<<<<<< HEAD
 >>>>>>> 42c10e7527fb72b98a2dfa8b566d3118be18d1e3
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_farm_act2.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Dapper.dll
@@ -2922,3 +2894,19 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSV
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Print_Form.Form_Print_farm_act.resources
+||||||| merged common ancestors
+>>>>>>> 42c10e7527fb72b98a2dfa8b566d3118be18d1e3
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_farm_act2.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_Report_Drone.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_Report_Farm.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.CopyComplete
+=======
+>>>>>>> 93d3aebc83daf45cb364e35722ab0009447cfbfc

@@ -94,6 +94,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.csprojAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\GDAL\obj\Debug\GDAL.csproj.CopyComplete
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GDAL.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GDAL.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\Dapper.dll
@@ -199,3 +200,25 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\pt\Mic
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+||||||| merged common ancestors
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GDAL.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GDAL.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\gdalconst_csharp.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\gdal_csharp.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GMap.NET.Core.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\log4net.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\ogr_csharp.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\osr_csharp.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\GMap.NET.Core.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\log4net.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\bin\Debug\zh-Hans\GMap.NET.Core.resources.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\obj\Debug\GDAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\obj\Debug\GDAL.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\obj\Debug\GDAL.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\obj\Debug\GDAL.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GDAL\obj\Debug\GDAL.csprojAssemblyReference.cache
+=======
+>>>>>>> 93d3aebc83daf45cb364e35722ab0009447cfbfc

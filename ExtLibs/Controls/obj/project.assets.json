@@ -985,7 +985,6 @@
         "framework": ".NETFramework,Version=v4.6.2",
         "dependencies": {
           "BitMiracle.LibTiff.NET": "2.4.571",
-          "Dapper": "1.50.5",
           "GMap.NET.Core": "1.0.0",
           "GeoUtility": "1.0.0",
           "MAVLink": "1.0.0",

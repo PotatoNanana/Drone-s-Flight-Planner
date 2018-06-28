@@ -27,6 +27,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.pdb
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\Dapper.dll
@@ -120,3 +121,15 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Sim
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+||||||| merged common ancestors
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\ManagedNativeWifi.Simple.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.pdb
+=======
+C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\ManagedNativeWifi.Simple\obj\Debug\ManagedNativeWifi.Simple.csprojAssemblyReference.cache
+>>>>>>> 93d3aebc83daf45cb364e35722ab0009447cfbfc

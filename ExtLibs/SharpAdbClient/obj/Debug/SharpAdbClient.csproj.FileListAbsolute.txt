@@ -46,6 +46,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csprojAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csproj.CopyComplete
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.xml
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.pdb
@@ -142,3 +143,17 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\De
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+||||||| merged common ancestors
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\SharpAdbClient.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\Mono.Posix.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Debug\Dapper.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Debug\SharpAdbClient.csprojAssemblyReference.cache
+=======
+>>>>>>> 93d3aebc83daf45cb364e35722ab0009447cfbfc

@@ -41,6 +41,7 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csprojAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfoInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CopyComplete
+<<<<<<< HEAD
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\Dapper.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\log4net.dll
@@ -101,3 +102,14 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net46
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\Microsoft.SqlServer.Types.dll
+||||||| merged common ancestors
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\MissionPlanner.Comms.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\Dapper.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\bin\Debug\net462\log4net.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfoInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.AssemblyInfo.cs
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\Comms\obj\Debug\net462\MissionPlanner.Comms.dll
+=======
+>>>>>>> 93d3aebc83daf45cb364e35722ab0009447cfbfc
