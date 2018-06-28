@@ -38,7 +38,7 @@ namespace MissionPlanner.GCSViews.Print_Form
                 new Microsoft.Reporting.WinForms.ReportParameter("pCity",_orders.City),
                 new Microsoft.Reporting.WinForms.ReportParameter("pPhone",_orders.Phone)
             };
-            this.reportViewer.LocalReport.SetParameters(p);
+            this.Report.LocalReport.SetParameters(p);
             this.reportViewer.RefreshReport();
         }
     }
