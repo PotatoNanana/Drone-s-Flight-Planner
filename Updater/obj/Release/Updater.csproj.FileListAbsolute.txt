@@ -11,11 +11,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Update
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Release\Updater.csproj.GenerateResource.Cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Release\Updater.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\Updater\obj\Release\Updater.exe
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Release\Updater.exe.config
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Release\Updater.exe
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Updater\obj\Release\Updater.csprojAssemblyReference.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Updater\obj\Release\Updater.Properties.Resources.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Updater\obj\Release\Updater.csproj.GenerateResource.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Updater\obj\Release\Updater.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Updater\obj\Release\Updater.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\Updater\obj\Release\Updater.exe

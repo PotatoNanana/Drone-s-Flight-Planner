@@ -13,14 +13,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\GeoUtility\obj\Release\GeoUtility.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\GeoUtility\obj\Release\GeoUtility.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\GeoUtility\obj\Release\GeoUtility.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\bin\Release\GeoUtility.XML
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\bin\Release\GeoUtility.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\bin\Release\GeoUtility.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\bin\Release\Dapper.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\bin\Release\Dapper.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\obj\Release\GeoUtility.Properties.Resources.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\obj\Release\GeoUtility.csproj.GenerateResource.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\obj\Release\GeoUtility.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\obj\Release\GeoUtility.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\obj\Release\GeoUtility.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GeoUtility\obj\Release\GeoUtility.pdb

@@ -12,13 +12,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Release\SharpAdbClient.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Release\SharpAdbClient.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\SharpAdbClient\obj\Release\SharpAdbClient.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Release\SharpAdbClient.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Release\SharpAdbClient.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Release\SharpAdbClient.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Release\Dapper.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Release\Mono.Posix.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\bin\Release\Dapper.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Release\SharpAdbClient.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Release\SharpAdbClient.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Release\SharpAdbClient.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\SharpAdbClient\obj\Release\SharpAdbClient.pdb

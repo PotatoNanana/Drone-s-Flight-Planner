@@ -359,8 +359,8 @@ namespace MissionPlanner
                 return;
             }
 
-            if (MainV2.instance != null && MainV2.instance.IsDisposed)
-                return;
+            //if (MainV2.instance != null && MainV2.instance.IsDisposed)
+            //    return;
 
             if (MainV3.instance != null && MainV3.instance.IsDisposed)
                 return;
@@ -368,7 +368,7 @@ namespace MissionPlanner
             if (MainV3_admin.instance != null && MainV3_admin.instance.IsDisposed)
                 return;
 
-            if (MainV3_developer.instance != null && MainV3_developer.instance.IsDisposed)
+            if (MainV2.instance != null && MainV2.instance.IsDisposed)
                 return;
 
             if (MainV3_pilot.instance != null && MainV3_pilot.instance.IsDisposed)

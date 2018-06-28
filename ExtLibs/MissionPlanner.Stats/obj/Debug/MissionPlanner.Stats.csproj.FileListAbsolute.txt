@@ -24,17 +24,5 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.pdb
-<<<<<<< HEAD
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\plugins\MissionPlanner.Stats.dll.config
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\plugins\MissionPlanner.Stats.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\bin\Debug\plugins\MissionPlanner.Stats.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csprojAssemblyReference.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.pdb
-||||||| merged common ancestors
-=======
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csprojAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CopyComplete
->>>>>>> d97299fbab704b220782279e6d4a8385d6f5d2da

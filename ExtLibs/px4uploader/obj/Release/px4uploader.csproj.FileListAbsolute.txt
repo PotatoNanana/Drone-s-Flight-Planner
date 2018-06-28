@@ -15,15 +15,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\obj\Release\px4uploader.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\obj\Release\px4uploader.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\px4uploader\obj\Release\px4uploader.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Release\validcertificates.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Release\px4uploader.exe
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Release\px4uploader.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Release\BouncyCastle.Crypto.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Release\Dapper.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Release\DotNetZip.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Release\Dapper.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\bin\Release\DotNetZip.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\obj\Release\px4uploader.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\obj\Release\px4uploader.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\obj\Release\px4uploader.exe
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\px4uploader\obj\Release\px4uploader.pdb

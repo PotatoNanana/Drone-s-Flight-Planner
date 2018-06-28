@@ -13,18 +13,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.csproj.GenerateResource.Cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Release\GMap.NET.WindowsForms.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Release\GMap.NET.WindowsForms.XML
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Release\Dapper.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Release\GMap.NET.Core.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Release\System.Data.SqlServerCe.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Release\GMap.NET.Core.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Release\Dapper.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\bin\Release\zh-Hans\GMap.NET.Core.resources.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.csprojAssemblyReference.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.TilePrefetcher.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Release\System.Windows.Forms.Properties.Resources.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.csproj.GenerateResource.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\GMap.NET.WindowsForms\obj\Release\GMap.NET.WindowsForms.dll

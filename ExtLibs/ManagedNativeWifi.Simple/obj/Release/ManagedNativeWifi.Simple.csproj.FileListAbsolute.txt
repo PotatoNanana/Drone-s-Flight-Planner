@@ -7,11 +7,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Release\ManagedNativeWifi.Simple.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Release\ManagedNativeWifi.Simple.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\ManagedNativeWifi.Simple\obj\Release\ManagedNativeWifi.Simple.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Release\ManagedNativeWifi.Simple.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Release\ManagedNativeWifi.Simple.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Release\Dapper.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\bin\Release\Dapper.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\obj\Release\ManagedNativeWifi.Simple.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\obj\Release\ManagedNativeWifi.Simple.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\obj\Release\ManagedNativeWifi.Simple.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\ManagedNativeWifi.Simple\obj\Release\ManagedNativeWifi.Simple.pdb

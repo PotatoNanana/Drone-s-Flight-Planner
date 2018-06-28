@@ -3,9 +3,3 @@ D:\Mookda\Work\Mission Planner\MissionPlanner-master\ExtLibs\AviFile\obj\Release
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AviFile\bin\Release\AviFile.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AviFile\obj\Release\AviFile.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\AviFile\obj\Release\AviFile.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AviFile\bin\Release\AviFile.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AviFile\bin\Release\Dapper.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AviFile\bin\Release\Dapper.xml
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AviFile\obj\Release\AviFile.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AviFile\obj\Release\AviFile.csproj.CopyComplete
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\ExtLibs\AviFile\obj\Release\AviFile.dll

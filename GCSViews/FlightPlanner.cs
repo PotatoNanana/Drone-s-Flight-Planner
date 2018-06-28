@@ -14,6 +14,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
+using System.Data.SqlClient;
 using DotSpatial.Data;
 using DotSpatial.Projections;
 using GeoUtility.GeoSystem;
@@ -43,7 +44,7 @@ using System.Text;
 using MissionPlanner.Warnings;
 using MissionPlanner.Comms;
 using System.Linq;
-using System.Data.SqlClient;
+using Excel = Microsoft.Office.Interop.Excel;
 
 
 namespace MissionPlanner.GCSViews
@@ -51,18 +52,26 @@ namespace MissionPlanner.GCSViews
     public partial class FlightPlanner : MyUserControl, IDeactivate, IActivate
     {
         public static event EventHandler OnMenuSimmulationButtonClick;
+        public static event EventHandler OnMenuFlightdataButtonClick;
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
 
+        public String distanceTotal,areaTotal;
+        public String farm_name, farm_location, drone_name, activity_id, activity_name, action_capacity;
         protected virtual void OnMenuSimulationButtonClicked(EventArgs e)
         {
             OnMenuSimmulationButtonClick?.Invoke(this, e);
         }
 
-        
+        protected virtual void OnMenuFlightdataButtonClicked(EventArgs e)
+        {
+            OnMenuFlightdataButtonClick?.Invoke(this, e);
+        }
+
+        Controls.SITL Simulation;
+
         public string file; // name of waypoint path
         public static string id_drone;
         public static string id_farm;
-        
-        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
 
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         int selectedrow;
@@ -76,6 +85,8 @@ namespace MissionPlanner.GCSViews
         bool grid;
 
         public static FlightPlanner instance;
+        public static List<MAVLinkInterface> Comports = new List<MAVLinkInterface>();
+        public GCSViews.FlightPlanner FlightPlanner2;
 
         public bool autopan { get; set; }
 
@@ -110,8 +121,8 @@ namespace MissionPlanner.GCSViews
             Gymbal,
             PX4
         }
-
-        private void poieditToolStripMenuItem_Click(object sender, EventArgs e)
+       
+            private void poieditToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (CurrentGMapMarker == null || !(CurrentGMapMarker is GMapMarkerPOI))
                 return;
@@ -560,9 +571,17 @@ namespace MissionPlanner.GCSViews
 
         public FlightPlanner()
         {
-            instance = this;
 
+            instance = this;
             InitializeComponent();
+
+
+            // FlightPlanner2 = new GCSViews.FlightPlanner();
+            //FlightPlanner2 = instance;
+            // MyView.AddScreen(new MainSwitcher.Screen("FlightData", FlightData, true));
+
+
+            //MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", instance, true));
 
             // config map             
             MainMap.CacheLocation = Utilities.Settings.GetDataDirectory() +
@@ -600,6 +619,9 @@ namespace MissionPlanner.GCSViews
             MainMap.RoutesEnabled = true;
 
             //MainMap.MaxZoom = 18;
+
+            Comports.Add(comPort);
+            FlightPlanner.comPort.MavChanged += comPort_MavChanged;
 
             // get zoom  
             MainMap.MinZoom = 0;
@@ -1131,7 +1153,7 @@ namespace MissionPlanner.GCSViews
             writeKML();
         }
 
-        private void FlightPlanner_Load(object sender, EventArgs e)
+        private void FlightPlanner1_Load(object sender, EventArgs e)
         {
             quickadd = true;
 
@@ -1795,6 +1817,7 @@ namespace MissionPlanner.GCSViews
 
                     lbl_distance.Text = rm.GetString("lbl_distance.Text") + ": " +
                                         FormatDistance(dist + homedist, false);
+                    distanceTotal = ""+FormatDistance(dist + homedist, false);
                 }
 
                 setgradanddistandaz();
@@ -6254,6 +6277,7 @@ namespace MissionPlanner.GCSViews
             CustomMessageBox.Show(
                 "Area: " + aream2.ToString("0") + " m2\n\t" + areaa.ToString("0.00") + " Acre\n\t" +
                 areaha.ToString("0.00") + " Hectare\n\t" + areasqf.ToString("0") + " sqf", "Area");
+            areaTotal = aream2.ToString("0") + " m2";
         }
 
         private void MainMap_Paint(object sender, PaintEventArgs e)
@@ -7319,66 +7343,115 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             grid.Host = new PluginHost();
             grid.but_Click(sender, e);
         }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void panelWaypoints_CloseClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainMap_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelMap_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lbl_distance_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void menuTakeoff_Click(object sender, EventArgs e)
         {
             //go to form log 
-            Form_log form_Log = new Form_log(file);
-            form_Log.ShowDialog();
+            //Form_log form_Log = new Form_log(file);
+            //form_Log.ShowDialog();
             
-            MyView.ShowScreen("FlightData");
-            
+            //read data from database to collect into transaction table
+
+            //farm data
+            con.Open();
+            SqlCommand sqlCmdFarm = new SqlCommand("select farm_name, farm_location from Farm where farm_id='" + textBox_farmID.Text + "'", con);
+            SqlDataReader readerFarm = sqlCmdFarm.ExecuteReader();
+            readerFarm.Read();
+            if (readerFarm.HasRows)
+            {
+                farm_name = readerFarm[0].ToString();
+                farm_location = readerFarm[1].ToString();
+            }
+            readerFarm.Close();
+            con.Close();
+
+            //drone data
+            con.Open();
+            SqlCommand sqlCmdDrone = new SqlCommand("select drone_name from drone where drone_id='" + textBox_droneID.Text + "'", con);
+            SqlDataReader readerDrone = sqlCmdDrone.ExecuteReader();
+            readerDrone.Read();
+            if (readerDrone.HasRows)
+            {
+                drone_name = readerDrone[0].ToString();
+            }
+            readerDrone.Close();
+            con.Close();
+
+            //action data
+            con.Open();
+            SqlCommand sqlCmdAct = new SqlCommand("select action_no, action_name, action_capacity from FlightSchedule where action_no='" + textBox_actID.Text + "'", con);
+            SqlDataReader readerAct = sqlCmdAct.ExecuteReader();
+            readerAct.Read();
+            if (readerAct.HasRows)
+            {
+                activity_id = readerAct[0].ToString();
+                activity_name = readerAct[1].ToString();
+                action_capacity = readerAct[2].ToString();
+            }
+            readerAct.Close();
+            con.Close();
+
+            con.Open();
+            String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_location,drone_id,drone_name,action_no,action_name,action_capacity,distance,area) " + 
+                "VALUES('" + "TID"+DateTime.Now.ToString("yyyyMMddTHHmmss") + "','" + textBox_farmID.Text + "','" + farm_name + "','" + farm_location + "','" + textBox_droneID.Text + "','" 
+                + drone_name + "','" + activity_id + "','" + activity_name + "','" + action_capacity + "','" + distanceTotal +"','" + areaTotal +"')";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            SDA.SelectCommand.ExecuteNonQuery();
+            con.Close();
+
+            ///added filepath
+            string filepath = "C:\\Temp\\DroneFlightPlanner";
+            if (Directory.Exists(filepath)) { }
+            else
+            {
+                Directory.CreateDirectory(filepath);
+            }
+            /// added export worksheet to excel file
+            string fileTest = "C:\\Temp\\DroneFlightPlanner\\FlightHistory_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
+            MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
+            Excel.Application oApp;
+            Excel.Worksheet oSheet;
+            Excel.Workbook oBook;
+
+            oApp = new Excel.Application();
+            oBook = oApp.Workbooks.Add();
+            oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
+            oSheet.Cells[1, 1] = "transaction_datetime";
+            oSheet.Cells[1, 2] = "farm_id";
+            oSheet.Cells[1, 3] = "farm_name";
+            oSheet.Cells[1, 4] = "farm_location";
+            oSheet.Cells[1, 5] = "drone_id";
+            oSheet.Cells[1, 6] = "drone_name";
+            oSheet.Cells[1, 7] = "action_no";
+            oSheet.Cells[1, 8] = "action_name";
+            oSheet.Cells[1, 9] = "action_capacity";
+            oSheet.Cells[1, 10] = "distance";
+            oSheet.Cells[1, 11] = "area";
+
+            oSheet.Cells[2, 1] = "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss");
+            oSheet.Cells[2, 2] = textBox_farmID.Text;
+            oSheet.Cells[2, 3] = farm_name;
+            oSheet.Cells[2, 4] = farm_location;
+            oSheet.Cells[2, 5] = textBox_droneID.Text;
+            oSheet.Cells[2, 6] = drone_name;
+            oSheet.Cells[2, 7] = activity_id;
+            oSheet.Cells[2, 8] = activity_name;
+            oSheet.Cells[2, 9] = action_capacity;
+            oSheet.Cells[2, 10] = distanceTotal;
+            oSheet.Cells[2, 11] = areaTotal;
+
+            oBook.SaveAs(fileTest);
+            oBook.Close();
+            oApp.Quit();
+
+            OnMenuFlightdataButtonClicked(e);
         }
 
         private void MenuSimulation_Click(object sender, EventArgs e)
         {
             OnMenuSimulationButtonClicked(e);
         }
-
-        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void toolStripContainer1_ContentPanel_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer2_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void MenuConnect_Click(object sender, EventArgs e)
         {
             comPort.giveComport = false;
@@ -7420,7 +7493,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             }
             else
             {
-                doConnect(comPort, _connectionControl.CMB_serialport.Text, _connectionControl.CMB_baudrate.Text);
+             //   doConnect(comPort, "COM3", _connectionControl.CMB_baudrate.Text);
+             doConnect(comPort, _connectionControl.CMB_serialport.Text, _connectionControl.CMB_baudrate.Text);
             }
 
             _connectionControl.UpdateSysIDS();
@@ -7428,7 +7502,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             loadph_serial();
         }
 
-        public void doConnect(MAVLinkInterface comPort, string portname, string baud, bool getparams = true)
+        public void doConnect(MAVLinkInterface comPort, string portname, string baud)
         {
             bool skipconnectcheck = false;
             log.Info("We are connecting to " + portname + " " + baud);
@@ -7590,11 +7664,6 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     return;
                 }
 
-                if (getparams)
-                    comPort.getParamList();
-
-                _connectionControl.UpdateSysIDS();
-
                 // get all the params
                 foreach (var mavstate in comPort.MAVlist)
                 {
@@ -7604,8 +7673,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
 
                 // set to first seen
-                comPort.sysidcurrent = comPort.MAVlist.First().sysid;
-                comPort.compidcurrent = comPort.MAVlist.First().compid;
+                comPort.sysidcurrent = comPort.MAVlist.FirstOrDefault().sysid;
+                comPort.compidcurrent = comPort.MAVlist.FirstOrDefault().compid;
 
                 _connectionControl.UpdateSysIDS();
 
@@ -7761,11 +7830,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 {
                     log.Warn(ex2);
                 }
-                CustomMessageBox.Show("Can not establish a connection\n\n" + ex.Message);
+                CustomMessageBox.Show("Can not establish a connection\n\n" + ex.StackTrace);
                 return;
             }
         }
-
+        
         private void ResetConnectionStats()
         {
             log.Info("Reset connection stats");
@@ -7783,7 +7852,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void MenuFlightPlanner_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("FlightPlanner");
+            this.Activate();
+            //MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", this, true));
+           // MyView.ShowScreen("FlightPlanner");
         }
         private void UpdateConnectIcon()
         {
@@ -8002,6 +8073,49 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             // grid view farm
             textBox_farmID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
             id_farm = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+
+            if (textBox_droneID.Text != null && textBox_farmID.Text != null)
+            {
+                //show data to DataGridView farm
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                String query = "SELECT * FROM FlightSchedule WHERE drone_id='" + id_drone + "' AND farm_id='" + id_farm + "'";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                DG_Act.DataSource = dt;
+                con.Close();
+            }
+
+            else if (textBox_farmID.Text != null)
+            {
+                //show data to DataGridView farm
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                String query = "SELECT * FROM FlightSchedule WHERE farm_id='" + id_farm + "'";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                DG_Act.DataSource = dt;
+                con.Close();
+            }
+        }
+
+        private void myDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox_actID.Text = DG_Act.SelectedRows[0].Cells[0].Value.ToString();
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+            //show data to DataGridView farm
+            con.Open();
+            String query2 = "SELECT * FROM FlightSchedule";
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+            DataTable dt2 = new DataTable();
+            SDA2.Fill(dt2);
+            DG_Act.DataSource = dt2;
+            con.Close();
         }
 
         private void DG_drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -8009,6 +8123,32 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             // grid view drone
             textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
             id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
+
+            if (textBox_droneID.Text != null && textBox_farmID.Text!=null )
+            {
+                //show data to DataGridView farm
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                String query = "SELECT * FROM FlightSchedule WHERE drone_id='" + id_drone + "' AND farm_id='" + id_farm + "'";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                DG_Act.DataSource = dt;
+                con.Close();
+            }
+
+            else if (textBox_droneID.Text != null)
+            {
+                //show data to DataGridView farm
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                String query = "SELECT * FROM FlightSchedule WHERE drone_id='" + id_drone + "'";
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                DG_Act.DataSource = dt;
+                con.Close();
+            }
         }
 
         private void panelPflightPlanner_farm_Paint(object sender, PaintEventArgs e)
@@ -8058,6 +8198,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             this.ResumeLayout();
         }
+
     }
 
 
