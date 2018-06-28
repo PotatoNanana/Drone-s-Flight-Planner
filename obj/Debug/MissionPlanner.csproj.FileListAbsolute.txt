@@ -2921,3 +2921,4 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSV
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Form_Report_Farm.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner3\obj\Debug\MissionPlanner.GCSViews.Print_Form.Form_Print_farm_act.resources

@@ -10,6 +10,9 @@
     <dependencies>
       <group targetFramework=".NETFramework4.6.2">
         <dependency id="Dapper" version="1.50.5" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Report.Viewer" version="11.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.ReportViewer.Common" version="10.0.40219.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.ReportingServices.ReportViewerControl.Winforms" version="140.1000.523" exclude="Build,Analyzers" />
         <dependency id="log4net" version="2.0.8" exclude="Build,Analyzers" />
       </group>
     </dependencies>

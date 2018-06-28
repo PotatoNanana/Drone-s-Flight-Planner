@@ -12,7 +12,7 @@ namespace MissionPlanner.GCSViews.Print_Form
 {
     public partial class Form_Print_farm_act : Form
     {
-        public Form_Print_farm_act()
+        public Form_Print_farm_act(DataReport.Farm_act obj, List<DataReport.Farm> list)
         {
             InitializeComponent();
         }

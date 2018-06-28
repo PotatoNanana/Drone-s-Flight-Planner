@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Dapper;
+using System.Configuration;
+using MissionPlanner.DataReport;
+using MissionPlanner.GCSViews.Print_Form;
 
 namespace MissionPlanner.GCSViews
 {
@@ -140,7 +143,7 @@ namespace MissionPlanner.GCSViews
 
         private void button_print_Click(object sender, EventArgs e)
         {
-            Farm_Act obj = afterFlightBindingSource.Current as Farm_act;
+            Farm_act obj = afterFlightBindingSource.Current as Farm_act;
             if (obj != null)
             {
                 using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
@@ -151,7 +154,7 @@ namespace MissionPlanner.GCSViews
                     string format = "yyyy-MM-dd";
                     String query = "SELECT * FROM Farm WHERE farm_id = '" + id_farm + "' ";
                     List<Farm> list = db.Query<Farm>(query, commandType: CommandType.Text).ToList();
-                    using (frmPrint frm = new frmPrint(obj, list))
+                    using (Form_Print_farm_act frm = new Form_Print_farm_act(obj, list))
                     {
                         frm.ShowDialog();
                     }
