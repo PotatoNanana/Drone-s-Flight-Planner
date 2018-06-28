@@ -1446,7 +1446,7 @@
     <value>Commands</value>
   </data>
   <data name="&gt;&gt;Commands.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.17613, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6753.18364, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Commands.Parent" xml:space="preserve">
     <value>panelWaypoints</value>
@@ -2269,6 +2269,60 @@
   <data name="&gt;&gt;panelMap.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="actionnoDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>รหัสกิจกรรม</value>
+  </data>
+  <data name="actionnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ชื่อกิจกรรม</value>
+  </data>
+  <metadata name="flightScheduleBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>776, 134</value>
+  </metadata>
+  <metadata name="droneFlightPlannerDataSet6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>571, 134</value>
+  </metadata>
+  <data name="DG_Act.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 3</value>
+  </data>
+  <data name="DG_Act.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 120</value>
+  </data>
+  <data name="DG_Act.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;DG_Act.Name" xml:space="preserve">
+    <value>DG_Act</value>
+  </data>
+  <data name="&gt;&gt;DG_Act.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6753.18364, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DG_Act.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;DG_Act.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 431</value>
+  </data>
+  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 125</value>
+  </data>
+  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;panel10.Name" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
+    <value>panel_Main_farm</value>
+  </data>
+  <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="droneidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>รหัสโดรน</value>
   </data>
@@ -2285,7 +2339,7 @@
     <value>20, 3</value>
   </data>
   <data name="DG_Drone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 152</value>
+    <value>260, 120</value>
   </data>
   <data name="DG_Drone.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2294,7 +2348,7 @@
     <value>DG_Drone</value>
   </data>
   <data name="&gt;&gt;DG_Drone.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.17613, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6753.18364, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Drone.Parent" xml:space="preserve">
     <value>panel8</value>
@@ -2303,10 +2357,10 @@
     <value>0</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 334</value>
+    <value>0, 302</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 171</value>
+    <value>300, 125</value>
   </data>
   <data name="panel8.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -2321,7 +2375,7 @@
     <value>panel_Main_farm</value>
   </data>
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="farmidDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>รหัสฟาร์ม</value>
@@ -2339,7 +2393,7 @@
     <value>20, 1</value>
   </data>
   <data name="DG_Farm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 150</value>
+    <value>260, 120</value>
   </data>
   <data name="DG_Farm.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -2348,7 +2402,7 @@
     <value>DG_Farm</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6751.17613, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6753.18364, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Parent" xml:space="preserve">
     <value>panel7</value>
@@ -2357,10 +2411,10 @@
     <value>0</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 63</value>
+    <value>0, 175</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 157</value>
+    <value>300, 125</value>
   </data>
   <data name="panel7.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -2375,13 +2429,34 @@
     <value>panel_Main_farm</value>
   </data>
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="textBox_actID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 138</value>
+  </data>
+  <data name="textBox_actID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 31</value>
+  </data>
+  <data name="textBox_actID.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;textBox_actID.Name" xml:space="preserve">
+    <value>textBox_actID</value>
+  </data>
+  <data name="&gt;&gt;textBox_actID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_actID.Parent" xml:space="preserve">
+    <value>panel_Main_farm</value>
+  </data>
+  <data name="&gt;&gt;textBox_actID.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="textBox_droneID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 283</value>
+    <value>103, 101</value>
   </data>
   <data name="textBox_droneID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 31</value>
+    <value>177, 31</value>
   </data>
   <data name="textBox_droneID.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -2396,13 +2471,46 @@
     <value>panel_Main_farm</value>
   </data>
   <data name="&gt;&gt;textBox_droneID.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>PJ Standard, 14.25pt</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 142</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>รหัสกิจกรรม</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>panel_Main_farm</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="textBox_farmID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 246</value>
+    <value>103, 64</value>
   </data>
   <data name="textBox_farmID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 31</value>
+    <value>177, 31</value>
   </data>
   <data name="textBox_farmID.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -2417,7 +2525,7 @@
     <value>panel_Main_farm</value>
   </data>
   <data name="&gt;&gt;textBox_farmID.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2429,7 +2537,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 287</value>
+    <value>21, 105</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 24</value>
@@ -2450,7 +2558,7 @@
     <value>panel_Main_farm</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2462,7 +2570,7 @@
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 250</value>
+    <value>21, 68</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 24</value>
@@ -2483,7 +2591,7 @@
     <value>panel_Main_farm</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="lineSeparator2.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 50</value>
@@ -2510,7 +2618,7 @@
     <value>panel_Main_farm</value>
   </data>
   <data name="&gt;&gt;lineSeparator2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="Main_but_farm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2582,7 +2690,7 @@
     <value>panel_Main_farm</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="panel_Main_farm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2710,6 +2818,15 @@
   <data name="&gt;&gt;panelBASE.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="flightScheduleBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>711, 95</value>
+  </metadata>
+  <metadata name="flightScheduleBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>503, 95</value>
+  </metadata>
+  <metadata name="flightSchedule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>374, 95</value>
+  </metadata>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>269, 17</value>
   </metadata>
@@ -2730,6 +2847,24 @@
   </metadata>
   <metadata name="farmTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>665, 56</value>
+  </metadata>
+  <metadata name="activitySchedule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="activityScheduleBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>156, 95</value>
+  </metadata>
+  <metadata name="flightScheduleTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <metadata name="flightSchedule1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>220, 134</value>
+  </metadata>
+  <metadata name="flightSchedule1BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>356, 134</value>
+  </metadata>
+  <metadata name="flightScheduleTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2762,7 +2897,7 @@
     <value>toolStripConnectionControl1</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, DroneFlightPlanner, Version=1.1.6751.17613, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, DroneFlightPlanner, Version=1.1.6753.18364, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Command.Name" xml:space="preserve">
     <value>Command</value>
@@ -3322,6 +3457,30 @@
   <data name="&gt;&gt;flightPattern.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;actionnoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>actionnoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;actionnoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;actionnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>actionnameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;actionnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource2.Name" xml:space="preserve">
+    <value>flightScheduleBindingSource2</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;droneFlightPlannerDataSet6.Name" xml:space="preserve">
+    <value>droneFlightPlannerDataSet6</value>
+  </data>
+  <data name="&gt;&gt;droneFlightPlannerDataSet6.Type" xml:space="preserve">
+    <value>MissionPlanner.DroneFlightPlannerDataSet6, DroneFlightPlannerDataSet6.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;droneidDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>droneidDataGridViewTextBoxColumn</value>
   </data>
@@ -3370,6 +3529,24 @@
   <data name="&gt;&gt;farm1.Type" xml:space="preserve">
     <value>MissionPlanner.farm1, farm1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;flightScheduleBindingSource1.Name" xml:space="preserve">
+    <value>flightScheduleBindingSource1</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource.Name" xml:space="preserve">
+    <value>flightScheduleBindingSource</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flightSchedule.Name" xml:space="preserve">
+    <value>flightSchedule</value>
+  </data>
+  <data name="&gt;&gt;flightSchedule.Type" xml:space="preserve">
+    <value>MissionPlanner.flightSchedule, flightSchedule1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
   </data>
@@ -3417,6 +3594,42 @@
   </data>
   <data name="&gt;&gt;farmTableAdapter.Type" xml:space="preserve">
     <value>MissionPlanner.farm1TableAdapters.FarmTableAdapter, farm1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;activitySchedule.Name" xml:space="preserve">
+    <value>activitySchedule</value>
+  </data>
+  <data name="&gt;&gt;activitySchedule.Type" xml:space="preserve">
+    <value>MissionPlanner.ActivitySchedule, ActivitySchedule.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;activityScheduleBindingSource.Name" xml:space="preserve">
+    <value>activityScheduleBindingSource</value>
+  </data>
+  <data name="&gt;&gt;activityScheduleBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleTableAdapter.Name" xml:space="preserve">
+    <value>flightScheduleTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleTableAdapter.Type" xml:space="preserve">
+    <value>MissionPlanner.flightScheduleTableAdapters.FlightScheduleTableAdapter, flightSchedule1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;flightSchedule1.Name" xml:space="preserve">
+    <value>flightSchedule1</value>
+  </data>
+  <data name="&gt;&gt;flightSchedule1.Type" xml:space="preserve">
+    <value>MissionPlanner.FlightSchedule1, FlightSchedule11.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;flightSchedule1BindingSource.Name" xml:space="preserve">
+    <value>flightSchedule1BindingSource</value>
+  </data>
+  <data name="&gt;&gt;flightSchedule1BindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleTableAdapter1.Name" xml:space="preserve">
+    <value>flightScheduleTableAdapter1</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleTableAdapter1.Type" xml:space="preserve">
+    <value>MissionPlanner.DroneFlightPlannerDataSet6TableAdapters.FlightScheduleTableAdapter, DroneFlightPlannerDataSet6.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FlightPlanner</value>

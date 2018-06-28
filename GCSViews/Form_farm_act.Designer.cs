@@ -47,7 +47,7 @@
             this.af_startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.af_finishTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.droneFlightPlannerDataSet7 = new MissionPlanner.DroneFlightPlannerDataSet7();
+            //this.droneFlightPlannerDataSet7 = new MissionPlanner.DroneFlightPlannerDataSet7();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.activitySchedule = new MissionPlanner.ActivitySchedule();
@@ -59,7 +59,7 @@
             this.flightScheduleTableAdapter = new MissionPlanner.flightScheduleTableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleTableAdapter1 = new MissionPlanner.ActivityScheduleTableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.afterFlightTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet7TableAdapters.AfterFlightTableAdapter();
+            //this.afterFlightTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet7TableAdapters.AfterFlightTableAdapter();
             this.afnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.afnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.afcapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +73,7 @@
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet7)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet7)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.activitySchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
@@ -260,12 +260,12 @@
             // afterFlightBindingSource
             // 
             this.afterFlightBindingSource.DataMember = "AfterFlight";
-            this.afterFlightBindingSource.DataSource = this.droneFlightPlannerDataSet7;
+            //this.afterFlightBindingSource.DataSource = this.droneFlightPlannerDataSet7;
             // 
             // droneFlightPlannerDataSet7
             // 
-            this.droneFlightPlannerDataSet7.DataSetName = "DroneFlightPlannerDataSet7";
-            this.droneFlightPlannerDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.droneFlightPlannerDataSet7.DataSetName = "DroneFlightPlannerDataSet7";
+            //this.droneFlightPlannerDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -341,7 +341,7 @@
             // 
             // afterFlightTableAdapter
             // 
-            this.afterFlightTableAdapter.ClearBeforeFill = true;
+            //this.afterFlightTableAdapter.ClearBeforeFill = true;
             // 
             // afnoDataGridViewTextBoxColumn
             // 
@@ -413,7 +413,7 @@
             this.panel_Main_farm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet7)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet7)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.activitySchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
@@ -441,9 +441,9 @@
         private ActivitySchedule activitySchedule;
         private ActivityScheduleTableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter1;
         private System.Windows.Forms.BindingSource flightScheduleBindingSource1;
-        private DroneFlightPlannerDataSet7 droneFlightPlannerDataSet7;
+        //private DroneFlightPlannerDataSet7 droneFlightPlannerDataSet7;
         private System.Windows.Forms.BindingSource afterFlightBindingSource;
-        private DroneFlightPlannerDataSet7TableAdapters.AfterFlightTableAdapter afterFlightTableAdapter;
+        //private DroneFlightPlannerDataSet7TableAdapters.AfterFlightTableAdapter afterFlightTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn af_datetime;
         private System.Windows.Forms.DataGridViewTextBoxColumn drone_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn af_name;

@@ -166,164 +166,171 @@ namespace MissionPlanner.GCSViews
 
         public FlightData()
         {
-            log.Info("Ctor Start");
-
-            InitializeComponent();
-
-            log.Info("Components Done");
-
-            instance = this;
-            //    _serializer = new DockStateSerializer(dockContainer1);
-            //    _serializer.SavePath = Application.StartupPath + Path.DirectorySeparatorChar + "FDscreen.xml";
-            //    dockContainer1.PreviewRenderer = new PreviewRenderer();
-            //
-            mymap = gMapControl1;
-            myhud = hud1;
-            MainHcopy = MainH;
-
-            mymap.Paint += mymap_Paint;
-
-            // populate the unmodified base list
-            tabControlactions.TabPages.ForEach(i => { TabListOriginal.Add((TabPage)i); });
-
-            //  mymap.Manager.UseMemoryCache = false;
-
-            log.Info("Tunning Graph Settings");
-            // setup default tuning graph
-            if (Settings.Instance["Tuning_Graph_Selected"] != null)
+            try
             {
-                string line = Settings.Instance["Tuning_Graph_Selected"].ToString();
-                string[] lines = line.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
-                foreach (string option in lines)
+                log.Info("Ctor Start");
+
+                InitializeComponent();
+
+                log.Info("Components Done");
+
+                instance = this;
+                //    _serializer = new DockStateSerializer(dockContainer1);
+                //    _serializer.SavePath = Application.StartupPath + Path.DirectorySeparatorChar + "FDscreen.xml";
+                //    dockContainer1.PreviewRenderer = new PreviewRenderer();
+                //
+                mymap = gMapControl1;
+                myhud = hud1;
+                MainHcopy = MainH;
+
+                mymap.Paint += mymap_Paint;
+
+                // populate the unmodified base list
+                tabControlactions.TabPages.ForEach(i => { TabListOriginal.Add((TabPage)i); });
+
+                //  mymap.Manager.UseMemoryCache = false;
+
+                log.Info("Tunning Graph Settings");
+                // setup default tuning graph
+                if (Settings.Instance["Tuning_Graph_Selected"] != null)
                 {
-                    using (var cb = new CheckBox { Name = option, Checked = true })
+                    string line = Settings.Instance["Tuning_Graph_Selected"].ToString();
+                    string[] lines = line.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string option in lines)
+                    {
+                        using (var cb = new CheckBox { Name = option, Checked = true })
+                        {
+                            chk_box_CheckedChanged(cb, EventArgs.Empty);
+                        }
+                    }
+                }
+                else
+                {
+                    using (var cb = new CheckBox { Name = "roll", Checked = true })
+                    {
+                        chk_box_CheckedChanged(cb, EventArgs.Empty);
+                    }
+                    using (var cb = new CheckBox { Name = "pitch", Checked = true })
+                    {
+                        chk_box_CheckedChanged(cb, EventArgs.Empty);
+                    }
+                    using (var cb = new CheckBox { Name = "nav_roll", Checked = true })
+                    {
+                        chk_box_CheckedChanged(cb, EventArgs.Empty);
+                    }
+                    using (var cb = new CheckBox { Name = "nav_pitch", Checked = true })
                     {
                         chk_box_CheckedChanged(cb, EventArgs.Empty);
                     }
                 }
-            }
-            else
-            {
-                using (var cb = new CheckBox { Name = "roll", Checked = true })
+
+                if (!string.IsNullOrEmpty(Settings.Instance["hudcolor"]))
                 {
-                    chk_box_CheckedChanged(cb, EventArgs.Empty);
+                    hud1.hudcolor = Color.FromName(Settings.Instance["hudcolor"]);
                 }
-                using (var cb = new CheckBox { Name = "pitch", Checked = true })
+
+                log.Info("HUD Settings");
+                foreach (string item in Settings.Instance.Keys)
                 {
-                    chk_box_CheckedChanged(cb, EventArgs.Empty);
+                    if (item.StartsWith("hud1_useritem_"))
+                    {
+                        string selection = item.Replace("hud1_useritem_", "");
+
+                        CheckBox chk = new CheckBox();
+                        chk.Name = selection;
+                        chk.Checked = true;
+
+                        HUD.Custom cust = new HUD.Custom();
+                        cust.Header = Settings.Instance[item];
+                        HUD.Custom.src = MainV2.comPort.MAV.cs;
+
+                        addHudUserItem(ref cust, chk);
+                    }
                 }
-                using (var cb = new CheckBox { Name = "nav_roll", Checked = true })
+
+
+                List<string> list = new List<string>();
+
                 {
-                    chk_box_CheckedChanged(cb, EventArgs.Empty);
+                    list.Add("LOITER_UNLIM");
+                    list.Add("RETURN_TO_LAUNCH");
+                    list.Add("PREFLIGHT_CALIBRATION");
+                    list.Add("MISSION_START");
+                    list.Add("PREFLIGHT_REBOOT_SHUTDOWN");
+                    list.Add("Trigger Camera NOW");
+                    //DO_SET_SERVO
+                    //DO_REPEAT_SERVO
                 }
-                using (var cb = new CheckBox { Name = "nav_pitch", Checked = true })
+
+
+                CMB_action.DataSource = list;
+
+                CMB_modes.DataSource = Common.getModesList(MainV2.comPort.MAV.cs);
+                CMB_modes.ValueMember = "Key";
+                CMB_modes.DisplayMember = "Value";
+
+                //default to auto
+                CMB_modes.Text = "Auto";
+
+                CMB_setwp.SelectedIndex = 0;
+
+                log.Info("Graph Setup");
+                CreateChart(zg1);
+
+                // config map      
+                log.Info("Map Setup");
+                gMapControl1.CacheLocation = Settings.GetDataDirectory() +
+                                             "gmapcache" + Path.DirectorySeparatorChar;
+                gMapControl1.MinZoom = 0;
+                gMapControl1.MaxZoom = 24;
+                gMapControl1.Zoom = 3;
+
+                gMapControl1.OnMapZoomChanged += gMapControl1_OnMapZoomChanged;
+
+                gMapControl1.DisableFocusOnMouseEnter = true;
+
+                gMapControl1.OnMarkerEnter += gMapControl1_OnMarkerEnter;
+                gMapControl1.OnMarkerLeave += gMapControl1_OnMarkerLeave;
+
+                gMapControl1.RoutesEnabled = true;
+                gMapControl1.PolygonsEnabled = true;
+
+                tfrpolygons = new GMapOverlay("tfrpolygons");
+                gMapControl1.Overlays.Add(tfrpolygons);
+
+                kmlpolygons = new GMapOverlay("kmlpolygons");
+                gMapControl1.Overlays.Add(kmlpolygons);
+
+                geofence = new GMapOverlay("geofence");
+                gMapControl1.Overlays.Add(geofence);
+
+                polygons = new GMapOverlay("polygons");
+                gMapControl1.Overlays.Add(polygons);
+
+                photosoverlay = new GMapOverlay("photos overlay");
+                gMapControl1.Overlays.Add(photosoverlay);
+
+                routes = new GMapOverlay("routes");
+                gMapControl1.Overlays.Add(routes);
+
+                rallypointoverlay = new GMapOverlay("rally points");
+                gMapControl1.Overlays.Add(rallypointoverlay);
+
+                gMapControl1.Overlays.Add(poioverlay);
+
+                float gspeedMax = Settings.Instance.GetFloat("GspeedMAX");
+                if (gspeedMax != 0)
                 {
-                    chk_box_CheckedChanged(cb, EventArgs.Empty);
+                    Gspeed.MaxValue = gspeedMax;
                 }
-            }
 
-            if (!string.IsNullOrEmpty(Settings.Instance["hudcolor"]))
+                MainV2.comPort.ParamListChanged += FlightData_ParentChanged;
+            }
+            
+            catch(Exception ex)
             {
-                hud1.hudcolor = Color.FromName(Settings.Instance["hudcolor"]);
+                CustomMessageBox.Show(ex.StackTrace);
             }
-
-            log.Info("HUD Settings");
-            foreach (string item in Settings.Instance.Keys)
-            {
-                if (item.StartsWith("hud1_useritem_"))
-                {
-                    string selection = item.Replace("hud1_useritem_", "");
-
-                    CheckBox chk = new CheckBox();
-                    chk.Name = selection;
-                    chk.Checked = true;
-
-                    HUD.Custom cust = new HUD.Custom();
-                    cust.Header = Settings.Instance[item];
-                    HUD.Custom.src = MainV2.comPort.MAV.cs;
-
-                    addHudUserItem(ref cust, chk);
-                }
-            }
-
-
-            List<string> list = new List<string>();
-
-            {
-                list.Add("LOITER_UNLIM");
-                list.Add("RETURN_TO_LAUNCH");
-                list.Add("PREFLIGHT_CALIBRATION");
-                list.Add("MISSION_START");
-                list.Add("PREFLIGHT_REBOOT_SHUTDOWN");
-                list.Add("Trigger Camera NOW");
-                //DO_SET_SERVO
-                //DO_REPEAT_SERVO
-            }
-
-
-            CMB_action.DataSource = list;
-
-            CMB_modes.DataSource = Common.getModesList(MainV2.comPort.MAV.cs);
-            CMB_modes.ValueMember = "Key";
-            CMB_modes.DisplayMember = "Value";
-
-            //default to auto
-            CMB_modes.Text = "Auto";
-
-            CMB_setwp.SelectedIndex = 0;
-
-            log.Info("Graph Setup");
-            CreateChart(zg1);
-
-            // config map      
-            log.Info("Map Setup");
-            gMapControl1.CacheLocation = Settings.GetDataDirectory() +
-                                         "gmapcache" + Path.DirectorySeparatorChar;
-            gMapControl1.MinZoom = 0;
-            gMapControl1.MaxZoom = 24;
-            gMapControl1.Zoom = 3;
-
-            gMapControl1.OnMapZoomChanged += gMapControl1_OnMapZoomChanged;
-
-            gMapControl1.DisableFocusOnMouseEnter = true;
-
-            gMapControl1.OnMarkerEnter += gMapControl1_OnMarkerEnter;
-            gMapControl1.OnMarkerLeave += gMapControl1_OnMarkerLeave;
-
-            gMapControl1.RoutesEnabled = true;
-            gMapControl1.PolygonsEnabled = true;
-
-            tfrpolygons = new GMapOverlay("tfrpolygons");
-            gMapControl1.Overlays.Add(tfrpolygons);
-
-            kmlpolygons = new GMapOverlay("kmlpolygons");
-            gMapControl1.Overlays.Add(kmlpolygons);
-
-            geofence = new GMapOverlay("geofence");
-            gMapControl1.Overlays.Add(geofence);
-
-            polygons = new GMapOverlay("polygons");
-            gMapControl1.Overlays.Add(polygons);
-
-            photosoverlay = new GMapOverlay("photos overlay");
-            gMapControl1.Overlays.Add(photosoverlay);
-
-            routes = new GMapOverlay("routes");
-            gMapControl1.Overlays.Add(routes);
-
-            rallypointoverlay = new GMapOverlay("rally points");
-            gMapControl1.Overlays.Add(rallypointoverlay);
-
-            gMapControl1.Overlays.Add(poioverlay);
-
-            float gspeedMax = Settings.Instance.GetFloat("GspeedMAX");
-            if (gspeedMax != 0)
-            {
-                Gspeed.MaxValue = gspeedMax;
-            }
-
-            MainV2.comPort.ParamListChanged += FlightData_ParentChanged;
-
         }
 
         protected override void OnInvalidated(InvalidateEventArgs e)

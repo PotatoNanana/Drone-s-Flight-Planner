@@ -121,8 +121,8 @@ namespace MissionPlanner.GCSViews
                     Directory.CreateDirectory(filepath);
                 }
                 /// added export worksheet to excel file
-                string fileTest = "C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".csv";
-                MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".csv แล้ว");
+                string fileTest = "C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
+                MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
                 Excel.Application oApp;
                 Excel.Worksheet oSheet;
                 Excel.Workbook oBook;

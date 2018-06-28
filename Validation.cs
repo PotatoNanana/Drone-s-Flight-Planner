@@ -89,22 +89,7 @@ namespace MissionPlanner
         {
             Goto_main_Clicked?.Invoke(this, e);
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Validation_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private static int role_id;
         private void Goto_main_Click(object sender, EventArgs e)
         {
@@ -173,16 +158,6 @@ namespace MissionPlanner
             con.Close();
         }
         
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void userid_enter(object sender, EventArgs e)
         {
             if(txtUsername.Text == "ชื่อผู้ใช้งาน")
@@ -231,11 +206,6 @@ namespace MissionPlanner
         private void Goto_main_KeyDown(object sender, KeyEventArgs e)
         {
             ProcessDialogKey(e.KeyData);
-        }
-
-        private void Validation_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
         }
     }
 }

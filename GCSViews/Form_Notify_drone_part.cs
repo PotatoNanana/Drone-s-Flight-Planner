@@ -33,7 +33,7 @@ namespace MissionPlanner.GCSViews
         private void Form_Notify_drone_part_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'droneFlightPlannerDataSet6.AfterFlight' table. You can move, or remove it, as needed.
-            this.afterFlightTableAdapter.Fill(this.droneFlightPlannerDataSet6.AfterFlight);
+            //this.afterFlightTableAdapter.Fill(this.droneFlightPlannerDataSet6.AfterFlight);
             // TODO: This line of code loads data into the 'partDroneNotify.DeviceList' table. You can move, or remove it, as needed.
             this.deviceListTableAdapter.Fill(this.partDroneNotify.DeviceList);
 

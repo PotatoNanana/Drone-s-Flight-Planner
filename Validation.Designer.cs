@@ -43,7 +43,6 @@
             this.txtUsername.Size = new System.Drawing.Size(135, 31);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Text = "ชื่อผู้ใช้งาน";
-            this.txtUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             this.txtUsername.Enter += new System.EventHandler(this.userid_enter);
             this.txtUsername.Leave += new System.EventHandler(this.userid_leave);
             // 
@@ -84,7 +83,6 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Name = "Validation";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Validation_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

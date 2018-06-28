@@ -49,9 +49,9 @@
             this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
             this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deviceListTableAdapter = new MissionPlanner.PartDroneNotifyTableAdapters.DeviceListTableAdapter();
-            this.droneFlightPlannerDataSet6 = new MissionPlanner.DroneFlightPlannerDataSet6();
+            //this.droneFlightPlannerDataSet6 = new MissionPlanner.DroneFlightPlannerDataSet6();
             this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.afterFlightTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet6TableAdapters.AfterFlightTableAdapter();
+            //this.afterFlightTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet6TableAdapters.AfterFlightTableAdapter();
             this.deviceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devicenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devicepositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet6)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -249,17 +249,17 @@
             // 
             // droneFlightPlannerDataSet6
             // 
-            this.droneFlightPlannerDataSet6.DataSetName = "DroneFlightPlannerDataSet6";
-            this.droneFlightPlannerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.droneFlightPlannerDataSet6.DataSetName = "DroneFlightPlannerDataSet6";
+            //this.droneFlightPlannerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // afterFlightBindingSource
             // 
             this.afterFlightBindingSource.DataMember = "AfterFlight";
-            this.afterFlightBindingSource.DataSource = this.droneFlightPlannerDataSet6;
+            //this.afterFlightBindingSource.DataSource = this.droneFlightPlannerDataSet6;
             // 
             // afterFlightTableAdapter
             // 
-            this.afterFlightTableAdapter.ClearBeforeFill = true;
+            //this.afterFlightTableAdapter.ClearBeforeFill = true;
             // 
             // deviceidDataGridViewTextBoxColumn
             // 
@@ -366,7 +366,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet6)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -388,9 +388,9 @@
         private System.Windows.Forms.BindingSource deviceListBindingSource;
         private PartDroneNotifyTableAdapters.DeviceListTableAdapter deviceListTableAdapter;
         private System.Windows.Forms.Button But_exit;
-        private DroneFlightPlannerDataSet6 droneFlightPlannerDataSet6;
+        //private DroneFlightPlannerDataSet6 droneFlightPlannerDataSet6;
         private System.Windows.Forms.BindingSource afterFlightBindingSource;
-        private DroneFlightPlannerDataSet6TableAdapters.AfterFlightTableAdapter afterFlightTableAdapter;
+        //private DroneFlightPlannerDataSet6TableAdapters.AfterFlightTableAdapter afterFlightTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn device_position;

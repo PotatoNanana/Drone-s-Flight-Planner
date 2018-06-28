@@ -21,7 +21,6 @@ namespace MissionPlanner.GCSViews
         }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
-        SqlCommand cmd;
 
         private void button_show_Click(object sender, EventArgs e)
         {
@@ -36,6 +35,8 @@ namespace MissionPlanner.GCSViews
 
         private void Form_log_history_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet7.Transact' table. You can move, or remove it, as needed.
+            this.transactTableAdapter.Fill(this.droneFlightPlannerDataSet7.Transact);
             // TODO: This line of code loads data into the 'flightLog._FlightLog' table. You can move, or remove it, as needed.
             //this.flightLogTableAdapter.Fill(this.flightLog._FlightLog);
 
@@ -60,10 +61,7 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView
             con.Open();
-
-            //string a = "yyyy-MM-dd";
-
-            String query = "SELECT * FROM FlightLog ";
+            String query = "SELECT * FROM transact";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
