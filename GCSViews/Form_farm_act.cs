@@ -72,7 +72,7 @@ namespace MissionPlanner.GCSViews
         private void Form_farm_act_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'droneFlightPlannerDataSet7.AfterFlight' table. You can move, or remove it, as needed.
-            this.afterFlightTableAdapter.Fill(this.droneFlightPlannerDataSet7.AfterFlight);
+            //this.afterFlightTableAdapter.Fill(this.droneFlightPlannerDataSet7.AfterFlight);
             // TODO: This line of code loads data into the 'activitySchedule.FlightSchedule' table. You can move, or remove it, as needed.
             //this.flightScheduleTableAdapter1.Fill(this.activitySchedule.FlightSchedule);
             // TODO: This line of code loads data into the 'flightSchedule.FlightSchedule' table. You can move, or remove it, as needed.
