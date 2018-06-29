@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using MissionPlanner.Comms;
+using MissionPlanner.GCSViews;
 
 namespace MissionPlanner.Utilities
 {
@@ -52,9 +53,9 @@ namespace MissionPlanner.Utilities
             };
             th.Start();
 
-            //MainV2.comPort.BaseStream = new TcpSerial() {client = new TcpClient("127.0.0.1", 5750) };
+            //FlightPlanner.comPort.BaseStream = new TcpSerial() {client = new TcpClient("127.0.0.1", 5750) };
 
-            //MainV2.instance.doConnect(MainV2.comPort, "preset", "5750");
+            //FlightPlanner.instance.doConnect(FlightPlanner.comPort, "preset", "5750");
         }
 
         private static IEnumerable<int> Range(int start, int inc, int count)
@@ -210,12 +211,12 @@ namespace MissionPlanner.Utilities
 
                 //mav = null;
 
-                MainV2.instance.BeginInvoke((Action) delegate
+                FlightPlanner.instance.BeginInvoke((Action) delegate
                 {
-                    MainV2.instance.doConnect(mav, "preset",
+                    FlightPlanner.instance.doConnect(mav, "preset",
                         localsysid.ToString());
 
-                    MainV2.Comports.Add(mav);
+                    FlightPlanner.Comports.Add(mav);
                 });
                 //clients.Add(client);
             }

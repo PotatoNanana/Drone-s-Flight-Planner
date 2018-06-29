@@ -17,6 +17,8 @@ namespace MissionPlanner
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         public static event EventHandler Goto_main_Clicked;
+
+        public static int roleid;
         
         public Validation()
         {
@@ -87,22 +89,8 @@ namespace MissionPlanner
         {
             Goto_main_Clicked?.Invoke(this, e);
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Validation_Load(object sender, EventArgs e)
-        {
-
-        }
         
+        private static int role_id;
         private void Goto_main_Click(object sender, EventArgs e)
         {
             String query = "select count(*) from UserLogin where username=@usr and password=@pwd";
@@ -113,7 +101,6 @@ namespace MissionPlanner
 
             SqlCommand cmd = new SqlCommand("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", con);
             string role;
-
             con.Open();
             if(scmd.ExecuteScalar().ToString() == "1")
             {
@@ -129,14 +116,16 @@ namespace MissionPlanner
                     {
                         case "developer":
                             {
+                                roleid = 1;
                                 this.Hide();
-                                var frm = new MainV3_developer();
+                                var frm = new MainV2();
                                 frm.ShowDialog();
                                 break;
                             }
 
                         case "admin":
                             {
+                                roleid = 2;
                                 this.Hide();
                                 var frm = new MainV3_admin();
                                 frm.ShowDialog();
@@ -145,6 +134,7 @@ namespace MissionPlanner
 
                         case "pilot":
                             {
+                                roleid = 3;
                                 this.Hide();
                                 var frm = new MainV3_pilot();
                                 frm.ShowDialog();
@@ -168,16 +158,6 @@ namespace MissionPlanner
             con.Close();
         }
         
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void userid_enter(object sender, EventArgs e)
         {
             if(txtUsername.Text == "ชื่อผู้ใช้งาน")
@@ -226,11 +206,6 @@ namespace MissionPlanner
         private void Goto_main_KeyDown(object sender, KeyEventArgs e)
         {
             ProcessDialogKey(e.KeyData);
-        }
-
-        private void Validation_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
         }
     }
 }
