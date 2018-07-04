@@ -217,5 +217,10 @@ namespace MissionPlanner.GCSViews
             DG_Farm.DataSource = dt2;
             con.Close();
         }
+
+        private void button_print_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

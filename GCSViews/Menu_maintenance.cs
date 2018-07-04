@@ -16,6 +16,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Globalization;
 using Dapper;
+using System.Configuration;
 
 namespace MissionPlanner.GCSViews
 {
@@ -325,7 +326,17 @@ namespace MissionPlanner.GCSViews
                     SDA2.Fill(dt2);
                     con.Close();
                     DG_Part.DataSource = dt2;
-                
+
+                //prepare send parameter to print
+                using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString)) // if napat change cn to cn1
+                {
+                    if (db.State == ConnectionState.Closed)
+                        db.Open();
+                    //Execute query to get data from drone data                    
+                    String query3 = "SELECT * FROM Drone WHERE drone_id = '" +id_drone+ "' "; 
+
+                    droneBindingSource.DataSource = db.Query<Drone>(query3, commandType: CommandType.Text);
+                }
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }           
@@ -356,7 +367,7 @@ namespace MissionPlanner.GCSViews
                     textBox_partID.Text = DG_Part.SelectedRows[0].Cells[0].Value.ToString();
                     id_part = DG_Part.SelectedRows[0].Cells[0].Value.ToString();
                     textBox_partName.Text = DG_Part.SelectedRows[0].Cells[1].Value.ToString();
-                    textBox_partPosition.Text = DG_Part.SelectedRows[0].Cells[5].Value.ToString();
+                    textBox_partPosition.Text = DG_Part.SelectedRows[0].Cells[2].Value.ToString();
                     textBox_partPrice.Text = DG_Part.SelectedRows[0].Cells[3].Value.ToString();
                     dateTimePicker_reg.Value = Convert.ToDateTime(DG_Part.SelectedRows[0].Cells[4].Value);
                     dateTimePicker_startDate.Value = Convert.ToDateTime(DG_Part.SelectedRows[0].Cells[5].Value);
@@ -610,5 +621,28 @@ namespace MissionPlanner.GCSViews
 
         }
 
+        private void button_print_Click(object sender, EventArgs e)
+        {
+            Drone obj = droneBindingSource.Current as Drone;
+            if (obj != null)
+            {
+                using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
+                {
+                    if (db.State == ConnectionState.Closed)
+                        db.Open();
+                    //Execute query to get Drone_part data
+                    string format = "yyyy-MM-dd";
+                    String query = "SELECT * FROM DeviceList WHERE drone_id = '" + id_drone + "'  ";
+                    List< Drone_part> list = db.Query<Drone_part>(query, commandType: CommandType.Text).ToList();
+                    using (Form_Print_drone_part frm = new Form_Print_drone_part(obj, list))
+                    {
+                        frm.ShowDialog();
+                    }
+                }
+            }
+        }
     }
+
 }
+
+

@@ -70,7 +70,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.maintainanceTableAdapter = new MissionPlanner.maintainaceTableAdapters.MaintainanceTableAdapter();
-            this.button_print = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
@@ -110,7 +109,6 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button_print);
             this.panel_Main_farm.Controls.Add(this.textBox7);
             this.panel_Main_farm.Controls.Add(this.textBox_venAdd);
             this.panel_Main_farm.Controls.Add(this.textBox_respond);
@@ -487,23 +485,6 @@
             // 
             this.maintainanceTableAdapter.ClearBeforeFill = true;
             // 
-            // button_print
-            // 
-            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_print.FlatAppearance.BorderSize = 0;
-            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_print.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_print.Location = new System.Drawing.Point(1066, 327);
-            this.button_print.Name = "button_print";
-            this.button_print.Size = new System.Drawing.Size(130, 40);
-            this.button_print.TabIndex = 70;
-            this.button_print.Text = "พิมพ์รายงาน";
-            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_print.UseVisualStyleBackColor = false;
-            // 
             // Menu_maintenance_pre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,6 +546,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button_print;
     }
 }

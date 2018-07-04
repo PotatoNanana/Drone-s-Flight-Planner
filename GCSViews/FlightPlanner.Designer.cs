@@ -254,7 +254,7 @@ namespace MissionPlanner.GCSViews
             this.flightScheduleTableAdapter = new MissionPlanner.flightScheduleTableAdapters.FlightScheduleTableAdapter();
             this.flightSchedule1 = new MissionPlanner.FlightSchedule1();
             this.flightSchedule1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flightScheduleTableAdapter1 = new MissionPlanner.DroneFlightPlannerDataSet6TableAdapters.FlightScheduleTableAdapter();
+           // this.flightScheduleTableAdapter1 = new MissionPlanner.DroneFlightPlannerDataSet6TableAdapters.FlightScheduleTableAdapter();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
@@ -1776,7 +1776,7 @@ namespace MissionPlanner.GCSViews
             // 
             // flightScheduleTableAdapter1
             // 
-            this.flightScheduleTableAdapter1.ClearBeforeFill = true;
+//            this.flightScheduleTableAdapter1.ClearBeforeFill = true;
             // 
             // FlightPlanner
             // 
@@ -2038,6 +2038,6 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.DataGridViewTextBoxColumn actionnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource flightScheduleBindingSource2;
         private DroneFlightPlannerDataSet6 droneFlightPlannerDataSet6;
-        private DroneFlightPlannerDataSet6TableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter1;
+  //      private DroneFlightPlannerDataSet6TableAdapters.FlightScheduleTableAdapter flightScheduleTableAdapter1;
     }
 }

@@ -71,6 +71,10 @@ namespace MissionPlanner.GCSViews
 
         private void Form_farm_act_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'farmDataset.Farm' table. You can move, or remove it, as needed.
+            this.farmTableAdapter.Fill(this.farmDataset.Farm);
+            // TODO: This line of code loads data into the 'farmBidingSource.Farm' table. You can move, or remove it, as needed.
+    //        this.farmTableAdapter.Fill(this.farmBindingSource.Farm);
             // TODO: This line of code loads data into the 'droneFlightPlannerDataSet7.AfterFlight' table. You can move, or remove it, as needed.
             //this.afterFlightTableAdapter.Fill(this.droneFlightPlannerDataSet7.AfterFlight);
             // TODO: This line of code loads data into the 'activitySchedule.FlightSchedule' table. You can move, or remove it, as needed.
@@ -131,29 +135,28 @@ namespace MissionPlanner.GCSViews
             {
                 if (db.State == ConnectionState.Closed)
                     db.Open();
-                //Execute query to get data from farm_act data
+                //Execute query to get data from farm data
                 string format = "yyyy-MM-dd";
-                String query = "SELECT * FROM AfterFlight WHERE farm_id = '" + id_farm + "' AND af_datetime between '{dateTimePicker_startDate.Value.ToString(format)}'  and '{dateTimePicker_stopDate.Value.ToString(format)}'   ";
-
-                
-                afterFlightBindingSource.DataSource = db.Query<Farm_act>(query, commandType: CommandType.Text);
+                String query = "SELECT * FROM Farm WHERE farm_id = '" + id_farm + "' "; // 
+                                
+                farmBindingSource.DataSource = db.Query<Farm>(query, commandType: CommandType.Text);
             }          
 
         }
 
         private void button_print_Click(object sender, EventArgs e)
         {
-            Farm_act obj = afterFlightBindingSource.Current as Farm_act;
+            Farm obj = farmBindingSource.Current as Farm;
             if (obj != null)
             {
                 using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
                 {
                     if (db.State == ConnectionState.Closed)
                         db.Open();
-                    //Execute query to get Farm data
+                    //Execute query to get Farm_act data
                     string format = "yyyy-MM-dd";
-                    String query = "SELECT * FROM Farm WHERE farm_id = '" + id_farm + "' ";
-                    List<Farm> list = db.Query<Farm>(query, commandType: CommandType.Text).ToList();
+                    String query = "SELECT * FROM AfterFlight WHERE farm_id = '" + id_farm + "' AND af_datetime between '{dateTimePicker_startDate.Value.ToString(format)}'  and '{dateTimePicker_stopDate.Value.ToString(format)}' ";
+                    List<Farm_act> list = db.Query<Farm_act>(query, commandType: CommandType.Text).ToList();
                     using (Form_Print_farm_act frm = new Form_Print_farm_act(obj, list))
                     {
                         frm.ShowDialog();

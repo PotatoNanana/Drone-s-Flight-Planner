@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.but_schedule = new System.Windows.Forms.Button();
             this.lineSeparator3 = new MissionPlanner.Controls.LineSeparator();
             this.DG_schedule = new MissionPlanner.Controls.MyDataGridView();
             this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,7 +111,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.but_schedule);
             this.panel5.Controls.Add(this.lineSeparator3);
             this.panel5.Controls.Add(this.DG_schedule);
             this.panel5.Controls.Add(this.panel6);
@@ -122,23 +120,6 @@
             this.panel5.Size = new System.Drawing.Size(716, 280);
             this.panel5.TabIndex = 10;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFlightSchedule_Paint);
-            // 
-            // but_schedule
-            // 
-            this.but_schedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.but_schedule.FlatAppearance.BorderSize = 0;
-            this.but_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.but_schedule.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.but_schedule.ForeColor = System.Drawing.Color.White;
-            this.but_schedule.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_schedule.Location = new System.Drawing.Point(293, 220);
-            this.but_schedule.Name = "but_schedule";
-            this.but_schedule.Size = new System.Drawing.Size(130, 40);
-            this.but_schedule.TabIndex = 6;
-            this.but_schedule.Text = "ดูเพิ่มเติม";
-            this.but_schedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.but_schedule.UseVisualStyleBackColor = false;
-            this.but_schedule.Click += new System.EventHandler(this.but_schedule_Click);
             // 
             // lineSeparator3
             // 
@@ -166,7 +147,7 @@
             this.DG_schedule.DataSource = this.flightScheduleBindingSource;
             this.DG_schedule.Location = new System.Drawing.Point(28, 70);
             this.DG_schedule.Name = "DG_schedule";
-            this.DG_schedule.Size = new System.Drawing.Size(666, 140);
+            this.DG_schedule.Size = new System.Drawing.Size(666, 190);
             this.DG_schedule.TabIndex = 10;
             this.DG_schedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.myDataGridView2_CellContentClick);
             // 
@@ -591,7 +572,6 @@
         private Controls.MyDataGridView DG_schedule;
         private System.Windows.Forms.Panel panel5;
         private Controls.MyDataGridView DG_maintenance;
-        private System.Windows.Forms.Button but_schedule;
         private Controls.LineSeparator lineSeparator3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button5;
