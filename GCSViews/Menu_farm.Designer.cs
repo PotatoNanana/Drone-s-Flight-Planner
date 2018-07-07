@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_farm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_print = new System.Windows.Forms.Button();
             this.button_serch = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
@@ -59,7 +60,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.farmTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet2TableAdapters.FarmTableAdapter();
-            this.button_print = new System.Windows.Forms.Button();
+            this.textBox_subDistrict = new System.Windows.Forms.TextBox();
+            this.textBox_province = new System.Windows.Forms.TextBox();
+            this.textBox_postal = new System.Windows.Forms.TextBox();
+            this.textBox_district = new System.Windows.Forms.TextBox();
+            this.textBox_road = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -82,6 +92,16 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.label10);
+            this.panel_Main_farm.Controls.Add(this.label9);
+            this.panel_Main_farm.Controls.Add(this.label8);
+            this.panel_Main_farm.Controls.Add(this.label7);
+            this.panel_Main_farm.Controls.Add(this.label6);
+            this.panel_Main_farm.Controls.Add(this.textBox_road);
+            this.panel_Main_farm.Controls.Add(this.textBox_district);
+            this.panel_Main_farm.Controls.Add(this.textBox_postal);
+            this.panel_Main_farm.Controls.Add(this.textBox_province);
+            this.panel_Main_farm.Controls.Add(this.textBox_subDistrict);
             this.panel_Main_farm.Controls.Add(this.button_print);
             this.panel_Main_farm.Controls.Add(this.button_serch);
             this.panel_Main_farm.Controls.Add(this.label5);
@@ -105,9 +125,25 @@
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14F);
             this.panel_Main_farm.Location = new System.Drawing.Point(60, 40);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(1228, 580);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1228, 687);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Paint);
+            // 
+            // button_print
+            // 
+            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_print.FlatAppearance.BorderSize = 0;
+            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_print.ForeColor = System.Drawing.Color.White;
+            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_print.Location = new System.Drawing.Point(1042, 414);
+            this.button_print.Name = "button_print";
+            this.button_print.Size = new System.Drawing.Size(130, 40);
+            this.button_print.TabIndex = 48;
+            this.button_print.Text = "พิมพ์รายงาน";
+            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_print.UseVisualStyleBackColor = false;
             // 
             // button_serch
             // 
@@ -118,7 +154,7 @@
             this.button_serch.ForeColor = System.Drawing.Color.White;
             this.button_serch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_serch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serch.Location = new System.Drawing.Point(914, 502);
+            this.button_serch.Location = new System.Drawing.Point(930, 610);
             this.button_serch.Name = "button_serch";
             this.button_serch.Size = new System.Drawing.Size(80, 40);
             this.button_serch.TabIndex = 47;
@@ -131,7 +167,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("PJ Standard", 16.25F);
-            this.label5.Location = new System.Drawing.Point(532, 315);
+            this.label5.Location = new System.Drawing.Point(532, 423);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 27);
             this.label5.TabIndex = 46;
@@ -141,7 +177,7 @@
             // 
             this.pictureBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.InitialImage")));
-            this.pictureBox.Location = new System.Drawing.Point(636, 315);
+            this.pictureBox.Location = new System.Drawing.Point(636, 423);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(255, 227);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,9 +187,9 @@
             // textBox_farmHost
             // 
             this.textBox_farmHost.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_farmHost.Location = new System.Drawing.Point(636, 256);
+            this.textBox_farmHost.Location = new System.Drawing.Point(636, 364);
             this.textBox_farmHost.Name = "textBox_farmHost";
-            this.textBox_farmHost.Size = new System.Drawing.Size(255, 34);
+            this.textBox_farmHost.Size = new System.Drawing.Size(374, 34);
             this.textBox_farmHost.TabIndex = 43;
             // 
             // textBox_farmLocation
@@ -161,14 +197,14 @@
             this.textBox_farmLocation.Font = new System.Drawing.Font("PJ Standard", 16F);
             this.textBox_farmLocation.Location = new System.Drawing.Point(636, 199);
             this.textBox_farmLocation.Name = "textBox_farmLocation";
-            this.textBox_farmLocation.Size = new System.Drawing.Size(255, 34);
+            this.textBox_farmLocation.Size = new System.Drawing.Size(143, 34);
             this.textBox_farmLocation.TabIndex = 44;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(532, 259);
+            this.label4.Location = new System.Drawing.Point(532, 367);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 26);
             this.label4.TabIndex = 39;
@@ -189,7 +225,7 @@
             this.textBox_farmName.Font = new System.Drawing.Font("PJ Standard", 16F);
             this.textBox_farmName.Location = new System.Drawing.Point(636, 141);
             this.textBox_farmName.Name = "textBox_farmName";
-            this.textBox_farmName.Size = new System.Drawing.Size(255, 34);
+            this.textBox_farmName.Size = new System.Drawing.Size(374, 34);
             this.textBox_farmName.TabIndex = 38;
             // 
             // textBox_farmID
@@ -197,7 +233,7 @@
             this.textBox_farmID.Font = new System.Drawing.Font("PJ Standard", 16F);
             this.textBox_farmID.Location = new System.Drawing.Point(636, 81);
             this.textBox_farmID.Name = "textBox_farmID";
-            this.textBox_farmID.Size = new System.Drawing.Size(255, 34);
+            this.textBox_farmID.Size = new System.Drawing.Size(374, 34);
             this.textBox_farmID.TabIndex = 37;
             // 
             // label2
@@ -302,7 +338,7 @@
             this.DG_Farm.Location = new System.Drawing.Point(25, 70);
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Farm.Size = new System.Drawing.Size(444, 472);
+            this.DG_Farm.Size = new System.Drawing.Size(444, 580);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             // 
@@ -400,21 +436,95 @@
             // 
             this.farmTableAdapter.ClearBeforeFill = true;
             // 
-            // button_print
+            // textBox_subDistrict
             // 
-            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_print.FlatAppearance.BorderSize = 0;
-            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_print.Location = new System.Drawing.Point(1042, 414);
-            this.button_print.Name = "button_print";
-            this.button_print.Size = new System.Drawing.Size(130, 40);
-            this.button_print.TabIndex = 48;
-            this.button_print.Text = "พิมพ์รายงาน";
-            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_print.UseVisualStyleBackColor = false;
+            this.textBox_subDistrict.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_subDistrict.Location = new System.Drawing.Point(636, 251);
+            this.textBox_subDistrict.Name = "textBox_subDistrict";
+            this.textBox_subDistrict.Size = new System.Drawing.Size(143, 34);
+            this.textBox_subDistrict.TabIndex = 49;
+            // 
+            // textBox_province
+            // 
+            this.textBox_province.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_province.Location = new System.Drawing.Point(636, 306);
+            this.textBox_province.Name = "textBox_province";
+            this.textBox_province.Size = new System.Drawing.Size(143, 34);
+            this.textBox_province.TabIndex = 50;
+            // 
+            // textBox_postal
+            // 
+            this.textBox_postal.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_postal.Location = new System.Drawing.Point(874, 306);
+            this.textBox_postal.Name = "textBox_postal";
+            this.textBox_postal.Size = new System.Drawing.Size(136, 34);
+            this.textBox_postal.TabIndex = 51;
+            // 
+            // textBox_district
+            // 
+            this.textBox_district.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_district.Location = new System.Drawing.Point(874, 250);
+            this.textBox_district.Name = "textBox_district";
+            this.textBox_district.Size = new System.Drawing.Size(136, 34);
+            this.textBox_district.TabIndex = 52;
+            // 
+            // textBox_road
+            // 
+            this.textBox_road.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.textBox_road.Location = new System.Drawing.Point(874, 199);
+            this.textBox_road.Name = "textBox_road";
+            this.textBox_road.Size = new System.Drawing.Size(136, 34);
+            this.textBox_road.TabIndex = 53;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.Location = new System.Drawing.Point(785, 202);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 26);
+            this.label6.TabIndex = 54;
+            this.label6.Text = "ถนน";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label7.Location = new System.Drawing.Point(532, 314);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 26);
+            this.label7.TabIndex = 55;
+            this.label7.Text = "จังหวัด";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label8.Location = new System.Drawing.Point(782, 314);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 26);
+            this.label8.TabIndex = 56;
+            this.label8.Text = "รหัสไปรษณียร์";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label9.Location = new System.Drawing.Point(532, 253);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 26);
+            this.label9.TabIndex = 57;
+            this.label9.Text = "ตำบล / แขวง";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label10.Location = new System.Drawing.Point(785, 254);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 26);
+            this.label10.TabIndex = 58;
+            this.label10.Text = "อำเภอ / เขต";
             // 
             // Menu_farm
             // 
@@ -467,5 +577,15 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Button button_serch;
         private System.Windows.Forms.Button button_print;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox_road;
+        private System.Windows.Forms.TextBox textBox_district;
+        private System.Windows.Forms.TextBox textBox_postal;
+        private System.Windows.Forms.TextBox textBox_province;
+        private System.Windows.Forms.TextBox textBox_subDistrict;
     }
 }

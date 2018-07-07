@@ -336,7 +336,7 @@ namespace MissionPlanner.GCSViews
         private void button_MaintainPart_Click(object sender, EventArgs e)
         {
             //pass to previtive maintain
-            Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre(id_drone);
+            Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre(id_part);
             menu_maintenance_pre.ShowUserControl();
         }
         private void DG_Part_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -433,7 +433,7 @@ namespace MissionPlanner.GCSViews
 
                     //show data to DataGridView
                     con.Open();
-                    String query2 = "SELECT * FROM Farm";
+                    String query2 = "SELECT * FROM Devicelist WHERE drone_id = '"+id_drone+"'";
                     SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
                     DataTable dt = new DataTable();
                     SDA2.Fill(dt);
@@ -444,7 +444,7 @@ namespace MissionPlanner.GCSViews
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
 
-            try
+            /*try
             {
                 //show data to DataGridView
                 String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
@@ -459,7 +459,7 @@ namespace MissionPlanner.GCSViews
                 DG_Part.DataSource = dt;
             }
             catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            { MessageBox.Show(ex.Message); }*/
         }
 
         private void BUT_addPart_Click(object sender, EventArgs e)

@@ -29,15 +29,15 @@ namespace MissionPlanner.GCSViews
             MyView = new MainSwitcher(this);            
         }
 
-        public Menu_maintenance_pre(string id_drone)
+        public Menu_maintenance_pre(string id_part)
         {
-            this.id_drone = id_drone;
+            this.id_part = id_part;
             InitializeComponent();
             MyView = new MainSwitcher(this);
         }
 
         Controls.MainSwitcher MyView;
-        private string id_drone;
+        private string id_part;
 
         public static event EventHandler Goto_Drone_Clicked;
 
@@ -80,7 +80,7 @@ namespace MissionPlanner.GCSViews
         {
             //show data to dataGridView
             con.Open();
-            String query = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date FROM Maintainance";
+            String query = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date FROM Maintainance WHRER device_id = id_part";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -93,7 +93,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 byte[] img = null;
-                String query = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
+                String query = "SELECT * FROM Maintainance WHERE device_id = '" + id_part + "'";
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 cmd = new SqlCommand(query, con);
@@ -129,8 +129,8 @@ namespace MissionPlanner.GCSViews
             {
                 string format = "yyyy-MM-dd";
 
-                String query = "INSERT INTO Maintainance (drone_id,maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date) "
-                                           + "VALUES('" + id_drone + "','" + textBox_mainID.Text + "','" + textBox_mainAct.Text + "','" + textBox_price.Text + "','" + textBox_venName.Text + "','" + textBox_venPhone.Text + "','" + textBox_venAdd.Text + "','" + textBox_time.Text + "','" + textBox_respond.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
+                String query = "INSERT INTO Maintainance (device_id,maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date) "
+                                           + "VALUES('" + id_part + "','" + textBox_mainID.Text + "','" + textBox_mainAct.Text + "','" + textBox_price.Text + "','" + textBox_venName.Text + "','" + textBox_venPhone.Text + "','" + textBox_venAdd.Text + "','" + textBox_time.Text + "','" + textBox_respond.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
@@ -144,7 +144,7 @@ namespace MissionPlanner.GCSViews
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
+            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_part + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);
@@ -163,7 +163,7 @@ namespace MissionPlanner.GCSViews
             {
                 string format = "yyyy-MM-dd";
 
-                String query = "INSERT INTO Maintainance SET drone_id = '" + id_drone + "',maintain_id = '" + textBox_mainID.Text + "', maintain_activity = '" + textBox_mainAct.Text + "', maintain_price = '" + textBox_price.Text + "', maintain_venderName = '" + textBox_venName.Text + "', maintain_vendorPhone = '" + textBox_venPhone.Text + "', maintain_venderAdd = '" + textBox_venAdd.Text + "', maintain_length = '" + textBox_time.Text + "', maintain_responder = '" + textBox_respond.Text + "', maintain_date = '" + dateTimePicker.Value.ToString(format) + "') ";
+                String query = "INSERT INTO Maintainance SET device_id = '" + id_part + "',maintain_id = '" + textBox_mainID.Text + "', maintain_activity = '" + textBox_mainAct.Text + "', maintain_price = '" + textBox_price.Text + "', maintain_venderName = '" + textBox_venName.Text + "', maintain_vendorPhone = '" + textBox_venPhone.Text + "', maintain_venderAdd = '" + textBox_venAdd.Text + "', maintain_length = '" + textBox_time.Text + "', maintain_responder = '" + textBox_respond.Text + "', maintain_date = '" + dateTimePicker.Value.ToString(format) + "') ";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
@@ -178,7 +178,7 @@ namespace MissionPlanner.GCSViews
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
+            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_part + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);
@@ -210,7 +210,7 @@ namespace MissionPlanner.GCSViews
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
+            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_part + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);

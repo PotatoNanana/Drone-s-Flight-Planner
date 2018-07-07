@@ -133,7 +133,8 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (img == null)
                 {
-                    String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "')";
+                    String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal) " 
+                        + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "','"+textBox_road+ "','"+textBox_subDistrict+ "','"+textBox_district+ "','"+textBox_province+ "','"+textBox_postal+"')";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
@@ -237,7 +238,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
-                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "',farm_pic = @img where farm_id ='" + id_farm + "'";
+                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "',farm_pic = @img,farm_road = '"+textBox_road+"',farm_subDistrict='"+textBox_subDistrict+ "',farm_district='"+textBox_district+ "',farm_province='"+textBox_province+ "',farm_postal='"+textBox_postal+"' where farm_id ='" + id_farm + "'";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
