@@ -13,9 +13,12 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Form_farm_act : Form
     {
+        DateTime startDate, endDate;
+
         public Form_farm_act()
         {
             InitializeComponent();
+            
         }
         
         public Form_farm_act(string id_farm)
@@ -39,11 +42,7 @@ namespace MissionPlanner.GCSViews
         
         private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
         {
-            //textBox_actID.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
-            //textBox_actName.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
-            //textBox_droneID.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-            //textBox_cap.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
-            //textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+
         }
 
         private void But_add_act_Click(object sender, EventArgs e)
@@ -53,14 +52,15 @@ namespace MissionPlanner.GCSViews
             form_Add_Farm_Act.ShowDialog();
         }
 
-        private void panelFarm_Act_Paint(object sender, PaintEventArgs e)
+        void LoadList()
         {
             //show data to DataGridView
             con.Open();
-           
-            string dateNow = String.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
-            String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'y' ";
+            string startDt = dateTimePicker_startDate.Value.ToString("yyyy-MM-dd");
+            string endDt = dateTimePicker_stopDate.Value.ToString("yyyy-MM-dd");
+            String query = @"SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'y' AND " +
+                " ( action_datetime >= '" + startDt + "' and action_datetime <='" + endDt + "' )";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -68,33 +68,19 @@ namespace MissionPlanner.GCSViews
             con.Close();
         }
 
+        private void panelFarm_Act_Paint(object sender, PaintEventArgs e)
+        {
+            //show data to DataGridView
+            LoadList();
+        }
+
         private void Form_farm_act_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet7.AfterFlight' table. You can move, or remove it, as needed.
-            //this.afterFlightTableAdapter.Fill(this.droneFlightPlannerDataSet7.AfterFlight);
-            // TODO: This line of code loads data into the 'activitySchedule.FlightSchedule' table. You can move, or remove it, as needed.
-            //this.flightScheduleTableAdapter1.Fill(this.activitySchedule.FlightSchedule);
-            // TODO: This line of code loads data into the 'flightSchedule.FlightSchedule' table. You can move, or remove it, as needed.
-            //this.flightScheduleTableAdapter.Fill(this.flightSchedule.FlightSchedule);
-            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet1.schedule_action' table. You can move, or remove it, as needed.
-            //this.schedule_actionTableAdapter.Fill(this.droneFlightPlannerDataSet1.schedule_action);
+            // TODO: This line of code loads data into the '_Drone_s_Flight_PlannerDataSet4.FlightSchedule' table. You can move, or remove it, as needed.
+            this.flightScheduleTableAdapter2.Fill(this._Drone_s_Flight_PlannerDataSet4.FlightSchedule);
 
         }
 
-        //private void button_delete_Click(object sender, EventArgs e)
-        //{
-        //    // delete
-        //    if (MessageBox.Show("Are you want to delete this record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-        //    {
-        //        con.Open();
-        //        string query = "DELETE FROM FlightSchedule where action_id = '" + textBox_actID.Text + "' ";
-        //        SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-        //        SDA.SelectCommand.ExecuteNonQuery();
-        //        con.Close();
-        //        MessageBox.Show("DELETE Record From DB Success!!");
-        //    }
-
-        //}
 
         private void button_edit_Click(object sender, EventArgs e)
         {
@@ -122,6 +108,21 @@ namespace MissionPlanner.GCSViews
         private void textBox_cost_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button_show_Click(object sender, EventArgs e)
+        {
+            LoadList();
+        }
+
+        private void dateTimePicker_startDate_ValueChanged(object sender, EventArgs e)
+        {
+            startDate = dateTimePicker_startDate.Value;
+        }
+
+        private void dateTimePicker_stopDate_ValueChanged(object sender, EventArgs e)
+        {
+            endDate = dateTimePicker_stopDate.Value;
         }
     }
 }

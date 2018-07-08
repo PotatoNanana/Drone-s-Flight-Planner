@@ -70,7 +70,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.maintainanceTableAdapter = new MissionPlanner.maintainaceTableAdapters.MaintainanceTableAdapter();
-            this.button_print = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
@@ -87,7 +86,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1366, 768);
+            this.panel2.Size = new System.Drawing.Size(1340, 520);
             this.panel2.TabIndex = 1;
             // 
             // but_backto_pre
@@ -97,7 +96,7 @@
             this.but_backto_pre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.but_backto_pre.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_backto_pre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.but_backto_pre.Location = new System.Drawing.Point(70, 474);
+            this.but_backto_pre.Location = new System.Drawing.Point(30, 460);
             this.but_backto_pre.Name = "but_backto_pre";
             this.but_backto_pre.Size = new System.Drawing.Size(70, 40);
             this.but_backto_pre.TabIndex = 10;
@@ -110,7 +109,6 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button_print);
             this.panel_Main_farm.Controls.Add(this.textBox7);
             this.panel_Main_farm.Controls.Add(this.textBox_venAdd);
             this.panel_Main_farm.Controls.Add(this.textBox_respond);
@@ -137,9 +135,9 @@
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
             this.panel_Main_farm.Controls.Add(this.panel3);
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_Main_farm.Location = new System.Drawing.Point(60, 40);
+            this.panel_Main_farm.Location = new System.Drawing.Point(30, 30);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(1284, 410);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1280, 410);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_pre_Paint);
             // 
@@ -313,7 +311,7 @@
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_edit.Location = new System.Drawing.Point(721, 327);
+            this.button_edit.Location = new System.Drawing.Point(771, 327);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(130, 40);
             this.button_edit.TabIndex = 32;
@@ -331,7 +329,7 @@
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete.Location = new System.Drawing.Point(897, 327);
+            this.button_delete.Location = new System.Drawing.Point(907, 327);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(130, 40);
             this.button_delete.TabIndex = 31;
@@ -362,6 +360,7 @@
             this.DG_Farm.Size = new System.Drawing.Size(449, 297);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
+            this.DG_Farm.Click += new System.EventHandler(this.DG_Farm_Click);
             // 
             // maintainidDataGridViewTextBoxColumn
             // 
@@ -435,7 +434,7 @@
             this.BUT_add_drone_pre.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_add_drone_pre.ForeColor = System.Drawing.Color.White;
             this.BUT_add_drone_pre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_drone_pre.Location = new System.Drawing.Point(547, 327);
+            this.BUT_add_drone_pre.Location = new System.Drawing.Point(635, 327);
             this.BUT_add_drone_pre.Name = "BUT_add_drone_pre";
             this.BUT_add_drone_pre.Size = new System.Drawing.Size(130, 40);
             this.BUT_add_drone_pre.TabIndex = 6;
@@ -460,7 +459,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1284, 50);
+            this.panel3.Size = new System.Drawing.Size(1280, 50);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -475,7 +474,7 @@
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(1284, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(1280, 50);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ข้อมูลการบำรุงรักษาชิ้นส่วนภายในโดรน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -487,31 +486,15 @@
             // 
             this.maintainanceTableAdapter.ClearBeforeFill = true;
             // 
-            // button_print
-            // 
-            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_print.FlatAppearance.BorderSize = 0;
-            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_print.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_print.Location = new System.Drawing.Point(1066, 327);
-            this.button_print.Name = "button_print";
-            this.button_print.Size = new System.Drawing.Size(130, 40);
-            this.button_print.TabIndex = 70;
-            this.button_print.Text = "พิมพ์รายงาน";
-            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_print.UseVisualStyleBackColor = false;
-            // 
             // Menu_maintenance_pre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.MinimumSize = new System.Drawing.Size(1366, 768);
+            this.MaximumSize = new System.Drawing.Size(1340, 520);
+            this.MinimumSize = new System.Drawing.Size(1340, 520);
             this.Name = "Menu_maintenance_pre";
-            this.Size = new System.Drawing.Size(1366, 768);
+            this.Size = new System.Drawing.Size(1340, 520);
             this.panel2.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
@@ -565,6 +548,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button_print;
     }
 }

@@ -82,7 +82,12 @@
             this.Controls.Add(this.Goto_main);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Validation";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

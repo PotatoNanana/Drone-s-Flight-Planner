@@ -13,7 +13,7 @@ namespace Tutorial.SqlConn
         {
             string datasource = @"NAPAT";
 
-            string database = "DroneFlightPlanner";
+            string database = "Drone-s-Flight-Planner";
             string username = "";
             string password = "";
 
