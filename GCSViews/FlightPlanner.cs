@@ -7404,9 +7404,9 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrict," +
                 "farm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost,distance,area) " + 
                 "VALUES('" + "TID"+DateTime.Now.ToString("yyyyMMddTHHmmss") + "','" + textBox_farmID.Text + "','" + farm_name + "','" + farm_host + "','" + 
-                farm_address + "','" + farm_road + "','" + farm_subDistrict + "','" + farm_subDistrict + "','" + farm_district + "','" + farm_province 
-                + "','" + farm_postal + textBox_droneID.Text + "','" + drone_name + "','" + action_noT + "','" + action_nameT + "','" + material_nameT + "','" +
-                action_capacityT + "','" + action_costT + "','" + distanceTotal +"','" + areaTotal +"')";
+                farm_address + "','" + farm_road + "','" + farm_subDistrict + "','" + farm_district + "','" + farm_province 
+                + "','" + farm_postal +"','"+ textBox_droneID.Text + "','" + drone_name + "','" + action_noT + "','" + action_nameT + "','" + material_nameT + "'," +
+                action_capacityT + ",'" + action_costT + "','" + distanceTotal +"','" + areaTotal +"')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
             con.Close(); 
