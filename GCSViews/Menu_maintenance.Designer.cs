@@ -35,7 +35,6 @@ namespace MissionPlanner.GCSViews
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.button_print = new System.Windows.Forms.Button();
             this.button_deletePart = new System.Windows.Forms.Button();
             this.button_editPart = new System.Windows.Forms.Button();
             this.BUT_addPart = new System.Windows.Forms.Button();
@@ -72,7 +71,6 @@ namespace MissionPlanner.GCSViews
             this.textBox_partName = new System.Windows.Forms.TextBox();
             this.textBox_partPosition = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox_partID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -83,13 +81,10 @@ namespace MissionPlanner.GCSViews
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.textBox_droneName = new System.Windows.Forms.TextBox();
-            this.textBox_droneID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.button_editDrone = new System.Windows.Forms.Button();
             this.button_deleteDrone = new System.Windows.Forms.Button();
             this.DG_Drone = new MissionPlanner.Controls.MyDataGridView();
@@ -142,7 +137,6 @@ namespace MissionPlanner.GCSViews
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button_print);
             this.panel_Main_farm.Controls.Add(this.button_deletePart);
             this.panel_Main_farm.Controls.Add(this.button_editPart);
             this.panel_Main_farm.Controls.Add(this.BUT_addPart);
@@ -165,7 +159,6 @@ namespace MissionPlanner.GCSViews
             this.panel_Main_farm.Controls.Add(this.textBox_partName);
             this.panel_Main_farm.Controls.Add(this.textBox_partPosition);
             this.panel_Main_farm.Controls.Add(this.label15);
-            this.panel_Main_farm.Controls.Add(this.textBox_partID);
             this.panel_Main_farm.Controls.Add(this.label6);
             this.panel_Main_farm.Controls.Add(this.label14);
             this.panel_Main_farm.Controls.Add(this.label13);
@@ -176,13 +169,10 @@ namespace MissionPlanner.GCSViews
             this.panel_Main_farm.Controls.Add(this.label8);
             this.panel_Main_farm.Controls.Add(this.label10);
             this.panel_Main_farm.Controls.Add(this.label9);
-            this.panel_Main_farm.Controls.Add(this.label16);
             this.panel_Main_farm.Controls.Add(this.label3);
             this.panel_Main_farm.Controls.Add(this.pictureBox);
             this.panel_Main_farm.Controls.Add(this.textBox_droneName);
-            this.panel_Main_farm.Controls.Add(this.textBox_droneID);
             this.panel_Main_farm.Controls.Add(this.label2);
-            this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.button_editDrone);
             this.panel_Main_farm.Controls.Add(this.button_deleteDrone);
             this.panel_Main_farm.Controls.Add(this.DG_Drone);
@@ -196,23 +186,6 @@ namespace MissionPlanner.GCSViews
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
             // 
-            // button_print
-            // 
-            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_print.FlatAppearance.BorderSize = 0;
-            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_print.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_print.Location = new System.Drawing.Point(804, 557);
-            this.button_print.Name = "button_print";
-            this.button_print.Size = new System.Drawing.Size(102, 39);
-            this.button_print.TabIndex = 73;
-            this.button_print.Text = "พิมพ์รายงาน";
-            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_print.UseVisualStyleBackColor = false;
-            // 
             // button_deletePart
             // 
             this.button_deletePart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
@@ -222,7 +195,7 @@ namespace MissionPlanner.GCSViews
             this.button_deletePart.ForeColor = System.Drawing.Color.White;
             this.button_deletePart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_deletePart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_deletePart.Location = new System.Drawing.Point(776, 615);
+            this.button_deletePart.Location = new System.Drawing.Point(736, 556);
             this.button_deletePart.Name = "button_deletePart";
             this.button_deletePart.Size = new System.Drawing.Size(130, 40);
             this.button_deletePart.TabIndex = 72;
@@ -240,7 +213,7 @@ namespace MissionPlanner.GCSViews
             this.button_editPart.ForeColor = System.Drawing.Color.White;
             this.button_editPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_editPart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_editPart.Location = new System.Drawing.Point(616, 615);
+            this.button_editPart.Location = new System.Drawing.Point(600, 556);
             this.button_editPart.Name = "button_editPart";
             this.button_editPart.Size = new System.Drawing.Size(130, 40);
             this.button_editPart.TabIndex = 71;
@@ -257,7 +230,7 @@ namespace MissionPlanner.GCSViews
             this.BUT_addPart.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_addPart.ForeColor = System.Drawing.Color.White;
             this.BUT_addPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_addPart.Location = new System.Drawing.Point(459, 615);
+            this.BUT_addPart.Location = new System.Drawing.Point(464, 556);
             this.BUT_addPart.Name = "BUT_addPart";
             this.BUT_addPart.Size = new System.Drawing.Size(130, 40);
             this.BUT_addPart.TabIndex = 70;
@@ -274,7 +247,7 @@ namespace MissionPlanner.GCSViews
             this.button_MaintainPart.Font = new System.Drawing.Font("PJ Standard", 16F, System.Drawing.FontStyle.Bold);
             this.button_MaintainPart.ForeColor = System.Drawing.Color.White;
             this.button_MaintainPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_MaintainPart.Location = new System.Drawing.Point(506, 557);
+            this.button_MaintainPart.Location = new System.Drawing.Point(526, 602);
             this.button_MaintainPart.Name = "button_MaintainPart";
             this.button_MaintainPart.Size = new System.Drawing.Size(267, 39);
             this.button_MaintainPart.TabIndex = 69;
@@ -285,6 +258,9 @@ namespace MissionPlanner.GCSViews
             // 
             // DG_Part
             // 
+            this.DG_Part.AllowUserToAddRows = false;
+            this.DG_Part.AllowUserToDeleteRows = false;
+            this.DG_Part.AllowUserToOrderColumns = true;
             this.DG_Part.AutoGenerateColumns = false;
             this.DG_Part.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_Part.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -304,82 +280,96 @@ namespace MissionPlanner.GCSViews
             this.DG_Part.DataSource = this.deviceListBindingSource;
             this.DG_Part.Location = new System.Drawing.Point(482, 70);
             this.DG_Part.Name = "DG_Part";
+            this.DG_Part.ReadOnly = true;
             this.DG_Part.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Part.Size = new System.Drawing.Size(757, 172);
             this.DG_Part.TabIndex = 68;
             this.DG_Part.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Part_CellContentClick);
+            this.DG_Part.Click += new System.EventHandler(this.DG_Part_Click);
             // 
             // deviceidDataGridViewTextBoxColumn
             // 
             this.deviceidDataGridViewTextBoxColumn.DataPropertyName = "device_id";
             this.deviceidDataGridViewTextBoxColumn.HeaderText = "รหัสชิ้นส่วนโดรน";
             this.deviceidDataGridViewTextBoxColumn.Name = "deviceidDataGridViewTextBoxColumn";
+            this.deviceidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // devicenameDataGridViewTextBoxColumn
             // 
             this.devicenameDataGridViewTextBoxColumn.DataPropertyName = "device_name";
             this.devicenameDataGridViewTextBoxColumn.HeaderText = "ชื่อชิ้นส่วนโดรน";
             this.devicenameDataGridViewTextBoxColumn.Name = "devicenameDataGridViewTextBoxColumn";
+            this.devicenameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // devicepositionDataGridViewTextBoxColumn
             // 
             this.devicepositionDataGridViewTextBoxColumn.DataPropertyName = "device_position";
             this.devicepositionDataGridViewTextBoxColumn.HeaderText = "ตำแหน่งชิ้นส่วนโดรน";
             this.devicepositionDataGridViewTextBoxColumn.Name = "devicepositionDataGridViewTextBoxColumn";
+            this.devicepositionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // devicepriceDataGridViewTextBoxColumn
             // 
             this.devicepriceDataGridViewTextBoxColumn.DataPropertyName = "device_price";
             this.devicepriceDataGridViewTextBoxColumn.HeaderText = "ราคาชิ้นส่วนโดรน";
             this.devicepriceDataGridViewTextBoxColumn.Name = "devicepriceDataGridViewTextBoxColumn";
+            this.devicepriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // devicebuyDateDataGridViewTextBoxColumn
             // 
             this.devicebuyDateDataGridViewTextBoxColumn.DataPropertyName = "device_buyDate";
             this.devicebuyDateDataGridViewTextBoxColumn.HeaderText = "วันที่ลงทะเบียน";
             this.devicebuyDateDataGridViewTextBoxColumn.Name = "devicebuyDateDataGridViewTextBoxColumn";
+            this.devicebuyDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // devicestartDateDataGridViewTextBoxColumn
             // 
             this.devicestartDateDataGridViewTextBoxColumn.DataPropertyName = "device_startDate";
             this.devicestartDateDataGridViewTextBoxColumn.HeaderText = "วันที่เริ่มใช้งาน";
             this.devicestartDateDataGridViewTextBoxColumn.Name = "devicestartDateDataGridViewTextBoxColumn";
+            this.devicestartDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // deviceexpDateDataGridViewTextBoxColumn
             // 
             this.deviceexpDateDataGridViewTextBoxColumn.DataPropertyName = "device_expDate";
             this.deviceexpDateDataGridViewTextBoxColumn.HeaderText = "วันที่ครบกำหนอายุการใช้งาน";
             this.deviceexpDateDataGridViewTextBoxColumn.Name = "deviceexpDateDataGridViewTextBoxColumn";
+            this.deviceexpDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // devicealarmDataGridViewTextBoxColumn
             // 
             this.devicealarmDataGridViewTextBoxColumn.DataPropertyName = "device_alarm";
             this.devicealarmDataGridViewTextBoxColumn.HeaderText = "การแจ้งเตือนชิ้นส่วนโดรน";
             this.devicealarmDataGridViewTextBoxColumn.Name = "devicealarmDataGridViewTextBoxColumn";
+            this.devicealarmDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // vendernameDataGridViewTextBoxColumn
             // 
             this.vendernameDataGridViewTextBoxColumn.DataPropertyName = "vender_name";
             this.vendernameDataGridViewTextBoxColumn.HeaderText = "ชื่อตัวแทนจำหน่าย";
             this.vendernameDataGridViewTextBoxColumn.Name = "vendernameDataGridViewTextBoxColumn";
+            this.vendernameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // venderaddDataGridViewTextBoxColumn
             // 
             this.venderaddDataGridViewTextBoxColumn.DataPropertyName = "vender_add";
             this.venderaddDataGridViewTextBoxColumn.HeaderText = "ที่อยู่ตัวแทนจำหน่าย";
             this.venderaddDataGridViewTextBoxColumn.Name = "venderaddDataGridViewTextBoxColumn";
+            this.venderaddDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // venderphoneDataGridViewTextBoxColumn
             // 
             this.venderphoneDataGridViewTextBoxColumn.DataPropertyName = "vender_phone";
             this.venderphoneDataGridViewTextBoxColumn.HeaderText = "เบอร์โทรศัพท์ตัวแทนจำหน่าย";
             this.venderphoneDataGridViewTextBoxColumn.Name = "venderphoneDataGridViewTextBoxColumn";
+            this.venderphoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // deviceresponderDataGridViewTextBoxColumn
             // 
             this.deviceresponderDataGridViewTextBoxColumn.DataPropertyName = "device_responder";
             this.deviceresponderDataGridViewTextBoxColumn.HeaderText = "ชื่อผู้ติดต่อกับตัวแทนจำหน่าย";
             this.deviceresponderDataGridViewTextBoxColumn.Name = "deviceresponderDataGridViewTextBoxColumn";
+            this.deviceresponderDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // deviceListBindingSource
             // 
@@ -400,7 +390,7 @@ namespace MissionPlanner.GCSViews
             this.button_serchDrrone.ForeColor = System.Drawing.Color.White;
             this.button_serchDrrone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_serchDrrone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serchDrrone.Location = new System.Drawing.Point(26, 530);
+            this.button_serchDrrone.Location = new System.Drawing.Point(40, 485);
             this.button_serchDrrone.Name = "button_serchDrrone";
             this.button_serchDrrone.Size = new System.Drawing.Size(80, 40);
             this.button_serchDrrone.TabIndex = 67;
@@ -442,7 +432,7 @@ namespace MissionPlanner.GCSViews
             this.button_serchPart.ForeColor = System.Drawing.Color.White;
             this.button_serchPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_serchPart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serchPart.Location = new System.Drawing.Point(1228, 615);
+            this.button_serchPart.Location = new System.Drawing.Point(1189, 581);
             this.button_serchPart.Name = "button_serchPart";
             this.button_serchPart.Size = new System.Drawing.Size(80, 40);
             this.button_serchPart.TabIndex = 64;
@@ -455,7 +445,7 @@ namespace MissionPlanner.GCSViews
             // 
             this.pictureBox_part.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox_part.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_part.InitialImage")));
-            this.pictureBox_part.Location = new System.Drawing.Point(983, 462);
+            this.pictureBox_part.Location = new System.Drawing.Point(963, 425);
             this.pictureBox_part.Name = "pictureBox_part";
             this.pictureBox_part.Size = new System.Drawing.Size(220, 196);
             this.pictureBox_part.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -464,32 +454,32 @@ namespace MissionPlanner.GCSViews
             // 
             // dateTimePicker_expDate
             // 
-            this.dateTimePicker_expDate.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker_expDate.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_expDate.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker_expDate.Font = new System.Drawing.Font("CordiaUPC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_expDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_expDate.Location = new System.Drawing.Point(622, 417);
             this.dateTimePicker_expDate.Name = "dateTimePicker_expDate";
-            this.dateTimePicker_expDate.Size = new System.Drawing.Size(200, 34);
+            this.dateTimePicker_expDate.Size = new System.Drawing.Size(200, 37);
             this.dateTimePicker_expDate.TabIndex = 62;
             // 
             // dateTimePicker_startDate
             // 
-            this.dateTimePicker_startDate.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker_startDate.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_startDate.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker_startDate.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_startDate.Location = new System.Drawing.Point(622, 377);
             this.dateTimePicker_startDate.Name = "dateTimePicker_startDate";
-            this.dateTimePicker_startDate.Size = new System.Drawing.Size(200, 34);
+            this.dateTimePicker_startDate.Size = new System.Drawing.Size(200, 37);
             this.dateTimePicker_startDate.TabIndex = 61;
             // 
             // dateTimePicker_reg
             // 
-            this.dateTimePicker_reg.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker_reg.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_reg.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker_reg.Font = new System.Drawing.Font("CordiaUPC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_reg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_reg.Location = new System.Drawing.Point(622, 337);
             this.dateTimePicker_reg.Name = "dateTimePicker_reg";
-            this.dateTimePicker_reg.Size = new System.Drawing.Size(200, 34);
+            this.dateTimePicker_reg.Size = new System.Drawing.Size(200, 37);
             this.dateTimePicker_reg.TabIndex = 60;
             // 
             // textBox7
@@ -510,7 +500,7 @@ namespace MissionPlanner.GCSViews
             // textBox_respon
             // 
             this.textBox_respon.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_respon.Location = new System.Drawing.Point(1039, 419);
+            this.textBox_respon.Location = new System.Drawing.Point(1019, 382);
             this.textBox_respon.Name = "textBox_respon";
             this.textBox_respon.Size = new System.Drawing.Size(220, 34);
             this.textBox_respon.TabIndex = 56;
@@ -518,7 +508,7 @@ namespace MissionPlanner.GCSViews
             // textBox_venAdd
             // 
             this.textBox_venAdd.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_venAdd.Location = new System.Drawing.Point(1039, 379);
+            this.textBox_venAdd.Location = new System.Drawing.Point(1019, 342);
             this.textBox_venAdd.Name = "textBox_venAdd";
             this.textBox_venAdd.Size = new System.Drawing.Size(220, 34);
             this.textBox_venAdd.TabIndex = 55;
@@ -526,7 +516,7 @@ namespace MissionPlanner.GCSViews
             // textBox_venPhone
             // 
             this.textBox_venPhone.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_venPhone.Location = new System.Drawing.Point(1039, 339);
+            this.textBox_venPhone.Location = new System.Drawing.Point(1019, 302);
             this.textBox_venPhone.Name = "textBox_venPhone";
             this.textBox_venPhone.Size = new System.Drawing.Size(220, 34);
             this.textBox_venPhone.TabIndex = 54;
@@ -534,7 +524,7 @@ namespace MissionPlanner.GCSViews
             // textBox_venName
             // 
             this.textBox_venName.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_venName.Location = new System.Drawing.Point(1039, 299);
+            this.textBox_venName.Location = new System.Drawing.Point(1019, 262);
             this.textBox_venName.Name = "textBox_venName";
             this.textBox_venName.Size = new System.Drawing.Size(220, 34);
             this.textBox_venName.TabIndex = 59;
@@ -542,9 +532,9 @@ namespace MissionPlanner.GCSViews
             // textBox_partName
             // 
             this.textBox_partName.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_partName.Location = new System.Drawing.Point(1039, 259);
+            this.textBox_partName.Location = new System.Drawing.Point(622, 262);
             this.textBox_partName.Name = "textBox_partName";
-            this.textBox_partName.Size = new System.Drawing.Size(220, 34);
+            this.textBox_partName.Size = new System.Drawing.Size(200, 34);
             this.textBox_partName.TabIndex = 53;
             // 
             // textBox_partPosition
@@ -559,19 +549,11 @@ namespace MissionPlanner.GCSViews
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label15.Location = new System.Drawing.Point(863, 422);
+            this.label15.Location = new System.Drawing.Point(843, 385);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(174, 27);
             this.label15.TabIndex = 49;
             this.label15.Text = "ชื่อผู้ติดต่อกับตัวแทนจำหน่าย";
-            // 
-            // textBox_partID
-            // 
-            this.textBox_partID.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_partID.Location = new System.Drawing.Point(622, 259);
-            this.textBox_partID.Name = "textBox_partID";
-            this.textBox_partID.Size = new System.Drawing.Size(200, 34);
-            this.textBox_partID.TabIndex = 51;
             // 
             // label6
             // 
@@ -587,7 +569,7 @@ namespace MissionPlanner.GCSViews
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label14.Location = new System.Drawing.Point(863, 462);
+            this.label14.Location = new System.Drawing.Point(843, 425);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(98, 27);
             this.label14.TabIndex = 47;
@@ -597,7 +579,7 @@ namespace MissionPlanner.GCSViews
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label13.Location = new System.Drawing.Point(863, 382);
+            this.label13.Location = new System.Drawing.Point(843, 345);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(122, 27);
             this.label13.TabIndex = 46;
@@ -617,7 +599,7 @@ namespace MissionPlanner.GCSViews
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label12.Location = new System.Drawing.Point(863, 342);
+            this.label12.Location = new System.Drawing.Point(843, 305);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(150, 27);
             this.label12.TabIndex = 44;
@@ -637,7 +619,7 @@ namespace MissionPlanner.GCSViews
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label11.Location = new System.Drawing.Point(863, 302);
+            this.label11.Location = new System.Drawing.Point(843, 265);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(114, 27);
             this.label11.TabIndex = 42;
@@ -657,7 +639,7 @@ namespace MissionPlanner.GCSViews
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label10.Location = new System.Drawing.Point(863, 262);
+            this.label10.Location = new System.Drawing.Point(459, 265);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 27);
             this.label10.TabIndex = 40;
@@ -673,21 +655,11 @@ namespace MissionPlanner.GCSViews
             this.label9.TabIndex = 50;
             this.label9.Text = "ตำแหน่งชิ้นส่วนโดรน";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label16.Location = new System.Drawing.Point(459, 262);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(107, 27);
-            this.label16.TabIndex = 39;
-            this.label16.Text = "รหัสชิ้นส่วนโดรน";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(22, 367);
+            this.label3.Location = new System.Drawing.Point(36, 322);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 26);
             this.label3.TabIndex = 38;
@@ -697,7 +669,7 @@ namespace MissionPlanner.GCSViews
             // 
             this.pictureBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.InitialImage")));
-            this.pictureBox.Location = new System.Drawing.Point(122, 367);
+            this.pictureBox.Location = new System.Drawing.Point(136, 322);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(223, 203);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -707,38 +679,20 @@ namespace MissionPlanner.GCSViews
             // textBox_droneName
             // 
             this.textBox_droneName.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_droneName.Location = new System.Drawing.Point(122, 313);
+            this.textBox_droneName.Location = new System.Drawing.Point(136, 268);
             this.textBox_droneName.Name = "textBox_droneName";
             this.textBox_droneName.Size = new System.Drawing.Size(223, 34);
             this.textBox_droneName.TabIndex = 16;
-            // 
-            // textBox_droneID
-            // 
-            this.textBox_droneID.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_droneID.Location = new System.Drawing.Point(122, 262);
-            this.textBox_droneID.Name = "textBox_droneID";
-            this.textBox_droneID.Size = new System.Drawing.Size(223, 34);
-            this.textBox_droneID.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(22, 319);
+            this.label2.Location = new System.Drawing.Point(36, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 26);
             this.label2.TabIndex = 14;
             this.label2.Text = "ชื่อโดรน";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(22, 268);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 26);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "รหัสโดรน";
             // 
             // button_editDrone
             // 
@@ -748,7 +702,7 @@ namespace MissionPlanner.GCSViews
             this.button_editDrone.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_editDrone.ForeColor = System.Drawing.Color.White;
             this.button_editDrone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_editDrone.Location = new System.Drawing.Point(136, 606);
+            this.button_editDrone.Location = new System.Drawing.Point(153, 556);
             this.button_editDrone.Name = "button_editDrone";
             this.button_editDrone.Size = new System.Drawing.Size(101, 40);
             this.button_editDrone.TabIndex = 12;
@@ -765,7 +719,7 @@ namespace MissionPlanner.GCSViews
             this.button_deleteDrone.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_deleteDrone.ForeColor = System.Drawing.Color.White;
             this.button_deleteDrone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_deleteDrone.Location = new System.Drawing.Point(243, 606);
+            this.button_deleteDrone.Location = new System.Drawing.Point(260, 556);
             this.button_deleteDrone.Name = "button_deleteDrone";
             this.button_deleteDrone.Size = new System.Drawing.Size(99, 40);
             this.button_deleteDrone.TabIndex = 11;
@@ -776,6 +730,9 @@ namespace MissionPlanner.GCSViews
             // 
             // DG_Drone
             // 
+            this.DG_Drone.AllowUserToAddRows = false;
+            this.DG_Drone.AllowUserToDeleteRows = false;
+            this.DG_Drone.AllowUserToOrderColumns = true;
             this.DG_Drone.AutoGenerateColumns = false;
             this.DG_Drone.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_Drone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -785,22 +742,26 @@ namespace MissionPlanner.GCSViews
             this.DG_Drone.DataSource = this.droneBindingSource1;
             this.DG_Drone.Location = new System.Drawing.Point(35, 70);
             this.DG_Drone.Name = "DG_Drone";
+            this.DG_Drone.ReadOnly = true;
             this.DG_Drone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Drone.Size = new System.Drawing.Size(298, 172);
             this.DG_Drone.TabIndex = 9;
             this.DG_Drone.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Drone_CellContentClick);
+            this.DG_Drone.Click += new System.EventHandler(this.DG_Drone_Click);
             // 
             // droneidDataGridViewTextBoxColumn
             // 
             this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
             this.droneidDataGridViewTextBoxColumn.HeaderText = "รหัสโดรน";
             this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            this.droneidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dronenameDataGridViewTextBoxColumn
             // 
             this.dronenameDataGridViewTextBoxColumn.DataPropertyName = "drone_name";
             this.dronenameDataGridViewTextBoxColumn.HeaderText = "ชื่อโดรน";
             this.dronenameDataGridViewTextBoxColumn.Name = "dronenameDataGridViewTextBoxColumn";
+            this.dronenameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // droneBindingSource1
             // 
@@ -820,7 +781,7 @@ namespace MissionPlanner.GCSViews
             this.BUT_drone_addDrone.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_drone_addDrone.ForeColor = System.Drawing.Color.White;
             this.BUT_drone_addDrone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_drone_addDrone.Location = new System.Drawing.Point(22, 606);
+            this.BUT_drone_addDrone.Location = new System.Drawing.Point(39, 556);
             this.BUT_drone_addDrone.Name = "BUT_drone_addDrone";
             this.BUT_drone_addDrone.Size = new System.Drawing.Size(108, 40);
             this.BUT_drone_addDrone.TabIndex = 6;
@@ -928,9 +889,7 @@ namespace MissionPlanner.GCSViews
         private DroneFlightPlannerDataSetTableAdapters.DroneTableAdapter droneTableAdapter;
         private System.Windows.Forms.Button button_editDrone;
         private System.Windows.Forms.Button button_deleteDrone;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_droneID;
         private System.Windows.Forms.TextBox textBox_droneName;
         private System.Windows.Forms.DataGridViewTextBoxColumn droneidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dronenameDataGridViewTextBoxColumn;
@@ -955,7 +914,6 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.TextBox textBox_partName;
         private System.Windows.Forms.TextBox textBox_partPosition;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox_partID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -966,7 +924,6 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button_serchDrrone;
         private Controls.MyDataGridView DG_Part;
         private System.Windows.Forms.DataGridViewTextBoxColumn deviceidDataGridViewTextBoxColumn;
@@ -990,6 +947,5 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.Button button_deletePart;
         private System.Windows.Forms.Panel panel1;
         private EventHandler button_report_Click_1;
-        private System.Windows.Forms.Button button_print;
     }
 }

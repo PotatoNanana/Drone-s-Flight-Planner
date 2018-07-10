@@ -63,51 +63,12 @@ namespace MissionPlanner.GCSViews
 
         private void panelFarm_Paint(object sender, PaintEventArgs e)
         {
-            //show data to DataGridView
-            con.Open();
-            String query = "SELECT * FROM Farm";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Farm.DataSource = dt;
-            con.Close();
+           
         }
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            //click and show  data to dataGridView
-            try
-            {
-                byte[] img = null;
-                String query = "SELECT * FROM Farm where farm_id='"+ DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
-                if (con.State != ConnectionState.Open)
-                     { con.Open(); }
-                cmd = new SqlCommand(query, con);
-                SqlDataReader reader = cmd.ExecuteReader(); 
-                reader.Read();
-                if (reader.HasRows)
-                {
-                    textBox_farmID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-                    id_farm = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-                    textBox_farmName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-                    name_farm = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-                    textBox_farmLocation.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
-                    textBox_farmHost.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
-                    img = (byte[])(reader[4]);
-                    if (img == null)
-                    { pictureBox.Image = null; }
-                    else
-                    {
-                        MemoryStream ms = new MemoryStream(img);
-                        pictureBox.Image = Image.FromStream(ms);
-                    }
-                }
-                else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
-                con.Close();
-            }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -127,13 +88,27 @@ namespace MissionPlanner.GCSViews
                     BinaryReader br = new BinaryReader(fs);
                     img = br.ReadBytes((int)fs.Length);
                 }
-                if (textBox_farmID.Text == "" || textBox_farmName.Text == "")
+                if (textBox_farmName.Text == "")
                 {
-                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสฟาร์มหรือชื่อฟาร์มไม่ครบถ้วน !!");
+                    MessageBox.Show("คุณยังไม่กรอกข้อมูลชื่อฟาร์ม !!");
                 }
                 else if (img == null)
                 {
-                    String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "')";
+                    String query = @"INSERT INTO Farm (farm_id,farm_name,farm_host
+                       ,[farm_address]
+                       ,[farm_road]
+                       ,[farm_subDistrict]
+                       ,[farm_district]
+                       ,[farm_province]
+                       ,[farm_postal]) " + "VALUES( (select CONCAT('F0', MAX(SUBSTRING(farm_id, 3, 5)) + 1) from Farm) ,'"
+                       + textBox_farmName.Text + "','" 
+                       + textBox_farmHost.Text + "','"
+                       + textBox1.Text + "','" 
+                       + textBox2.Text + "','" 
+                       + textBox3.Text + "','"
+                       + textBox4.Text + "','"
+                       + textBox5.Text + "','"
+                       + textBox6.Text + "' )";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
@@ -143,7 +118,21 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
-                    String query = "INSERT INTO Farm (farm_id,farm_name,farm_location,farm_host,farm_pic) " + "VALUES('" + textBox_farmID.Text + "','" + textBox_farmName.Text + "','" + textBox_farmLocation.Text + "','" + textBox_farmHost.Text + "',@img)";
+                    String query =@"INSERT INTO Farm (farm_id,farm_name,farm_host ,[farm_address]
+                       ,[farm_road]
+                       ,[farm_subDistrict]
+                       ,[farm_district]
+                       ,[farm_province]
+                       ,[farm_postal] , farm_pic) " + "VALUES( (select CONCAT('F0', MAX(SUBSTRING(farm_id, 2, 5)) + 1) from Farm) ,'"
+                       + textBox_farmName.Text + "','"
+                       + textBox_farmHost.Text + "','"
+                       + textBox1.Text + "','"
+                       + textBox2.Text + "','"
+                       + textBox3.Text + "','"
+                       + textBox4.Text + "','"
+                       + textBox5.Text + "','"
+                       + textBox6.Text + "'"
+                       + ",@img)";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
@@ -187,7 +176,7 @@ namespace MissionPlanner.GCSViews
                 if (MessageBox.Show("คุณต้องการลบฟาร์มนี้ใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
-                    String query = "DELETE FROM Farm where farm_id = '" + textBox_farmID.Text + "' ";
+                    String query = "DELETE FROM Farm where farm_id = '" + DG_Farm.SelectedRows[0].Cells[0].Value.ToString() + "' ";
                     SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                     SDA.SelectCommand.ExecuteNonQuery();
                     con.Close();
@@ -221,13 +210,20 @@ namespace MissionPlanner.GCSViews
                     img = br.ReadBytes((int)fs.Length);
                 }
 
-                if (textBox_farmID.Text == "" || textBox_farmName.Text == "")
+                if (textBox_farmName.Text == "")
                 {
-                    MessageBox.Show("คุณยังกรอกข้อมูลรหัสฟาร์มหรือชื่อฟาร์มไม่ครบถ้วน !!");
+                    MessageBox.Show("คุณยังไม่กรอกข้อมูลชื่อฟาร์ม !!");
                 }
                 else if (img == null)
                 {
-                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "' where farm_id ='" + id_farm + "'";
+                    String query = @"UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_host = '" + textBox_farmHost.Text
+                         + "',farm_address='" + textBox1.Text
+                         + "',farm_road='" + textBox2.Text
+                          + "',farm_subDistrict='" + textBox3.Text
+                           + "',farm_district='" + textBox4.Text
+                            + "',farm_province='" + textBox5.Text
+                             + "',farm_postal='" + textBox6.Text
+                        + "' where farm_id ='" + DG_Farm.SelectedRows[0].Cells[0].Value.ToString() + "'";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
@@ -237,7 +233,14 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
-                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_location = '" + textBox_farmLocation.Text + "',farm_host = '" + textBox_farmHost.Text + "',farm_pic = @img where farm_id ='" + id_farm + "'";
+                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_host = '" + textBox_farmHost.Text 
+                        + "',farm_address='" + textBox1.Text
+                         + "',farm_road='" + textBox2.Text
+                          + "',farm_subDistrict='" + textBox3.Text
+                           + "',farm_district='" + textBox4.Text
+                            + "',farm_province='" + textBox5.Text
+                             + "',farm_postal='" + textBox6.Text
+                        + "',farm_pic = @img where farm_id ='" + DG_Farm.SelectedRows[0].Cells[0].Value.ToString() + "'";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
@@ -279,7 +282,82 @@ namespace MissionPlanner.GCSViews
 
         public string farmIDText
         {
-            get { return textBox_farmID.Text; }
+            get { return id_farm; }
+        }
+
+        private void DG_Farm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //click and show  data to dataGridView
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                try
+                {
+                    DG_Farm.MultiSelect = false;
+                    byte[] img = null;
+                    String query = "SELECT * FROM Farm where farm_id='" + DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
+                   
+                    cmd = new SqlCommand(query, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    reader.Read();
+                    if (reader.HasRows)
+                    {
+                        id_farm = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+                        textBox_farmName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                        name_farm = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                        textBox_farmHost.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
+                        textBox1.Text = reader[4].ToString();
+                        textBox2.Text = reader[5].ToString();
+                        textBox3.Text = reader[6].ToString();
+                        textBox4.Text = reader[7].ToString();
+                        textBox5.Text = reader[8].ToString();
+                        textBox6.Text = reader[9].ToString();
+
+                        if (!Convert.IsDBNull(reader[3]))
+                        {
+                            img = (byte[])(reader[3]);
+                        }
+                        //if (reader[3] != null)
+
+                        if (img == null)
+                        { pictureBox.Image = null; }
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            pictureBox.Image = Image.FromStream(ms);
+                        }
+                    }
+                    else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    if ((con != null) &&(con.State == ConnectionState.Open))
+                    { con.Close(); }
+                }
+
+            }
+            catch (Exception ex)
+            {
+ 
+            }
+        }
+
+        private void Menu_farm_Load(object sender, EventArgs e)
+        {
+            //show data to DataGridView
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            String query = "SELECT * FROM Farm";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
         }
     }
 }

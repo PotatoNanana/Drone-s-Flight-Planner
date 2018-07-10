@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="View_flightschedule" targetNamespace="http://tempuri.org/View_flightschedule.xsd" xmlns:mstns="http://tempuri.org/View_flightschedule.xsd" xmlns="http://tempuri.org/View_flightschedule.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Drone_s_Flight_PlannerConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Drone_s_Flight_PlannerConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MissionPlanner.Properties.Settings.GlobalReference.Default.Drone_s_Flight_PlannerConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_flightscheduleTableAdapter" GeneratorDataComponentClassName="View_flightscheduleTableAdapter" Name="View_flightschedule" UserDataComponentName="View_flightscheduleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Drone_s_Flight_PlannerConnectionString (Settings)" DbObjectName="[Drone-s-Flight-Planner].dbo.View_flightschedule" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT drone_name, drone_id, farm_name, farm_id, Expr1, Expr2 FROM dbo.View_flightschedule</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="drone_name" DataSetColumn="drone_name" />
+              <Mapping SourceColumn="drone_id" DataSetColumn="drone_id" />
+              <Mapping SourceColumn="farm_name" DataSetColumn="farm_name" />
+              <Mapping SourceColumn="farm_id" DataSetColumn="farm_id" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="View_flightschedule" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="View_flightschedule" msprop:Generator_UserDSName="View_flightschedule">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_flightschedule" msprop:Generator_TableClassName="View_flightscheduleDataTable" msprop:Generator_TableVarName="tableView_flightschedule" msprop:Generator_TablePropName="_View_flightschedule" msprop:Generator_RowDeletingName="View_flightscheduleRowDeleting" msprop:Generator_RowChangingName="View_flightscheduleRowChanging" msprop:Generator_RowEvHandlerName="View_flightscheduleRowChangeEventHandler" msprop:Generator_RowDeletedName="View_flightscheduleRowDeleted" msprop:Generator_UserTableName="View_flightschedule" msprop:Generator_RowChangedName="View_flightscheduleRowChanged" msprop:Generator_RowEvArgName="View_flightscheduleRowChangeEvent" msprop:Generator_RowClassName="View_flightscheduleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="drone_name" msprop:Generator_ColumnVarNameInTable="columndrone_name" msprop:Generator_ColumnPropNameInRow="drone_name" msprop:Generator_ColumnPropNameInTable="drone_nameColumn" msprop:Generator_UserColumnName="drone_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="drone_id" msprop:Generator_ColumnVarNameInTable="columndrone_id" msprop:Generator_ColumnPropNameInRow="drone_id" msprop:Generator_ColumnPropNameInTable="drone_idColumn" msprop:Generator_UserColumnName="drone_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="farm_name" msprop:Generator_ColumnVarNameInTable="columnfarm_name" msprop:Generator_ColumnPropNameInRow="farm_name" msprop:Generator_ColumnPropNameInTable="farm_nameColumn" msprop:Generator_UserColumnName="farm_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="farm_id" msprop:Generator_ColumnVarNameInTable="columnfarm_id" msprop:Generator_ColumnPropNameInRow="farm_id" msprop:Generator_ColumnPropNameInTable="farm_idColumn" msprop:Generator_UserColumnName="farm_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

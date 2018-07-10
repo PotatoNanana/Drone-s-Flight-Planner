@@ -244,7 +244,12 @@ namespace MissionPlanner
             {
                 System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
                 Thread.CurrentThread.Name = "Base Thread";
+#if DEBUG
                 Application.Run(new Validation());
+            //    Application.Run(new MainV2());
+#else
+                Application.Run(new Validation());
+#endif
             }
             catch (Exception ex)
             {

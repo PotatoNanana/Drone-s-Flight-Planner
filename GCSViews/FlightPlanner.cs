@@ -56,7 +56,7 @@ namespace MissionPlanner.GCSViews
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
 
         public String distanceTotal,areaTotal;
-        public String farm_name, farm_location, drone_name, activity_id, activity_name, action_capacity;
+        public String farm_name, farm_location, farm_host, farm_address, farm_road, farm_subDistrict, farm_district, farm_province, farm_postal, drone_name, action_noT, action_nameT, material_nameT, action_capacityT, action_costT;
         protected virtual void OnMenuSimulationButtonClicked(EventArgs e)
         {
             OnMenuSimmulationButtonClick?.Invoke(this, e);
@@ -7353,14 +7353,21 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             //read data from database to collect into transaction table
 
             //farm data
-            con.Open();
-            SqlCommand sqlCmdFarm = new SqlCommand("select farm_name, farm_location from Farm where farm_id='" + textBox_farmID.Text + "'", con);
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+            SqlCommand sqlCmdFarm = new SqlCommand("select * from Farm where farm_id='" + textBox_farmID.Text + "'", con);
             SqlDataReader readerFarm = sqlCmdFarm.ExecuteReader();
             readerFarm.Read();
             if (readerFarm.HasRows)
             {
-                farm_name = readerFarm[0].ToString();
-                farm_location = readerFarm[1].ToString();
+                farm_name = readerFarm["farm_name"].ToString();
+                farm_host = readerFarm["farm_host"].ToString();
+                farm_address = readerFarm["farm_address"].ToString();
+                farm_road = readerFarm["farm_road"].ToString();
+                farm_subDistrict = readerFarm["farm_subDistrict"].ToString();
+                farm_district = readerFarm["farm_district"].ToString();
+                farm_province = readerFarm["farm_province"].ToString();
+                farm_postal = readerFarm["farm_postal"].ToString();
             }
             readerFarm.Close();
             con.Close();
@@ -7372,32 +7379,37 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             readerDrone.Read();
             if (readerDrone.HasRows)
             {
-                drone_name = readerDrone[0].ToString();
+                drone_name = readerDrone["drone_name"].ToString();
             }
             readerDrone.Close();
             con.Close();
 
             //action data
             con.Open();
-            SqlCommand sqlCmdAct = new SqlCommand("select action_no, action_name, action_capacity from FlightSchedule where action_no='" + textBox_actID.Text + "'", con);
+            SqlCommand sqlCmdAct = new SqlCommand("select * from FlightSchedule where action_no='" + textBox_actID.Text + "'", con);
             SqlDataReader readerAct = sqlCmdAct.ExecuteReader();
             readerAct.Read();
             if (readerAct.HasRows)
             {
-                activity_id = readerAct[0].ToString();
-                activity_name = readerAct[1].ToString();
-                action_capacity = readerAct[2].ToString();
+                action_noT = readerAct["action_no"].ToString();
+                action_nameT = readerAct["action_name"].ToString();
+                material_nameT = readerAct["material_name"].ToString();
+                action_capacityT = readerAct["action_capacity"].ToString();
+                action_costT = readerAct["action_cost"].ToString();
             }
             readerAct.Close();
             con.Close();
 
             con.Open();
-            String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_location,drone_id,drone_name,action_no,action_name,action_capacity,distance,area) " + 
-                "VALUES('" + "TID"+DateTime.Now.ToString("yyyyMMddTHHmmss") + "','" + textBox_farmID.Text + "','" + farm_name + "','" + farm_location + "','" + textBox_droneID.Text + "','" 
-                + drone_name + "','" + activity_id + "','" + activity_name + "','" + action_capacity + "','" + distanceTotal +"','" + areaTotal +"')";
+            String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrict," +
+                "farm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost,distance,area) " + 
+                "VALUES('" + "TID"+DateTime.Now.ToString("yyyyMMddTHHmmss") + "','" + textBox_farmID.Text + "','" + farm_name + "','" + farm_host + "','" + 
+                farm_address + "','" + farm_road + "','" + farm_subDistrict + "','" + farm_district + "','" + farm_province 
+                + "','" + farm_postal +"','"+ textBox_droneID.Text + "','" + drone_name + "','" + action_noT + "','" + action_nameT + "','" + material_nameT + "'," +
+                action_capacityT + ",'" + action_costT + "','" + distanceTotal +"','" + areaTotal +"')";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             SDA.SelectCommand.ExecuteNonQuery();
-            con.Close();
+            con.Close(); 
 
             ///added filepath
             string filepath = "C:\\Temp\\DroneFlightPlanner";
@@ -7417,28 +7429,44 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             oBook = oApp.Workbooks.Add();
             oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
             oSheet.Cells[1, 1] = "transaction_datetime";
-            oSheet.Cells[1, 2] = "farm_id";
-            oSheet.Cells[1, 3] = "farm_name";
-            oSheet.Cells[1, 4] = "farm_location";
-            oSheet.Cells[1, 5] = "drone_id";
-            oSheet.Cells[1, 6] = "drone_name";
-            oSheet.Cells[1, 7] = "action_no";
-            oSheet.Cells[1, 8] = "action_name";
-            oSheet.Cells[1, 9] = "action_capacity";
-            oSheet.Cells[1, 10] = "distance";
-            oSheet.Cells[1, 11] = "area";
+            oSheet.Cells[2, 1] = "รหัสฟาร์ม";
+            oSheet.Cells[3, 1] = "ชือฟาร์ม";
+            oSheet.Cells[4, 1] = "ผู้ดูแลฟาร์ม";
+            oSheet.Cells[5, 1] = "ที่ตั้งฟาร์ม ";
+            oSheet.Cells[6, 1] = "ถนน";
+            oSheet.Cells[7, 1] = "แขวง";
+            oSheet.Cells[8, 1] = "เขต";
+            oSheet.Cells[9, 1] = "จังหวัด";
+            oSheet.Cells[10, 1] = "รหัสไปรษณีย์";
+            oSheet.Cells[11, 1] = "รหัสโดรน";
+            oSheet.Cells[12, 1] = "ชื่อโดรน";
+            oSheet.Cells[13, 1] = "รหัสกิจกรรม";
+            oSheet.Cells[14, 1] = "ชื่อกิจกรรม";
+            oSheet.Cells[15, 1] = "วัตถุดิบ";
+            oSheet.Cells[16, 1] = "ปริมาณสาร";
+            oSheet.Cells[17, 1] = "ค่าใช้จ่าย";
+            oSheet.Cells[18, 1] = "distance";
+            oSheet.Cells[19, 1] = "area";
 
-            oSheet.Cells[2, 1] = "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss");
+            oSheet.Cells[1, 2] = "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss");
             oSheet.Cells[2, 2] = textBox_farmID.Text;
-            oSheet.Cells[2, 3] = farm_name;
-            oSheet.Cells[2, 4] = farm_location;
-            oSheet.Cells[2, 5] = textBox_droneID.Text;
-            oSheet.Cells[2, 6] = drone_name;
-            oSheet.Cells[2, 7] = activity_id;
-            oSheet.Cells[2, 8] = activity_name;
-            oSheet.Cells[2, 9] = action_capacity;
-            oSheet.Cells[2, 10] = distanceTotal;
-            oSheet.Cells[2, 11] = areaTotal;
+            oSheet.Cells[3, 2] = farm_name;
+            oSheet.Cells[4, 2] = farm_host;
+            oSheet.Cells[5, 2] = farm_address;
+            oSheet.Cells[6, 2] = farm_road;
+            oSheet.Cells[7, 2] = farm_subDistrict;
+            oSheet.Cells[8, 2] = farm_district;
+            oSheet.Cells[9, 2] = farm_province;
+            oSheet.Cells[10, 2] = farm_postal;
+            oSheet.Cells[11, 2] = textBox_droneID.Text;
+            oSheet.Cells[12, 2] = drone_name;
+            oSheet.Cells[13, 2] = action_noT;
+            oSheet.Cells[14, 2] = action_nameT;
+            oSheet.Cells[15, 2] = material_nameT;
+            oSheet.Cells[16, 2] = action_capacityT;
+            oSheet.Cells[17, 2] = action_costT;
+            oSheet.Cells[18, 2] = distanceTotal;
+            oSheet.Cells[19, 2] = areaTotal;
 
             oBook.SaveAs(fileTest);
             oBook.Close();
@@ -7961,6 +7989,26 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             this.MenuConnect.Image = global::MissionPlanner.Properties.Resources.light_connect_icon;
         }
 
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+            //show data to DataGridView
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+            String query;
+            if (id_farm != "")
+            {
+                query = @"SELECT * from FlightSchedule where farm_id = '" + id_farm + "'  AND action_finish = 'n' ";
+            }
+            else
+            {
+                query = @"SELECT * from FlightSchedule where action_finish = 'n'";
+            }
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            System.Data.DataTable dt = new System.Data.DataTable();
+            SDA.Fill(dt);
+            myDataGridView1.DataSource = dt;
+        }
+
         void loadph_serial()
         {
             try
@@ -8067,94 +8115,66 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             Form_log_history form_Log_History = new Form_log_history();
             form_Log_History.ShowDialog();           
         }
-
+        
         private void DG_farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox_farmID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+            id_farm = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+            //show data to DataGridView
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+            String query = @"SELECT * from FlightSchedule where farm_id = '" + id_farm + "'  AND action_finish = 'n' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            System.Data.DataTable dt = new System.Data.DataTable();
+            SDA.Fill(dt);
+            myDataGridView1.DataSource = dt;
+
+        }
+        
+        void loadListData()
+        {
+            //show data to DataGridView
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+
+            //String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
+            String query = @"SELECT        Material_Act.material_name, Activity_Farm.act_name, FlightSchedule.action_datetime, Farm.farm_name, FlightSchedule.action_no, FlightSchedule.action_finish, FlightSchedule.action_cost, FlightSchedule.action_capacity, FlightSchedule.action_startTime, 
+                FlightSchedule.action_finishTime, FlightSchedule.farm_id, Drone.drone_name, FlightSchedule.drone_id,
+				FlightSchedule.act_no, FlightSchedule.material_no
+                FROM FlightSchedule INNER JOIN
+                Activity_Farm ON FlightSchedule.act_no = Activity_Farm.act_no INNER JOIN
+                Material_Act ON FlightSchedule.material_no = Material_Act.material_no INNER JOIN
+                Farm ON FlightSchedule.farm_id = Farm.farm_id INNER JOIN
+                Drone ON FlightSchedule.drone_id = Drone.drone_id
+                where FlightSchedule.farm_id = '" + textBox_farmID.Text  + "'  AND action_finish = 'n' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            System.Data.DataTable dt = new System.Data.DataTable();
+            SDA.Fill(dt);
+            myDataGridView1.DataSource = dt;
+
+            con.Close();
+        }
+
+        private void DG_Farm_Click(object sender, EventArgs e)
         {
             // grid view farm
             textBox_farmID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
             id_farm = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-
-            if (textBox_droneID.Text != null && textBox_farmID.Text != null)
-            {
-                //show data to DataGridView farm
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                String query = "SELECT * FROM FlightSchedule WHERE drone_id='" + id_drone + "' AND farm_id='" + id_farm + "'";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                DataTable dt = new DataTable();
-                SDA.Fill(dt);
-                DG_Act.DataSource = dt;
-                con.Close();
-            }
-
-            else if (textBox_farmID.Text != null)
-            {
-                //show data to DataGridView farm
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                String query = "SELECT * FROM FlightSchedule WHERE farm_id='" + id_farm + "'";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                DataTable dt = new DataTable();
-                SDA.Fill(dt);
-                DG_Act.DataSource = dt;
-                con.Close();
-            }
+            
+            //loadListData();
         }
 
-        private void myDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void myDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_actID.Text = DG_Act.SelectedRows[0].Cells[0].Value.ToString();
-        }
-
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
-            //show data to DataGridView farm
-            con.Open();
-            String query2 = "SELECT * FROM FlightSchedule";
-            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-            DataTable dt2 = new DataTable();
-            SDA2.Fill(dt2);
-            DG_Act.DataSource = dt2;
-            con.Close();
-        }
-
-        private void DG_drone_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // grid view drone
-            textBox_droneID.Text = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
-            id_drone = DG_Drone.SelectedRows[0].Cells[0].Value.ToString();
-
-            if (textBox_droneID.Text != null && textBox_farmID.Text!=null )
-            {
-                //show data to DataGridView farm
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                String query = "SELECT * FROM FlightSchedule WHERE drone_id='" + id_drone + "' AND farm_id='" + id_farm + "'";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                DataTable dt = new DataTable();
-                SDA.Fill(dt);
-                DG_Act.DataSource = dt;
-                con.Close();
-            }
-
-            else if (textBox_droneID.Text != null)
-            {
-                //show data to DataGridView farm
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                String query = "SELECT * FROM FlightSchedule WHERE drone_id='" + id_drone + "'";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                DataTable dt = new DataTable();
-                SDA.Fill(dt);
-                DG_Act.DataSource = dt;
-                con.Close();
-            }
+            textBox_droneID.Text = myDataGridView1.SelectedRows[0].Cells["drone_id"].Value.ToString();
+            textBox_actID.Text = myDataGridView1.SelectedRows[0].Cells["action_no"].Value.ToString();
         }
 
         private void panelPflightPlanner_farm_Paint(object sender, PaintEventArgs e)
         {
             //show data to DataGridView farm
-            con.Open();
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
             String query = "SELECT * FROM Farm";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
@@ -8162,19 +8182,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             DG_Farm.DataSource = dt;
             con.Close();
         }
-
-        private void panelDrone_Paint(object sender, PaintEventArgs e)
-        {
-            //show data to DataGridView drone
-            con.Open();
-            String query = "SELECT Drone_id,Drone_name FROM Drone";
-            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            SDA.Fill(dt);
-            DG_Drone.DataSource = dt;
-            con.Close();
-        }
-
+        
         internal string id_droneGet()
         {
             return id_drone;
@@ -8185,8 +8193,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             return id_farm;
         }
 
-        //added by Napat
-
+        
         private void MainMenu_MouseLeave(object sender, EventArgs e)
         {
             if (_connectionControl.PointToClient(Control.MousePosition).Y < MainMenu.Height)
@@ -8197,6 +8204,19 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             panel1.Visible = false;
 
             this.ResumeLayout();
+        }
+
+        private void DG_FarmSchedule_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox_droneID.Text = myDataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                textBox_actID.Text = myDataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
     }

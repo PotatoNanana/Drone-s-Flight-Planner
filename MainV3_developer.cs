@@ -24,6 +24,9 @@ using System.Collections.Concurrent;
 using MissionPlanner.GCSViews.ConfigurationView;
 using WebCamService;
 using MissionPlanner.GCSViews;
+using System.Data.SqlClient;
+using System.Data.Sql;
+using System.Data;
 
 namespace MissionPlanner
 {
@@ -3715,8 +3718,8 @@ namespace MissionPlanner
 
         private void MainV2_Load(object sender, EventArgs e)
         {
-
         }
+       
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

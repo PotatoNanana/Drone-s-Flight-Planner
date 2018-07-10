@@ -553,6 +553,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FlightLog.xsd</DependentUpon>
     </Compile>
+    <Compile Include="flightplanner_flightschedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>flightplanner_flightschedule.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="flightplanner_FS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>flightplanner_FS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FlightSchedule.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1554,6 +1564,11 @@
     <Compile Include="Utilities\UDPMavlinkShim.cs" />
     <Compile Include="Utilities\UDPVideoShim.cs" />
     <Compile Include="Utilities\ZeroConf.cs" />
+    <Compile Include="View_flightschedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>View_flightschedule.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Wizard\10FlightModes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1650,6 +1665,36 @@
     </Compile>
     <Compile Include="Wizard\Wizard.Designer.cs">
       <DependentUpon>Wizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Drone_s_Flight_PlannerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Drone_s_Flight_PlannerDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Drone_s_Flight_PlannerDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Drone_s_Flight_PlannerDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Drone_s_Flight_PlannerDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Drone_s_Flight_PlannerDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet5.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Antenna\Tracker.ar.resx">
       <DependentUpon>Tracker.cs</DependentUpon>
@@ -4380,6 +4425,28 @@
     <None Include="FlightLog.xss">
       <DependentUpon>FlightLog.xsd</DependentUpon>
     </None>
+    <None Include="flightplanner_flightschedule.xsc">
+      <DependentUpon>flightplanner_flightschedule.xsd</DependentUpon>
+    </None>
+    <None Include="flightplanner_flightschedule.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>flightplanner_flightschedule.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="flightplanner_flightschedule.xss">
+      <DependentUpon>flightplanner_flightschedule.xsd</DependentUpon>
+    </None>
+    <None Include="flightplanner_FS.xsc">
+      <DependentUpon>flightplanner_FS.xsd</DependentUpon>
+    </None>
+    <None Include="flightplanner_FS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>flightplanner_FS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="flightplanner_FS.xss">
+      <DependentUpon>flightplanner_FS.xsd</DependentUpon>
+    </None>
     <None Include="FlightSchedule.xsc">
       <DependentUpon>FlightSchedule.xsd</DependentUpon>
     </None>
@@ -5918,11 +5985,88 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\Welcome_to_Michael_Oborne.rtf" />
+    <None Include="View_flightschedule.xsc">
+      <DependentUpon>View_flightschedule.xsd</DependentUpon>
+    </None>
+    <None Include="View_flightschedule.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>View_flightschedule.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View_flightschedule.xss">
+      <DependentUpon>View_flightschedule.xsd</DependentUpon>
+    </None>
     <None Include="yuvtorgb_fragment.glsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="yuvtorgb_vertex.glsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet.xsc">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Drone_s_Flight_PlannerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet.xss">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet1.xsc">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Drone_s_Flight_PlannerDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet1.xss">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet2.xsc">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Drone_s_Flight_PlannerDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet2.xss">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet3.xsc">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Drone_s_Flight_PlannerDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet3.xss">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet4.xsc">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Drone_s_Flight_PlannerDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet4.xss">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet5.xsc">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Drone_s_Flight_PlannerDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSet5.xss">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSet5.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
