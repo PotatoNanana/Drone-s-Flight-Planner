@@ -14,6 +14,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
+    <file src="C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
   </files>
 </package>

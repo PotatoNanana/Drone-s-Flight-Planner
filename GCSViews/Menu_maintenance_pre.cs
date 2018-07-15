@@ -22,6 +22,7 @@ namespace MissionPlanner.GCSViews
         //SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
+        string id_deviceID = "";
 
         public Menu_maintenance_pre()
         {
@@ -29,15 +30,16 @@ namespace MissionPlanner.GCSViews
             MyView = new MainSwitcher(this);            
         }
 
-        public Menu_maintenance_pre(string id_part)
+        public Menu_maintenance_pre(string id_drone,string deviceID)
         {
-            this.id_part = id_part;
+            this.id_drone = id_drone;
+            this.id_deviceID = deviceID;
             InitializeComponent();
             MyView = new MainSwitcher(this);
         }
 
         Controls.MainSwitcher MyView;
-        private string id_part;
+        private string id_drone;
 
         public static event EventHandler Goto_Drone_Clicked;
 
@@ -78,44 +80,21 @@ namespace MissionPlanner.GCSViews
 
         private void panelMaintenance_pre_Paint(object sender, PaintEventArgs e)
         {
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
             //show data to dataGridView
-            con.Open();
-            String query = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date FROM Maintainance WHRER device_id = id_part";
+            String query = "SELECT maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date FROM Maintainance where device_id='" + id_deviceID +"'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            con.Close();
+
             DataTable dt = new DataTable();
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
-            con.Close();
         }
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                byte[] img = null;
-                String query = "SELECT * FROM Maintainance WHERE device_id = '" + id_part + "'";
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                cmd = new SqlCommand(query, con);
-                SqlDataReader reader = cmd.ExecuteReader();
-                reader.Read();
-                if (reader.HasRows)
-                {
-                    textBox_mainID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
-                    textBox_mainAct.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
-                    dateTimePicker.Value = Convert.ToDateTime(DG_Farm.SelectedRows[0].Cells[2].Value);
-                    textBox_price.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
-                    textBox_time.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
-                    textBox_respond.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
-                    textBox_venName.Text = DG_Farm.SelectedRows[0].Cells[6].Value.ToString();
-                    textBox_venAdd.Text = DG_Farm.SelectedRows[0].Cells[7].Value.ToString();
-                    textBox_venPhone.Text = DG_Farm.SelectedRows[0].Cells[8].Value.ToString();
-                }
-                else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
-                con.Close();
-            }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -130,7 +109,7 @@ namespace MissionPlanner.GCSViews
                 string format = "yyyy-MM-dd";
 
                 String query = "INSERT INTO Maintainance (device_id,maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date) "
-                                           + "VALUES('" + id_part + "','" + textBox_mainID.Text + "','" + textBox_mainAct.Text + "','" + textBox_price.Text + "','" + textBox_venName.Text + "','" + textBox_venPhone.Text + "','" + textBox_venAdd.Text + "','" + textBox_time.Text + "','" + textBox_respond.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
+                                           + "VALUES('" + id_deviceID + "',(select CONCAT('M00', MAX(SUBSTRING(maintain_id, 3, 5)) + 1) from Maintainance),'" + textBox_mainAct.Text + "','" + textBox_price.Text + "','" + textBox_venName.Text + "','" + textBox_venPhone.Text + "','" + textBox_venAdd.Text + "','" + textBox_time.Text + "','" + textBox_respond.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
@@ -144,7 +123,7 @@ namespace MissionPlanner.GCSViews
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_part + "'";
+            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_deviceID + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);
@@ -163,7 +142,7 @@ namespace MissionPlanner.GCSViews
             {
                 string format = "yyyy-MM-dd";
 
-                String query = "INSERT INTO Maintainance SET device_id = '" + id_part + "',maintain_id = '" + textBox_mainID.Text + "', maintain_activity = '" + textBox_mainAct.Text + "', maintain_price = '" + textBox_price.Text + "', maintain_venderName = '" + textBox_venName.Text + "', maintain_vendorPhone = '" + textBox_venPhone.Text + "', maintain_venderAdd = '" + textBox_venAdd.Text + "', maintain_length = '" + textBox_time.Text + "', maintain_responder = '" + textBox_respond.Text + "', maintain_date = '" + dateTimePicker.Value.ToString(format) + "') ";
+                String query = "UPDATE Maintainance SET device_id = '" + id_deviceID + "', maintain_activity = '" + textBox_mainAct.Text + "', maintain_price = '" + textBox_price.Text + "', maintain_venderName = '" + textBox_venName.Text + "', maintain_venderPhone = '" + textBox_venPhone.Text + "', maintain_venderAdd = '" + textBox_venAdd.Text + "', maintain_lenght = '" + textBox_time.Text + "', maintain_responder = '" + textBox_respond.Text + "', maintain_date = '" + dateTimePicker.Value.ToString(format) + "' where maintain_id = '" + textBox_mainID.Text +"'";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
@@ -178,7 +157,7 @@ namespace MissionPlanner.GCSViews
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_part + "'";
+            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_deviceID + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);
@@ -198,7 +177,7 @@ namespace MissionPlanner.GCSViews
                 if (MessageBox.Show("ต้องการที่จะลบข้อมูลการบำรุงรักษาส่วนประกอบโดรนนี้ใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
-                    String query = "DELETE * FROM Maintainance where maintain_id = '" + textBox_mainID.Text + "' ";
+                    String query = "DELETE FROM Maintainance where maintain_id = '" + DG_Farm.SelectedRows[0].Cells[0].Value.ToString() + "' ";
                     SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                     SDA.SelectCommand.ExecuteNonQuery();
                     con.Close();
@@ -210,12 +189,45 @@ namespace MissionPlanner.GCSViews
 
             //show data to dataGridView
             con.Open();
-            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_part + "'";
+            String query2 = "SELECT * FROM Maintainance WHERE device_id = '" + id_deviceID + "'";
             SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
             DataTable dt2 = new DataTable();
             SDA2.Fill(dt2);
             DG_Farm.DataSource = dt2;
             con.Close();
+        }
+
+        private void DG_Farm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                byte[] img = null;
+                String query = @"SELECT       *
+FROM Maintainance INNER JOIN
+                         DeviceList ON Maintainance.device_id = DeviceList.device_id
+                         where DeviceList.drone_id  ='" + id_drone + "' and Maintainance.device_id='" + id_deviceID + "'";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBox_mainID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+                    textBox_mainAct.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                    dateTimePicker.Value = Convert.ToDateTime(DG_Farm.SelectedRows[0].Cells[2].Value);
+                    textBox_price.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+                    textBox_time.Text = reader["maintain_lenght"].ToString(); // DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+                    textBox_respond.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+                    textBox_venName.Text = DG_Farm.SelectedRows[0].Cells[6].Value.ToString();
+                    textBox_venAdd.Text = DG_Farm.SelectedRows[0].Cells[7].Value.ToString();
+                    textBox_venPhone.Text = DG_Farm.SelectedRows[0].Cells[8].Value.ToString();
+                }
+                
+                con.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
     }
 }

@@ -176,7 +176,7 @@ namespace MissionPlanner.GCSViews
         private void button1_Click(object sender, EventArgs e)
         {
             //pass to previtive maintain
-            Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre(id_drone);
+            Menu_maintenance_pre menu_maintenance_pre = new Menu_maintenance_pre(id_drone, textBox_partID.Text);
             menu_maintenance_pre.ShowUserControl();
         }
 

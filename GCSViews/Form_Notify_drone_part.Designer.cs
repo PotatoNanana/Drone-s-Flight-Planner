@@ -40,18 +40,6 @@
             this.device_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.device_position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.device_alarm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deviceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.partDroneNotify = new MissionPlanner.PartDroneNotify();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Main_but_farm = new System.Windows.Forms.Button();
-            this.flightLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flightLog = new MissionPlanner.FlightLog();
-            this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
-            this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deviceListTableAdapter = new MissionPlanner.PartDroneNotifyTableAdapters.DeviceListTableAdapter();
-            //this.droneFlightPlannerDataSet6 = new MissionPlanner.DroneFlightPlannerDataSet6();
-            this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.afterFlightTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet6TableAdapters.AfterFlightTableAdapter();
             this.deviceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devicenameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.devicepositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +54,16 @@
             this.venderaddDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.venderphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deviceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.partDroneNotify = new MissionPlanner.PartDroneNotify();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
+            this.flightLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flightLog = new MissionPlanner.FlightLog();
+            this.flightSchedule2 = new MissionPlanner.FlightSchedule2();
+            this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.deviceListTableAdapter = new MissionPlanner.PartDroneNotifyTableAdapters.DeviceListTableAdapter();
+            this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Noti)).BeginInit();
@@ -76,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,83 +181,6 @@
             this.device_alarm.HeaderText = "การแจ้งเตือน";
             this.device_alarm.Name = "device_alarm";
             // 
-            // deviceListBindingSource
-            // 
-            this.deviceListBindingSource.DataMember = "DeviceList";
-            this.deviceListBindingSource.DataSource = this.partDroneNotify;
-            // 
-            // partDroneNotify
-            // 
-            this.partDroneNotify.DataSetName = "PartDroneNotify";
-            this.partDroneNotify.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.Main_but_farm);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(491, 50);
-            this.panel3.TabIndex = 0;
-            // 
-            // Main_but_farm
-            // 
-            this.Main_but_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main_but_farm.FlatAppearance.BorderSize = 0;
-            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
-            this.Main_but_farm.ForeColor = System.Drawing.Color.White;
-            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
-            this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(491, 50);
-            this.Main_but_farm.TabIndex = 6;
-            this.Main_but_farm.Text = "แจ้งเตือนชิ้นส่วนการบิน";
-            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Main_but_farm.UseCompatibleTextRendering = true;
-            this.Main_but_farm.UseVisualStyleBackColor = true;
-            // 
-            // flightLogBindingSource
-            // 
-            this.flightLogBindingSource.DataMember = "FlightLog";
-            this.flightLogBindingSource.DataSource = this.flightLog;
-            // 
-            // flightLog
-            // 
-            this.flightLog.DataSetName = "FlightLog";
-            this.flightLog.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // flightSchedule2
-            // 
-            this.flightSchedule2.DataSetName = "FlightSchedule2";
-            this.flightSchedule2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // flightScheduleBindingSource
-            // 
-            this.flightScheduleBindingSource.DataMember = "FlightSchedule";
-            this.flightScheduleBindingSource.DataSource = this.flightSchedule2;
-            // 
-            // deviceListTableAdapter
-            // 
-            this.deviceListTableAdapter.ClearBeforeFill = true;
-            // 
-            // droneFlightPlannerDataSet6
-            // 
-            //this.droneFlightPlannerDataSet6.DataSetName = "DroneFlightPlannerDataSet6";
-            //this.droneFlightPlannerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // afterFlightBindingSource
-            // 
-            this.afterFlightBindingSource.DataMember = "AfterFlight";
-            //this.afterFlightBindingSource.DataSource = this.droneFlightPlannerDataSet6;
-            // 
-            // afterFlightTableAdapter
-            // 
-            //this.afterFlightTableAdapter.ClearBeforeFill = true;
-            // 
             // deviceidDataGridViewTextBoxColumn
             // 
             this.deviceidDataGridViewTextBoxColumn.DataPropertyName = "device_id";
@@ -345,15 +265,88 @@
             this.droneidDataGridViewTextBoxColumn.HeaderText = "drone_id";
             this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
             // 
+            // deviceListBindingSource
+            // 
+            this.deviceListBindingSource.DataMember = "DeviceList";
+            this.deviceListBindingSource.DataSource = this.partDroneNotify;
+            // 
+            // partDroneNotify
+            // 
+            this.partDroneNotify.DataSetName = "PartDroneNotify";
+            this.partDroneNotify.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Main_but_farm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(491, 50);
+            this.panel3.TabIndex = 0;
+            // 
+            // Main_but_farm
+            // 
+            this.Main_but_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Main_but_farm.FlatAppearance.BorderSize = 0;
+            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
+            this.Main_but_farm.ForeColor = System.Drawing.Color.White;
+            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Name = "Main_but_farm";
+            this.Main_but_farm.Size = new System.Drawing.Size(491, 50);
+            this.Main_but_farm.TabIndex = 6;
+            this.Main_but_farm.Text = "แจ้งเตือนชิ้นส่วนการบิน";
+            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Main_but_farm.UseCompatibleTextRendering = true;
+            this.Main_but_farm.UseVisualStyleBackColor = true;
+            // 
+            // flightLogBindingSource
+            // 
+            this.flightLogBindingSource.DataMember = "FlightLog";
+            this.flightLogBindingSource.DataSource = this.flightLog;
+            // 
+            // flightLog
+            // 
+            this.flightLog.DataSetName = "FlightLog";
+            this.flightLog.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flightSchedule2
+            // 
+            this.flightSchedule2.DataSetName = "FlightSchedule2";
+            this.flightSchedule2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flightScheduleBindingSource
+            // 
+            this.flightScheduleBindingSource.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource.DataSource = this.flightSchedule2;
+            // 
+            // deviceListTableAdapter
+            // 
+            this.deviceListTableAdapter.ClearBeforeFill = true;
+            // 
+            // afterFlightBindingSource
+            // 
+            this.afterFlightBindingSource.DataMember = "AfterFlight";
+            // 
             // Form_Notify_drone_part
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 478);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Notify_drone_part";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notify Drone Part";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form_Notify_drone_part_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Notify_drone_part_KeyDown);
             this.panel1.ResumeLayout(false);
@@ -366,7 +359,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).EndInit();
             this.ResumeLayout(false);
 

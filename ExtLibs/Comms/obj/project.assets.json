@@ -43,24 +43,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\paper\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Comms\\MissionPlanner.Comms.csproj",
+      "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Comms\\MissionPlanner.Comms.csproj",
       "projectName": "MissionPlanner.Comms",
-      "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Comms\\MissionPlanner.Comms.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Comms\\obj\\",
+      "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Comms\\MissionPlanner.Comms.csproj",
+      "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Comms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\.nuget\\NuGet.Config",
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
+        "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

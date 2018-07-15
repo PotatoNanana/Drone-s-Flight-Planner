@@ -27,10 +27,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.pdb
-C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csprojAssemblyReference.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\bin\Debug\tlogThumbnailHandler.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\bin\Debug\tlogThumbnailHandler.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csprojAssemblyReference.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\obj\Debug\tlogThumbnailHandler.pdb

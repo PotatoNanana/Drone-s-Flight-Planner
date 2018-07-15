@@ -45,6 +45,7 @@ namespace MissionPlanner.GCSViews
         protected override void OnLoad(EventArgs e)
         {
             //MyView.AddScreen(new MainSwitcher.Screen("Menu_farm", typeof(GCSViews.Menu_farm), true));
+            CheckNoti();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -172,6 +173,65 @@ namespace MissionPlanner.GCSViews
             SDA.Fill(dt);
             DG_maintenance.DataSource = dt;
             con.Close();
+        }
+        void CheckNoti()
+        {
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+            try
+            {
+                String queryShow = @" SELECT *  FROM [DeviceList] a
+  where  
+  (
+  (
+  (
+  (a.device_remindDate = DATEADD(day,ISNULL( a.device_alarm,0),CONVERT (date, CURRENT_TIMESTAMP))
+  and
+   a.device_remindDate = DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))) 
+   )
+   or 
+   a.device_remindDate <= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP)))
+   )
+   and
+   (
+   a.device_expDate >= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))
+   and
+   a.device_startDate <= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))
+   ) ";
+                SqlDataAdapter SDAShow = new SqlDataAdapter(queryShow, con);
+                DataTable dt = new DataTable();
+                SDAShow.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+
+                    //foreach (var item in dt.Rows)
+                    //{
+                    //    item[""];
+                    //}
+
+                    //open dialog
+                    Form_Notify_drone_part f = new Form_Notify_drone_part();
+                    f.Show();
+                }
+                //day,week,month,year
+
+
+            }
+            catch (Exception err)
+            {
+
+            }
+            finally
+            {
+                if (con != null && con.State == ConnectionState.Open)
+                { con.Close(); }
+            }
+
+        }
+
+        private void Menu_main2_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

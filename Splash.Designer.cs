@@ -37,7 +37,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(478, 271);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoadingScreen";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }
