@@ -15,7 +15,7 @@ namespace MissionPlanner
         public DateTime Device_buyDate { get; set; }
         public DateTime Device_expDate { get; set; }
         public DateTime Device_startDate { get; set; }
-        public string Dvice_responder { get; set; }
+        public string Device_responder { get; set; }
         public string Device_alarm { get; set; }
         public string Vender_name { get; set; }
         public string Vender_add { get; set; }

@@ -12,9 +12,37 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Form_Print_FarmSchedule : Form
     {
-        public Form_Print_FarmSchedule()
+        List<FarmActPast> _list;
+        Farm _farm;
+
+        public Form_Print_FarmSchedule(Farm farm , List<FarmActPast> list)
         {
             InitializeComponent();
+            _farm = farm;
+            _list = list;
+        }
+
+        private void Form_Print_FarmSchedule_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crystalReportViewer2_Load(object sender, EventArgs e)
+        {
+            //Init crystal report
+            rptOrders1.SetDataSource(_list);
+            rptOrders1.SetParameterValue("pFarm_id", _farm.Farm_id);
+            rptOrders1.SetParameterValue("pFarmName", _farm.Farm_name);
+            rptOrders1.SetParameterValue("pFarm_host", _farm.Farm_host);
+            rptOrders1.SetParameterValue("pFarm_address", _farm.Farm_address);
+            rptOrders1.SetParameterValue("pFarm_road", _farm.Farm_road);
+            rptOrders1.SetParameterValue("pFarm_subDistrict", _farm.Farm_subDistrict);
+            rptOrders1.SetParameterValue("pFarm_district", _farm.Farm_district);
+            rptOrders1.SetParameterValue("pFarm_province", _farm.Farm_province);
+            rptOrders1.SetParameterValue("pFarm_postal", _farm.Farm_postal);
+            //rptOrders1.SetParameterValue("p", );
+            crystalReportViewer.ReportSource = ;
+            crystalReportViewer.Refresh();
         }
     }
 }

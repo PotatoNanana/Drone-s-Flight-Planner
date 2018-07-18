@@ -12,9 +12,24 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Form_Print_DronePart : Form
     {
-        public Form_Print_DronePart()
+        List<DronePart> _list;
+        Drone _drone;
+
+        public Form_Print_DronePart(Drone drone, List<DronePart> list)
         {
             InitializeComponent();
+            _drone = drone;
+            _list = list;
+        }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+            //Init crystal report
+            rptOrders1.SetDataSource(_list);
+            rptOrders1.SetParameterValue("pDroneId", _drone.Drone_id);
+            rptOrders1.SetParameterValue("pDroneName", _drone.Drone_name);
+            crystalReportViewer.ReportSource = ; 
+            crystalReportViewer.Refresh();
         }
     }
 }

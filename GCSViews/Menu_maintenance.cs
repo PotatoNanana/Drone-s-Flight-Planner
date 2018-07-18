@@ -717,7 +717,7 @@ namespace MissionPlanner.GCSViews
         {         
             if (con.State != ConnectionState.Open)
             { con.Open(); }
-            DronePart obj = deviceListBindingSource.Current as Orders;
+            DronePart obj = deviceListBindingSource.Current as DronePart;
             if (obj != null)
             {
                 //Execute query to get dronePart List

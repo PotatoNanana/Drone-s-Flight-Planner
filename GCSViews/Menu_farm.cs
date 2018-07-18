@@ -370,7 +370,7 @@ namespace MissionPlanner.GCSViews
                 { con.Open(); }
                 //Execute query to get Actpast
                 String query = @"SELECT * FROM [FlightSchedule] WHERE farm_id = '{obj.Farm_id}' AND action_finish = 'y' ";
-                List<PartMaintain> list = db.Query<PartMaintain>(query, commandType: CommandType.Text).ToList();
+                List<FarmActPast> list = db.Query<FarmActPast>(query, commandType: CommandType.Text).ToList();
                 using (Form_Print_FarmSchedule frm = new Form_Print_FarmSchedule(obj, list))
                 {
                     frm.ShowDialog();

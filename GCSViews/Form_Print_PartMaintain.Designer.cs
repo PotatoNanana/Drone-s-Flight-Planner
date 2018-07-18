@@ -42,6 +42,7 @@
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.Size = new System.Drawing.Size(962, 547);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // Form_Print_PartMaintain
             // 
@@ -52,6 +53,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Print_PartMaintain";
             this.Text = "รายงานการบำรุงรักษาส่วนประกอบโดรน";
+            this.Load += new System.EventHandler(this.Form_Print_PartMaintain_Load);
             this.ResumeLayout(false);
 
         }
