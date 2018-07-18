@@ -94,7 +94,32 @@ namespace MissionPlanner.GCSViews
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+                byte[] img = null;
+                String query = "SELECT * FROM Maintainance WHERE drone_id = '" + id_drone + "'";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBox_mainID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+                    textBox_mainAct.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                    dateTimePicker.Value = Convert.ToDateTime(DG_Farm.SelectedRows[0].Cells[2].Value);
+                    textBox_price.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+                    textBox_time.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+                    textBox_respond.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+                    textBox_venName.Text = DG_Farm.SelectedRows[0].Cells[6].Value.ToString();
+                    textBox_venAdd.Text = DG_Farm.SelectedRows[0].Cells[7].Value.ToString();
+                    textBox_venPhone.Text = DG_Farm.SelectedRows[0].Cells[8].Value.ToString();
+                }
+                else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                con.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)

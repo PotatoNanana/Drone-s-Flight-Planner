@@ -21,7 +21,7 @@ namespace MissionPlanner.GCSViews
     {
         public Menu_farm()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
@@ -29,7 +29,7 @@ namespace MissionPlanner.GCSViews
         public string name_farm;
         string imgLocation = "";
         byte[] imgby;
-        SqlCommand cmd;       
+        SqlCommand cmd;
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -63,12 +63,12 @@ namespace MissionPlanner.GCSViews
 
         private void panelFarm_Paint(object sender, PaintEventArgs e)
         {
-           
+
         }
 
         private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void Main_but_farm_Click(object sender, EventArgs e)
@@ -101,10 +101,10 @@ namespace MissionPlanner.GCSViews
                        ,[farm_district]
                        ,[farm_province]
                        ,[farm_postal]) " + "VALUES( (select CONCAT('F0', MAX(SUBSTRING(farm_id, 3, 5)) + 1) from Farm) ,'"
-                       + textBox_farmName.Text + "','" 
+                       + textBox_farmName.Text + "','"
                        + textBox_farmHost.Text + "','"
-                       + textBox1.Text + "','" 
-                       + textBox2.Text + "','" 
+                       + textBox1.Text + "','"
+                       + textBox2.Text + "','"
                        + textBox3.Text + "','"
                        + textBox4.Text + "','"
                        + textBox5.Text + "','"
@@ -118,7 +118,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
-                    String query =@"INSERT INTO Farm (farm_id,farm_name,farm_host ,[farm_address]
+                    String query = @"INSERT INTO Farm (farm_id,farm_name,farm_host ,[farm_address]
                        ,[farm_road]
                        ,[farm_subDistrict]
                        ,[farm_district]
@@ -194,7 +194,7 @@ namespace MissionPlanner.GCSViews
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -233,7 +233,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
-                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_host = '" + textBox_farmHost.Text 
+                    String query = "UPDATE Farm SET farm_name ='" + textBox_farmName.Text + "',farm_host = '" + textBox_farmHost.Text
                         + "',farm_address='" + textBox1.Text
                          + "',farm_road='" + textBox2.Text
                           + "',farm_subDistrict='" + textBox3.Text
@@ -297,7 +297,7 @@ namespace MissionPlanner.GCSViews
                     DG_Farm.MultiSelect = false;
                     byte[] img = null;
                     String query = "SELECT * FROM Farm where farm_id='" + DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
-                   
+
                     cmd = new SqlCommand(query, con);
                     SqlDataReader reader = cmd.ExecuteReader();
                     reader.Read();
@@ -327,6 +327,7 @@ namespace MissionPlanner.GCSViews
                             MemoryStream ms = new MemoryStream(img);
                             pictureBox.Image = Image.FromStream(ms);
                         }
+                        farmBindingSource1.DataSource = db.Query<Farm>(query, commandType: CommandType.Text);
                     }
                     else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
                 }
@@ -336,14 +337,14 @@ namespace MissionPlanner.GCSViews
                 }
                 finally
                 {
-                    if ((con != null) &&(con.State == ConnectionState.Open))
+                    if ((con != null) && (con.State == ConnectionState.Open))
                     { con.Close(); }
                 }
 
             }
             catch (Exception ex)
             {
- 
+
             }
         }
 
@@ -358,6 +359,40 @@ namespace MissionPlanner.GCSViews
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
             con.Close();
+        }
+
+        private void button_report_farmActPast_Click(object sender, EventArgs e)
+        {
+            Farm obj = farmBindingSource1.Current as Farm;
+            if (obj != null)
+            {
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                //Execute query to get Actpast
+                String query = @"SELECT * FROM [FlightSchedule] WHERE farm_id = '{obj.Farm_id}' AND action_finish = 'y' ";
+                List<PartMaintain> list = db.Query<PartMaintain>(query, commandType: CommandType.Text).ToList();
+                using (Form_Print_FarmSchedule frm = new Form_Print_FarmSchedule(obj, list))
+                {
+                    frm.ShowDialog();
+                }
+            }
+        }
+
+        private void button_report_farmAct_Click(object sender, EventArgs e)
+        {
+            Farm obj = farmBindingSource1.Current as Farm;
+            if (obj != null)
+            {
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                //Execute query to get Actpast
+                String query = @"SELECT * FROM [FlightSchedule] WHERE farm_id = '{obj.Farm_id}' AND action_finish = 'n' ";
+                List<FarmSchedule> list = db.Query<FarmSchedule>(query, commandType: CommandType.Text).ToList();
+                using (Form_Print_FarmSchedule frm = new Form_Print_FarmSchedule(obj, list))
+                {
+                    frm.ShowDialog();
+                }
+            }
         }
     }
 }

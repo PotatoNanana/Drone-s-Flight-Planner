@@ -211,8 +211,13 @@ namespace MissionPlanner.GCSViews
             this.panel_Main_farm = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.myDataGridView1 = new MissionPlanner.Controls.MyDataGridView();
-            this.flightScheduleBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this._Drone_s_Flight_PlannerDataSet5 = new MissionPlanner._Drone_s_Flight_PlannerDataSet5();
+            this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flightScheduleBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.flightplanner_FS = new MissionPlanner.flightplanner_FS();
             this.panel7 = new System.Windows.Forms.Panel();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
             this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -230,6 +235,8 @@ namespace MissionPlanner.GCSViews
             this.Main_but_farm = new System.Windows.Forms.Button();
             this.panelAction = new BSE.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.flightScheduleBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this._Drone_s_Flight_PlannerDataSet5 = new MissionPlanner._Drone_s_Flight_PlannerDataSet5();
             this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flightSchedule = new MissionPlanner.flightSchedule();
@@ -256,14 +263,7 @@ namespace MissionPlanner.GCSViews
             this.flightScheduleBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.flightScheduleTableAdapter3 = new MissionPlanner.flightplanner_flightscheduleTableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.flightplanner_FS = new MissionPlanner.flightplanner_FS();
-            this.flightScheduleBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.flightScheduleTableAdapter4 = new MissionPlanner.flightplanner_FSTableAdapters.FlightScheduleTableAdapter();
-            this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.droneidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
@@ -280,13 +280,15 @@ namespace MissionPlanner.GCSViews
             this.panel_Main_farm.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightplanner_FS)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.farm1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule)).BeginInit();
@@ -303,8 +305,6 @@ namespace MissionPlanner.GCSViews
             ((System.ComponentModel.ISupportInitialize)(this.flightplanner_flightschedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightplanner_FS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource6)).BeginInit();
             this.SuspendLayout();
             // 
             // CHK_verifyheight
@@ -938,6 +938,7 @@ namespace MissionPlanner.GCSViews
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteWPToolStripMenuItem,
             this.insertWpToolStripMenuItem,
@@ -1536,15 +1537,50 @@ namespace MissionPlanner.GCSViews
             this.myDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.myDataGridView1_CellContentClick_1);
             this.myDataGridView1.Click += new System.EventHandler(this.DG_FarmSchedule_Click);
             // 
-            // flightScheduleBindingSource3
+            // actiondatetimeDataGridViewTextBoxColumn
             // 
-            this.flightScheduleBindingSource3.DataMember = "FlightSchedule";
-            this.flightScheduleBindingSource3.DataSource = this._Drone_s_Flight_PlannerDataSet5;
+            this.actiondatetimeDataGridViewTextBoxColumn.DataPropertyName = "action_datetime";
+            resources.ApplyResources(this.actiondatetimeDataGridViewTextBoxColumn, "actiondatetimeDataGridViewTextBoxColumn");
+            this.actiondatetimeDataGridViewTextBoxColumn.Name = "actiondatetimeDataGridViewTextBoxColumn";
+            this.actiondatetimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // _Drone_s_Flight_PlannerDataSet5
+            // actionnoDataGridViewTextBoxColumn
             // 
-            this._Drone_s_Flight_PlannerDataSet5.DataSetName = "_Drone_s_Flight_PlannerDataSet5";
-            this._Drone_s_Flight_PlannerDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
+            resources.ApplyResources(this.actionnoDataGridViewTextBoxColumn, "actionnoDataGridViewTextBoxColumn");
+            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
+            this.actionnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // actionnameDataGridViewTextBoxColumn
+            // 
+            this.actionnameDataGridViewTextBoxColumn.DataPropertyName = "action_name";
+            resources.ApplyResources(this.actionnameDataGridViewTextBoxColumn, "actionnameDataGridViewTextBoxColumn");
+            this.actionnameDataGridViewTextBoxColumn.Name = "actionnameDataGridViewTextBoxColumn";
+            this.actionnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialnameDataGridViewTextBoxColumn
+            // 
+            this.materialnameDataGridViewTextBoxColumn.DataPropertyName = "material_name";
+            resources.ApplyResources(this.materialnameDataGridViewTextBoxColumn, "materialnameDataGridViewTextBoxColumn");
+            this.materialnameDataGridViewTextBoxColumn.Name = "materialnameDataGridViewTextBoxColumn";
+            this.materialnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // droneidDataGridViewTextBoxColumn
+            // 
+            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
+            resources.ApplyResources(this.droneidDataGridViewTextBoxColumn, "droneidDataGridViewTextBoxColumn");
+            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
+            this.droneidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // flightScheduleBindingSource6
+            // 
+            this.flightScheduleBindingSource6.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource6.DataSource = this.flightplanner_FS;
+            // 
+            // flightplanner_FS
+            // 
+            this.flightplanner_FS.DataSetName = "flightplanner_FS";
+            this.flightplanner_FS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel7
             // 
@@ -1605,6 +1641,7 @@ namespace MissionPlanner.GCSViews
             // 
             resources.ApplyResources(this.textBox_droneID, "textBox_droneID");
             this.textBox_droneID.Name = "textBox_droneID";
+            this.textBox_droneID.TextChanged += new System.EventHandler(this.textBox_droneID_TextChanged);
             // 
             // label9
             // 
@@ -1678,6 +1715,16 @@ namespace MissionPlanner.GCSViews
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
+            // 
+            // flightScheduleBindingSource3
+            // 
+            this.flightScheduleBindingSource3.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource3.DataSource = this._Drone_s_Flight_PlannerDataSet5;
+            // 
+            // _Drone_s_Flight_PlannerDataSet5
+            // 
+            this._Drone_s_Flight_PlannerDataSet5.DataSetName = "_Drone_s_Flight_PlannerDataSet5";
+            this._Drone_s_Flight_PlannerDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // flightScheduleBindingSource1
             // 
@@ -1792,54 +1839,9 @@ namespace MissionPlanner.GCSViews
             this.flightScheduleBindingSource5.DataMember = "FlightSchedule";
             this.flightScheduleBindingSource5.DataSource = this.flightScheduleBindingSource;
             // 
-            // flightplanner_FS
-            // 
-            this.flightplanner_FS.DataSetName = "flightplanner_FS";
-            this.flightplanner_FS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // flightScheduleBindingSource6
-            // 
-            this.flightScheduleBindingSource6.DataMember = "FlightSchedule";
-            this.flightScheduleBindingSource6.DataSource = this.flightplanner_FS;
-            // 
             // flightScheduleTableAdapter4
             // 
             this.flightScheduleTableAdapter4.ClearBeforeFill = true;
-            // 
-            // actiondatetimeDataGridViewTextBoxColumn
-            // 
-            this.actiondatetimeDataGridViewTextBoxColumn.DataPropertyName = "action_datetime";
-            resources.ApplyResources(this.actiondatetimeDataGridViewTextBoxColumn, "actiondatetimeDataGridViewTextBoxColumn");
-            this.actiondatetimeDataGridViewTextBoxColumn.Name = "actiondatetimeDataGridViewTextBoxColumn";
-            this.actiondatetimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // actionnoDataGridViewTextBoxColumn
-            // 
-            this.actionnoDataGridViewTextBoxColumn.DataPropertyName = "action_no";
-            resources.ApplyResources(this.actionnoDataGridViewTextBoxColumn, "actionnoDataGridViewTextBoxColumn");
-            this.actionnoDataGridViewTextBoxColumn.Name = "actionnoDataGridViewTextBoxColumn";
-            this.actionnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // actionnameDataGridViewTextBoxColumn
-            // 
-            this.actionnameDataGridViewTextBoxColumn.DataPropertyName = "action_name";
-            resources.ApplyResources(this.actionnameDataGridViewTextBoxColumn, "actionnameDataGridViewTextBoxColumn");
-            this.actionnameDataGridViewTextBoxColumn.Name = "actionnameDataGridViewTextBoxColumn";
-            this.actionnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materialnameDataGridViewTextBoxColumn
-            // 
-            this.materialnameDataGridViewTextBoxColumn.DataPropertyName = "material_name";
-            resources.ApplyResources(this.materialnameDataGridViewTextBoxColumn, "materialnameDataGridViewTextBoxColumn");
-            this.materialnameDataGridViewTextBoxColumn.Name = "materialnameDataGridViewTextBoxColumn";
-            this.materialnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // droneidDataGridViewTextBoxColumn
-            // 
-            this.droneidDataGridViewTextBoxColumn.DataPropertyName = "drone_id";
-            resources.ApplyResources(this.droneidDataGridViewTextBoxColumn, "droneidDataGridViewTextBoxColumn");
-            this.droneidDataGridViewTextBoxColumn.Name = "droneidDataGridViewTextBoxColumn";
-            this.droneidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FlightPlanner
             // 
@@ -1875,13 +1877,15 @@ namespace MissionPlanner.GCSViews
             this.panel_Main_farm.PerformLayout();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightplanner_FS)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.farm1)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule)).EndInit();
@@ -1898,8 +1902,6 @@ namespace MissionPlanner.GCSViews
             ((System.ComponentModel.ISupportInitialize)(this.flightplanner_flightschedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightplanner_FS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource6)).EndInit();
             this.ResumeLayout(false);
 
         }

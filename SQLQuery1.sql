@@ -1,0 +1,1 @@
+﻿select count(*) from UserLogin where username='mookda' and password='123456'

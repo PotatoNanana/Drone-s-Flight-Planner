@@ -26,3 +26,15 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csprojAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CopyComplete
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\bin\Debug\plugins\SqlServerTypes\x64\msvcr120.dll
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\bin\Debug\plugins\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\bin\Debug\plugins\SqlServerTypes\x86\msvcr120.dll
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\bin\Debug\plugins\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\bin\Debug\plugins\MissionPlanner.Stats.dll.config
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\bin\Debug\plugins\MissionPlanner.Stats.dll
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\bin\Debug\plugins\MissionPlanner.Stats.pdb
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csprojAssemblyReference.cache
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CoreCompileInputs.cache
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.csproj.CopyComplete
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.dll
+D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\ExtLibs\MissionPlanner.Stats\obj\Debug\MissionPlanner.Stats.pdb

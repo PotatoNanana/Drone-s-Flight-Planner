@@ -7420,7 +7420,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             }
             /// added export worksheet to excel file
             string fileTest = "C:\\Temp\\DroneFlightPlanner\\FlightHistory_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
-            MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
+            MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมการบินที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
             Excel.Application oApp;
             Excel.Worksheet oSheet;
             Excel.Workbook oBook;
@@ -7930,6 +7930,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             }
         }
 
+        private void textBox_droneID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public void doDisconnect(MAVLinkInterface comPort)
         {
             log.Info("We are disconnecting");
@@ -8112,7 +8117,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         private void button_log_Click(object sender, EventArgs e)
         {
             //go to form log history after finish
-            Form_log_history form_Log_History = new Form_log_history();
+            Form_log_history form_Log_History = new Form_log_history(id_drone);
             form_Log_History.ShowDialog();           
         }
         

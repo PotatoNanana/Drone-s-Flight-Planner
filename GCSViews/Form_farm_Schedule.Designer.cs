@@ -95,8 +95,9 @@
             this.panel1.Controls.Add(this.panel_Main_farm);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 581);
+            this.panel1.Size = new System.Drawing.Size(1467, 868);
             this.panel1.TabIndex = 0;
             // 
             // panel_Main_farm
@@ -130,8 +131,9 @@
             this.panel_Main_farm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
+            this.panel_Main_farm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(984, 581);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1467, 868);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_schedule_Paint);
             // 
@@ -144,9 +146,10 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button5.Location = new System.Drawing.Point(361, 508);
+            this.button5.Location = new System.Drawing.Point(542, 782);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 40);
+            this.button5.Size = new System.Drawing.Size(68, 62);
             this.button5.TabIndex = 60;
             this.button5.Text = "ลบ";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -162,9 +165,10 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button4.Location = new System.Drawing.Point(361, 441);
+            this.button4.Location = new System.Drawing.Point(542, 678);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 40);
+            this.button4.Size = new System.Drawing.Size(68, 62);
             this.button4.TabIndex = 59;
             this.button4.Text = "ลบ";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -180,9 +184,10 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(310, 508);
+            this.button3.Location = new System.Drawing.Point(465, 782);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 40);
+            this.button3.Size = new System.Drawing.Size(68, 62);
             this.button3.TabIndex = 58;
             this.button3.Text = "เพิ่ม";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -198,9 +203,10 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(310, 441);
+            this.button2.Location = new System.Drawing.Point(465, 678);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 40);
+            this.button2.Size = new System.Drawing.Size(68, 62);
             this.button2.TabIndex = 58;
             this.button2.Text = "เพิ่ม";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -210,53 +216,59 @@
             // cboMaterial
             // 
             this.cboMaterial.FormattingEnabled = true;
-            this.cboMaterial.Location = new System.Drawing.Point(117, 513);
+            this.cboMaterial.Location = new System.Drawing.Point(176, 789);
+            this.cboMaterial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboMaterial.Name = "cboMaterial";
-            this.cboMaterial.Size = new System.Drawing.Size(187, 32);
+            this.cboMaterial.Size = new System.Drawing.Size(278, 44);
             this.cboMaterial.TabIndex = 57;
             // 
             // cboActivity
             // 
             this.cboActivity.FormattingEnabled = true;
-            this.cboActivity.Location = new System.Drawing.Point(117, 446);
+            this.cboActivity.Location = new System.Drawing.Point(176, 686);
+            this.cboActivity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboActivity.Name = "cboActivity";
-            this.cboActivity.Size = new System.Drawing.Size(187, 32);
+            this.cboActivity.Size = new System.Drawing.Size(278, 44);
             this.cboActivity.TabIndex = 56;
             // 
             // cboDrone
             // 
             this.cboDrone.FormattingEnabled = true;
-            this.cboDrone.Location = new System.Drawing.Point(117, 388);
+            this.cboDrone.Location = new System.Drawing.Point(176, 597);
+            this.cboDrone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboDrone.Name = "cboDrone";
-            this.cboDrone.Size = new System.Drawing.Size(187, 32);
+            this.cboDrone.Size = new System.Drawing.Size(278, 44);
             this.cboDrone.TabIndex = 55;
             this.cboDrone.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox_finishTime
             // 
             this.textBox_finishTime.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_finishTime.Location = new System.Drawing.Point(703, 512);
+            this.textBox_finishTime.Location = new System.Drawing.Point(1054, 788);
+            this.textBox_finishTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_finishTime.Name = "textBox_finishTime";
-            this.textBox_finishTime.Size = new System.Drawing.Size(93, 34);
+            this.textBox_finishTime.Size = new System.Drawing.Size(138, 47);
             this.textBox_finishTime.TabIndex = 53;
             // 
             // textBox_startTime
             // 
             this.textBox_startTime.Font = new System.Drawing.Font("PJ Standard", 16F);
             this.textBox_startTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_startTime.Location = new System.Drawing.Point(509, 512);
+            this.textBox_startTime.Location = new System.Drawing.Point(764, 788);
+            this.textBox_startTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_startTime.Name = "textBox_startTime";
             this.textBox_startTime.ShortcutsEnabled = false;
-            this.textBox_startTime.Size = new System.Drawing.Size(93, 34);
+            this.textBox_startTime.Size = new System.Drawing.Size(138, 47);
             this.textBox_startTime.TabIndex = 52;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label2.Location = new System.Drawing.Point(618, 515);
+            this.label2.Location = new System.Drawing.Point(927, 792);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 27);
+            this.label2.Size = new System.Drawing.Size(115, 39);
             this.label2.TabIndex = 51;
             this.label2.Text = "เวลาที่เสร็จ";
             // 
@@ -264,9 +276,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label1.Location = new System.Drawing.Point(432, 515);
+            this.label1.Location = new System.Drawing.Point(648, 792);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 27);
+            this.label1.Size = new System.Drawing.Size(104, 39);
             this.label1.TabIndex = 50;
             this.label1.Text = "เวลาที่เริ่ม";
             // 
@@ -274,35 +287,39 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label7.Location = new System.Drawing.Point(47, 390);
+            this.label7.Location = new System.Drawing.Point(70, 600);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 27);
+            this.label7.Size = new System.Drawing.Size(63, 39);
             this.label7.TabIndex = 48;
             this.label7.Text = "โดรน";
             // 
             // textBox_cost
             // 
             this.textBox_cost.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_cost.Location = new System.Drawing.Point(548, 448);
+            this.textBox_cost.Location = new System.Drawing.Point(822, 689);
+            this.textBox_cost.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_cost.Name = "textBox_cost";
-            this.textBox_cost.Size = new System.Drawing.Size(187, 34);
+            this.textBox_cost.Size = new System.Drawing.Size(278, 47);
             this.textBox_cost.TabIndex = 46;
             // 
             // textBox_cap
             // 
             this.textBox_cap.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_cap.Location = new System.Drawing.Point(548, 386);
+            this.textBox_cap.Location = new System.Drawing.Point(822, 594);
+            this.textBox_cap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_cap.Name = "textBox_cap";
-            this.textBox_cap.Size = new System.Drawing.Size(187, 34);
+            this.textBox_cap.Size = new System.Drawing.Size(278, 47);
             this.textBox_cap.TabIndex = 47;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label6.Location = new System.Drawing.Point(432, 389);
+            this.label6.Location = new System.Drawing.Point(648, 598);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 27);
+            this.label6.Size = new System.Drawing.Size(178, 39);
             this.label6.TabIndex = 44;
             this.label6.Text = "ปริมาณสาร (มล.)";
             // 
@@ -310,9 +327,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label5.Location = new System.Drawing.Point(432, 451);
+            this.label5.Location = new System.Drawing.Point(648, 694);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 27);
+            this.label5.Size = new System.Drawing.Size(156, 39);
             this.label5.TabIndex = 45;
             this.label5.Text = "ค่าใช้จ่าย (บาท)";
             // 
@@ -320,9 +338,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label3.Location = new System.Drawing.Point(49, 515);
+            this.label3.Location = new System.Drawing.Point(74, 792);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 27);
+            this.label3.Size = new System.Drawing.Size(79, 39);
             this.label3.TabIndex = 41;
             this.label3.Text = "วัตถุดิบ";
             // 
@@ -330,15 +349,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label4.Location = new System.Drawing.Point(47, 448);
+            this.label4.Location = new System.Drawing.Point(70, 689);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 27);
+            this.label4.Size = new System.Drawing.Size(93, 39);
             this.label4.TabIndex = 40;
             this.label4.Text = "กิจกรรม";
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(62, 167);
+            this.monthCalendar1.Location = new System.Drawing.Point(90, 244);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(14, 14, 14, 14);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 27;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
@@ -347,9 +368,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MissionPlanner.Properties.Resources.calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 123);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(278, 271);
+            this.pictureBox1.Size = new System.Drawing.Size(379, 401);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -363,9 +385,10 @@
             this.button_edit.ForeColor = System.Drawing.Color.White;
             this.button_edit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_edit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_edit.Location = new System.Drawing.Point(810, 435);
+            this.button_edit.Location = new System.Drawing.Point(1215, 669);
+            this.button_edit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_edit.Name = "button_edit";
-            this.button_edit.Size = new System.Drawing.Size(130, 40);
+            this.button_edit.Size = new System.Drawing.Size(195, 62);
             this.button_edit.TabIndex = 25;
             this.button_edit.Text = "แก้ไข";
             this.button_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -381,9 +404,10 @@
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_delete.Location = new System.Drawing.Point(810, 488);
+            this.button_delete.Location = new System.Drawing.Point(1215, 751);
+            this.button_delete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(130, 40);
+            this.button_delete.Size = new System.Drawing.Size(195, 62);
             this.button_delete.TabIndex = 24;
             this.button_delete.Text = "ลบ";
             this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -409,11 +433,12 @@
             this.action_no,
             this.act_no});
             this.DG_Farm.DataSource = this.flightScheduleBindingSource1;
-            this.DG_Farm.Location = new System.Drawing.Point(335, 94);
+            this.DG_Farm.Location = new System.Drawing.Point(502, 145);
+            this.DG_Farm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DG_Farm.MultiSelect = false;
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Farm.Size = new System.Drawing.Size(605, 257);
+            this.DG_Farm.Size = new System.Drawing.Size(908, 395);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             this.DG_Farm.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_RowEnter);
@@ -515,9 +540,10 @@
             this.But_add_act.ForeColor = System.Drawing.Color.White;
             this.But_add_act.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_add_act.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_add_act.Location = new System.Drawing.Point(810, 382);
+            this.But_add_act.Location = new System.Drawing.Point(1215, 588);
+            this.But_add_act.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.But_add_act.Name = "But_add_act";
-            this.But_add_act.Size = new System.Drawing.Size(130, 40);
+            this.But_add_act.Size = new System.Drawing.Size(195, 62);
             this.But_add_act.TabIndex = 6;
             this.But_add_act.Text = "เพิ่มกิจกรรม";
             this.But_add_act.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -529,8 +555,9 @@
             this.panel3.Controls.Add(this.Main_but_farm);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 50);
+            this.panel3.Size = new System.Drawing.Size(1467, 77);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -544,8 +571,9 @@
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(984, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(1467, 77);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ตารางปฏิทินการบินที่กำลังจะเกิด";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -574,6 +602,7 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
@@ -584,13 +613,14 @@
             // 
             // Form_farm_Schedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 581);
+            this.ClientSize = new System.Drawing.Size(1467, 868);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1000, 620);
-            this.MinimumSize = new System.Drawing.Size(1000, 620);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(1489, 924);
+            this.MinimumSize = new System.Drawing.Size(1489, 924);
             this.Name = "Form_farm_Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Flight Schedule";

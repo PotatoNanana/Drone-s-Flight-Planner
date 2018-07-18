@@ -15,12 +15,14 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Form_log_history : Form
     {
-        public Form_log_history()
+        public Form_log_history(string id_drone)
         {
             InitializeComponent();
+            this.id_drone = id_drone;
         }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        private string id_drone;
 
         private void button_show_Click(object sender, EventArgs e)
         {
@@ -61,12 +63,22 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView
             con.Open();
-            String query = "SELECT * FROM transact";
+            String query = "SELECT * FROM transact WHERE drone_id = '"+id_drone+"'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
             DG_Flight.DataSource = dt;
             con.Close();
+        }
+
+        private void But_print_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DG_Flight_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

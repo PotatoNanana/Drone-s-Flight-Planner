@@ -57,10 +57,9 @@ namespace MissionPlanner.GCSViews
             //show data to DataGridView
             con.Open();
 
-            string startDt = dateTimePicker_startDate.Value.ToString("yyyy-MM-dd");
-            string endDt = dateTimePicker_stopDate.Value.ToString("yyyy-MM-dd");
-            String query = @"SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'y' AND " +
-                " ( action_datetime >= '" + startDt + "' and action_datetime <='" + endDt + "' )";
+            //string startDt = dateTimePicker_startDate.Value.ToString("yyyy-MM-dd");
+            //string endDt = dateTimePicker_stopDate.Value.ToString("yyyy-MM-dd");
+            String query = @"SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'y' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -78,6 +77,12 @@ namespace MissionPlanner.GCSViews
         {
             // TODO: This line of code loads data into the '_Drone_s_Flight_PlannerDataSet4.FlightSchedule' table. You can move, or remove it, as needed.
             this.flightScheduleTableAdapter2.Fill(this._Drone_s_Flight_PlannerDataSet4.FlightSchedule);
+            String query = @"SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'y' ";
+            SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            SDA.Fill(dt);
+            DG_afterFlight.DataSource = dt;
+            con.Close();
 
         }
 
@@ -117,12 +122,12 @@ namespace MissionPlanner.GCSViews
 
         private void dateTimePicker_startDate_ValueChanged(object sender, EventArgs e)
         {
-            startDate = dateTimePicker_startDate.Value;
+            //startDate = dateTimePicker_startDate.Value;
         }
 
         private void dateTimePicker_stopDate_ValueChanged(object sender, EventArgs e)
         {
-            endDate = dateTimePicker_stopDate.Value;
+            //endDate = dateTimePicker_stopDate.Value;
         }
     }
 }

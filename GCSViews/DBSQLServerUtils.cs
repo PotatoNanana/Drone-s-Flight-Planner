@@ -15,7 +15,7 @@ namespace Tutorial.SqlConn
                  GetDBConnection(string datasource, string database, string username, string password)
         {
             string connString = @"Data Source=" + datasource + ";Initial Catalog="
-                        + database + ";Integrated Security=True";
+                        + database + ";Integrated Security=True" ;
 
             SqlConnection conn = new SqlConnection(connString);
 

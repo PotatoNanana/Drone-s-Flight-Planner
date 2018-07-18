@@ -15,6 +15,8 @@ using MissionPlanner.Plugin;
 using System.Data.SqlClient;
 using System.IO;
 using System.Globalization;
+using Dapper;
+using System.Configuration;
 
 namespace MissionPlanner.GCSViews
 {
@@ -326,7 +328,48 @@ namespace MissionPlanner.GCSViews
         }
         private void DG_Part_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+                byte[] img = null;
+                String query = "SELECT * FROM DeviceList WHERE drone_id = '" + id_drone + "' AND device_id = '" + DG_Part.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                if (reader.HasRows)
+                {
+                    textBox_partID.Text = DG_Part.SelectedRows[0].Cells[0].Value.ToString();
+                    id_part = DG_Part.SelectedRows[0].Cells[0].Value.ToString();
+                    textBox_partName.Text = DG_Part.SelectedRows[0].Cells[1].Value.ToString();
+                    textBox_partPosition.Text = DG_Part.SelectedRows[0].Cells[2].Value.ToString();
+                    textBox_partPrice.Text = DG_Part.SelectedRows[0].Cells[3].Value.ToString();
+                    dateTimePicker_reg.Value = Convert.ToDateTime(DG_Part.SelectedRows[0].Cells[4].Value);
+                    dateTimePicker_startDate.Value = Convert.ToDateTime(DG_Part.SelectedRows[0].Cells[5].Value);
+                    dateTimePicker_expDate.Value = Convert.ToDateTime(DG_Part.SelectedRows[0].Cells[6].Value);
+                    comboBox_alarm.Text = DG_Part.SelectedRows[0].Cells[7].Value.ToString();
+                    textBox_venName.Text = DG_Part.SelectedRows[0].Cells[8].Value.ToString();
+                    textBox_venAdd.Text = DG_Part.SelectedRows[0].Cells[9].Value.ToString();
+                    textBox_venPhone.Text = DG_Part.SelectedRows[0].Cells[10].Value.ToString();
+                    textBox_respon.Text = DG_Part.SelectedRows[0].Cells[11].Value.ToString();
+
+                    if (!Convert.IsDBNull(reader[8]))
+                    {
+                        img = (byte[])(reader[8]);
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBox_part.Image = Image.FromStream(ms);
+                    }
+                    else
+                    {
+                        pictureBox_part.Image = null;
+                    }
+                }
+                else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                deviceListBindingSource.DataSource = db.Query<DronePart>(query, commandType: CommandType.Text);
+                con.Close();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void button_serchPart_Click(object sender, EventArgs e)
@@ -555,18 +598,7 @@ namespace MissionPlanner.GCSViews
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
-        }
-
-        private void button_report_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void Button_report_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void DG_Part_Click(object sender, EventArgs e)
         {
@@ -638,11 +670,12 @@ namespace MissionPlanner.GCSViews
                     {
                         pictureBox.Image = null;
                     }
+                    droneBindingSource1.DataSource = db.Query<Drone>(query, commandType: CommandType.Text);
                 }
                 else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
                 con.Close();
 
-
+                Drone obj = droneBindingSource1.Current as Drone;
                 //show data to DataGridView
                 String query2 = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = '" + id_drone + "' ";
                 if (con.State != ConnectionState.Open)
@@ -654,10 +687,48 @@ namespace MissionPlanner.GCSViews
                 SDA2.Fill(dt2);
                 con.Close();
                 DG_Part.DataSource = dt2;
+                List<DronePart> list = db.Query<DronePart>(query2, commandType: CommandType.Text).ToList();
 
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
+        }
+
+        private void button_report_dronePart_Click(object sender, EventArgs e)
+        {
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+            Drone obj = droneBindingSource1.Current as Drone;
+            if (obj != null)
+            {
+                //Execute query to get dronePart List
+                String query2 = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM [DeviceList] WHERE drone_id = '{obj.Drone_id}' ";
+                List<DronePart> list = db.Query<DronePart>(query2, commandType: CommandType.Text).ToList();
+
+                using (Form_Print_DronePart frm = new Form_Print_DronePart(obj, list))
+                {
+                    frm.ShowDialog();
+                }
+            }
+            
+        }
+
+        private void button_report_partMaintain_Click(object sender, EventArgs e)
+        {         
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+            DronePart obj = deviceListBindingSource.Current as Orders;
+            if (obj != null)
+            {
+                //Execute query to get dronePart List
+                String query2 = "SELECT * FROM [Maintainance] WHERE device_id = '{obj.Device_id}'";
+                List<PartMaintain> list = db.Query<PartMaintain>(query2, commandType: CommandType.Text).ToList();                
+                using (Form_Print_PartMaintain frm = new Form_Print_PartMaintain(obj, list))
+                {
+                    frm.ShowDialog();
+                }
+
+            }
         }
     }
 }

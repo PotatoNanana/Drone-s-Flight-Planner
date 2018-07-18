@@ -33,8 +33,9 @@ namespace MissionPlanner.GCSViews
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_maintenance));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
+            this.button_report_partMaintain = new System.Windows.Forms.Button();
+            this.button_report_dronePart = new System.Windows.Forms.Button();
             this.button_deletePart = new System.Windows.Forms.Button();
             this.button_editPart = new System.Windows.Forms.Button();
             this.BUT_addPart = new System.Windows.Forms.Button();
@@ -120,23 +121,18 @@ namespace MissionPlanner.GCSViews
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.panel_Main_farm);
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1366, 680);
+            this.panel2.Size = new System.Drawing.Size(2049, 1158);
             this.panel2.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(731, 719);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 30);
-            this.panel1.TabIndex = 9;
             // 
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
+            this.panel_Main_farm.Controls.Add(this.button_report_partMaintain);
+            this.panel_Main_farm.Controls.Add(this.button_report_dronePart);
             this.panel_Main_farm.Controls.Add(this.button_deletePart);
             this.panel_Main_farm.Controls.Add(this.button_editPart);
             this.panel_Main_farm.Controls.Add(this.BUT_addPart);
@@ -180,11 +176,49 @@ namespace MissionPlanner.GCSViews
             this.panel_Main_farm.Controls.Add(this.lineSeparator2);
             this.panel_Main_farm.Controls.Add(this.panel3);
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14F);
-            this.panel_Main_farm.Location = new System.Drawing.Point(25, 25);
+            this.panel_Main_farm.Location = new System.Drawing.Point(38, 38);
+            this.panel_Main_farm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(1321, 688);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1982, 1027);
             this.panel_Main_farm.TabIndex = 8;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMaintenance_Paint);
+            // 
+            // button_report_partMaintain
+            // 
+            this.button_report_partMaintain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_report_partMaintain.FlatAppearance.BorderSize = 0;
+            this.button_report_partMaintain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_report_partMaintain.Font = new System.Drawing.Font("PJ Standard", 16F, System.Drawing.FontStyle.Bold);
+            this.button_report_partMaintain.ForeColor = System.Drawing.Color.White;
+            this.button_report_partMaintain.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_report_partMaintain.Location = new System.Drawing.Point(990, 939);
+            this.button_report_partMaintain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_report_partMaintain.Name = "button_report_partMaintain";
+            this.button_report_partMaintain.Size = new System.Drawing.Size(340, 60);
+            this.button_report_partMaintain.TabIndex = 74;
+            this.button_report_partMaintain.Text = "รายงานการบำรุงรักษาอุปกรณ์";
+            this.button_report_partMaintain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_report_partMaintain.UseVisualStyleBackColor = false;
+            this.button_report_partMaintain.Click += new System.EventHandler(this.button_report_partMaintain_Click);
+            // 
+            // button_report_dronePart
+            // 
+            this.button_report_dronePart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.button_report_dronePart.FlatAppearance.BorderSize = 0;
+            this.button_report_dronePart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_report_dronePart.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button_report_dronePart.ForeColor = System.Drawing.Color.White;
+            this.button_report_dronePart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_report_dronePart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_report_dronePart.Location = new System.Drawing.Point(167, 939);
+            this.button_report_dronePart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_report_dronePart.Name = "button_report_dronePart";
+            this.button_report_dronePart.Size = new System.Drawing.Size(273, 62);
+            this.button_report_dronePart.TabIndex = 73;
+            this.button_report_dronePart.Text = "รายงานส่วนประกอบโดรน";
+            this.button_report_dronePart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_report_dronePart.UseVisualStyleBackColor = false;
+            this.button_report_dronePart.Click += new System.EventHandler(this.button_report_dronePart_Click);
             // 
             // button_deletePart
             // 
@@ -195,9 +229,10 @@ namespace MissionPlanner.GCSViews
             this.button_deletePart.ForeColor = System.Drawing.Color.White;
             this.button_deletePart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_deletePart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_deletePart.Location = new System.Drawing.Point(736, 556);
+            this.button_deletePart.Location = new System.Drawing.Point(1104, 855);
+            this.button_deletePart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_deletePart.Name = "button_deletePart";
-            this.button_deletePart.Size = new System.Drawing.Size(130, 40);
+            this.button_deletePart.Size = new System.Drawing.Size(195, 62);
             this.button_deletePart.TabIndex = 72;
             this.button_deletePart.Text = "ลบส่วนประกอบ";
             this.button_deletePart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -213,9 +248,10 @@ namespace MissionPlanner.GCSViews
             this.button_editPart.ForeColor = System.Drawing.Color.White;
             this.button_editPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_editPart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_editPart.Location = new System.Drawing.Point(600, 556);
+            this.button_editPart.Location = new System.Drawing.Point(900, 855);
+            this.button_editPart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_editPart.Name = "button_editPart";
-            this.button_editPart.Size = new System.Drawing.Size(130, 40);
+            this.button_editPart.Size = new System.Drawing.Size(195, 62);
             this.button_editPart.TabIndex = 71;
             this.button_editPart.Text = "แก้ไขส่วนประกอบ";
             this.button_editPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -230,9 +266,10 @@ namespace MissionPlanner.GCSViews
             this.BUT_addPart.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_addPart.ForeColor = System.Drawing.Color.White;
             this.BUT_addPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_addPart.Location = new System.Drawing.Point(464, 556);
+            this.BUT_addPart.Location = new System.Drawing.Point(696, 855);
+            this.BUT_addPart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BUT_addPart.Name = "BUT_addPart";
-            this.BUT_addPart.Size = new System.Drawing.Size(130, 40);
+            this.BUT_addPart.Size = new System.Drawing.Size(195, 62);
             this.BUT_addPart.TabIndex = 70;
             this.BUT_addPart.Text = "เพิ่มส่วนประกอบ";
             this.BUT_addPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -247,9 +284,10 @@ namespace MissionPlanner.GCSViews
             this.button_MaintainPart.Font = new System.Drawing.Font("PJ Standard", 16F, System.Drawing.FontStyle.Bold);
             this.button_MaintainPart.ForeColor = System.Drawing.Color.White;
             this.button_MaintainPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_MaintainPart.Location = new System.Drawing.Point(526, 602);
+            this.button_MaintainPart.Location = new System.Drawing.Point(664, 939);
+            this.button_MaintainPart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_MaintainPart.Name = "button_MaintainPart";
-            this.button_MaintainPart.Size = new System.Drawing.Size(267, 39);
+            this.button_MaintainPart.Size = new System.Drawing.Size(309, 60);
             this.button_MaintainPart.TabIndex = 69;
             this.button_MaintainPart.Text = "ข้อมูลการบำรุงรักษาอุปกรณ์";
             this.button_MaintainPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -278,11 +316,12 @@ namespace MissionPlanner.GCSViews
             this.venderphoneDataGridViewTextBoxColumn,
             this.deviceresponderDataGridViewTextBoxColumn});
             this.DG_Part.DataSource = this.deviceListBindingSource;
-            this.DG_Part.Location = new System.Drawing.Point(482, 70);
+            this.DG_Part.Location = new System.Drawing.Point(723, 108);
+            this.DG_Part.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DG_Part.Name = "DG_Part";
             this.DG_Part.ReadOnly = true;
             this.DG_Part.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Part.Size = new System.Drawing.Size(757, 172);
+            this.DG_Part.Size = new System.Drawing.Size(1136, 265);
             this.DG_Part.TabIndex = 68;
             this.DG_Part.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Part_CellContentClick);
             this.DG_Part.Click += new System.EventHandler(this.DG_Part_Click);
@@ -390,9 +429,10 @@ namespace MissionPlanner.GCSViews
             this.button_serchDrrone.ForeColor = System.Drawing.Color.White;
             this.button_serchDrrone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_serchDrrone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serchDrrone.Location = new System.Drawing.Point(40, 485);
+            this.button_serchDrrone.Location = new System.Drawing.Point(60, 746);
+            this.button_serchDrrone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_serchDrrone.Name = "button_serchDrrone";
-            this.button_serchDrrone.Size = new System.Drawing.Size(80, 40);
+            this.button_serchDrrone.Size = new System.Drawing.Size(120, 62);
             this.button_serchDrrone.TabIndex = 67;
             this.button_serchDrrone.Text = "อัพโหลด";
             this.button_serchDrrone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -408,18 +448,20 @@ namespace MissionPlanner.GCSViews
             "ทุกอาทิตย์",
             "ทุกเดือน",
             "ทุก1ปี"});
-            this.comboBox_alarm.Location = new System.Drawing.Point(622, 499);
+            this.comboBox_alarm.Location = new System.Drawing.Point(933, 768);
+            this.comboBox_alarm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox_alarm.Name = "comboBox_alarm";
-            this.comboBox_alarm.Size = new System.Drawing.Size(200, 34);
+            this.comboBox_alarm.Size = new System.Drawing.Size(298, 47);
             this.comboBox_alarm.TabIndex = 66;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label7.Location = new System.Drawing.Point(459, 502);
+            this.label7.Location = new System.Drawing.Point(688, 772);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 27);
+            this.label7.Size = new System.Drawing.Size(228, 39);
             this.label7.TabIndex = 65;
             this.label7.Text = "แจ้งเตือนการบำรุงรักษา";
             // 
@@ -432,9 +474,10 @@ namespace MissionPlanner.GCSViews
             this.button_serchPart.ForeColor = System.Drawing.Color.White;
             this.button_serchPart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_serchPart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_serchPart.Location = new System.Drawing.Point(1189, 581);
+            this.button_serchPart.Location = new System.Drawing.Point(1784, 894);
+            this.button_serchPart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_serchPart.Name = "button_serchPart";
-            this.button_serchPart.Size = new System.Drawing.Size(80, 40);
+            this.button_serchPart.Size = new System.Drawing.Size(120, 62);
             this.button_serchPart.TabIndex = 64;
             this.button_serchPart.Text = "อัพโหลด";
             this.button_serchPart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -445,9 +488,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.pictureBox_part.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox_part.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_part.InitialImage")));
-            this.pictureBox_part.Location = new System.Drawing.Point(963, 425);
+            this.pictureBox_part.Location = new System.Drawing.Point(1444, 654);
+            this.pictureBox_part.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox_part.Name = "pictureBox_part";
-            this.pictureBox_part.Size = new System.Drawing.Size(220, 196);
+            this.pictureBox_part.Size = new System.Drawing.Size(330, 302);
             this.pictureBox_part.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_part.TabIndex = 63;
             this.pictureBox_part.TabStop = false;
@@ -457,9 +501,10 @@ namespace MissionPlanner.GCSViews
             this.dateTimePicker_expDate.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker_expDate.Font = new System.Drawing.Font("CordiaUPC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_expDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_expDate.Location = new System.Drawing.Point(622, 417);
+            this.dateTimePicker_expDate.Location = new System.Drawing.Point(933, 642);
+            this.dateTimePicker_expDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker_expDate.Name = "dateTimePicker_expDate";
-            this.dateTimePicker_expDate.Size = new System.Drawing.Size(200, 37);
+            this.dateTimePicker_expDate.Size = new System.Drawing.Size(298, 51);
             this.dateTimePicker_expDate.TabIndex = 62;
             // 
             // dateTimePicker_startDate
@@ -467,9 +512,10 @@ namespace MissionPlanner.GCSViews
             this.dateTimePicker_startDate.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker_startDate.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_startDate.Location = new System.Drawing.Point(622, 377);
+            this.dateTimePicker_startDate.Location = new System.Drawing.Point(933, 580);
+            this.dateTimePicker_startDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker_startDate.Name = "dateTimePicker_startDate";
-            this.dateTimePicker_startDate.Size = new System.Drawing.Size(200, 37);
+            this.dateTimePicker_startDate.Size = new System.Drawing.Size(298, 51);
             this.dateTimePicker_startDate.TabIndex = 61;
             // 
             // dateTimePicker_reg
@@ -477,81 +523,91 @@ namespace MissionPlanner.GCSViews
             this.dateTimePicker_reg.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker_reg.Font = new System.Drawing.Font("CordiaUPC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_reg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker_reg.Location = new System.Drawing.Point(622, 337);
+            this.dateTimePicker_reg.Location = new System.Drawing.Point(933, 518);
+            this.dateTimePicker_reg.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker_reg.Name = "dateTimePicker_reg";
-            this.dateTimePicker_reg.Size = new System.Drawing.Size(200, 37);
+            this.dateTimePicker_reg.Size = new System.Drawing.Size(298, 51);
             this.dateTimePicker_reg.TabIndex = 60;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(616, 495);
+            this.textBox7.Location = new System.Drawing.Point(924, 762);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(0, 30);
+            this.textBox7.Size = new System.Drawing.Size(0, 42);
             this.textBox7.TabIndex = 58;
             // 
             // textBox_partPrice
             // 
             this.textBox_partPrice.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_partPrice.Location = new System.Drawing.Point(622, 459);
+            this.textBox_partPrice.Location = new System.Drawing.Point(933, 706);
+            this.textBox_partPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_partPrice.Name = "textBox_partPrice";
-            this.textBox_partPrice.Size = new System.Drawing.Size(200, 34);
+            this.textBox_partPrice.Size = new System.Drawing.Size(298, 47);
             this.textBox_partPrice.TabIndex = 57;
             // 
             // textBox_respon
             // 
             this.textBox_respon.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_respon.Location = new System.Drawing.Point(1019, 382);
+            this.textBox_respon.Location = new System.Drawing.Point(1528, 588);
+            this.textBox_respon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_respon.Name = "textBox_respon";
-            this.textBox_respon.Size = new System.Drawing.Size(220, 34);
+            this.textBox_respon.Size = new System.Drawing.Size(328, 47);
             this.textBox_respon.TabIndex = 56;
             // 
             // textBox_venAdd
             // 
             this.textBox_venAdd.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_venAdd.Location = new System.Drawing.Point(1019, 342);
+            this.textBox_venAdd.Location = new System.Drawing.Point(1528, 526);
+            this.textBox_venAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_venAdd.Name = "textBox_venAdd";
-            this.textBox_venAdd.Size = new System.Drawing.Size(220, 34);
+            this.textBox_venAdd.Size = new System.Drawing.Size(328, 47);
             this.textBox_venAdd.TabIndex = 55;
             // 
             // textBox_venPhone
             // 
             this.textBox_venPhone.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_venPhone.Location = new System.Drawing.Point(1019, 302);
+            this.textBox_venPhone.Location = new System.Drawing.Point(1528, 465);
+            this.textBox_venPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_venPhone.Name = "textBox_venPhone";
-            this.textBox_venPhone.Size = new System.Drawing.Size(220, 34);
+            this.textBox_venPhone.Size = new System.Drawing.Size(328, 47);
             this.textBox_venPhone.TabIndex = 54;
             // 
             // textBox_venName
             // 
             this.textBox_venName.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_venName.Location = new System.Drawing.Point(1019, 262);
+            this.textBox_venName.Location = new System.Drawing.Point(1528, 403);
+            this.textBox_venName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_venName.Name = "textBox_venName";
-            this.textBox_venName.Size = new System.Drawing.Size(220, 34);
+            this.textBox_venName.Size = new System.Drawing.Size(328, 47);
             this.textBox_venName.TabIndex = 59;
             // 
             // textBox_partName
             // 
             this.textBox_partName.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_partName.Location = new System.Drawing.Point(622, 262);
+            this.textBox_partName.Location = new System.Drawing.Point(933, 403);
+            this.textBox_partName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_partName.Name = "textBox_partName";
-            this.textBox_partName.Size = new System.Drawing.Size(200, 34);
+            this.textBox_partName.Size = new System.Drawing.Size(298, 47);
             this.textBox_partName.TabIndex = 53;
             // 
             // textBox_partPosition
             // 
             this.textBox_partPosition.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_partPosition.Location = new System.Drawing.Point(622, 299);
+            this.textBox_partPosition.Location = new System.Drawing.Point(933, 460);
+            this.textBox_partPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_partPosition.Name = "textBox_partPosition";
-            this.textBox_partPosition.Size = new System.Drawing.Size(200, 34);
+            this.textBox_partPosition.Size = new System.Drawing.Size(298, 47);
             this.textBox_partPosition.TabIndex = 52;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label15.Location = new System.Drawing.Point(843, 385);
+            this.label15.Location = new System.Drawing.Point(1264, 592);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(174, 27);
+            this.label15.Size = new System.Drawing.Size(260, 39);
             this.label15.TabIndex = 49;
             this.label15.Text = "ชื่อผู้ติดต่อกับตัวแทนจำหน่าย";
             // 
@@ -559,9 +615,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label6.Location = new System.Drawing.Point(459, 422);
+            this.label6.Location = new System.Drawing.Point(688, 649);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 27);
+            this.label6.Size = new System.Drawing.Size(241, 39);
             this.label6.TabIndex = 48;
             this.label6.Text = "วันที่ครบกำหนดอายุใช้งาน";
             // 
@@ -569,9 +626,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label14.Location = new System.Drawing.Point(843, 425);
+            this.label14.Location = new System.Drawing.Point(1264, 654);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 27);
+            this.label14.Size = new System.Drawing.Size(146, 39);
             this.label14.TabIndex = 47;
             this.label14.Text = "รูปชิ้นส่วนโดรน";
             // 
@@ -579,9 +637,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label13.Location = new System.Drawing.Point(843, 345);
+            this.label13.Location = new System.Drawing.Point(1264, 531);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 27);
+            this.label13.Size = new System.Drawing.Size(182, 39);
             this.label13.TabIndex = 46;
             this.label13.Text = "ที่อยู่ตัวแทนจำหน่าย";
             // 
@@ -589,9 +648,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label5.Location = new System.Drawing.Point(459, 462);
+            this.label5.Location = new System.Drawing.Point(688, 711);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 27);
+            this.label5.Size = new System.Drawing.Size(125, 39);
             this.label5.TabIndex = 45;
             this.label5.Text = "ราคา (บาท)";
             // 
@@ -599,9 +659,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label12.Location = new System.Drawing.Point(843, 305);
+            this.label12.Location = new System.Drawing.Point(1264, 469);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(150, 27);
+            this.label12.Size = new System.Drawing.Size(224, 39);
             this.label12.TabIndex = 44;
             this.label12.Text = "เบอร์โทรตัวแทนจำหน่าย";
             // 
@@ -609,9 +670,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label4.Location = new System.Drawing.Point(459, 382);
+            this.label4.Location = new System.Drawing.Point(688, 588);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 27);
+            this.label4.Size = new System.Drawing.Size(138, 39);
             this.label4.TabIndex = 43;
             this.label4.Text = "วันที่เริ่มใช้งาน";
             // 
@@ -619,9 +681,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label11.Location = new System.Drawing.Point(843, 265);
+            this.label11.Location = new System.Drawing.Point(1264, 408);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 27);
+            this.label11.Size = new System.Drawing.Size(170, 39);
             this.label11.TabIndex = 42;
             this.label11.Text = "ชื่อตัวแทนจำหน่าย";
             // 
@@ -629,9 +692,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label8.Location = new System.Drawing.Point(459, 342);
+            this.label8.Location = new System.Drawing.Point(688, 526);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 27);
+            this.label8.Size = new System.Drawing.Size(139, 39);
             this.label8.TabIndex = 41;
             this.label8.Text = "วันที่ลงทะเบียน";
             // 
@@ -639,9 +703,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label10.Location = new System.Drawing.Point(459, 265);
+            this.label10.Location = new System.Drawing.Point(688, 408);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 27);
+            this.label10.Size = new System.Drawing.Size(145, 39);
             this.label10.TabIndex = 40;
             this.label10.Text = "ชื่อชิ้นส่วนโดรน";
             // 
@@ -649,9 +714,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label9.Location = new System.Drawing.Point(459, 302);
+            this.label9.Location = new System.Drawing.Point(688, 465);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 27);
+            this.label9.Size = new System.Drawing.Size(191, 39);
             this.label9.TabIndex = 50;
             this.label9.Text = "ตำแหน่งชิ้นส่วนโดรน";
             // 
@@ -659,9 +725,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(36, 322);
+            this.label3.Location = new System.Drawing.Point(54, 495);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 26);
+            this.label3.Size = new System.Drawing.Size(88, 39);
             this.label3.TabIndex = 38;
             this.label3.Text = "รูปโดรน";
             // 
@@ -669,9 +736,10 @@ namespace MissionPlanner.GCSViews
             // 
             this.pictureBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.InitialImage")));
-            this.pictureBox.Location = new System.Drawing.Point(136, 322);
+            this.pictureBox.Location = new System.Drawing.Point(204, 495);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(223, 203);
+            this.pictureBox.Size = new System.Drawing.Size(334, 312);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 37;
             this.pictureBox.TabStop = false;
@@ -679,18 +747,20 @@ namespace MissionPlanner.GCSViews
             // textBox_droneName
             // 
             this.textBox_droneName.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.textBox_droneName.Location = new System.Drawing.Point(136, 268);
+            this.textBox_droneName.Location = new System.Drawing.Point(204, 412);
+            this.textBox_droneName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox_droneName.Name = "textBox_droneName";
-            this.textBox_droneName.Size = new System.Drawing.Size(223, 34);
+            this.textBox_droneName.Size = new System.Drawing.Size(332, 47);
             this.textBox_droneName.TabIndex = 16;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(36, 274);
+            this.label2.Location = new System.Drawing.Point(54, 422);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 26);
+            this.label2.Size = new System.Drawing.Size(87, 39);
             this.label2.TabIndex = 14;
             this.label2.Text = "ชื่อโดรน";
             // 
@@ -702,9 +772,10 @@ namespace MissionPlanner.GCSViews
             this.button_editDrone.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_editDrone.ForeColor = System.Drawing.Color.White;
             this.button_editDrone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_editDrone.Location = new System.Drawing.Point(153, 556);
+            this.button_editDrone.Location = new System.Drawing.Point(230, 855);
+            this.button_editDrone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_editDrone.Name = "button_editDrone";
-            this.button_editDrone.Size = new System.Drawing.Size(101, 40);
+            this.button_editDrone.Size = new System.Drawing.Size(152, 62);
             this.button_editDrone.TabIndex = 12;
             this.button_editDrone.Text = "แก้ไขโดรน";
             this.button_editDrone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -719,9 +790,10 @@ namespace MissionPlanner.GCSViews
             this.button_deleteDrone.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_deleteDrone.ForeColor = System.Drawing.Color.White;
             this.button_deleteDrone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_deleteDrone.Location = new System.Drawing.Point(260, 556);
+            this.button_deleteDrone.Location = new System.Drawing.Point(390, 855);
+            this.button_deleteDrone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_deleteDrone.Name = "button_deleteDrone";
-            this.button_deleteDrone.Size = new System.Drawing.Size(99, 40);
+            this.button_deleteDrone.Size = new System.Drawing.Size(148, 62);
             this.button_deleteDrone.TabIndex = 11;
             this.button_deleteDrone.Text = "ลบโดรน";
             this.button_deleteDrone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -740,11 +812,12 @@ namespace MissionPlanner.GCSViews
             this.droneidDataGridViewTextBoxColumn,
             this.dronenameDataGridViewTextBoxColumn});
             this.DG_Drone.DataSource = this.droneBindingSource1;
-            this.DG_Drone.Location = new System.Drawing.Point(35, 70);
+            this.DG_Drone.Location = new System.Drawing.Point(52, 108);
+            this.DG_Drone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DG_Drone.Name = "DG_Drone";
             this.DG_Drone.ReadOnly = true;
             this.DG_Drone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Drone.Size = new System.Drawing.Size(298, 172);
+            this.DG_Drone.Size = new System.Drawing.Size(447, 265);
             this.DG_Drone.TabIndex = 9;
             this.DG_Drone.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Drone_CellContentClick);
             this.DG_Drone.Click += new System.EventHandler(this.DG_Drone_Click);
@@ -781,9 +854,10 @@ namespace MissionPlanner.GCSViews
             this.BUT_drone_addDrone.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_drone_addDrone.ForeColor = System.Drawing.Color.White;
             this.BUT_drone_addDrone.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_drone_addDrone.Location = new System.Drawing.Point(39, 556);
+            this.BUT_drone_addDrone.Location = new System.Drawing.Point(58, 855);
+            this.BUT_drone_addDrone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BUT_drone_addDrone.Name = "BUT_drone_addDrone";
-            this.BUT_drone_addDrone.Size = new System.Drawing.Size(108, 40);
+            this.BUT_drone_addDrone.Size = new System.Drawing.Size(162, 62);
             this.BUT_drone_addDrone.TabIndex = 6;
             this.BUT_drone_addDrone.Text = "เพิ่มโดรน";
             this.BUT_drone_addDrone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -792,12 +866,13 @@ namespace MissionPlanner.GCSViews
             // 
             // lineSeparator2
             // 
-            this.lineSeparator2.Location = new System.Drawing.Point(10, 50);
-            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator2.Location = new System.Drawing.Point(15, 77);
+            this.lineSeparator2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lineSeparator2.MaximumSize = new System.Drawing.Size(3000, 3);
+            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 3);
             this.lineSeparator2.Name = "lineSeparator2";
             this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator2.Size = new System.Drawing.Size(1269, 2);
+            this.lineSeparator2.Size = new System.Drawing.Size(1904, 3);
             this.lineSeparator2.TabIndex = 8;
             // 
             // panel3
@@ -805,8 +880,9 @@ namespace MissionPlanner.GCSViews
             this.panel3.Controls.Add(this.Main_but_farm);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1321, 50);
+            this.panel3.Size = new System.Drawing.Size(1982, 77);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -819,8 +895,9 @@ namespace MissionPlanner.GCSViews
             this.Main_but_farm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(1366, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(2049, 77);
             this.Main_but_farm.TabIndex = 6;
             this.Main_but_farm.Text = "ข้อมูลโดรน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -852,12 +929,13 @@ namespace MissionPlanner.GCSViews
             // 
             // Menu_maintenance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.MinimumSize = new System.Drawing.Size(1366, 768);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(2049, 1182);
             this.Name = "Menu_maintenance";
-            this.Size = new System.Drawing.Size(1366, 768);
+            this.Size = new System.Drawing.Size(2049, 1182);
             this.panel2.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
@@ -945,7 +1023,8 @@ namespace MissionPlanner.GCSViews
         private System.Windows.Forms.Button BUT_addPart;
         private System.Windows.Forms.Button button_editPart;
         private System.Windows.Forms.Button button_deletePart;
-        private System.Windows.Forms.Panel panel1;
         private EventHandler button_report_Click_1;
+        private System.Windows.Forms.Button button_report_partMaintain;
+        private System.Windows.Forms.Button button_report_dronePart;
     }
 }

@@ -16,6 +16,7 @@ namespace MissionPlanner
         public static bool WindowsStoreApp { get { return Application.ExecutablePath.Contains("WindowsApps"); } }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        
         public static event EventHandler Goto_main_Clicked;
 
         public static int roleid;
@@ -93,15 +94,15 @@ namespace MissionPlanner
         private static int role_id;
         private void Goto_main_Click(object sender, EventArgs e)
         {
+            
             String query = "select count(*) from UserLogin where username=@usr and password=@pwd";
             SqlCommand scmd = new SqlCommand(query, con);
             scmd.Parameters.Clear();
             scmd.Parameters.AddWithValue("@usr", txtUsername.Text);
             scmd.Parameters.AddWithValue("@pwd", txtPassword.Text);
-
+            con.Open();
             SqlCommand cmd = new SqlCommand("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", con);
             string role;
-            con.Open();
             if(scmd.ExecuteScalar().ToString() == "1")
             {
                 SqlDataReader dtr = cmd.ExecuteReader();

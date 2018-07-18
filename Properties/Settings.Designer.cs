@@ -26,8 +26,8 @@ namespace MissionPlanner.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CS-RABBIT\\SQLEXPRESS;Initial Catalog=DroneFlightPlanner;Integrated Se" +
-            "curity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JURARUT-S\\MSSQLSERVER_2;Initial Catalog=DroneFlightPlanner;Integrated" +
+            " Security=True")]
         public string DroneFlightPlannerConnectionString {
             get {
                 return ((string)(this["DroneFlightPlannerConnectionString"]));
@@ -37,7 +37,8 @@ namespace MissionPlanner.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NAPAT;Initial Catalog=DroneFlightPlanner;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JURARUT-S\\MSSQLSERVER_2;Initial Catalog=DroneFlightPlanner;Integrated" +
+            " Security=True")]
         public string DroneFlightPlannerConnectionString1 {
             get {
                 return ((string)(this["DroneFlightPlannerConnectionString1"]));
@@ -47,8 +48,8 @@ namespace MissionPlanner.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=napat;Initial Catalog=Drone-s-Flight-Planner;Integrated Security=True" +
-            "")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JURARUT-S\\MSSQLSERVER_2;Initial Catalog=Drone-s-Flight-Planner;Integr" +
+            "ated Security=True")]
         public string Drone_s_Flight_PlannerConnectionString {
             get {
                 return ((string)(this["Drone_s_Flight_PlannerConnectionString"]));

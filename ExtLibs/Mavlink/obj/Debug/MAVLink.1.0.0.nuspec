@@ -9,11 +9,16 @@
     <description>MAVLink for Ardupilot</description>
     <dependencies>
       <group targetFramework=".NETFramework4.6.2">
+        <dependency id="CrystalDecisions.CrystalReports.Engine" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="CrystalReports.Windows.Forms" version="13.0.3501" exclude="Build,Analyzers" />
+        <dependency id="Dapper" version="1.50.5" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Report.Viewer" version="11.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.ReportingServices.ReportViewerControl.Winforms" version="140.1000.523" exclude="Build,Analyzers" />
         <dependency id="log4net" version="2.0.8" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
+    <file src="D:\Users\Jurarut\Source\Repos\Drone-s-Flight-Planner1\ExtLibs\Mavlink\bin\Debug\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
   </files>
 </package>

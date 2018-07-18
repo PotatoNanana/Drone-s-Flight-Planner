@@ -74,8 +74,9 @@
             this.panel_Main_farm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main_farm.Font = new System.Drawing.Font("PJ Standard", 14.25F);
             this.panel_Main_farm.Location = new System.Drawing.Point(0, 0);
+            this.panel_Main_farm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Main_farm.Name = "panel_Main_farm";
-            this.panel_Main_farm.Size = new System.Drawing.Size(784, 475);
+            this.panel_Main_farm.Size = new System.Drawing.Size(1176, 731);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Main_farm_Paint);
             // 
@@ -88,13 +89,15 @@
             this.But_print.ForeColor = System.Drawing.Color.White;
             this.But_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.But_print.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.But_print.Location = new System.Drawing.Point(327, 423);
+            this.But_print.Location = new System.Drawing.Point(490, 651);
+            this.But_print.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.But_print.Name = "But_print";
-            this.But_print.Size = new System.Drawing.Size(130, 40);
+            this.But_print.Size = new System.Drawing.Size(195, 62);
             this.But_print.TabIndex = 11;
-            this.But_print.Text = "พิมพ์";
+            this.But_print.Text = "พิมพ์รายงาน";
             this.But_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.But_print.UseVisualStyleBackColor = false;
+            this.But_print.Click += new System.EventHandler(this.But_print_Click);
             // 
             // DG_Flight
             // 
@@ -111,11 +114,13 @@
             this.distance,
             this.area});
             this.DG_Flight.DataSource = this.transactBindingSource;
-            this.DG_Flight.Location = new System.Drawing.Point(25, 75);
+            this.DG_Flight.Location = new System.Drawing.Point(38, 115);
+            this.DG_Flight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DG_Flight.Name = "DG_Flight";
             this.DG_Flight.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Flight.Size = new System.Drawing.Size(735, 333);
+            this.DG_Flight.Size = new System.Drawing.Size(1102, 512);
             this.DG_Flight.TabIndex = 9;
+            this.DG_Flight.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Flight_CellContentClick);
             // 
             // transactBindingSource
             // 
@@ -132,8 +137,9 @@
             this.panel3.Controls.Add(this.Main_but_farm);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(784, 50);
+            this.panel3.Size = new System.Drawing.Size(1176, 77);
             this.panel3.TabIndex = 0;
             // 
             // Main_but_farm
@@ -147,10 +153,11 @@
             this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(784, 50);
+            this.Main_but_farm.Size = new System.Drawing.Size(1176, 77);
             this.Main_but_farm.TabIndex = 6;
-            this.Main_but_farm.Text = "ตารางบันทึกผลการบิน";
+            this.Main_but_farm.Text = "ตารางประวัติการบินโดรน";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Main_but_farm.UseCompatibleTextRendering = true;
@@ -181,8 +188,9 @@
             this.panel1.Controls.Add(this.panel_Main_farm);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 475);
+            this.panel1.Size = new System.Drawing.Size(1176, 731);
             this.panel1.TabIndex = 1;
             // 
             // flightScheduleTableAdapter
@@ -249,11 +257,12 @@
             // 
             // Form_log_history
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 475);
+            this.ClientSize = new System.Drawing.Size(1176, 731);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_log_history";
             this.Text = "Log History";
             this.Load += new System.EventHandler(this.Form_log_history_Load);
