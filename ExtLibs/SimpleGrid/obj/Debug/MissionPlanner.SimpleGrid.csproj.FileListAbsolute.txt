@@ -45,3 +45,10 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.csprojAssemblyReference.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.GridUI.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.GridUI.pt.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\SimpleGrid\obj\Debug\MissionPlanner.SimpleGrid.pdb

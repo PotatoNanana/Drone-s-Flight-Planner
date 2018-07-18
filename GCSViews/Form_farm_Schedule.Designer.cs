@@ -338,8 +338,9 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(62, 167);
+            this.monthCalendar1.Location = new System.Drawing.Point(54, 177);
             this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2018, 7, 29, 0, 0, 0, 0), new System.DateTime(2018, 8, 4, 0, 0, 0, 0));
             this.monthCalendar1.TabIndex = 27;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
@@ -347,9 +348,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MissionPlanner.Properties.Resources.calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 112);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(278, 271);
+            this.pictureBox1.Size = new System.Drawing.Size(215, 239);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -397,23 +398,23 @@
             this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.actiondatetimeDataGridViewTextBoxColumn,
-            this.farm_name,
-            this.drone_name,
             this.actioncapacityDataGridViewTextBoxColumn,
             this.actioncostDataGridViewTextBoxColumn,
             this.drone_id,
             this.action_startTime,
             this.action_finishTime,
-            this.material_no,
             this.farm_id,
             this.action_no,
+            this.farm_name,
+            this.drone_name,
+            this.material_no,
             this.act_no});
             this.DG_Farm.DataSource = this.flightScheduleBindingSource1;
-            this.DG_Farm.Location = new System.Drawing.Point(335, 94);
+            this.DG_Farm.Location = new System.Drawing.Point(271, 94);
             this.DG_Farm.MultiSelect = false;
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Farm.Size = new System.Drawing.Size(605, 257);
+            this.DG_Farm.Size = new System.Drawing.Size(669, 257);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             this.DG_Farm.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_RowEnter);

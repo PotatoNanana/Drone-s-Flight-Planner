@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MissionPlanner.Comms;
 using MissionPlanner.Controls;
-using MissionPlanner.Log;
 using MissionPlanner.Utilities;
-using MissionPlanner.Plugin;
 using System.Data.SqlClient;
 using System.IO;
-using System.Globalization;
 
 namespace MissionPlanner.GCSViews
 {
@@ -130,7 +121,7 @@ namespace MissionPlanner.GCSViews
                     else
                     {
                         con.Close();
-                        String query = "INSERT INTO Drone (drone_id,drone_name) " + "VALUES( (select CONCAT('DR00', MAX(SUBSTRING(drone_id, 4, 7)) + 1) from Drone) ,'" + textBox_droneName.Text + "')";
+                        String query = "INSERT INTO Drone (drone_id,drone_name) " + "VALUES( (select CONCAT('DR00', MAX(CONVERT(INT, SUBSTRING(drone_id, 4, 7)) + 1)) from Drone) ,'" + textBox_droneName.Text + "')";
 
                         if (con.State != ConnectionState.Open)
                         { con.Open(); }
@@ -432,7 +423,7 @@ namespace MissionPlanner.GCSViews
                 {
                     String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate," +
                         "device_expDate,vender_name,vender_add,vender_phone,device_responder,device_alarm,device_price,drone_id,device_remindDate) " +
-                        "VALUES((select CONCAT('DL0', MAX(SUBSTRING(device_id, 4, 7)) + 1) from DeviceList) ,'" + textBox_partName.Text + "','" + textBox_partPosition.Text +
+                        "VALUES((select CONCAT('DL0', MAX(CONVERT(INT, SUBSTRING(device_id, 4, 7)) + 1)) from DeviceList) ,'" + textBox_partName.Text + "','" + textBox_partPosition.Text +
                         "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" +
                         dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" +
                         textBox_respon.Text + "','" + comboBox_alarm.Text + "','" + textBox_partPrice.Text + "','" + id_drone + "','" +
@@ -448,7 +439,7 @@ namespace MissionPlanner.GCSViews
                 {
                     String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate," +
                         "device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id,device_remindDate) " +
-                        "VALUES((select CONCAT('DL0', MAX(SUBSTRING(device_id, 4, 7)) + 1) from DeviceList) ,'" + textBox_partName.Text + "','" + textBox_partPosition.Text + 
+                        "VALUES((select CONCAT('DL0', MAX(CONVERT(INT, SUBSTRING(device_id, 4, 7)) + 1)) from DeviceList) ,'" + textBox_partName.Text + "','" + textBox_partPosition.Text + 
                         "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" + 
                         dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" + 
                         textBox_respon.Text + "',@img,'" + comboBox_alarm.Text + "','" + textBox_partPrice.Text + "','" + id_drone + "','" + 

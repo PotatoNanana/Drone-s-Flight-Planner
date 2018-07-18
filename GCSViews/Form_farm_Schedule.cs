@@ -115,8 +115,7 @@ namespace MissionPlanner.GCSViews
                 { con.Open(); }
                 
                 string query = @" INSERT INTO [dbo].[FlightSchedule] ([action_no],[farm_id],[drone_id],[action_capacity],[action_cost],[action_datetime],[action_startTime],[action_finishTime],[act_no], [action_name],[material_no] ,[material_name]) "+
-                    "VALUES(" + " (select CONCAT('AC', COUNT( SUBSTRING(action_no,3,5))+1) from FlightSchedule) " + ",'" + id_farm + "','" + cboDrone.SelectedValue + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.SelectionEnd.ToShortDateString() + "','" + textBox_startTime.Text + "','" + textBox_finishTime.Text + "','"+ cboActivity.SelectedValue + "','" + cboActivity.Text + "','" + cboMaterial.SelectedValue + "','" + cboMaterial.Text + "')";
-                
+                    "VALUES(" + " (select CONCAT('AC', MAX(CONVERT(INT, SUBSTRING(action_no,3,5)) + 1)) from FlightSchedule) " + ",'" + id_farm + "','" + cboDrone.SelectedValue + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.SelectionEnd.ToShortDateString() + "','" + textBox_startTime.Text + "','" + textBox_finishTime.Text + "','"+ cboActivity.SelectedValue + "','" + cboActivity.Text + "','" + cboMaterial.SelectedValue + "','" + cboMaterial.Text + "')";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();

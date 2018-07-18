@@ -1,19 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MissionPlanner.Comms;
 using MissionPlanner.Controls;
-using MissionPlanner.Log;
-using MissionPlanner.Utilities;
-using MissionPlanner.Plugin;
 using System.Data.SqlClient;
-using System.Data.Sql;
 
 namespace MissionPlanner.GCSViews
 {
@@ -109,7 +98,7 @@ namespace MissionPlanner.GCSViews
                 string format = "yyyy-MM-dd";
 
                 String query = "INSERT INTO Maintainance (device_id,maintain_id,maintain_activity,maintain_price,maintain_venderName,maintain_venderPhone,maintain_venderAdd,maintain_lenght,maintain_responder,maintain_date) "
-                                           + "VALUES('" + id_deviceID + "',(select CONCAT('M00', MAX(SUBSTRING(maintain_id, 3, 5)) + 1) from Maintainance),'" + textBox_mainAct.Text + "','" + textBox_price.Text + "','" + textBox_venName.Text + "','" + textBox_venPhone.Text + "','" + textBox_venAdd.Text + "','" + textBox_time.Text + "','" + textBox_respond.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
+                                           + "VALUES('" + id_deviceID + "',(select CONCAT('M00', MAX(CONVERT(INT, SUBSTRING(maintain_id, 3, 5)) + 1)) from Maintainance),'" + textBox_mainAct.Text + "','" + textBox_price.Text + "','" + textBox_venName.Text + "','" + textBox_venPhone.Text + "','" + textBox_venAdd.Text + "','" + textBox_time.Text + "','" + textBox_respond.Text + "','" + dateTimePicker.Value.ToString(format) + "')";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }

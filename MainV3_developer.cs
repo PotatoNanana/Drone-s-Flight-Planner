@@ -5,33 +5,35 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using System.Xml;
 using System.Collections;
 using System.Threading;
 using MissionPlanner.Utilities;
-using IronPython.Hosting;
 using log4net;
 using System.Runtime.InteropServices;
 using System.Globalization;
 using System.Linq;
 using MissionPlanner.Controls;
-using MissionPlanner.Controls.BackstageView;
 using MissionPlanner.Comms;
 using MissionPlanner.Log;
 using Transitions;
 using MissionPlanner.Warnings;
 using System.Collections.Concurrent;
-using MissionPlanner.GCSViews.ConfigurationView;
 using WebCamService;
 using MissionPlanner.GCSViews;
 using System.Data.SqlClient;
-using System.Data.Sql;
-using System.Data;
+using GMap.NET.MapProviders;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace MissionPlanner
 {
     public partial class MainV2 : Form
     {
+        SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
+        Excel.Application xlApp;
+        Excel.Workbook xlWorkBook;
+        Excel.Worksheet xlWorkSheet;
+        Excel.Range range;
+
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -373,7 +375,7 @@ namespace MissionPlanner
         /// used to call anything as needed.
         /// </summary>
         public static MainV2 instance = null;
-
+        public static GMapProvider mapP = null;
 
         public static MainSwitcher View;
 
@@ -2680,7 +2682,6 @@ namespace MissionPlanner
             catch
             {
             }
-
             MyView.AddScreen(new MainSwitcher.Screen("FlightData", FlightData, true));
             MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", FlightPlanner, true));
             MyView.AddScreen(new MainSwitcher.Screen("HWConfig", typeof(GCSViews.InitialSetup), false));
@@ -2688,6 +2689,8 @@ namespace MissionPlanner
             MyView.AddScreen(new MainSwitcher.Screen("Simulation", Simulation, true));
             MyView.AddScreen(new MainSwitcher.Screen("Terminal", typeof(GCSViews.Terminal), false));
             MyView.AddScreen(new MainSwitcher.Screen("Menu_setup", typeof(GCSViews.Menu_setup), false));
+
+
 
             /// Added
             MyView.AddScreen(new MainSwitcher.Screen("UserLogin", typeof(GCSViews.UserLogin), false));
@@ -3736,6 +3739,91 @@ namespace MissionPlanner
         private void MainV2_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void but_act_file_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            string strfilename = null;
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                strfilename = openFileDialog.FileName;
+            }
+
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Open(strfilename, 0, true, 2, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            string str01 = ((Excel.Range)xlWorkSheet.Cells[2, 1]).Value.ToString();
+            string str02 = ((Excel.Range)xlWorkSheet.Cells[2, 2]).Value.ToString();
+            string str03 = ((Excel.Range)xlWorkSheet.Cells[2, 3]).Value.ToString();
+            string str04 = ((Excel.Range)xlWorkSheet.Cells[2, 4]).Value.ToString();
+            string str05 = ((Excel.Range)xlWorkSheet.Cells[2, 5]).Value.ToString();
+            string str06 = ((Excel.Range)xlWorkSheet.Cells[2, 6]).Value.ToString();
+            string str07 = ((Excel.Range)xlWorkSheet.Cells[2, 7]).Value.ToString();
+            string str08 = ((Excel.Range)xlWorkSheet.Cells[2, 8]).Value.ToString();
+            string str09 = ((Excel.Range)xlWorkSheet.Cells[2, 9]).Value.ToString();
+            string str10 = ((Excel.Range)xlWorkSheet.Cells[2, 10]).Value.ToString();
+            string str11 = ((Excel.Range)xlWorkSheet.Cells[2, 11]).Value.ToString();
+            string str12 = ((Excel.Range)xlWorkSheet.Cells[2, 12]).Value.ToString();
+            string str13 = ((Excel.Range)xlWorkSheet.Cells[2, 13]).Value.ToString();
+            string str14 = ((Excel.Range)xlWorkSheet.Cells[2, 14]).Value.ToString();
+            string str15 = ((Excel.Range)xlWorkSheet.Cells[2, 15]).Value.ToString();
+            string str16 = ((Excel.Range)xlWorkSheet.Cells[2, 16]).Value.ToString();
+            string str17 = ((Excel.Range)xlWorkSheet.Cells[2, 17]).Value.ToString();
+            string str18 = ((Excel.Range)xlWorkSheet.Cells[2, 18]).Value.ToString();
+            string str19 = ((Excel.Range)xlWorkSheet.Cells[2, 19]).Value.ToString();
+
+            //string str_dateTransaction = ((Excel.Range)xlWorkSheet.Cells[2, 1]).Value.ToString();
+            //MessageBox.Show(str_dateTransaction);
+            //DateTime str_dateTransaction_Date = DateTime.Parse(str_dateTransaction, provider);
+            //string str_farmID = ((Excel.Range)xlWorkSheet.Cells[2, 2]).Value.ToString();
+            //string str_DroneID = ((Excel.Range)xlWorkSheet.Cells[2, 3]).Value.ToString();
+            //string str_ActID = ((Excel.Range)xlWorkSheet.Cells[2, 4]).Value.ToString();
+            //string str_ActName = ((Excel.Range)xlWorkSheet.Cells[2, 5]).Value.ToString();
+            //string str_qtyUsed = ((Excel.Range)xlWorkSheet.Cells[2, 6]).Value.ToString();
+            //string str_dateAct = ((Excel.Range)xlWorkSheet.Cells[2, 7]).Value.ToString();
+            //DateTime str_dateAct_Date = DateTime.Parse(str_dateAct, provider);
+            //var dateAct = str_dateAct_Date.ToString("dd/MM/yyyy");
+
+            con.Open();
+
+            String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrictfarm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost) " + "VALUES(@p1, @p2, @p3,@p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)";
+
+            SqlCommand SCMD = new SqlCommand();
+            SCMD.Connection = con;
+            SCMD.CommandText = query;
+            SCMD.Parameters.AddWithValue("@p1", str01);
+            SCMD.Parameters.AddWithValue("@p2", str02);
+            SCMD.Parameters.AddWithValue("@p3", str03);
+            SCMD.Parameters.AddWithValue("@p4", str04);
+            SCMD.Parameters.AddWithValue("@p5", str05);
+            SCMD.Parameters.AddWithValue("@p6", str06);
+            SCMD.Parameters.AddWithValue("@p7", str07);
+            SCMD.Parameters.AddWithValue("@p8", str08);
+            SCMD.Parameters.AddWithValue("@p9", str09);
+            SCMD.Parameters.AddWithValue("@p10", str10);
+            SCMD.Parameters.AddWithValue("@p11", str11);
+            SCMD.Parameters.AddWithValue("@p12", str12);
+            SCMD.Parameters.AddWithValue("@p13", str13);
+            SCMD.Parameters.AddWithValue("@p14", str14);
+            SCMD.Parameters.AddWithValue("@p15", str15);
+            SCMD.Parameters.AddWithValue("@p16", str16);
+            SCMD.Parameters.AddWithValue("@p17", str17);
+            SCMD.Parameters.AddWithValue("@p18", str18);
+            SCMD.Parameters.AddWithValue("@p19", str19);
+            SCMD.ExecuteNonQuery();
+
+            con.Close();
+             
+            xlWorkBook.Close(true, null, null);
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlWorkSheet);
+            Marshal.ReleaseComObject(xlWorkBook);
+            Marshal.ReleaseComObject(xlApp);
+
+            MessageBox.Show("เก็บข้อมูลลงฐานข้อมูลเรียบร้อยแล้ว");
         }
     }
 }
