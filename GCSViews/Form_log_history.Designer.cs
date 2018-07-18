@@ -53,6 +53,7 @@
             this.action_capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.distance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.droneBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Flight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transactBindingSource)).BeginInit();
@@ -63,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Main_farm
@@ -255,6 +257,10 @@
             this.area.HeaderText = "ขนาดพื้นที่";
             this.area.Name = "area";
             // 
+            // droneBindingSource1
+            // 
+            this.droneBindingSource1.DataMember = "Drone";
+            // 
             // Form_log_history
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -277,6 +283,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.droneBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,5 +313,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn action_capacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn distance;
         private System.Windows.Forms.DataGridViewTextBoxColumn area;
+        private System.Windows.Forms.BindingSource droneBindingSource1;
     }
 }

@@ -385,7 +385,7 @@ namespace MissionPlanner.GCSViews
             {
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
-                //Execute query to get Actpast
+                //Execute query to get Act_schedule
                 String query = @"SELECT * FROM [FlightSchedule] WHERE farm_id = '{obj.Farm_id}' AND action_finish = 'n' ";
                 List<FarmSchedule> list = db.Query<FarmSchedule>(query, commandType: CommandType.Text).ToList();
                 using (Form_Print_FarmSchedule frm = new Form_Print_FarmSchedule(obj, list))

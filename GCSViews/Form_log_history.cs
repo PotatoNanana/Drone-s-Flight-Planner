@@ -68,12 +68,25 @@ namespace MissionPlanner.GCSViews
             DataTable dt = new DataTable();
             SDA.Fill(dt);
             DG_Flight.DataSource = dt;
+            droneBindingSource1.DataSource = db.Query<Drone>(query, commandType: CommandType.Text);
             con.Close();
         }
 
         private void But_print_Click(object sender, EventArgs e)
         {
-
+            Drone obj = droneBindingSource1.Current as Drone;
+            if (obj != null)
+            {
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                //Execute query to get Log History                
+                String query = "SELECT * FROM transact WHERE drone_id = '{obj.Drone_id}'";
+                List<TranAct> list = db.Query<TranAct>(query, commandType: CommandType.Text).ToList();
+                using (Form_Print_LogHistory frm = new Form_Print_LogHistory(obj, list))
+                {
+                    frm.ShowDialog();
+                }
+            }
         }
 
         private void DG_Flight_CellContentClick(object sender, DataGridViewCellEventArgs e)

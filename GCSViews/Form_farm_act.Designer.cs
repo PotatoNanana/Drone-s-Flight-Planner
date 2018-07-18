@@ -48,14 +48,14 @@
             this.flightScheduleTableAdapter1 = new MissionPlanner.ActivityScheduleTableAdapters.FlightScheduleTableAdapter();
             this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.flightScheduleTableAdapter2 = new MissionPlanner._Drone_s_Flight_PlannerDataSet4TableAdapters.FlightScheduleTableAdapter();
-            this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actioncapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actioncostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionstartTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionfinishTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionstartTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actioncostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actioncapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).BeginInit();
@@ -153,7 +153,7 @@
             this.Main_but_farm.Name = "Main_but_farm";
             this.Main_but_farm.Size = new System.Drawing.Size(1076, 77);
             this.Main_but_farm.TabIndex = 6;
-            this.Main_but_farm.Text = "ตารางปฏิทินการบินที่ผ่านมา";
+            this.Main_but_farm.Text = "ตารางปฏิทินการบินที่ผ่านมาของฟาร์ม";
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Main_but_farm.UseCompatibleTextRendering = true;
@@ -210,41 +210,11 @@
             // 
             this.flightScheduleTableAdapter2.ClearBeforeFill = true;
             // 
-            // actiondatetimeDataGridViewTextBoxColumn
+            // actionfinishTimeDataGridViewTextBoxColumn
             // 
-            this.actiondatetimeDataGridViewTextBoxColumn.DataPropertyName = "action_datetime";
-            this.actiondatetimeDataGridViewTextBoxColumn.HeaderText = "วันที่";
-            this.actiondatetimeDataGridViewTextBoxColumn.Name = "actiondatetimeDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "drone_id";
-            this.dataGridViewTextBoxColumn2.HeaderText = "รหัสโดรน";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // actionnameDataGridViewTextBoxColumn
-            // 
-            this.actionnameDataGridViewTextBoxColumn.DataPropertyName = "action_name";
-            this.actionnameDataGridViewTextBoxColumn.HeaderText = "ชื่อกิจกรรม";
-            this.actionnameDataGridViewTextBoxColumn.Name = "actionnameDataGridViewTextBoxColumn";
-            // 
-            // materialnameDataGridViewTextBoxColumn
-            // 
-            this.materialnameDataGridViewTextBoxColumn.DataPropertyName = "material_name";
-            this.materialnameDataGridViewTextBoxColumn.HeaderText = "วัตถุดิบ";
-            this.materialnameDataGridViewTextBoxColumn.Name = "materialnameDataGridViewTextBoxColumn";
-            // 
-            // actioncapacityDataGridViewTextBoxColumn
-            // 
-            this.actioncapacityDataGridViewTextBoxColumn.DataPropertyName = "action_capacity";
-            this.actioncapacityDataGridViewTextBoxColumn.HeaderText = "ปริมาณสาร";
-            this.actioncapacityDataGridViewTextBoxColumn.Name = "actioncapacityDataGridViewTextBoxColumn";
-            // 
-            // actioncostDataGridViewTextBoxColumn
-            // 
-            this.actioncostDataGridViewTextBoxColumn.DataPropertyName = "action_cost";
-            this.actioncostDataGridViewTextBoxColumn.HeaderText = "ค่าใช้จ่าย";
-            this.actioncostDataGridViewTextBoxColumn.Name = "actioncostDataGridViewTextBoxColumn";
+            this.actionfinishTimeDataGridViewTextBoxColumn.DataPropertyName = "action_finishTime";
+            this.actionfinishTimeDataGridViewTextBoxColumn.HeaderText = "เวลาสิ้นสุด";
+            this.actionfinishTimeDataGridViewTextBoxColumn.Name = "actionfinishTimeDataGridViewTextBoxColumn";
             // 
             // actionstartTimeDataGridViewTextBoxColumn
             // 
@@ -252,11 +222,41 @@
             this.actionstartTimeDataGridViewTextBoxColumn.HeaderText = "เวลาเริ่ม";
             this.actionstartTimeDataGridViewTextBoxColumn.Name = "actionstartTimeDataGridViewTextBoxColumn";
             // 
-            // actionfinishTimeDataGridViewTextBoxColumn
+            // actioncostDataGridViewTextBoxColumn
             // 
-            this.actionfinishTimeDataGridViewTextBoxColumn.DataPropertyName = "action_finishTime";
-            this.actionfinishTimeDataGridViewTextBoxColumn.HeaderText = "เวลาสิ้นสุด";
-            this.actionfinishTimeDataGridViewTextBoxColumn.Name = "actionfinishTimeDataGridViewTextBoxColumn";
+            this.actioncostDataGridViewTextBoxColumn.DataPropertyName = "action_cost";
+            this.actioncostDataGridViewTextBoxColumn.HeaderText = "ค่าใช้จ่าย";
+            this.actioncostDataGridViewTextBoxColumn.Name = "actioncostDataGridViewTextBoxColumn";
+            // 
+            // actioncapacityDataGridViewTextBoxColumn
+            // 
+            this.actioncapacityDataGridViewTextBoxColumn.DataPropertyName = "action_capacity";
+            this.actioncapacityDataGridViewTextBoxColumn.HeaderText = "ปริมาณสาร";
+            this.actioncapacityDataGridViewTextBoxColumn.Name = "actioncapacityDataGridViewTextBoxColumn";
+            // 
+            // materialnameDataGridViewTextBoxColumn
+            // 
+            this.materialnameDataGridViewTextBoxColumn.DataPropertyName = "material_name";
+            this.materialnameDataGridViewTextBoxColumn.HeaderText = "วัตถุดิบ";
+            this.materialnameDataGridViewTextBoxColumn.Name = "materialnameDataGridViewTextBoxColumn";
+            // 
+            // actionnameDataGridViewTextBoxColumn
+            // 
+            this.actionnameDataGridViewTextBoxColumn.DataPropertyName = "action_name";
+            this.actionnameDataGridViewTextBoxColumn.HeaderText = "ชื่อกิจกรรม";
+            this.actionnameDataGridViewTextBoxColumn.Name = "actionnameDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "drone_id";
+            this.dataGridViewTextBoxColumn2.HeaderText = "รหัสโดรน";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // actiondatetimeDataGridViewTextBoxColumn
+            // 
+            this.actiondatetimeDataGridViewTextBoxColumn.DataPropertyName = "action_datetime";
+            this.actiondatetimeDataGridViewTextBoxColumn.HeaderText = "วันที่";
+            this.actiondatetimeDataGridViewTextBoxColumn.Name = "actiondatetimeDataGridViewTextBoxColumn";
             // 
             // Form_farm_act
             // 
