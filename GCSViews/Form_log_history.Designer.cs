@@ -45,12 +45,23 @@
             this.flightScheduleTableAdapter = new MissionPlanner.FlightSchedule2TableAdapters.FlightScheduleTableAdapter();
             this.flightLogTableAdapter = new MissionPlanner.FlightLogTableAdapters.FlightLogTableAdapter();
             this.transactTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet7TableAdapters.TransactTableAdapter();
+            this._Drone_s_Flight_PlannerDataSet6 = new MissionPlanner._Drone_s_Flight_PlannerDataSet6();
+            this.transactBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.transactTableAdapter1 = new MissionPlanner._Drone_s_Flight_PlannerDataSet6TableAdapters.TransactTableAdapter();
             this.transaction_datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.farm_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.farm_location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drone_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_host = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_road = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_subDistrict = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_district = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_province = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_postal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.material_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action_capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action_cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.distance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_Main_farm.SuspendLayout();
@@ -63,6 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Main_farm
@@ -103,14 +116,22 @@
             this.DG_Flight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Flight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.transaction_datetime,
-            this.farm_name,
-            this.farm_location,
             this.drone_name,
+            this.farm_name,
+            this.farm_host,
+            this.farm_address,
+            this.farm_road,
+            this.farm_subDistrict,
+            this.farm_district,
+            this.farm_province,
+            this.farm_postal,
             this.action_name,
+            this.material_name,
             this.action_capacity,
+            this.action_cost,
             this.distance,
             this.area});
-            this.DG_Flight.DataSource = this.transactBindingSource;
+            this.DG_Flight.DataSource = this.transactBindingSource1;
             this.DG_Flight.Location = new System.Drawing.Point(25, 75);
             this.DG_Flight.Name = "DG_Flight";
             this.DG_Flight.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -197,25 +218,25 @@
             // 
             this.transactTableAdapter.ClearBeforeFill = true;
             // 
+            // _Drone_s_Flight_PlannerDataSet6
+            // 
+            this._Drone_s_Flight_PlannerDataSet6.DataSetName = "_Drone_s_Flight_PlannerDataSet6";
+            this._Drone_s_Flight_PlannerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // transactBindingSource1
+            // 
+            this.transactBindingSource1.DataMember = "Transact";
+            this.transactBindingSource1.DataSource = this._Drone_s_Flight_PlannerDataSet6;
+            // 
+            // transactTableAdapter1
+            // 
+            this.transactTableAdapter1.ClearBeforeFill = true;
+            // 
             // transaction_datetime
             // 
             this.transaction_datetime.DataPropertyName = "transaction_datetime";
             this.transaction_datetime.HeaderText = "รหัสประวัติการบิน";
             this.transaction_datetime.Name = "transaction_datetime";
-            this.transaction_datetime.Width = 120;
-            // 
-            // farm_name
-            // 
-            this.farm_name.DataPropertyName = "farm_name";
-            this.farm_name.HeaderText = "ชื่อฟาร์ม";
-            this.farm_name.Name = "farm_name";
-            // 
-            // farm_location
-            // 
-            this.farm_location.DataPropertyName = "farm_location";
-            this.farm_location.HeaderText = "สถานที่ตั้งฟาร์ม";
-            this.farm_location.Name = "farm_location";
-            this.farm_location.Width = 200;
             // 
             // drone_name
             // 
@@ -223,17 +244,77 @@
             this.drone_name.HeaderText = "ชื่อโดรน";
             this.drone_name.Name = "drone_name";
             // 
+            // farm_name
+            // 
+            this.farm_name.DataPropertyName = "farm_name";
+            this.farm_name.HeaderText = "ชื่อฟาร์ม";
+            this.farm_name.Name = "farm_name";
+            // 
+            // farm_host
+            // 
+            this.farm_host.DataPropertyName = "farm_host";
+            this.farm_host.HeaderText = "ผู้ดูแลฟาร์ม";
+            this.farm_host.Name = "farm_host";
+            // 
+            // farm_address
+            // 
+            this.farm_address.DataPropertyName = "farm_address";
+            this.farm_address.HeaderText = "ที่ตั้งฟาร์ม";
+            this.farm_address.Name = "farm_address";
+            // 
+            // farm_road
+            // 
+            this.farm_road.DataPropertyName = "farm_road";
+            this.farm_road.HeaderText = "ถนน";
+            this.farm_road.Name = "farm_road";
+            // 
+            // farm_subDistrict
+            // 
+            this.farm_subDistrict.DataPropertyName = "farm_subDistrict";
+            this.farm_subDistrict.HeaderText = "แขวง/ตำบล";
+            this.farm_subDistrict.Name = "farm_subDistrict";
+            // 
+            // farm_district
+            // 
+            this.farm_district.DataPropertyName = "farm_district";
+            this.farm_district.HeaderText = "เขต/อำเภอ";
+            this.farm_district.Name = "farm_district";
+            // 
+            // farm_province
+            // 
+            this.farm_province.DataPropertyName = "farm_province";
+            this.farm_province.HeaderText = "จังหวัด";
+            this.farm_province.Name = "farm_province";
+            // 
+            // farm_postal
+            // 
+            this.farm_postal.DataPropertyName = "farm_postal";
+            this.farm_postal.HeaderText = "รหัสไปรษณีย์";
+            this.farm_postal.Name = "farm_postal";
+            // 
             // action_name
             // 
             this.action_name.DataPropertyName = "action_name";
             this.action_name.HeaderText = "ชื่อกิจกรรม";
             this.action_name.Name = "action_name";
             // 
+            // material_name
+            // 
+            this.material_name.DataPropertyName = "material_name";
+            this.material_name.HeaderText = "วัตถุดิบ";
+            this.material_name.Name = "material_name";
+            // 
             // action_capacity
             // 
             this.action_capacity.DataPropertyName = "action_capacity";
-            this.action_capacity.HeaderText = "ปริมาณสารที่ใช้";
+            this.action_capacity.HeaderText = "ปรืมาณสาร";
             this.action_capacity.Name = "action_capacity";
+            // 
+            // action_cost
+            // 
+            this.action_cost.DataPropertyName = "action_cost";
+            this.action_cost.HeaderText = "ค่าใช้จ่าย";
+            this.action_cost.Name = "action_cost";
             // 
             // distance
             // 
@@ -244,7 +325,7 @@
             // area
             // 
             this.area.DataPropertyName = "area";
-            this.area.HeaderText = "ขนาดพื้นที่";
+            this.area.HeaderText = "พื้นที่";
             this.area.Name = "area";
             // 
             // Form_log_history
@@ -268,6 +349,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule2)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,12 +372,23 @@
         private DroneFlightPlannerDataSet7 droneFlightPlannerDataSet7;
         private System.Windows.Forms.BindingSource transactBindingSource;
         private DroneFlightPlannerDataSet7TableAdapters.TransactTableAdapter transactTableAdapter;
+        private _Drone_s_Flight_PlannerDataSet6 _Drone_s_Flight_PlannerDataSet6;
+        private System.Windows.Forms.BindingSource transactBindingSource1;
+        private _Drone_s_Flight_PlannerDataSet6TableAdapters.TransactTableAdapter transactTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn transaction_datetime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn farm_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn farm_location;
         private System.Windows.Forms.DataGridViewTextBoxColumn drone_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_host;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_road;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_subDistrict;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_district;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_province;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farm_postal;
         private System.Windows.Forms.DataGridViewTextBoxColumn action_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn material_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn action_capacity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn action_cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn distance;
         private System.Windows.Forms.DataGridViewTextBoxColumn area;
     }

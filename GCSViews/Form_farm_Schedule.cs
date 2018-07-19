@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace MissionPlanner.GCSViews
     {
         public Form_farm_Schedule()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         public Form_farm_Schedule(string id_farm)
@@ -113,23 +114,14 @@ namespace MissionPlanner.GCSViews
             {
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
-                
+                var datetime = monthCalendar1.SelectionRange.Start;
                 string query = @" INSERT INTO [dbo].[FlightSchedule] ([action_no],[farm_id],[drone_id],[action_capacity],[action_cost],[action_datetime],[action_startTime],[action_finishTime],[act_no], [action_name],[material_no] ,[material_name]) "+
-                    "VALUES(" + " (select CONCAT('AC', MAX(CONVERT(INT, SUBSTRING(action_no,3,5)) + 1)) from FlightSchedule) " + ",'" + id_farm + "','" + cboDrone.SelectedValue + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + monthCalendar1.SelectionEnd.ToShortDateString() + "','" + textBox_startTime.Text + "','" + textBox_finishTime.Text + "','"+ cboActivity.SelectedValue + "','" + cboActivity.Text + "','" + cboMaterial.SelectedValue + "','" + cboMaterial.Text + "')";
+                    "VALUES(" + " (select CONCAT('AC', MAX(CONVERT(INT, SUBSTRING(action_no,3,5)) + 1)) from FlightSchedule) " + ",'" + id_farm + "','" + cboDrone.SelectedValue + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + datetime.ToString("yyyy-MM-dd") + "','" + textBox_startTime.Text + "','" + textBox_finishTime.Text + "','"+ cboActivity.SelectedValue + "','" + cboActivity.Text + "','" + cboMaterial.SelectedValue + "','" + cboMaterial.Text + "')";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                 SDA.SelectCommand.ExecuteNonQuery();
                 con.Close();
                 this.loadListData();
                 MessageBox.Show("ทำการบันทึกข้อมูลเรียบร้อยแล้ว !!");
-
-                ////show data to DataGridView
-                //con.Open();
-                //String query2 = "SELECT * FROM Farm";
-                //SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                //System.Data.DataTable dt = new System.Data.DataTable();
-                //SDA2.Fill(dt);
-                //DG_Farm.DataSource = dt;
-                //con.Close();
                 
                 /// got value from menu_farm
                 Menu_farm menu_Farm = new Menu_farm();
@@ -147,10 +139,14 @@ namespace MissionPlanner.GCSViews
                 Excel.Application oApp;
                 Excel.Worksheet oSheet;
                 Excel.Workbook oBook;
-
+                
                 oApp = new Excel.Application();
                 oBook = oApp.Workbooks.Add();
                 oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
+                Excel.Range xlRange = oSheet.UsedRange;
+                xlRange = (Excel.Range)oSheet.Cells[2, 9];
+                xlRange.EntireColumn.NumberFormat = "yyyy-MM-dd";
+
                 oSheet.Cells[1, 1] = "รหัสฟาร์ม";
                 oSheet.Cells[1, 2] = "รหัสโดรน";
                 oSheet.Cells[1, 3] = "ชือโดรน";
@@ -171,7 +167,7 @@ namespace MissionPlanner.GCSViews
                 oSheet.Cells[2, 6] = cboMaterial.Text;
                 oSheet.Cells[2, 7] = textBox_cap.Text;
                 oSheet.Cells[2, 8] = textBox_cost.Text;
-                oSheet.Cells[2, 9] = monthCalendar1.SelectionEnd.ToShortDateString();
+                oSheet.Cells[2, 9] = datetime.ToString("yyyy-MM-dd");
                 oSheet.Cells[2, 10] = textBox_startTime.Text;
                 oSheet.Cells[2, 11] = textBox_finishTime.Text;
 
@@ -189,22 +185,13 @@ namespace MissionPlanner.GCSViews
                 {
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
-                    String query = "DELETE FROM FlightSchedule where action_no = '" + cboActivity.SelectedValue + "' ";
+                    String query = "DELETE FROM FlightSchedule where action_no = '" + DG_Farm.SelectedRows[0].Cells["action_no"].Value.ToString() + "' ";
                     SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                     SDA.SelectCommand.ExecuteNonQuery();
                     con.Close();
                     loadListData();
                     MessageBox.Show("ทำการลบข้อมูลเรียบร้อยแล้ว !!");
-
-                    //show data to DataGridView
-                    //if (con.State != ConnectionState.Open)
-                    //{ con.Open(); }
-                    //String query2 = "SELECT * FROM Farm";
-                    //SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                    //System.Data.DataTable dt = new System.Data.DataTable();
-                    //SDA2.Fill(dt);
-                    //DG_Farm.DataSource = dt;
-                    //con.Close();
+                    
                 }
             }
             catch (Exception ex)
@@ -314,7 +301,7 @@ namespace MissionPlanner.GCSViews
         private void Form_farm_Schedule_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'droneFlightPlannerDataSet5.FlightSchedule' table. You can move, or remove it, as needed.
-            this.flightScheduleTableAdapter1.Fill(this.droneFlightPlannerDataSet5.FlightSchedule);
+            //this.flightScheduleTableAdapter1.Fill(this.droneFlightPlannerDataSet5.FlightSchedule);
 
             AddToCombo();
             loadListData();

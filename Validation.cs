@@ -127,7 +127,7 @@ namespace MissionPlanner
                             {
                                 roleid = 2;
                                 this.Hide();
-                                var frm = new MainV3_admin();
+                                var frm = new MainV2();
                                 frm.ShowDialog();
                                 break;
                             }
@@ -136,7 +136,7 @@ namespace MissionPlanner
                             {
                                 roleid = 3;
                                 this.Hide();
-                                var frm = new MainV3_pilot();
+                                var frm = new MainV2();
                                 frm.ShowDialog();
                                 break;
                             }
@@ -144,7 +144,7 @@ namespace MissionPlanner
                         default:
                             {
                                 this.Hide();
-                                var frm = new MainV3();
+                                var frm = new MainV2();
                                 frm.ShowDialog();
                                 break;
                             }

@@ -40,3 +40,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ExtGuided\obj\Debug\E
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ExtGuided\obj\Debug\ExtGuided.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ExtGuided\obj\Debug\ExtGuided.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\ExtGuided.dll.config
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\ExtGuided.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\ExtGuided.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ExtGuided\obj\Debug\ExtGuided.csproj.CopyComplete

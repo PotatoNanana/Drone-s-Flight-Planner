@@ -100,7 +100,7 @@ namespace MissionPlanner.GCSViews
                        ,[farm_subDistrict]
                        ,[farm_district]
                        ,[farm_province]
-                       ,[farm_postal]) " + "VALUES( (select CONCAT('F0', MAX(CONVERT(INT, SUBSTRING(farm_id  2,10)) + 1)) from Farm) ,'"
+                       ,[farm_postal]) " + "VALUES( (select CONCAT('F0', MAX(CONVERT(INT, SUBSTRING(farm_id , 2,10)) + 1)) from Farm) ,'"
                        + textBox_farmName.Text + "','" 
                        + textBox_farmHost.Text + "','"
                        + textBox1.Text + "','" 

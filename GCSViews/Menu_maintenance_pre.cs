@@ -8,7 +8,6 @@ namespace MissionPlanner.GCSViews
 {
     public partial class Menu_maintenance_pre : MyUserControl
     {
-        //SqlConnection con = new SqlConnection(@"Data Source=cs-rabbit;Initial Catalog=DroneFlightPlanner;Integrated Security=True");
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
         SqlCommand cmd;
         string id_deviceID = "";
@@ -36,37 +35,7 @@ namespace MissionPlanner.GCSViews
         {
             Goto_Drone_Clicked?.Invoke(this, e);
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void panelMaintenance_pre_Paint(object sender, PaintEventArgs e)
         {
             if (con.State != ConnectionState.Open)
@@ -80,17 +49,7 @@ namespace MissionPlanner.GCSViews
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
         }
-
-        private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void Main_but_farm_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void BUT_add_drone_pre_Click(object sender, EventArgs e)
         {
             try
@@ -131,7 +90,7 @@ namespace MissionPlanner.GCSViews
             {
                 string format = "yyyy-MM-dd";
 
-                String query = "UPDATE Maintainance SET device_id = '" + id_deviceID + "', maintain_activity = '" + textBox_mainAct.Text + "', maintain_price = '" + textBox_price.Text + "', maintain_venderName = '" + textBox_venName.Text + "', maintain_venderPhone = '" + textBox_venPhone.Text + "', maintain_venderAdd = '" + textBox_venAdd.Text + "', maintain_lenght = '" + textBox_time.Text + "', maintain_responder = '" + textBox_respond.Text + "', maintain_date = '" + dateTimePicker.Value.ToString(format) + "' where maintain_id = '" + textBox_mainID.Text +"'";
+                String query = "UPDATE Maintainance SET device_id = '" + id_deviceID + "', maintain_activity = '" + textBox_mainAct.Text + "', maintain_price = '" + textBox_price.Text + "', maintain_venderName = '" + textBox_venName.Text + "', maintain_venderPhone = '" + textBox_venPhone.Text + "', maintain_venderAdd = '" + textBox_venAdd.Text + "', maintain_lenght = '" + textBox_time.Text + "', maintain_responder = '" + textBox_respond.Text + "', maintain_date = '" + dateTimePicker.Value.ToString(format) + "' where maintain_id = '" + DG_Farm.SelectedRows[0].Cells[0].Value.ToString() + "'";
 
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
@@ -153,12 +112,7 @@ namespace MissionPlanner.GCSViews
             DG_Farm.DataSource = dt2;
             con.Close();
         }
-
-        private void button_show_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void button_delete_Click(object sender, EventArgs e)
         {
             try
@@ -202,7 +156,6 @@ FROM Maintainance INNER JOIN
                 reader.Read();
                 if (reader.HasRows)
                 {
-                    textBox_mainID.Text = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
                     textBox_mainAct.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
                     dateTimePicker.Value = Convert.ToDateTime(DG_Farm.SelectedRows[0].Cells[2].Value);
                     textBox_price.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();

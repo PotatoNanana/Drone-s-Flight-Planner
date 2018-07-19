@@ -7350,14 +7350,16 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         
         private void menuTakeoff_Click(object sender, EventArgs e)
         {
-            //go to form log 
-            //Form_log form_Log = new Form_log(file);
-            //form_Log.ShowDialog();
-            
-            //read data from database to collect into transaction table
-            if(textBox_actID.Text != null && textBox_droneID.Text != null && textBox_farmID.Text != null)
+            if (textBox_actID.Text != null && textBox_droneID.Text != null && textBox_farmID.Text != null)
             {
-                //farm data
+                //update data to flightschedule
+                String query = "UPDATE flightschedule SET action_finish ='y' WHERE action_no ='" + textBox_actID.Text + "'";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                SqlCommand cmd = new SqlCommand(query, con);
+                int x = cmd.ExecuteNonQuery();
+                con.Close();
+                //read data from database to collect into transaction table
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
                 SqlCommand sqlCmdFarm = new SqlCommand("select * from Farm where farm_id='" + textBox_farmID.Text + "'", con);
@@ -7391,7 +7393,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
                 //action data
                 con.Open();
-                SqlCommand sqlCmdAct = new SqlCommand("select * from FlightSchedule where action_no='" + textBox_actID.Text + "'", con);
+                SqlCommand sqlCmdAct = new SqlCommand("select * from FlightSchedule where action_no IN (SELECT MAX(action_no) from FlightSchedule)", con);
                 SqlDataReader readerAct = sqlCmdAct.ExecuteReader();
                 readerAct.Read();
                 if (readerAct.HasRows)
@@ -7406,7 +7408,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 con.Close();
 
                 con.Open();
-                String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrict," +
+                query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrict," +
                     "farm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost,distance,area) " +
                     "VALUES('" + "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss") + "','" + textBox_farmID.Text + "','" + farm_name + "','" + farm_host + "','" +
                     farm_address + "','" + farm_road + "','" + farm_subDistrict + "','" + farm_district + "','" + farm_province
@@ -7454,7 +7456,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 oSheet.Cells[19, 1] = "area";
 
                 oSheet.Cells[1, 2] = "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss");
-                oSheet.Cells[2, 2] = textBox_farmID.Text;
+                oSheet.Cells[2, 2] = id_farm;
                 oSheet.Cells[3, 2] = farm_name;
                 oSheet.Cells[4, 2] = farm_host;
                 oSheet.Cells[5, 2] = farm_address;

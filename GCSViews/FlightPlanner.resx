@@ -589,7 +589,7 @@
     <value>panelWaypoints</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>0</value>
   </data>
   <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
     <value>Up</value>
@@ -731,7 +731,7 @@
     <value>panelWaypoints</value>
   </data>
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="button_log.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -770,7 +770,7 @@
     <value>panelWaypoints</value>
   </data>
   <data name="&gt;&gt;button_log.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="MenuConnect.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -806,7 +806,7 @@
     <value>panelWaypoints</value>
   </data>
   <data name="&gt;&gt;MenuConnect.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="menuTakeoff.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -842,7 +842,7 @@
     <value>panelWaypoints</value>
   </data>
   <data name="&gt;&gt;menuTakeoff.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="MenuSimulation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -878,7 +878,7 @@
     <value>panelWaypoints</value>
   </data>
   <data name="&gt;&gt;MenuSimulation.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="chk_grid.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1446,7 +1446,7 @@
     <value>Commands</value>
   </data>
   <data name="&gt;&gt;Commands.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6763.38460, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6773.26114, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Commands.Parent" xml:space="preserve">
     <value>panelWaypoints</value>
@@ -2312,7 +2312,7 @@
     <value>myDataGridView1</value>
   </data>
   <data name="&gt;&gt;myDataGridView1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6763.38460, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6773.26114, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myDataGridView1.Parent" xml:space="preserve">
     <value>panel10</value>
@@ -2366,7 +2366,7 @@
     <value>DG_Farm</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6763.38460, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, DroneFlightPlanner, Version=1.1.6773.26114, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DG_Farm.Parent" xml:space="preserve">
     <value>panel7</value>
@@ -2897,7 +2897,7 @@
     <value>toolStripConnectionControl1</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, DroneFlightPlanner, Version=1.1.6763.38460, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, DroneFlightPlanner, Version=1.1.6773.26114, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Command.Name" xml:space="preserve">
     <value>Command</value>
@@ -3457,17 +3457,47 @@
   <data name="&gt;&gt;flightPattern.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flightScheduleBindingSource3.Name" xml:space="preserve">
-    <value>flightScheduleBindingSource3</value>
+  <data name="&gt;&gt;actiondatetimeDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>actiondatetimeDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;flightScheduleBindingSource3.Type" xml:space="preserve">
+  <data name="&gt;&gt;actiondatetimeDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;actionnoDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>actionnoDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;actionnoDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;actionnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>actionnameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;actionnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;materialnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>materialnameDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;materialnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;droneidDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>droneidDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;droneidDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource6.Name" xml:space="preserve">
+    <value>flightScheduleBindingSource6</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource6.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;_Drone_s_Flight_PlannerDataSet5.Name" xml:space="preserve">
-    <value>_Drone_s_Flight_PlannerDataSet5</value>
+  <data name="&gt;&gt;flightplanner_FS.Name" xml:space="preserve">
+    <value>flightplanner_FS</value>
   </data>
-  <data name="&gt;&gt;_Drone_s_Flight_PlannerDataSet5.Type" xml:space="preserve">
-    <value>MissionPlanner._Drone_s_Flight_PlannerDataSet5, _Drone_s_Flight_PlannerDataSet5.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;flightplanner_FS.Type" xml:space="preserve">
+    <value>MissionPlanner.flightplanner_FS, flightplanner_FS.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;farmidDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>farmidDataGridViewTextBoxColumn</value>
@@ -3492,6 +3522,18 @@
   </data>
   <data name="&gt;&gt;farm1.Type" xml:space="preserve">
     <value>MissionPlanner.farm1, farm1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource3.Name" xml:space="preserve">
+    <value>flightScheduleBindingSource3</value>
+  </data>
+  <data name="&gt;&gt;flightScheduleBindingSource3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_Drone_s_Flight_PlannerDataSet5.Name" xml:space="preserve">
+    <value>_Drone_s_Flight_PlannerDataSet5</value>
+  </data>
+  <data name="&gt;&gt;_Drone_s_Flight_PlannerDataSet5.Type" xml:space="preserve">
+    <value>MissionPlanner._Drone_s_Flight_PlannerDataSet5, _Drone_s_Flight_PlannerDataSet5.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;flightScheduleBindingSource1.Name" xml:space="preserve">
     <value>flightScheduleBindingSource1</value>
@@ -3649,53 +3691,11 @@
   <data name="&gt;&gt;flightScheduleBindingSource5.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flightplanner_FS.Name" xml:space="preserve">
-    <value>flightplanner_FS</value>
-  </data>
-  <data name="&gt;&gt;flightplanner_FS.Type" xml:space="preserve">
-    <value>MissionPlanner.flightplanner_FS, flightplanner_FS.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;flightScheduleBindingSource6.Name" xml:space="preserve">
-    <value>flightScheduleBindingSource6</value>
-  </data>
-  <data name="&gt;&gt;flightScheduleBindingSource6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;flightScheduleTableAdapter4.Name" xml:space="preserve">
     <value>flightScheduleTableAdapter4</value>
   </data>
   <data name="&gt;&gt;flightScheduleTableAdapter4.Type" xml:space="preserve">
     <value>MissionPlanner.flightplanner_FSTableAdapters.FlightScheduleTableAdapter, flightplanner_FS.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;actiondatetimeDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>actiondatetimeDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;actiondatetimeDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;actionnoDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>actionnoDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;actionnoDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;actionnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>actionnameDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;actionnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;materialnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>materialnameDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;materialnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;droneidDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>droneidDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;droneidDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FlightPlanner</value>

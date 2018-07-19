@@ -23,6 +23,7 @@ using MissionPlanner.GCSViews;
 using System.Data.SqlClient;
 using GMap.NET.MapProviders;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Data;
 
 namespace MissionPlanner
 {
@@ -3744,81 +3745,150 @@ namespace MissionPlanner
         private void but_act_file_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files(.xlsx)|*.xlsx";
+            Stream fileStream = null;
             string strfilename = null;
+            String fileName = null;
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                strfilename = openFileDialog.FileName;
+                try
+                {
+                    if ((fileStream = openFileDialog.OpenFile()) != null)
+                    {
+                        strfilename = openFileDialog.FileName;
+                        fileName = Path.GetFileNameWithoutExtension(strfilename);
+                        if (fileName.Substring(0, 14) == "FlightHistory_")
+                        {
+                            FlightHistory_(strfilename);
+                        }
+                        else if (fileName.Substring(0, 13) == "add_activity_")
+                        {
+                            add_activity_(strfilename);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
             }
+        }
 
+        void FlightHistory_(string strfilename)
+        {
             xlApp = new Excel.Application();
             xlWorkBook = xlApp.Workbooks.Open(strfilename, 0, true, 2, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
+            xlWorkSheet = xlWorkBook.Sheets[1];
+            Excel.Range xlRange = xlWorkSheet.UsedRange;
             CultureInfo provider = CultureInfo.InvariantCulture;
-            string str01 = ((Excel.Range)xlWorkSheet.Cells[2, 1]).Value.ToString();
-            string str02 = ((Excel.Range)xlWorkSheet.Cells[2, 2]).Value.ToString();
-            string str03 = ((Excel.Range)xlWorkSheet.Cells[2, 3]).Value.ToString();
-            string str04 = ((Excel.Range)xlWorkSheet.Cells[2, 4]).Value.ToString();
-            string str05 = ((Excel.Range)xlWorkSheet.Cells[2, 5]).Value.ToString();
-            string str06 = ((Excel.Range)xlWorkSheet.Cells[2, 6]).Value.ToString();
-            string str07 = ((Excel.Range)xlWorkSheet.Cells[2, 7]).Value.ToString();
-            string str08 = ((Excel.Range)xlWorkSheet.Cells[2, 8]).Value.ToString();
-            string str09 = ((Excel.Range)xlWorkSheet.Cells[2, 9]).Value.ToString();
-            string str10 = ((Excel.Range)xlWorkSheet.Cells[2, 10]).Value.ToString();
-            string str11 = ((Excel.Range)xlWorkSheet.Cells[2, 11]).Value.ToString();
-            string str12 = ((Excel.Range)xlWorkSheet.Cells[2, 12]).Value.ToString();
-            string str13 = ((Excel.Range)xlWorkSheet.Cells[2, 13]).Value.ToString();
-            string str14 = ((Excel.Range)xlWorkSheet.Cells[2, 14]).Value.ToString();
-            string str15 = ((Excel.Range)xlWorkSheet.Cells[2, 15]).Value.ToString();
-            string str16 = ((Excel.Range)xlWorkSheet.Cells[2, 16]).Value.ToString();
-            string str17 = ((Excel.Range)xlWorkSheet.Cells[2, 17]).Value.ToString();
-            string str18 = ((Excel.Range)xlWorkSheet.Cells[2, 18]).Value.ToString();
-            string str19 = ((Excel.Range)xlWorkSheet.Cells[2, 19]).Value.ToString();
+            string str01 = "", str02 = "", str03 = "", str04 = "", str05 = "", str06 = "", str07 = "", str08 = "", str09 = "", str10 = "", str11 = "", str12 = "", str13 = "", str14 = "", str15 = "", str16 = "", str17 = "", str18 = "", str19 = "";
+            str01 = Convert.ToString(xlRange.Cells[1, 2].Value2);
+            str02 = Convert.ToString(xlRange.Cells[2, 2].Value2);
+            str03 = Convert.ToString(xlRange.Cells[3, 2].Value2);
+            str04 = Convert.ToString(xlRange.Cells[4, 2].Value2);
+            str05 = Convert.ToString(xlRange.Cells[5, 2].Value2);
+            str06 = Convert.ToString(xlRange.Cells[6, 2].Value2);
+            str07 = Convert.ToString(xlRange.Cells[7, 2].Value2);
+            str08 = Convert.ToString(xlRange.Cells[8, 2].Value2);
+            str09 = Convert.ToString(xlRange.Cells[9, 2].Value2);
+            str10 = Convert.ToString(xlRange.Cells[10, 2].Value2);
+            str11 = Convert.ToString(xlRange.Cells[11, 2].Value2);
+            str12 = Convert.ToString(xlRange.Cells[12, 2].Value2);
+            str13 = Convert.ToString(xlRange.Cells[13, 2].Value2);
+            str14 = Convert.ToString(xlRange.Cells[14, 2].Value2);
+            str15 = Convert.ToString(xlRange.Cells[15, 2].Value2);
+            str16 = Convert.ToString(xlRange.Cells[16, 2].Value2);
+            str17 = Convert.ToString(xlRange.Cells[17, 2].Value2);
+            str18 = Convert.ToString(xlRange.Cells[18, 2].Value2);
+            str19 = Convert.ToString(xlRange.Cells[19, 2].Value2);
 
-            //string str_dateTransaction = ((Excel.Range)xlWorkSheet.Cells[2, 1]).Value.ToString();
-            //MessageBox.Show(str_dateTransaction);
-            //DateTime str_dateTransaction_Date = DateTime.Parse(str_dateTransaction, provider);
-            //string str_farmID = ((Excel.Range)xlWorkSheet.Cells[2, 2]).Value.ToString();
-            //string str_DroneID = ((Excel.Range)xlWorkSheet.Cells[2, 3]).Value.ToString();
-            //string str_ActID = ((Excel.Range)xlWorkSheet.Cells[2, 4]).Value.ToString();
-            //string str_ActName = ((Excel.Range)xlWorkSheet.Cells[2, 5]).Value.ToString();
-            //string str_qtyUsed = ((Excel.Range)xlWorkSheet.Cells[2, 6]).Value.ToString();
-            //string str_dateAct = ((Excel.Range)xlWorkSheet.Cells[2, 7]).Value.ToString();
-            //DateTime str_dateAct_Date = DateTime.Parse(str_dateAct, provider);
-            //var dateAct = str_dateAct_Date.ToString("dd/MM/yyyy");
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
 
-            con.Open();
-
-            String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrictfarm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost) " + "VALUES(@p1, @p2, @p3,@p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)";
-
+            String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost,distance,area) " + "VALUES(@p1, @p2, @p3,@p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)";
             SqlCommand SCMD = new SqlCommand();
             SCMD.Connection = con;
             SCMD.CommandText = query;
-            SCMD.Parameters.AddWithValue("@p1", str01);
-            SCMD.Parameters.AddWithValue("@p2", str02);
-            SCMD.Parameters.AddWithValue("@p3", str03);
-            SCMD.Parameters.AddWithValue("@p4", str04);
-            SCMD.Parameters.AddWithValue("@p5", str05);
-            SCMD.Parameters.AddWithValue("@p6", str06);
-            SCMD.Parameters.AddWithValue("@p7", str07);
-            SCMD.Parameters.AddWithValue("@p8", str08);
-            SCMD.Parameters.AddWithValue("@p9", str09);
-            SCMD.Parameters.AddWithValue("@p10", str10);
-            SCMD.Parameters.AddWithValue("@p11", str11);
-            SCMD.Parameters.AddWithValue("@p12", str12);
-            SCMD.Parameters.AddWithValue("@p13", str13);
-            SCMD.Parameters.AddWithValue("@p14", str14);
-            SCMD.Parameters.AddWithValue("@p15", str15);
-            SCMD.Parameters.AddWithValue("@p16", str16);
-            SCMD.Parameters.AddWithValue("@p17", str17);
-            SCMD.Parameters.AddWithValue("@p18", str18);
-            SCMD.Parameters.AddWithValue("@p19", str19);
+            SCMD.Parameters.AddWithValue("@p1", str01 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p2", str02 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p3", str03 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p4", str04 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p5", str05 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p6", str06 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p7", str07 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p8", str08 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p9", str09 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p10", str10 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p11", str11 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p12", str12 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p13", str13 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p14", str14 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p15", str15 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p16", str16 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p17", str17 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p18", str18 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p19", str19 ?? (object)DBNull.Value);
             SCMD.ExecuteNonQuery();
 
             con.Close();
-             
+
             xlWorkBook.Close(true, null, null);
             xlApp.Quit();
+            Marshal.ReleaseComObject(xlRange);
+            Marshal.ReleaseComObject(xlWorkSheet);
+            Marshal.ReleaseComObject(xlWorkBook);
+            Marshal.ReleaseComObject(xlApp);
+
+            MessageBox.Show("เก็บข้อมูลลงฐานข้อมูลเรียบร้อยแล้ว");
+        }
+
+        void add_activity_(string strfilename)
+        {
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Open(strfilename, 0, true, 2, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+            xlWorkSheet = xlWorkBook.Sheets[1];
+            Excel.Range xlRange = xlWorkSheet.UsedRange;
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            string str01 = "", str02 = "", str03 = "", str04 = "", str05 = "", str06 = "", str07 = "", str08 = "", str09 = "", str10 = "", str11 = "", str12 = "", str13 = "";
+            str02 = Convert.ToString(xlRange.Cells[2, 1].Value2);
+            str03 = Convert.ToString(xlRange.Cells[2, 2].Value2);
+            str04 = Convert.ToString(xlRange.Cells[2, 4].Value2);
+            str05 = Convert.ToString(xlRange.Cells[2, 5].Value2);
+            str06 = Convert.ToString(xlRange.Cells[2, 6].Value2);
+            str07 = Convert.ToString(xlRange.Cells[2, 7].Value2);
+            str08 = Convert.ToString(xlRange.Cells[2, 8].Value2);
+            str09 = Convert.ToString(xlRange.Cells[2, 9].Value2);
+            double date_str09 = double.Parse(str09);
+            var dateTime_str09 = DateTime.FromOADate(date_str09).ToString("yyyy-MM-dd");
+
+            str10 = Convert.ToString(xlRange.Cells[2, 10].Value2);
+            str11 = Convert.ToString(xlRange.Cells[2, 11].Value2);
+
+            if (con.State != ConnectionState.Open)
+            { con.Open(); }
+
+            String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,act_no,action_name,material_name,action_capacity,action_cost,action_datetime,action_startTime,action_finishTime) " + 
+                "VALUES((select CONCAT('AC', MAX(CONVERT(INT, SUBSTRING(action_no,3,5)) + 1)) from FlightSchedule), @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)";
+            SqlCommand SCMD = new SqlCommand();
+            SCMD.Connection = con;
+            SCMD.CommandText = query;
+            SCMD.Parameters.AddWithValue("@p2", str02 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p3", str03 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p4", str04 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p5", str05 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p6", str06 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p7", str07 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p8", str08 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p9", dateTime_str09 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p10", str10 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p11", str11 ?? (object)DBNull.Value);
+            SCMD.ExecuteNonQuery();
+
+            con.Close();
+
+            xlWorkBook.Close(true, null, null);
+            xlApp.Quit();
+            Marshal.ReleaseComObject(xlRange);
             Marshal.ReleaseComObject(xlWorkSheet);
             Marshal.ReleaseComObject(xlWorkBook);
             Marshal.ReleaseComObject(xlApp);

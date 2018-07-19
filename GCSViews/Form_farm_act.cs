@@ -77,8 +77,8 @@ namespace MissionPlanner.GCSViews
         private void Form_farm_act_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the '_Drone_s_Flight_PlannerDataSet4.FlightSchedule' table. You can move, or remove it, as needed.
-            this.flightScheduleTableAdapter2.Fill(this._Drone_s_Flight_PlannerDataSet4.FlightSchedule);
-
+            //this.flightScheduleTableAdapter2.Fill(this._Drone_s_Flight_PlannerDataSet4.FlightSchedule);
+            LoadList();
         }
 
 

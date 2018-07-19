@@ -32,28 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_farm_act));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel_Main_farm = new System.Windows.Forms.Panel();
-            this.button_print = new System.Windows.Forms.Button();
             this.Button_show = new System.Windows.Forms.Button();
             this.dateTimePicker_stopDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker_startDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Main_but_farm = new System.Windows.Forms.Button();
-            this.activitySchedule = new MissionPlanner.ActivitySchedule();
-            this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flightSchedule = new MissionPlanner.flightSchedule();
-            this.scheduleactionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.droneFlightPlannerDataSet1 = new MissionPlanner.DroneFlightPlannerDataSet1();
-            this.schedule_actionTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter();
-            this.flightScheduleTableAdapter = new MissionPlanner.flightScheduleTableAdapters.FlightScheduleTableAdapter();
-            this.flightScheduleTableAdapter1 = new MissionPlanner.ActivityScheduleTableAdapters.FlightScheduleTableAdapter();
-            this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.DG_afterFlight = new MissionPlanner.Controls.MyDataGridView();
-            this._Drone_s_Flight_PlannerDataSet4 = new MissionPlanner._Drone_s_Flight_PlannerDataSet4();
-            this.flightScheduleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.flightScheduleTableAdapter2 = new MissionPlanner._Drone_s_Flight_PlannerDataSet4TableAdapters.FlightScheduleTableAdapter();
             this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,19 +47,34 @@
             this.actioncostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionstartTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionfinishTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flightScheduleBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this._Drone_s_Flight_PlannerDataSet4 = new MissionPlanner._Drone_s_Flight_PlannerDataSet4();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
+            this.afterFlightBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.activitySchedule = new MissionPlanner.ActivitySchedule();
+            this.flightScheduleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flightSchedule = new MissionPlanner.flightSchedule();
+            this.scheduleactionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.droneFlightPlannerDataSet1 = new MissionPlanner.DroneFlightPlannerDataSet1();
+            this.schedule_actionTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet1TableAdapters.schedule_actionTableAdapter();
+            this.flightScheduleTableAdapter = new MissionPlanner.flightScheduleTableAdapters.FlightScheduleTableAdapter();
+            this.flightScheduleTableAdapter1 = new MissionPlanner.ActivityScheduleTableAdapters.FlightScheduleTableAdapter();
+            this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.flightScheduleTableAdapter2 = new MissionPlanner._Drone_s_Flight_PlannerDataSet4TableAdapters.FlightScheduleTableAdapter();
             this.panel1.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet4)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.activitySchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleactionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,7 +89,6 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button_print);
             this.panel_Main_farm.Controls.Add(this.Button_show);
             this.panel_Main_farm.Controls.Add(this.dateTimePicker_stopDate);
             this.panel_Main_farm.Controls.Add(this.label1);
@@ -105,23 +103,6 @@
             this.panel_Main_farm.Size = new System.Drawing.Size(717, 408);
             this.panel_Main_farm.TabIndex = 10;
             this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Act_Paint);
-            // 
-            // button_print
-            // 
-            this.button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button_print.FlatAppearance.BorderSize = 0;
-            this.button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_print.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button_print.ForeColor = System.Drawing.Color.White;
-            this.button_print.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_print.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_print.Location = new System.Drawing.Point(286, 357);
-            this.button_print.Name = "button_print";
-            this.button_print.Size = new System.Drawing.Size(130, 40);
-            this.button_print.TabIndex = 67;
-            this.button_print.Text = "พิมพ์";
-            this.button_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_print.UseVisualStyleBackColor = false;
             // 
             // Button_show
             // 
@@ -144,13 +125,13 @@
             // dateTimePicker_stopDate
             // 
             this.dateTimePicker_stopDate.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker_stopDate.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_stopDate.Font = new System.Drawing.Font("CordiaUPC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_stopDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_stopDate.Location = new System.Drawing.Point(363, 67);
             this.dateTimePicker_stopDate.Name = "dateTimePicker_stopDate";
-            this.dateTimePicker_stopDate.Size = new System.Drawing.Size(130, 34);
+            this.dateTimePicker_stopDate.Size = new System.Drawing.Size(130, 37);
             this.dateTimePicker_stopDate.TabIndex = 65;
-            this.dateTimePicker_stopDate.Value = new System.DateTime(2018, 7, 7, 0, 0, 0, 0);
+            this.dateTimePicker_stopDate.Value = new System.DateTime(2018, 7, 18, 0, 0, 0, 0);
             this.dateTimePicker_stopDate.ValueChanged += new System.EventHandler(this.dateTimePicker_stopDate_ValueChanged);
             // 
             // label1
@@ -166,12 +147,13 @@
             // dateTimePicker_startDate
             // 
             this.dateTimePicker_startDate.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker_startDate.Font = new System.Drawing.Font("PJ Standard", 16F);
+            this.dateTimePicker_startDate.Font = new System.Drawing.Font("CordiaUPC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_startDate.Location = new System.Drawing.Point(87, 67);
             this.dateTimePicker_startDate.Name = "dateTimePicker_startDate";
-            this.dateTimePicker_startDate.Size = new System.Drawing.Size(141, 34);
+            this.dateTimePicker_startDate.Size = new System.Drawing.Size(141, 37);
             this.dateTimePicker_startDate.TabIndex = 63;
+            this.dateTimePicker_startDate.Value = new System.DateTime(2018, 7, 1, 0, 0, 0, 0);
             this.dateTimePicker_startDate.ValueChanged += new System.EventHandler(this.dateTimePicker_startDate_ValueChanged);
             // 
             // label4
@@ -183,82 +165,6 @@
             this.label4.Size = new System.Drawing.Size(57, 27);
             this.label4.TabIndex = 62;
             this.label4.Text = "วันที่เริ่ม";
-            // 
-            // afterFlightBindingSource
-            // 
-            this.afterFlightBindingSource.DataMember = "AfterFlight";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.Main_but_farm);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(717, 50);
-            this.panel3.TabIndex = 0;
-            // 
-            // Main_but_farm
-            // 
-            this.Main_but_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main_but_farm.FlatAppearance.BorderSize = 0;
-            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
-            this.Main_but_farm.ForeColor = System.Drawing.Color.White;
-            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
-            this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(717, 50);
-            this.Main_but_farm.TabIndex = 6;
-            this.Main_but_farm.Text = "ตารางปฏิทินการบินที่ผ่านมา";
-            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Main_but_farm.UseCompatibleTextRendering = true;
-            this.Main_but_farm.UseVisualStyleBackColor = true;
-            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
-            // 
-            // activitySchedule
-            // 
-            this.activitySchedule.DataSetName = "ActivitySchedule";
-            this.activitySchedule.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // flightScheduleBindingSource
-            // 
-            this.flightScheduleBindingSource.DataMember = "FlightSchedule";
-            this.flightScheduleBindingSource.DataSource = this.flightSchedule;
-            // 
-            // flightSchedule
-            // 
-            this.flightSchedule.DataSetName = "flightSchedule";
-            this.flightSchedule.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // scheduleactionBindingSource
-            // 
-            this.scheduleactionBindingSource.DataMember = "schedule_action";
-            this.scheduleactionBindingSource.DataSource = this.droneFlightPlannerDataSet1;
-            // 
-            // droneFlightPlannerDataSet1
-            // 
-            this.droneFlightPlannerDataSet1.DataSetName = "DroneFlightPlannerDataSet1";
-            this.droneFlightPlannerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // schedule_actionTableAdapter
-            // 
-            this.schedule_actionTableAdapter.ClearBeforeFill = true;
-            // 
-            // flightScheduleTableAdapter
-            // 
-            this.flightScheduleTableAdapter.ClearBeforeFill = true;
-            // 
-            // flightScheduleTableAdapter1
-            // 
-            this.flightScheduleTableAdapter1.ClearBeforeFill = true;
-            // 
-            // flightScheduleBindingSource1
-            // 
-            this.flightScheduleBindingSource1.DataMember = "FlightSchedule";
-            this.flightScheduleBindingSource1.DataSource = this.activitySchedule;
             // 
             // DG_afterFlight
             // 
@@ -276,26 +182,12 @@
             this.actionstartTimeDataGridViewTextBoxColumn,
             this.actionfinishTimeDataGridViewTextBoxColumn});
             this.DG_afterFlight.DataSource = this.flightScheduleBindingSource2;
-            this.DG_afterFlight.Location = new System.Drawing.Point(12, 116);
+            this.DG_afterFlight.Location = new System.Drawing.Point(19, 115);
             this.DG_afterFlight.Name = "DG_afterFlight";
             this.DG_afterFlight.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_afterFlight.Size = new System.Drawing.Size(679, 229);
+            this.DG_afterFlight.Size = new System.Drawing.Size(679, 280);
             this.DG_afterFlight.TabIndex = 9;
             this.DG_afterFlight.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
-            // 
-            // _Drone_s_Flight_PlannerDataSet4
-            // 
-            this._Drone_s_Flight_PlannerDataSet4.DataSetName = "_Drone_s_Flight_PlannerDataSet4";
-            this._Drone_s_Flight_PlannerDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // flightScheduleBindingSource2
-            // 
-            this.flightScheduleBindingSource2.DataMember = "FlightSchedule";
-            this.flightScheduleBindingSource2.DataSource = this._Drone_s_Flight_PlannerDataSet4;
-            // 
-            // flightScheduleTableAdapter2
-            // 
-            this.flightScheduleTableAdapter2.ClearBeforeFill = true;
             // 
             // actiondatetimeDataGridViewTextBoxColumn
             // 
@@ -351,6 +243,96 @@
             this.actionfinishTimeDataGridViewTextBoxColumn.HeaderText = "เวลาสิ้นสุด";
             this.actionfinishTimeDataGridViewTextBoxColumn.Name = "actionfinishTimeDataGridViewTextBoxColumn";
             // 
+            // flightScheduleBindingSource2
+            // 
+            this.flightScheduleBindingSource2.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource2.DataSource = this._Drone_s_Flight_PlannerDataSet4;
+            // 
+            // _Drone_s_Flight_PlannerDataSet4
+            // 
+            this._Drone_s_Flight_PlannerDataSet4.DataSetName = "_Drone_s_Flight_PlannerDataSet4";
+            this._Drone_s_Flight_PlannerDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Main_but_farm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(717, 50);
+            this.panel3.TabIndex = 0;
+            // 
+            // Main_but_farm
+            // 
+            this.Main_but_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Main_but_farm.FlatAppearance.BorderSize = 0;
+            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
+            this.Main_but_farm.ForeColor = System.Drawing.Color.White;
+            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Main_but_farm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Name = "Main_but_farm";
+            this.Main_but_farm.Size = new System.Drawing.Size(717, 50);
+            this.Main_but_farm.TabIndex = 6;
+            this.Main_but_farm.Text = "ตารางปฏิทินการบินที่ผ่านมา";
+            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Main_but_farm.UseCompatibleTextRendering = true;
+            this.Main_but_farm.UseVisualStyleBackColor = true;
+            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
+            // 
+            // afterFlightBindingSource
+            // 
+            this.afterFlightBindingSource.DataMember = "AfterFlight";
+            // 
+            // activitySchedule
+            // 
+            this.activitySchedule.DataSetName = "ActivitySchedule";
+            this.activitySchedule.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flightScheduleBindingSource
+            // 
+            this.flightScheduleBindingSource.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource.DataSource = this.flightSchedule;
+            // 
+            // flightSchedule
+            // 
+            this.flightSchedule.DataSetName = "flightSchedule";
+            this.flightSchedule.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // scheduleactionBindingSource
+            // 
+            this.scheduleactionBindingSource.DataMember = "schedule_action";
+            this.scheduleactionBindingSource.DataSource = this.droneFlightPlannerDataSet1;
+            // 
+            // droneFlightPlannerDataSet1
+            // 
+            this.droneFlightPlannerDataSet1.DataSetName = "DroneFlightPlannerDataSet1";
+            this.droneFlightPlannerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // schedule_actionTableAdapter
+            // 
+            this.schedule_actionTableAdapter.ClearBeforeFill = true;
+            // 
+            // flightScheduleTableAdapter
+            // 
+            this.flightScheduleTableAdapter.ClearBeforeFill = true;
+            // 
+            // flightScheduleTableAdapter1
+            // 
+            this.flightScheduleTableAdapter1.ClearBeforeFill = true;
+            // 
+            // flightScheduleBindingSource1
+            // 
+            this.flightScheduleBindingSource1.DataMember = "FlightSchedule";
+            this.flightScheduleBindingSource1.DataSource = this.activitySchedule;
+            // 
+            // flightScheduleTableAdapter2
+            // 
+            this.flightScheduleTableAdapter2.ClearBeforeFill = true;
+            // 
             // Form_farm_act
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,17 +347,17 @@
             this.panel1.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet4)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.afterFlightBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.activitySchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleactionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_afterFlight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flightScheduleBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,7 +384,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker_startDate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button_print;
         private System.Windows.Forms.Button Button_show;
         private System.Windows.Forms.DataGridViewTextBoxColumn afnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn afnameDataGridViewTextBoxColumn;

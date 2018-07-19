@@ -156,7 +156,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
-                    String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES( (select CONCAT('DR00', MAX(SUBSTRING(drone_id, 4, 7)) + 1) from Drone) ,'" + textBox_droneName.Text + "',@img)";
+                    String query = "INSERT INTO Drone (drone_id,drone_name,drone_pic) " + "VALUES( (select CONCAT('DR00', MAX(CONVERT(INT, SUBSTRING(drone_id, 4, 7)) + 1)) from Drone) ,'" + textBox_droneName.Text + "',@img)";
 
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
