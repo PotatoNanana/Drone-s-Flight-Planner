@@ -5,3 +5,11 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\bin\Re
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\TrackerHome\obj\Release\TrackerHomeGPS.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\TrackerHome\obj\Release\TrackerHome.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\TrackerHome\obj\Release\TrackerHome.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Release\TrackerHomeGPS.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Release\TrackerHomeGPS.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Release\TrackerHome.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Release\TrackerHome.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\plugins\TrackerHome.dll.config
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\plugins\TrackerHome.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\plugins\TrackerHome.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Release\TrackerHomeGPS.csproj.CopyComplete
