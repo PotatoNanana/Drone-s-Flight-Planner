@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_Drone_s_Flight_PlannerDataSet8" targetNamespace="http://tempuri.org/_Drone_s_Flight_PlannerDataSet8.xsd" xmlns:mstns="http://tempuri.org/_Drone_s_Flight_PlannerDataSet8.xsd" xmlns="http://tempuri.org/_Drone_s_Flight_PlannerDataSet8.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Drone_s_Flight_PlannerConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Drone_s_Flight_PlannerConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MissionPlanner.Properties.Settings.GlobalReference.Default.Drone_s_Flight_PlannerConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MaintainanceTableAdapter" GeneratorDataComponentClassName="MaintainanceTableAdapter" Name="Maintainance" UserDataComponentName="MaintainanceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Drone_s_Flight_PlannerConnectionString1 (Settings)" DbObjectName="[Drone-s-Flight-Planner].dbo.Maintainance" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT maintain_activity, maintain_date, maintain_price, maintain_lenght, maintain_responder, maintain_venderName, maintain_venderAdd, device_id, maintain_venderPhone FROM dbo.Maintainance</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="maintain_activity" DataSetColumn="maintain_activity" />
+              <Mapping SourceColumn="maintain_date" DataSetColumn="maintain_date" />
+              <Mapping SourceColumn="maintain_price" DataSetColumn="maintain_price" />
+              <Mapping SourceColumn="maintain_lenght" DataSetColumn="maintain_lenght" />
+              <Mapping SourceColumn="maintain_responder" DataSetColumn="maintain_responder" />
+              <Mapping SourceColumn="maintain_venderName" DataSetColumn="maintain_venderName" />
+              <Mapping SourceColumn="maintain_venderAdd" DataSetColumn="maintain_venderAdd" />
+              <Mapping SourceColumn="device_id" DataSetColumn="device_id" />
+              <Mapping SourceColumn="maintain_venderPhone" DataSetColumn="maintain_venderPhone" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_Drone_s_Flight_PlannerDataSet8" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_Drone_s_Flight_PlannerDataSet8" msprop:Generator_UserDSName="_Drone_s_Flight_PlannerDataSet8">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Maintainance" msprop:Generator_TableClassName="MaintainanceDataTable" msprop:Generator_TableVarName="tableMaintainance" msprop:Generator_TablePropName="Maintainance" msprop:Generator_RowDeletingName="MaintainanceRowDeleting" msprop:Generator_RowChangingName="MaintainanceRowChanging" msprop:Generator_RowEvHandlerName="MaintainanceRowChangeEventHandler" msprop:Generator_RowDeletedName="MaintainanceRowDeleted" msprop:Generator_UserTableName="Maintainance" msprop:Generator_RowChangedName="MaintainanceRowChanged" msprop:Generator_RowEvArgName="MaintainanceRowChangeEvent" msprop:Generator_RowClassName="MaintainanceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="maintain_activity" msprop:Generator_ColumnVarNameInTable="columnmaintain_activity" msprop:Generator_ColumnPropNameInRow="maintain_activity" msprop:Generator_ColumnPropNameInTable="maintain_activityColumn" msprop:Generator_UserColumnName="maintain_activity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="maintain_date" msprop:Generator_ColumnVarNameInTable="columnmaintain_date" msprop:Generator_ColumnPropNameInRow="maintain_date" msprop:Generator_ColumnPropNameInTable="maintain_dateColumn" msprop:Generator_UserColumnName="maintain_date">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="maintain_price" msprop:Generator_ColumnVarNameInTable="columnmaintain_price" msprop:Generator_ColumnPropNameInRow="maintain_price" msprop:Generator_ColumnPropNameInTable="maintain_priceColumn" msprop:Generator_UserColumnName="maintain_price">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="maintain_lenght" msprop:Generator_ColumnVarNameInTable="columnmaintain_lenght" msprop:Generator_ColumnPropNameInRow="maintain_lenght" msprop:Generator_ColumnPropNameInTable="maintain_lenghtColumn" msprop:Generator_UserColumnName="maintain_lenght">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="maintain_responder" msprop:Generator_ColumnVarNameInTable="columnmaintain_responder" msprop:Generator_ColumnPropNameInRow="maintain_responder" msprop:Generator_ColumnPropNameInTable="maintain_responderColumn" msprop:Generator_UserColumnName="maintain_responder">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="maintain_venderName" msprop:Generator_ColumnVarNameInTable="columnmaintain_venderName" msprop:Generator_ColumnPropNameInRow="maintain_venderName" msprop:Generator_ColumnPropNameInTable="maintain_venderNameColumn" msprop:Generator_UserColumnName="maintain_venderName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="maintain_venderAdd" msprop:Generator_ColumnVarNameInTable="columnmaintain_venderAdd" msprop:Generator_ColumnPropNameInRow="maintain_venderAdd" msprop:Generator_ColumnPropNameInTable="maintain_venderAddColumn" msprop:Generator_UserColumnName="maintain_venderAdd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="device_id" msprop:Generator_ColumnVarNameInTable="columndevice_id" msprop:Generator_ColumnPropNameInRow="device_id" msprop:Generator_ColumnPropNameInTable="device_idColumn" msprop:Generator_UserColumnName="device_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="maintain_venderPhone" msprop:Generator_ColumnVarNameInTable="columnmaintain_venderPhone" msprop:Generator_ColumnPropNameInRow="maintain_venderPhone" msprop:Generator_ColumnPropNameInTable="maintain_venderPhoneColumn" msprop:Generator_UserColumnName="maintain_venderPhone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

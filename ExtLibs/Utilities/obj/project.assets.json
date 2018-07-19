@@ -113,6 +113,15 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "OpenTK/1.1.1579.5793": {
+        "type": "package",
+        "compile": {
+          "lib/NET40/OpenTK.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/OpenTK.dll": {}
+        }
+      },
       "ProjNet/1.2.0": {
         "type": "package",
         "compile": {
@@ -950,6 +959,16 @@
         "newtonsoft.json.10.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "OpenTK/1.1.1579.5793": {
+      "sha512": "yRVzQg92vAZ2XVSfhQGFfZSJBnme6ihLIeIekKN1oRGMyGf/54KDHczse7BQa0gKp4VVZD+1fwvvaitI9ZiQzw==",
+      "type": "package",
+      "path": "opentk/1.1.1579.5793",
+      "files": [
+        "lib/NET40/OpenTK.dll",
+        "opentk.1.1.1579.5793.nupkg.sha512",
+        "opentk.nuspec"
       ]
     },
     "ProjNet/1.2.0": {
@@ -3542,30 +3561,31 @@
       "GeoUtility >= 1.0.0",
       "MAVLink >= 1.0.0",
       "Newtonsoft.Json >= 10.0.2",
+      "OpenTK >= 1.1.1579.5793",
       "ProjNet >= 1.2.0",
       "SharpZipLib >= 0.86.0",
       "log4net >= 2.0.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\paper\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
       "projectName": "MissionPlanner.Utilities",
-      "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
-      "packagesPath": "C:\\Users\\paper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Utilities\\obj\\",
+      "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\.nuget\\NuGet.Config",
-        "C:\\Users\\paper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\.nuget\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3578,14 +3598,14 @@
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
             },
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
             },
-            "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj": {
-              "projectPath": "C:\\Users\\paper\\Documents\\i Pat\\KMITL\\Senior-project\\My project\\coding\\Drone's Flight Planner\\ExtLibs\\Mavlink\\MAVLink.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Mavlink\\MAVLink.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Mavlink\\MAVLink.csproj"
             }
           }
         }
@@ -3606,6 +3626,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[10.0.2, )"
+          },
+          "OpenTK": {
+            "target": "Package",
+            "version": "[1.1.1579.5793, )"
           },
           "ProjNet": {
             "target": "Package",

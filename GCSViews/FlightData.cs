@@ -180,10 +180,17 @@ namespace MissionPlanner.GCSViews
                 //    dockContainer1.PreviewRenderer = new PreviewRenderer();
                 //
                 mymap = gMapControl1;
+                if (MainV2.mapP != null)
+                {
+                    mymap.MapProvider = MainV2.mapP;
+                    gMapControl1.MapProvider = MainV2.mapP;
+                }
+
+                mymap.Paint += mymap_Paint;
+
                 myhud = hud1;
                 MainHcopy = MainH;
 
-                mymap.Paint += mymap_Paint;
 
                 // populate the unmodified base list
                 tabControlactions.TabPages.ForEach(i => { TabListOriginal.Add((TabPage)i); });
@@ -325,9 +332,11 @@ namespace MissionPlanner.GCSViews
                 }
 
                 MainV2.comPort.ParamListChanged += FlightData_ParentChanged;
+
+             
             }
-            
-            catch(Exception ex)
+
+            catch (Exception ex)
             {
                 CustomMessageBox.Show(ex.StackTrace);
             }
@@ -462,6 +471,12 @@ namespace MissionPlanner.GCSViews
         public void Activate()
         {
             log.Info("Activate Called");
+
+            if (MainV2.mapP != null)
+            {
+                mymap.MapProvider = MainV2.mapP;
+                gMapControl1.MapProvider = MainV2.mapP;
+            }
 
             OnResize(EventArgs.Empty);
 

@@ -56,16 +56,16 @@
             this.button_delete = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
             this.actiondatetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.farm_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drone_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actioncapacityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actioncostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drone_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action_startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action_finishTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.material_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.farm_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farm_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drone_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.material_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.act_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flightScheduleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.droneFlightPlannerDataSet5 = new MissionPlanner.DroneFlightPlannerDataSet5();
@@ -338,8 +338,9 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(62, 167);
+            this.monthCalendar1.Location = new System.Drawing.Point(54, 177);
             this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2018, 7, 29, 0, 0, 0, 0), new System.DateTime(2018, 8, 4, 0, 0, 0, 0));
             this.monthCalendar1.TabIndex = 27;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
@@ -347,9 +348,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MissionPlanner.Properties.Resources.calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 94);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(278, 271);
+            this.pictureBox1.Size = new System.Drawing.Size(268, 257);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -397,23 +398,23 @@
             this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Farm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.actiondatetimeDataGridViewTextBoxColumn,
-            this.farm_name,
-            this.drone_name,
             this.actioncapacityDataGridViewTextBoxColumn,
             this.actioncostDataGridViewTextBoxColumn,
             this.drone_id,
             this.action_startTime,
             this.action_finishTime,
-            this.material_no,
             this.farm_id,
             this.action_no,
+            this.farm_name,
+            this.drone_name,
+            this.material_no,
             this.act_no});
             this.DG_Farm.DataSource = this.flightScheduleBindingSource1;
-            this.DG_Farm.Location = new System.Drawing.Point(335, 94);
+            this.DG_Farm.Location = new System.Drawing.Point(325, 94);
             this.DG_Farm.MultiSelect = false;
             this.DG_Farm.Name = "DG_Farm";
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_Farm.Size = new System.Drawing.Size(605, 257);
+            this.DG_Farm.Size = new System.Drawing.Size(615, 257);
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             this.DG_Farm.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_RowEnter);
@@ -424,18 +425,6 @@
             this.actiondatetimeDataGridViewTextBoxColumn.DataPropertyName = "action_datetime";
             this.actiondatetimeDataGridViewTextBoxColumn.HeaderText = "วันที่";
             this.actiondatetimeDataGridViewTextBoxColumn.Name = "actiondatetimeDataGridViewTextBoxColumn";
-            // 
-            // farm_name
-            // 
-            this.farm_name.DataPropertyName = "farm_name";
-            this.farm_name.HeaderText = "ชื่อฟาร์ม";
-            this.farm_name.Name = "farm_name";
-            // 
-            // drone_name
-            // 
-            this.drone_name.DataPropertyName = "drone_name";
-            this.drone_name.HeaderText = "โดรน";
-            this.drone_name.Name = "drone_name";
             // 
             // actioncapacityDataGridViewTextBoxColumn
             // 
@@ -468,13 +457,6 @@
             this.action_finishTime.HeaderText = "เวลาสิ้นสุด";
             this.action_finishTime.Name = "action_finishTime";
             // 
-            // material_no
-            // 
-            this.material_no.DataPropertyName = "material_no";
-            this.material_no.HeaderText = "material_no";
-            this.material_no.Name = "material_no";
-            this.material_no.Visible = false;
-            // 
             // farm_id
             // 
             this.farm_id.DataPropertyName = "farm_id";
@@ -488,6 +470,25 @@
             this.action_no.HeaderText = "action_no";
             this.action_no.Name = "action_no";
             this.action_no.Visible = false;
+            // 
+            // farm_name
+            // 
+            this.farm_name.DataPropertyName = "farm_name";
+            this.farm_name.HeaderText = "ชื่อฟาร์ม";
+            this.farm_name.Name = "farm_name";
+            // 
+            // drone_name
+            // 
+            this.drone_name.DataPropertyName = "drone_name";
+            this.drone_name.HeaderText = "โดรน";
+            this.drone_name.Name = "drone_name";
+            // 
+            // material_no
+            // 
+            this.material_no.DataPropertyName = "material_no";
+            this.material_no.HeaderText = "material_no";
+            this.material_no.Name = "material_no";
+            this.material_no.Visible = false;
             // 
             // act_no
             // 

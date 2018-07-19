@@ -112,27 +112,7 @@ namespace MissionPlanner.GCSViews
         {
             OnGotoFarmMaintenanceClicked(e);
         }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-
-        }        
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void myDataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lineSeparator1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void but_schedule_Click(object sender, EventArgs e)
         {
             Form_main_Schedule form_Schedule = new Form_main_Schedule();
@@ -160,6 +140,7 @@ namespace MissionPlanner.GCSViews
             DataTable dt = new DataTable();
             SDA.Fill(dt);
             DG_schedule.DataSource = dt;
+            DG_schedule.Columns["action_datetime"].DefaultCellStyle.Format = "yyyy-MM-dd";
             con.Close();
         }
 
@@ -228,10 +209,6 @@ namespace MissionPlanner.GCSViews
             }
 
         }
-
-        private void Menu_main2_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }

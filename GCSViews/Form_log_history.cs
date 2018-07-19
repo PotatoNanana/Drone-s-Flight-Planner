@@ -35,10 +35,8 @@ namespace MissionPlanner.GCSViews
 
         private void Form_log_history_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet7.Transact' table. You can move, or remove it, as needed.
-            this.transactTableAdapter.Fill(this.droneFlightPlannerDataSet7.Transact);
-            // TODO: This line of code loads data into the 'flightLog._FlightLog' table. You can move, or remove it, as needed.
-            //this.flightLogTableAdapter.Fill(this.flightLog._FlightLog);
+            // TODO: This line of code loads data into the '_Drone_s_Flight_PlannerDataSet6.Transact' table. You can move, or remove it, as needed.
+            this.transactTableAdapter1.Fill(this._Drone_s_Flight_PlannerDataSet6.Transact);
 
         }
 

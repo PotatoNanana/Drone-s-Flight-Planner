@@ -7,3 +7,8 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\tlogThumbnailHandler\obj\Release\tlogThumbnailHandler.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\tlogThumbnailHandler\obj\Release\tlogThumbnailHandler.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\tlogThumbnailHandler\obj\Release\tlogThumbnailHandler.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\bin\Release\tlogThumbnailHandler.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\bin\Release\tlogThumbnailHandler.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\obj\Release\tlogThumbnailHandler.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\obj\Release\tlogThumbnailHandler.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\tlogThumbnailHandler\obj\Release\tlogThumbnailHandler.pdb

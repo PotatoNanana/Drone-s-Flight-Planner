@@ -48,9 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox_mainAct = new System.Windows.Forms.TextBox();
-            this.textBox_mainID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.button_edit = new System.Windows.Forms.Button();
             this.button_delete = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
@@ -125,9 +123,7 @@
             this.panel_Main_farm.Controls.Add(this.label3);
             this.panel_Main_farm.Controls.Add(this.label6);
             this.panel_Main_farm.Controls.Add(this.textBox_mainAct);
-            this.panel_Main_farm.Controls.Add(this.textBox_mainID);
             this.panel_Main_farm.Controls.Add(this.label2);
-            this.panel_Main_farm.Controls.Add(this.label1);
             this.panel_Main_farm.Controls.Add(this.button_edit);
             this.panel_Main_farm.Controls.Add(this.button_delete);
             this.panel_Main_farm.Controls.Add(this.DG_Farm);
@@ -150,7 +146,7 @@
             // 
             // textBox_venAdd
             // 
-            this.textBox_venAdd.Location = new System.Drawing.Point(1052, 139);
+            this.textBox_venAdd.Location = new System.Drawing.Point(1051, 139);
             this.textBox_venAdd.Multiline = true;
             this.textBox_venAdd.Name = "textBox_venAdd";
             this.textBox_venAdd.Size = new System.Drawing.Size(200, 62);
@@ -158,14 +154,14 @@
             // 
             // textBox_respond
             // 
-            this.textBox_respond.Location = new System.Drawing.Point(1052, 257);
+            this.textBox_respond.Location = new System.Drawing.Point(666, 249);
             this.textBox_respond.Name = "textBox_respond";
-            this.textBox_respond.Size = new System.Drawing.Size(200, 31);
+            this.textBox_respond.Size = new System.Drawing.Size(194, 31);
             this.textBox_respond.TabIndex = 52;
             // 
             // textBox_time
             // 
-            this.textBox_time.Location = new System.Drawing.Point(1051, 215);
+            this.textBox_time.Location = new System.Drawing.Point(1052, 215);
             this.textBox_time.Name = "textBox_time";
             this.textBox_time.Size = new System.Drawing.Size(200, 31);
             this.textBox_time.TabIndex = 53;
@@ -191,7 +187,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label7.Location = new System.Drawing.Point(878, 261);
+            this.label7.Location = new System.Drawing.Point(492, 253);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(174, 27);
             this.label7.TabIndex = 47;
@@ -219,21 +215,24 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(675, 173);
+            this.dateTimePicker.AllowDrop = true;
+            this.dateTimePicker.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker.Enabled = false;
+            this.dateTimePicker.Location = new System.Drawing.Point(666, 132);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(194, 31);
             this.dateTimePicker.TabIndex = 45;
             // 
             // textBox_venName
             // 
-            this.textBox_venName.Location = new System.Drawing.Point(675, 253);
+            this.textBox_venName.Location = new System.Drawing.Point(666, 212);
             this.textBox_venName.Name = "textBox_venName";
             this.textBox_venName.Size = new System.Drawing.Size(194, 31);
             this.textBox_venName.TabIndex = 42;
             // 
             // textBox_price
             // 
-            this.textBox_price.Location = new System.Drawing.Point(676, 213);
+            this.textBox_price.Location = new System.Drawing.Point(666, 172);
             this.textBox_price.Name = "textBox_price";
             this.textBox_price.Size = new System.Drawing.Size(194, 31);
             this.textBox_price.TabIndex = 43;
@@ -242,7 +241,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label4.Location = new System.Drawing.Point(499, 255);
+            this.label4.Location = new System.Drawing.Point(490, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 27);
             this.label4.TabIndex = 39;
@@ -252,7 +251,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label3.Location = new System.Drawing.Point(499, 215);
+            this.label3.Location = new System.Drawing.Point(490, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 27);
             this.label3.TabIndex = 40;
@@ -262,7 +261,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label6.Location = new System.Drawing.Point(499, 173);
+            this.label6.Location = new System.Drawing.Point(490, 132);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 27);
             this.label6.TabIndex = 38;
@@ -270,37 +269,20 @@
             // 
             // textBox_mainAct
             // 
-            this.textBox_mainAct.Location = new System.Drawing.Point(675, 136);
+            this.textBox_mainAct.Location = new System.Drawing.Point(666, 95);
             this.textBox_mainAct.Name = "textBox_mainAct";
             this.textBox_mainAct.Size = new System.Drawing.Size(195, 31);
             this.textBox_mainAct.TabIndex = 37;
-            // 
-            // textBox_mainID
-            // 
-            this.textBox_mainID.Location = new System.Drawing.Point(674, 97);
-            this.textBox_mainID.Name = "textBox_mainID";
-            this.textBox_mainID.Size = new System.Drawing.Size(195, 31);
-            this.textBox_mainID.TabIndex = 36;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label2.Location = new System.Drawing.Point(499, 139);
+            this.label2.Location = new System.Drawing.Point(490, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 27);
             this.label2.TabIndex = 35;
             this.label2.Text = "ชื่อกิจกรรมการซ่อมบำรุง";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("PJ Standard", 16F);
-            this.label1.Location = new System.Drawing.Point(499, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 27);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "หมายเลขการซ่อมบำรุง";
             // 
             // button_edit
             // 
@@ -359,7 +341,6 @@
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Farm.Size = new System.Drawing.Size(449, 297);
             this.DG_Farm.TabIndex = 9;
-            this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             this.DG_Farm.Click += new System.EventHandler(this.DG_Farm_Click);
             // 
             // maintainidDataGridViewTextBoxColumn
@@ -480,7 +461,6 @@
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Main_but_farm.UseVisualStyleBackColor = false;
-            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
             // maintainanceTableAdapter
             // 
@@ -517,9 +497,7 @@
         private System.Windows.Forms.Button but_backto_pre;
         private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_edit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_mainID;
         private System.Windows.Forms.TextBox textBox_mainAct;
         private System.Windows.Forms.DataGridViewTextBoxColumn maintainidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maintainactivityDataGridViewTextBoxColumn;

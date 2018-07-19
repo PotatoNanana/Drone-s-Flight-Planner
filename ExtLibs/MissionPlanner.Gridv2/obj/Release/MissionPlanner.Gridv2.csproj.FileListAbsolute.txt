@@ -12,3 +12,14 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.GridUIv2.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Properties.Resources.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\plugins\MissionPlanner.Gridv2.dll.config
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\plugins\MissionPlanner.Gridv2.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\plugins\MissionPlanner.Gridv2.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\MissionPlanner.Gridv2\obj\Release\MissionPlanner.Gridv2.csproj.CopyComplete

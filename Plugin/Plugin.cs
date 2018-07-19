@@ -78,9 +78,9 @@ namespace MissionPlanner.Plugin
         /// <summary>
         /// Device change event
         /// </summary>
-        public event MainV3.WMDeviceChangeEventHandler DeviceChanged;
+        public event MainV2.WMDeviceChangeEventHandler DeviceChanged;
 
-        internal void ProcessDeviceChanged(MainV3.WM_DEVICECHANGE_enum dc)
+        internal void ProcessDeviceChanged(MainV2.WM_DEVICECHANGE_enum dc)
         {
             if (DeviceChanged != null)
             {
@@ -107,7 +107,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public CurrentState cs
         {
-            get { return MainV3.comPort.MAV.cs; }
+            get { return MainV2.comPort.MAV.cs; }
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace MissionPlanner.Plugin
         /// </summary>
         public MAVLinkInterface comPort
         {
-            get { return MainV3.comPort; }
+            get { return MainV2.comPort; }
         }
 
         /// <summary>
@@ -166,10 +166,10 @@ namespace MissionPlanner.Plugin
         /// <summary>
         /// The point where the menu was drawn
         /// </summary>
-       /* public PointLatLng FPMenuMapPosition
+        public PointLatLng FPMenuMapPosition
         {
             get { return MainV2.instance.FlightPlanner.MouseDownEnd; }
-        } */
+        }
 
         /// <summary>
         /// The polygon drawn by the user on the FP page
@@ -179,7 +179,8 @@ namespace MissionPlanner.Plugin
             get
             {
                 return new GMapPolygon(new List<PointLatLng>(MainV2.instance.FlightPlanner.drawnpolygon.Points),
-                    "Poly Copy") {Stroke = MainV2.instance.FlightPlanner.drawnpolygon.Stroke};
+                    "Poly Copy")
+                { Stroke = MainV2.instance.FlightPlanner.drawnpolygon.Stroke };
             }
         }
 

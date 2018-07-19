@@ -15,3 +15,14 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\obj\Release\LibVLC.NET.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\obj\Release\LibVLC.NET.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\LibVLC.NET\obj\Release\LibVLC.NET.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\bin\Release\LibVLC.NET.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\bin\Release\LibVLC.NET.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\bin\Release\LibVLC.NET.XML
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\bin\Release\System.Runtime.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\bin\Release\System.Runtime.Extensions.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\bin\Release\System.Runtime.InteropServices.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\obj\Release\LibVLC.NET.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\obj\Release\LibVLC.NET.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\obj\Release\LibVLC.NET.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\obj\Release\LibVLC.NET.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\LibVLC.NET\obj\Release\LibVLC.NET.pdb

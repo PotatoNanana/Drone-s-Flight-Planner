@@ -33,7 +33,7 @@ namespace MissionPlanner
         List<PointLatLng> list = new List<PointLatLng>();
         List<PointLatLngAlt> grid;
 
-        mode currentmode = mode.panmode;       
+        mode currentmode = mode.panmode;
 
         Dictionary<string, camerainfo> cameras = new Dictionary<string, camerainfo>();
 
@@ -78,16 +78,16 @@ namespace MissionPlanner
             map.Position = plugin.Host.FPMenuMapPosition;
             map.Zoom = 16;
 
-            layerpolygons = new GMapOverlay( "polygons");
+            layerpolygons = new GMapOverlay("polygons");
             map.Overlays.Add(layerpolygons);
 
             plugin.Host.FPDrawnPolygon.Points.ForEach(x => { list.Add(x); });
 
-			num_overlap = 50;
-			num_sidelap = 60;
+            num_overlap = 50;
+            num_sidelap = 60;
 
             NUM_altitude.Value = 50;
-			
+
             // set and angle that is good
             NUM_angle.Value = (decimal)((getAngleOfLongestSide(list) + 360) % 360);
 
@@ -97,7 +97,7 @@ namespace MissionPlanner
         {
             if (plugin.Host.config.ContainsKey("grid_camera"))
             {
-                
+
                 loadsetting("grid_alt", NUM_altitude);
 
                 // camera last to it invokes a reload
@@ -252,11 +252,11 @@ namespace MissionPlanner
             poly.Fill = Brushes.Transparent;
 
             layerpolygons.Polygons.Add(poly);
-        
+
 
             foreach (var item in list)
             {
-                layerpolygons.Markers.Add(new GMarkerGoogle(item,GMarkerGoogleType.red));
+                layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.red));
             }
         }
 
@@ -269,12 +269,12 @@ namespace MissionPlanner
             PointLatLngAlt last = list[list.Count - 1];
             foreach (PointLatLngAlt item in list)
             {
-                 if (item.GetDistance(last) > maxdist) 
-                 {
-                     angle = item.GetBearing(last);
-                     maxdist = item.GetDistance(last);
-                 }
-                 last = item;
+                if (item.GetDistance(last) > maxdist)
+                {
+                    angle = item.GetBearing(last);
+                    maxdist = item.GetDistance(last);
+                }
+                last = item;
             }
 
             return (angle + 360) % 360;
@@ -311,8 +311,8 @@ namespace MissionPlanner
                 return;
             }
 
-           // if (chk_boundary.Checked)
-          //      AddDrawPolygon();
+            // if (chk_boundary.Checked)
+            //      AddDrawPolygon();
 
             int strips = 0;
             int images = 0;
@@ -345,11 +345,11 @@ namespace MissionPlanner
                                     startangle = 90;
                                 }
 
-                                double angle1 = startangle - (Math.Tan((fovv/2.0)/(fovh/2.0))*rad2deg);
-                                double dist1 = Math.Sqrt(Math.Pow(fovh/2.0, 2) + Math.Pow(fovv/2.0, 2));
+                                double angle1 = startangle - (Math.Tan((fovv / 2.0) / (fovh / 2.0)) * rad2deg);
+                                double dist1 = Math.Sqrt(Math.Pow(fovh / 2.0, 2) + Math.Pow(fovv / 2.0, 2));
 
-                                double bearing = (double) NUM_angle.Value;
-                                    // (prevpoint.GetBearing(item) + 360.0) % 360;
+                                double bearing = (double)NUM_angle.Value;
+                                // (prevpoint.GetBearing(item) + 360.0) % 360;
 
                                 List<PointLatLng> footprint = new List<PointLatLng>();
                                 footprint.Add(item.newpos(bearing + angle1, dist1));
@@ -358,8 +358,8 @@ namespace MissionPlanner
                                 footprint.Add(item.newpos(bearing - angle1, dist1));
 
                                 GMapPolygon poly = new GMapPolygon(footprint, a.ToString());
-                                poly.Stroke.Color = Color.FromArgb(250 - ((a*5)%240), 250 - ((a*3)%240),
-                                    250 - ((a*9)%240));
+                                poly.Stroke.Color = Color.FromArgb(250 - ((a * 5) % 240), 250 - ((a * 3) % 240),
+                                    250 - ((a * 9) % 240));
                                 poly.Stroke.Width = 1;
                                 poly.Fill = new SolidBrush(Color.FromArgb(40, Color.Purple));
 
@@ -490,7 +490,7 @@ namespace MissionPlanner
             if (polygon[0] == polygon[polygon.Count - 1])
                 polygon.RemoveAt(polygon.Count - 1); // unmake a full loop
 
-            return Math.Abs( answer);
+            return Math.Abs(answer);
         }
 
         private void BUT_Accept_Click(object sender, EventArgs e)
@@ -526,11 +526,11 @@ namespace MissionPlanner
                     }
                 });
 
-                    plugin.Host.AddWPtoList(MAVLink.MAV_CMD.DO_SET_CAM_TRIGG_DIST, 0, 0, 0, 0, 0, 0, 0);
+                plugin.Host.AddWPtoList(MAVLink.MAV_CMD.DO_SET_CAM_TRIGG_DIST, 0, 0, 0, 0, 0, 0, 0);
 
                 if (chk_includeland.Checked)
                 {
-                    plugin.Host.AddWPtoList(MAVLink.MAV_CMD.LAND, 0, 0, 0, 0, plugin.Host.cs.HomeLocation.Lng,plugin.Host.cs.HomeLocation.Lat, 0);
+                    plugin.Host.AddWPtoList(MAVLink.MAV_CMD.LAND, 0, 0, 0, 0, plugin.Host.cs.HomeLocation.Lng, plugin.Host.cs.HomeLocation.Lat, 0);
                 }
 
                 savesettings();
@@ -811,7 +811,7 @@ namespace MissionPlanner
 
             doCalc();
         }
-       
+
         private void GridUI_Load(object sender, EventArgs e)
         {
             xmlcamera(false, Settings.GetRunningDirectory() + "camerasBuiltin.xml");
@@ -834,7 +834,7 @@ namespace MissionPlanner
         {
             doCalc();
         }
-     
+
         public double NUM_spacing { get; set; }
 
         public double NUM_Distance { get; set; }
