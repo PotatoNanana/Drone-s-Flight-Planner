@@ -21,3 +21,4 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\GeoUtility\obj\Releas
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\GeoUtility\obj\Release\GeoUtility.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\GeoUtility\obj\Release\GeoUtility.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\GeoUtility\obj\Release\GeoUtility.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\GeoUtility\obj\Release\GeoUtility.csprojAssemblyReference.cache

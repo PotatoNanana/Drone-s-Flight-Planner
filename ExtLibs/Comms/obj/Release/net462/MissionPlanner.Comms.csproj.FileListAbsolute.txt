@@ -9,7 +9,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\bin\Release\net462\MissionPlanner.Comms.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\bin\Release\net462\log4net.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.AssemblyInfoInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.AssemblyInfo.cs

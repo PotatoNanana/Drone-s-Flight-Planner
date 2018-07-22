@@ -264,6 +264,12 @@
     <Reference Include="DotSpatial.Topology, Version=1.9.0.0, Culture=neutral, PublicKeyToken=a66b5e9434ca3671, processorArchitecture=MSIL">
       <HintPath>packages\DotSpatial.Topology.1.9\lib\net40-Client\DotSpatial.Topology.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <HintPath>packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\FlashControlV71.dll</HintPath>
     </Reference>
@@ -308,6 +314,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\Drone-s-Flight-Planner3\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Scripting, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>packages\DynamicLanguageRuntime.1.1.2\lib\Net45\Microsoft.Scripting.dll</HintPath>
@@ -379,6 +388,7 @@
       <HintPath>packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
     </Reference>
@@ -868,6 +878,27 @@
     <Compile Include="GCSViews\Menu_setup.Designer.cs">
       <DependentUpon>Menu_setup.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\PrintableReport\preflightschedule.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>preflightschedule.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\PrintableReport\preflightschedule.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>preflightschedule.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\PrintableReport\preflightschedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>preflightschedule.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\PrintableReport\Report_preflightSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCSViews\PrintableReport\Report_preflightSchedule.Designer.cs">
+      <DependentUpon>Report_preflightSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\UserLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -951,6 +982,21 @@
     <Compile Include="MainV3.Designer.cs">
       <DependentUpon>MainV3.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelOfPreFlightSchedule.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOfPreFlightSchedule.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOfPreFlightSchedule.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOfPreFlightSchedule.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOfPreFlightSchedule.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOfPreFlightSchedule.edmx</DependentUpon>
+    </Compile>
     <Compile Include="MyView\AddScreen.cs" />
     <Compile Include="part.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -971,6 +1017,14 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report_preflightfchedule_Result.cs">
+      <DependentUpon>ModelOfPreFlightSchedule.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Report_preflightschedule_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_preflightschedule_dataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="Schedule.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -3509,6 +3563,9 @@
     <EmbeddedResource Include="GCSViews\Menu_setup.resx">
       <DependentUpon>Menu_setup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\PrintableReport\Report_preflightSchedule.resx">
+      <DependentUpon>Report_preflightSchedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -3798,6 +3855,7 @@
     <EmbeddedResource Include="RAW_Sensor.pt.resx">
       <DependentUpon>RAW_Sensor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report_preFlightSchedule.rdlc" />
     <EmbeddedResource Include="ScriptConsole.ar.resx">
       <DependentUpon>ScriptConsole.cs</DependentUpon>
     </EmbeddedResource>
@@ -4595,6 +4653,13 @@
     <None Include="F_Schedule.xss">
       <DependentUpon>F_Schedule.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="GCSViews\PrintableReport\preflightschedule.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>preflightschedule.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GCSViews\PrintableReport\preflightschedule.edmx.diagram">
+      <DependentUpon>preflightschedule.edmx</DependentUpon>
+    </None>
     <None Include="Lib.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -5135,6 +5200,13 @@
     <None Include="maintainace.xss">
       <DependentUpon>maintainace.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="ModelOfPreFlightSchedule.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelOfPreFlightSchedule.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelOfPreFlightSchedule.edmx.diagram">
+      <DependentUpon>ModelOfPreFlightSchedule.edmx</DependentUpon>
+    </None>
     <None Include="NoFly\Areas-Lisboa.kmz" />
     <None Include="NoFly\Regulamento-RPA-ver-3.0.kmz">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -5166,9 +5238,22 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="PRIVACY.md" />
+    <None Include="Properties\DataSources\MissionPlanner.GCSViews.PrintableReport.Report_preflightSchedule.datasource" />
+    <None Include="Properties\DataSources\Report_preflightschedule_dataset.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report_preflightschedule_dataset.xsc">
+      <DependentUpon>Report_preflightschedule_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Report_preflightschedule_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Report_preflightschedule_dataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report_preflightschedule_dataset.xss">
+      <DependentUpon>Report_preflightschedule_dataset.xsd</DependentUpon>
     </None>
     <None Include="Schedule.xsc">
       <DependentUpon>Schedule.xsd</DependentUpon>
@@ -6309,6 +6394,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Parachute.png" />
+    <Content Include="GCSViews\PrintableReport\preflightschedule.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>preflightschedule.Context.cs</LastGenOutput>
+      <DependentUpon>preflightschedule.edmx</DependentUpon>
+    </Content>
+    <Content Include="GCSViews\PrintableReport\preflightschedule.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>preflightschedule.edmx</DependentUpon>
+      <LastGenOutput>preflightschedule.cs</LastGenOutput>
+    </Content>
     <Content Include="GdalConfiguration.vb" />
     <Content Include="Lib\site-packages\README.txt" />
     <Content Include="LogAnalyzer\py2exe\DataflashLog.py" />
@@ -6336,6 +6431,16 @@
     <Content Include="LogAnalyzer\py2exe\VehicleType.py" />
     <Content Include="mavgraphs.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ModelOfPreFlightSchedule.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelOfPreFlightSchedule.edmx</DependentUpon>
+      <LastGenOutput>ModelOfPreFlightSchedule.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelOfPreFlightSchedule.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelOfPreFlightSchedule.edmx</DependentUpon>
+      <LastGenOutput>ModelOfPreFlightSchedule.cs</LastGenOutput>
     </Content>
     <Content Include="mpdesktop150.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -6760,6 +6865,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
