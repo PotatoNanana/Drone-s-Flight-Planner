@@ -34,7 +34,7 @@ namespace MissionPlanner
         Excel.Workbook xlWorkBook;
         Excel.Worksheet xlWorkSheet;
         Excel.Range range;
-
+        
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 

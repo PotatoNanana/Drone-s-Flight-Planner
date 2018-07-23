@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Globalization;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
@@ -64,7 +57,6 @@ namespace MissionPlanner.GCSViews
                 cboMaterial.DataSource = dtMaterial;
                 cboMaterial.DisplayMember = "material_name";
                 cboMaterial.ValueMember = "material_no";
-
             }
             catch (Exception ex)
             {
@@ -75,25 +67,13 @@ namespace MissionPlanner.GCSViews
                 if(con !=null || con.State == ConnectionState.Open)
                     con.Close();
             }
-
-           
         }
-
-        private void Main_but_farm_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void But_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         
-        private void DG_Farm_CellContentClick (object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void But_add_act_Click(object sender, EventArgs e)
         {          
             if (cboDrone.SelectedValue != "")
@@ -295,14 +275,11 @@ namespace MissionPlanner.GCSViews
 
         private void button_serch_Click(object sender, EventArgs e)
         {
-            // serch record
+            // search record
         }
 
         private void Form_farm_Schedule_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'droneFlightPlannerDataSet5.FlightSchedule' table. You can move, or remove it, as needed.
-            //this.flightScheduleTableAdapter1.Fill(this.droneFlightPlannerDataSet5.FlightSchedule);
-
             AddToCombo();
             loadListData();
 
@@ -314,7 +291,7 @@ namespace MissionPlanner.GCSViews
             { con.Open(); }
 
             //String query = "SELECT * FROM FlightSchedule WHERE farm_id = '" + id_farm + "' AND action_finish = 'n' ";
-            String query = @"SELECT        Material_Act.material_name, Activity_Farm.act_name, FlightSchedule.action_datetime, Farm.farm_name, FlightSchedule.action_no, FlightSchedule.action_finish, FlightSchedule.action_cost, FlightSchedule.action_capacity, FlightSchedule.action_startTime, 
+            String query = @"SELECT Material_Act.material_name, Activity_Farm.act_name, FlightSchedule.action_datetime, Farm.farm_name, FlightSchedule.action_no, FlightSchedule.action_finish, FlightSchedule.action_cost, FlightSchedule.action_capacity, FlightSchedule.action_startTime, 
                 FlightSchedule.action_finishTime, FlightSchedule.farm_id, Drone.drone_name, FlightSchedule.drone_id,
 				FlightSchedule.act_no, FlightSchedule.material_no
                 FROM FlightSchedule INNER JOIN

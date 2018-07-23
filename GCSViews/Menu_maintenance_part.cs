@@ -163,8 +163,8 @@ namespace MissionPlanner.GCSViews
         private void BUT_add_drone_part_Click(object sender, EventArgs e)
         {
             //pass to add part
-            Form_Add_drone_part form_Add_Drone_Part = new Form_Add_drone_part(id_drone);
-            form_Add_Drone_Part.ShowDialog();
+            //Form_Add_drone_part form_Add_Drone_Part = new Form_Add_drone_part(id_drone);
+            //form_Add_Drone_Part.ShowDialog();
         }
 
         private void but_backto_pre_Click(object sender, EventArgs e)
@@ -183,8 +183,8 @@ namespace MissionPlanner.GCSViews
         private void button_edit_Click(object sender, EventArgs e)
         {
             //edit
-            Form_Edit_drone_part form_Edit_Drone_Part = new Form_Edit_drone_part(id_drone);
-            form_Edit_Drone_Part.ShowDialog();
+            //Form_Edit_drone_part form_Edit_Drone_Part = new Form_Edit_drone_part(id_drone);
+            //form_Edit_Drone_Part.ShowDialog();
         }
 
         private void button_delete_Click(object sender, EventArgs e)

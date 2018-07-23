@@ -49,8 +49,8 @@ namespace MissionPlanner.GCSViews
         private void But_add_act_Click(object sender, EventArgs e)
         { 
             // pass to add act
-            Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act();
-            form_Add_Farm_Act.ShowDialog();
+            //Form_Add_farm_act form_Add_Farm_Act = new Form_Add_farm_act();
+            //form_Add_Farm_Act.ShowDialog();
         }
 
         private void panelFarm_Act_Paint(object sender, PaintEventArgs e)
@@ -97,8 +97,8 @@ namespace MissionPlanner.GCSViews
         private void button_edit_Click(object sender, EventArgs e)
         {
             // pass to edit act
-            Form_Edit_farm_act form_edit_farm_act = new Form_Edit_farm_act(id_farm);
-            form_edit_farm_act.ShowDialog();
+            //Form_Edit_farm_act form_edit_farm_act = new Form_Edit_farm_act(id_farm);
+            //form_edit_farm_act.ShowDialog();
 
         }
 

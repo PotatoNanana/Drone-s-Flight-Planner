@@ -152,7 +152,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1366, 768);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel5
             // 
@@ -649,7 +648,6 @@
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Main_but_farm.UseVisualStyleBackColor = false;
-            this.Main_but_farm.Click += new System.EventHandler(this.button1_Click);
             // 
             // maintainanceBindingSource
             // 

@@ -722,65 +722,11 @@
     <Compile Include="GCSViews\Form_After_flight.Designer.cs">
       <DependentUpon>Form_After_flight.cs</DependentUpon>
     </Compile>
-    <Compile Include="GCSViews\Form_Edit_drone_pre .cs">
+    <Compile Include="GCSViews\Form_farm_role.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GCSViews\Form_Edit_drone_pre .Designer.cs">
-      <DependentUpon>Form_Edit_drone_pre .cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_drone_pre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_drone_pre.Designer.cs">
-      <DependentUpon>Form_Add_drone_pre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_drone_part.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_drone_part.Designer.cs">
-      <DependentUpon>Form_Edit_drone_part.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_drone_part.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_drone_part.Designer.cs">
-      <DependentUpon>Form_Add_drone_part.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_drone.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_drone.Designer.cs">
-      <DependentUpon>Form_Edit_drone.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_drone.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_drone.Designer.cs">
-      <DependentUpon>Form_Add_drone.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_farm_act.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_farm_act.Designer.cs">
-      <DependentUpon>Form_Edit_farm_act.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_farm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_farm.Designer.cs">
-      <DependentUpon>Form_Edit_farm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_farm_act.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_farm_act.Designer.cs">
-      <DependentUpon>Form_Add_farm_act.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_farm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_farm.Designer.cs">
-      <DependentUpon>Form_Add_farm.cs</DependentUpon>
+    <Compile Include="GCSViews\Form_farm_role.Designer.cs">
+      <DependentUpon>Form_farm_role.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\Form_farm_act2.cs">
       <SubType>Form</SubType>
@@ -799,18 +745,6 @@
     </Compile>
     <Compile Include="GCSViews\Form_farm_Schedule.Designer.cs">
       <DependentUpon>Form_farm_Schedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_act.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Add_act.Designer.cs">
-      <DependentUpon>Form_Add_act.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_act.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GCSViews\Form_Edit_act.Designer.cs">
-      <DependentUpon>Form_Edit_act.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\Form_log.cs">
       <SubType>Form</SubType>
@@ -1025,6 +959,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Report_preflightschedule_dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="role_selected.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>role_selected.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="role_unselected.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>role_unselected.xsd</DependentUpon>
     </Compile>
     <Compile Include="Schedule.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -3405,35 +3349,8 @@
     <EmbeddedResource Include="GCSViews\Form_after_flight.resx">
       <DependentUpon>Form_After_flight.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Edit_drone_pre .resx">
-      <DependentUpon>Form_Edit_drone_pre .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Add_drone_pre.resx">
-      <DependentUpon>Form_Add_drone_pre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Edit_drone_part.resx">
-      <DependentUpon>Form_Edit_drone_part.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Add_drone_part.resx">
-      <DependentUpon>Form_Add_drone_part.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Edit_drone.resx">
-      <DependentUpon>Form_Edit_drone.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Add_drone.resx">
-      <DependentUpon>Form_Add_drone.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Edit_farm_act.resx">
-      <DependentUpon>Form_Edit_farm_act.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Edit_farm.resx">
-      <DependentUpon>Form_Edit_farm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Add_farm_act.resx">
-      <DependentUpon>Form_Add_farm_act.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Add_farm.resx">
-      <DependentUpon>Form_Add_farm.cs</DependentUpon>
+    <EmbeddedResource Include="GCSViews\Form_farm_role.resx">
+      <DependentUpon>Form_farm_role.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_farm_act2.resx">
       <DependentUpon>Form_farm_act2.cs</DependentUpon>
@@ -3443,12 +3360,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_farm_Schedule.resx">
       <DependentUpon>Form_farm_Schedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Add_act.resx">
-      <DependentUpon>Form_Add_act.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\Form_Edit_act.resx">
-      <DependentUpon>Form_Edit_act.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\Form_log.resx">
       <DependentUpon>Form_log.cs</DependentUpon>
@@ -5254,6 +5165,28 @@
     </None>
     <None Include="Report_preflightschedule_dataset.xss">
       <DependentUpon>Report_preflightschedule_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="role_selected.xsc">
+      <DependentUpon>role_selected.xsd</DependentUpon>
+    </None>
+    <None Include="role_selected.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>role_selected.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="role_selected.xss">
+      <DependentUpon>role_selected.xsd</DependentUpon>
+    </None>
+    <None Include="role_unselected.xsc">
+      <DependentUpon>role_unselected.xsd</DependentUpon>
+    </None>
+    <None Include="role_unselected.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>role_unselected.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="role_unselected.xss">
+      <DependentUpon>role_unselected.xsd</DependentUpon>
     </None>
     <None Include="Schedule.xsc">
       <DependentUpon>Schedule.xsd</DependentUpon>

@@ -1834,21 +1834,9 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GC
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.FlightData.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.FlightPlanner.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_after_flight.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Edit_drone_pre.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Add_drone_pre.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Edit_drone_part.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Add_drone_part.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Edit_drone.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Add_drone.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Edit_farm_act.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Edit_farm.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Add_farm_act.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Add_farm.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_farm_act2.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_farm_act.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_farm_Schedule.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Add_act.resources
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_Edit_act.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_log.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_log_history.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_main_Schedule.resources
@@ -2892,3 +2880,4 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\ru\Microsoft.SqlS
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Release\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.PrintableReport.Report_preflightSchedule.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\obj\Release\MissionPlanner.GCSViews.Form_farm_role.resources

@@ -67,7 +67,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nIWx1hBcdsHRG0+AxltqAGOBufzFqFfGINa4NCyaEZY=</dsig:DigestValue>
+        <dsig:DigestValue>pb8gR21CzBo/ka4JXWcCGl+qrY+Hy0gfZ4g0VmY41UU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -516,14 +516,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DroneFlightPlanner.exe" size="13687808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DroneFlightPlanner.exe" size="12950016">
       <assemblyIdentity name="DroneFlightPlanner" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XjZPutqm7Qyf1TZ2tu1IL/+7Jcvg3ufpVW56JcaYjcU=</dsig:DigestValue>
+        <dsig:DigestValue>2NYEib4FrymCPwoqf3W82o8hJqh5U0Mo9pLWt6HIKZQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -595,7 +595,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>V6rKDw1/3z6U2P4UUtXUQUhJojDTxLzyYackam4nuJM=</dsig:DigestValue>
+        <dsig:DigestValue>cweepQttwhxBzLBOuukFO5HKvPGXFtFsq1I5hWDONlI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -667,7 +667,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LwPUlImI7gfcSL0j2Sby+hbdiE5w1E8tEbi7bX7pmSg=</dsig:DigestValue>
+        <dsig:DigestValue>ICU4UKGIYMdmH8jp0TtHToVdTfMID7ORK2pCRsQpPXM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

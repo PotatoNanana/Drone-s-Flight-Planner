@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Threading;
-using Community.CsharpSqlite.SQLiteClient;
 
 namespace MissionPlanner
 {
     public partial class Validation : Form
     {
+        public static string validateUsername;
+
         public static bool WindowsStoreApp { get { return Application.ExecutablePath.Contains("WindowsApps"); } }
 
         SqlConnection con = Tutorial.SqlConn.DBUtils.GetDBConnection();
@@ -101,9 +97,11 @@ namespace MissionPlanner
 
             SqlCommand cmd = new SqlCommand("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", con);
             string role;
+            
             con.Open();
             if(scmd.ExecuteScalar().ToString() == "1")
             {
+                Validation.validateUsername = txtUsername.Text;
                 SqlDataReader dtr = cmd.ExecuteReader();
                 //SqlDataAdapter sda = new SqlDataAdapter("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'   ", con);
                 //DataTable dt = new DataTable();
