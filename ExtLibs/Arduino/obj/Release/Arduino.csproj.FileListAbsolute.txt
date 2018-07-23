@@ -15,3 +15,5 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Arduino\obj\Release\Arduino.csproj.CoreCompileInputs.cache
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Arduino\obj\Release\Arduino.dll
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLibs\Arduino\obj\Release\Arduino.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Arduino\obj\Release\Arduino.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Arduino\obj\Release\Arduino.pdb

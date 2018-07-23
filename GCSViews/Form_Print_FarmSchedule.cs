@@ -25,17 +25,17 @@ namespace MissionPlanner.GCSViews
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
             //Init crystal report
-            rptOrders1.SetDataSource(_list);
-            rptOrders1.SetParameterValue("pFarm_id", _farm.Farm_id);
-            rptOrders1.SetParameterValue("pFarmName", _farm.Farm_name);
-            rptOrders1.SetParameterValue("pFarm_host", _farm.Farm_host);
-            rptOrders1.SetParameterValue("pFarm_address", _farm.Farm_address);
-            rptOrders1.SetParameterValue("pFarm_road", _farm.Farm_road);
-            rptOrders1.SetParameterValue("pFarm_subDistrict", _farm.Farm_subDistrict);
-            rptOrders1.SetParameterValue("pFarm_district", _farm.Farm_district);
-            rptOrders1.SetParameterValue("pFarm_province", _farm.Farm_province);
-            rptOrders1.SetParameterValue("pFarm_postal", _farm.Farm_postal);            
-            crystalReportViewer.ReportSource = ;
+            rptOrders2.SetDataSource(_list);
+            rptOrders2.SetParameterValue("pFarm_id", _farm.Farm_id);
+            rptOrders2.SetParameterValue("pFarmName", _farm.Farm_name);
+            rptOrders2.SetParameterValue("pFarm_host", _farm.Farm_host);
+            rptOrders2.SetParameterValue("pFarm_address", _farm.Farm_address);
+            rptOrders2.SetParameterValue("pFarm_road", _farm.Farm_road);
+            rptOrders2.SetParameterValue("pFarm_subDistrict", _farm.Farm_subDistrict);
+            rptOrders2.SetParameterValue("pFarm_district", _farm.Farm_district);
+            rptOrders2.SetParameterValue("pFarm_province", _farm.Farm_province);
+            rptOrders2.SetParameterValue("pFarm_postal", _farm.Farm_postal);            
+            crystalReportViewer.ReportSource = rptOrders2;
             crystalReportViewer.Refresh();
         }
     }

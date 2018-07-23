@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MAVLink</id>
+    <version>1.0.0</version>
+    <authors>Michael Oborne</authors>
+    <owners>Michael Oborne</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MAVLink for Ardupilot</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2">
+        <dependency id="CrystalDecisions.CrystalReports.Engine" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="CrystalReports.Windows.Forms" version="13.0.3501" exclude="Build,Analyzers" />
+        <dependency id="Dapper" version="1.50.5" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Report.Viewer" version="11.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.ReportingServices.ReportViewerControl.Winforms" version="140.1000.523" exclude="Build,Analyzers" />
+        <dependency id="log4net" version="2.0.8" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Mavlink\bin\Release\net462\MAVLink.dll" target="lib\net462\MAVLink.dll" />
+  </files>
+</package>

@@ -1937,83 +1937,83 @@
         </member>
         <member name="T:GMap.NET.Resources.Strings">
             <summary>
-              一个强类型的资源类，用于查找本地化的字符串等。
+              A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.ResourceManager">
             <summary>
-              返回此类使用的缓存的 ResourceManager 实例。
+              Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.Culture">
             <summary>
-              使用此强类型资源类，为所有资源查找
-              重写当前线程的 CurrentUICulture 属性。
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.AMap">
             <summary>
-              查找类似 AMap 的本地化字符串。
+              Looks up a localized string similar to AMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.AMapSatellite">
             <summary>
-              查找类似 AMapSatellite 的本地化字符串。
+              Looks up a localized string similar to AMapSatellite.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.BingHybridMap">
             <summary>
-              查找类似 BingHybridMap 的本地化字符串。
+              Looks up a localized string similar to BingHybridMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.BingMap">
             <summary>
-              查找类似 BingMap 的本地化字符串。
+              Looks up a localized string similar to BingMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.BingSatelliteMap">
             <summary>
-              查找类似 BingSatelliteMap 的本地化字符串。
+              Looks up a localized string similar to BingSatelliteMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.GoogleChinaHybridMap">
             <summary>
-              查找类似 GoogleChinaHybridMap 的本地化字符串。
+              Looks up a localized string similar to GoogleChinaHybridMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.GoogleChinaMap">
             <summary>
-              查找类似 GoogleChinaMap 的本地化字符串。
+              Looks up a localized string similar to GoogleChinaMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.GoogleChinaSatelliteMap">
             <summary>
-              查找类似 GoogleChinaSatelliteMap 的本地化字符串。
+              Looks up a localized string similar to GoogleChinaSatelliteMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.GoogleChinaTerrainMap">
             <summary>
-              查找类似 GoogleChinaTerrainMap 的本地化字符串。
+              Looks up a localized string similar to GoogleChinaTerrainMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.GoogleHybridMap">
             <summary>
-              查找类似 GoogleHybridMap 的本地化字符串。
+              Looks up a localized string similar to GoogleHybridMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.GoogleMap">
             <summary>
-              查找类似 GoogleMap 的本地化字符串。
+              Looks up a localized string similar to GoogleMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.GoogleSatelliteMap">
             <summary>
-              查找类似 GoogleSatelliteMap 的本地化字符串。
+              Looks up a localized string similar to GoogleSatelliteMap.
             </summary>
         </member>
         <member name="P:GMap.NET.Resources.Strings.GoogleTerrainMap">
             <summary>
-              查找类似 GoogleTerrainMap 的本地化字符串。
+              Looks up a localized string similar to GoogleTerrainMap.
             </summary>
         </member>
         <member name="T:GMap.NET.GPoint">
@@ -3159,6 +3159,20 @@
             <param name="callback">The method to call when the connection has been established.</param>
             <param name="proxyEndPoint">The IPEndPoint of the SOCKS proxy server.</param>
             <returns>An IAsyncProxyResult that references the asynchronous connection.</returns>
+        </member>
+        <member name="T:SqlServerTypes.Utilities">
+            <summary>
+            Utility methods related to CLR Types for SQL Server 
+            </summary>
+        </member>
+        <member name="M:SqlServerTypes.Utilities.LoadNativeAssemblies(System.String)">
+            <summary>
+            Loads the required native assemblies for the current architecture (x86 or x64)
+            </summary>
+            <param name="rootApplicationPath">
+            Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
+            and AppDomain.CurrentDomain.BaseDirectory for desktop applications.
+            </param>
         </member>
     </members>
 </doc>

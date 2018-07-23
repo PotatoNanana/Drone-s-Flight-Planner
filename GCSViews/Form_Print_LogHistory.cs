@@ -28,7 +28,7 @@ namespace MissionPlanner.GCSViews
             rptOrders1.SetDataSource(_list);
             rptOrders1.SetParameterValue("pDroneId", _drone.Drone_id);
             rptOrders1.SetParameterValue("pDroneName", _drone.Drone_name);
-            crystalReportViewer.ReportSource = ;
+            crystalReportViewer.ReportSource = rptOrders1;
             crystalReportViewer.Refresh();
         }
     }

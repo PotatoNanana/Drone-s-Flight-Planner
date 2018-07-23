@@ -4628,24 +4628,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jurarut\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
       "projectName": "MissionPlanner.Utilities",
-      "projectPath": "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
-      "packagesPath": "C:\\Users\\Jurarut\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\Utilities\\obj\\",
+      "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Utilities\\MissionPlanner.Utilities.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\.nuget\\NuGet.Config",
-        "C:\\Users\\Jurarut\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\.nuget\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4658,14 +4658,14 @@
       "frameworks": {
         "net462": {
           "projectReferences": {
-            "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
-              "projectPath": "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\GeoUtility\\GeoUtility.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\GeoUtility\\GeoUtility.csproj"
             },
-            "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
-              "projectPath": "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\GMap.NET.Core\\GMap.NET.Core.csproj"
             },
-            "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\Mavlink\\MAVLink.csproj": {
-              "projectPath": "D:\\Users\\Jurarut\\Source\\Repos\\Drone-s-Flight-Planner1\\ExtLibs\\Mavlink\\MAVLink.csproj"
+            "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Mavlink\\MAVLink.csproj": {
+              "projectPath": "C:\\Users\\User\\Source\\Repos\\Drone-s-Flight-Planner4\\ExtLibs\\Mavlink\\MAVLink.csproj"
             }
           }
         }

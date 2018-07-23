@@ -2743,266 +2743,266 @@
         </member>
         <member name="T:GeoUtility.Properties.Resources">
             <summary>
-              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+              A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ResourceManager">
             <summary>
-              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+              Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.Culture">
             <summary>
-              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_CONVERTFROM">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Eine Typ-Konvertierung zwischen {0} und {1} ist nicht erlaubt. ähnelt.
+              Looks up a localized string similar to Eine Typ-Konvertierung zwischen {0} und {1} ist nicht erlaubt..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_GAUSS_EAST">
              <summary>
-               Sucht eine lokalisierte Zeichenfolge, die Rechtswert außerhalb des für Deutschland definierten Gauss-Krüger-Systems: 
-            Geogr. Länge: 5 bis 16 E. ähnelt.
+               Looks up a localized string similar to Rechtswert außerhalb des für Deutschland definierten Gauss-Krüger-Systems: 
+            Geogr. Länge: 5 bis 16 E..
              </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_GAUSS_NORTH">
              <summary>
-               Sucht eine lokalisierte Zeichenfolge, die Hochwert außerhalb des für Deutschland definierten Gauss-Krüger-Systems: 
-            Geogr. Breite: 46 bis 55 N. ähnelt.
+               Looks up a localized string similar to Hochwert außerhalb des für Deutschland definierten Gauss-Krüger-Systems: 
+            Geogr. Breite: 46 bis 55 N..
              </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_GEO_LATITUDE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Breitengrad ungültig. Definierter Bereich: -80 (Süd) bis +84 (Nord) ähnelt.
+              Looks up a localized string similar to Breitengrad ungültig. Definierter Bereich: -80 (südl.) bis +84 (nördl.).
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_GEO_LONGITUDE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Längengrad ungültig. Definierter Bereich: -180 (westl.) bis +180 (östl.) ähnelt.
+              Looks up a localized string similar to Längengrad ungültig. Definierter Bereich: -180 (westl.) bis +180 (östl.).
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_GEO2UTM">
              <summary>
-               Sucht eine lokalisierte Zeichenfolge, die Werte außerhalb des definierten Bereichs im WGS84 Datum: 
-            Länge: -180 bis +180 E; Breite: -80 bis +84 N. ähnelt.
+               Looks up a localized string similar to Werte außerhalb des definierten Bereichs im WGS84 Datum: 
+            Länge: -180 bis +180 E; Breite: -80 bis +84 N..
              </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_GK_OUT_OF_RANGE">
              <summary>
-               Sucht eine lokalisierte Zeichenfolge, die Werte außerhalb des für Deutschland definierten Gauss-Krüger-Systems: 
-            Länge: 5 bis 16 E; Breite: 46 bis 55 N. ähnelt.
+               Looks up a localized string similar to Werte außerhalb des für Deutschland definierten Gauss-Krüger-Systems: 
+            Länge: 5 bis 16 E; Breite: 46 bis 55 N..
              </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_MAPDIMENSION">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Ungültiger interner Schlüssel für das Satellitenbild. ähnelt.
+              Looks up a localized string similar to Ungültiger interner Schlüssel für das Satellitenbild..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_MGRS">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Format des MGRS-Koordinatenstrings konnte nicht erkannt werden oder außerhalb des gültigen Bereichs. ähnelt.
+              Looks up a localized string similar to Format des MGRS-Koordinatenstrings konnte nicht erkannt werden oder außerhalb des gültigen Bereichs..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_MGRS_EAST">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die East-Wert ungültig.  ähnelt.
+              Looks up a localized string similar to East-Wert ungültig. .
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_MGRS_GRID">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Grid-Wert ungültig. Er besteht aus 2 Buchstaben. ähnelt.
+              Looks up a localized string similar to Grid-Wert ungültig. Er besteht aus 2 Buchstaben..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_MGRS_NORTH">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die North-Wert ungültig. ähnelt.
+              Looks up a localized string similar to North-Wert ungültig..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_TILE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Ungültige Werte in dem von MapServiceTileBase abgeleiteten Parameter. ähnelt.
+              Looks up a localized string similar to Ungültige Werte in dem von MapServiceTileBase abgeleiteten Parameter..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_UTM_BAND">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Band ungültig. Definierter Bereich: C bis X (ohne I und O). ähnelt.
+              Looks up a localized string similar to Band ungültig. Definierter Bereich: C bis X (ohne I und O)..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_UTM_EAST">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die East-Wert ungültig. Definierter Bereich: ca. 200000 bis 800000 ähnelt.
+              Looks up a localized string similar to East-Wert ungültig. Definierter Bereich: ca. 200000 bis 800000.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_UTM_NORTH">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Nord-Wert ungültig. Def.-Bereich: ca. 0 bis 9300000 (Nord), ca. 1100000 bis 10000000 (Süd) ähnelt.
+              Looks up a localized string similar to Nord-Wert ungültig. Def.-Bereich: ca. 0 bis 9300000 (Nord), ca. 1100000 bis 10000000 (Süd).
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_UTM_STRING">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Der UTM-String konnte nicht erkannt werden (Format unbekannt). ähnelt.
+              Looks up a localized string similar to Der UTM-String konnte nicht erkannt werden (Format unbekannt)..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_UTM_ZONE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die {0}{1} ist eine ungültige UTM-Zone. ähnelt.
+              Looks up a localized string similar to {0}{1} ist eine ungültige UTM-Zone..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_ERROR_UTM_ZONE2">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Zone ungültig. Definierter Bereich: 1 bis 60. ähnelt.
+              Looks up a localized string similar to Zone ungültig. Definierter Bereich: 1 bis 60..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_GAUSS_LONG_STRING">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Rechts: {0}; Hoch: {1} ähnelt.
+              Looks up a localized string similar to Rechts: {0}; Hoch: {1}.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_GAUSS_SHORT_STRING">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die R: {0}   H: {1} ähnelt.
+              Looks up a localized string similar to R: {0}   H: {1}.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_GEOGRAPHIC_STRING">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Länge: {0}; Breite: {1} ähnelt.
+              Looks up a localized string similar to Länge: {0}; Breite: {1}.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_MS_NO_IMAGE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Satellitenbild in dieser Zoomstufe nicht verfügar. ähnelt.
+              Looks up a localized string similar to Satellitenbild in dieser Zoomstufe nicht verfügar..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.DE_NO_ERROR_MESSAGE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Nähere Angaben zum Fehler sind nicht verfügbar. ähnelt.
+              Looks up a localized string similar to Nähere Angaben zum Fehler sind nicht verfügbar..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_CONVERTFROM">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Type conversion between {0} and {1} is not allowed. ähnelt.
+              Looks up a localized string similar to Type conversion between {0} and {1} is not allowed..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_GAUSS_EAST">
              <summary>
-               Sucht eine lokalisierte Zeichenfolge, die East value out of range for the german Gauss-Krueger-System: 
-            Longitude: 5 bis 16 E. ähnelt.
+               Looks up a localized string similar to East value out of range for the german Gauss-Krueger-System: 
+            Longitude: 5 bis 16 E..
              </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_GAUSS_NORTH">
              <summary>
-               Sucht eine lokalisierte Zeichenfolge, die North value out of range for the german Gauss-Krueger-System: 
-            Latitude: 46 to 55 N. ähnelt.
+               Looks up a localized string similar to North value out of range for the german Gauss-Krueger-System: 
+            Latitude: 46 to 55 N..
              </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_GEO_LATITUDE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Latitude invalid. Range: -80 (South) bis +84 (North) ähnelt.
+              Looks up a localized string similar to Latitude invalid. Range: -80 (South) to +84 (North).
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_GEO_LONGITUDE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Longitude invalid. Range: -180 (westl.) bis +180 (östl.) ähnelt.
+              Looks up a localized string similar to Longitude invalid. Range: -180 (West) to +180 (East).
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_GEO2UTM">
              <summary>
-               Sucht eine lokalisierte Zeichenfolge, die Values out of range for UTM: 
-            Longitude: -180 to +180 E; Latitude: -80 to +84 N. ähnelt.
+               Looks up a localized string similar to Values out of range for UTM: 
+            Longitude: -180 to +180 E; Latitude: -80 to +84 N..
              </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_GK_OUT_OF_RANGE">
              <summary>
-               Sucht eine lokalisierte Zeichenfolge, die Values out of range for the german Gauss-Krueger-System: 
-            Longitude: 5 bis 16 E; Latitude: 46 to 55 N. ähnelt.
+               Looks up a localized string similar to Values out of range for the german Gauss-Krueger-System: 
+            Longitude: 5 bis 16 E; Latitude: 46 to 55 N..
              </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_MAPDIMENSION">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Invalid internal key for the satellite picture. ähnelt.
+              Looks up a localized string similar to Invalid internal key for the satellite picture..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_MGRS">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Format of the MGRS string could not be parsed or out of range. ähnelt.
+              Looks up a localized string similar to Format of the MGRS string could not be parsed or out of range..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_MGRS_EAST">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die East value invalid. ähnelt.
+              Looks up a localized string similar to East value invalid..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_MGRS_GRID">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Grid value invalid. It needs 2 letters. ähnelt.
+              Looks up a localized string similar to Grid value invalid. It needs 2 letters..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_MGRS_NORTH">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die North value invalid. ähnelt.
+              Looks up a localized string similar to North value invalid..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_TILE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Your MapServiceTileBase derived object contains invalid values. ähnelt.
+              Looks up a localized string similar to Your MapServiceTileBase derived object contains invalid values..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_UTM_BAND">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Band invalid. Range: C to X (without I and O). ähnelt.
+              Looks up a localized string similar to Band invalid. Range: C to X (without I and O)..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_UTM_EAST">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die East value invalid. Range: approx. 200000 to 800000 ähnelt.
+              Looks up a localized string similar to East value invalid. Range: approx. 200000 to 800000.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_UTM_NORTH">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die North value invalid. Range: approx. 0 to 9300000 (North), approx. 1100000 to 10000000 (South) ähnelt.
+              Looks up a localized string similar to North value invalid. Range: approx. 0 to 9300000 (North), approx. 1100000 to 10000000 (South).
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_UTM_STRING">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die UTM string could not be parsed (format unknown). ähnelt.
+              Looks up a localized string similar to UTM string could not be parsed (format unknown)..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_UTM_ZONE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die {0}{1} is an invalid utm zone. ähnelt.
+              Looks up a localized string similar to {0}{1} is an invalid utm zone..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.ERROR_UTM_ZONE2">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Zone invalid. Range: 1 to 60. ähnelt.
+              Looks up a localized string similar to Zone invalid. Range: 1 to 60..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.GAUSS_LONG_STRING">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die East: {0}; North: {1} ähnelt.
+              Looks up a localized string similar to East: {0}; North: {1}.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.GAUSS_SHORT_STRING">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die E {0}   N {1} ähnelt.
+              Looks up a localized string similar to E {0}   N {1}.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.GEOGRAPHIC_STRING">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Longitude: {0}; Latitude: {1} ähnelt.
+              Looks up a localized string similar to Longitude: {0}; Latitude: {1}.
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.MS_NO_IMAGE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Satellite picture with this zoom level not available . ähnelt.
+              Looks up a localized string similar to Satellite picture with this zoom level not available ..
             </summary>
         </member>
         <member name="P:GeoUtility.Properties.Resources.NO_ERROR_MESSAGE">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die There are no error details available. ähnelt.
+              Looks up a localized string similar to There are no error details available..
             </summary>
         </member>
         <member name="T:GeoUtility.Conversion">
@@ -3045,6 +3045,20 @@
             <typeparam name="T">Typ des Zielsystems.</typeparam>
             <param name="source">Zu konvertierendes Objekt</param>
             <returns>Ein Objekt des Zieltyps T</returns>
+        </member>
+        <member name="T:SqlServerTypes.Utilities">
+            <summary>
+            Utility methods related to CLR Types for SQL Server 
+            </summary>
+        </member>
+        <member name="M:SqlServerTypes.Utilities.LoadNativeAssemblies(System.String)">
+            <summary>
+            Loads the required native assemblies for the current architecture (x86 or x64)
+            </summary>
+            <param name="rootApplicationPath">
+            Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
+            and AppDomain.CurrentDomain.BaseDirectory for desktop applications.
+            </param>
         </member>
     </members>
 </doc>
