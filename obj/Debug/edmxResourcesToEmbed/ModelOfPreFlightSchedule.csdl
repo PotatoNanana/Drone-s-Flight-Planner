@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="preFlightScheduleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="preFlightScheduleEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Report_preflightfchedule" ReturnType="Collection(preFlightScheduleModel.Report_preflightfchedule_Result)">
+      <Parameter Name="farmId" Mode="In" Type="String" />
+      <Parameter Name="dateFrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Report_preflightfchedule_Result">
+    <Property Type="String" Name="action_no" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="farm_id" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="drone_id" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="action_name" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="material_name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="action_capacity" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="action_cost" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="action_datetime" Nullable="true" />
+    <Property Type="String" Name="action_startTime" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="action_finishTime" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+</Schema>

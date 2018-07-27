@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="preFlightScheduleModelStoreContainer" CdmEntityContainer="EntitiesOfPreFlightSchedule">
+    <FunctionImportMapping FunctionImportName="Report_preflightfchedule" FunctionName="preFlightScheduleModel.Store.Report_preflightfchedule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="preFlightScheduleModel.Report_preflightfchedule_Result">
+          <ScalarProperty Name="action_no" ColumnName="action_no" />
+          <ScalarProperty Name="farm_id" ColumnName="farm_id" />
+          <ScalarProperty Name="drone_id" ColumnName="drone_id" />
+          <ScalarProperty Name="action_name" ColumnName="action_name" />
+          <ScalarProperty Name="material_name" ColumnName="material_name" />
+          <ScalarProperty Name="action_capacity" ColumnName="action_capacity" />
+          <ScalarProperty Name="action_cost" ColumnName="action_cost" />
+          <ScalarProperty Name="action_datetime" ColumnName="action_datetime" />
+          <ScalarProperty Name="action_startTime" ColumnName="action_startTime" />
+          <ScalarProperty Name="action_finishTime" ColumnName="action_finishTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

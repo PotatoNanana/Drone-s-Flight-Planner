@@ -24,3 +24,4 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ZedGraph\obj\Release\
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ZedGraph\obj\Release\ZedGraph.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ZedGraph\obj\Release\ZedGraph.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ZedGraph\obj\Release\ZedGraph.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\ZedGraph\obj\Release\ZedGraph.csprojAssemblyReference.cache

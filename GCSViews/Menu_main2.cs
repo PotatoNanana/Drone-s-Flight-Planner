@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MissionPlanner.Comms;
 using MissionPlanner.Controls;
-using MissionPlanner.Log;
-using MissionPlanner.Utilities;
 using System.Data.SqlClient;
 
 
@@ -25,7 +16,6 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
 
             MyView = new MainSwitcher(this);
-
         }
 
         Controls.MainSwitcher MyView;
@@ -47,62 +37,7 @@ namespace MissionPlanner.GCSViews
             //MyView.AddScreen(new MainSwitcher.Screen("Menu_farm", typeof(GCSViews.Menu_farm), true));
             CheckNoti();
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }        
-
+        
         private void Goto_farmProfile_Click(object sender, EventArgs e)
         {
             OnGotoFarmProfileClicked(e);
@@ -123,7 +58,8 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView 
             con.Open();
-            String query = "SELECT * FROM Farm";
+            String query = "SELECT Farm.farm_id,farm_name,farm_host,farm_pic,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal FROM Farm " +
+                "inner join farmRole on Farm.farm_id = farmRole.farm_id and farmRole.username = '"+ Validation.validateUsername + "'";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -135,7 +71,8 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView 
             con.Open();
-            String query = "SELECT * FROM FlightSchedule WHERE action_finish = 'n' ";
+            String query = "SELECT action_no,farmRole.farm_id,drone_id,action_name,material_name,action_capacity,action_cost,action_datetime,action_finish,action_startTime,action_finishTime,act_no,material_no FROM FlightSchedule " +
+                "inner join farmRole on FlightSchedule.farm_id = farmRole.farm_id and farmRole.username = '"+ Validation.validateUsername + "' and FlightSchedule.action_finish = 'n' ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -162,23 +99,23 @@ namespace MissionPlanner.GCSViews
             try
             {
                 String queryShow = @" SELECT *  FROM [DeviceList] a
-  where  
-  (
-  (
-  (
-  (a.device_remindDate = DATEADD(day,ISNULL( a.device_alarm,0),CONVERT (date, CURRENT_TIMESTAMP))
-  and
-   a.device_remindDate = DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))) 
-   )
-   or 
-   a.device_remindDate <= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP)))
-   )
-   and
-   (
-   a.device_expDate >= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))
-   and
-   a.device_startDate <= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))
-   ) ";
+                  where  
+                  (
+                  (
+                  (
+                  (a.device_remindDate = DATEADD(day,ISNULL( a.device_alarm,0),CONVERT (date, CURRENT_TIMESTAMP))
+                  and
+                   a.device_remindDate = DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))) 
+                   )
+                   or 
+                   a.device_remindDate <= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP)))
+                   )
+                   and
+                   (
+                   a.device_expDate >= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))
+                   and
+                   a.device_startDate <= DATEADD(day,0,CONVERT (date, CURRENT_TIMESTAMP))
+                   ) ";
                 SqlDataAdapter SDAShow = new SqlDataAdapter(queryShow, con);
                 DataTable dt = new DataTable();
                 SDAShow.Fill(dt);

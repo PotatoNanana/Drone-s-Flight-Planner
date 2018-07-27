@@ -125,7 +125,6 @@
             this.panel_Main_farm.Name = "panel_Main_farm";
             this.panel_Main_farm.Size = new System.Drawing.Size(1228, 580);
             this.panel_Main_farm.TabIndex = 8;
-            this.panel_Main_farm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFarm_Paint);
             // 
             // button_serch
             // 
@@ -318,7 +317,7 @@
             this.button2.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(1023, 451);
+            this.button2.Location = new System.Drawing.Point(1000, 464);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 40);
             this.button2.TabIndex = 13;
@@ -335,7 +334,7 @@
             this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_delete.Location = new System.Drawing.Point(887, 451);
+            this.button_delete.Location = new System.Drawing.Point(864, 464);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(130, 40);
             this.button_delete.TabIndex = 12;
@@ -352,7 +351,7 @@
             this.button_pastAct.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_pastAct.ForeColor = System.Drawing.Color.White;
             this.button_pastAct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_pastAct.Location = new System.Drawing.Point(510, 451);
+            this.button_pastAct.Location = new System.Drawing.Point(537, 444);
             this.button_pastAct.Name = "button_pastAct";
             this.button_pastAct.Size = new System.Drawing.Size(130, 40);
             this.button_pastAct.TabIndex = 11;
@@ -369,7 +368,7 @@
             this.button_futureAct.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_futureAct.ForeColor = System.Drawing.Color.White;
             this.button_futureAct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_futureAct.Location = new System.Drawing.Point(510, 497);
+            this.button_futureAct.Location = new System.Drawing.Point(537, 490);
             this.button_futureAct.Name = "button_futureAct";
             this.button_futureAct.Size = new System.Drawing.Size(130, 40);
             this.button_futureAct.TabIndex = 10;
@@ -397,7 +396,6 @@
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Farm.Size = new System.Drawing.Size(354, 472);
             this.DG_Farm.TabIndex = 9;
-            this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             this.DG_Farm.Click += new System.EventHandler(this.DG_Farm_Click);
             // 
             // farmidDataGridViewTextBoxColumn
@@ -439,7 +437,7 @@
             this.BUT_add_farm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_add_farm.ForeColor = System.Drawing.Color.White;
             this.BUT_add_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_farm.Location = new System.Drawing.Point(750, 451);
+            this.BUT_add_farm.Location = new System.Drawing.Point(727, 464);
             this.BUT_add_farm.Name = "BUT_add_farm";
             this.BUT_add_farm.Size = new System.Drawing.Size(130, 40);
             this.BUT_add_farm.TabIndex = 6;
@@ -485,7 +483,6 @@
             this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Main_but_farm.UseVisualStyleBackColor = false;
-            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
             // farmBindingSource
             // 

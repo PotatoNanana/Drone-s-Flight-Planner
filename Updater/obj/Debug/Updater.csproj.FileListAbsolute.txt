@@ -24,3 +24,12 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Updater\obj\Debug\Updater.exe
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Updater\obj\Debug\Updater.pdb
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\Updater\obj\Debug\Updater.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\Updater.exe.config
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\Updater.exe
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\Updater.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\Updater\obj\Debug\Updater.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\Updater\obj\Debug\Updater.Properties.Resources.resources
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\Updater\obj\Debug\Updater.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\Updater\obj\Debug\Updater.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\Updater\obj\Debug\Updater.exe
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\Updater\obj\Debug\Updater.pdb

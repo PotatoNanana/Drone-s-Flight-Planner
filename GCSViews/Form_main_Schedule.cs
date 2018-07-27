@@ -38,8 +38,8 @@ namespace MissionPlanner.GCSViews
 
         private void But_add_act_Click(object sender, EventArgs e)
         {
-            Form_Add_act form_Add_Act = new Form_Add_act();
-            form_Add_Act.ShowDialog();
+            //Form_Add_act form_Add_Act = new Form_Add_act();
+            //form_Add_Act.ShowDialog();
         }
 
         private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
@@ -80,8 +80,8 @@ namespace MissionPlanner.GCSViews
 
         private void button_edit_Click(object sender, EventArgs e)
         {
-            Form_Edit_act form_Edit_Act = new Form_Edit_act();
-            form_Edit_Act.ShowDialog();
+            //Form_Edit_act form_Edit_Act = new Form_Edit_act();
+            //form_Edit_Act.ShowDialog();
         }
 
         private void textBox_actID_TextChanged(object sender, EventArgs e)

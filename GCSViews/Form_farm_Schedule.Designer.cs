@@ -416,7 +416,6 @@
             this.DG_Farm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Farm.Size = new System.Drawing.Size(615, 257);
             this.DG_Farm.TabIndex = 9;
-            this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             this.DG_Farm.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_RowEnter);
             this.DG_Farm.Click += new System.EventHandler(this.DG_Farm_Click);
             // 
@@ -553,7 +552,6 @@
             this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Main_but_farm.UseCompatibleTextRendering = true;
             this.Main_but_farm.UseVisualStyleBackColor = true;
-            this.Main_but_farm.Click += new System.EventHandler(this.Main_but_farm_Click);
             // 
             // flightScheduleBindingSource
             // 

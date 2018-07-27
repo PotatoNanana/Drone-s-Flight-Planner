@@ -32,3 +32,9 @@ C:\Users\57050241\Source\Repos\Drone-s-Flight-Planner\ExtLibs\AviFile\obj\Debug\
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.csprojResolveAssemblyReference.cache
 >>>>>>> origin/master
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\AviFile\obj\Debug\AviFile.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\bin\Debug\AviFile.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\bin\Debug\AviFile.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\obj\Debug\AviFile.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\obj\Debug\AviFile.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\obj\Debug\AviFile.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\obj\Debug\AviFile.pdb

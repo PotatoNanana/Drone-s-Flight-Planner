@@ -29,3 +29,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHome.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHome.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\TrackerHome.dll.config
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\TrackerHome.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\TrackerHome.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csproj.CopyComplete

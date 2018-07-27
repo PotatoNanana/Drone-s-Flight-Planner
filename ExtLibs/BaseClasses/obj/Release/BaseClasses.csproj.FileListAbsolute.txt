@@ -12,3 +12,4 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\bin\Relea
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\obj\Release\BaseClasses.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\obj\Release\BaseClassesNET.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\obj\Release\BaseClassesNET.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\obj\Release\BaseClasses.csprojAssemblyReference.cache
