@@ -103,9 +103,6 @@ namespace MissionPlanner
             {
                 Validation.validateUsername = txtUsername.Text;
                 SqlDataReader dtr = cmd.ExecuteReader();
-                //SqlDataAdapter sda = new SqlDataAdapter("Select role from UserLogin Where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'   ", con);
-                //DataTable dt = new DataTable();
-                //sda.Fill(dt);
 
                 while (dtr.Read())
                 {

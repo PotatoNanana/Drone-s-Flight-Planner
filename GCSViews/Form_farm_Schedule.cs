@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace MissionPlanner.GCSViews
 {
@@ -73,7 +75,43 @@ namespace MissionPlanner.GCSViews
         {
             this.Close();
         }
-        
+
+        public class Drone
+        {
+            public string id;
+            public string name;
+        }
+
+        public class Activity
+        {
+            public string no;
+            public string name;
+        }
+
+        public class Material
+        {
+            public string no;
+            public string name;
+        }
+
+        public class FlightDateTime
+        {
+            public string date;
+            public string startTime;
+            public string endTime;
+        }
+
+        public class FlightScheduleJson
+        {
+            public string farmId;
+            public Drone drone { get; set; }
+            public Activity activity { get; set; }
+            public Material material;
+            public string quatity;
+            public string cost;
+            public FlightDateTime flightDateTime;
+        }
+
         private void But_add_act_Click(object sender, EventArgs e)
         {          
             if (cboDrone.SelectedValue != "")
@@ -85,11 +123,20 @@ namespace MissionPlanner.GCSViews
                 con.Close();
             }
 
-            if (id_farm == "")
+            if(textBox_cap.Text == "")
             {
-                MessageBox.Show("กรุณากรอกข้อมูลรหัสฟาร์มให้ครบถ้วน !!");
+                textBox_cap.Text = "0";
             }
-                
+
+            if(textBox_cost.Text == "")
+            {
+                textBox_cost.Text = "0";
+            }
+
+            if (textBox_startTime.Text == "" || textBox_finishTime.Text == "")
+            {
+                MessageBox.Show("กรุณากรอกข้อมูลให้ครบถ้วน !!");
+            }
             else
             {
                 if (con.State != ConnectionState.Open)
@@ -113,47 +160,43 @@ namespace MissionPlanner.GCSViews
                 {
                     Directory.CreateDirectory(filepath);
                 }
-                /// added export worksheet to excel file
-                string fileTest = "C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
-                MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
-                Excel.Application oApp;
-                Excel.Worksheet oSheet;
-                Excel.Workbook oBook;
-                
-                oApp = new Excel.Application();
-                oBook = oApp.Workbooks.Add();
-                oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
-                Excel.Range xlRange = oSheet.UsedRange;
-                xlRange = (Excel.Range)oSheet.Cells[2, 9];
-                xlRange.EntireColumn.NumberFormat = "yyyy-MM-dd";
 
-                oSheet.Cells[1, 1] = "รหัสฟาร์ม";
-                oSheet.Cells[1, 2] = "รหัสโดรน";
-                oSheet.Cells[1, 3] = "ชือโดรน";
-                oSheet.Cells[1, 4] = "รหัสกิจกรรม";
-                oSheet.Cells[1, 5] = "ชื่อกิจกรรม";
-                oSheet.Cells[1, 6] = "วัตถุดิบ";
-                oSheet.Cells[1, 7] = "ปริมาณสาร";
-                oSheet.Cells[1, 8] = "ค่าใช้จ่าย";
-                oSheet.Cells[1, 9] = "วันที่";
-                oSheet.Cells[1, 10] = "เวลาเริ่ม";
-                oSheet.Cells[1, 11] = "เวลาเสร็จ";
-
-                oSheet.Cells[2, 1] = id_farm;
-                oSheet.Cells[2, 2] = cboDrone.SelectedValue;
-                oSheet.Cells[2, 3] = cboDrone.Text;
-                oSheet.Cells[2, 4] = cboActivity.SelectedValue;
-                oSheet.Cells[2, 5] = cboActivity.Text;
-                oSheet.Cells[2, 6] = cboMaterial.Text;
-                oSheet.Cells[2, 7] = textBox_cap.Text;
-                oSheet.Cells[2, 8] = textBox_cost.Text;
-                oSheet.Cells[2, 9] = datetime.ToString("yyyy-MM-dd");
-                oSheet.Cells[2, 10] = textBox_startTime.Text;
-                oSheet.Cells[2, 11] = textBox_finishTime.Text;
-
-                oBook.SaveAs(fileTest);
-                oBook.Close();
-                oApp.Quit();
+                MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".json แล้ว");
+                FlightScheduleJson flightObj = new FlightScheduleJson
+                {
+                    farmId = id_farm,
+                    drone = new Drone
+                    {
+                        id = cboDrone.SelectedValue.ToString(),
+                        name = cboDrone.Text
+                    },
+                    activity = new Activity
+                    {
+                        no = cboActivity.SelectedValue.ToString(),
+                        name = cboActivity.Text
+                    },
+                    material = new Material
+                    {
+                        no = cboMaterial.SelectedValue.ToString(),
+                        name = cboMaterial.Text
+                    },
+                    quatity = textBox_cap.Text,
+                    cost = textBox_cost.Text,
+                    flightDateTime = new FlightDateTime
+                    {
+                        date = datetime.ToString("yyyy-MM-dd"),
+                        startTime = textBox_startTime.Text,
+                        endTime = textBox_finishTime.Text
+                    }
+                };
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.NullValueHandling = NullValueHandling.Ignore;
+                serializer.Formatting = Formatting.Indented;
+                using (StreamWriter sw = new StreamWriter(@"C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".json"))
+                using (JsonWriter writer = new JsonTextWriter(sw))
+                {
+                    serializer.Serialize(writer, flightObj);
+                }
             }
         }
         
@@ -227,49 +270,49 @@ namespace MissionPlanner.GCSViews
                 Menu_farm menu_Farm = new Menu_farm();
 
                 ///added filepath
-                string filepath = "C:\\Temp\\DroneFlightPlanner";
-                if (Directory.Exists(filepath)) { }
-                else
-                {
-                    Directory.CreateDirectory(filepath);
-                }
-                /// added export worksheet to excel file
-                string fileTest = "C:\\Temp\\DroneFlightPlanner\\update_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
-                MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
-                Excel.Application oApp;
-                Excel.Worksheet oSheet;
-                Excel.Workbook oBook;
+                //string filepath = "C:\\Temp\\DroneFlightPlanner";
+                //if (Directory.Exists(filepath)) { }
+                //else
+                //{
+                //    Directory.CreateDirectory(filepath);
+                //}
+                ///// added export worksheet to excel file
+                //string fileTest = "C:\\Temp\\DroneFlightPlanner\\update_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
+                //MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
+                //Excel.Application oApp;
+                //Excel.Worksheet oSheet;
+                //Excel.Workbook oBook;
 
-                oApp = new Excel.Application();
-                oBook = oApp.Workbooks.Add();
-                oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
-                oSheet.Cells[1, 1] = "รหัสฟาร์ม";
-                oSheet.Cells[1, 2] = "รหัสโดรน";
-                oSheet.Cells[1, 3] = "ชือโดรน";
-                oSheet.Cells[1, 4] = "รหัสกิจกรรม";
-                oSheet.Cells[1, 5] = "ชื่อกิจกรรม";
-                oSheet.Cells[1, 6] = "วัตถุดิบ";
-                oSheet.Cells[1, 7] = "ปริมาณสาร";
-                oSheet.Cells[1, 8] = "ค่าใช้จ่าย";
-                oSheet.Cells[1, 9] = "วันที่";
-                oSheet.Cells[1, 10] = "เวลาเริ่ม";
-                oSheet.Cells[1, 11] = "เวลาเสร็จ";
+                //oApp = new Excel.Application();
+                //oBook = oApp.Workbooks.Add();
+                //oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
+                //oSheet.Cells[1, 1] = "รหัสฟาร์ม";
+                //oSheet.Cells[1, 2] = "รหัสโดรน";
+                //oSheet.Cells[1, 3] = "ชือโดรน";
+                //oSheet.Cells[1, 4] = "รหัสกิจกรรม";
+                //oSheet.Cells[1, 5] = "ชื่อกิจกรรม";
+                //oSheet.Cells[1, 6] = "วัตถุดิบ";
+                //oSheet.Cells[1, 7] = "ปริมาณสาร";
+                //oSheet.Cells[1, 8] = "ค่าใช้จ่าย";
+                //oSheet.Cells[1, 9] = "วันที่";
+                //oSheet.Cells[1, 10] = "เวลาเริ่ม";
+                //oSheet.Cells[1, 11] = "เวลาเสร็จ";
 
-                oSheet.Cells[2, 1] = id_farm;
-                oSheet.Cells[2, 2] = cboDrone.SelectedValue;
-                oSheet.Cells[2, 3] = cboDrone.Text;
-                oSheet.Cells[2, 4] = cboActivity.SelectedValue;
-                oSheet.Cells[2, 5] = cboActivity.Text;
-                oSheet.Cells[2, 6] = cboMaterial.Text;
-                oSheet.Cells[2, 7] = textBox_cap.Text;
-                oSheet.Cells[2, 8] = textBox_cost.Text;
-                oSheet.Cells[2, 9] = monthCalendar1.SelectionEnd.ToShortDateString();
-                oSheet.Cells[2, 10] = textBox_startTime.Text;
-                oSheet.Cells[2, 11] = textBox_finishTime.Text;
+                //oSheet.Cells[2, 1] = id_farm;
+                //oSheet.Cells[2, 2] = cboDrone.SelectedValue;
+                //oSheet.Cells[2, 3] = cboDrone.Text;
+                //oSheet.Cells[2, 4] = cboActivity.SelectedValue;
+                //oSheet.Cells[2, 5] = cboActivity.Text;
+                //oSheet.Cells[2, 6] = cboMaterial.Text;
+                //oSheet.Cells[2, 7] = textBox_cap.Text;
+                //oSheet.Cells[2, 8] = textBox_cost.Text;
+                //oSheet.Cells[2, 9] = monthCalendar1.SelectionEnd.ToShortDateString();
+                //oSheet.Cells[2, 10] = textBox_startTime.Text;
+                //oSheet.Cells[2, 11] = textBox_finishTime.Text;
 
-                oBook.SaveAs(fileTest);
-                oBook.Close();
-                oApp.Quit();
+                //oBook.SaveAs(fileTest);
+                //oBook.Close();
+                //oApp.Quit();
             }
         }
 
@@ -367,7 +410,7 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
-                textBox_cap.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+                textBox_cap.Text = DG_Farm.SelectedRows[0].Cells["action_capacity"].Value.ToString();
                 textBox_cost.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
 
                 //added by Napat 10/06/2018

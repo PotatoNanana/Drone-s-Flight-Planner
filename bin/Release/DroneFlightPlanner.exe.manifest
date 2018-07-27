@@ -67,7 +67,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pb8gR21CzBo/ka4JXWcCGl+qrY+Hy0gfZ4g0VmY41UU=</dsig:DigestValue>
+        <dsig:DigestValue>0v+KXrirztUkhiZH3l6BM6yMESlYvm1WPApqEoueGM4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -516,14 +516,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DroneFlightPlanner.exe" size="12950016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DroneFlightPlanner.exe" size="12939776">
       <assemblyIdentity name="DroneFlightPlanner" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2NYEib4FrymCPwoqf3W82o8hJqh5U0Mo9pLWt6HIKZQ=</dsig:DigestValue>
+        <dsig:DigestValue>vHQaCg6jcShTa4fyAg6z+KfyjomUuLbjF2Vxs9W1z5w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -595,7 +595,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cweepQttwhxBzLBOuukFO5HKvPGXFtFsq1I5hWDONlI=</dsig:DigestValue>
+        <dsig:DigestValue>uH1tOJrNdTmJftqRnm09ZhQKauQCFd5uotIfnVnOowM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -655,7 +655,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wRbdqVhlfVZDQgxd/2QTddBhPLItAr/j4zyy+DtWlLc=</dsig:DigestValue>
+        <dsig:DigestValue>0OLp9z58Wta3nhSbKeorU6gWwytWR2jz1P2tLziau5s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -667,7 +667,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ICU4UKGIYMdmH8jp0TtHToVdTfMID7ORK2pCRsQpPXM=</dsig:DigestValue>
+        <dsig:DigestValue>pBPwxgvhd95djJ8jU13bG6cRxrJdnCDyo7qMLVgkImA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

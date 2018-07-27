@@ -45,7 +45,7 @@ using MissionPlanner.Warnings;
 using MissionPlanner.Comms;
 using System.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
-
+using Newtonsoft.Json;
 
 namespace MissionPlanner.GCSViews
 {
@@ -7348,138 +7348,184 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             grid.but_Click(sender, e);
         }
         
+        public class Drone
+        {
+            public string id;
+            public string name;
+        }
+
+        public class Farm
+        {
+            public string id;
+            public string name;
+            public string host;
+            public string address;
+            public string street;
+            public string sub_district;
+            public string district;
+            public string province;
+            public string postal;
+        }
+        public class Action
+        {
+            public string no;
+            public string name;
+        }
+
+        public class FlightHistoryJson
+        {
+            public string TransactionID;
+            public Farm farm;
+            public Drone drone;
+            public Action action;
+            public string material;
+            public string quantity;
+            public string cost;
+            public string distance;
+            public string area;
+        }
+
         private void menuTakeoff_Click(object sender, EventArgs e)
         {
-            if (textBox_actID.Text != null && textBox_droneID.Text != null && textBox_farmID.Text != null)
+            Boolean exist = false;
+            if (textBox_actID.Text != "" && textBox_droneID.Text != "" && textBox_farmID.Text != "")
             {
-                //update data to flightschedule
-                String query = "UPDATE flightschedule SET action_finish ='y' WHERE action_no ='" + textBox_actID.Text + "'";
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                SqlCommand cmd = new SqlCommand(query, con);
-                int x = cmd.ExecuteNonQuery();
-                con.Close();
                 //read data from database to collect into transaction table
                 if (con.State != ConnectionState.Open)
                 { con.Open(); }
-                SqlCommand sqlCmdFarm = new SqlCommand("select * from Farm where farm_id='" + textBox_farmID.Text + "'", con);
-                SqlDataReader readerFarm = sqlCmdFarm.ExecuteReader();
-                readerFarm.Read();
-                if (readerFarm.HasRows)
+                SqlCommand CheckingDrone = new SqlCommand("SELECT maintain_id, maintain_activity, Maintainance.device_id FROM Maintainance" +
+                    " INNER JOIN DeviceList ON Maintainance.device_id = DeviceList.device_id" +
+                    " INNER JOIN Drone ON DeviceList.drone_id = Drone.drone_id and Drone.drone_id = '" + textBox_droneID.Text + "'" +
+                    " where GETDATE() BETWEEN DATEADD(DAY,-maintain_lenght,maintain_date) AND maintain_date", con);
+                SqlDataReader readerCheckingDrone = CheckingDrone.ExecuteReader();
+                readerCheckingDrone.Read();
+                
+                if (readerCheckingDrone.HasRows)
                 {
-                    farm_name = readerFarm["farm_name"].ToString();
-                    farm_host = readerFarm["farm_host"].ToString();
-                    farm_address = readerFarm["farm_address"].ToString();
-                    farm_road = readerFarm["farm_road"].ToString();
-                    farm_subDistrict = readerFarm["farm_subDistrict"].ToString();
-                    farm_district = readerFarm["farm_district"].ToString();
-                    farm_province = readerFarm["farm_province"].ToString();
-                    farm_postal = readerFarm["farm_postal"].ToString();
+                    exist = true;
+                    MessageBox.Show("โดรนของคุณอยู่ในช่วงการบำรุงรักษาอุปกรณ์");
                 }
-                readerFarm.Close();
+                readerCheckingDrone.Close();
                 con.Close();
-
-                //drone data
-                con.Open();
-                SqlCommand sqlCmdDrone = new SqlCommand("select drone_name from drone where drone_id='" + textBox_droneID.Text + "'", con);
-                SqlDataReader readerDrone = sqlCmdDrone.ExecuteReader();
-                readerDrone.Read();
-                if (readerDrone.HasRows)
+                
+                if(exist != true)
                 {
-                    drone_name = readerDrone["drone_name"].ToString();
+                    //update data to flightschedule
+                    String query = "UPDATE flightschedule SET action_finish ='y' WHERE action_no ='" + textBox_actID.Text + "'";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    //read data from database to collect into transaction table
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    SqlCommand sqlCmdFarm = new SqlCommand("select * from Farm where farm_id='" + textBox_farmID.Text + "'", con);
+                    SqlDataReader readerFarm = sqlCmdFarm.ExecuteReader();
+                    readerFarm.Read();
+                    if (readerFarm.HasRows)
+                    {
+                        farm_name = readerFarm["farm_name"].ToString();
+                        farm_host = readerFarm["farm_host"].ToString();
+                        farm_address = readerFarm["farm_address"].ToString();
+                        farm_road = readerFarm["farm_road"].ToString();
+                        farm_subDistrict = readerFarm["farm_subDistrict"].ToString();
+                        farm_district = readerFarm["farm_district"].ToString();
+                        farm_province = readerFarm["farm_province"].ToString();
+                        farm_postal = readerFarm["farm_postal"].ToString();
+                    }
+                    readerFarm.Close();
+                    con.Close();
+
+                    //drone data
+                    con.Open();
+                    SqlCommand sqlCmdDrone = new SqlCommand("select drone_name from drone where drone_id='" + textBox_droneID.Text + "'", con);
+                    SqlDataReader readerDrone = sqlCmdDrone.ExecuteReader();
+                    readerDrone.Read();
+                    if (readerDrone.HasRows)
+                    {
+                        drone_name = readerDrone["drone_name"].ToString();
+                    }
+                    readerDrone.Close();
+                    con.Close();
+
+                    //action data
+                    con.Open();
+                    SqlCommand sqlCmdAct = new SqlCommand("select * from FlightSchedule where action_no IN (SELECT MAX(action_no) from FlightSchedule)", con);
+                    SqlDataReader readerAct = sqlCmdAct.ExecuteReader();
+                    readerAct.Read();
+                    if (readerAct.HasRows)
+                    {
+                        action_noT = readerAct["action_no"].ToString();
+                        action_nameT = readerAct["action_name"].ToString();
+                        material_nameT = readerAct["material_name"].ToString();
+                        action_capacityT = readerAct["action_capacity"].ToString();
+                        action_costT = readerAct["action_cost"].ToString();
+                    }
+                    readerAct.Close();
+                    con.Close();
+
+                    con.Open();
+                    query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrict," +
+                        "farm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost,distance,area) " +
+                        "VALUES('" + "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss") + "','" + textBox_farmID.Text + "','" + farm_name + "','" + farm_host + "','" +
+                        farm_address + "','" + farm_road + "','" + farm_subDistrict + "','" + farm_district + "','" + farm_province
+                        + "','" + farm_postal + "','" + textBox_droneID.Text + "','" + drone_name + "','" + action_noT + "','" + action_nameT + "','" + material_nameT + "'," +
+                        action_capacityT + ",'" + action_costT + "','" + distanceTotal + "','" + areaTotal + "')";
+                    SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                    SDA.SelectCommand.ExecuteNonQuery();
+                    con.Close();
+
+                    ///added filepath
+                    string filepath = "C:\\Temp\\DroneFlightPlanner";
+                    if (Directory.Exists(filepath)) { }
+                    else
+                    {
+                        Directory.CreateDirectory(filepath);
+                    }
+
+                    MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\FlightHistory_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".json แล้ว");
+                    FlightHistoryJson flightHistoryJson = new FlightHistoryJson
+                    {
+                        TransactionID = "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss"),
+                        farm = new Farm
+                        {
+                            id = id_farm,
+                            name = farm_name,
+                            host = farm_host,
+                            address = farm_address,
+                            street = farm_road,
+                            sub_district = farm_subDistrict,
+                            district = farm_district,
+                            province = farm_province,
+                            postal = farm_postal
+                        },
+                        drone = new Drone
+                        {
+                            id = textBox_droneID.Text,
+                            name = drone_name
+                        },
+                        action = new Action
+                        {
+                            no = action_noT,
+                            name = action_nameT
+                        },
+                        material = material_nameT,
+                        quantity = action_capacityT,
+                        cost = action_costT,
+                        distance = distanceTotal,
+                        area = areaTotal
+                    };
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.NullValueHandling = NullValueHandling.Ignore;
+                    serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
+                    using (StreamWriter sw = new StreamWriter(@"C:\\Temp\\DroneFlightPlanner\\FlightHistory_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".json"))
+                    using (JsonWriter writer = new JsonTextWriter(sw))
+                    {
+                        serializer.Serialize(writer, flightHistoryJson);
+                    }
+                    OnMenuFlightdataButtonClicked(e);
                 }
-                readerDrone.Close();
-                con.Close();
-
-                //action data
-                con.Open();
-                SqlCommand sqlCmdAct = new SqlCommand("select * from FlightSchedule where action_no IN (SELECT MAX(action_no) from FlightSchedule)", con);
-                SqlDataReader readerAct = sqlCmdAct.ExecuteReader();
-                readerAct.Read();
-                if (readerAct.HasRows)
-                {
-                    action_noT = readerAct["action_no"].ToString();
-                    action_nameT = readerAct["action_name"].ToString();
-                    material_nameT = readerAct["material_name"].ToString();
-                    action_capacityT = readerAct["action_capacity"].ToString();
-                    action_costT = readerAct["action_cost"].ToString();
-                }
-                readerAct.Close();
-                con.Close();
-
-                con.Open();
-                query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrict," +
-                    "farm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost,distance,area) " +
-                    "VALUES('" + "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss") + "','" + textBox_farmID.Text + "','" + farm_name + "','" + farm_host + "','" +
-                    farm_address + "','" + farm_road + "','" + farm_subDistrict + "','" + farm_district + "','" + farm_province
-                    + "','" + farm_postal + "','" + textBox_droneID.Text + "','" + drone_name + "','" + action_noT + "','" + action_nameT + "','" + material_nameT + "'," +
-                    action_capacityT + ",'" + action_costT + "','" + distanceTotal + "','" + areaTotal + "')";
-                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                SDA.SelectCommand.ExecuteNonQuery();
-                con.Close();
-
-                ///added filepath
-                string filepath = "C:\\Temp\\DroneFlightPlanner";
-                if (Directory.Exists(filepath)) { }
-                else
-                {
-                    Directory.CreateDirectory(filepath);
-                }
-                /// added export worksheet to excel file
-                string fileTest = "C:\\Temp\\DroneFlightPlanner\\FlightHistory_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx";
-                MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".xlsx แล้ว");
-                Excel.Application oApp;
-                Excel.Worksheet oSheet;
-                Excel.Workbook oBook;
-
-                oApp = new Excel.Application();
-                oBook = oApp.Workbooks.Add();
-                oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
-                oSheet.Cells[1, 1] = "transaction_datetime";
-                oSheet.Cells[2, 1] = "รหัสฟาร์ม";
-                oSheet.Cells[3, 1] = "ชือฟาร์ม";
-                oSheet.Cells[4, 1] = "ผู้ดูแลฟาร์ม";
-                oSheet.Cells[5, 1] = "ที่ตั้งฟาร์ม ";
-                oSheet.Cells[6, 1] = "ถนน";
-                oSheet.Cells[7, 1] = "แขวง";
-                oSheet.Cells[8, 1] = "เขต";
-                oSheet.Cells[9, 1] = "จังหวัด";
-                oSheet.Cells[10, 1] = "รหัสไปรษณีย์";
-                oSheet.Cells[11, 1] = "รหัสโดรน";
-                oSheet.Cells[12, 1] = "ชื่อโดรน";
-                oSheet.Cells[13, 1] = "รหัสกิจกรรม";
-                oSheet.Cells[14, 1] = "ชื่อกิจกรรม";
-                oSheet.Cells[15, 1] = "วัตถุดิบ";
-                oSheet.Cells[16, 1] = "ปริมาณสาร";
-                oSheet.Cells[17, 1] = "ค่าใช้จ่าย";
-                oSheet.Cells[18, 1] = "distance";
-                oSheet.Cells[19, 1] = "area";
-
-                oSheet.Cells[1, 2] = "TID" + DateTime.Now.ToString("yyyyMMddTHHmmss");
-                oSheet.Cells[2, 2] = id_farm;
-                oSheet.Cells[3, 2] = farm_name;
-                oSheet.Cells[4, 2] = farm_host;
-                oSheet.Cells[5, 2] = farm_address;
-                oSheet.Cells[6, 2] = farm_road;
-                oSheet.Cells[7, 2] = farm_subDistrict;
-                oSheet.Cells[8, 2] = farm_district;
-                oSheet.Cells[9, 2] = farm_province;
-                oSheet.Cells[10, 2] = farm_postal;
-                oSheet.Cells[11, 2] = textBox_droneID.Text;
-                oSheet.Cells[12, 2] = drone_name;
-                oSheet.Cells[13, 2] = action_noT;
-                oSheet.Cells[14, 2] = action_nameT;
-                oSheet.Cells[15, 2] = material_nameT;
-                oSheet.Cells[16, 2] = action_capacityT;
-                oSheet.Cells[17, 2] = action_costT;
-                oSheet.Cells[18, 2] = distanceTotal;
-                oSheet.Cells[19, 2] = areaTotal;
-
-                oBook.SaveAs(fileTest);
-                oBook.Close();
-                oApp.Quit();
-
-                OnMenuFlightdataButtonClicked(e);
             }
             else
             {

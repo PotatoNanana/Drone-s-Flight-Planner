@@ -24,6 +24,9 @@ using System.Data.SqlClient;
 using GMap.NET.MapProviders;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Data;
+using Newtonsoft.Json;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json.Linq;
 
 namespace MissionPlanner
 {
@@ -3742,10 +3745,77 @@ namespace MissionPlanner
             Application.Exit();
         }
 
+        public class Drone
+        {
+            public string id;
+            public string name;
+        }
+
+        public class Farm
+        {
+            public string id;
+            public string name;
+            public string host;
+            public string address;
+            public string street;
+            public string sub_district;
+            public string district;
+            public string province;
+            public string postal;
+        }
+        public class Action
+        {
+            public string no;
+            public string name;
+        }
+
+        public class FlightHistoryJson
+        {
+            public string TransactionID;
+            public Farm farm { get; set; }
+            public Drone drone { get; set; }
+            public Action action { get; set; }
+            public string material;
+            public string quantity;
+            public string cost;
+            public string distance;
+            public string area;
+        }
+
+        public class Activity
+        {
+            public string no;
+            public string name;
+        }
+
+        public class Material
+        {
+            public string no;
+            public string name;
+        }
+
+        public class FlightDateTime
+        {
+            public string date;
+            public string startTime;
+            public string endTime;
+        }
+
+        public class FlightScheduleJson
+        {
+            public string farmId;
+            public Drone drone { get; set; }
+            public Activity activity { get; set; }
+            public Material material;
+            public string quatity;
+            public string cost;
+            public FlightDateTime flightDateTime;
+        }
+
         private void but_act_file_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Excel Files(.xlsx)|*.xlsx";
+            openFileDialog.Filter = "Json Files(.json)|*.json";
             Stream fileStream = null;
             string strfilename = null;
             String fileName = null;
@@ -3776,123 +3846,70 @@ namespace MissionPlanner
 
         void FlightHistory_(string strfilename)
         {
-            xlApp = new Excel.Application();
-            xlWorkBook = xlApp.Workbooks.Open(strfilename, 0, true, 2, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            xlWorkSheet = xlWorkBook.Sheets[1];
-            Excel.Range xlRange = xlWorkSheet.UsedRange;
-            CultureInfo provider = CultureInfo.InvariantCulture;
-            string str01 = "", str02 = "", str03 = "", str04 = "", str05 = "", str06 = "", str07 = "", str08 = "", str09 = "", str10 = "", str11 = "", str12 = "", str13 = "", str14 = "", str15 = "", str16 = "", str17 = "", str18 = "", str19 = "";
-            str01 = Convert.ToString(xlRange.Cells[1, 2].Value2);
-            str02 = Convert.ToString(xlRange.Cells[2, 2].Value2);
-            str03 = Convert.ToString(xlRange.Cells[3, 2].Value2);
-            str04 = Convert.ToString(xlRange.Cells[4, 2].Value2);
-            str05 = Convert.ToString(xlRange.Cells[5, 2].Value2);
-            str06 = Convert.ToString(xlRange.Cells[6, 2].Value2);
-            str07 = Convert.ToString(xlRange.Cells[7, 2].Value2);
-            str08 = Convert.ToString(xlRange.Cells[8, 2].Value2);
-            str09 = Convert.ToString(xlRange.Cells[9, 2].Value2);
-            str10 = Convert.ToString(xlRange.Cells[10, 2].Value2);
-            str11 = Convert.ToString(xlRange.Cells[11, 2].Value2);
-            str12 = Convert.ToString(xlRange.Cells[12, 2].Value2);
-            str13 = Convert.ToString(xlRange.Cells[13, 2].Value2);
-            str14 = Convert.ToString(xlRange.Cells[14, 2].Value2);
-            str15 = Convert.ToString(xlRange.Cells[15, 2].Value2);
-            str16 = Convert.ToString(xlRange.Cells[16, 2].Value2);
-            str17 = Convert.ToString(xlRange.Cells[17, 2].Value2);
-            str18 = Convert.ToString(xlRange.Cells[18, 2].Value2);
-            str19 = Convert.ToString(xlRange.Cells[19, 2].Value2);
-
             if (con.State != ConnectionState.Open)
             { con.Open(); }
+
+            JObject o1 = JObject.Parse(File.ReadAllText(strfilename));
+            var cList = JsonConvert.DeserializeObject<FlightHistoryJson>(o1.ToString());
 
             String query = "INSERT INTO Transact (transaction_datetime,farm_id,farm_name,farm_host,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal,drone_id,drone_name,action_no,action_name,material_name,action_capacity,action_cost,distance,area) " + "VALUES(@p1, @p2, @p3,@p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)";
             SqlCommand SCMD = new SqlCommand();
             SCMD.Connection = con;
             SCMD.CommandText = query;
-            SCMD.Parameters.AddWithValue("@p1", str01 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p2", str02 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p3", str03 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p4", str04 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p5", str05 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p6", str06 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p7", str07 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p8", str08 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p9", str09 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p10", str10 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p11", str11 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p12", str12 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p13", str13 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p14", str14 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p15", str15 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p16", str16 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p17", str17 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p18", str18 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p19", str19 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p1", cList.TransactionID ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p2", cList.farm.id ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p3", cList.farm.name ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p4", cList.farm.host ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p5", cList.farm.address ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p6", cList.farm.street ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p7", cList.farm.sub_district ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p8", cList.farm.district ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p9", cList.farm.province ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p10", cList.farm.postal ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p11", cList.drone.id ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p12", cList.drone.name ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p13", cList.action.no ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p14", cList.action.name ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p15", cList.material ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p16", cList.quantity ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p17", cList.cost ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p18", cList.distance ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p19", cList.area ?? (object)DBNull.Value);
             SCMD.ExecuteNonQuery();
 
             con.Close();
-
-            xlWorkBook.Close(true, null, null);
-            xlApp.Quit();
-            Marshal.ReleaseComObject(xlRange);
-            Marshal.ReleaseComObject(xlWorkSheet);
-            Marshal.ReleaseComObject(xlWorkBook);
-            Marshal.ReleaseComObject(xlApp);
-
+            
             MessageBox.Show("เก็บข้อมูลลงฐานข้อมูลเรียบร้อยแล้ว");
         }
 
         void add_activity_(string strfilename)
         {
-            xlApp = new Excel.Application();
-            xlWorkBook = xlApp.Workbooks.Open(strfilename, 0, true, 2, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            xlWorkSheet = xlWorkBook.Sheets[1];
-            Excel.Range xlRange = xlWorkSheet.UsedRange;
-            CultureInfo provider = CultureInfo.InvariantCulture;
-            string str01 = "", str02 = "", str03 = "", str04 = "", str05 = "", str06 = "", str07 = "", str08 = "", str09 = "", str10 = "", str11 = "", str12 = "", str13 = "";
-            str02 = Convert.ToString(xlRange.Cells[2, 1].Value2);
-            str03 = Convert.ToString(xlRange.Cells[2, 2].Value2);
-            str04 = Convert.ToString(xlRange.Cells[2, 4].Value2);
-            str05 = Convert.ToString(xlRange.Cells[2, 5].Value2);
-            str06 = Convert.ToString(xlRange.Cells[2, 6].Value2);
-            str07 = Convert.ToString(xlRange.Cells[2, 7].Value2);
-            str08 = Convert.ToString(xlRange.Cells[2, 8].Value2);
-            str09 = Convert.ToString(xlRange.Cells[2, 9].Value2);
-            double date_str09 = double.Parse(str09);
-            var dateTime_str09 = DateTime.FromOADate(date_str09).ToString("yyyy-MM-dd");
-
-            str10 = Convert.ToString(xlRange.Cells[2, 10].Value2);
-            str11 = Convert.ToString(xlRange.Cells[2, 11].Value2);
-
             if (con.State != ConnectionState.Open)
             { con.Open(); }
 
-            String query = "INSERT INTO FlightSchedule (action_no,farm_id,drone_id,act_no,action_name,material_name,action_capacity,action_cost,action_datetime,action_startTime,action_finishTime) " + 
-                "VALUES((select CONCAT('AC', MAX(CONVERT(INT, SUBSTRING(action_no,3,5)) + 1)) from FlightSchedule), @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)";
+            JObject o1 = JObject.Parse(File.ReadAllText(strfilename));
+            var cList = JsonConvert.DeserializeObject<FlightScheduleJson>(o1.ToString());
+
+            String query = @" INSERT INTO[dbo].[FlightSchedule] ([action_no],[farm_id],[drone_id],[action_capacity],[action_cost],[action_datetime],[action_startTime],[action_finishTime],[act_no], [action_name],[material_no],[material_name]) " + 
+                "VALUES((select CONCAT('AC', MAX(CONVERT(INT, SUBSTRING(action_no,3,5)) + 1)) from FlightSchedule), @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)";
             SqlCommand SCMD = new SqlCommand();
             SCMD.Connection = con;
             SCMD.CommandText = query;
-            SCMD.Parameters.AddWithValue("@p2", str02 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p3", str03 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p4", str04 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p5", str05 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p6", str06 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p7", str07 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p8", str08 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p9", dateTime_str09 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p10", str10 ?? (object)DBNull.Value);
-            SCMD.Parameters.AddWithValue("@p11", str11 ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p2", cList.farmId ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p3", cList.drone.id ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p4", cList.quatity ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p5", cList.cost ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p6", cList.flightDateTime.date ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p7", cList.flightDateTime.startTime ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p8", cList.flightDateTime.endTime ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p9", cList.activity.no ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p10", cList.activity.name ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p11", cList.material.no ?? (object)DBNull.Value);
+            SCMD.Parameters.AddWithValue("@p12", cList.material.name ?? (object)DBNull.Value);
             SCMD.ExecuteNonQuery();
 
             con.Close();
-
-            xlWorkBook.Close(true, null, null);
-            xlApp.Quit();
-            Marshal.ReleaseComObject(xlRange);
-            Marshal.ReleaseComObject(xlWorkSheet);
-            Marshal.ReleaseComObject(xlWorkBook);
-            Marshal.ReleaseComObject(xlApp);
-
+            
             MessageBox.Show("เก็บข้อมูลลงฐานข้อมูลเรียบร้อยแล้ว");
         }
     }

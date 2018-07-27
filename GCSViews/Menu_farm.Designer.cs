@@ -69,7 +69,6 @@
             this.droneFlightPlannerDataSet2 = new MissionPlanner.DroneFlightPlannerDataSet2();
             this.farmTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet2TableAdapters.FarmTableAdapter();
             this.farmTableAdapter1 = new MissionPlanner._Drone_s_Flight_PlannerDataSetTableAdapters.FarmTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -94,7 +93,6 @@
             // panel_Main_farm
             // 
             this.panel_Main_farm.BackColor = System.Drawing.Color.White;
-            this.panel_Main_farm.Controls.Add(this.button1);
             this.panel_Main_farm.Controls.Add(this.button_serch);
             this.panel_Main_farm.Controls.Add(this.label5);
             this.panel_Main_farm.Controls.Add(this.pictureBox);
@@ -319,7 +317,7 @@
             this.button2.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(981, 473);
+            this.button2.Location = new System.Drawing.Point(1000, 464);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 40);
             this.button2.TabIndex = 13;
@@ -336,7 +334,7 @@
             this.button_delete.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_delete.ForeColor = System.Drawing.Color.White;
             this.button_delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_delete.Location = new System.Drawing.Point(845, 473);
+            this.button_delete.Location = new System.Drawing.Point(864, 464);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(130, 40);
             this.button_delete.TabIndex = 12;
@@ -353,7 +351,7 @@
             this.button_pastAct.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_pastAct.ForeColor = System.Drawing.Color.White;
             this.button_pastAct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_pastAct.Location = new System.Drawing.Point(559, 451);
+            this.button_pastAct.Location = new System.Drawing.Point(537, 444);
             this.button_pastAct.Name = "button_pastAct";
             this.button_pastAct.Size = new System.Drawing.Size(130, 40);
             this.button_pastAct.TabIndex = 11;
@@ -370,7 +368,7 @@
             this.button_futureAct.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_futureAct.ForeColor = System.Drawing.Color.White;
             this.button_futureAct.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_futureAct.Location = new System.Drawing.Point(559, 497);
+            this.button_futureAct.Location = new System.Drawing.Point(537, 490);
             this.button_futureAct.Name = "button_futureAct";
             this.button_futureAct.Size = new System.Drawing.Size(130, 40);
             this.button_futureAct.TabIndex = 10;
@@ -439,7 +437,7 @@
             this.BUT_add_farm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_add_farm.ForeColor = System.Drawing.Color.White;
             this.BUT_add_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_farm.Location = new System.Drawing.Point(708, 473);
+            this.BUT_add_farm.Location = new System.Drawing.Point(727, 464);
             this.BUT_add_farm.Name = "BUT_add_farm";
             this.BUT_add_farm.Size = new System.Drawing.Size(130, 40);
             this.BUT_add_farm.TabIndex = 6;
@@ -504,23 +502,6 @@
             // 
             this.farmTableAdapter1.ClearBeforeFill = true;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(411, 473);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "จัดการฟาร์ม";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.roleManagement_Click);
-            // 
             // Menu_farm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,6 +565,5 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
     }
 }
