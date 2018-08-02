@@ -80,6 +80,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arduino", "ExtLibs\Arduino\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAVLink", "ExtLibs\Mavlink\MAVLink.csproj", "{13D2EC90-C41F-48A1-AADA-859B6DC24EDC}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{AEF27FA2-965F-4866-B5B0-D004F932004D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -1692,6 +1694,30 @@ Global
 		{13D2EC90-C41F-48A1-AADA-859B6DC24EDC}.Release|x64.Build.0 = Release|Any CPU
 		{13D2EC90-C41F-48A1-AADA-859B6DC24EDC}.Release|x86.ActiveCfg = Release|Any CPU
 		{13D2EC90-C41F-48A1-AADA-859B6DC24EDC}.Release|x86.Build.0 = Release|Any CPU
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Ad-Hoc|Any CPU.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Ad-Hoc|ARM.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Ad-Hoc|iPhone.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Ad-Hoc|x64.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Ad-Hoc|x86.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.AppStore|Any CPU.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.AppStore|ARM.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.AppStore|iPhone.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.AppStore|iPhoneSimulator.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.AppStore|x64.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.AppStore|x86.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Debug|Any CPU.ActiveCfg = Debug
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Debug|ARM.ActiveCfg = Debug
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Debug|iPhone.ActiveCfg = Debug
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Debug|iPhoneSimulator.ActiveCfg = Debug
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Debug|x64.ActiveCfg = Debug
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Debug|x86.ActiveCfg = Debug
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Release|Any CPU.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Release|ARM.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Release|iPhone.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Release|iPhoneSimulator.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Release|x64.ActiveCfg = Release
+		{AEF27FA2-965F-4866-B5B0-D004F932004D}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

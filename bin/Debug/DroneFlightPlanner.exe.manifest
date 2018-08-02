@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="DroneFlightPlanner.exe" version="1.39.1.0" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="DroneFlightPlanner.exe" version="1.0.1.0" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="mpdesktop.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -67,7 +67,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>P34vFf/Dn6uv4LEc2ZZ+dw0SO1WiacB21Z/1PUSI6UI=</dsig:DigestValue>
+        <dsig:DigestValue>4Zmcrv6P1dQSpiSBfn8Kdr7YHj9edJtwlwSKTQPHW/E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,19 +79,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BMCq7yVwnJfG2rZnIeegVOSusJ9QmH1tfy16WGIhd8Q=</dsig:DigestValue>
+        <dsig:DigestValue>hVbWIz4tf9DYWlE1KGHU3RtAAX7wKY6UBfuwkWUy4TE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AviFile.dll" size="32768">
-      <assemblyIdentity name="AviFile" version="1.0.6782.22901" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="AviFile" version="1.0.6788.912" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jwdwP99G3t+9e1H8WyknNuFLYXlBMS87nuLkDDi7t8M=</dsig:DigestValue>
+        <dsig:DigestValue>ovN1TLftcUp/TWuwp+tWdsi4REXDnLF02VnijXgPFDc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,7 +127,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yngHY59wYf1yrayrkdYdJwExe0+Q19mP+KsYvQsKlqo=</dsig:DigestValue>
+        <dsig:DigestValue>NSciW3pf0C9RrZCoqBtMZHCfOW5W8/QVktEZEcIb9DU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -163,7 +163,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZJtdMF8gv21U7oGTj9OCsaFF+wcIeUQxU/ksP4KNt/k=</dsig:DigestValue>
+        <dsig:DigestValue>G5ONepkkjg6vxuWR/3Qmkip3tkRRHWx50dLl06ZVKOE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -516,14 +516,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DroneFlightPlanner.exe" size="12453376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DroneFlightPlanner.exe" size="12455936">
       <assemblyIdentity name="DroneFlightPlanner" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mLuwI+1RnXAN5V/tzFQU6s4tQ5OsLln7/tDlSewuDzs=</dsig:DigestValue>
+        <dsig:DigestValue>PSSUqAxU1aC3VtYTwYi9285mzbw3OHSGIZKNDAQgSbY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -595,7 +595,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bFRs4qrCtdZAyNI13yK5fL1+/ydLufNcdMPbPNuuL+U=</dsig:DigestValue>
+        <dsig:DigestValue>cKnK0Q3F1eHskcL3HzfZadd8Eo7hSzActHx3tbjZy3E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -643,7 +643,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BnW62JEFs5YYMzOID/C+u3Oh3BGpWiV2jMLUk4Dyv30=</dsig:DigestValue>
+        <dsig:DigestValue>OUS/XHbhzWyjZR9B3eyg+q/cPP7g1b6Yso4Nd9MPXUo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -655,7 +655,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zOUbR/Lzy9w20F/baFX93MG1zzzmtW5t2PJbZDzBP20=</dsig:DigestValue>
+        <dsig:DigestValue>9w4wCeXGsRWJSSDreg32Z8SzlzsW2gRn73Edvd9z6eA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -667,7 +667,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Piw+fou3TUKoM6Pk54RGPqbdLe+o+aI5rNmIhmzecsY=</dsig:DigestValue>
+        <dsig:DigestValue>BIMIDc2sqVwCEzhbyc1XzRrFNJHWjsmDdUsasJaAFlU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -751,7 +751,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nyA3vqgS9+d4QhdbM9bvY/vO3Oqr1W7bdj6oIW/PJWs=</dsig:DigestValue>
+        <dsig:DigestValue>DcVgeRcePmhTdyoh3Zh7fYGi1XK9En4S6s5JUbX/+Jw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -763,7 +763,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0X7HYRdqH4G12C6E2nAC8V3tUV72JtjNdll00U2/sVk=</dsig:DigestValue>
+        <dsig:DigestValue>AV+Zud8P3Br8YNd0oxMC5bxtCVb6Fr42xI4M0+CuFdc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -787,7 +787,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rcEkcIfEJZqd28ndYAEK1Fot6JJesHTUrOrQ/dL43HM=</dsig:DigestValue>
+        <dsig:DigestValue>zH3Glemzg4kdrexkCTu+IB+O05heINvnIv6l0S8gdT4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -805,13 +805,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MetaDataExtractor.dll" size="241664">
-      <assemblyIdentity name="MetaDataExtractor" version="2.4.0.34978" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="MetaDataExtractor" version="2.4.0.913" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yIAewtiJDxy1L91g+B2+aPPjQY9XfFPUFItCG/tX9Ew=</dsig:DigestValue>
+        <dsig:DigestValue>iGmg2Qy7oruYgY+GVCCahB0fpxGyTL4AwbZv3S72haw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1117,13 +1117,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="px4uploader.exe" size="58368">
-      <assemblyIdentity name="px4uploader" version="1.0.6782.22903" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="px4uploader" version="1.0.6788.913" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0Vb4lNmAG4O4EAvLVd6YrTm+/l9wCbw2zL/4PsYt01U=</dsig:DigestValue>
+        <dsig:DigestValue>O+V78zTwdBlAQE0wR53xQXY5vzKWflCHPvHBAEW+0aI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1147,7 +1147,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e2fBY2Neoenzw7F1NHwM1FS3tbp6rxm3jPRk9i8MKoY=</dsig:DigestValue>
+        <dsig:DigestValue>HDY+ua0L/ZS3uA48bn5qpafiTtiqQxbXJVelQ3TWRbI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1183,7 +1183,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BvLBZcRyR50g9YVfNZWlRDXrUzSMMO+3Cl83zv2XnLo=</dsig:DigestValue>
+        <dsig:DigestValue>Cjx9hdHbTcJEFywezRgCax3TCug02WGdUngNcj6xkNo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1207,7 +1207,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eYc+iFBViO16m7ffMl72b2fn0yB3gO1jsh61nzLRwts=</dsig:DigestValue>
+        <dsig:DigestValue>u4p6dEO8ku/YNSJNhEpJIKLz3l7vm1UJzTte+YtLddg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1585,13 +1585,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tlogThumbnailHandler.dll" size="8704">
-      <assemblyIdentity name="tlogThumbnailHandler" version="1.0.6782.22902" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="tlogThumbnailHandler" version="1.0.6788.911" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dWd98uLzI+26OdzFEtHsWEtY0/7b9sib8Yaevz/y+mI=</dsig:DigestValue>
+        <dsig:DigestValue>IGRdwxvmxSnLz7EQwX6DK+fue5WfmZ9CYVF2iedhRH0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1645,13 +1645,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ZedGraph.dll" size="326656">
-      <assemblyIdentity name="ZedGraph" version="5.1.5.34977" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="ZedGraph" version="5.1.5.913" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VaxxLdOVcEzsgPXd0ogwamPYpg2vq7DyaYf7UrJ68lE=</dsig:DigestValue>
+        <dsig:DigestValue>d07UnMvmrwrduHcf3BEPxOzrZx+lPM5kH5g1Sm4FxZo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
