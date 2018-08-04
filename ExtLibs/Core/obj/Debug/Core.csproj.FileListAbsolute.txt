@@ -14,3 +14,4 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Core\bin\Debug\Core.p
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Core\obj\Debug\Core.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Core\obj\Debug\Core.pdb
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Core\obj\Debug\Core.csprojAssemblyReference.cache

@@ -6,4 +6,3 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\MissionPlanner-master\ExtLib
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\bin\Release\AviFile.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\obj\Release\AviFile.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\obj\Release\AviFile.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\AviFile\obj\Release\AviFile.csprojAssemblyReference.cache

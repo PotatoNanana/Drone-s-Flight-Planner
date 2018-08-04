@@ -91,20 +91,24 @@ namespace MissionPlanner.GCSViews
 
         {
             // for img 
-            byte[] img = null;
-
+            byte[] imgDrone = null;
+            imgLocation = pictureBox.ImageLocation;
             if (!String.IsNullOrEmpty(imgLocation))
             {
                 FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
+                imgDrone = br.ReadBytes((int)fs.Length);
             }
 
             if (textBox_droneName.Text == "")
             {
                 MessageBox.Show("คุณยังไม่กรอกข้อมูลชื่อโดรน !!");
             }
-            else if (img == null)
+            else if (textBox_partName.Text == "")
+            {
+                MessageBox.Show("คุณยังไม่กรอกข้อมูลชื่อชิ้นส่วนอุปกรณ์โดรน !!");
+            }
+            else if (imgDrone == null)
             {
                 if (id_drone != "")
                 {
@@ -139,6 +143,7 @@ namespace MissionPlanner.GCSViews
                         SDA2.Fill(dt);
                         DG_Drone.DataSource = dt;
                         con.Close();
+                        insertDevice();
                     }
                 }
             }
@@ -162,7 +167,7 @@ namespace MissionPlanner.GCSViews
                     { con.Open(); }
 
                     cmd = new SqlCommand(query, con);
-                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    cmd.Parameters.Add(new SqlParameter("@img", imgDrone));
                     int x = cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("บันทึกข้อมูลโดรนสำเร็จ !!");
@@ -175,8 +180,87 @@ namespace MissionPlanner.GCSViews
                     SDA2.Fill(dt);
                     DG_Drone.DataSource = dt;
                     con.Close();
+                    insertDevice();
                 }
             }
+        }
+
+        void insertDevice()
+        {
+            try
+            {
+                // for date
+                //comboBox_alarm.SelectedItem.ToString();
+                string format = "yyyy-MM-dd";
+
+                // for img 
+                byte[] imgDevice = null;
+                imgLocation = pictureBox_part.ImageLocation;
+                if (!String.IsNullOrEmpty(imgLocation))
+                {
+                    FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    imgDevice = br.ReadBytes((int)fs.Length);
+                }
+
+                if (textBox_partName.Text == "")
+                {
+                    MessageBox.Show("คุณยังไม่กรอกข้อมูลชื่ออุปกรณ์ !!");
+                }
+                else if (imgDevice == null)
+                {
+                    String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate," +
+                        "device_expDate,vender_name,vender_add,vender_phone,device_responder,device_alarm,device_price,drone_id,device_remindDate) " +
+                        "VALUES((select CONCAT('DL0', MAX(CONVERT(INT, SUBSTRING(device_id, 4, 7)) + 1)) from DeviceList) ,'" + textBox_partName.Text + "','" + textBox_partPosition.Text +
+                        "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" +
+                        dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" +
+                        textBox_respon.Text + "','" + comboBox_alarm.Text + "','" + textBox_partPrice.Text + "',(select CONCAT('DR00', MAX(CONVERT(INT, SUBSTRING(drone_id, 4, 7)))) from Drone),'" +
+                        dateTimePicker_startDate.Value.ToString(format) + "')";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query, con);
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("บันทึกข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+                }
+                else
+                {
+                    String query = "INSERT INTO DeviceList (device_id,device_name,device_position,device_startDate,device_buyDate," +
+                        "device_expDate,vender_name,vender_add,vender_phone,device_responder,device_pic,device_alarm,device_price,drone_id,device_remindDate) " +
+                        "VALUES((select CONCAT('DL0', MAX(CONVERT(INT, SUBSTRING(device_id, 4, 7)) + 1)) from DeviceList) ,'" + textBox_partName.Text + "','" + textBox_partPosition.Text +
+                        "','" + dateTimePicker_startDate.Value.ToString(format) + "','" + dateTimePicker_reg.Value.ToString(format) + "','" +
+                        dateTimePicker_expDate.Value.ToString(format) + "','" + textBox_venName.Text + "','" + textBox_venAdd.Text + "','" + textBox_venPhone.Text + "','" +
+                        textBox_respon.Text + "',@img,'" + comboBox_alarm.Text + "','" + textBox_partPrice.Text + "',(select CONCAT('DR00', MAX(CONVERT(INT, SUBSTRING(drone_id, 4, 7)))) from Drone),'" +
+                        dateTimePicker_startDate.Value.ToString(format) + "')";
+                    if (con.State != ConnectionState.Open)
+                    { con.Open(); }
+                    cmd = new SqlCommand(query, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", imgDevice));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("บันทึกข้อมูลส่วนประกอบโดรนเสร็จเรียบร้อย !!");
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
+            //show data to dataGridView Part
+            try
+            {
+                //show data to DataGridView
+                String query = "SELECT device_id,device_name,device_position,device_price,device_buyDate,device_expDate,device_startDate,device_responder,device_pic,device_alarm,vender_name,vender_add,vender_phone FROM DeviceList WHERE drone_id = (select CONCAT('DR00', MAX(CONVERT(INT, SUBSTRING(drone_id, 4, 7)))) from Drone) ";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query, con);
+
+                SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                SDA.Fill(dt);
+                con.Close();
+                DG_Part.DataSource = dt;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void button1_Click(object sender, EventArgs e)

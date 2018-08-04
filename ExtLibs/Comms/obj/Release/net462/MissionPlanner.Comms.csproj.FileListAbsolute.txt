@@ -14,3 +14,4 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.AssemblyInfo.cs
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Comms\obj\Release\net462\MissionPlanner.Comms.csprojAssemblyReference.cache
