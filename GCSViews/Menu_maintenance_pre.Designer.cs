@@ -217,7 +217,6 @@
             // 
             this.dateTimePicker.AllowDrop = true;
             this.dateTimePicker.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker.Enabled = false;
             this.dateTimePicker.Location = new System.Drawing.Point(666, 132);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(194, 31);

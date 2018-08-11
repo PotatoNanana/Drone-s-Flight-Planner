@@ -58,8 +58,7 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView 
             con.Open();
-            String query = "SELECT Farm.farm_id,farm_name,farm_host,farm_pic,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal FROM Farm " +
-                "inner join farmRole on Farm.farm_id = farmRole.farm_id and farmRole.username = '"+ Validation.validateUsername + "'";
+            String query = "SELECT farm_id,farm_name,farm_host,farm_pic,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal FROM Farm ";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
@@ -71,8 +70,8 @@ namespace MissionPlanner.GCSViews
         {
             //show data to DataGridView 
             con.Open();
-            String query = "SELECT action_no,farmRole.farm_id,drone_id,action_name,material_name,action_capacity,action_cost,action_datetime,action_finish,action_startTime,action_finishTime,act_no,material_no FROM FlightSchedule " +
-                "inner join farmRole on FlightSchedule.farm_id = farmRole.farm_id and farmRole.username = '"+ Validation.validateUsername + "' and FlightSchedule.action_finish = 'n' ";
+            String query = "SELECT action_no,farm_id,drone_id,action_name,material_name,action_capacity,action_cost,action_datetime,action_finish,action_startTime,action_finishTime,act_no,material_no FROM FlightSchedule ";
+               
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);

@@ -20,7 +20,6 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\BaseClasses\obj\Debug\BaseClasses.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\bin\Debug\BaseClassesNET.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\bin\Debug\BaseClassesNET.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\obj\Debug\BaseClasses.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\obj\Debug\BaseClasses.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\obj\Debug\BaseClassesNET.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BaseClasses\obj\Debug\BaseClassesNET.pdb

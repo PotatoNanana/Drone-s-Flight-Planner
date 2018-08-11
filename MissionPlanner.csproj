@@ -625,6 +625,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>farm1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Farm11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Farm11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FlightLog.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1785,6 +1790,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_Drone_s_Flight_PlannerDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Drone_s_Flight_PlannerDataSetFarm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Drone_s_Flight_PlannerDataSetFarm.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Antenna\Tracker.ar.resx">
       <DependentUpon>Tracker.cs</DependentUpon>
@@ -4475,6 +4485,17 @@
     <None Include="farm1.xss">
       <DependentUpon>farm1.xsd</DependentUpon>
     </None>
+    <None Include="Farm11.xsc">
+      <DependentUpon>Farm11.xsd</DependentUpon>
+    </None>
+    <None Include="Farm11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Farm11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Farm11.xss">
+      <DependentUpon>Farm11.xsd</DependentUpon>
+    </None>
     <None Include="FlightLog.xsc">
       <DependentUpon>FlightLog.xsd</DependentUpon>
     </None>
@@ -6232,6 +6253,17 @@
     </None>
     <None Include="_Drone_s_Flight_PlannerDataSet9.xss">
       <DependentUpon>_Drone_s_Flight_PlannerDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSetFarm.xsc">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSetFarm.xsd</DependentUpon>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSetFarm.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Drone_s_Flight_PlannerDataSetFarm.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Drone_s_Flight_PlannerDataSetFarm.xss">
+      <DependentUpon>_Drone_s_Flight_PlannerDataSetFarm.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

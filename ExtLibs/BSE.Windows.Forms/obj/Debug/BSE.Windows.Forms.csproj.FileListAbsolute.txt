@@ -86,6 +86,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\bin
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\bin\Debug\BSE.Windows.Forms.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Properties.Resources.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.Panel.resources
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.XPanderPanel.resources
@@ -95,4 +96,3 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.pdb
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\BSE.Windows.Forms\obj\Debug\BSE.Windows.Forms.csprojAssemblyReference.cache

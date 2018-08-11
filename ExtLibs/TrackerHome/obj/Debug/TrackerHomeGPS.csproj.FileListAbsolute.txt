@@ -27,9 +27,9 @@ C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Fl
 C:\Users\paper\Documents\i Pat\KMITL\Senior-project\My project\coding\Drone's Flight Planner\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csproj.CoreCompileInputs.cache
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHome.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHome.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\TrackerHome.dll.config
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\TrackerHome.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\bin\Debug\plugins\TrackerHome.pdb
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHomeGPS.csproj.CopyComplete
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHome.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\TrackerHome\obj\Debug\TrackerHome.pdb
