@@ -138,63 +138,77 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
+                    String queryDrone = "select * from drone where drone_name LIKE '" + cboDrone.Text + "'";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
-                    var datetime = monthCalendar1.SelectionRange.Start;
-                    query = @" INSERT INTO [dbo].[FlightSchedule] ([action_no],[farm_id],[drone_id],[action_capacity],[action_cost],[action_datetime],[action_startTime],[action_finishTime],[act_no], [action_name],[material_no] ,[material_name]) " +
-                        "VALUES(" + " (select CONCAT('AC', MAX(CONVERT(INT, SUBSTRING(action_no,3,5)) + 1)) from FlightSchedule) " + ",'" + id_farm + "','" + cboDrone.SelectedValue + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + datetime.ToString("yyyy-MM-dd") + "','" + textBox_startTime.Text + "','" + textBox_finishTime.Text + "','" + cboActivity.SelectedValue + "','" + cboActivity.Text + "','" + cboMaterial.SelectedValue + "','" + cboMaterial.Text + "')";
-                    SqlDataAdapter SDA = new SqlDataAdapter(query, con);
-                    SDA.SelectCommand.ExecuteNonQuery();
-                    con.Close();
-                    this.loadListData();
-                    MessageBox.Show("ทำการบันทึกข้อมูลเรียบร้อยแล้ว !!");
+                    cmd = new SqlCommand(queryDrone, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    reader.Read();
+                    if (reader.HasRows)
+                    {
+                        con.Close();
+                        if (con.State != ConnectionState.Open)
+                        { con.Open(); }
+                        var datetime = monthCalendar1.SelectionRange.Start;
+                        query = @" INSERT INTO [dbo].[FlightSchedule] ([action_no],[farm_id],[drone_id],[action_capacity],[action_cost],[action_datetime],[action_startTime],[action_finishTime],[act_no], [action_name],[material_no] ,[material_name]) " +
+                            "VALUES(" + " (select CONCAT('AC', MAX(CONVERT(INT, SUBSTRING(action_no,3,5)) + 1)) from FlightSchedule) " + ",'" + id_farm + "','" + cboDrone.SelectedValue + "','" + textBox_cap.Text + "','" + textBox_cost.Text + "','" + datetime.ToString("yyyy-MM-dd") + "','" + textBox_startTime.Text + "','" + textBox_finishTime.Text + "','" + cboActivity.SelectedValue + "','" + cboActivity.Text + "','" + cboMaterial.SelectedValue + "','" + cboMaterial.Text + "')";
+                        SqlDataAdapter SDA = new SqlDataAdapter(query, con);
+                        SDA.SelectCommand.ExecuteNonQuery();
+                        con.Close();
+                        this.loadListData();
+                        MessageBox.Show("ทำการบันทึกข้อมูลเรียบร้อยแล้ว !!");
 
-                    /// got value from menu_farm
-                    Menu_farm menu_Farm = new Menu_farm();
+                        /// got value from menu_farm
+                        Menu_farm menu_Farm = new Menu_farm();
 
-                    ///added filepath
-                    string filepath = "C:\\Temp\\DroneFlightPlanner";
-                    if (Directory.Exists(filepath)) { }
+                        ///added filepath
+                        string filepath = "C:\\Temp\\DroneFlightPlanner";
+                        if (Directory.Exists(filepath)) { }
+                        else
+                        {
+                            Directory.CreateDirectory(filepath);
+                        }
+
+                        MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".json แล้ว");
+                        FlightScheduleJson flightObj = new FlightScheduleJson
+                        {
+                            farmId = id_farm,
+                            drone = new Drone
+                            {
+                                id = cboDrone.SelectedValue.ToString(),
+                                name = cboDrone.Text
+                            },
+                            activity = new Activity
+                            {
+                                no = cboActivity.SelectedValue.ToString(),
+                                name = cboActivity.Text
+                            },
+                            material = new Material
+                            {
+                                no = cboMaterial.SelectedValue.ToString(),
+                                name = cboMaterial.Text
+                            },
+                            quatity = textBox_cap.Text,
+                            cost = textBox_cost.Text,
+                            flightDateTime = new FlightDateTime
+                            {
+                                date = datetime.ToString("yyyy-MM-dd"),
+                                startTime = textBox_startTime.Text,
+                                endTime = textBox_finishTime.Text
+                            }
+                        };
+                        JsonSerializer serializer = new JsonSerializer();
+                        serializer.NullValueHandling = NullValueHandling.Ignore;
+                        serializer.Formatting = Formatting.Indented;
+                        using (StreamWriter sw = new StreamWriter(@"C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".json"))
+                        using (JsonWriter writer = new JsonTextWriter(sw))
+                        {
+                            serializer.Serialize(writer, flightObj);
+                        }
+                    }
                     else
                     {
-                        Directory.CreateDirectory(filepath);
-                    }
-
-                    MessageBox.Show("ได้ทำการเพิ่มข้อมูลไฟล์การสร้างกิจกรรมที่ C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".json แล้ว");
-                    FlightScheduleJson flightObj = new FlightScheduleJson
-                    {
-                        farmId = id_farm,
-                        drone = new Drone
-                        {
-                            id = cboDrone.SelectedValue.ToString(),
-                            name = cboDrone.Text
-                        },
-                        activity = new Activity
-                        {
-                            no = cboActivity.SelectedValue.ToString(),
-                            name = cboActivity.Text
-                        },
-                        material = new Material
-                        {
-                            no = cboMaterial.SelectedValue.ToString(),
-                            name = cboMaterial.Text
-                        },
-                        quatity = textBox_cap.Text,
-                        cost = textBox_cost.Text,
-                        flightDateTime = new FlightDateTime
-                        {
-                            date = datetime.ToString("yyyy-MM-dd"),
-                            startTime = textBox_startTime.Text,
-                            endTime = textBox_finishTime.Text
-                        }
-                    };
-                    JsonSerializer serializer = new JsonSerializer();
-                    serializer.NullValueHandling = NullValueHandling.Ignore;
-                    serializer.Formatting = Formatting.Indented;
-                    using (StreamWriter sw = new StreamWriter(@"C:\\Temp\\DroneFlightPlanner\\add_activity_" + DateTime.Now.ToString("yyyyMMddTHHmmss") + ".json"))
-                    using (JsonWriter writer = new JsonTextWriter(sw))
-                    {
-                        serializer.Serialize(writer, flightObj);
+                        MessageBox.Show("กรุณาเลือกชื่อโดรนที่มีอยู่เท่านั้น");
                     }
                 }
             }
