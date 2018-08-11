@@ -1,7 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using MissionPlanner.Comms;
+using MissionPlanner.Controls;
+using MissionPlanner.Log;
+using MissionPlanner.Utilities;
+using MissionPlanner.Plugin;
 using System.Data.SqlClient;
 using System.IO;
 
@@ -20,6 +30,115 @@ namespace MissionPlanner.GCSViews
         string imgLocation = "";
         byte[] imgby;
         SqlCommand cmd;       
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel_Main_farm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelFarm_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void DG_Farm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //click and show  data to dataGridView
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                try
+                {
+                    DG_Farm.MultiSelect = false;
+                    byte[] img = null;
+                    String query = "SELECT * FROM Farm where farm_id='" + DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
+
+                    cmd = new SqlCommand(query, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    reader.Read();
+                    if (reader.HasRows)
+                    {
+                        id_farm = DG_Farm.SelectedRows[0].Cells[0].Value.ToString();
+                        textBox_farmName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                        name_farm = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
+                        textBox_farmHost.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
+                        textBox1.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();                        
+                        textBox2.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+                        textBox3.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+                        textBox4.Text = DG_Farm.SelectedRows[0].Cells[6].Value.ToString();
+                        textBox5.Text = DG_Farm.SelectedRows[0].Cells[7].Value.ToString();
+                        textBox6.Text = DG_Farm.SelectedRows[0].Cells[8].Value.ToString();
+                                               
+
+                        if (!Convert.IsDBNull(reader[3]))
+                        {
+                            img = (byte[])(reader[3]);
+                            MemoryStream ms = new MemoryStream(img);
+                            pictureBox.Image = Image.FromStream(ms);
+                        }
+                        else
+                        {
+                            pictureBox.Image = null;
+                        }
+                    }
+                    else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    if ((con != null) && (con.State == ConnectionState.Open))
+                    { con.Close(); }
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            //show data to DataGridView
+            con.Open();
+            String query2 = "SELECT * FROM Farm";
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            SDA2.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
+        }
+
+        private void Main_but_farm_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void BUT_add_farm_Click(object sender, EventArgs e)
         {
@@ -57,6 +176,7 @@ namespace MissionPlanner.GCSViews
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
                     int x = cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("บันทึกข้อมูลสำเร็จ !!");
@@ -89,8 +209,7 @@ namespace MissionPlanner.GCSViews
 
                 //show data to DataGridView
                 con.Open();
-                String query2 = "SELECT Farm.farm_id,farm_name,farm_host,farm_pic,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal FROM Farm " +
-                "inner join farmRole on Farm.farm_id = farmRole.farm_id and farmRole.username = '" + Validation.validateUsername + "'";
+                String query2 = "SELECT * FROM Farm";
                 SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
                 DataTable dt = new DataTable();
                 SDA2.Fill(dt);
@@ -130,8 +249,7 @@ namespace MissionPlanner.GCSViews
 
                     //show data to DataGridView
                     con.Open();
-                    String query2 = "SELECT Farm.farm_id,farm_name,farm_host,farm_pic,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal FROM Farm " +
-                "inner join farmRole on Farm.farm_id = farmRole.farm_id and farmRole.username = '" + Validation.validateUsername + "'";
+                    String query2 = "SELECT * FROM Farm";
                     SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
                     DataTable dt = new DataTable();
                     SDA2.Fill(dt);
@@ -199,8 +317,7 @@ namespace MissionPlanner.GCSViews
 
                 //show data to DataGridView
                 con.Open();
-                String query2 = "SELECT Farm.farm_id,farm_name,farm_host,farm_pic,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal FROM Farm " +
-                "inner join farmRole on Farm.farm_id = farmRole.farm_id and farmRole.username = '" + Validation.validateUsername + "'";
+                String query2 = "SELECT * FROM Farm";
                 SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
                 DataTable dt = new DataTable();
                 SDA2.Fill(dt);
@@ -244,8 +361,7 @@ namespace MissionPlanner.GCSViews
                 {
                     DG_Farm.MultiSelect = false;
                     byte[] img = null;
-                    String query = "SELECT Farm.farm_id,farm_name,farm_host,farm_pic,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal FROM Farm " +
-                "inner join farmRole on Farm.farm_id = farmRole.farm_id and farmRole.username = '" + Validation.validateUsername + "' and Farm.farm_id ='" + DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
+                    String query = "SELECT * FROM Farm where farm_id='" + DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
                    
                     cmd = new SqlCommand(query, con);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -256,25 +372,22 @@ namespace MissionPlanner.GCSViews
                         textBox_farmName.Text = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
                         name_farm = DG_Farm.SelectedRows[0].Cells[1].Value.ToString();
                         textBox_farmHost.Text = DG_Farm.SelectedRows[0].Cells[2].Value.ToString();
-                        textBox1.Text = reader[4].ToString();
-                        textBox2.Text = reader[5].ToString();
-                        textBox3.Text = reader[6].ToString();
-                        textBox4.Text = reader[7].ToString();
-                        textBox5.Text = reader[8].ToString();
-                        textBox6.Text = reader[9].ToString();
+                        textBox1.Text = DG_Farm.SelectedRows[0].Cells[3].Value.ToString();
+                        textBox2.Text = DG_Farm.SelectedRows[0].Cells[4].Value.ToString();
+                        textBox3.Text = DG_Farm.SelectedRows[0].Cells[5].Value.ToString();
+                        textBox4.Text = DG_Farm.SelectedRows[0].Cells[6].Value.ToString();
+                        textBox5.Text = DG_Farm.SelectedRows[0].Cells[7].Value.ToString();
+                        textBox6.Text = DG_Farm.SelectedRows[0].Cells[8].Value.ToString();
 
                         if (!Convert.IsDBNull(reader[3]))
                         {
                             img = (byte[])(reader[3]);
-                        }
-                        //if (reader[3] != null)
-
-                        if (img == null)
-                        { pictureBox.Image = null; }
-                        else
-                        {
                             MemoryStream ms = new MemoryStream(img);
                             pictureBox.Image = Image.FromStream(ms);
+                        }
+                        else
+                        {
+                            pictureBox.Image = null;
                         }
                     }
                     else MessageBox.Show("ไม่มีข้อมูลในฐานข้อมูล");
@@ -288,7 +401,17 @@ namespace MissionPlanner.GCSViews
                     if ((con != null) &&(con.State == ConnectionState.Open))
                     { con.Close(); }
                 }
+                //show data to DataGridView
+                String query2 = "SELECT * FROM Farm";
+                if (con.State != ConnectionState.Open)
+                { con.Open(); }
+                cmd = new SqlCommand(query2, con);
 
+                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+                DataTable dt2 = new DataTable();
+                SDA2.Fill(dt2);
+                con.Close();
+                DG_Farm.DataSource = dt2;
             }
             catch (Exception ex)
             {
@@ -301,19 +424,12 @@ namespace MissionPlanner.GCSViews
             //show data to DataGridView
             if (con.State != ConnectionState.Open)
                 con.Open();
-            String query = "SELECT Farm.farm_id,farm_name,farm_host,farm_pic,farm_address,farm_road,farm_subDistrict,farm_district,farm_province,farm_postal FROM Farm " +
-                "inner join farmRole on Farm.farm_id = farmRole.farm_id and farmRole.username = '"+ Validation.validateUsername +"'";
+            String query = "SELECT * FROM Farm";
             SqlDataAdapter SDA = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
             con.Close();
-        }
-
-        private void roleManagement_Click(object sender, EventArgs e)
-        {
-            Form_farm_role form_Farm_Role = new Form_farm_role(id_farm);
-            form_Farm_Role.ShowDialog();
         }
     }
 }

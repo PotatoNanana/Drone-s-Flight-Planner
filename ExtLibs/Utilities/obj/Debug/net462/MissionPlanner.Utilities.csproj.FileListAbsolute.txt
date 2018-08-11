@@ -313,6 +313,7 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\n
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\net462\log4net.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\net462\Microsoft.Win32.Primitives.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\net462\Newtonsoft.Json.dll
+C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\net462\OpenTK.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\net462\ProjNet.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\net462\ICSharpCode.SharpZipLib.dll
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\net462\System.AppContext.dll
@@ -354,4 +355,3 @@ C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\obj\Debug\n
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.AssemblyInfo.cs
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.csproj.CopyComplete
 C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\obj\Debug\net462\MissionPlanner.Utilities.dll
-C:\Users\User\Source\Repos\Drone-s-Flight-Planner4\ExtLibs\Utilities\bin\Debug\net462\OpenTK.dll
