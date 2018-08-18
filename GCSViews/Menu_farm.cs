@@ -75,7 +75,7 @@ namespace MissionPlanner.GCSViews
                 { con.Open(); }
                 try
                 {
-                    DG_Farm.MultiSelect = false;
+                    //DG_Farm.MultiSelect = false;
                     byte[] img = null;
                     String query = "SELECT * FROM Farm where farm_id='" + DG_Farm.CurrentRow.Cells[0].Value.ToString() + "'";
 
@@ -208,13 +208,7 @@ namespace MissionPlanner.GCSViews
                 }
 
                 //show data to DataGridView
-                con.Open();
-                String query2 = "SELECT * FROM Farm";
-                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                DataTable dt = new DataTable();
-                SDA2.Fill(dt);
-                DG_Farm.DataSource = dt;
-                con.Close();
+                loadDataList();
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
@@ -241,20 +235,14 @@ namespace MissionPlanner.GCSViews
                 if (MessageBox.Show("คุณต้องการลบฟาร์มนี้ใช่หรือไม่ ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
-                    String query = "DELETE FROM Farm where farm_id = '" + DG_Farm.SelectedRows[0].Cells[0].Value.ToString() + "' ";
+                    String query = "DELETE FROM Farm where farm_id = '" + id_farm + "' ";
                     SqlDataAdapter SDA = new SqlDataAdapter(query, con);
                     SDA.SelectCommand.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("ทำการลบข้อมูลเรียบร้อยแล้ว !!");
 
                     //show data to DataGridView
-                    con.Open();
-                    String query2 = "SELECT * FROM Farm";
-                    SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                    DataTable dt = new DataTable();
-                    SDA2.Fill(dt);
-                    DG_Farm.DataSource = dt;
-                    con.Close();
+                    loadDataList();
                 }
             }
             catch (Exception ex)
@@ -288,7 +276,7 @@ namespace MissionPlanner.GCSViews
                            + "',farm_district='" + textBox4.Text
                             + "',farm_province='" + textBox5.Text
                              + "',farm_postal='" + textBox6.Text
-                        + "' where farm_id ='" + DG_Farm.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                        + "' where farm_id ='" + id_farm + "'";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
@@ -305,7 +293,7 @@ namespace MissionPlanner.GCSViews
                            + "',farm_district='" + textBox4.Text
                             + "',farm_province='" + textBox5.Text
                              + "',farm_postal='" + textBox6.Text
-                        + "',farm_pic = @img where farm_id ='" + DG_Farm.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                        + "',farm_pic = @img where farm_id ='" + id_farm + "'";
                     if (con.State != ConnectionState.Open)
                     { con.Open(); }
                     cmd = new SqlCommand(query, con);
@@ -316,13 +304,7 @@ namespace MissionPlanner.GCSViews
                 }
 
                 //show data to DataGridView
-                con.Open();
-                String query2 = "SELECT * FROM Farm";
-                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                DataTable dt = new DataTable();
-                SDA2.Fill(dt);
-                DG_Farm.DataSource = dt;
-                con.Close();
+                loadDataList();
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
@@ -401,17 +383,6 @@ namespace MissionPlanner.GCSViews
                     if ((con != null) &&(con.State == ConnectionState.Open))
                     { con.Close(); }
                 }
-                //show data to DataGridView
-                String query2 = "SELECT * FROM Farm";
-                if (con.State != ConnectionState.Open)
-                { con.Open(); }
-                cmd = new SqlCommand(query2, con);
-
-                SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
-                DataTable dt2 = new DataTable();
-                SDA2.Fill(dt2);
-                con.Close();
-                DG_Farm.DataSource = dt2;
             }
             catch (Exception ex)
             {
@@ -419,6 +390,17 @@ namespace MissionPlanner.GCSViews
             }
         }
 
+        void loadDataList()
+        {
+            //show data to DataGridView
+            con.Open();
+            String query2 = "SELECT * FROM Farm";
+            SqlDataAdapter SDA2 = new SqlDataAdapter(query2, con);
+            DataTable dt = new DataTable();
+            SDA2.Fill(dt);
+            DG_Farm.DataSource = dt;
+            con.Close();
+        }
         private void Menu_farm_Load(object sender, EventArgs e)
         {
             //show data to DataGridView
@@ -429,6 +411,7 @@ namespace MissionPlanner.GCSViews
             DataTable dt = new DataTable();
             SDA.Fill(dt);
             DG_Farm.DataSource = dt;
+            DG_Farm.CurrentRow.Selected = true;
             con.Close();
         }
     }

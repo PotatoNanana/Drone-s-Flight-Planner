@@ -56,22 +56,6 @@
             this.button_pastAct = new System.Windows.Forms.Button();
             this.button_futureAct = new System.Windows.Forms.Button();
             this.DG_Farm = new MissionPlanner.Controls.MyDataGridView();
-            this.farmBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.farm1 = new MissionPlanner.Farm1();
-            this.BUT_add_farm = new System.Windows.Forms.Button();
-            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Main_but_farm = new System.Windows.Forms.Button();
-            this.farmBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this._Drone_s_Flight_PlannerDataSet = new MissionPlanner._Drone_s_Flight_PlannerDataSet();
-            this.farmBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.droneFlightPlannerDataSet2 = new MissionPlanner.DroneFlightPlannerDataSet2();
-            this.farmTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet2TableAdapters.FarmTableAdapter();
-            this.farmTableAdapter1 = new MissionPlanner._Drone_s_Flight_PlannerDataSetTableAdapters.FarmTableAdapter();
-            this.farmTableAdapter2 = new MissionPlanner.Farm1TableAdapters.FarmTableAdapter();
-            this._Drone_s_Flight_PlannerDataSetFarm = new MissionPlanner._Drone_s_Flight_PlannerDataSetFarm();
-            this.farmBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.farmTableAdapter3 = new MissionPlanner._Drone_s_Flight_PlannerDataSetFarmTableAdapters.FarmTableAdapter();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.farm_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.farm_host = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,19 +65,44 @@
             this.farm_district = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.farm_province = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.farm_postal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmhostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmroadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmsubDistrictDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmdistrictDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmprovinceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmpostalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.farmBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this._Drone_s_Flight_PlannerDataSetFarm = new MissionPlanner._Drone_s_Flight_PlannerDataSetFarm();
+            this.BUT_add_farm = new System.Windows.Forms.Button();
+            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Main_but_farm = new System.Windows.Forms.Button();
+            this.farmBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.farm1 = new MissionPlanner.Farm1();
+            this.farmBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._Drone_s_Flight_PlannerDataSet = new MissionPlanner._Drone_s_Flight_PlannerDataSet();
+            this.farmBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.droneFlightPlannerDataSet2 = new MissionPlanner.DroneFlightPlannerDataSet2();
+            this.farmTableAdapter = new MissionPlanner.DroneFlightPlannerDataSet2TableAdapters.FarmTableAdapter();
+            this.farmTableAdapter1 = new MissionPlanner._Drone_s_Flight_PlannerDataSetTableAdapters.FarmTableAdapter();
+            this.farmTableAdapter2 = new MissionPlanner.Farm1TableAdapters.FarmTableAdapter();
+            this.farmTableAdapter3 = new MissionPlanner._Drone_s_Flight_PlannerDataSetFarmTableAdapters.FarmTableAdapter();
             this.panel2.SuspendLayout();
             this.panel_Main_farm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSetFarm)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.farm1)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSetFarm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -397,7 +406,6 @@
             // 
             this.DG_Farm.AllowUserToAddRows = false;
             this.DG_Farm.AllowUserToDeleteRows = false;
-            this.DG_Farm.AllowUserToOrderColumns = true;
             this.DG_Farm.AutoGenerateColumns = false;
             this.DG_Farm.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
             this.DG_Farm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -410,7 +418,16 @@
             this.farm_subDistrict,
             this.farm_district,
             this.farm_province,
-            this.farm_postal});
+            this.farm_postal,
+            this.farmidDataGridViewTextBoxColumn,
+            this.farmnameDataGridViewTextBoxColumn,
+            this.farmhostDataGridViewTextBoxColumn,
+            this.farmaddressDataGridViewTextBoxColumn,
+            this.farmroadDataGridViewTextBoxColumn,
+            this.farmsubDistrictDataGridViewTextBoxColumn,
+            this.farmdistrictDataGridViewTextBoxColumn,
+            this.farmprovinceDataGridViewTextBoxColumn,
+            this.farmpostalDataGridViewTextBoxColumn});
             this.DG_Farm.DataSource = this.farmBindingSource3;
             this.DG_Farm.Location = new System.Drawing.Point(25, 70);
             this.DG_Farm.Name = "DG_Farm";
@@ -420,117 +437,6 @@
             this.DG_Farm.TabIndex = 9;
             this.DG_Farm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Farm_CellContentClick);
             this.DG_Farm.Click += new System.EventHandler(this.DG_Farm_Click);
-            // 
-            // farmBindingSource2
-            // 
-            this.farmBindingSource2.DataMember = "Farm";
-            this.farmBindingSource2.DataSource = this.farm1;
-            // 
-            // farm1
-            // 
-            this.farm1.DataSetName = "Farm1";
-            this.farm1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // BUT_add_farm
-            // 
-            this.BUT_add_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.BUT_add_farm.FlatAppearance.BorderSize = 0;
-            this.BUT_add_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BUT_add_farm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BUT_add_farm.ForeColor = System.Drawing.Color.White;
-            this.BUT_add_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BUT_add_farm.Location = new System.Drawing.Point(727, 464);
-            this.BUT_add_farm.Name = "BUT_add_farm";
-            this.BUT_add_farm.Size = new System.Drawing.Size(130, 40);
-            this.BUT_add_farm.TabIndex = 6;
-            this.BUT_add_farm.Text = "เพิ่มฟาร์ม";
-            this.BUT_add_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BUT_add_farm.UseVisualStyleBackColor = false;
-            this.BUT_add_farm.Click += new System.EventHandler(this.BUT_add_farm_Click);
-            // 
-            // lineSeparator2
-            // 
-            this.lineSeparator2.Location = new System.Drawing.Point(10, 50);
-            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
-            this.lineSeparator2.Size = new System.Drawing.Size(1130, 2);
-            this.lineSeparator2.TabIndex = 8;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.Main_but_farm);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1228, 50);
-            this.panel3.TabIndex = 0;
-            // 
-            // Main_but_farm
-            // 
-            this.Main_but_farm.BackColor = System.Drawing.Color.White;
-            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Main_but_farm.Enabled = false;
-            this.Main_but_farm.FlatAppearance.BorderSize = 0;
-            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
-            this.Main_but_farm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
-            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
-            this.Main_but_farm.Name = "Main_but_farm";
-            this.Main_but_farm.Size = new System.Drawing.Size(1228, 50);
-            this.Main_but_farm.TabIndex = 6;
-            this.Main_but_farm.Text = "ข้อมูลฟาร์ม";
-            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Main_but_farm.UseVisualStyleBackColor = false;
-            // 
-            // farmBindingSource1
-            // 
-            this.farmBindingSource1.DataMember = "Farm";
-            this.farmBindingSource1.DataSource = this._Drone_s_Flight_PlannerDataSet;
-            // 
-            // _Drone_s_Flight_PlannerDataSet
-            // 
-            this._Drone_s_Flight_PlannerDataSet.DataSetName = "_Drone_s_Flight_PlannerDataSet";
-            this._Drone_s_Flight_PlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // farmBindingSource
-            // 
-            this.farmBindingSource.DataMember = "Farm";
-            this.farmBindingSource.DataSource = this.droneFlightPlannerDataSet2;
-            // 
-            // droneFlightPlannerDataSet2
-            // 
-            this.droneFlightPlannerDataSet2.DataSetName = "DroneFlightPlannerDataSet2";
-            this.droneFlightPlannerDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // farmTableAdapter
-            // 
-            this.farmTableAdapter.ClearBeforeFill = true;
-            // 
-            // farmTableAdapter1
-            // 
-            this.farmTableAdapter1.ClearBeforeFill = true;
-            // 
-            // farmTableAdapter2
-            // 
-            this.farmTableAdapter2.ClearBeforeFill = true;
-            // 
-            // _Drone_s_Flight_PlannerDataSetFarm
-            // 
-            this._Drone_s_Flight_PlannerDataSetFarm.DataSetName = "_Drone_s_Flight_PlannerDataSetFarm";
-            this._Drone_s_Flight_PlannerDataSetFarm.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // farmBindingSource3
-            // 
-            this.farmBindingSource3.DataMember = "Farm";
-            this.farmBindingSource3.DataSource = this._Drone_s_Flight_PlannerDataSetFarm;
-            // 
-            // farmTableAdapter3
-            // 
-            this.farmTableAdapter3.ClearBeforeFill = true;
             // 
             // Column1
             // 
@@ -595,6 +501,180 @@
             this.farm_postal.Name = "farm_postal";
             this.farm_postal.ReadOnly = true;
             // 
+            // farmidDataGridViewTextBoxColumn
+            // 
+            this.farmidDataGridViewTextBoxColumn.DataPropertyName = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.HeaderText = "farm_id";
+            this.farmidDataGridViewTextBoxColumn.Name = "farmidDataGridViewTextBoxColumn";
+            this.farmidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmnameDataGridViewTextBoxColumn
+            // 
+            this.farmnameDataGridViewTextBoxColumn.DataPropertyName = "farm_name";
+            this.farmnameDataGridViewTextBoxColumn.HeaderText = "farm_name";
+            this.farmnameDataGridViewTextBoxColumn.Name = "farmnameDataGridViewTextBoxColumn";
+            this.farmnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmhostDataGridViewTextBoxColumn
+            // 
+            this.farmhostDataGridViewTextBoxColumn.DataPropertyName = "farm_host";
+            this.farmhostDataGridViewTextBoxColumn.HeaderText = "farm_host";
+            this.farmhostDataGridViewTextBoxColumn.Name = "farmhostDataGridViewTextBoxColumn";
+            this.farmhostDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmaddressDataGridViewTextBoxColumn
+            // 
+            this.farmaddressDataGridViewTextBoxColumn.DataPropertyName = "farm_address";
+            this.farmaddressDataGridViewTextBoxColumn.HeaderText = "farm_address";
+            this.farmaddressDataGridViewTextBoxColumn.Name = "farmaddressDataGridViewTextBoxColumn";
+            this.farmaddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmroadDataGridViewTextBoxColumn
+            // 
+            this.farmroadDataGridViewTextBoxColumn.DataPropertyName = "farm_road";
+            this.farmroadDataGridViewTextBoxColumn.HeaderText = "farm_road";
+            this.farmroadDataGridViewTextBoxColumn.Name = "farmroadDataGridViewTextBoxColumn";
+            this.farmroadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmsubDistrictDataGridViewTextBoxColumn
+            // 
+            this.farmsubDistrictDataGridViewTextBoxColumn.DataPropertyName = "farm_subDistrict";
+            this.farmsubDistrictDataGridViewTextBoxColumn.HeaderText = "farm_subDistrict";
+            this.farmsubDistrictDataGridViewTextBoxColumn.Name = "farmsubDistrictDataGridViewTextBoxColumn";
+            this.farmsubDistrictDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmdistrictDataGridViewTextBoxColumn
+            // 
+            this.farmdistrictDataGridViewTextBoxColumn.DataPropertyName = "farm_district";
+            this.farmdistrictDataGridViewTextBoxColumn.HeaderText = "farm_district";
+            this.farmdistrictDataGridViewTextBoxColumn.Name = "farmdistrictDataGridViewTextBoxColumn";
+            this.farmdistrictDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmprovinceDataGridViewTextBoxColumn
+            // 
+            this.farmprovinceDataGridViewTextBoxColumn.DataPropertyName = "farm_province";
+            this.farmprovinceDataGridViewTextBoxColumn.HeaderText = "farm_province";
+            this.farmprovinceDataGridViewTextBoxColumn.Name = "farmprovinceDataGridViewTextBoxColumn";
+            this.farmprovinceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmpostalDataGridViewTextBoxColumn
+            // 
+            this.farmpostalDataGridViewTextBoxColumn.DataPropertyName = "farm_postal";
+            this.farmpostalDataGridViewTextBoxColumn.HeaderText = "farm_postal";
+            this.farmpostalDataGridViewTextBoxColumn.Name = "farmpostalDataGridViewTextBoxColumn";
+            this.farmpostalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // farmBindingSource3
+            // 
+            this.farmBindingSource3.DataMember = "Farm";
+            this.farmBindingSource3.DataSource = this._Drone_s_Flight_PlannerDataSetFarm;
+            // 
+            // _Drone_s_Flight_PlannerDataSetFarm
+            // 
+            this._Drone_s_Flight_PlannerDataSetFarm.DataSetName = "_Drone_s_Flight_PlannerDataSetFarm";
+            this._Drone_s_Flight_PlannerDataSetFarm.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // BUT_add_farm
+            // 
+            this.BUT_add_farm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.BUT_add_farm.FlatAppearance.BorderSize = 0;
+            this.BUT_add_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BUT_add_farm.Font = new System.Drawing.Font("PJ Standard", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BUT_add_farm.ForeColor = System.Drawing.Color.White;
+            this.BUT_add_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BUT_add_farm.Location = new System.Drawing.Point(727, 464);
+            this.BUT_add_farm.Name = "BUT_add_farm";
+            this.BUT_add_farm.Size = new System.Drawing.Size(130, 40);
+            this.BUT_add_farm.TabIndex = 6;
+            this.BUT_add_farm.Text = "เพิ่มฟาร์ม";
+            this.BUT_add_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BUT_add_farm.UseVisualStyleBackColor = false;
+            this.BUT_add_farm.Click += new System.EventHandler(this.BUT_add_farm_Click);
+            // 
+            // lineSeparator2
+            // 
+            this.lineSeparator2.Location = new System.Drawing.Point(10, 50);
+            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator2.Name = "lineSeparator2";
+            this.lineSeparator2.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(214)))), ((int)(((byte)(100)))));
+            this.lineSeparator2.Size = new System.Drawing.Size(1130, 2);
+            this.lineSeparator2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Main_but_farm);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1228, 50);
+            this.panel3.TabIndex = 0;
+            // 
+            // Main_but_farm
+            // 
+            this.Main_but_farm.BackColor = System.Drawing.Color.White;
+            this.Main_but_farm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Main_but_farm.Enabled = false;
+            this.Main_but_farm.FlatAppearance.BorderSize = 0;
+            this.Main_but_farm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Main_but_farm.Font = new System.Drawing.Font("PJ Standard", 18F, System.Drawing.FontStyle.Bold);
+            this.Main_but_farm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(81)))), ((int)(((byte)(96)))));
+            this.Main_but_farm.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Main_but_farm.Location = new System.Drawing.Point(0, 0);
+            this.Main_but_farm.Name = "Main_but_farm";
+            this.Main_but_farm.Size = new System.Drawing.Size(1228, 50);
+            this.Main_but_farm.TabIndex = 6;
+            this.Main_but_farm.Text = "ข้อมูลฟาร์ม";
+            this.Main_but_farm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Main_but_farm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Main_but_farm.UseVisualStyleBackColor = false;
+            // 
+            // farmBindingSource2
+            // 
+            this.farmBindingSource2.DataMember = "Farm";
+            this.farmBindingSource2.DataSource = this.farm1;
+            // 
+            // farm1
+            // 
+            this.farm1.DataSetName = "Farm1";
+            this.farm1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // farmBindingSource1
+            // 
+            this.farmBindingSource1.DataMember = "Farm";
+            this.farmBindingSource1.DataSource = this._Drone_s_Flight_PlannerDataSet;
+            // 
+            // _Drone_s_Flight_PlannerDataSet
+            // 
+            this._Drone_s_Flight_PlannerDataSet.DataSetName = "_Drone_s_Flight_PlannerDataSet";
+            this._Drone_s_Flight_PlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // farmBindingSource
+            // 
+            this.farmBindingSource.DataMember = "Farm";
+            this.farmBindingSource.DataSource = this.droneFlightPlannerDataSet2;
+            // 
+            // droneFlightPlannerDataSet2
+            // 
+            this.droneFlightPlannerDataSet2.DataSetName = "DroneFlightPlannerDataSet2";
+            this.droneFlightPlannerDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // farmTableAdapter
+            // 
+            this.farmTableAdapter.ClearBeforeFill = true;
+            // 
+            // farmTableAdapter1
+            // 
+            this.farmTableAdapter1.ClearBeforeFill = true;
+            // 
+            // farmTableAdapter2
+            // 
+            this.farmTableAdapter2.ClearBeforeFill = true;
+            // 
+            // farmTableAdapter3
+            // 
+            this.farmTableAdapter3.ClearBeforeFill = true;
+            // 
             // Menu_farm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,17 +687,17 @@
             this.panel2.ResumeLayout(false);
             this.panel_Main_farm.ResumeLayout(false);
             this.panel_Main_farm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farm1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.DG_Farm)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.farmBindingSource3)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSetFarm)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSetFarm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmBindingSource3)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.farmBindingSource2)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.farm1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.farmBindingSource1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this._Drone_s_Flight_PlannerDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.farmBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.droneFlightPlannerDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -674,5 +754,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn farm_district;
         private System.Windows.Forms.DataGridViewTextBoxColumn farm_province;
         private System.Windows.Forms.DataGridViewTextBoxColumn farm_postal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmhostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmaddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmroadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmsubDistrictDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmdistrictDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmprovinceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn farmpostalDataGridViewTextBoxColumn;
     }
 }
